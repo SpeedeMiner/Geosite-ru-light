@@ -21,44 +21,51 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.27'
+          go-version: '1.22'
 
       - name: Clone domain-list-community
         run: git clone https://github.com/v2fly/domain-list-community.git
 
-      - name: Prepare custom clean lists
+      - name: Prepare Clean Data Directory
         run: |
           cd domain-list-community
+          # 1. Удаляем ВСЁ из папки data. Никаких чужих файлов и битых ссылок.
+          rm -rf data/*
           
-          # 1. ЖЕСТКАЯ ОЧИСТКА: удаляем символы возврата каретки (\r) из ВСЕХ исходников
-          # Это на 100% исключает ошибку "empty domain rule"
-          find data/ -type f -exec sed -i 's/\r//g' {} +
+          echo "==== BUILDING RU DIRECT ===="
+          # 2. Скачиваем плоский (скомпилированный в текст) список ВСЕХ RU-доменов v2fly.
+          # Это решает проблему пропавших файлов и ссылок include:
+          curl -sLf https://raw.githubusercontent.com/v2fly/domain-list-community/release/geosite.dat > /dev/null || true
+          curl -sLf https://raw.githubusercontent.com/v2fly/domain-list-community/release/category-ru-whitelist.txt > ru_raw.txt || echo "" > ru_raw.txt
+          curl -sLf https://raw.githubusercontent.com/v2fly/domain-list-community/release/ru.txt >> ru_raw.txt || true
           
-          # 2. ГЛОБАЛЬНАЯ ФИЛЬТРАЦИЯ: вырезаем из всех файлов исходников v2fly 
-          # любые домены, оканчивающиеся на .ru, .su, .by, .ua, .xn--p1ai
-          # При этом директивы вроде "include:ru" останутся нетронутыми!
-          find data/ -type f -exec sed -i -E '/\.(ru|su|by|ua|xn--p1ai)([[:space:]]|$)/Id' {} +
+          # 3. Чистим скачанный файл: убираем \r, оставляем только домены, убираем пустые строки
+          sed -i 's/\r//g' ru_raw.txt
+          awk '{print $1}' ru_raw.txt | awk 'NF' | grep -v '^#' > ru_clean.txt
           
-          # 3. Добавляем корневые TLD зоны прямо в начало файла "ru"
-          sed -i '1s/^/ru\nsu\nxn--p1ai\nby\nua\n/' data/ru
+          # 4. Вырезаем все домены с окончаниями .ru, .su, .by, .ua, .xn--p1ai
+          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt || true
           
-          # 4. Скачиваем списки блокировок (напрямую из первоисточников)
-          echo "Downloading blocked lists..."
+          # 5. Собираем финальный файл data/ru
+          echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru
+          sort -u ru_filtered.txt >> data/ru
+          
+          echo "==== BUILDING RU BLOCKED ===="
+          # 6. Скачиваем списки блокировок
           curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt || echo "" > blocked_1.txt
           curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt || echo "" > blocked_2.txt
           
-          # 5. Очищаем списки блокировок от \r и пустых строк, сливаем в файл ru-blocked
+          # 7. Чистим от \r и пустых строк, сливаем в data/ru-blocked
           sed -i 's/\r//g' blocked_1.txt blocked_2.txt
           cat blocked_1.txt blocked_2.txt | awk '{print $1}' | awk 'NF' | sort -u > data/ru-blocked
           
-          # Убираем временные файлы загрузок
-          rm -f blocked_1.txt blocked_2.txt
+          # Убираем временные файлы
+          rm -f ru_raw.txt ru_clean.txt ru_filtered.txt blocked_1.txt blocked_2.txt
 
       - name: Compile optimized geosite.dat
         run: |
           cd domain-list-community
-          
-          # Собираем только ДВЕ нужные нам категории. Всё лишнее компилятор проигнорирует.
+          # 8. Компилируем только 2 файла, которые мы создали своими руками
           go run main.go -datapath=./data -exportlists=ru,ru-blocked
           mv dlc.dat ../geosite_optimized.dat
 
