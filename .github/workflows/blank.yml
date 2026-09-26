@@ -973,164 +973,236 @@ jobs:
           cat > tools/ru-geosite-filter/validate.go <<'EOF'
           package main
 
-          import (
-              "fmt"
-              "os"
-              "strings"
+import (
+	"fmt"
+	"os"
+	"strings"
 
-              router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
-              "google.golang.org/protobuf/proto"
-          )
+	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+	"google.golang.org/protobuf/proto"
+)
 
-          func isRussianTLD(value string) bool {
-              value = strings.ToLower(strings.TrimSpace(value))
+func isRussianTLD(value string) bool {
+	value = strings.ToLower(strings.TrimSpace(value))
 
-              value = strings.TrimSuffix(value, ".")
-              value = strings.TrimPrefix(value, ".")
+	value = strings.TrimSuffix(value, ".")
+	value = strings.TrimPrefix(value, ".")
 
-              switch value {
-              case "ru", "su", "xn--p1ai", "рф":
-                  return true
-              }
+	switch value {
+	case "ru", "su", "xn--p1ai", "рф":
+		return true
+	}
 
-              return strings.HasSuffix(value, ".ru") ||
-                  strings.HasSuffix(value, ".su") ||
-                  strings.HasSuffix(value, ".xn--p1ai") ||
-                  strings.HasSuffix(value, ".рф")
-          }
+	return strings.HasSuffix(value, ".ru") ||
+		strings.HasSuffix(value, ".su") ||
+		strings.HasSuffix(value, ".xn--p1ai") ||
+		strings.HasSuffix(value, ".рф")
+}
 
-          func main() {
-              if len(os.Args) != 2 {
-                  os.Exit(2)
-              }
+func main() {
+	if len(os.Args) != 2 {
+		os.Exit(2)
+	}
 
-              data, err := os.ReadFile(os.Args[1])
-              if err != nil {
-                  panic(err)
-              }
+	data, err := os.ReadFile(os.Args[1])
+	if err != nil {
+		panic(err)
+	}
 
-              list := new(router.GeoSiteList)
+	list := new(router.GeoSiteList)
 
-              if err := proto.Unmarshal(data, list); err != nil {
-                  panic(fmt.Errorf(
-                      "invalid geosite protobuf: %w",
-                      err,
-                  ))
-              }
+	if err := proto.Unmarshal(data, list); err != nil {
+		panic(fmt.Errorf(
+			"invalid geosite protobuf: %w",
+			err,
+		))
+	}
 
-              if len(list.Entry) == 0 {
-                  panic("geosite contains no categories")
-              }
+	if len(list.Entry) == 0 {
+		panic("geosite contains no categories")
+	}
 
-              foundRU := false
-              foundTLD := false
+	foundRU := false
+	foundTLD := false
 
-              totalRules := 0
+	totalRules := 0
 
-              for _, site := range list.Entry {
-                  if site == nil {
-                      continue
-                  }
+	for _, site := range list.Entry {
+		if site == nil {
+			continue
+		}
 
-                  category := strings.ToLower(
-                      strings.TrimSpace(site.CountryCode),
-                  )
+		category := strings.ToLower(
+			strings.TrimSpace(site.CountryCode),
+		)
 
-                  if category == "ru" {
-                      foundRU = true
-                  }
+		isCompactRU := category == "ru"
+		isCompactTLD := category == "tld-ru"
 
-                  if category == "tld-ru" {
-                      foundTLD = true
-                  }
+		if isCompactRU {
+			foundRU = true
+		}
 
-                  for _, domain := range site.Domain {
-                      if domain == nil {
-                          continue
-                      }
+		if isCompactTLD {
+			foundTLD = true
+		}
 
-                      totalRules++
+		for _, domain := range site.Domain {
+			if domain == nil {
+				continue
+			}
 
-                      switch domain.Type {
-                      case router.Domain_RootDomain,
-                          router.Domain_Full:
-                      default:
-                          panic(fmt.Sprintf(
-                              "unsupported rule type in %s: %v",
-                              site.CountryCode,
-                              domain.Type,
-                          ))
-                      }
+			totalRules++
 
-                      if isRussianTLD(domain.Value) {
-                          panic(fmt.Sprintf(
-                              "Russian TLD leaked into category %s: %s",
-                              site.CountryCode,
-                              domain.Value,
-                          ))
-                      }
-                  }
-              }
+			// Разрешаем только RootDomain и Full.
+			switch domain.Type {
+			case router.Domain_RootDomain,
+				router.Domain_Full:
+				// OK
 
-              if !foundRU {
-                  panic("RU category missing")
-              }
+			default:
+				panic(fmt.Sprintf(
+					"unsupported rule type in %s: %v",
+					site.CountryCode,
+					domain.Type,
+				))
+			}
 
-              if !foundTLD {
-                  panic("TLD-RU category missing")
-              }
+			value := strings.ToLower(
+				strings.TrimSpace(domain.Value),
+			)
 
-              // У RU должно быть ровно 3 компактных правила.
-              for _, site := range list.Entry {
-                  if strings.EqualFold(site.CountryCode, "RU") {
-                      if len(site.Domain) != 3 {
-                          panic(fmt.Sprintf(
-                              "RU category must contain exactly 3 rules, got %d",
-                              len(site.Domain),
-                          ))
-                      }
+			// ----------------------------------------------------------
+			// RU и TLD-RU являются специальными компактными категориями.
+			//
+			// Они ДОЛЖНЫ содержать:
+			//   ru
+			//   xn--p1ai
+			//   su
+			//
+			// Поэтому здесь российские TLD не запрещаем.
+			// ----------------------------------------------------------
+			if isCompactRU || isCompactTLD {
+				continue
+			}
 
-                      expected := map[string]bool{
-                          "ru":        false,
-                          "xn--p1ai":  false,
-                          "su":        false,
-                      }
+			// Во всех остальных категориях российские зоны
+			// запрещены.
+			if isRussianTLD(value) {
+				panic(fmt.Sprintf(
+					"Russian TLD leaked into category %s: %s",
+					site.CountryCode,
+					domain.Value,
+				))
+			}
+		}
+	}
 
-                      for _, domain := range site.Domain {
-                          if domain.Type != router.Domain_RootDomain {
-                              panic("RU contains non-root-domain rule")
-                          }
+	if !foundRU {
+		panic("RU category missing")
+	}
 
-                          if _, ok := expected[domain.Value]; ok {
-                              expected[domain.Value] = true
-                          }
-                      }
+	if !foundTLD {
+		panic("TLD-RU category missing")
+	}
 
-                      for name, ok := range expected {
-                          if !ok {
-                              panic(
-                                  "RU missing compact TLD: " + name,
-                              )
-                          }
-                      }
-                  }
-              }
+	// ----------------------------------------------------------
+	// Проверяем RU.
+	// ----------------------------------------------------------
 
-              fmt.Println()
-              fmt.Println("========================================")
-              fmt.Println("VALIDATION OK")
-              fmt.Println("========================================")
-              fmt.Printf(
-                  "Categories: %d\n",
-                  len(list.Entry),
-              )
-              fmt.Printf(
-                  "Rules:      %d\n",
-                  totalRules,
-              )
-              fmt.Println("No .ru/.su/.xn--p1ai/.рф rules found.")
-              fmt.Println("No regex/keyword rules found.")
-          }
+	for _, site := range list.Entry {
+		if site == nil {
+			continue
+		}
+
+		category := strings.ToLower(
+			strings.TrimSpace(site.CountryCode),
+		)
+
+		if category != "ru" && category != "tld-ru" {
+			continue
+		}
+
+		if len(site.Domain) != 3 {
+			panic(fmt.Sprintf(
+				"%s category must contain exactly 3 rules, got %d",
+				site.CountryCode,
+				len(site.Domain),
+			))
+		}
+
+		expected := map[string]bool{
+			"ru":       false,
+			"xn--p1ai": false,
+			"su":       false,
+		}
+
+		for _, domain := range site.Domain {
+			if domain == nil {
+				panic(fmt.Sprintf(
+					"%s contains nil domain",
+					site.CountryCode,
+				))
+			}
+
+			if domain.Type != router.Domain_RootDomain {
+				panic(fmt.Sprintf(
+					"%s contains non-root-domain rule: %v",
+					site.CountryCode,
+					domain.Type,
+				))
+			}
+
+			value := strings.ToLower(
+				strings.TrimSpace(domain.Value),
+			)
+
+			if _, ok := expected[value]; !ok {
+				panic(fmt.Sprintf(
+					"%s contains unexpected TLD: %s",
+					site.CountryCode,
+					value,
+				))
+			}
+
+			if expected[value] {
+				panic(fmt.Sprintf(
+					"%s contains duplicate TLD: %s",
+					site.CountryCode,
+					value,
+				))
+			}
+
+			expected[value] = true
+		}
+
+		for name, ok := range expected {
+			if !ok {
+				panic(fmt.Sprintf(
+					"%s missing compact TLD: %s",
+					site.CountryCode,
+					name,
+				))
+			}
+		}
+	}
+
+	fmt.Println()
+	fmt.Println("========================================")
+	fmt.Println("VALIDATION OK")
+	fmt.Println("========================================")
+	fmt.Printf(
+		"Categories: %d\n",
+		len(list.Entry),
+	)
+	fmt.Printf(
+		"Rules:      %d\n",
+		totalRules,
+	)
+	fmt.Println("RU category contains: ru, xn--p1ai, su")
+	fmt.Println("No Russian TLD rules found in ordinary categories.")
+	fmt.Println("No regex/keyword rules found.")
+}
           EOF
 
           go run \
