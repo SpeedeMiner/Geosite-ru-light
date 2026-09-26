@@ -364,393 +364,467 @@ jobs:
 
           cat > domain-list-community/tools/ru-geosite-filter/main.go <<'EOF'
           package main
-
+          
           import (
-              "bufio"
-              "fmt"
-              "os"
-              "sort"
-              "strings"
-
-              router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
-              "google.golang.org/protobuf/proto"
+          	"bufio"
+          	"fmt"
+          	"os"
+          	"sort"
+          	"strings"
+          
+          	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+          	"google.golang.org/protobuf/proto"
           )
-
+          
           func normalizeName(value string) string {
-              return strings.ToLower(strings.TrimSpace(value))
+          	return strings.ToLower(strings.TrimSpace(value))
           }
-
+          
           func isRussianTLD(value string) bool {
-              value = normalizeName(value)
-              value = strings.TrimSuffix(value, ".")
-              value = strings.TrimPrefix(value, ".")
-
-              switch value {
-              case "ru", "su", "xn--p1ai", "рф":
-                  return true
-              }
-
-              return strings.HasSuffix(value, ".ru") ||
-                  strings.HasSuffix(value, ".su") ||
-                  strings.HasSuffix(value, ".xn--p1ai") ||
-                  strings.HasSuffix(value, ".рф")
+          	value = normalizeName(value)
+          	value = strings.TrimSuffix(value, ".")
+          	value = strings.TrimPrefix(value, ".")
+          
+          	switch value {
+          	case "ru", "su", "xn--p1ai", "рф":
+          		return true
+          	}
+          
+          	return strings.HasSuffix(value, ".ru") ||
+          		strings.HasSuffix(value, ".su") ||
+          		strings.HasSuffix(value, ".xn--p1ai") ||
+          		strings.HasSuffix(value, ".рф")
           }
-
+          
           func domainKey(domain *router.Domain) string {
-              return fmt.Sprintf("%d|%s", domain.Type, normalizeName(domain.Value))
+          	return fmt.Sprintf("%d|%s", domain.Type, normalizeName(domain.Value))
           }
-
+          
+          // pruneCoveredRootDomains removes redundant child RootDomain rules
+          // when an ancestor RootDomain already covers their subdomains.
+          func pruneCoveredRootDomains(domains []*router.Domain) ([]*router.Domain, int) {
+          	roots := make(map[string]bool)
+          	for _, domain := range domains {
+          		if domain == nil || domain.Type != router.Domain_RootDomain {
+          			continue
+          		}
+          		value := normalizeName(domain.Value)
+          		if value != "" {
+          			roots[value] = true
+          		}
+          	}
+          
+          	result := make([]*router.Domain, 0, len(domains))
+          	removed := 0
+          	for _, domain := range domains {
+          		if domain == nil || domain.Type != router.Domain_RootDomain {
+          			result = append(result, domain)
+          			continue
+          		}
+          
+          		value := normalizeName(domain.Value)
+          		covered := false
+          		for parent := value; ; {
+          			dot := strings.IndexByte(parent, '.')
+          			if dot < 0 {
+          				break
+          			}
+          			parent = parent[dot+1:]
+          			if roots[parent] {
+          				covered = true
+          				break
+          			}
+          		}
+          
+          		if covered {
+          			removed++
+          			continue
+          		}
+          		result = append(result, domain)
+          	}
+          	return result, removed
+          }
+          
           func loadGeoSite(path string) (*router.GeoSiteList, error) {
-              data, err := os.ReadFile(path)
-              if err != nil {
-                  return nil, err
-              }
-
-              list := new(router.GeoSiteList)
-              if err := proto.Unmarshal(data, list); err != nil {
-                  return nil, fmt.Errorf("invalid geosite %s: %w", path, err)
-              }
-
-              return list, nil
+          	data, err := os.ReadFile(path)
+          	if err != nil {
+          		return nil, err
+          	}
+          
+          	list := new(router.GeoSiteList)
+          	if err := proto.Unmarshal(data, list); err != nil {
+          		return nil, fmt.Errorf("invalid geosite %s: %w", path, err)
+          	}
+          
+          	return list, nil
           }
-
+          
           func loadManifest(path string) (map[string]map[string]bool, error) {
-              file, err := os.Open(path)
-              if err != nil {
-                  return nil, err
-              }
-              defer file.Close()
-
-              result := make(map[string]map[string]bool)
-              scanner := bufio.NewScanner(file)
-
-              for scanner.Scan() {
-                  line := strings.TrimSpace(scanner.Text())
-                  if line == "" || strings.HasPrefix(line, "#") {
-                      continue
-                  }
-
-                  parts := strings.SplitN(line, "|", 2)
-                  if len(parts) != 2 {
-                      return nil, fmt.Errorf("invalid manifest entry: %q", line)
-                  }
-
-                  source := normalizeName(parts[0])
-                  category := normalizeName(parts[1])
-                  if source == "" || category == "" {
-                      return nil, fmt.Errorf("invalid manifest entry: %q", line)
-                  }
-
-                  if result[source] == nil {
-                      result[source] = make(map[string]bool)
-                  }
-                  result[source][category] = true
-              }
-
-              if err := scanner.Err(); err != nil {
-                  return nil, err
-              }
-
-              return result, nil
+          	file, err := os.Open(path)
+          	if err != nil {
+          		return nil, err
+          	}
+          	defer file.Close()
+          
+          	result := make(map[string]map[string]bool)
+          	scanner := bufio.NewScanner(file)
+          
+          	for scanner.Scan() {
+          		line := strings.TrimSpace(scanner.Text())
+          		if line == "" || strings.HasPrefix(line, "#") {
+          			continue
+          		}
+          
+          		parts := strings.SplitN(line, "|", 2)
+          		if len(parts) != 2 {
+          			return nil, fmt.Errorf("invalid manifest entry: %q", line)
+          		}
+          
+          		source := normalizeName(parts[0])
+          		category := normalizeName(parts[1])
+          		if source == "" || category == "" {
+          			return nil, fmt.Errorf("invalid manifest entry: %q", line)
+          		}
+          
+          		if result[source] == nil {
+          			result[source] = make(map[string]bool)
+          		}
+          		result[source][category] = true
+          	}
+          
+          	if err := scanner.Err(); err != nil {
+          		return nil, err
+          	}
+          
+          	return result, nil
           }
-
+          
           func loadOrderedCategories(path string) ([]string, error) {
-              file, err := os.Open(path)
-              if err != nil {
-                  return nil, err
-              }
-              defer file.Close()
-
-              var categories []string
-              scanner := bufio.NewScanner(file)
-
-              for scanner.Scan() {
-                  line := strings.TrimSpace(scanner.Text())
-                  if line == "" || strings.HasPrefix(line, "#") {
-                      continue
-                  }
-
-                  parts := strings.SplitN(line, "|", 2)
-                  if len(parts) != 2 || normalizeName(parts[0]) != "hydra" {
-                      return nil, fmt.Errorf("invalid Hydra append manifest entry: %q", line)
-                  }
-
-                  category := normalizeName(parts[1])
-                  if category == "" {
-                      return nil, fmt.Errorf("empty Hydra category in manifest: %q", line)
-                  }
-
-                  categories = append(categories, category)
-              }
-
-              if err := scanner.Err(); err != nil {
-                  return nil, err
-              }
-
-              if len(categories) == 0 {
-                  return nil, fmt.Errorf("Hydra append manifest is empty")
-              }
-
-              return categories, nil
+          	file, err := os.Open(path)
+          	if err != nil {
+          		return nil, err
+          	}
+          	defer file.Close()
+          
+          	var categories []string
+          	scanner := bufio.NewScanner(file)
+          
+          	for scanner.Scan() {
+          		line := strings.TrimSpace(scanner.Text())
+          		if line == "" || strings.HasPrefix(line, "#") {
+          			continue
+          		}
+          
+          		parts := strings.SplitN(line, "|", 2)
+          		if len(parts) != 2 || normalizeName(parts[0]) != "hydra" {
+          			return nil, fmt.Errorf("invalid Hydra append manifest entry: %q", line)
+          		}
+          
+          		category := normalizeName(parts[1])
+          		if category == "" {
+          			return nil, fmt.Errorf("empty Hydra category in manifest: %q", line)
+          		}
+          
+          		categories = append(categories, category)
+          	}
+          
+          	if err := scanner.Err(); err != nil {
+          		return nil, err
+          	}
+          
+          	if len(categories) == 0 {
+          		return nil, fmt.Errorf("Hydra append manifest is empty")
+          	}
+          
+          	return categories, nil
           }
-
+          
           func cloneDomain(domain *router.Domain) *router.Domain {
-              return proto.Clone(domain).(*router.Domain)
+          	return proto.Clone(domain).(*router.Domain)
           }
-
+          
           func main() {
-              if len(os.Args) != 8 {
-                  fmt.Fprintf(
-                      os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat selected.txt hydra_append.txt output.dat\n",
-                      os.Args[0],
-                  )
-                  os.Exit(2)
-              }
-
-              sources := map[string]string{
-                  "runetfreedom": os.Args[1],
-                  "hydra":         os.Args[2],
-                  "grimbird":      os.Args[3],
-                  "mvrvntn":       os.Args[4],
-              }
-
-              manifest, err := loadManifest(os.Args[5])
-              if err != nil {
-                  panic(fmt.Errorf("failed to read manifest: %w", err))
-              }
-
-              lists := make(map[string]*router.GeoSiteList)
-              for source, path := range sources {
-                  list, err := loadGeoSite(path)
-                  if err != nil {
-                      panic(err)
-                  }
-                  lists[source] = list
-              }
-
-              result := new(router.GeoSiteList)
-              ruCategory := &router.GeoSite{CountryCode: "RU"}
-              globalSeen := make(map[string]bool)
-
-              sourceCategoryCount := 0
-              sourceDomainCount := 0
-              writtenDomainCount := 0
-              duplicateDomainCount := 0
-              removedRussianDomainCount := 0
-              removedUnsupportedTypeCount := 0
-              missingExternalCount := 0
-
-              matched := make(map[string]map[string]bool)
-              for source := range sources {
-                  matched[source] = make(map[string]bool)
-              }
-
-              for source, selectedCategories := range manifest {
-                  list, ok := lists[source]
-                  if !ok {
-                      panic(fmt.Sprintf("unknown source in manifest: %s", source))
-                  }
-
-                  for _, site := range list.Entry {
-                      if site == nil {
-                          continue
-                      }
-
-                      category := normalizeName(site.CountryCode)
-                      if !selectedCategories[category] {
-                          continue
-                      }
-
-                      matched[source][category] = true
-                      sourceCategoryCount++
-
-                      for _, domain := range site.Domain {
-                          if domain == nil {
-                              continue
-                          }
-
-                          sourceDomainCount++
-
-                          switch domain.Type {
-                          case router.Domain_RootDomain,
-                              router.Domain_Full:
-                              // OK
-                          default:
-                              removedUnsupportedTypeCount++
-                              continue
-                          }
-
-                          value := normalizeName(domain.Value)
-                          if value == "" {
-                              continue
-                          }
-
-                          // Все .ru/.su/.рф правила схлопываются в три
-                          // компактных RootDomain ниже.
-                          if isRussianTLD(value) {
-                              removedRussianDomainCount++
-                              continue
-                          }
-
-                          key := domainKey(domain)
-                          if globalSeen[key] {
-                              duplicateDomainCount++
-                              continue
-                          }
-
-                          globalSeen[key] = true
-                          copied := cloneDomain(domain)
-                          copied.Value = value
-                          ruCategory.Domain = append(ruCategory.Domain, copied)
-                          writtenDomainCount++
-                      }
-                  }
-              }
-
-              for _, source := range []string{"hydra", "grimbird", "mvrvntn"} {
-                  for category := range manifest[source] {
-                      if !matched[source][category] {
-                          fmt.Printf(
-                              "WARNING: requested external category %s|%s was not found in source DAT\n",
-                              source,
-                              category,
-                          )
-                          missingExternalCount++
-                      }
-                  }
-              }
-
-              if missingExternalCount > 0 {
-                  panic(fmt.Sprintf(
-                      "required external categories missing: %d",
-                      missingExternalCount,
-                  ))
-              }
-
-              for _, value := range []string{"ru", "xn--p1ai", "su"} {
-                  key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
-                  if !globalSeen[key] {
-                      globalSeen[key] = true
-                      ruCategory.Domain = append(ruCategory.Domain, &router.Domain{
-                          Type:  router.Domain_RootDomain,
-                          Value: value,
-                      })
-                      writtenDomainCount++
-                  }
-              }
-
-              sort.Slice(ruCategory.Domain, func(i, j int) bool {
-                  a := ruCategory.Domain[i]
-                  b := ruCategory.Domain[j]
-                  if a.Type != b.Type {
-                      return a.Type < b.Type
-                  }
-                  return normalizeName(a.Value) < normalizeName(b.Value)
-              })
-
-              if len(ruCategory.Domain) == 0 {
-                  panic("RU category is empty")
-              }
-
-              result.Entry = append(result.Entry, ruCategory)
-
-              // ----------------------------------------------------------
-              // После обработки общего RU добавляем выбранные категории
-              // Hydra отдельными категориями и строго в заданном порядке.
-              // Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
-              // Внутри каждой категории повторяющиеся Type+Value удаляются.
-              // ----------------------------------------------------------
-              hydraAppendCategories, err := loadOrderedCategories(os.Args[6])
-              if err != nil {
-                  panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
-              }
-
-              hydraList := lists["hydra"]
-              hydraByCategory := make(map[string]*router.GeoSite)
-              for _, site := range hydraList.Entry {
-                  if site == nil {
-                      continue
-                  }
-                  category := normalizeName(site.CountryCode)
-                  for _, wanted := range hydraAppendCategories {
-                      if category == wanted {
-                          if _, exists := hydraByCategory[category]; exists {
-                              panic(fmt.Sprintf("duplicate source category in Hydra DAT: %s", wanted))
-                          }
-                          hydraByCategory[category] = site
-                          break
-                      }
-                  }
-              }
-
-              appendedRuleCount := 0
-              appendedDuplicateCount := 0
-
-              for _, category := range hydraAppendCategories {
-                  site, ok := hydraByCategory[category]
-                  if !ok {
-                      panic(fmt.Sprintf("required Hydra category missing: %s", category))
-                  }
-
-                  dst := &router.GeoSite{CountryCode: site.CountryCode}
-                  seen := make(map[string]bool)
-
-                  for _, domain := range site.Domain {
-                      if domain == nil {
-                          continue
-                      }
-
-                      key := domainKey(domain)
-                      if seen[key] {
-                          appendedDuplicateCount++
-                          continue
-                      }
-
-                      seen[key] = true
-                      copied := cloneDomain(domain)
-                      copied.Value = normalizeName(copied.Value)
-                      if copied.Value == "" {
-                          continue
-                      }
-                      dst.Domain = append(dst.Domain, copied)
-                      appendedRuleCount++
-                  }
-
-                  if len(dst.Domain) == 0 {
-                      panic(fmt.Sprintf("Hydra category is empty: %s", category))
-                  }
-
-                  result.Entry = append(result.Entry, dst)
-              }
-
-              // ----------------------------------------------------------
-              // Финальная сериализация: RU идёт первым, затем Hydra.
-              // ----------------------------------------------------------
-              outputData, err := proto.MarshalOptions{Deterministic: true}.Marshal(result)
-              if err != nil {
-                  panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
-              }
-
-              if err := os.WriteFile(os.Args[7], outputData, 0644); err != nil {
-                  panic(fmt.Errorf("failed to write output DAT: %w", err))
-              }
-
-              fmt.Println()
-              fmt.Println("========================================")
-              fmt.Println("RU LIGHT GEOSITE BUILD")
-              fmt.Println("========================================")
-              fmt.Printf("Source category matches : %d\n", sourceCategoryCount)
-              fmt.Printf("Source domain rules     : %d\n", sourceDomainCount)
-              fmt.Printf("Written domain rules    : %d\n", writtenDomainCount)
-              fmt.Printf("Removed RU TLD rules    : %d\n", removedRussianDomainCount)
-              fmt.Printf("Removed regex/keyword   : %d\n", removedUnsupportedTypeCount)
-              fmt.Printf("Removed duplicates      : %d\n", duplicateDomainCount)
-              fmt.Printf("Appended Hydra rules    : %d\n", appendedRuleCount)
-              fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
-              fmt.Printf("Final categories        : %d\n", len(result.Entry))
-              fmt.Printf("Final DAT size          : %d bytes\n", len(outputData))
-              fmt.Println("Output categories       : RU + 16 Hydra categories")
+          	if len(os.Args) != 8 {
+          		fmt.Fprintf(
+          			os.Stderr,
+          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat selected.txt hydra_append.txt output.dat\n",
+          			os.Args[0],
+          		)
+          		os.Exit(2)
+          	}
+          
+          	sources := map[string]string{
+          		"runetfreedom": os.Args[1],
+          		"hydra":        os.Args[2],
+          		"grimbird":     os.Args[3],
+          		"mvrvntn":      os.Args[4],
+          	}
+          
+          	manifest, err := loadManifest(os.Args[5])
+          	if err != nil {
+          		panic(fmt.Errorf("failed to read manifest: %w", err))
+          	}
+          
+          	lists := make(map[string]*router.GeoSiteList)
+          	for source, path := range sources {
+          		list, err := loadGeoSite(path)
+          		if err != nil {
+          			panic(err)
+          		}
+          		lists[source] = list
+          	}
+          
+          	result := new(router.GeoSiteList)
+          	ruCategory := &router.GeoSite{CountryCode: "RU"}
+          	globalSeen := make(map[string]bool)
+          
+          	sourceCategoryCount := 0
+          	sourceDomainCount := 0
+          	writtenDomainCount := 0
+          	duplicateDomainCount := 0
+          	removedRussianDomainCount := 0
+          	removedUnsupportedTypeCount := 0
+          	convertedFullToRootCount := 0
+          	removedCoveredDomainCount := 0
+          	missingExternalCount := 0
+          
+          	matched := make(map[string]map[string]bool)
+          	for source := range sources {
+          		matched[source] = make(map[string]bool)
+          	}
+          
+          	for source, selectedCategories := range manifest {
+          		list, ok := lists[source]
+          		if !ok {
+          			panic(fmt.Sprintf("unknown source in manifest: %s", source))
+          		}
+          
+          		for _, site := range list.Entry {
+          			if site == nil {
+          				continue
+          			}
+          
+          			category := normalizeName(site.CountryCode)
+          			if !selectedCategories[category] {
+          				continue
+          			}
+          
+          			matched[source][category] = true
+          			sourceCategoryCount++
+          
+          			for _, domain := range site.Domain {
+          				if domain == nil {
+          					continue
+          				}
+          
+          				sourceDomainCount++
+          
+          				switch domain.Type {
+          				case router.Domain_RootDomain:
+          					// Already covers all subdomains.
+          				case router.Domain_Full:
+          					// Convert exact-match Full into RootDomain so the
+          					// resulting rule also covers every subdomain.
+          					convertedFullToRootCount++
+          				default:
+          					removedUnsupportedTypeCount++
+          					continue
+          				}
+          
+          				value := normalizeName(domain.Value)
+          				if value == "" {
+          					continue
+          				}
+          
+          				// Все .ru/.su/.рф правила схлопываются в три
+          				// компактных RootDomain ниже.
+          				if isRussianTLD(value) {
+          					removedRussianDomainCount++
+          					continue
+          				}
+          
+          				copied := cloneDomain(domain)
+          				copied.Type = router.Domain_RootDomain
+          				copied.Value = value
+          
+          				// После Full -> RootDomain дедупликация использует
+          				// единую семантику RootDomain.
+          				key := domainKey(copied)
+          				if globalSeen[key] {
+          					duplicateDomainCount++
+          					continue
+          				}
+          
+          				globalSeen[key] = true
+          				ruCategory.Domain = append(ruCategory.Domain, copied)
+          				writtenDomainCount++
+          			}
+          		}
+          	}
+          
+          	for _, source := range []string{"hydra", "grimbird", "mvrvntn"} {
+          		for category := range manifest[source] {
+          			if !matched[source][category] {
+          				fmt.Printf(
+          					"WARNING: requested external category %s|%s was not found in source DAT\n",
+          					source,
+          					category,
+          				)
+          				missingExternalCount++
+          			}
+          		}
+          	}
+          
+          	if missingExternalCount > 0 {
+          		panic(fmt.Sprintf(
+          			"required external categories missing: %d",
+          			missingExternalCount,
+          		))
+          	}
+          
+          	for _, value := range []string{"ru", "xn--p1ai", "su"} {
+          		key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
+          		if !globalSeen[key] {
+          			globalSeen[key] = true
+          			ruCategory.Domain = append(ruCategory.Domain, &router.Domain{
+          				Type:  router.Domain_RootDomain,
+          				Value: value,
+          			})
+          			writtenDomainCount++
+          		}
+          	}
+          
+          	var pruned int
+          	ruCategory.Domain, pruned = pruneCoveredRootDomains(ruCategory.Domain)
+          	removedCoveredDomainCount += pruned
+          
+          	sort.Slice(ruCategory.Domain, func(i, j int) bool {
+          		a := ruCategory.Domain[i]
+          		b := ruCategory.Domain[j]
+          		if a.Type != b.Type {
+          			return a.Type < b.Type
+          		}
+          		return normalizeName(a.Value) < normalizeName(b.Value)
+          	})
+          
+          	if len(ruCategory.Domain) == 0 {
+          		panic("RU category is empty")
+          	}
+          
+          	result.Entry = append(result.Entry, ruCategory)
+          
+          	// ----------------------------------------------------------
+          	// После обработки общего RU добавляем выбранные категории
+          	// Hydra отдельными категориями и строго в заданном порядке.
+          	// Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
+          	// Внутри каждой категории повторяющиеся Type+Value удаляются.
+          	// ----------------------------------------------------------
+          	hydraAppendCategories, err := loadOrderedCategories(os.Args[6])
+          	if err != nil {
+          		panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
+          	}
+          
+          	hydraList := lists["hydra"]
+          	hydraByCategory := make(map[string]*router.GeoSite)
+          	for _, site := range hydraList.Entry {
+          		if site == nil {
+          			continue
+          		}
+          		category := normalizeName(site.CountryCode)
+          		for _, wanted := range hydraAppendCategories {
+          			if category == wanted {
+          				if _, exists := hydraByCategory[category]; exists {
+          					panic(fmt.Sprintf("duplicate source category in Hydra DAT: %s", wanted))
+          				}
+          				hydraByCategory[category] = site
+          				break
+          			}
+          		}
+          	}
+          
+          	appendedRuleCount := 0
+          	appendedDuplicateCount := 0
+          	appendedConvertedFullToRootCount := 0
+          	appendedCoveredDomainCount := 0
+          
+          	for _, category := range hydraAppendCategories {
+          		site, ok := hydraByCategory[category]
+          		if !ok {
+          			panic(fmt.Sprintf("required Hydra category missing: %s", category))
+          		}
+          
+          		dst := &router.GeoSite{CountryCode: site.CountryCode}
+          		seen := make(map[string]bool)
+          
+          		for _, domain := range site.Domain {
+          			if domain == nil {
+          				continue
+          			}
+          
+          			copied := cloneDomain(domain)
+          			copied.Value = normalizeName(copied.Value)
+          			if copied.Value == "" {
+          				continue
+          			}
+          
+          			if copied.Type == router.Domain_Full {
+          				copied.Type = router.Domain_RootDomain
+          				appendedConvertedFullToRootCount++
+          			}
+          
+          			key := domainKey(copied)
+          			if seen[key] {
+          				appendedDuplicateCount++
+          				continue
+          			}
+          
+          			seen[key] = true
+          			dst.Domain = append(dst.Domain, copied)
+          			appendedRuleCount++
+          		}
+          
+          		var prunedHydra int
+          		dst.Domain, prunedHydra = pruneCoveredRootDomains(dst.Domain)
+          		appendedCoveredDomainCount += prunedHydra
+          
+          		if len(dst.Domain) == 0 {
+          			panic(fmt.Sprintf("Hydra category is empty: %s", category))
+          		}
+          
+          		result.Entry = append(result.Entry, dst)
+          	}
+          
+          	// ----------------------------------------------------------
+          	// Финальная сериализация: RU идёт первым, затем Hydra.
+          	// ----------------------------------------------------------
+          	outputData, err := proto.MarshalOptions{Deterministic: true}.Marshal(result)
+          	if err != nil {
+          		panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
+          	}
+          
+          	if err := os.WriteFile(os.Args[7], outputData, 0644); err != nil {
+          		panic(fmt.Errorf("failed to write output DAT: %w", err))
+          	}
+          
+          	fmt.Println()
+          	fmt.Println("========================================")
+          	fmt.Println("RU LIGHT GEOSITE BUILD")
+          	fmt.Println("========================================")
+          	fmt.Printf("Source category matches : %d\n", sourceCategoryCount)
+          	fmt.Printf("Source domain rules     : %d\n", sourceDomainCount)
+          	fmt.Printf("Written domain rules    : %d\n", writtenDomainCount)
+          	fmt.Printf("Removed RU TLD rules    : %d\n", removedRussianDomainCount)
+          	fmt.Printf("Removed regex/keyword   : %d\n", removedUnsupportedTypeCount)
+          	fmt.Printf("Removed duplicates      : %d\n", duplicateDomainCount)
+          	fmt.Printf("Full -> RootDomain (RU): %d\n", convertedFullToRootCount)
+          	fmt.Printf("Covered RU domains removed: %d\n", removedCoveredDomainCount)
+          	fmt.Printf("Appended Hydra rules    : %d\n", appendedRuleCount)
+          	fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
+          	fmt.Printf("Full -> RootDomain (Hydra): %d\n", appendedConvertedFullToRootCount)
+          	fmt.Printf("Covered Hydra domains removed: %d\n", appendedCoveredDomainCount)
+          	fmt.Printf("Final categories        : %d\n", len(result.Entry))
+          	fmt.Printf("Final DAT size          : %d bytes\n", len(outputData))
+          	fmt.Println("Output categories       : RU + 16 Hydra categories")
           }
           EOF
 
@@ -813,189 +887,255 @@ jobs:
 
           cat > tools/ru-geosite-filter/validate.go <<'EOF'
           package main
-
+          
           import (
-              "fmt"
-              "os"
-              "strings"
-
-              router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
-              "google.golang.org/protobuf/proto"
+          	"fmt"
+          	"os"
+          	"strings"
+          
+          	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+          	"google.golang.org/protobuf/proto"
           )
-
+          
           func isRussianTLD(value string) bool {
-              value = strings.ToLower(strings.TrimSpace(value))
-              value = strings.TrimSuffix(value, ".")
-              value = strings.TrimPrefix(value, ".")
-
-              switch value {
-              case "ru", "su", "xn--p1ai", "рф":
-                  return true
-              }
-
-              return strings.HasSuffix(value, ".ru") ||
-                  strings.HasSuffix(value, ".su") ||
-                  strings.HasSuffix(value, ".xn--p1ai") ||
-                  strings.HasSuffix(value, ".рф")
+          	value = strings.ToLower(strings.TrimSpace(value))
+          	value = strings.TrimSuffix(value, ".")
+          	value = strings.TrimPrefix(value, ".")
+          
+          	switch value {
+          	case "ru", "su", "xn--p1ai", "рф":
+          		return true
+          	}
+          
+          	return strings.HasSuffix(value, ".ru") ||
+          		strings.HasSuffix(value, ".su") ||
+          		strings.HasSuffix(value, ".xn--p1ai") ||
+          		strings.HasSuffix(value, ".рф")
           }
-
+          
           func domainKey(domain *router.Domain) string {
-              return fmt.Sprintf(
-                  "%d|%s",
-                  domain.Type,
-                  strings.ToLower(strings.TrimSpace(domain.Value)),
-              )
+          	return fmt.Sprintf(
+          		"%d|%s",
+          		domain.Type,
+          		strings.ToLower(strings.TrimSpace(domain.Value)),
+          	)
           }
-
+          
           func main() {
-              if len(os.Args) != 2 {
-                  os.Exit(2)
-              }
-
-              data, err := os.ReadFile(os.Args[1])
-              if err != nil {
-                  panic(err)
-              }
-
-              list := new(router.GeoSiteList)
-              if err := proto.Unmarshal(data, list); err != nil {
-                  panic(fmt.Errorf("invalid geosite protobuf: %w", err))
-              }
-
-              expectedHydra := []string{
-                  "apple",
-                  "epicgames",
-                  "escapefromtarkov",
-                  "faceit",
-                  "github",
-                  "google-deepmind",
-                  "google-play",
-                  "microsoft",
-                  "pinterest",
-                  "riot",
-                  "steam",
-                  "telegram",
-                  "twitch",
-                  "twitch-ads",
-                  "youtube",
-                  "win-spy",
-              }
-
-              if len(list.Entry) != 1+len(expectedHydra) {
-                  panic(fmt.Sprintf(
-                      "expected exactly %d categories, got %d",
-                      1+len(expectedHydra),
-                      len(list.Entry),
-                  ))
-              }
-
-              // RU должен быть первым и единственным объединённым RU.
-              ru := list.Entry[0]
-              if ru == nil || strings.ToLower(strings.TrimSpace(ru.CountryCode)) != "ru" {
-                  panic("first category must be RU")
-              }
-
-              seenRU := make(map[string]bool, len(ru.Domain))
-              expectedTLD := map[string]bool{
-                  "ru":       false,
-                  "xn--p1ai": false,
-                  "su":       false,
-              }
-
-              for _, domain := range ru.Domain {
-                  if domain == nil {
-                      panic("RU contains nil domain")
-                  }
-
-                  switch domain.Type {
-                  case router.Domain_RootDomain, router.Domain_Full:
-                  default:
-                      panic(fmt.Sprintf("unsupported rule type in RU: %v", domain.Type))
-                  }
-
-                  value := strings.ToLower(strings.TrimSpace(domain.Value))
-                  if value == "" {
-                      panic("RU contains empty domain value")
-                  }
-
-                  key := domainKey(domain)
-                  if seenRU[key] {
-                      panic(fmt.Sprintf("duplicate domain in RU: %s", domain.Value))
-                  }
-                  seenRU[key] = true
-
-                  if domain.Type == router.Domain_RootDomain {
-                      if _, ok := expectedTLD[value]; ok {
-                          expectedTLD[value] = true
-                      }
-                  }
-
-                  if isRussianTLD(value) &&
-                      value != "ru" && value != "su" && value != "xn--p1ai" {
-                      panic(fmt.Sprintf("Russian TLD leaked into RU: %s", domain.Value))
-                  }
-              }
-
-              for name, ok := range expectedTLD {
-                  if !ok {
-                      panic(fmt.Sprintf("RU missing compact TLD: %s", name))
-                  }
-              }
-
-              // Остальные категории обязаны идти строго в указанном порядке.
-              for i, expected := range expectedHydra {
-                  site := list.Entry[i+1]
-                  if site == nil {
-                      panic(fmt.Sprintf("Hydra category %s is nil", expected))
-                  }
-
-                  category := strings.ToLower(strings.TrimSpace(site.CountryCode))
-                  if category != expected {
-                      panic(fmt.Sprintf(
-                          "Hydra category order mismatch: expected %s, got %s",
-                          expected,
-                          site.CountryCode,
-                      ))
-                  }
-
-                  if len(site.Domain) == 0 {
-                      panic(fmt.Sprintf("Hydra category is empty: %s", category))
-                  }
-
-                  seen := make(map[string]bool, len(site.Domain))
-                  for _, domain := range site.Domain {
-                      if domain == nil {
-                          panic(fmt.Sprintf("%s contains nil domain", category))
-                      }
-
-                      value := strings.ToLower(strings.TrimSpace(domain.Value))
-                      if value == "" {
-                          panic(fmt.Sprintf("%s contains empty domain value", category))
-                      }
-
-                      key := domainKey(domain)
-                      if seen[key] {
-                          panic(fmt.Sprintf(
-                              "duplicate domain in Hydra category %s: %s",
-                              category,
-                              domain.Value,
-                          ))
-                      }
-                      seen[key] = true
-                  }
-              }
-
-              fmt.Println()
-              fmt.Println("========================================")
-              fmt.Println("VALIDATION OK")
-              fmt.Println("========================================")
-              fmt.Printf("Categories: %d (RU + 16 Hydra)\n", len(list.Entry))
-              fmt.Printf("RU rules:  %d\n", len(ru.Domain))
-              fmt.Println("Single merged category: RU")
-              fmt.Println("RU duplicates: none")
-              fmt.Println("RU compact TLDs: ru, xn--p1ai, su")
-              fmt.Println("Hydra categories: 16, appended after RU in requested order")
-              fmt.Println("Hydra intra-category duplicates: none")
+          	if len(os.Args) != 2 {
+          		os.Exit(2)
+          	}
+          
+          	data, err := os.ReadFile(os.Args[1])
+          	if err != nil {
+          		panic(err)
+          	}
+          
+          	list := new(router.GeoSiteList)
+          	if err := proto.Unmarshal(data, list); err != nil {
+          		panic(fmt.Errorf("invalid geosite protobuf: %w", err))
+          	}
+          
+          	expectedHydra := []string{
+          		"apple",
+          		"epicgames",
+          		"escapefromtarkov",
+          		"faceit",
+          		"github",
+          		"google-deepmind",
+          		"google-play",
+          		"microsoft",
+          		"pinterest",
+          		"riot",
+          		"steam",
+          		"telegram",
+          		"twitch",
+          		"twitch-ads",
+          		"youtube",
+          		"win-spy",
+          	}
+          
+          	if len(list.Entry) != 1+len(expectedHydra) {
+          		panic(fmt.Sprintf(
+          			"expected exactly %d categories, got %d",
+          			1+len(expectedHydra),
+          			len(list.Entry),
+          		))
+          	}
+          
+          	// RU должен быть первым и единственным объединённым RU.
+          	ru := list.Entry[0]
+          	if ru == nil || strings.ToLower(strings.TrimSpace(ru.CountryCode)) != "ru" {
+          		panic("first category must be RU")
+          	}
+          
+          	seenRU := make(map[string]bool, len(ru.Domain))
+          	rootRU := make(map[string]bool, len(ru.Domain))
+          	for _, domain := range ru.Domain {
+          		if domain != nil && domain.Type == router.Domain_RootDomain {
+          			value := strings.ToLower(strings.TrimSpace(domain.Value))
+          			if value != "" {
+          				rootRU[value] = true
+          			}
+          		}
+          	}
+          
+          	expectedTLD := map[string]bool{
+          		"ru":       false,
+          		"xn--p1ai": false,
+          		"su":       false,
+          	}
+          
+          	for _, domain := range ru.Domain {
+          		if domain == nil {
+          			panic("RU contains nil domain")
+          		}
+          
+          		if domain.Type != router.Domain_RootDomain {
+          			panic(fmt.Sprintf(
+          				"RU contains non-RootDomain rule: %v",
+          				domain.Type,
+          			))
+          		}
+          
+          		value := strings.ToLower(strings.TrimSpace(domain.Value))
+          		if value == "" {
+          			panic("RU contains empty domain value")
+          		}
+          
+          		key := domainKey(domain)
+          		if seenRU[key] {
+          			panic(fmt.Sprintf("duplicate domain in RU: %s", domain.Value))
+          		}
+          		seenRU[key] = true
+          
+          		if domain.Type == router.Domain_RootDomain {
+          			if _, ok := expectedTLD[value]; ok {
+          				expectedTLD[value] = true
+          			}
+          		}
+          
+          		if isRussianTLD(value) &&
+          			value != "ru" && value != "su" && value != "xn--p1ai" {
+          			panic(fmt.Sprintf("Russian TLD leaked into RU: %s", domain.Value))
+          		}
+          
+          		for parent := value; ; {
+          			dot := strings.IndexByte(parent, '.')
+          			if dot < 0 {
+          				break
+          			}
+          			parent = parent[dot+1:]
+          			if rootRU[parent] {
+          				panic(fmt.Sprintf(
+          					"redundant child domain in RU: %s is covered by %s",
+          					value,
+          					parent,
+          				))
+          			}
+          		}
+          	}
+          
+          	for name, ok := range expectedTLD {
+          		if !ok {
+          			panic(fmt.Sprintf("RU missing compact TLD: %s", name))
+          		}
+          	}
+          
+          	// Остальные категории обязаны идти строго в указанном порядке.
+          	for i, expected := range expectedHydra {
+          		site := list.Entry[i+1]
+          		if site == nil {
+          			panic(fmt.Sprintf("Hydra category %s is nil", expected))
+          		}
+          
+          		category := strings.ToLower(strings.TrimSpace(site.CountryCode))
+          		if category != expected {
+          			panic(fmt.Sprintf(
+          				"Hydra category order mismatch: expected %s, got %s",
+          				expected,
+          				site.CountryCode,
+          			))
+          		}
+          
+          		if len(site.Domain) == 0 {
+          			panic(fmt.Sprintf("Hydra category is empty: %s", category))
+          		}
+          
+          		seen := make(map[string]bool, len(site.Domain))
+          		roots := make(map[string]bool, len(site.Domain))
+          		for _, domain := range site.Domain {
+          			if domain != nil && domain.Type == router.Domain_RootDomain {
+          				value := strings.ToLower(strings.TrimSpace(domain.Value))
+          				if value != "" {
+          					roots[value] = true
+          				}
+          			}
+          		}
+          
+          		for _, domain := range site.Domain {
+          			if domain == nil {
+          				panic(fmt.Sprintf("%s contains nil domain", category))
+          			}
+          
+          			value := strings.ToLower(strings.TrimSpace(domain.Value))
+          			if value == "" {
+          				panic(fmt.Sprintf("%s contains empty domain value", category))
+          			}
+          
+          			if domain.Type == router.Domain_Full {
+          				panic(fmt.Sprintf(
+          					"Full rule remained in Hydra category %s: %s",
+          					category,
+          					domain.Value,
+          				))
+          			}
+          
+          			if domain.Type == router.Domain_RootDomain {
+          				for parent := value; ; {
+          					dot := strings.IndexByte(parent, '.')
+          					if dot < 0 {
+          						break
+          					}
+          					parent = parent[dot+1:]
+          					if roots[parent] {
+          						panic(fmt.Sprintf(
+          							"redundant child domain in Hydra category %s: %s is covered by %s",
+          							category,
+          							value,
+          							parent,
+          						))
+          					}
+          				}
+          			}
+          
+          			key := domainKey(domain)
+          			if seen[key] {
+          				panic(fmt.Sprintf(
+          					"duplicate domain in Hydra category %s: %s",
+          					category,
+          					domain.Value,
+          				))
+          			}
+          			seen[key] = true
+          		}
+          	}
+          
+          	fmt.Println()
+          	fmt.Println("========================================")
+          	fmt.Println("VALIDATION OK")
+          	fmt.Println("========================================")
+          	fmt.Printf("Categories: %d (RU + 16 Hydra)\n", len(list.Entry))
+          	fmt.Printf("RU rules:  %d\n", len(ru.Domain))
+          	fmt.Println("Single merged category: RU")
+          	fmt.Println("RU duplicates: none")
+          	fmt.Println("RU rules: RootDomain only; Full -> RootDomain")
+          	fmt.Println("RU compact TLDs: ru, xn--p1ai, su")
+          	fmt.Println("RU redundant child domains: none")
+          	fmt.Println("Hydra categories: 16, appended after RU in requested order")
+          	fmt.Println("Hydra Full rules: converted to RootDomain")
+          	fmt.Println("Hydra intra-category duplicates: none")
+          	fmt.Println("Hydra redundant child domains: none")
           }
           EOF
 
@@ -1068,11 +1208,11 @@ jobs:
             - `.xn--p1ai`
             - `.рф`
 
-            Regex and keyword rules are removed to reduce size. Only `RootDomain` and `Full` rules remain.
+            Regex and keyword rules are removed to reduce size. Only domain rules are retained; `Full` rules are converted to `RootDomain` so they cover all subdomains.
 
             ## Deduplication
 
-            Duplicate rules with the same type and domain value are kept only once across all source categories.
+            All retained `Full` rules are converted to `RootDomain`. Duplicate rules are removed globally, and redundant child `RootDomain` entries are removed when a parent domain already covers them.
 
             ## Appended Hydra categories
 
@@ -1082,7 +1222,7 @@ jobs:
             `google-play`, `microsoft`, `pinterest`, `riot`, `steam`, `telegram`, `twitch`,
             `twitch-ads`, `youtube`, `win-spy`.
 
-            Their domain rules are kept as separate routing categories; only duplicate Type+Value rules within each appended category are removed.
+            Their domain rules are kept as separate routing categories. `Full` rules are converted to `RootDomain`; duplicate rules and redundant child `RootDomain` entries are removed within each appended category.
 
             ## Compact Russian TLDs
 
