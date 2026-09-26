@@ -29,6 +29,7 @@ jobs:
       VPNYASHA_GEOSITE_URL: https://raw.githubusercontent.com/vpnyasha/geosite/main/geosite.dat
       KIRILL_GEOSITE_URL: https://github.com/kirilllavrov/RU-domain-list-for-whitelist/releases/latest/download/dlc.dat
       DIGNE_GEOSITE_URL: https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat
+      DAVOYAN_LEGACY_URL: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/category-ru-legacy.txt
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
@@ -38,6 +39,7 @@ jobs:
       VPNYASHA_INPUT_FILE: vpnyasha-geosite.dat
       KIRILL_INPUT_FILE: kirill-geosite.dat
       DIGNE_INPUT_FILE: digne-geosite.dat
+      DAVOYAN_LEGACY_INPUT_FILE: davoyan-category-ru-legacy.txt
       OUTPUT_FILE: geosite_RU.dat
       CATEGORY_FILE: geosite_RU_categories.txt
       HYDRA_APPEND_FILE: geosite_RU_hydra_appended_categories.txt
@@ -120,6 +122,10 @@ jobs:
             "$DIGNE_GEOSITE_URL" \
             -o "$DIGNE_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$DAVOYAN_LEGACY_URL" \
+            -o "$DAVOYAN_LEGACY_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
@@ -129,6 +135,7 @@ jobs:
           test -s "$VPNYASHA_INPUT_FILE"
           test -s "$KIRILL_INPUT_FILE"
           test -s "$DIGNE_INPUT_FILE"
+          test -s "$DAVOYAN_LEGACY_INPUT_FILE"
 
           echo
           echo "========================================"
@@ -150,7 +157,7 @@ jobs:
 
           echo
           echo "Downloaded sources:"
-          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE"
+          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -388,6 +395,7 @@ jobs:
           print(f"vpnyasha entries merged into RU:    {sum(x.startswith('vpnyasha|') for x in selected)}")
           print(f"Kirill entries merged into RU:      {sum(x.startswith('kirill|') for x in selected)}")
           print(f"DigneZzZ entries merged into RU:     {sum(x.startswith('digne|') for x in selected)}")
+          print("Davoyan legacy TXT source:           category-ru-legacy.txt")
           print("Hydra categories appended separately: 16")
           print(f"Missing v2fly candidates:       {len(missing_v2fly)}")
 
@@ -610,11 +618,95 @@ jobs:
           	return proto.Clone(domain).(*router.Domain)
           }
           
+          // loadLegacyDomains reads Davoyan's legacy RU domain list.
+          // The source is a plain TXT list; common rule prefixes are accepted as well.
+          func loadLegacyDomains(path string) ([]string, error) {
+              file, err := os.Open(path)
+              if err != nil {
+                  return nil, err
+              }
+              defer file.Close()
+          
+              var domains []string
+              seen := make(map[string]bool)
+              scanner := bufio.NewScanner(file)
+          
+              for scanner.Scan() {
+                  line := strings.TrimSpace(strings.TrimPrefix(scanner.Text(), "\ufeff"))
+                  if line == "" || strings.HasPrefix(line, "#") {
+                      continue
+                  }
+                  if idx := strings.IndexByte(line, '#'); idx >= 0 {
+                      line = strings.TrimSpace(line[:idx])
+                  }
+                  if line == "" {
+                      continue
+                  }
+          
+                  upper := strings.ToUpper(line)
+                  for _, prefix := range []string{"DOMAIN-SUFFIX,", "DOMAIN-FULL,", "DOMAIN,"} {
+                      if strings.HasPrefix(upper, prefix) {
+                          line = strings.TrimSpace(line[len(prefix):])
+                          break
+                      }
+                  }
+          		for _, prefix := range []string{"DOMAIN-KEYWORD,", "DOMAIN-REGEX,", "DOMAIN-WILDCARD,"} {
+          			if strings.HasPrefix(upper, prefix) {
+          				line = ""
+          				break
+          			}
+          		}
+          		if line == "" {
+          			continue
+          		}
+          
+                  for _, prefix := range []string{"domain:", "full:"} {
+                      if strings.HasPrefix(strings.ToLower(line), prefix) {
+                          line = strings.TrimSpace(line[len(prefix):])
+                          break
+                      }
+                  }
+          
+                  line = strings.TrimSpace(strings.TrimPrefix(line, "-"))
+                  line = strings.TrimPrefix(line, "*.")
+                  line = normalizeName(line)
+                  line = strings.TrimSuffix(line, ".")
+          
+                  if line == "" || strings.ContainsAny(line, " \t:/\\[](){}|$") {
+                      continue
+                  }
+          
+                  allNumeric := true
+                  for _, ch := range line {
+                      if (ch < '0' || ch > '9') && ch != '.' {
+                          allNumeric = false
+                          break
+                      }
+                  }
+                  if allNumeric {
+                      continue
+                  }
+          
+                  if seen[line] {
+                      continue
+                  }
+                  seen[line] = true
+                  domains = append(domains, line)
+              }
+          
+              if err := scanner.Err(); err != nil {
+                  return nil, err
+              }
+              if len(domains) == 0 {
+                  return nil, fmt.Errorf("Davoyan legacy domain list is empty")
+              }
+              return domains, nil
+          }
           func main() {
-          	if len(os.Args) != 12 {
+          	if len(os.Args) != 13 {
           		fmt.Fprintf(
           			os.Stderr,
-          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat selected.txt hydra_append.txt output.dat\n",
+          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt output.dat\n",
           			os.Args[0],
           		)
           		os.Exit(2)
@@ -631,7 +723,11 @@ jobs:
           		"digne":       os.Args[8],
           }
           
-          	manifest, err := loadManifest(os.Args[9])
+          legacyDomains, err := loadLegacyDomains(os.Args[9])
+          if err != nil {
+              panic(fmt.Errorf("failed to read Davoyan legacy list: %w", err))
+          }
+          	manifest, err := loadManifest(os.Args[10])
           	if err != nil {
           		panic(fmt.Errorf("failed to read manifest: %w", err))
           	}
@@ -753,6 +849,29 @@ jobs:
           		))
           	}
           
+          legacyDomainCount := 0
+          legacyDuplicateCount := 0
+          for _, value := range legacyDomains {
+              legacyDomainCount++
+              if isRussianTLD(value) {
+                  removedRussianDomainCount++
+                  continue
+              }
+
+              copied := &router.Domain{
+                  Type:  router.Domain_RootDomain,
+                  Value: normalizeName(value),
+              }
+              key := domainKey(copied)
+              if globalSeen[key] {
+                  legacyDuplicateCount++
+                  continue
+              }
+              globalSeen[key] = true
+              ruCategory.Domain = append(ruCategory.Domain, copied)
+              writtenDomainCount++
+          }
+
           	for _, value := range []string{"ru", "xn--p1ai", "su"} {
           		key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
           		if !globalSeen[key] {
@@ -790,7 +909,7 @@ jobs:
           	// Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
           	// Внутри каждой категории повторяющиеся Type+Value удаляются.
           	// ----------------------------------------------------------
-          	hydraAppendCategories, err := loadOrderedCategories(os.Args[10])
+          	hydraAppendCategories, err := loadOrderedCategories(os.Args[11])
           	if err != nil {
           		panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
           	}
@@ -873,7 +992,7 @@ jobs:
           		panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
           	}
           
-          	if err := os.WriteFile(os.Args[11], outputData, 0644); err != nil {
+          	if err := os.WriteFile(os.Args[12], outputData, 0644); err != nil {
           		panic(fmt.Errorf("failed to write output DAT: %w", err))
           	}
           
@@ -889,6 +1008,8 @@ jobs:
           	fmt.Printf("Removed duplicates      : %d\n", duplicateDomainCount)
           	fmt.Printf("Full -> RootDomain (RU): %d\n", convertedFullToRootCount)
           	fmt.Printf("Covered RU domains removed: %d\n", removedCoveredDomainCount)
+          	fmt.Printf("Davoyan legacy domains   : %d\n", legacyDomainCount)
+          	fmt.Printf("Davoyan legacy duplicates: %d\n", legacyDuplicateCount)
           	fmt.Printf("Appended Hydra rules    : %d\n", appendedRuleCount)
           	fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
           	fmt.Printf("Full -> RootDomain (Hydra): %d\n", appendedConvertedFullToRootCount)
@@ -926,6 +1047,7 @@ jobs:
             "$VPNYASHA_INPUT_FILE" \
             "$KIRILL_INPUT_FILE" \
             "$DIGNE_INPUT_FILE" \
+            "$DAVOYAN_LEGACY_INPUT_FILE" \
             selected_ru_categories.txt \
             hydra_append_categories.txt \
             "$OUTPUT_FILE"
@@ -1249,10 +1371,11 @@ jobs:
             - `vpnyasha/geosite` (`our-whitelist`, `our-category-ru`, `our-geoblock-ru`, `our-games`)
             - `kirilllavrov/RU-domain-list-for-whitelist` (`category-ru`)
             - `DigneZzZ/routing` (`category-ru`)
+            - `Davoyan/mihomo-rule-sets` (`domains/category-ru-legacy.txt`)
 
             ## Selection
 
-            The selected RU categories from runetfreedom, Hydra, Grimbird, mvrvntn, and Yularzhi are merged into a single `RU` category.
+            The selected RU categories from all GeoSite sources, plus the Davoyan legacy TXT list, are merged into a single `RU` category.
 
             Hydra categories:
             - `whitelist`
@@ -1291,6 +1414,9 @@ jobs:
             DigneZzZ categories merged into RU:
             - `category-ru`
 
+            Davoyan legacy domain source merged into RU:
+            - `domains/category-ru-legacy.txt`
+
             The runetfreedom/v2fly side continues to include the recursive `category-ru`, all current `*-ru` lists,
             `ru-available-only-inside`, and the additional Russian service/company lists.
 
@@ -1307,7 +1433,7 @@ jobs:
 
             ## Deduplication
 
-            All retained `Full` rules are converted to `RootDomain`. Duplicate rules are removed globally, and redundant child `RootDomain` entries are removed when a parent domain already covers them.
+            All retained `Full` rules are converted to `RootDomain`. The Davoyan legacy TXT list is imported as RootDomain rules. Duplicate rules are removed globally, and redundant child `RootDomain` entries are removed when a parent domain already covers them.
 
             ## Appended Hydra categories
 
@@ -1337,6 +1463,7 @@ jobs:
 
             `geosite_RU_categories.txt` contains the source category manifest merged into RU.
             `geosite_RU_hydra_appended_categories.txt` contains the ordered list of appended Hydra categories.
+            The Davoyan legacy source is merged directly into RU and is not emitted as a separate category.
 
           fail_on_unmatched_files: true
 
