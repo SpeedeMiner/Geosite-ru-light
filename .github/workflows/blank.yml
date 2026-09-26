@@ -1109,7 +1109,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # ------------------------------------------------------------
-      # 11. Also publish files to release branch.
+      # 11. Also publish files to release branch and purge jsDelivr cache
       # ------------------------------------------------------------
       - name: Publish files to release branch
         shell: bash
@@ -1155,6 +1155,11 @@ jobs:
             origin \
             release
 
+          echo "Purging jsDelivr CDN cache..."
+          curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" > /dev/null || true
+          curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat.sha256sum" > /dev/null || true
+          echo "jsDelivr CDN cache purged."
+
       # ------------------------------------------------------------
       # 12. Workflow summary
       # ------------------------------------------------------------
@@ -1171,6 +1176,9 @@ jobs:
           echo
           echo "Raw release branch:"
           echo "https://raw.githubusercontent.com/${{ github.repository }}/release/geosite_RU.dat"
+          echo
+          echo "jsDelivr CDN:"
+          echo "https://cdn.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat"
           echo
           echo "SHA256:"
           cat "$OUTPUT_SHA_FILE"
