@@ -26,61 +26,51 @@ jobs:
       - name: Clone domain-list-community
         run: git clone https://github.com/v2fly/domain-list-community.git
 
-      - name: Extract, Filter and Build
+      - name: Build Custom Data Directory
         run: |
           cd domain-list-community
           
-          echo "==== DOWNLOADING OFFICIAL RELEASE ===="
-          # Качаем официальный свежий geosite.dat (он весит около 10МБ)
-          curl -sLf https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat > official.dat
+          # Очищаем папку от чужих файлов, чтобы не было конфликтов
+          rm -rf data/*
           
-          echo "==== UNPACKING RU CATEGORY ===="
-          # Распаковываем категорию "ru" обратно в текст с помощью штатного парсера.
-          # Вывод перенаправляем в файл ru_raw.txt.
-          go run main.go -datapath=official.dat -exportlists=ru > ru_raw.txt
-          
-          # Так как unpack может создать папку dlc-export или выдать список в stdout, 
-          # мы проверяем оба варианта (в зависимости от версии компилятора).
-          if [ -f "dlc-export/ru.txt" ]; then
-            cat dlc-export/ru.txt > ru_raw.txt
-          fi
+          echo "==== FETCHING RESOLVED RU LIST ===="
+          # Берем уже раскрытый список РФ (со всеми .com/.net) из стабильного runetfreedom
+          curl -sLf https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/text/ru.txt > ru_raw.txt
           
           echo "==== FILTERING DOMAINS ===="
-          set +e
-          # Чистим: оставляем только домены, удаляем \r
+          # Очищаем от мусора, пустых строк, \r и отрезаем префиксы (domain: и full:)
           sed -i 's/\r//g' ru_raw.txt
-          # Удаляем префиксы вроде "full:" или "domain:", оставляем чистый домен
-          awk -F':' '{if (NF==2) print $2; else print $1}' ru_raw.txt | awk '{print $1}' | awk 'NF' > ru_clean.txt
+          awk -F':' '{if (NF==2) print $2; else print $1}' ru_raw.txt | grep -v '^#' | awk 'NF' > ru_clean.txt
           
-          # Вырезаем все домены с окончаниями .ru, .su, .by, .ua, .xn--p1ai
+          # Вырезаем всё, что заканчивается на зоны СНГ (отключаем остановку при ошибках через set +e)
+          set +e
           grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt
           set -e
           
-          echo "==== PREPARING DATA DIR ===="
-          # Очищаем папку data для нашей чистой сборки
-          rm -rf data/*
-          
-          # Собираем финальный файл data/ru
+          echo "==== BUILDING FINAL RU DIRECT ===="
+          # Записываем корневые зоны
           echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru
+          # Добавляем все наши отфильтрованные российские .com, .net и т.д.
           sort -u ru_filtered.txt >> data/ru
           
-          echo "==== BUILDING RU BLOCKED ===="
+          echo "==== FETCHING BLOCKED LISTS ===="
           set +e
-          # Скачиваем списки блокировок
+          # Качаем заблокированные домены напрямую из первоисточников
           curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt
           curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt
+          set -e
           
           sed -i 's/\r//g' blocked_1.txt blocked_2.txt
           cat blocked_1.txt blocked_2.txt | awk '{print $1}' | awk 'NF' | sort -u > data/ru-blocked
-          set -e
           
-          echo "=== Check RU-DIRECT ==="
-          head -n 20 data/ru
+          # Проверка в логах
+          echo "=== HEAD data/ru ==="
+          head -n 15 data/ru
 
       - name: Compile optimized geosite.dat
         run: |
           cd domain-list-community
-          # Компилируем наши два чистых файла
+          # Собираем наши два чистейших файла
           go run main.go -datapath=./data -exportlists=ru,ru-blocked
           mv dlc.dat ../geosite_optimized.dat
 
@@ -90,7 +80,7 @@ jobs:
           tag_name: latest-optimized
           name: "Optimized Geosite (RU + Blocked)"
           files: geosite_optimized.dat
-          body: "Содержит категорию 'ru' (СНГ TLD + все домены РФ без мусора) и 'ru-blocked' (Antifilter + Re:filter)."
+          body: "Содержит 'ru' (СНГ TLD + домены РФ .com/.net) и 'ru-blocked' (Antifilter + Re:filter)."
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
