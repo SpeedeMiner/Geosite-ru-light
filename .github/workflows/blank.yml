@@ -1,9 +1,11 @@
-name: Build Ultimate Light Geosite
+name: Build Ultimate Light RU Geosite
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: "0 0 * * 0"
+
   push:
     branches:
       - main
@@ -11,8 +13,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
+
+    env:
+      # Основная российская GeoSite-база.
+      # При необходимости можно заменить на URL конкретного geosite_RU.dat.
+      GEOSITE_URL: https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/geosite.dat
+      GEOSITE_SHA_URL: https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/geosite.dat.sha256sum
+
+      INPUT_FILE: geosite_source.dat
+      OUTPUT_FILE: geosite_RU.dat
 
     steps:
       - name: Checkout repository
@@ -21,80 +33,514 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.27'
+          go-version: stable
 
-      - name: Clone domain-list-community
-        run: git clone https://github.com/v2fly/domain-list-community.git
-
-      - name: Parse and Filter Internal v2fly Data
+      - name: Download source GeoSite
+        shell: bash
         run: |
-          cd domain-list-community/data
-          
-          echo "==== EXTRACTING ALL RU-RELATED DOMAINS ===="
-          # 1. Мы создаем временный файл и кладем туда содержимое основного файла "ru"
-          cat ru > /tmp/ru_all.txt 2>/dev/null || echo "" > /tmp/ru_all.txt
-          
-          # 2. Ищем все директивы "include:" внутри файла "ru"
-          INCLUDES=$(grep '^include:' /tmp/ru_all.txt | cut -d':' -f2 | tr -d '\r')
-          
-          # 3. Дописываем содержимое всех включенных файлов (yandex, vk, mailru и т.д.)
-          for item in $INCLUDES; do
-            if [ -f "$item" ]; then
-              cat "$item" >> /tmp/ru_all.txt
-            fi
-          done
-          
-          echo "==== FILTERING DOMAINS ===="
-          set +e
-          
-          # 4. Очищаем: берем только первый столбец, отрезаем комментарии и пустые строки
-          awk '{print $1}' /tmp/ru_all.txt | grep -v '^#' | awk -F':' '{if (NF==2) print $2; else print $1}' | awk 'NF' > /tmp/ru_clean.txt
-          
-          # 5. Вырезаем все домены с окончаниями СНГ (.ru, .su и т.д.)
-          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' /tmp/ru_clean.txt > /tmp/ru_filtered.txt
-          
-          set -e
-          
-          echo "==== PREPARING CLEAN DATA DIRECTORY ===="
-          cd ..
-          # Очищаем папку от миллионов лишних доменов
-          rm -rf data/*
-          
-          # Собираем финальный файл data/ru
-          echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru
-          sort -u /tmp/ru_filtered.txt >> data/ru
-          
-          echo "==== FETCHING BLOCKED LISTS ===="
-          set +e
-          # Качаем списки блокировок с проверенных серверов
-          curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt
-          curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt
-          set -e
-          
-          # Склеиваем и чистим блокировки
-          sed -i 's/\r//g' blocked_1.txt blocked_2.txt 2>/dev/null || true
-          cat blocked_1.txt blocked_2.txt | awk '{print $1}' | awk 'NF' | sort -u > data/ru-blocked
-          
-          # Уборка
-          rm -f blocked_1.txt blocked_2.txt /tmp/ru_all.txt /tmp/ru_clean.txt /tmp/ru_filtered.txt
-          
-          echo "=== HEAD data/ru ==="
-          head -n 20 data/ru
+          set -euo pipefail
 
-      - name: Compile optimized geosite.dat
+          echo "=== Downloading source geosite.dat ==="
+
+          curl -fL --retry 3 --retry-all-errors \
+            "$GEOSITE_URL" \
+            -o "$INPUT_FILE"
+
+          curl -fL --retry 3 --retry-all-errors \
+            "$GEOSITE_SHA_URL" \
+            -o geosite_source.dat.sha256sum
+
+          echo "=== Verify SHA256 ==="
+          expected_hash="$(awk '{print $1}' geosite_source.dat.sha256sum)"
+          actual_hash="$(sha256sum "$INPUT_FILE" | awk '{print $1}')"
+
+          echo "Expected: $expected_hash"
+          echo "Actual:   $actual_hash"
+
+          test "$expected_hash" = "$actual_hash"
+
+          echo "Source GeoSite verified successfully."
+          ls -lh "$INPUT_FILE"
+
+      - name: Create GeoSite filter
+        shell: bash
         run: |
-          cd domain-list-community
-          # Компилируем только 2 файла: наш ru и ru-blocked
-          go run main.go -datapath=./data -exportlists=ru,ru-blocked
-          mv dlc.dat ../geosite_optimized.dat
+          set -euo pipefail
+
+          mkdir -p /tmp/geosite-filter
+          cd /tmp/geosite-filter
+
+          cat > go.mod <<'EOF'
+          module geosite-filter
+
+          go 1.25
+          EOF
+
+          cat > main.go <<'EOF'
+          package main
+
+          import (
+              "fmt"
+              "io"
+              "os"
+              "sort"
+              "strings"
+
+              "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+              "google.golang.org/protobuf/proto"
+          )
+
+          // Явно сохраняем ваши категории.
+          //
+          // Дополнительно ниже автоматически попадут ВСЕ категории,
+          // имя которых заканчивается на "-ru".
+          //
+          // Это позволяет получать новые RU-категории из upstream
+          // без постоянного изменения workflow.
+          var explicitCategories = map[string]bool{
+              "ru-available-only-inside": true,
+
+              "category-retail-ru": true,
+              "category-travel-ru": true,
+
+              "yandex": true,
+              "vk": true,
+              "mailru": true,
+              "sber": true,
+              "mailru-group": true,
+
+              "ozon": true,
+              "ok": true,
+              "okko": true,
+              "sokolov": true,
+
+              "category-ai-ru": true,
+              "autoru": true,
+              "category-bank-ru": true,
+              "category-education-ru": true,
+              "category-entertainment-ru": true,
+              "category-gov-ru": true,
+              "category-media-ru": true,
+              "category-ru": true,
+
+              "mts-ru": true,
+              "myoffice-ru": true,
+              "nic-ru": true,
+              "overclockers-ru": true,
+              "regru": true,
+              "rutube": true,
+              "tbank-ru": true,
+              "tld-ru": true,
+              "category-medicine-ru": true,
+
+              "2gis": true,
+              "category-ip-geo-detect": true,
+              "kaspersky": true,
+          }
+
+          // Дополнительные RU-сервисы, которые не обязаны иметь "-ru" в имени.
+          var explicitServices = map[string]bool{
+              "yandex": true,
+              "vk": true,
+              "mailru": true,
+              "sber": true,
+              "mailru-group": true,
+              "ozon": true,
+              "ok": true,
+              "okko": true,
+              "sokolov": true,
+              "autoru": true,
+              "regru": true,
+              "rutube": true,
+              "2gis": true,
+              "kaspersky": true,
+          }
+
+          func normalizeName(s string) string {
+              return strings.ToLower(strings.TrimSpace(s))
+          }
+
+          func isSelectedCategory(name string) bool {
+              name = normalizeName(name)
+
+              if explicitCategories[name] {
+                  return true
+              }
+
+              if explicitServices[name] {
+                  return true
+              }
+
+              // Автоматически включаем все категории вида:
+              // category-xxx-ru
+              // xxx-ru
+              //
+              // Например:
+              // category-ecommerce-ru
+              // category-tech-media-ru
+              // genotek-ru
+              // ideco-ru
+              // t2-ru
+              // и новые аналогичные категории.
+              if strings.HasSuffix(name, "-ru") {
+                  return true
+              }
+
+              return false
+          }
+
+          func isRussianTLD(value string) bool {
+              v := normalizeName(value)
+
+              v = strings.TrimSuffix(v, ".")
+              v = strings.TrimPrefix(v, ".")
+
+              switch v {
+              case "ru", "su", "xn--p1ai", "рф":
+                  return true
+              }
+
+              return strings.HasSuffix(v, ".ru") ||
+                  strings.HasSuffix(v, ".su") ||
+                  strings.HasSuffix(v, ".xn--p1ai") ||
+                  strings.HasSuffix(v, ".рф")
+          }
+
+          func cloneDomain(d *routercommon.Domain) *routercommon.Domain {
+              return proto.Clone(d).(*routercommon.Domain)
+          }
+
+          func main() {
+              if len(os.Args) != 3 {
+                  fmt.Fprintf(os.Stderr, "usage: %s input.dat output.dat\n", os.Args[0])
+                  os.Exit(2)
+              }
+
+              inputPath := os.Args[1]
+              outputPath := os.Args[2]
+
+              input, err := os.Open(inputPath)
+              if err != nil {
+                  panic(err)
+              }
+              defer input.Close()
+
+              data, err := io.ReadAll(input)
+              if err != nil {
+                  panic(err)
+              }
+
+              source := new(routercommon.GeoSiteList)
+
+              if err := proto.Unmarshal(data, source); err != nil {
+                  panic(fmt.Errorf("cannot parse geosite protobuf: %w", err))
+              }
+
+              output := new(routercommon.GeoSiteList)
+
+              totalSourceCategories := len(source.Entry)
+              selectedCount := 0
+              outputDomainCount := 0
+
+              skippedCategories := make([]string, 0)
+
+              // Сортируем категории для полностью воспроизводимого результата.
+              sort.Slice(source.Entry, func(i, j int) bool {
+                  return normalizeName(source.Entry[i].CountryCode) <
+                      normalizeName(source.Entry[j].CountryCode)
+              })
+
+              for _, site := range source.Entry {
+                  categoryName := normalizeName(site.CountryCode)
+
+                  if !isSelectedCategory(categoryName) {
+                      continue
+                  }
+
+                  selectedCount++
+
+                  dst := &routercommon.GeoSite{
+                      CountryCode: site.CountryCode,
+                  }
+
+                  // Дедупликация внутри категории.
+                  seen := make(map[string]bool)
+
+                  for _, domain := range site.Domain {
+                      if domain == nil {
+                          continue
+                      }
+
+                      // Нас интересуют именно доменные правила.
+                      //
+                      // Plain = keyword
+                      // Regex = regexp
+                      //
+                      // Для максимально легкой базы они удаляются.
+                      if domain.Type != routercommon.Domain_RootDomain &&
+                          domain.Type != routercommon.Domain_Full {
+                          continue
+                      }
+
+                      value := normalizeName(domain.Value)
+
+                      if value == "" {
+                          continue
+                      }
+
+                      // Убираем все .ru / .su / .xn--p1ai / .рф
+                      // из обычных категорий.
+                      if isRussianTLD(value) {
+                          continue
+                      }
+
+                      key := fmt.Sprintf("%d:%s", domain.Type, value)
+
+                      if seen[key] {
+                          continue
+                      }
+
+                      seen[key] = true
+
+                      copied := cloneDomain(domain)
+                      copied.Value = value
+
+                      dst.Domain = append(dst.Domain, copied)
+                  }
+
+                  // Пустые категории после удаления .ru/.su/.рф
+                  // не записываем в результирующий DAT.
+                  if len(dst.Domain) == 0 {
+                      skippedCategories = append(
+                          skippedCategories,
+                          site.CountryCode,
+                      )
+                      continue
+                  }
+
+                  // Стабильная сортировка доменов.
+                  sort.Slice(dst.Domain, func(i, j int) bool {
+                      if dst.Domain[i].Type != dst.Domain[j].Type {
+                          return dst.Domain[i].Type < dst.Domain[j].Type
+                      }
+
+                      return dst.Domain[i].Value < dst.Domain[j].Value
+                  })
+
+                  output.Entry = append(output.Entry, dst)
+                  outputDomainCount += len(dst.Domain)
+              }
+
+              // ------------------------------------------------------------
+              // Специальная компактная категория RU.
+              //
+              // Это аналог:
+              //
+              // domain:ru
+              // domain:xn--p1ai
+              // domain:su
+              //
+              // В protobuf это RootDomain.
+              // ------------------------------------------------------------
+              output.Entry = append(output.Entry, &routercommon.GeoSite{
+                  CountryCode: "RU",
+                  Domain: []*routercommon.Domain{
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "ru",
+                      },
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "xn--p1ai",
+                      },
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "su",
+                      },
+                  },
+              })
+
+              // Отдельно сохраняем tld-ru, чтобы существующие правила
+              // вида ext:geosite_RU.dat:tld-ru тоже продолжали работать.
+              output.Entry = append(output.Entry, &routercommon.GeoSite{
+                  CountryCode: "TLD-RU",
+                  Domain: []*routercommon.Domain{
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "ru",
+                      },
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "xn--p1ai",
+                      },
+                      {
+                          Type:  routercommon.Domain_RootDomain,
+                          Value: "su",
+                      },
+                  },
+              })
+
+              // Сортировка итоговых категорий.
+              sort.Slice(output.Entry, func(i, j int) bool {
+                  return normalizeName(output.Entry[i].CountryCode) <
+                      normalizeName(output.Entry[j].CountryCode)
+              })
+
+              result, err := proto.MarshalOptions{
+                  Deterministic: true,
+              }.Marshal(output)
+
+              if err != nil {
+                  panic(fmt.Errorf("cannot marshal output: %w", err))
+              }
+
+              out, err := os.Create(outputPath)
+              if err != nil {
+                  panic(err)
+              }
+
+              if _, err := out.Write(result); err != nil {
+                  _ = out.Close()
+                  panic(err)
+              }
+
+              if err := out.Close(); err != nil {
+                  panic(err)
+              }
+
+              fmt.Println()
+              fmt.Println("========================================")
+              fmt.Println(" RU LIGHT GEOSITE BUILD COMPLETE")
+              fmt.Println("========================================")
+              fmt.Printf("Source categories : %d\n", totalSourceCategories)
+              fmt.Printf("Selected categories: %d\n", selectedCount)
+              fmt.Printf("Output categories : %d\n", len(output.Entry))
+              fmt.Printf("Domain rules      : %d\n", outputDomainCount+6)
+              fmt.Printf("Output size       : %d bytes\n", len(result))
+              fmt.Println()
+
+              if len(skippedCategories) > 0 {
+                  sort.Strings(skippedCategories)
+
+                  fmt.Println("Categories empty after RU-TLD filtering:")
+                  for _, name := range skippedCategories {
+                      fmt.Printf("  - %s\n", name)
+                  }
+              }
+          }
+          EOF
+
+      - name: Build light geosite_RU.dat
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cd /tmp/geosite-filter
+
+          go mod tidy
+
+          go run . \
+            "$GITHUB_WORKSPACE/$INPUT_FILE" \
+            "$GITHUB_WORKSPACE/$OUTPUT_FILE"
+
+      - name: Validate resulting DAT
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -s "$OUTPUT_FILE"
+
+          echo "=== Output file ==="
+          ls -lh "$OUTPUT_FILE"
+
+          echo "=== SHA256 ==="
+          sha256sum "$OUTPUT_FILE" | tee "${OUTPUT_FILE}.sha256sum"
+
+          echo
+          echo "=== Basic protobuf validation ==="
+
+          cd /tmp/geosite-filter
+
+          cat > validate.go <<'EOF'
+          package main
+
+          import (
+              "fmt"
+              "os"
+
+              "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+              "google.golang.org/protobuf/proto"
+          )
+
+          func main() {
+              if len(os.Args) != 2 {
+                  os.Exit(2)
+              }
+
+              data, err := os.ReadFile(os.Args[1])
+              if err != nil {
+                  panic(err)
+              }
+
+              list := new(routercommon.GeoSiteList)
+
+              if err := proto.Unmarshal(data, list); err != nil {
+                  panic(err)
+              }
+
+              if len(list.Entry) == 0 {
+                  panic("result has no categories")
+              }
+
+              var domains int
+
+              for _, entry := range list.Entry {
+                  domains += len(entry.Domain)
+                  fmt.Printf("%s: %d rules\n", entry.CountryCode, len(entry.Domain))
+              }
+
+              fmt.Printf("TOTAL CATEGORIES: %d\n", len(list.Entry))
+              fmt.Printf("TOTAL RULES: %d\n", domains)
+          }
+          EOF
+
+          go run validate.go "$GITHUB_WORKSPACE/$OUTPUT_FILE"
 
       - name: Publish Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized Geosite (RU + Blocked)"
-          files: geosite_optimized.dat
-          body: "Содержит 'ru' (СНГ TLD + домены РФ .com/.net) и 'ru-blocked' (Antifilter + Re:filter)."
+          name: "Optimized RU GeoSite"
+          files: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+          body: |
+            Optimized Russian GeoSite database.
+
+            Source:
+            runetfreedom/russia-v2ray-rules-dat
+
+            Processing:
+            - only RU-related categories are retained;
+            - all categories ending with "-ru" are included automatically;
+            - explicit RU service categories are retained;
+            - .ru domains are removed;
+            - .su domains are removed;
+            - .xn--p1ai (.рф) domains are removed;
+            - regex and keyword entries are removed to reduce size;
+            - RU TLDs are replaced with compact RootDomain rules:
+              ru
+              xn--p1ai
+              su
+
+            Additional categories:
+            RU
+            TLD-RU
+
+            The generated file is intended for Xray/V2Ray-style
+            `ext:geosite_RU.dat:<category>` routing.
+
           make_latest: true
+          fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
