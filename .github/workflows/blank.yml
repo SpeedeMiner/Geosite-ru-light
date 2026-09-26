@@ -636,6 +636,16 @@ jobs:
                   ))
               }
 
+              // ----------------------------------------------------------
+              // Собираем ВСЕ выбранные категории в ОДНУ категорию RU.
+              //
+              // Дедупликация глобальная: одинаковый Type + Value
+              // учитывается только один раз, даже если домен встречается
+              // в нескольких исходных категориях.
+              //
+              // Российские TLD удаляются из всех исходных категорий и
+              // затем добавляются компактно в ту же самую RU-категорию.
+              // ----------------------------------------------------------
               result := new(router.GeoSiteList)
 
               sourceCategoryCount := len(source.Entry)
@@ -644,10 +654,17 @@ jobs:
 
               sourceDomainCount := 0
               writtenDomainCount := 0
+              duplicateDomainCount := 0
               removedRussianDomainCount := 0
               removedUnsupportedTypeCount := 0
 
               matchedCategories := make(map[string]bool)
+              globalSeen := make(map[string]bool)
+
+              // Единая итоговая категория.
+              ruCategory := &router.GeoSite{
+                  CountryCode: "RU",
+              }
 
               for _, site := range source.Entry {
                   if site == nil {
@@ -656,9 +673,8 @@ jobs:
 
                   category := normalizeName(site.CountryCode)
 
-                  // RU/TLD-RU создаём ниже вручную в компактном виде.
-                  // Не копируем одноимённые категории из исходного DAT,
-                  // иначе они объединятся с компактными и дадут лишние правила.
+                  // Исходные RU/TLD-RU не копируем: итоговая RU
+                  // создаётся полностью заново ниже.
                   if category == "ru" || category == "tld-ru" {
                       continue
                   }
@@ -670,12 +686,6 @@ jobs:
                   matchedCategories[category] = true
                   selectedCategoryCount++
 
-                  dst := &router.GeoSite{
-                      CountryCode: site.CountryCode,
-                  }
-
-                  seen := make(map[string]bool)
-
                   for _, domain := range site.Domain {
                       if domain == nil {
                           continue
@@ -683,14 +693,7 @@ jobs:
 
                       sourceDomainCount++
 
-                      // Для лёгкой базы оставляем только:
-                      //
-                      // Domain_RootDomain = domain:example.com
-                      // Domain_Full      = full:example.com
-                      //
-                      // Regex/Plain удаляем:
-                      // они заметно увеличивают объём и не нужны
-                      // для регионального domain-routing набора.
+                      // Для лёгкой базы оставляем только RootDomain и Full.
                       switch domain.Type {
                       case router.Domain_RootDomain,
                           router.Domain_Full:
@@ -706,116 +709,65 @@ jobs:
                           continue
                       }
 
-                      // ГЛОБАЛЬНО удаляем российские зоны из всех категорий.
+                      // Российские TLD будут добавлены компактно ниже.
                       if isRussianTLD(value) {
                           removedRussianDomainCount++
                           continue
                       }
 
-                      copied := copyDomain(domain)
-                      copied.Value = value
+                      // Глобальная дедупликация по типу и значению.
+                      key := fmt.Sprintf("%d|%s", domain.Type, value)
 
-                      key := domainKey(copied)
-
-                      if seen[key] {
+                      if globalSeen[key] {
+                          duplicateDomainCount++
                           continue
                       }
 
-                      seen[key] = true
-                      dst.Domain = append(dst.Domain, copied)
+                      globalSeen[key] = true
+
+                      copied := copyDomain(domain)
+                      copied.Value = value
+                      ruCategory.Domain = append(ruCategory.Domain, copied)
                       writtenDomainCount++
                   }
+              }
 
-                  // Полностью пустые категории не включаем.
-                  //
-                  // Например исходный tld-ru после фильтра .ru/.рф/.su
-                  // станет пустым. Вместо него ниже создаётся компактный
-                  // TLD-RU.
-                  if len(dst.Domain) == 0 {
+              // ----------------------------------------------------------
+              // Компактные российские TLD добавляем в ту же RU-категорию.
+              // ----------------------------------------------------------
+              for _, value := range []string{"ru", "xn--p1ai", "su"} {
+                  key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
+
+                  if globalSeen[key] {
                       continue
                   }
 
-                  sort.Slice(dst.Domain, func(i, j int) bool {
-                      a := dst.Domain[i]
-                      b := dst.Domain[j]
-
-                      if a.Type != b.Type {
-                          return a.Type < b.Type
-                      }
-
-                      av := normalizeName(a.Value)
-                      bv := normalizeName(b.Value)
-
-                      if av != bv {
-                          return av < bv
-                      }
-
-                      return attrKey(a) < attrKey(b)
+                  globalSeen[key] = true
+                  ruCategory.Domain = append(ruCategory.Domain, &router.Domain{
+                      Type:  router.Domain_RootDomain,
+                      Value: value,
                   })
-
-                  result.Entry = append(result.Entry, dst)
-                  writtenCategoryCount++
+                  writtenDomainCount++
               }
 
-              // ----------------------------------------------------------
-              // Компактная RU TLD категория.
-              //
-              // Логически эквивалентно:
-              //
-              //   domain:ru
-              //   domain:xn--p1ai
-              //   domain:su
-              //
-              // Это заменяет огромное число .ru / .рф / .su доменов.
-              // ----------------------------------------------------------
-              compactTLDs := []*router.Domain{
-                  {
-                      Type:  router.Domain_RootDomain,
-                      Value: "ru",
-                  },
-                  {
-                      Type:  router.Domain_RootDomain,
-                      Value: "xn--p1ai",
-                  },
-                  {
-                      Type:  router.Domain_RootDomain,
-                      Value: "su",
-                  },
+              // Стабильный порядок правил внутри единой RU.
+              sort.Slice(ruCategory.Domain, func(i, j int) bool {
+                  a := ruCategory.Domain[i]
+                  b := ruCategory.Domain[j]
+
+                  if a.Type != b.Type {
+                      return a.Type < b.Type
+                  }
+
+                  return normalizeName(a.Value) < normalizeName(b.Value)
+              })
+
+              if len(ruCategory.Domain) == 0 {
+                  panic("RU category is empty")
               }
 
-              result.Entry = append(result.Entry, &router.GeoSite{
-                  CountryCode: "RU",
-                  Domain:     compactTLDs,
-              })
-
-              // Отдельный алиас, чтобы можно было использовать:
-              //
-              // ext:geosite_RU.dat:tld-ru
-              //
-              // Xray/V2Ray нормализует название списка при поиске.
-              result.Entry = append(result.Entry, &router.GeoSite{
-                  CountryCode: "TLD-RU",
-                  Domain: []*router.Domain{
-                      {
-                          Type:  router.Domain_RootDomain,
-                          Value: "ru",
-                      },
-                      {
-                          Type:  router.Domain_RootDomain,
-                          Value: "xn--p1ai",
-                      },
-                      {
-                          Type:  router.Domain_RootDomain,
-                          Value: "su",
-                      },
-                  },
-              })
-
-              // Стабильный порядок категорий.
-              sort.Slice(result.Entry, func(i, j int) bool {
-                  return normalizeName(result.Entry[i].CountryCode) <
-                      normalizeName(result.Entry[j].CountryCode)
-              })
+              result.Entry = append(result.Entry, ruCategory)
+              writtenCategoryCount = 1
 
               outputData, err := proto.MarshalOptions{
                   Deterministic: true,
@@ -866,15 +818,15 @@ jobs:
                   sourceCategoryCount,
               )
               fmt.Printf(
-                  "Selected categories     : %d\n",
+                  "Selected source categories: %d\n",
                   selectedCategoryCount,
               )
               fmt.Printf(
-                  "Output categories       : %d\n",
+                  "Final categories         : %d\n",
                   len(result.Entry),
               )
               fmt.Printf(
-                  "Written normal categories: %d\n",
+                  "Written categories       : %d\n",
                   writtenCategoryCount,
               )
               fmt.Printf(
@@ -892,6 +844,10 @@ jobs:
               fmt.Printf(
                   "Removed regex/keyword   : %d\n",
                   removedUnsupportedTypeCount,
+              )
+              fmt.Printf(
+                  "Removed duplicates      : %d\n",
+                  duplicateDomainCount,
               )
               fmt.Printf(
                   "Final DAT size          : %d bytes\n",
@@ -966,9 +922,10 @@ jobs:
       #
       # Проверяем:
       # - protobuf читается;
-      # - RU/TLD-RU существуют;
-      # - нет .ru / .su / .xn--p1ai / .рф;
-      # - нет Regex/Plain.
+      # - итог состоит ровно из одной категории RU;
+      # - внутри RU нет дубликатов;
+      # - присутствуют компактные ru / su / xn--p1ai;
+      # - нет Regex/Plain и прочих российских TLD.
       # ------------------------------------------------------------
       - name: Validate final DAT
         shell: bash
@@ -981,234 +938,149 @@ jobs:
           package main
 
           import (
-               "fmt"
-               "os"
-               "strings"
+              "fmt"
+              "os"
+              "strings"
 
-               router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
-               "google.golang.org/protobuf/proto"
+              router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
+              "google.golang.org/protobuf/proto"
           )
 
           func isRussianTLD(value string) bool {
-               value = strings.ToLower(strings.TrimSpace(value))
+              value = strings.ToLower(strings.TrimSpace(value))
+              value = strings.TrimSuffix(value, ".")
+              value = strings.TrimPrefix(value, ".")
 
-               value = strings.TrimSuffix(value, ".")
-               value = strings.TrimPrefix(value, ".")
+              switch value {
+              case "ru", "su", "xn--p1ai", "рф":
+                  return true
+              }
 
-               switch value {
-               case "ru", "su", "xn--p1ai", "рф":
-                    return true
-               }
+              return strings.HasSuffix(value, ".ru") ||
+                  strings.HasSuffix(value, ".su") ||
+                  strings.HasSuffix(value, ".xn--p1ai") ||
+                  strings.HasSuffix(value, ".рф")
+          }
 
-               return strings.HasSuffix(value, ".ru") ||
-                    strings.HasSuffix(value, ".su") ||
-                    strings.HasSuffix(value, ".xn--p1ai") ||
-                    strings.HasSuffix(value, ".рф")
+          func domainKey(domain *router.Domain) string {
+              value := strings.ToLower(strings.TrimSpace(domain.Value))
+              return fmt.Sprintf("%d|%s", domain.Type, value)
           }
 
           func main() {
-               if len(os.Args) != 2 {
-                    os.Exit(2)
-               }
+              if len(os.Args) != 2 {
+                  os.Exit(2)
+              }
 
-               data, err := os.ReadFile(os.Args[1])
-               if err != nil {
-                    panic(err)
-               }
+              data, err := os.ReadFile(os.Args[1])
+              if err != nil {
+                  panic(err)
+              }
 
-               list := new(router.GeoSiteList)
+              list := new(router.GeoSiteList)
 
-               if err := proto.Unmarshal(data, list); err != nil {
-                    panic(fmt.Errorf(
-                         "invalid geosite protobuf: %w",
-                         err,
-                    ))
-               }
+              if err := proto.Unmarshal(data, list); err != nil {
+                  panic(fmt.Errorf("invalid geosite protobuf: %w", err))
+              }
 
-               if len(list.Entry) == 0 {
-                    panic("geosite contains no categories")
-               }
+              // Итоговый DAT должен содержать ровно одну категорию: RU.
+              if len(list.Entry) != 1 {
+                  panic(fmt.Sprintf(
+                      "expected exactly 1 category, got %d",
+                      len(list.Entry),
+                  ))
+              }
 
-               foundRU := false
-               foundTLD := false
+              site := list.Entry[0]
+              if site == nil {
+                  panic("RU category is nil")
+              }
 
-               totalRules := 0
+              category := strings.ToLower(strings.TrimSpace(site.CountryCode))
+              if category != "ru" {
+                  panic(fmt.Sprintf(
+                      "expected only RU category, got %q",
+                      site.CountryCode,
+                  ))
+              }
 
-               for _, site := range list.Entry {
-                    if site == nil {
-                         continue
-                    }
+              totalRules := len(site.Domain)
+              seen := make(map[string]bool, totalRules)
+              expectedTLD := map[string]bool{
+                  "ru":       false,
+                  "xn--p1ai": false,
+                  "su":       false,
+              }
 
-                    category := strings.ToLower(
-                         strings.TrimSpace(site.CountryCode),
-                    )
+              for _, domain := range site.Domain {
+                  if domain == nil {
+                      panic("RU contains nil domain")
+                  }
 
-                    isCompactRU := category == "ru"
-                    isCompactTLD := category == "tld-ru"
+                  switch domain.Type {
+                  case router.Domain_RootDomain,
+                      router.Domain_Full:
+                      // OK
 
-                    if isCompactRU {
-                         foundRU = true
-                    }
+                  default:
+                      panic(fmt.Sprintf(
+                          "unsupported rule type in RU: %v",
+                          domain.Type,
+                      ))
+                  }
 
-                    if isCompactTLD {
-                         foundTLD = true
-                    }
+                  value := strings.ToLower(strings.TrimSpace(domain.Value))
+                  if value == "" {
+                      panic("RU contains empty domain value")
+                  }
 
-                    for _, domain := range site.Domain {
-                         if domain == nil {
-                              continue
-                         }
+                  key := domainKey(domain)
+                  if seen[key] {
+                      panic(fmt.Sprintf(
+                          "duplicate domain in RU: %s",
+                          domain.Value,
+                      ))
+                  }
+                  seen[key] = true
 
-                         totalRules++
+                  // Компактные TLD должны присутствовать как RootDomain.
+                  if domain.Type == router.Domain_RootDomain {
+                      if _, ok := expectedTLD[value]; ok {
+                          expectedTLD[value] = true
+                      }
+                  }
 
-                         // Разрешаем только RootDomain и Full.
-                         switch domain.Type {
-                         case router.Domain_RootDomain,
-                              router.Domain_Full:
-                              // OK
+                  // Никаких отдельных .ru/.su/.рф-зон кроме трёх
+                  // компактных корневых правил быть не должно.
+                  if isRussianTLD(value) &&
+                      value != "ru" && value != "su" && value != "xn--p1ai" {
+                      panic(fmt.Sprintf(
+                          "Russian TLD leaked into RU: %s",
+                          domain.Value,
+                      ))
+                  }
+              }
 
-                         default:
-                              panic(fmt.Sprintf(
-                                   "unsupported rule type in %s: %v",
-                                   site.CountryCode,
-                                   domain.Type,
-                              ))
-                         }
+              for name, ok := range expectedTLD {
+                  if !ok {
+                      panic(fmt.Sprintf(
+                          "RU missing compact TLD: %s",
+                          name,
+                      ))
+                  }
+              }
 
-                         value := strings.ToLower(
-                              strings.TrimSpace(domain.Value),
-                         )
-
-                         // ----------------------------------------------------------
-                         // RU и TLD-RU являются специальными компактными категориями.
-                         //
-                         // Они ДОЛЖНЫ содержать:
-                         //   ru
-                         //   xn--p1ai
-                         //   su
-                         //
-                         // Поэтому здесь российские TLD не запрещаем.
-                         // ----------------------------------------------------------
-                         if isCompactRU || isCompactTLD {
-                              continue
-                         }
-
-                         // Во всех остальных категориях российские зоны
-                         // запрещены.
-                         if isRussianTLD(value) {
-                              panic(fmt.Sprintf(
-                                   "Russian TLD leaked into category %s: %s",
-                                   site.CountryCode,
-                                   domain.Value,
-                              ))
-                         }
-                    }
-               }
-
-               if !foundRU {
-                    panic("RU category missing")
-               }
-
-               if !foundTLD {
-                    panic("TLD-RU category missing")
-               }
-
-               // ----------------------------------------------------------
-               // Проверяем RU.
-               // ----------------------------------------------------------
-
-               for _, site := range list.Entry {
-                    if site == nil {
-                         continue
-                    }
-
-                    category := strings.ToLower(
-                         strings.TrimSpace(site.CountryCode),
-                    )
-
-                    if category != "ru" && category != "tld-ru" {
-                         continue
-                    }
-
-                    if len(site.Domain) != 3 {
-                         panic(fmt.Sprintf(
-                              "%s category must contain exactly 3 rules, got %d",
-                              site.CountryCode,
-                              len(site.Domain),
-                         ))
-                    }
-
-                    expected := map[string]bool{
-                         "ru":       false,
-                         "xn--p1ai": false,
-                         "su":       false,
-                    }
-
-                    for _, domain := range site.Domain {
-                         if domain == nil {
-                              panic(fmt.Sprintf(
-                                   "%s contains nil domain",
-                                   site.CountryCode,
-                              ))
-                         }
-
-                         if domain.Type != router.Domain_RootDomain {
-                              panic(fmt.Sprintf(
-                                   "%s contains non-root-domain rule: %v",
-                                   site.CountryCode,
-                                   domain.Type,
-                              ))
-                         }
-
-                         value := strings.ToLower(
-                              strings.TrimSpace(domain.Value),
-                         )
-
-                         if _, ok := expected[value]; !ok {
-                              panic(fmt.Sprintf(
-                                   "%s contains unexpected TLD: %s",
-                                   site.CountryCode,
-                                   value,
-                              ))
-                         }
-
-                         if expected[value] {
-                              panic(fmt.Sprintf(
-                                   "%s contains duplicate TLD: %s",
-                                   site.CountryCode,
-                                   value,
-                              ))
-                         }
-
-                         expected[value] = true
-                    }
-
-                    for name, ok := range expected {
-                         if !ok {
-                              panic(fmt.Sprintf(
-                                   "%s missing compact TLD: %s",
-                                   site.CountryCode,
-                                   name,
-                              ))
-                         }
-                    }
-               }
-
-               fmt.Println()
-               fmt.Println("========================================")
-               fmt.Println("VALIDATION OK")
-               fmt.Println("========================================")
-               fmt.Printf(
-                    "Categories: %d\n",
-                    len(list.Entry),
-               )
-               fmt.Printf(
-                    "Rules:      %d\n",
-                    totalRules,
-               )
-               fmt.Println("RU category contains: ru, xn--p1ai, su")
-               fmt.Println("No Russian TLD rules found in ordinary categories.")
-               fmt.Println("No regex/keyword rules found.")
+              fmt.Println()
+              fmt.Println("========================================")
+              fmt.Println("VALIDATION OK")
+              fmt.Println("========================================")
+              fmt.Println("Categories: 1")
+              fmt.Printf("Rules:      %d\n", totalRules)
+              fmt.Println("Single category: RU")
+              fmt.Println("Global duplicates: none")
+              fmt.Println("RU category contains: ru, xn--p1ai, su")
+              fmt.Println("No extra Russian TLD rules found.")
+              fmt.Println("No regex/keyword rules found.")
           }
           EOF
 
@@ -1242,59 +1114,40 @@ jobs:
 
             ## Selection
 
-            - recursive contents of `category-ru`;
-            - all currently available `*-ru` categories;
-            - `ru-available-only-inside`;
-            - additional Russian service/company categories;
-            - `category-ecommerce-ru`;
-            - `category-bank-ru`;
-            - `category-gov-ru`;
-            - `category-media-ru`;
-            - `category-medicine-ru`;
-            - `category-retail-ru`;
-            - `category-tech-media-ru`;
-            - `category-travel-ru`;
-            - other detected RU categories.
+            All selected source categories are merged into a single `RU` category.
+            Source categories are selected automatically from `category-ru`, all `*-ru` lists,
+            `ru-available-only-inside`, and the additional Russian service/company lists.
 
             ## Filtering
 
-            The following are removed from EVERY selected category:
+            Before the final merge, the following Russian zones are removed from source categories:
 
             - `.ru`
             - `.su`
             - `.xn--p1ai`
             - `.рф`
 
-            Regex and keyword rules are removed to reduce size.
+            Regex and keyword rules are removed to reduce size. Only `RootDomain` and `Full` rules remain.
 
-            Only:
+            ## Deduplication
 
-            - RootDomain
-            - Full
-
-            rules remain.
+            Duplicate rules with the same type and domain value are kept only once across all source categories.
 
             ## Compact Russian TLDs
 
-            The generated `RU` category contains only:
+            The single generated `RU` category contains these compact rules:
 
             `domain:ru`
             `domain:xn--p1ai`
             `domain:su`
 
-            The same three rules are available in `TLD-RU`.
-
             ## Usage
 
             `ext:geosite_RU.dat:RU`
 
-            `ext:geosite_RU.dat:TLD-RU`
+            There is no separate `TLD-RU` category.
 
-            `ext:geosite_RU.dat:category-ru`
-
-            `ext:geosite_RU.dat:ru-available-only-inside`
-
-            Full category list is included as `geosite_RU_categories.txt`.
+            `geosite_RU_categories.txt` contains the source category manifest used to build RU.
 
           fail_on_unmatched_files: true
 
