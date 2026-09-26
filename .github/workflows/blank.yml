@@ -30,49 +30,45 @@ jobs:
         run: |
           cd domain-list-community
           
-          # Очищаем все стандартные категории
-          rm -rf data/*
+          # 1. ЖЕСТКАЯ ОЧИСТКА: удаляем символы возврата каретки (\r) из ВСЕХ исходников
+          # Это на 100% исключает ошибку "empty domain rule"
+          find data/ -type f -exec sed -i 's/\r//g' {} +
           
-          # 1. Скачиваем список RU из исходников
-          curl -sL https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/ru > ru_raw.txt
+          # 2. ГЛОБАЛЬНАЯ ФИЛЬТРАЦИЯ: вырезаем из всех файлов исходников v2fly 
+          # любые домены, оканчивающиеся на .ru, .su, .by, .ua, .xn--p1ai
+          # При этом директивы вроде "include:ru" останутся нетронутыми!
+          find data/ -type f -exec sed -i -E '/\.(ru|su|by|ua|xn--p1ai)([[:space:]]|$)/Id' {} +
           
-          # 2. Очистка: берем только первый столбец (домены), отрезаем комментарии (#)
-          awk '{print $1}' ru_raw.txt | grep -v '^#' | awk 'NF' > ru_clean.txt
+          # 3. Добавляем корневые TLD зоны прямо в начало файла "ru"
+          sed -i '1s/^/ru\nsu\nxn--p1ai\nby\nua\n/' data/ru
           
-          # 3. Вырезаем все домены, оканчивающиеся на .ru, .su, .by, .ua, .xn--p1ai
-          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt
-          
-          # 4. Создаем супер-категорию ru-direct. Пишем корневые зоны:
-          echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru-direct
-          
-          # 5. Добавляем отфильтрованные домены и ЖЕСТКО удаляем все пустые строки (sed '/^$/d')
-          sort -u ru_filtered.txt | sed '/^$/d' >> data/ru-direct
-          
-          # 6. Скачиваем списки заблокированных сайтов
+          # 4. Скачиваем списки блокировок (напрямую из первоисточников)
           echo "Downloading blocked lists..."
           curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt || echo "" > blocked_1.txt
           curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt || echo "" > blocked_2.txt
           
-          # 7. Объединяем, сортируем и ЖЕСТКО удаляем пустые строки
-          cat blocked_1.txt blocked_2.txt | awk 'NF' | sort -u | sed '/^$/d' > data/ru-blocked
+          # 5. Очищаем списки блокировок от \r и пустых строк, сливаем в файл ru-blocked
+          sed -i 's/\r//g' blocked_1.txt blocked_2.txt
+          cat blocked_1.txt blocked_2.txt | awk '{print $1}' | awk 'NF' | sort -u > data/ru-blocked
           
-          # Убираем временные файлы
-          rm -f ru_raw.txt ru_clean.txt ru_filtered.txt blocked_1.txt blocked_2.txt
+          # Убираем временные файлы загрузок
+          rm -f blocked_1.txt blocked_2.txt
 
       - name: Compile optimized geosite.dat
         run: |
           cd domain-list-community
-          # Компилируем
-          go run main.go -datapath=./data -exportlists=ru-direct,ru-blocked
+          
+          # Собираем только ДВЕ нужные нам категории. Всё лишнее компилятор проигнорирует.
+          go run main.go -datapath=./data -exportlists=ru,ru-blocked
           mv dlc.dat ../geosite_optimized.dat
 
       - name: Publish Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized Geosite (RU Direct + Blocked)"
+          name: "Optimized Geosite (RU + Blocked)"
           files: geosite_optimized.dat
-          body: "Содержит ru-direct (СНГ TLD + домены РФ без мусора) и ru-blocked (Antifilter + Re:filter)."
+          body: "Содержит категорию 'ru' (СНГ TLD + все домены РФ без мусора) и 'ru-blocked' (Antifilter + Re:filter)."
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
