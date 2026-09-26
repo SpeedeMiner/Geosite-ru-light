@@ -26,12 +26,18 @@ jobs:
       GRIMBIRD_GEOSITE_URL: https://raw.githubusercontent.com/GrimbirdUsers/ru-routing-dat/main/geosite.dat
       MVR_GEOSITE_URL: https://raw.githubusercontent.com/mvrvntn/routing/release/geosite.dat
       YULARZHI_GEOSITE_URL: https://github.com/Yularzhi/geosite_russia/releases/latest/download/geosite.dat
+      VPNYASHA_GEOSITE_URL: https://raw.githubusercontent.com/vpnyasha/geosite/main/geosite.dat
+      KIRILL_GEOSITE_URL: https://github.com/kirilllavrov/RU-domain-list-for-whitelist/releases/latest/download/dlc.dat
+      DIGNE_GEOSITE_URL: https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
       GRIMBIRD_INPUT_FILE: grimbird-geosite.dat
       MVR_INPUT_FILE: mvrvntn-geosite.dat
       YULARZHI_INPUT_FILE: yularzhi-geosite.dat
+      VPNYASHA_INPUT_FILE: vpnyasha-geosite.dat
+      KIRILL_INPUT_FILE: kirill-geosite.dat
+      DIGNE_INPUT_FILE: digne-geosite.dat
       OUTPUT_FILE: geosite_RU.dat
       CATEGORY_FILE: geosite_RU_categories.txt
       HYDRA_APPEND_FILE: geosite_RU_hydra_appended_categories.txt
@@ -102,12 +108,27 @@ jobs:
             "$YULARZHI_GEOSITE_URL" \
             -o "$YULARZHI_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$VPNYASHA_GEOSITE_URL" \
+            -o "$VPNYASHA_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$KIRILL_GEOSITE_URL" \
+            -o "$KIRILL_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$DIGNE_GEOSITE_URL" \
+            -o "$DIGNE_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
           test -s "$GRIMBIRD_INPUT_FILE"
           test -s "$MVR_INPUT_FILE"
           test -s "$YULARZHI_INPUT_FILE"
+          test -s "$VPNYASHA_INPUT_FILE"
+          test -s "$KIRILL_INPUT_FILE"
+          test -s "$DIGNE_INPUT_FILE"
 
           echo
           echo "========================================"
@@ -129,7 +150,7 @@ jobs:
 
           echo
           echo "Downloaded sources:"
-          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE"
+          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -273,6 +294,33 @@ jobs:
           for name in yularzhi_categories:
               selected.add(f"yularzhi|{normalize(name)}")
 
+          # vpnyasha/geosite — RU-focused enriched categories.
+          # Не берём private/ads/winspy/torrent: они не являются RU-ресурсами.
+          vpnyasha_categories = {
+              "our-whitelist",
+              "our-category-ru",
+              "our-geoblock-ru",
+              "our-games",
+          }
+          for name in vpnyasha_categories:
+              selected.add(f"vpnyasha|{normalize(name)}")
+
+          # kirilllavrov/RU-domain-list-for-whitelist — агрегированный
+          # проверенный российский whitelist.
+          kirill_categories = {
+              "category-ru",
+          }
+          for name in kirill_categories:
+              selected.add(f"kirill|{normalize(name)}")
+
+          # DigneZzZ/routing — только category-ru.
+          # Остальные категории относятся к отдельным routing-задачам.
+          digne_categories = {
+              "category-ru",
+          }
+          for name in digne_categories:
+              selected.add(f"digne|{normalize(name)}")
+
           # GrimbirdUsers/ru-routing-dat
           grimbird_categories = {
               "category-ru-whitelist",
@@ -337,6 +385,9 @@ jobs:
           print(f"Grimbird entries:             {sum(x.startswith('grimbird|') for x in selected)}")
           print(f"mvrvntn entries merged into RU: {sum(x.startswith('mvrvntn|') for x in selected)}")
           print(f"Yularzhi entries merged into RU:   {sum(x.startswith('yularzhi|') for x in selected)}")
+          print(f"vpnyasha entries merged into RU:    {sum(x.startswith('vpnyasha|') for x in selected)}")
+          print(f"Kirill entries merged into RU:      {sum(x.startswith('kirill|') for x in selected)}")
+          print(f"DigneZzZ entries merged into RU:     {sum(x.startswith('digne|') for x in selected)}")
           print("Hydra categories appended separately: 16")
           print(f"Missing v2fly candidates:       {len(missing_v2fly)}")
 
@@ -360,7 +411,7 @@ jobs:
 
           echo
           echo "=== External categories merged into RU ==="
-          grep -E '^(hydra|grimbird|mvrvntn|yularzhi)\|' "$CATEGORY_FILE"
+          grep -E '^(hydra|grimbird|mvrvntn|yularzhi|vpnyasha|kirill|digne)\|' "$CATEGORY_FILE"
 
           echo
           echo "=== Hydra categories appended separately ==="
@@ -560,10 +611,10 @@ jobs:
           }
           
           func main() {
-          	if len(os.Args) != 9 {
+          	if len(os.Args) != 12 {
           		fmt.Fprintf(
           			os.Stderr,
-          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat selected.txt hydra_append.txt output.dat\n",
+          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat selected.txt hydra_append.txt output.dat\n",
           			os.Args[0],
           		)
           		os.Exit(2)
@@ -575,9 +626,12 @@ jobs:
           		"grimbird":     os.Args[3],
           		"mvrvntn":      os.Args[4],
           		"yularzhi":     os.Args[5],
-          	}
+          		"vpnyasha":    os.Args[6],
+          		"kirill":      os.Args[7],
+          		"digne":       os.Args[8],
+          }
           
-          	manifest, err := loadManifest(os.Args[6])
+          	manifest, err := loadManifest(os.Args[9])
           	if err != nil {
           		panic(fmt.Errorf("failed to read manifest: %w", err))
           	}
@@ -679,7 +733,7 @@ jobs:
           		}
           	}
           
-          	for _, source := range []string{"hydra", "grimbird", "mvrvntn", "yularzhi"} {
+          	for _, source := range []string{"hydra", "grimbird", "mvrvntn", "yularzhi", "vpnyasha", "kirill", "digne"} {
           		for category := range manifest[source] {
           			if !matched[source][category] {
           				fmt.Printf(
@@ -736,7 +790,7 @@ jobs:
           	// Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
           	// Внутри каждой категории повторяющиеся Type+Value удаляются.
           	// ----------------------------------------------------------
-          	hydraAppendCategories, err := loadOrderedCategories(os.Args[7])
+          	hydraAppendCategories, err := loadOrderedCategories(os.Args[10])
           	if err != nil {
           		panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
           	}
@@ -819,7 +873,7 @@ jobs:
           		panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
           	}
           
-          	if err := os.WriteFile(os.Args[8], outputData, 0644); err != nil {
+          	if err := os.WriteFile(os.Args[11], outputData, 0644); err != nil {
           		panic(fmt.Errorf("failed to write output DAT: %w", err))
           	}
           
@@ -869,6 +923,9 @@ jobs:
             "$GRIMBIRD_INPUT_FILE" \
             "$MVR_INPUT_FILE" \
             "$YULARZHI_INPUT_FILE" \
+            "$VPNYASHA_INPUT_FILE" \
+            "$KIRILL_INPUT_FILE" \
+            "$DIGNE_INPUT_FILE" \
             selected_ru_categories.txt \
             hydra_append_categories.txt \
             "$OUTPUT_FILE"
@@ -1189,6 +1246,9 @@ jobs:
             - `GrimbirdUsers/ru-routing-dat`
             - `mvrvntn/routing` (`category-ru` merged into RU)
             - `Yularzhi/geosite_russia` (`category-ru` + `private` merged into RU)
+            - `vpnyasha/geosite` (`our-whitelist`, `our-category-ru`, `our-geoblock-ru`, `our-games`)
+            - `kirilllavrov/RU-domain-list-for-whitelist` (`category-ru`)
+            - `DigneZzZ/routing` (`category-ru`)
 
             ## Selection
 
@@ -1218,6 +1278,18 @@ jobs:
             Yularzhi categories merged into RU:
             - `category-ru`
             - `private`
+
+            vpnyasha categories merged into RU:
+            - `our-whitelist`
+            - `our-category-ru`
+            - `our-geoblock-ru`
+            - `our-games`
+
+            Kirill categories merged into RU:
+            - `category-ru`
+
+            DigneZzZ categories merged into RU:
+            - `category-ru`
 
             The runetfreedom/v2fly side continues to include the recursive `category-ru`, all current `*-ru` lists,
             `ru-available-only-inside`, and the additional Russian service/company lists.
