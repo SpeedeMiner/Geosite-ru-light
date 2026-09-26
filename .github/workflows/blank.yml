@@ -656,6 +656,13 @@ jobs:
 
                   category := normalizeName(site.CountryCode)
 
+                  // RU/TLD-RU создаём ниже вручную в компактном виде.
+                  // Не копируем одноимённые категории из исходного DAT,
+                  // иначе они объединятся с компактными и дадут лишние правила.
+                  if category == "ru" || category == "tld-ru" {
+                      continue
+                  }
+
                   if !selected[category] {
                       continue
                   }
