@@ -26,51 +26,65 @@ jobs:
       - name: Clone domain-list-community
         run: git clone https://github.com/v2fly/domain-list-community.git
 
-      - name: Build Custom Data Directory
+      - name: Parse and Filter Internal v2fly Data
         run: |
-          cd domain-list-community
+          cd domain-list-community/data
           
-          # Очищаем папку от чужих файлов, чтобы не было конфликтов
-          rm -rf data/*
+          echo "==== EXTRACTING ALL RU-RELATED DOMAINS ===="
+          # 1. Мы создаем временный файл и кладем туда содержимое основного файла "ru"
+          cat ru > /tmp/ru_all.txt 2>/dev/null || echo "" > /tmp/ru_all.txt
           
-          echo "==== FETCHING RESOLVED RU LIST ===="
-          # Берем уже раскрытый список РФ (со всеми .com/.net) из стабильного runetfreedom
-          curl -sLf https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/text/ru.txt > ru_raw.txt
+          # 2. Ищем все директивы "include:" внутри файла "ru"
+          INCLUDES=$(grep '^include:' /tmp/ru_all.txt | cut -d':' -f2 | tr -d '\r')
+          
+          # 3. Дописываем содержимое всех включенных файлов (yandex, vk, mailru и т.д.)
+          for item in $INCLUDES; do
+            if [ -f "$item" ]; then
+              cat "$item" >> /tmp/ru_all.txt
+            fi
+          done
           
           echo "==== FILTERING DOMAINS ===="
-          # Очищаем от мусора, пустых строк, \r и отрезаем префиксы (domain: и full:)
-          sed -i 's/\r//g' ru_raw.txt
-          awk -F':' '{if (NF==2) print $2; else print $1}' ru_raw.txt | grep -v '^#' | awk 'NF' > ru_clean.txt
-          
-          # Вырезаем всё, что заканчивается на зоны СНГ (отключаем остановку при ошибках через set +e)
           set +e
-          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt
+          
+          # 4. Очищаем: берем только первый столбец, отрезаем комментарии и пустые строки
+          awk '{print $1}' /tmp/ru_all.txt | grep -v '^#' | awk -F':' '{if (NF==2) print $2; else print $1}' | awk 'NF' > /tmp/ru_clean.txt
+          
+          # 5. Вырезаем все домены с окончаниями СНГ (.ru, .su и т.д.)
+          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' /tmp/ru_clean.txt > /tmp/ru_filtered.txt
+          
           set -e
           
-          echo "==== BUILDING FINAL RU DIRECT ===="
-          # Записываем корневые зоны
+          echo "==== PREPARING CLEAN DATA DIRECTORY ===="
+          cd ..
+          # Очищаем папку от миллионов лишних доменов
+          rm -rf data/*
+          
+          # Собираем финальный файл data/ru
           echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru
-          # Добавляем все наши отфильтрованные российские .com, .net и т.д.
-          sort -u ru_filtered.txt >> data/ru
+          sort -u /tmp/ru_filtered.txt >> data/ru
           
           echo "==== FETCHING BLOCKED LISTS ===="
           set +e
-          # Качаем заблокированные домены напрямую из первоисточников
+          # Качаем списки блокировок с проверенных серверов
           curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt
           curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt
           set -e
           
-          sed -i 's/\r//g' blocked_1.txt blocked_2.txt
+          # Склеиваем и чистим блокировки
+          sed -i 's/\r//g' blocked_1.txt blocked_2.txt 2>/dev/null || true
           cat blocked_1.txt blocked_2.txt | awk '{print $1}' | awk 'NF' | sort -u > data/ru-blocked
           
-          # Проверка в логах
+          # Уборка
+          rm -f blocked_1.txt blocked_2.txt /tmp/ru_all.txt /tmp/ru_clean.txt /tmp/ru_filtered.txt
+          
           echo "=== HEAD data/ru ==="
-          head -n 15 data/ru
+          head -n 20 data/ru
 
       - name: Compile optimized geosite.dat
         run: |
           cd domain-list-community
-          # Собираем наши два чистейших файла
+          # Компилируем только 2 файла: наш ru и ru-blocked
           go run main.go -datapath=./data -exportlists=ru,ru-blocked
           mv dlc.dat ../geosite_optimized.dat
 
