@@ -1,0 +1,73 @@
+name: Build Ultimate Light Geosite
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0" # Каждое воскресенье
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.27'
+
+      - name: Clone domain-list-community
+        run: git clone https://github.com/v2fly/domain-list-community.git
+
+      - name: Prepare custom clean lists
+        run: |
+          cd domain-list-community
+          
+          # 1. ЖЕСТКАЯ ОЧИСТКА: Удаляем вообще все стандартные мировые категории.
+          # Это гарантирует, что в сборку не попадет ничего лишнего.
+          rm -rf data/*
+          
+          # 2. Скачиваем актуальный список ВСЕХ российских ресурсов из runetfreedom
+          curl -sL https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/text/ru.txt > ru_raw.txt
+          
+          # 3. Очистка синтаксиса: оставляем только домены, отрезаем комментарии и теги маршрутизации
+          awk '{print $1}' ru_raw.txt | grep -v '^#' | grep -v '^$' > ru_clean.txt
+          
+          # 4. Вырезаем все домены, оканчивающиеся на .ru, .su, .by, .ua, .рф (xn--p1ai)
+          grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt
+          
+          # 5. Создаем нашу супер-категорию ru-direct. Сначала пишем корневые зоны:
+          echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru-direct
+          
+          # 6. Добавляем отфильтрованные .com/.net домены РФ, убирая текстовые дубликаты (sort -u)
+          sort -u ru_filtered.txt >> data/ru-direct
+          
+          # ОПЦИОНАЛЬНО: Скачиваем список заблокированных сайтов (если вам нужно пускать их в WARP)
+          # Если не нужно - просто удалите следующую строку
+          curl -sL https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/text/ru-blocked.txt > data/ru-blocked
+
+      - name: Compile optimized geosite.dat
+        run: |
+          cd domain-list-community
+          
+          # Компилятор сам построит дерево и удалит логические дубли (например, поглотит поддомены)
+          go run main.go -datapath=./data -exportlists=ru-direct,ru-blocked
+          mv dlc.dat ../geosite_optimized.dat
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-optimized
+          name: "Optimized Geosite (RU Direct + Blocked)"
+          files: geosite_optimized.dat
+          body: "Максимально очищенная база. Содержит только ru-direct (СНГ TLD + домены РФ без мусора) и ru-blocked."
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
