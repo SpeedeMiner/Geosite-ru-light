@@ -25,11 +25,13 @@ jobs:
       HYDRA_GEOSITE_URL: https://github.com/hydraponique/roscomvpn-geosite/releases/latest/download/geosite.dat
       GRIMBIRD_GEOSITE_URL: https://raw.githubusercontent.com/GrimbirdUsers/ru-routing-dat/main/geosite.dat
       MVR_GEOSITE_URL: https://raw.githubusercontent.com/mvrvntn/routing/release/geosite.dat
+      YULARZHI_GEOSITE_URL: https://github.com/Yularzhi/geosite_russia/releases/latest/download/geosite.dat
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
       GRIMBIRD_INPUT_FILE: grimbird-geosite.dat
       MVR_INPUT_FILE: mvrvntn-geosite.dat
+      YULARZHI_INPUT_FILE: yularzhi-geosite.dat
       OUTPUT_FILE: geosite_RU.dat
       CATEGORY_FILE: geosite_RU_categories.txt
       HYDRA_APPEND_FILE: geosite_RU_hydra_appended_categories.txt
@@ -96,11 +98,16 @@ jobs:
             "$MVR_GEOSITE_URL" \
             -o "$MVR_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$YULARZHI_GEOSITE_URL" \
+            -o "$YULARZHI_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
           test -s "$GRIMBIRD_INPUT_FILE"
           test -s "$MVR_INPUT_FILE"
+          test -s "$YULARZHI_INPUT_FILE"
 
           echo
           echo "========================================"
@@ -122,7 +129,7 @@ jobs:
 
           echo
           echo "Downloaded sources:"
-          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE"
+          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -258,6 +265,14 @@ jobs:
           for name in mvr_categories:
               selected.add(f"mvrvntn|{normalize(name)}")
 
+          # Yularzhi/geosite_russia — CATEGORY-RU и PRIVATE добавляются в общий RU.
+          yularzhi_categories = {
+              "category-ru",
+              "private",
+          }
+          for name in yularzhi_categories:
+              selected.add(f"yularzhi|{normalize(name)}")
+
           # GrimbirdUsers/ru-routing-dat
           grimbird_categories = {
               "category-ru-whitelist",
@@ -321,6 +336,7 @@ jobs:
           print(f"Hydra entries merged into RU: {sum(x.startswith('hydra|') for x in selected)}")
           print(f"Grimbird entries:             {sum(x.startswith('grimbird|') for x in selected)}")
           print(f"mvrvntn entries merged into RU: {sum(x.startswith('mvrvntn|') for x in selected)}")
+          print(f"Yularzhi entries merged into RU:   {sum(x.startswith('yularzhi|') for x in selected)}")
           print("Hydra categories appended separately: 16")
           print(f"Missing v2fly candidates:       {len(missing_v2fly)}")
 
@@ -344,7 +360,7 @@ jobs:
 
           echo
           echo "=== External categories merged into RU ==="
-          grep -E '^(hydra|grimbird|mvrvntn)\|' "$CATEGORY_FILE"
+          grep -E '^(hydra|grimbird|mvrvntn|yularzhi)\|' "$CATEGORY_FILE"
 
           echo
           echo "=== Hydra categories appended separately ==="
@@ -851,6 +867,7 @@ jobs:
             "$HYDRA_INPUT_FILE" \
             "$GRIMBIRD_INPUT_FILE" \
             "$MVR_INPUT_FILE" \
+            "$YULARZHI_INPUT_FILE" \
             selected_ru_categories.txt \
             hydra_append_categories.txt \
             "$OUTPUT_FILE"
@@ -1170,10 +1187,11 @@ jobs:
             - `hydraponique/roscomvpn-geosite`
             - `GrimbirdUsers/ru-routing-dat`
             - `mvrvntn/routing` (`category-ru` merged into RU)
+            - `Yularzhi/geosite_russia` (`category-ru` + `private` merged into RU)
 
             ## Selection
 
-            The selected RU categories from runetfreedom, Hydra, Grimbird, and mvrvntn are merged into a single `RU` category.
+            The selected RU categories from runetfreedom, Hydra, Grimbird, mvrvntn, and Yularzhi are merged into a single `RU` category.
 
             Hydra categories:
             - `whitelist`
@@ -1195,6 +1213,10 @@ jobs:
 
             mvrvntn category merged into RU:
             - `category-ru`
+
+            Yularzhi categories merged into RU:
+            - `category-ru`
+            - `private`
 
             The runetfreedom/v2fly side continues to include the recursive `category-ru`, all current `*-ru` lists,
             `ru-available-only-inside`, and the additional Russian service/company lists.
