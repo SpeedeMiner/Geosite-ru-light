@@ -26,12 +26,15 @@ jobs:
 
       HYDRA_GEOSITE_URL: https://github.com/hydraponique/roscomvpn-geosite/releases/latest/download/geosite.dat
       GRIMBIRD_GEOSITE_URL: https://raw.githubusercontent.com/GrimbirdUsers/ru-routing-dat/main/geosite.dat
+      MVR_GEOSITE_URL: https://raw.githubusercontent.com/mvrvntn/routing/release/geosite.dat
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
       GRIMBIRD_INPUT_FILE: grimbird-geosite.dat
+      MVR_INPUT_FILE: mvrvntn-geosite.dat
       OUTPUT_FILE: geosite_RU.dat
       CATEGORY_FILE: geosite_RU_categories.txt
+      HYDRA_APPEND_FILE: geosite_RU_hydra_appended_categories.txt
       OUTPUT_SHA_FILE: geosite_RU.dat.sha256sum
 
     steps:
@@ -91,10 +94,15 @@ jobs:
             "$GRIMBIRD_GEOSITE_URL" \
             -o "$GRIMBIRD_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$MVR_GEOSITE_URL" \
+            -o "$MVR_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
           test -s "$GRIMBIRD_INPUT_FILE"
+          test -s "$MVR_INPUT_FILE"
 
           echo
           echo "========================================"
@@ -116,7 +124,7 @@ jobs:
 
           echo
           echo "Downloaded sources:"
-          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE"
+          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -257,6 +265,13 @@ jobs:
           for name in hydra_categories:
               selected.add(f"hydra|{normalize(name)}")
 
+          # mvrvntn/routing — только CATEGORY-RU добавляется в общий RU.
+          mvr_categories = {
+              "category-ru",
+          }
+          for name in mvr_categories:
+              selected.add(f"mvrvntn|{normalize(name)}")
+
           # GrimbirdUsers/ru-routing-dat
           grimbird_categories = {
               "category-ru-whitelist",
@@ -284,15 +299,44 @@ jobs:
               for item in sorted(selected):
                   f.write(item + "\n")
 
+          # Отдельный порядок категорий Hydra, которые НЕ вливаются в RU,
+          # а добавляются в конец итогового GeoSiteList отдельными категориями.
+          hydra_append_categories = [
+              "apple",
+              "epicgames",
+              "escapefromtarkov",
+              "faceit",
+              "github",
+              "google-deepmind",
+              "google-play",
+              "microsoft",
+              "pinterest",
+              "riot",
+              "steam",
+              "telegram",
+              "twitch",
+              "twitch-ads",
+              "youtube",
+              "win-spy",
+          ]
+
+          append_output = Path("hydra_append_categories.txt")
+          append_output.write_text(
+              "\n".join(f"hydra|{name}" for name in hydra_append_categories) + "\n",
+              encoding="utf-8",
+          )
+
           print()
           print("========================================")
           print("RU CATEGORY MANIFEST")
           print("========================================")
           print(f"Manifest entries:          {len(selected)}")
           print(f"Runetfreedom/v2fly entries: {sum(x.startswith('runetfreedom|') for x in selected)}")
-          print(f"Hydra entries:             {sum(x.startswith('hydra|') for x in selected)}")
-          print(f"Grimbird entries:          {sum(x.startswith('grimbird|') for x in selected)}")
-          print(f"Missing v2fly candidates:  {len(missing_v2fly)}")
+          print(f"Hydra entries merged into RU: {sum(x.startswith('hydra|') for x in selected)}")
+          print(f"Grimbird entries:             {sum(x.startswith('grimbird|') for x in selected)}")
+          print(f"mvrvntn entries merged into RU: {sum(x.startswith('mvrvntn|') for x in selected)}")
+          print("Hydra categories appended separately: 16")
+          print(f"Missing v2fly candidates:       {len(missing_v2fly)}")
 
           if missing_v2fly:
               print("\nCandidates not present in v2fly data:")
@@ -313,8 +357,14 @@ jobs:
           wc -l "$CATEGORY_FILE"
 
           echo
-          echo "=== External categories requested ==="
-          grep -E '^(hydra|grimbird)\|' "$CATEGORY_FILE"
+          echo "=== External categories merged into RU ==="
+          grep -E '^(hydra|grimbird|mvrvntn)\|' "$CATEGORY_FILE"
+
+          echo
+          echo "=== Hydra categories appended separately ==="
+          cat hydra_append_categories.txt
+
+          cp hydra_append_categories.txt "$HYDRA_APPEND_FILE"
 
       # ------------------------------------------------------------
       # 6. Create protobuf filter.
@@ -421,15 +471,55 @@ jobs:
               return result, nil
           }
 
+          func loadOrderedCategories(path string) ([]string, error) {
+              file, err := os.Open(path)
+              if err != nil {
+                  return nil, err
+              }
+              defer file.Close()
+
+              var categories []string
+              scanner := bufio.NewScanner(file)
+
+              for scanner.Scan() {
+                  line := strings.TrimSpace(scanner.Text())
+                  if line == "" || strings.HasPrefix(line, "#") {
+                      continue
+                  }
+
+                  parts := strings.SplitN(line, "|", 2)
+                  if len(parts) != 2 || normalizeName(parts[0]) != "hydra" {
+                      return nil, fmt.Errorf("invalid Hydra append manifest entry: %q", line)
+                  }
+
+                  category := normalizeName(parts[1])
+                  if category == "" {
+                      return nil, fmt.Errorf("empty Hydra category in manifest: %q", line)
+                  }
+
+                  categories = append(categories, category)
+              }
+
+              if err := scanner.Err(); err != nil {
+                  return nil, err
+              }
+
+              if len(categories) == 0 {
+                  return nil, fmt.Errorf("Hydra append manifest is empty")
+              }
+
+              return categories, nil
+          }
+
           func cloneDomain(domain *router.Domain) *router.Domain {
               return proto.Clone(domain).(*router.Domain)
           }
 
           func main() {
-              if len(os.Args) != 6 {
+              if len(os.Args) != 7 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat selected.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat selected.txt hydra_append.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -439,9 +529,10 @@ jobs:
                   "runetfreedom": os.Args[1],
                   "hydra":         os.Args[2],
                   "grimbird":      os.Args[3],
+                  "mvrvntn":       os.Args[4],
               }
 
-              manifest, err := loadManifest(os.Args[4])
+              manifest, err := loadManifest(os.Args[5])
               if err != nil {
                   panic(fmt.Errorf("failed to read manifest: %w", err))
               }
@@ -534,7 +625,7 @@ jobs:
                   }
               }
 
-              for _, source := range []string{"hydra", "grimbird"} {
+              for _, source := range []string{"hydra", "grimbird", "mvrvntn"} {
                   for category := range manifest[source] {
                       if !matched[source][category] {
                           fmt.Printf(
@@ -581,12 +672,84 @@ jobs:
 
               result.Entry = append(result.Entry, ruCategory)
 
-              outputData, err := proto.MarshalOptions{Deterministic: true}.Marshal(result)
+              // ----------------------------------------------------------
+              // После обработки общего RU добавляем выбранные категории
+              // Hydra отдельными категориями и строго в заданном порядке.
+              // Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
+              // Внутри каждой категории повторяющиеся Type+Value удаляются.
+              // ----------------------------------------------------------
+              hydraAppendCategories, err := loadOrderedCategories(os.Args[6])
               if err != nil {
-                  panic(fmt.Errorf("failed to marshal output DAT: %w", err))
+                  panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
               }
 
-              if err := os.WriteFile(os.Args[5], outputData, 0644); err != nil {
+              hydraList := lists["hydra"]
+              hydraByCategory := make(map[string]*router.GeoSite)
+              for _, site := range hydraList.Entry {
+                  if site == nil {
+                      continue
+                  }
+                  category := normalizeName(site.CountryCode)
+                  for _, wanted := range hydraAppendCategories {
+                      if category == wanted {
+                          if _, exists := hydraByCategory[category]; exists {
+                              panic(fmt.Sprintf("duplicate source category in Hydra DAT: %s", wanted))
+                          }
+                          hydraByCategory[category] = site
+                          break
+                      }
+                  }
+              }
+
+              appendedRuleCount := 0
+              appendedDuplicateCount := 0
+
+              for _, category := range hydraAppendCategories {
+                  site, ok := hydraByCategory[category]
+                  if !ok {
+                      panic(fmt.Sprintf("required Hydra category missing: %s", category))
+                  }
+
+                  dst := &router.GeoSite{CountryCode: site.CountryCode}
+                  seen := make(map[string]bool)
+
+                  for _, domain := range site.Domain {
+                      if domain == nil {
+                          continue
+                      }
+
+                      key := domainKey(domain)
+                      if seen[key] {
+                          appendedDuplicateCount++
+                          continue
+                      }
+
+                      seen[key] = true
+                      copied := cloneDomain(domain)
+                      copied.Value = normalizeName(copied.Value)
+                      if copied.Value == "" {
+                          continue
+                      }
+                      dst.Domain = append(dst.Domain, copied)
+                      appendedRuleCount++
+                  }
+
+                  if len(dst.Domain) == 0 {
+                      panic(fmt.Sprintf("Hydra category is empty: %s", category))
+                  }
+
+                  result.Entry = append(result.Entry, dst)
+              }
+
+              // ----------------------------------------------------------
+              // Финальная сериализация: RU идёт первым, затем Hydra.
+              // ----------------------------------------------------------
+              outputData, err := proto.MarshalOptions{Deterministic: true}.Marshal(result)
+              if err != nil {
+                  panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
+              }
+
+              if err := os.WriteFile(os.Args[7], outputData, 0644); err != nil {
                   panic(fmt.Errorf("failed to write output DAT: %w", err))
               }
 
@@ -600,9 +763,11 @@ jobs:
               fmt.Printf("Removed RU TLD rules    : %d\n", removedRussianDomainCount)
               fmt.Printf("Removed regex/keyword   : %d\n", removedUnsupportedTypeCount)
               fmt.Printf("Removed duplicates      : %d\n", duplicateDomainCount)
+              fmt.Printf("Appended Hydra rules    : %d\n", appendedRuleCount)
+              fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
               fmt.Printf("Final categories        : %d\n", len(result.Entry))
               fmt.Printf("Final DAT size          : %d bytes\n", len(outputData))
-              fmt.Println("Output category         : RU")
+              fmt.Println("Output categories       : RU + 16 Hydra categories")
           }
           EOF
 
@@ -628,7 +793,9 @@ jobs:
             "$INPUT_FILE" \
             "$HYDRA_INPUT_FILE" \
             "$GRIMBIRD_INPUT_FILE" \
+            "$MVR_INPUT_FILE" \
             selected_ru_categories.txt \
+            hydra_append_categories.txt \
             "$OUTPUT_FILE"
 
           test -s "$OUTPUT_FILE"
@@ -719,47 +886,55 @@ jobs:
                   panic(fmt.Errorf("invalid geosite protobuf: %w", err))
               }
 
-              if len(list.Entry) != 1 {
+              expectedHydra := []string{
+                  "apple",
+                  "epicgames",
+                  "escapefromtarkov",
+                  "faceit",
+                  "github",
+                  "google-deepmind",
+                  "google-play",
+                  "microsoft",
+                  "pinterest",
+                  "riot",
+                  "steam",
+                  "telegram",
+                  "twitch",
+                  "twitch-ads",
+                  "youtube",
+                  "win-spy",
+              }
+
+              if len(list.Entry) != 1+len(expectedHydra) {
                   panic(fmt.Sprintf(
-                      "expected exactly 1 category, got %d",
+                      "expected exactly %d categories, got %d",
+                      1+len(expectedHydra),
                       len(list.Entry),
                   ))
               }
 
-              site := list.Entry[0]
-              if site == nil {
-                  panic("RU category is nil")
+              // RU должен быть первым и единственным объединённым RU.
+              ru := list.Entry[0]
+              if ru == nil || strings.ToLower(strings.TrimSpace(ru.CountryCode)) != "ru" {
+                  panic("first category must be RU")
               }
 
-              category := strings.ToLower(strings.TrimSpace(site.CountryCode))
-              if category != "ru" {
-                  panic(fmt.Sprintf(
-                      "expected only RU category, got %q",
-                      site.CountryCode,
-                  ))
-              }
-
-              seen := make(map[string]bool, len(site.Domain))
+              seenRU := make(map[string]bool, len(ru.Domain))
               expectedTLD := map[string]bool{
                   "ru":       false,
                   "xn--p1ai": false,
                   "su":       false,
               }
 
-              for _, domain := range site.Domain {
+              for _, domain := range ru.Domain {
                   if domain == nil {
                       panic("RU contains nil domain")
                   }
 
                   switch domain.Type {
-                  case router.Domain_RootDomain,
-                      router.Domain_Full:
-                      // OK
+                  case router.Domain_RootDomain, router.Domain_Full:
                   default:
-                      panic(fmt.Sprintf(
-                          "unsupported rule type in RU: %v",
-                          domain.Type,
-                      ))
+                      panic(fmt.Sprintf("unsupported rule type in RU: %v", domain.Type))
                   }
 
                   value := strings.ToLower(strings.TrimSpace(domain.Value))
@@ -768,13 +943,10 @@ jobs:
                   }
 
                   key := domainKey(domain)
-                  if seen[key] {
-                      panic(fmt.Sprintf(
-                          "duplicate domain in RU: %s",
-                          domain.Value,
-                      ))
+                  if seenRU[key] {
+                      panic(fmt.Sprintf("duplicate domain in RU: %s", domain.Value))
                   }
-                  seen[key] = true
+                  seenRU[key] = true
 
                   if domain.Type == router.Domain_RootDomain {
                       if _, ok := expectedTLD[value]; ok {
@@ -784,19 +956,56 @@ jobs:
 
                   if isRussianTLD(value) &&
                       value != "ru" && value != "su" && value != "xn--p1ai" {
-                      panic(fmt.Sprintf(
-                          "Russian TLD leaked into RU: %s",
-                          domain.Value,
-                      ))
+                      panic(fmt.Sprintf("Russian TLD leaked into RU: %s", domain.Value))
                   }
               }
 
               for name, ok := range expectedTLD {
                   if !ok {
+                      panic(fmt.Sprintf("RU missing compact TLD: %s", name))
+                  }
+              }
+
+              // Остальные категории обязаны идти строго в указанном порядке.
+              for i, expected := range expectedHydra {
+                  site := list.Entry[i+1]
+                  if site == nil {
+                      panic(fmt.Sprintf("Hydra category %s is nil", expected))
+                  }
+
+                  category := strings.ToLower(strings.TrimSpace(site.CountryCode))
+                  if category != expected {
                       panic(fmt.Sprintf(
-                          "RU missing compact TLD: %s",
-                          name,
+                          "Hydra category order mismatch: expected %s, got %s",
+                          expected,
+                          site.CountryCode,
                       ))
+                  }
+
+                  if len(site.Domain) == 0 {
+                      panic(fmt.Sprintf("Hydra category is empty: %s", category))
+                  }
+
+                  seen := make(map[string]bool, len(site.Domain))
+                  for _, domain := range site.Domain {
+                      if domain == nil {
+                          panic(fmt.Sprintf("%s contains nil domain", category))
+                      }
+
+                      value := strings.ToLower(strings.TrimSpace(domain.Value))
+                      if value == "" {
+                          panic(fmt.Sprintf("%s contains empty domain value", category))
+                      }
+
+                      key := domainKey(domain)
+                      if seen[key] {
+                          panic(fmt.Sprintf(
+                              "duplicate domain in Hydra category %s: %s",
+                              category,
+                              domain.Value,
+                          ))
+                      }
+                      seen[key] = true
                   }
               }
 
@@ -804,13 +1013,13 @@ jobs:
               fmt.Println("========================================")
               fmt.Println("VALIDATION OK")
               fmt.Println("========================================")
-              fmt.Printf("Categories: 1\n")
-              fmt.Printf("Rules:      %d\n", len(site.Domain))
-              fmt.Println("Single category: RU")
-              fmt.Println("Global duplicates: none")
-              fmt.Println("RU category contains: ru, xn--p1ai, su")
-              fmt.Println("No extra Russian TLD rules found.")
-              fmt.Println("No regex/keyword rules found.")
+              fmt.Printf("Categories: %d (RU + 16 Hydra)\n", len(list.Entry))
+              fmt.Printf("RU rules:  %d\n", len(ru.Domain))
+              fmt.Println("Single merged category: RU")
+              fmt.Println("RU duplicates: none")
+              fmt.Println("RU compact TLDs: ru, xn--p1ai, su")
+              fmt.Println("Hydra categories: 16, appended after RU in requested order")
+              fmt.Println("Hydra intra-category duplicates: none")
           }
           EOF
 
@@ -832,6 +1041,7 @@ jobs:
             geosite_RU.dat
             geosite_RU.dat.sha256sum
             geosite_RU_categories.txt
+            geosite_RU_hydra_appended_categories.txt
 
           body: |
             # Optimized RU GeoSite
@@ -843,10 +1053,11 @@ jobs:
             - `runetfreedom/russia-blocked-geosite`
             - `hydraponique/roscomvpn-geosite`
             - `GrimbirdUsers/ru-routing-dat`
+            - `mvrvntn/routing` (`category-ru` merged into RU)
 
             ## Selection
 
-            All selected source categories are merged into a single `RU` category.
+            The selected RU categories from runetfreedom, Hydra, Grimbird, and mvrvntn are merged into a single `RU` category.
 
             Hydra categories:
             - `whitelist`
@@ -866,6 +1077,9 @@ jobs:
             - `ru-whitelist-extended`
             - `swift`
 
+            mvrvntn category merged into RU:
+            - `category-ru`
+
             The runetfreedom/v2fly side continues to include the recursive `category-ru`, all current `*-ru` lists,
             `ru-available-only-inside`, and the additional Russian service/company lists.
 
@@ -884,6 +1098,16 @@ jobs:
 
             Duplicate rules with the same type and domain value are kept only once across all source categories.
 
+            ## Appended Hydra categories
+
+            After the merged `RU` category, the following Hydra categories are appended as separate categories, in this exact order:
+
+            `apple`, `epicgames`, `escapefromtarkov`, `faceit`, `github`, `google-deepmind`,
+            `google-play`, `microsoft`, `pinterest`, `riot`, `steam`, `telegram`, `twitch`,
+            `twitch-ads`, `youtube`, `win-spy`.
+
+            Their domain rules are kept as separate routing categories; only duplicate Type+Value rules within each appended category are removed.
+
             ## Compact Russian TLDs
 
             The single generated `RU` category contains these compact rules:
@@ -896,9 +1120,12 @@ jobs:
 
             `ext:geosite_RU.dat:RU`
 
+            Appended Hydra categories can be used by their original names, for example `geosite:apple`, `geosite:github`, `geosite:youtube`, and `geosite:win-spy`.
+
             There is no separate `TLD-RU` category.
 
-            `geosite_RU_categories.txt` contains the source category manifest used to build RU.
+            `geosite_RU_categories.txt` contains the source category manifest merged into RU.
+            `geosite_RU_hydra_appended_categories.txt` contains the ordered list of appended Hydra categories.
 
           fail_on_unmatched_files: true
 
@@ -929,6 +1156,9 @@ jobs:
 
           cp "$CATEGORY_FILE" \
             /tmp/geosite-release/geosite_RU_categories.txt
+
+          cp "$HYDRA_APPEND_FILE" \
+            /tmp/geosite-release/geosite_RU_hydra_appended_categories.txt
 
           cd /tmp/geosite-release
 
