@@ -560,10 +560,10 @@ jobs:
           }
           
           func main() {
-          	if len(os.Args) != 8 {
+          	if len(os.Args) != 9 {
           		fmt.Fprintf(
           			os.Stderr,
-          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat selected.txt hydra_append.txt output.dat\n",
+          			"usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat selected.txt hydra_append.txt output.dat\n",
           			os.Args[0],
           		)
           		os.Exit(2)
@@ -574,9 +574,10 @@ jobs:
           		"hydra":        os.Args[2],
           		"grimbird":     os.Args[3],
           		"mvrvntn":      os.Args[4],
+          		"yularzhi":     os.Args[5],
           	}
           
-          	manifest, err := loadManifest(os.Args[5])
+          	manifest, err := loadManifest(os.Args[6])
           	if err != nil {
           		panic(fmt.Errorf("failed to read manifest: %w", err))
           	}
@@ -678,7 +679,7 @@ jobs:
           		}
           	}
           
-          	for _, source := range []string{"hydra", "grimbird", "mvrvntn"} {
+          	for _, source := range []string{"hydra", "grimbird", "mvrvntn", "yularzhi"} {
           		for category := range manifest[source] {
           			if !matched[source][category] {
           				fmt.Printf(
@@ -735,7 +736,7 @@ jobs:
           	// Они НЕ вливаются в RU и НЕ дедуплицируются с RU.
           	// Внутри каждой категории повторяющиеся Type+Value удаляются.
           	// ----------------------------------------------------------
-          	hydraAppendCategories, err := loadOrderedCategories(os.Args[6])
+          	hydraAppendCategories, err := loadOrderedCategories(os.Args[7])
           	if err != nil {
           		panic(fmt.Errorf("failed to read Hydra append manifest: %w", err))
           	}
@@ -818,7 +819,7 @@ jobs:
           		panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
           	}
           
-          	if err := os.WriteFile(os.Args[7], outputData, 0644); err != nil {
+          	if err := os.WriteFile(os.Args[8], outputData, 0644); err != nil {
           		panic(fmt.Errorf("failed to write output DAT: %w", err))
           	}
           
