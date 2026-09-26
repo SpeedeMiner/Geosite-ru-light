@@ -30,48 +30,34 @@ jobs:
         run: |
           cd domain-list-community
           
-          # 1. ЖЕСТКАЯ ОЧИСТКА: Удаляем все мировые категории, кроме нужных для сборки "ru"
-          # Сохраняем "ru" и файлы, на которые он может ссылаться (если они есть)
-          cp data/ru data/by data/ua /tmp/ 2>/dev/null || true
+          # Очищаем все стандартные категории
           rm -rf data/*
-          cp /tmp/ru /tmp/by /tmp/ua data/ 2>/dev/null || true
           
-          # 2. Если файлов в оригинальном репозитории нет (собраны иначе), скачиваем вручную
-          if [ ! -f data/ru ]; then
-              echo "Downloading ru list directly..."
-              curl -sL https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/ru > ru_raw.txt
-          else
-              cat data/ru > ru_raw.txt
-          fi
-
-          # 3. Очистка: берем только первый столбец (домены), отрезаем комментарии (#)
-          awk '{print $1}' ru_raw.txt | grep -v '^#' | grep -v '^$' > ru_clean.txt
+          # 1. Скачиваем список RU из исходников
+          curl -sL https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/ru > ru_raw.txt
           
-          # 4. Вырезаем все домены, оканчивающиеся на .ru, .su, .by, .ua, .xn--p1ai
+          # 2. Очистка: берем только первый столбец (домены), отрезаем комментарии (#)
+          awk '{print $1}' ru_raw.txt | grep -v '^#' | awk 'NF' > ru_clean.txt
+          
+          # 3. Вырезаем все домены, оканчивающиеся на .ru, .su, .by, .ua, .xn--p1ai
           grep -viE '\.(ru|su|by|ua|xn--p1ai)$' ru_clean.txt > ru_filtered.txt
           
-          # 5. Создаем супер-категорию ru-direct. Сначала пишем корневые зоны:
+          # 4. Создаем супер-категорию ru-direct. Пишем корневые зоны:
           echo -e "ru\nsu\nxn--p1ai\nby\nua" > data/ru-direct
           
-          # 6. Добавляем отфильтрованные .com/.net домены РФ, убирая текстовые дубли
-          sort -u ru_filtered.txt >> data/ru-direct
+          # 5. Добавляем отфильтрованные домены и ЖЕСТКО удаляем все пустые строки (sed '/^$/d')
+          sort -u ru_filtered.txt | sed '/^$/d' >> data/ru-direct
           
-          # 7. Скачиваем список заблокированных сайтов напрямую из источников
+          # 6. Скачиваем списки заблокированных сайтов
           echo "Downloading blocked lists..."
-          # Источник 1: community.antifilter.download (только домены)
           curl -sLf https://community.antifilter.download/list/domains.lst > blocked_1.txt || echo "" > blocked_1.txt
-          # Источник 2: re:filter (только домены)
           curl -sLf https://raw.githubusercontent.com/1andrevich/Re-filter-lists/iq-routing/domains_all.lst > blocked_2.txt || echo "" > blocked_2.txt
           
-          # Объединяем, сортируем, убираем дубликаты и пустые строки
-          cat blocked_1.txt blocked_2.txt | grep -v '^$' | sort -u > data/ru-blocked
+          # 7. Объединяем, сортируем и ЖЕСТКО удаляем пустые строки
+          cat blocked_1.txt blocked_2.txt | awk 'NF' | sort -u | sed '/^$/d' > data/ru-blocked
           
-          # Очищаем временные файлы
-          rm -f ru_raw.txt ru_clean.txt ru_filtered.txt blocked_1.txt blocked_2.txt /tmp/ru /tmp/by /tmp/ua
-          
-          # Проверяем, что файлы не пустые и не содержат HTML ошибок
-          head -n 5 data/ru-direct
-          head -n 5 data/ru-blocked
+          # Убираем временные файлы
+          rm -f ru_raw.txt ru_clean.txt ru_filtered.txt blocked_1.txt blocked_2.txt
 
       - name: Compile optimized geosite.dat
         run: |
