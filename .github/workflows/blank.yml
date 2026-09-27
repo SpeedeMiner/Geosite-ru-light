@@ -17,8 +17,7 @@ jobs:
       contents: write
 
     env:
-      # Актуальная полная GeoSite-база runetfreedom.
-      # В их текущем build workflow используется именно этот release branch.
+      # Актуальная полная GeoSite-база runetfreedom
       GEOSITE_URL: https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/geosite.dat
       GEOSITE_SHA_URL: https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/geosite.dat.sha256sum
 
@@ -208,15 +207,15 @@ jobs:
                       if re.fullmatch(r"[A-Za-z0-9_.!+-]+", target):
                           visit(target)
 
-          # Основное ядро runetfreedom / v2fly.
+          # Основное ядро runetfreedom / v2fly
           visit("category-ru")
 
-          # Автоматически подхватываем новые *-ru категории.
+          # Автоматически подхватываем новые *-ru категории
           for path in DATA.iterdir():
               if path.is_file() and path.name.lower().endswith("-ru"):
                   visit(path.name)
 
-          # Дополнительные категории runetfreedom / v2fly (без СМИ).
+          # Дополнительные категории runetfreedom / v2fly (без СМИ)
           extra_categories = {
               "ru-available-only-inside",
               "category-geoblock-ru",
@@ -282,14 +281,14 @@ jobs:
           for name in hydra_categories:
               selected.add(f"hydra|{normalize(name)}")
 
-          # mvrvntn/routing — только CATEGORY-RU добавляется в общий RU.
+          # mvrvntn/routing — только CATEGORY-RU добавляется в общий RU
           mvr_categories = {
               "category-ru",
           }
           for name in mvr_categories:
               selected.add(f"mvrvntn|{normalize(name)}")
 
-          # Yularzhi/geosite_russia — CATEGORY-RU и PRIVATE добавляются в общий RU.
+          # Yularzhi/geosite_russia — CATEGORY-RU и PRIVATE добавляются в общий RU
           yularzhi_categories = {
               "category-ru",
               "private",
@@ -297,7 +296,7 @@ jobs:
           for name in yularzhi_categories:
               selected.add(f"yularzhi|{normalize(name)}")
 
-          # vpnyasha/geosite — RU-focused enriched categories.
+          # vpnyasha/geosite — RU-focused enriched categories
           vpnyasha_categories = {
               "our-whitelist",
               "our-category-ru",
@@ -314,7 +313,7 @@ jobs:
           for name in kirill_categories:
               selected.add(f"kirill|{normalize(name)}")
 
-          # DigneZzZ/routing — только category-ru.
+          # DigneZzZ/routing — только category-ru
           digne_categories = {
               "category-ru",
           }
@@ -348,7 +347,7 @@ jobs:
               for item in sorted(selected):
                   f.write(item + "\n")
 
-          # Отдельный порядок категорий Hydra, которые НЕ вливаются в RU.
+          # Отдельный порядок категорий Hydra, которые НЕ вливаются в RU
           hydra_append_categories = [
               "apple",
               "epicgames",
@@ -386,7 +385,7 @@ jobs:
           cp hydra_append_categories.txt "$HYDRA_APPEND_FILE"
 
       # ------------------------------------------------------------
-      # 6. Create protobuf filter.
+      # 6. Create protobuf filter
       # ------------------------------------------------------------
       - name: Create RU GeoSite protobuf filter
         shell: bash
@@ -469,7 +468,7 @@ jobs:
 
                   if covered {
                       removed++
-                      continue
+                          continue
                   }
                   result = append(result, domain)
               }
@@ -1288,9 +1287,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # ------------------------------------------------------------
-      # 11. Also publish files to release branch and purge jsDelivr cache
+      # 11. Publish files to release branch and purge jsDelivr cache
       # ------------------------------------------------------------
-      - name: Publish files to release branch
+      - name: Publish files to release branch and sync CDN
         shell: bash
         run: |
           set -euo pipefail
@@ -1317,9 +1316,50 @@ jobs:
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push --force origin release
 
-          sleep 10
-          curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" > /dev/null 2>&1 || true
-          curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat.sha256sum" > /dev/null 2>&1 || true
+          echo "========================================"
+          echo "Waiting for GitHub raw cache propagation"
+          echo "========================================"
+
+          EXPECTED_SHA="$(awk '{print $1}' geosite_RU.dat.sha256sum)"
+          echo "Target SHA256: $EXPECTED_SHA"
+
+          # Опрашиваем сырой GitHub (до 60 секунд), чтобы исключить захват старого кэша
+          for i in {1..12}; do
+            REMOTE_SHA="$(curl -sSL --max-time 5 "https://raw.githubusercontent.com/${{ github.repository }}/release/geosite_RU.dat.sha256sum" | awk '{print $1}' || true)"
+            if [ "$REMOTE_SHA" = "$EXPECTED_SHA" ]; then
+              echo "GitHub raw updated successfully ($((i * 5))s)."
+              break
+            fi
+            sleep 5
+          done
+
+          echo "========================================"
+          echo "Purging jsDelivr CDN cache"
+          echo "========================================"
+
+          # 1. Сброс указателя ветки (исправляет застревание resolver в старом Git SHA)
+          curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/" || true
+          echo
+
+          # 2. Сброс самих файлов
+          curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" || true
+          echo
+          curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat.sha256sum" || true
+          echo
+
+          # Проверка отдачи размера через CDN
+          sleep 2
+          CDN_SIZE="$(curl -sI "https://cdn.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" | grep -i content-length | awk '{print $2}' | tr -d '\r' || true)"
+          LOCAL_SIZE="$(wc -c < geosite_RU.dat)"
+
+          echo "Local size : $LOCAL_SIZE bytes"
+          echo "CDN size   : $CDN_SIZE bytes"
+
+          if [ "$CDN_SIZE" = "$LOCAL_SIZE" ]; then
+            echo "SUCCESS: jsDelivr CDN is 100% up to date!"
+          else
+            echo "NOTICE: CDN size differs. Propagation across edge nodes is in progress."
+          fi
 
       # ------------------------------------------------------------
       # 12. Workflow summary
