@@ -223,7 +223,6 @@ jobs:
           extra_categories = {
               "ru-available-only-inside",
               "category-geoblock-ru",
-              "category-media-ru-blocked",
 
               "yandex", "vk", "mailru", "mailru-group", "kinopoisk",
               "dzen", "ozon", "wildberries", "wb", "avito", "autoru",
@@ -923,9 +922,9 @@ jobs:
           		category := normalizeName(site.CountryCode)
           		for _, wanted := range hydraAppendCategories {
           			if category == wanted {
-          				if _, exists := hydraByCategory[category]; exists {
-          					panic(fmt.Sprintf("duplicate source category in Hydra DAT: %s", wanted))
-          				}
+				if _, exists := hydraByCategory[category]; exists {
+					panic(fmt.Sprintf("duplicate source category in Hydra DAT: %s", wanted))
+				}
           				hydraByCategory[category] = site
           				break
           			}
@@ -1517,6 +1516,8 @@ jobs:
             origin \
             release
 
+          sleep 10
+          
           echo "Purging jsDelivr CDN cache..."
           curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" > /dev/null || true
           curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat.sha256sum" > /dev/null || true
