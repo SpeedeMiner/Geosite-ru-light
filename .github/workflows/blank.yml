@@ -1515,7 +1515,7 @@ jobs:
             --force \
             origin \
             release
-          sleep 10
+
           echo "Purging jsDelivr CDN cache..."
           curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat" > /dev/null || true
           curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat.sha256sum" > /dev/null || true
