@@ -1377,18 +1377,22 @@ jobs:
           		}
           		seenBlock[key] = true
           
-          		for parent := value; ; {
-          			dot := strings.IndexByte(parent, '.')
-          			if dot < 0 {
-          				break
-          			}
-          			parent = parent[dot+1:]
-          			if rootsBlock[parent] {
-          				panic(fmt.Sprintf(
-          					"redundant child domain in BLOCK: %s is covered by %s",
-          					value,
-          					parent,
-          				))
+          		// Only RootDomain rules participate in suffix coverage checks.
+          		// Full rules are exact hostnames and are never redundant because of a parent RootDomain.
+          		if domain.Type == router.Domain_RootDomain {
+          			for parent := value; ; {
+          				dot := strings.IndexByte(parent, '.')
+          				if dot < 0 {
+          					break
+          				}
+          				parent = parent[dot+1:]
+          				if rootsBlock[parent] {
+          					panic(fmt.Sprintf(
+          						"redundant child domain in BLOCK: %s is covered by %s",
+          						value,
+          						parent,
+          					))
+          				}
           			}
           		}
           	}
