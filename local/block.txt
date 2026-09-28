@@ -1,0 +1,74 @@
+# Локальный ручной список BLOCK.
+# Один домен на строку.
+# Можно использовать:
+#   example.com
+#   DOMAIN-SUFFIX,example.com
+#   DOMAIN-FULL,host.example.com
+#   domain:example.com
+#
+# Все записи здесь попадают в отдельную категорию BLOCK.
+# BLOCK не фильтрует российские домены и не пересекается автоматически с RU.
+domain:yandex.ru
+domain:ad.mail.ru
+domain:api.mindbox.ru
+domain:app-analytics-services.com
+domain:app-measurement.com
+domain:app.adjust.com
+domain:appmetrica.yandex.net
+domain:browserleaks.com
+domain:checkip.amazonaws.com
+domain:minerva.devices.a2z.com
+domain:crashlytics.com
+domain:dnsleaktest.com
+domain:external-api.mediabilling.yandex.ru
+domain:external-api.pixel.plus.yandex.net
+domain:ezfweb-inapps.appsflyersdk.com
+domain:ezfweb-launches.appsflyersdk.com
+domain:firebaseinstallations.googleapis.com
+domain:firebaselogging-pa.googleapis.com
+domain:firebaselogging.googleapis.com
+domain:hidemy.name
+domain:icanhazip.com
+domain:ident.me
+domain:ifconfig.co
+domain:ifconfig.io
+domain:ifconfig.me
+domain:ih4bsf-launches.appsflyersdk.com
+domain:cdn-settings.appsflyersdk.com
+domain:ip-api.com
+domain:ip-api.io
+domain:ip.gs
+domain:ip.mail.ru
+domain:ip.sb
+domain:ip.tool.lu
+domain:ipapi.co
+domain:ipapi.is
+domain:ipecho.net
+domain:ipify.com
+domain:ipify.org
+domain:ipinfo.io
+domain:ipleak.net
+domain:iplocation.net
+domain:ipv4-internet.yandex.net
+domain:ipv6-internet.yandex.net
+domain:mc.yandex.com
+domain:mc.yandex.ru
+domain:mobile.yandex.net
+domain:moyu88.xyz
+domain:myexternalip.com
+domain:myip.com
+domain:proxy.mob.maps.yandex.net
+domain:r0.mail.ru
+domain:r0.mradx.net
+domain:rv.mail.ru
+domain:sdk-api.apptracer.ru
+domain:stats.rustore.ru
+domain:tracker-api.vk-analytics.ru
+domain:tracking.ott.yandex.net
+domain:wcm.weborama-tech.ru
+domain:web-static.mindbox.ru
+domain:whatismyip.com
+domain:whatismyipaddress.com
+domain:whoer.net
+domain:wtfismyip.com
+domain:xl-ads.co

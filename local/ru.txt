@@ -1,0 +1,32 @@
+# Локальный ручной список RU.
+# Один домен на строку.
+# Можно использовать:
+#   example.com
+#   DOMAIN-SUFFIX,example.com
+#   DOMAIN-FULL,host.example.com
+#   domain:example.com
+#
+# Для RU домены с зонами ru/su/рф/xn--p1ai отбрасываются как избыточные:
+# категория RU уже содержит компактные корневые зоны ru, su и xn--p1ai.
+
+domain:www.ivi.tv
+domain:px.segmel.com
+domain:tracking-app.diginetica.net
+domain:talsec-dev.es.us-east-1.aws.found.io
+domain:sentry-prod.gid.team
+domain:ru.pool.ntp.org
+domain:pushserver.edna.id
+domain:pre-bid.programmatica.com
+domain:m-22820.fraudshallnotpass.com
+domain:launches.appsflyersdk.com
+domain:detmir.st
+domain:4ced22ca066d4ca4a7726c9afff8c039.us-east-1.aws.found.io
+domain:drive-thirdparty.googleusercontent.com
+domain:drive.google.com
+domain:drive.usercontent.google.com
+domain:drivefrontend-pa.clients6.google.com
+domain:drivefrontend-pa.googleapis.com
+domain:drivelabels.clients6.google.com
+domain:drivelabels.googleapis.com
+domain:googledrive.com
+
