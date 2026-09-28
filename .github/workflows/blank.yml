@@ -1094,7 +1094,7 @@ jobs:
           		panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
           	}
           
-          	if err := os.WriteFile(os.Args[12], outputData, 0644); err != nil {
+          	if err := os.WriteFile(os.Args[14], outputData, 0644); err != nil {
           		panic(fmt.Errorf("failed to write output DAT: %w", err))
           	}
           
