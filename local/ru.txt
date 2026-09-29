@@ -29,4 +29,4 @@ domain:drivefrontend-pa.googleapis.com
 domain:drivelabels.clients6.google.com
 domain:drivelabels.googleapis.com
 domain:googledrive.com
-
+domain:statichdrezka.ac
