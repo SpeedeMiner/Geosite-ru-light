@@ -1,10 +1,14 @@
 name: Build Ultimate Light RU Geosite
 
+concurrency:
+  group: build-ultimate-light-ru-geosite
+  cancel-in-progress: true
+
 on:
   workflow_dispatch:
   schedule:
-    # Каждый понедельник в 00:00 UTC (0 = воскресенье / 1 = понедельник)
-    - cron: "0 0 * * 0"
+    # Каждый понедельник в 00:00 UTC
+    - cron: "0 0 * * 1"
   push:
     branches:
       - main
@@ -35,7 +39,7 @@ jobs:
       MOBILE_WHITELIST_URL: https://raw.githubusercontent.com/golukon/russia-mobile-internet-whitelist/main/whitelist.txt
       DAVIDDT_RU_SUFFIX_URL: https://raw.githubusercontent.com/daviddt369/ru-not-ru-domain/main/rules/ru-domain-suffix.txt
       DMITRIY_ENRICH_URL: https://raw.githubusercontent.com/Dmitriy9000/russia-minimal-geosite/main/enrich/ru-available-only-inside
-      W1ZARDZ_RU_DIRECT_URL: https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/ru-direct-domains.txt
+      W1ZARDZ_RU_DIRECT_URL: https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/dist/ru-direct-domains.txt
       SUPERTICO_DOMAINS_URL: https://raw.githubusercontent.com/supertico/linux-split-dns-for-amnezia-ru/main/z_russian_websites.txt
 
       INPUT_FILE: source-geosite.dat
@@ -100,69 +104,53 @@ jobs:
           echo "Downloading GeoSite sources"
           echo "========================================"
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$GEOSITE_URL" \
-            -o "$INPUT_FILE"
+          download_source() {
+            local label="$1"
+            local url="$2"
+            local output="$3"
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$GEOSITE_SHA_URL" \
-            -o source-geosite.dat.sha256sum
+            echo "--- $label"
+            echo "URL: $url"
+            rm -f "$output"
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$HYDRA_GEOSITE_URL" \
-            -o "$HYDRA_INPUT_FILE"
+            if ! curl -fsSL \
+              --connect-timeout 20 \
+              --max-time 300 \
+              --retry 5 \
+              --retry-delay 2 \
+              --retry-max-time 180 \
+              "$url" -o "$output"; then
+              echo "ERROR: download failed: $label" >&2
+              echo "ERROR: URL: $url" >&2
+              rm -f "$output"
+              return 1
+            fi
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$GRIMBIRD_GEOSITE_URL" \
-            -o "$GRIMBIRD_INPUT_FILE"
+            if ! test -s "$output"; then
+              echo "ERROR: downloaded file is empty: $label" >&2
+              rm -f "$output"
+              return 1
+            fi
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$MVR_GEOSITE_URL" \
-            -o "$MVR_INPUT_FILE"
+            ls -lh "$output"
+          }
 
-          curl -fL --retry 5 --retry-all-errors \
-            "$YULARZHI_GEOSITE_URL" \
-            -o "$YULARZHI_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$VPNYASHA_GEOSITE_URL" \
-            -o "$VPNYASHA_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$KIRILL_GEOSITE_URL" \
-            -o "$KIRILL_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$DIGNE_GEOSITE_URL" \
-            -o "$DIGNE_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$DAVOYAN_LEGACY_URL" \
-            -o "$DAVOYAN_LEGACY_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$GOLUKON_AVAILABLE_URL" \
-            -o "$GOLUKON_AVAILABLE_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$MOBILE_WHITELIST_URL" \
-            -o "$MOBILE_WHITELIST_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$DAVIDDT_RU_SUFFIX_URL" \
-            -o "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$DMITRIY_ENRICH_URL" \
-            -o "$DMITRIY_ENRICH_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$W1ZARDZ_RU_DIRECT_URL" \
-            -o "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
-
-          curl -fL --retry 5 --retry-all-errors \
-            "$SUPERTICO_DOMAINS_URL" \
-            -o "$SUPERTICO_DOMAINS_INPUT_FILE"
+          download_source "runetfreedom GeoSite" "$GEOSITE_URL" "$INPUT_FILE"
+          download_source "runetfreedom SHA256" "$GEOSITE_SHA_URL" source-geosite.dat.sha256sum
+          download_source "Hydra GeoSite" "$HYDRA_GEOSITE_URL" "$HYDRA_INPUT_FILE"
+          download_source "Grimbird GeoSite" "$GRIMBIRD_GEOSITE_URL" "$GRIMBIRD_INPUT_FILE"
+          download_source "mvrvntn GeoSite" "$MVR_GEOSITE_URL" "$MVR_INPUT_FILE"
+          download_source "Yularzhi GeoSite" "$YULARZHI_GEOSITE_URL" "$YULARZHI_INPUT_FILE"
+          download_source "vpnyasha GeoSite" "$VPNYASHA_GEOSITE_URL" "$VPNYASHA_INPUT_FILE"
+          download_source "Kirill GeoSite" "$KIRILL_GEOSITE_URL" "$KIRILL_INPUT_FILE"
+          download_source "Digne GeoSite" "$DIGNE_GEOSITE_URL" "$DIGNE_INPUT_FILE"
+          download_source "Davoyan legacy" "$DAVOYAN_LEGACY_URL" "$DAVOYAN_LEGACY_INPUT_FILE"
+          download_source "Golukon RU available" "$GOLUKON_AVAILABLE_URL" "$GOLUKON_AVAILABLE_INPUT_FILE"
+          download_source "Mobile whitelist" "$MOBILE_WHITELIST_URL" "$MOBILE_WHITELIST_INPUT_FILE"
+          download_source "Daviddt RU suffix" "$DAVIDDT_RU_SUFFIX_URL" "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
+          download_source "Dmitriy enrich" "$DMITRIY_ENRICH_URL" "$DMITRIY_ENRICH_INPUT_FILE"
+          download_source "W1ZARDZ RU direct domains" "$W1ZARDZ_RU_DIRECT_URL" "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
+          download_source "SuperTico Russian websites" "$SUPERTICO_DOMAINS_URL" "$SUPERTICO_DOMAINS_INPUT_FILE"
 
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
@@ -229,13 +217,35 @@ jobs:
           visited = set()
           missing_v2fly = set()
 
+          # These are negative / non-RU categories. They must be blocked before
+          # recursion so their children can never leak into the RU manifest.
+          excluded = {
+              "private",
+              "category-ip-geo-detect",
+              "ipip",
+              "tld-ru",
+              "category-geoblock-ru",
+          }
+
           def normalize(name: str) -> str:
               return name.strip().lower()
+
+          def is_excluded(name: str) -> bool:
+              name = normalize(name)
+              if not name:
+                  return True
+              if name in excluded:
+                  return True
+              if any(marker in name for marker in ("blocked", "geoblock", "re-filter", "refilter")):
+                  return True
+              if re.search(r"(^|[-_.])ban([-_.]|$)", name):
+                  return True
+              return False
 
           def visit(name: str):
               name = normalize(name)
 
-              if not name or name in visited:
+              if not name or name in visited or is_excluded(name):
                   return
 
               visited.add(name)
@@ -258,22 +268,33 @@ jobs:
                       continue
 
                   if line.lower().startswith("include:"):
-                      target = line.split(":", 1)[1].strip().split()[0]
+                      payload = line.split(":", 1)[1].strip()
+                      parts = payload.split()
+                      # Do not promote selective includes (for example,
+                      # "include:foo @ads") into a whole standalone category.
+                      # The selected parent category already exists in the source
+                      # DAT with its resolved rules and attributes.
+                      if len(parts) != 1:
+                          continue
+                      target = parts[0]
                       if re.fullmatch(r"[A-Za-z0-9_.!+-]+", target):
                           visit(target)
 
           # Основное ядро runetfreedom / v2fly
           visit("category-ru")
 
-          # Автоматически подхватываем новые *-ru категории
+          # Автоматически подхватываем новые *-ru категории, кроме negative feeds.
           for path in DATA.iterdir():
-              if path.is_file() and path.name.lower().endswith("-ru"):
+              if (
+                  path.is_file()
+                  and path.name.lower().endswith("-ru")
+                  and not is_excluded(path.name)
+              ):
                   visit(path.name)
 
           # Дополнительные категории runetfreedom / v2fly (без СМИ)
           extra_categories = {
               "ru-available-only-inside",
-              "category-geoblock-ru",
 
               "yandex", "vk", "mailru", "mailru-group", "kinopoisk",
               "dzen", "ozon", "wildberries", "wb", "avito", "autoru",
@@ -315,16 +336,17 @@ jobs:
           for name in sorted(extra_categories):
               visit(name)
 
-          excluded = {
-              "private",
-              "category-ip-geo-detect",
-              "ipip",
-              "tld-ru",
-          }
+          if missing_v2fly:
+              print()
+              print("ERROR: required v2fly categories are missing:")
+              for name in sorted(missing_v2fly):
+                  print(f"  - {name}")
+              raise SystemExit(1)
 
           selected = {
-              item for item in selected
-              if item.split("|", 1)[1] not in excluded
+              item
+              for item in selected
+              if not is_excluded(item.split("|", 1)[1])
           }
 
           # hydraponique/roscomvpn-geosite
@@ -434,6 +456,7 @@ jobs:
           print("========================================")
           print(f"Manifest entries: {len(selected)}")
           print(f"Manifest written to: {output}")
+          print(f"Excluded negative categories: {len(excluded)} + pattern rules")
           PY
 
           cp selected_ru_categories.txt "$CATEGORY_FILE"
@@ -894,7 +917,13 @@ jobs:
           }
 
           func main() {
-              if len(os.Args) != 22 {
+              // 0=program, 1..21=input/output. Keep the indexes explicit because
+              // this command has many positional arguments and an off-by-one here
+              // can overwrite an input file instead of producing the DAT.
+              const outputArg = 21
+              const reportArg = 20
+
+              if len(os.Args) != outputArg+1 {
                   fmt.Fprintf(
                       os.Stderr,
                       "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt w1zardz-ru-direct.txt supertico-domains.txt new-positive-report.txt output.dat\n",
@@ -977,7 +1006,17 @@ jobs:
               removedCoveredBlockDomainCount := 0
               missingExternalCount := 0
 
-              newPositiveReportPath := os.Args[20]
+              newPositiveReportPath := os.Args[reportArg]
+              outputPath := os.Args[outputArg]
+
+              for i := 1; i < len(os.Args); i++ {
+                  if i == reportArg {
+                      continue
+                  }
+                  if os.Args[i] == outputPath {
+                      panic(fmt.Sprintf("output path collides with argument %d: %s", i, outputPath))
+                  }
+              }
 
               matched := make(map[string]map[string]bool)
               for source := range sources {
@@ -1250,6 +1289,7 @@ jobs:
               appendedRuleCount := 0
               appendedDuplicateCount := 0
               appendedConvertedFullToRootCount := 0
+              appendedUnsupportedTypeCount := 0
               appendedCoveredDomainCount := 0
 
               for _, category := range hydraAppendCategories {
@@ -1272,8 +1312,17 @@ jobs:
                       }
 
                       domainType := router.Domain_RootDomain
-                      if domain.Type == router.Domain_Full {
+                      switch domain.Type {
+                      case router.Domain_RootDomain:
+                      case router.Domain_Full:
+                          domainType = router.Domain_RootDomain
                           appendedConvertedFullToRootCount++
+                      default:
+                          // Never serialize keyword/regexp/other rule types as a
+                          // fake RootDomain: that would turn a pattern into a literal
+                          // domain and silently corrupt the Hydra category.
+                          appendedUnsupportedTypeCount++
+                          continue
                       }
 
                       cleaned := &router.Domain{
@@ -1308,7 +1357,7 @@ jobs:
                   panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
               }
 
-              if err := os.WriteFile(os.Args[19], outputData, 0644); err != nil {
+              if err := os.WriteFile(outputPath, outputData, 0644); err != nil {
                   panic(fmt.Errorf("failed to write output DAT: %w", err))
               }
 
@@ -1335,6 +1384,7 @@ jobs:
               fmt.Printf("Appended Hydra rules    : %d\n", appendedRuleCount)
               fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
               fmt.Printf("Full -> RootDomain (Hydra): %d\n", appendedConvertedFullToRootCount)
+              fmt.Printf("Removed unsupported Hydra types: %d\n", appendedUnsupportedTypeCount)
               fmt.Printf("Covered Hydra domains removed: %d\n", appendedCoveredDomainCount)
               fmt.Printf("Positive source lines   : %d\n", totalPositiveInput)
               fmt.Printf("Positive NEW vs base RU : %d\n", totalPositiveNew)
@@ -1359,6 +1409,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          rm -f "$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$NEW_SOURCES_REPORT_FILE" \
+            "$CATEGORY_FILE" "$HYDRA_APPEND_FILE"
 
           /tmp/ru-geosite-filter \
             "$INPUT_FILE" \
@@ -1790,14 +1843,21 @@ jobs:
           EXPECTED_SHA="$(awk '{print $1}' geosite_RU.dat.sha256sum)"
           echo "Target SHA256: $EXPECTED_SHA"
 
+          RAW_UPDATED=false
           for i in {1..12}; do
-            REMOTE_SHA="$(curl -sSL --max-time 5 "https://raw.githubusercontent.com/${{ github.repository }}/release/geosite_RU.dat.sha256sum" | awk '{print $1}' || true)"
+            REMOTE_SHA="$(curl -fsSL --max-time 10 "https://raw.githubusercontent.com/${{ github.repository }}/release/geosite_RU.dat.sha256sum" | awk '{print $1}' || true)"
             if [ "$REMOTE_SHA" = "$EXPECTED_SHA" ]; then
               echo "GitHub raw updated successfully ($((i * 5))s)."
+              RAW_UPDATED=true
               break
             fi
             sleep 5
           done
+
+          if [ "$RAW_UPDATED" != true ]; then
+            echo "WARNING: GitHub raw checksum has not propagated within the validation window."
+            echo "WARNING: Release branch is updated, but raw.githubusercontent.com may still serve cached content."
+          fi
 
           echo "========================================"
           echo "Purging jsDelivr CDN cache"
