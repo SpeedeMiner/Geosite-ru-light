@@ -1003,12 +1003,14 @@ jobs:
               newPositiveReportPath := os.Args[reportArg]
               outputPath := os.Args[outputArg]
 
-              for i := 1; i < len(os.Args); i++ {
-                  if i == reportArg {
-                      continue
-                  }
+              // Only input arguments may collide with the output path/report path.
+              // Do not compare a path with itself at reportArg/outputArg.
+              for i := 1; i < reportArg; i++ {
                   if os.Args[i] == outputPath {
-                      panic(fmt.Sprintf("output path collides with argument %d: %s", i, outputPath))
+                      panic(fmt.Sprintf("output path collides with input argument %d: %s", i, outputPath))
+                  }
+                  if os.Args[i] == newPositiveReportPath {
+                      panic(fmt.Sprintf("report path collides with input argument %d: %s", i, newPositiveReportPath))
                   }
               }
 
