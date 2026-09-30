@@ -35,6 +35,8 @@ jobs:
       MOBILE_WHITELIST_URL: https://raw.githubusercontent.com/golukon/russia-mobile-internet-whitelist/main/whitelist.txt
       DAVIDDT_RU_SUFFIX_URL: https://raw.githubusercontent.com/daviddt369/ru-not-ru-domain/main/rules/ru-domain-suffix.txt
       DMITRIY_ENRICH_URL: https://raw.githubusercontent.com/Dmitriy9000/russia-minimal-geosite/main/enrich/ru-available-only-inside
+      W1ZARDZ_RU_DIRECT_URL: https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/ru-direct-domains.txt
+      SUPERTICO_DOMAINS_URL: https://raw.githubusercontent.com/supertico/linux-split-dns-for-amnezia-ru/main/z_russian_websites.txt
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
@@ -49,6 +51,8 @@ jobs:
       MOBILE_WHITELIST_INPUT_FILE: mobile-whitelist.txt
       DAVIDDT_RU_SUFFIX_INPUT_FILE: daviddt-ru-domain-suffix.txt
       DMITRIY_ENRICH_INPUT_FILE: dmitriy-ru-available-only-inside.txt
+      W1ZARDZ_RU_DIRECT_INPUT_FILE: w1zardz-ru-direct-domains.txt
+      SUPERTICO_DOMAINS_INPUT_FILE: supertico-russian-websites.txt
       # Локальные ручные списки доменов
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
@@ -152,6 +156,14 @@ jobs:
             "$DMITRIY_ENRICH_URL" \
             -o "$DMITRIY_ENRICH_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$W1ZARDZ_RU_DIRECT_URL" \
+            -o "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$SUPERTICO_DOMAINS_URL" \
+            -o "$SUPERTICO_DOMAINS_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
@@ -166,6 +178,8 @@ jobs:
           test -s "$MOBILE_WHITELIST_INPUT_FILE"
           test -s "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
           test -s "$DMITRIY_ENRICH_INPUT_FILE"
+          test -s "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
+          test -s "$SUPERTICO_DOMAINS_INPUT_FILE"
           test -f "$LOCAL_RU_INPUT_FILE"
           test -f "$LOCAL_BLOCK_INPUT_FILE"
 
@@ -193,7 +207,8 @@ jobs:
           echo
           echo "Downloaded sources:"
           ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE" \
-            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" "$DMITRIY_ENRICH_INPUT_FILE"
+            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" "$DMITRIY_ENRICH_INPUT_FILE" \
+            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" "$SUPERTICO_DOMAINS_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -879,10 +894,10 @@ jobs:
           }
 
           func main() {
-              if len(os.Args) != 20 {
+              if len(os.Args) != 22 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt new-positive-report.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt w1zardz-ru-direct.txt supertico-domains.txt new-positive-report.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -922,6 +937,8 @@ jobs:
                   {"mobile-whitelist", os.Args[15]},
                   {"daviddt-ru-domain-suffix", os.Args[16]},
                   {"dmitriy-ru-available-only-inside", os.Args[17]},
+                  {"w1zardz-ru-direct-domains", os.Args[18]},
+                  {"supertico-russian-websites", os.Args[19]},
               }
 
               manifest, err := loadManifest(os.Args[10])
@@ -960,7 +977,7 @@ jobs:
               removedCoveredBlockDomainCount := 0
               missingExternalCount := 0
 
-              newPositiveReportPath := os.Args[18]
+              newPositiveReportPath := os.Args[20]
 
               matched := make(map[string]map[string]bool)
               for source := range sources {
@@ -1361,6 +1378,8 @@ jobs:
             "$MOBILE_WHITELIST_INPUT_FILE" \
             "$DAVIDDT_RU_SUFFIX_INPUT_FILE" \
             "$DMITRIY_ENRICH_INPUT_FILE" \
+            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
+            "$SUPERTICO_DOMAINS_INPUT_FILE" \
             "$NEW_SOURCES_REPORT_FILE" \
             "$OUTPUT_FILE"
 
