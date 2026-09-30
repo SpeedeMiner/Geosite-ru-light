@@ -879,10 +879,10 @@ jobs:
           }
 
           func main() {
-              if len(os.Args) != 19 {
+              if len(os.Args) != 20 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt new-positive-report.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -1291,7 +1291,7 @@ jobs:
                   panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
               }
 
-              if err := os.WriteFile(os.Args[18], outputData, 0644); err != nil {
+              if err := os.WriteFile(os.Args[19], outputData, 0644); err != nil {
                   panic(fmt.Errorf("failed to write output DAT: %w", err))
               }
 
@@ -1357,6 +1357,11 @@ jobs:
             hydra_append_categories.txt \
             "$LOCAL_RU_INPUT_FILE" \
             "$LOCAL_BLOCK_INPUT_FILE" \
+            "$GOLUKON_AVAILABLE_INPUT_FILE" \
+            "$MOBILE_WHITELIST_INPUT_FILE" \
+            "$DAVIDDT_RU_SUFFIX_INPUT_FILE" \
+            "$DMITRIY_ENRICH_INPUT_FILE" \
+            "$NEW_SOURCES_REPORT_FILE" \
             "$OUTPUT_FILE"
 
           test -s "$OUTPUT_FILE"
