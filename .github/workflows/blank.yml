@@ -30,6 +30,12 @@ jobs:
       DIGNE_GEOSITE_URL: https://cdn.jsdelivr.net/gh/DigneZzZ/routing@main/v2ray/geosite.dat
       DAVOYAN_LEGACY_URL: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/category-ru-legacy.txt
 
+      # Positive-only RU allow-pool enrichments. These are NOT refilter/block feeds.
+      GOLUKON_AVAILABLE_URL: https://raw.githubusercontent.com/golukon/domains-only-russia/main/ru-available-only-inside
+      MOBILE_WHITELIST_URL: https://raw.githubusercontent.com/golukon/russia-mobile-internet-whitelist/main/whitelist.txt
+      DAVIDDT_RU_SUFFIX_URL: https://raw.githubusercontent.com/daviddt369/ru-not-ru-domain/main/rules/ru-domain-suffix.txt
+      DMITRIY_ENRICH_URL: https://raw.githubusercontent.com/Dmitriy9000/russia-minimal-geosite/main/enrich/ru-available-only-inside
+
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
       GRIMBIRD_INPUT_FILE: grimbird-geosite.dat
@@ -39,6 +45,10 @@ jobs:
       KIRILL_INPUT_FILE: kirill-geosite.dat
       DIGNE_INPUT_FILE: digne-geosite.dat
       DAVOYAN_LEGACY_INPUT_FILE: davoyan-category-ru-legacy.txt
+      GOLUKON_AVAILABLE_INPUT_FILE: golukon-ru-available-only-inside.txt
+      MOBILE_WHITELIST_INPUT_FILE: mobile-whitelist.txt
+      DAVIDDT_RU_SUFFIX_INPUT_FILE: daviddt-ru-domain-suffix.txt
+      DMITRIY_ENRICH_INPUT_FILE: dmitriy-ru-available-only-inside.txt
       # Локальные ручные списки доменов
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
@@ -46,6 +56,7 @@ jobs:
       CATEGORY_FILE: geosite_RU_categories.txt
       HYDRA_APPEND_FILE: geosite_RU_hydra_appended_categories.txt
       OUTPUT_SHA_FILE: geosite_RU.dat.sha256sum
+      NEW_SOURCES_REPORT_FILE: geosite_RU_new_sources.txt
 
     steps:
       # ------------------------------------------------------------
@@ -125,6 +136,22 @@ jobs:
             "$DAVOYAN_LEGACY_URL" \
             -o "$DAVOYAN_LEGACY_INPUT_FILE"
 
+          curl -fL --retry 5 --retry-all-errors \
+            "$GOLUKON_AVAILABLE_URL" \
+            -o "$GOLUKON_AVAILABLE_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$MOBILE_WHITELIST_URL" \
+            -o "$MOBILE_WHITELIST_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$DAVIDDT_RU_SUFFIX_URL" \
+            -o "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
+
+          curl -fL --retry 5 --retry-all-errors \
+            "$DMITRIY_ENRICH_URL" \
+            -o "$DMITRIY_ENRICH_INPUT_FILE"
+
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
           test -s "$HYDRA_INPUT_FILE"
@@ -135,6 +162,10 @@ jobs:
           test -s "$KIRILL_INPUT_FILE"
           test -s "$DIGNE_INPUT_FILE"
           test -s "$DAVOYAN_LEGACY_INPUT_FILE"
+          test -s "$GOLUKON_AVAILABLE_INPUT_FILE"
+          test -s "$MOBILE_WHITELIST_INPUT_FILE"
+          test -s "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
+          test -s "$DMITRIY_ENRICH_INPUT_FILE"
           test -f "$LOCAL_RU_INPUT_FILE"
           test -f "$LOCAL_BLOCK_INPUT_FILE"
 
@@ -161,7 +192,8 @@ jobs:
 
           echo
           echo "Downloaded sources:"
-          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE"
+          ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE" \
+            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" "$DMITRIY_ENRICH_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build complete RU category manifest
@@ -741,6 +773,85 @@ jobs:
               return domains, nil
           }
 
+          func isCoveredByRoots(value string, roots map[string]bool) bool {
+              value = normalizeName(value)
+              if value == "" {
+                  return false
+              }
+
+              if roots[value] {
+                  return true
+              }
+
+              for parent := value; ; {
+                  dot := strings.IndexByte(parent, '.')
+                  if dot < 0 {
+                      break
+                  }
+                  parent = parent[dot+1:]
+                  if roots[parent] {
+                      return true
+                  }
+              }
+
+              return false
+          }
+
+          // Compare a positive-only source against the RU set that already exists
+          // before enrichment. The comparison is parent-aware: foo.example.com is
+          // already covered when example.com is present. The returned list is
+          // source-local, so the same NEW domain can legitimately appear in more
+          // than one source section in the report.
+          func collectNewPositiveSource(
+              path string,
+              baseRoots map[string]bool,
+          ) (values []string, sourceLines int, skippedRussianTLD int, err error) {
+              sourceValues, err := loadDomainList(path, true, path)
+              if err != nil {
+                  return nil, 0, 0, err
+              }
+
+              // Deterministic order: parent roots before deeper hostnames.
+              sort.Slice(sourceValues, func(i, j int) bool {
+                  di := strings.Count(sourceValues[i], ".")
+                  dj := strings.Count(sourceValues[j], ".")
+                  if di != dj {
+                      return di < dj
+                  }
+                  return sourceValues[i] < sourceValues[j]
+              })
+
+              seen := make(map[string]bool)
+              for _, raw := range sourceValues {
+                  sourceLines++
+                  value := normalizeName(raw)
+                  if value == "" {
+                      continue
+                  }
+                  if isRussianTLD(value) {
+                      skippedRussianTLD++
+                      continue
+                  }
+                  // Do not allow bare TLD/hostname labels such as "com" into RU.
+                  if !strings.Contains(value, ".") {
+                      continue
+                  }
+
+                  if seen[value] {
+                      continue
+                  }
+                  seen[value] = true
+
+                  if isCoveredByRoots(value, baseRoots) {
+                      continue
+                  }
+
+                  values = append(values, value)
+              }
+
+              return values, sourceLines, skippedRussianTLD, nil
+          }
+
           func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool, skipRussianTLD bool) (written, duplicates, removedRussian int) {
               for _, value := range values {
                   value = normalizeName(value)
@@ -768,10 +879,10 @@ jobs:
           }
 
           func main() {
-              if len(os.Args) != 15 {
+              if len(os.Args) != 19 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -801,6 +912,16 @@ jobs:
               localBlockDomains, err := loadBlockDomainList(os.Args[13], false)
               if err != nil {
                   panic(fmt.Errorf("failed to read local BLOCK list: %w", err))
+              }
+
+              positiveExtras := []struct {
+                  name string
+                  path string
+              }{
+                  {"golukon-ru-available-only-inside", os.Args[14]},
+                  {"mobile-whitelist", os.Args[15]},
+                  {"daviddt-ru-domain-suffix", os.Args[16]},
+                  {"dmitriy-ru-available-only-inside", os.Args[17]},
               }
 
               manifest, err := loadManifest(os.Args[10])
@@ -838,6 +959,8 @@ jobs:
               localBlockDuplicateCount := 0
               removedCoveredBlockDomainCount := 0
               missingExternalCount := 0
+
+              newPositiveReportPath := os.Args[18]
 
               matched := make(map[string]map[string]bool)
               for source := range sources {
@@ -971,6 +1094,87 @@ jobs:
                   }
               }
 
+              // ----------------------------------------------------------
+              // Positive-only enrichment: compare each new source with the
+              // current RU pool before adding it. No refilter/block source is
+              // consumed here. The report contains only addresses that were
+              // genuinely absent from the current RU pool at build start.
+              // ----------------------------------------------------------
+              report, err := os.Create(newPositiveReportPath)
+              if err != nil {
+                  panic(fmt.Errorf("failed to create positive-source report: %w", err))
+              }
+              defer report.Close()
+
+              fmt.Fprintln(report, "# Positive-only RU source delta")
+              fmt.Fprintln(report, "# NEW = source domain not covered by the pre-enrichment RU root-domain set")
+              fmt.Fprintln(report, "# refilter/block/negative feeds are intentionally excluded")
+              fmt.Fprintln(report)
+
+              baseRoots := make(map[string]bool)
+              for _, domain := range ruCategory.Domain {
+                  if domain != nil && domain.Type == router.Domain_RootDomain {
+                      value := normalizeName(domain.Value)
+                      if value != "" {
+                          baseRoots[value] = true
+                      }
+                  }
+              }
+
+              totalPositiveNew := 0
+              totalPositiveAdded := 0
+              totalPositiveInput := 0
+              totalPositiveTLD := 0
+
+              // Starts with the pre-enrichment RU coverage. As positive sources are
+              // merged, newly added root domains also cover their child hostnames.
+              finalRoots := make(map[string]bool, len(baseRoots))
+              for root := range baseRoots {
+                  finalRoots[root] = true
+              }
+
+              for _, extra := range positiveExtras {
+                  values, sourceLines, skippedTLD, err := collectNewPositiveSource(extra.path, baseRoots)
+                  if err != nil {
+                      panic(fmt.Errorf("failed positive source %s: %w", extra.name, err))
+                  }
+
+                  fmt.Fprintf(report, "\n[%s]\n", extra.name)
+                  addedCount := 0
+
+                  for _, value := range values {
+                      // This line is NEW relative to the original RU pool and is
+                      // therefore always printed under its source. It may still be
+                      // covered by a parent added earlier from another positive source.
+                      fmt.Fprintln(report, value)
+
+                      key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
+                      if globalSeen[key] || isCoveredByRoots(value, finalRoots) {
+                          continue
+                      }
+
+                      ruCategory.Domain = append(ruCategory.Domain, &router.Domain{
+                          Type:  router.Domain_RootDomain,
+                          Value: value,
+                      })
+                      globalSeen[key] = true
+                      finalRoots[value] = true
+                      writtenDomainCount++
+                      addedCount++
+                  }
+
+                  totalPositiveInput += sourceLines
+                  totalPositiveNew += len(values)
+                  totalPositiveAdded += addedCount
+                  totalPositiveTLD += skippedTLD
+                  fmt.Fprintf(report, "# source_lines=%d new_vs_base=%d added_to_final_before_prune=%d skipped_ru_tld=%d\n", sourceLines, len(values), addedCount, skippedTLD)
+              }
+
+              fmt.Fprintf(report, "\nTOTAL positive source lines: %d\n", totalPositiveInput)
+              fmt.Fprintf(report, "TOTAL new vs base RU: %d\n", totalPositiveNew)
+              fmt.Fprintf(report, "TOTAL added to final before prune: %d\n", totalPositiveAdded)
+              fmt.Fprintf(report, "TOTAL skipped RU TLD: %d\n", totalPositiveTLD)
+
               var pruned int
               ruCategory.Domain, pruned = pruneCoveredRootDomains(ruCategory.Domain)
               removedCoveredDomainCount += pruned
@@ -1087,7 +1291,7 @@ jobs:
                   panic(fmt.Errorf("failed to marshal final output DAT: %w", err))
               }
 
-              if err := os.WriteFile(os.Args[14], outputData, 0644); err != nil {
+              if err := os.WriteFile(os.Args[18], outputData, 0644); err != nil {
                   panic(fmt.Errorf("failed to write output DAT: %w", err))
               }
 
@@ -1115,6 +1319,11 @@ jobs:
               fmt.Printf("Hydra duplicates removed: %d\n", appendedDuplicateCount)
               fmt.Printf("Full -> RootDomain (Hydra): %d\n", appendedConvertedFullToRootCount)
               fmt.Printf("Covered Hydra domains removed: %d\n", appendedCoveredDomainCount)
+              fmt.Printf("Positive source lines   : %d\n", totalPositiveInput)
+              fmt.Printf("Positive NEW vs base RU : %d\n", totalPositiveNew)
+              fmt.Printf("Positive added to final : %d\n", totalPositiveAdded)
+              fmt.Printf("Positive skipped RU TLD : %d\n", totalPositiveTLD)
+              fmt.Printf("Positive delta report   : %s\n", newPositiveReportPath)
               fmt.Printf("Final categories        : %d\n", len(result.Entry))
               fmt.Printf("Final DAT size          : %d bytes\n", len(outputData))
               fmt.Println("Output categories       : RU + BLOCK + 16 Hydra categories (clean attributes)")
@@ -1490,6 +1699,7 @@ jobs:
           EOF
 
           go run ./tools/ru-geosite-filter/validate.go "$GITHUB_WORKSPACE/$OUTPUT_FILE"
+          test -s "$GITHUB_WORKSPACE/$NEW_SOURCES_REPORT_FILE"
 
       # ------------------------------------------------------------
       # 10. Publish GitHub Release
@@ -1506,6 +1716,7 @@ jobs:
             geosite_RU.dat.sha256sum
             geosite_RU_categories.txt
             geosite_RU_hydra_appended_categories.txt
+            geosite_RU_new_sources.txt
 
           body: |
             # Optimized RU GeoSite
@@ -1532,6 +1743,7 @@ jobs:
           cp "$OUTPUT_SHA_FILE" /tmp/geosite-release/geosite_RU.dat.sha256sum
           cp "$CATEGORY_FILE" /tmp/geosite-release/geosite_RU_categories.txt
           cp "$HYDRA_APPEND_FILE" /tmp/geosite-release/geosite_RU_hydra_appended_categories.txt
+          cp "$NEW_SOURCES_REPORT_FILE" /tmp/geosite-release/geosite_RU_new_sources.txt
 
           cd /tmp/geosite-release
 
@@ -1606,6 +1818,9 @@ jobs:
           echo
           echo "jsDelivr CDN:"
           echo "https://cdn.jsdelivr.net/gh/${{ github.repository }}@release/geosite_RU.dat"
+          echo
+          echo "Positive-source delta report:"
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/release/geosite_RU_new_sources.txt"
           echo
           echo "SHA256:"
           cat "$OUTPUT_SHA_FILE"
