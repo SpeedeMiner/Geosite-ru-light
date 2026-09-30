@@ -8,7 +8,6 @@
 #
 # Все записи здесь попадают в отдельную категорию BLOCK.
 # BLOCK не фильтрует российские домены и не пересекается автоматически с RU.
-domain:yandex.ru
 domain:ad.mail.ru
 domain:api.mindbox.ru
 domain:app-analytics-services.com
