@@ -199,7 +199,7 @@ jobs:
             "$W1ZARDZ_RU_DIRECT_INPUT_FILE" "$SUPERTICO_DOMAINS_INPUT_FILE"
 
       # ------------------------------------------------------------
-      # 5. Build complete RU category manifest
+      # 5. Build RU category manifest from the current v2fly tree
       # ------------------------------------------------------------
       - name: Build RU category manifest
         shell: bash
@@ -292,56 +292,50 @@ jobs:
               ):
                   visit(path.name)
 
-          # Дополнительные категории runetfreedom / v2fly (без СМИ)
+          # Optional standalone compatibility categories. Older versions of the upstream data
+          # used many service names as separate files; current v2fly consolidates
+          # a number of them into category-ru or its subcategories. Therefore a
+          # missing optional file is NOT a build error. Real data coverage comes
+          # from the resolved category-ru tree and the dedicated external sources
+          # below (Kirill, Grimbird, etc.).
           extra_categories = {
-              "ru-available-only-inside",
-
-              "yandex", "vk", "mailru", "mailru-group", "kinopoisk",
-              "dzen", "ozon", "wildberries", "wb", "avito", "autoru",
-              "aviasales", "rutube", "wink", "2gis", "ok", "okko",
-              "sokolov", "x5", "mosmetro", "max",
-
-              "beget", "carrotquest", "cdek", "comssone", "drweb",
-              "envybox", "gismeteo", "group-ib", "headhunter", "ideco-ru",
-              "kaspersky", "kontur", "mindbox", "myoffice-ru", "netcraze",
-              "nic-ru", "positive-technologies", "regru", "selectel",
-              "servicepipe", "skyeng", "smena", "tilda", "timeweb",
-              "ucoz", "whoosh",
-
-              "megafon", "mts", "mts-ru", "rostelecom", "t2", "t2-ru",
-              "beeline",
-
-              "1c", "1cloud", "1tv", "aeroflot", "alfabank", "avru",
-              "bronevik", "cdnvideo", "citydrive", "dellin", "dixy",
-              "dnevnikru", "dns-shop", "dodopizza", "domclick", "edadeal",
-              "fastvps", "fixprice", "jivo", "kuper", "lemanapro",
-              "lenta", "lentaru", "magnit", "megamarket", "motivtelecom",
-              "ngenix", "ntv", "pochtaru", "psbank", "rambler", "rbc",
-              "rt", "ruvds", "rzd", "samokat", "smotrim", "tass",
-              "taxsee", "tbank", "tnt", "tutu", "vgtrk", "vtb",
-              "vkusnoitochka", "vkusvill", "zentotem",
-
-              "3ebra", "apptrackpets", "flomni", "foto-planeta", "gazfond-pn",
-              "litres", "meteoinfo", "nplus1", "ognihome", "ponyexpress",
-              "qms", "randomgodbot", "srv-hub", "t1", "vimu", "yourgood",
-
-              "corp.express", "express.ms", "public.express", "xlnk.ms",
-              "mfa.center", "multifactor",
-
-              "moex", "spvb", "banki", "finuslugi", "nspk", "mironline",
-              "mirpayonline", "sistema-capital", "efin", "credistory",
-              "nbki", "netmonet", "tips",
+              "2gis", "aviasales", "autoru", "avito", "dzen", "kinopoisk",
+              "mailru", "mailru-group", "max", "mosmetro", "mts", "ok", "okko",
+              "ozon", "rutube", "sokolov", "wildberries", "wb", "wink", "x5",
+              "yandex",
+              "beget", "carrotquest", "cdek", "comssone", "drweb", "envybox",
+              "gismeteo", "group-ib", "headhunter", "ideco-ru", "kaspersky", "kontur",
+              "mindbox", "myoffice-ru", "netcraze", "nic-ru", "positive-technologies",
+              "regru", "selectel", "servicepipe", "skyeng", "smena", "tilda",
+              "timeweb", "ucoz", "whoosh",
+              "megafon", "mts-ru", "rostelecom", "t2-ru",
           }
 
+          optional_missing = []
           for name in sorted(extra_categories):
-              visit(name)
+              normalized = normalize(name)
+              path = DATA / normalized
+              if path.is_file():
+                  visit(normalized)
+              else:
+                  optional_missing.append(normalized)
 
+          # A missing include referenced by an existing v2fly category is a real
+          # integrity error; a missing optional standalone service file is only a
+          # compatibility/staleness notice.
           if missing_v2fly:
               print()
-              print("ERROR: required v2fly categories are missing:")
+              print("ERROR: required v2fly include categories are missing:")
               for name in sorted(missing_v2fly):
                   print(f"  - {name}")
               raise SystemExit(1)
+
+          print()
+          print(f"Optional standalone categories present: {len(extra_categories) - len(optional_missing)}/{len(extra_categories)}")
+          if optional_missing:
+              print("Optional standalone categories absent in current v2fly data (not fatal):")
+              for name in optional_missing:
+                  print(f"  - {name}")
 
           selected = {
               item
