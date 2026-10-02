@@ -1495,6 +1495,12 @@ jobs:
               "google.golang.org/protobuf/proto"
           )
 
+          // GeoSite attributes such as @ads/@cn are metadata.
+          // The final DAT must never contain an attribute marker in Domain.Value.
+          func hasAttributeMarker(value string) bool {
+              return strings.Contains(value, "@")
+          }
+
           func isRussianTLD(value string) bool {
               value = strings.ToLower(strings.TrimSpace(value))
               value = strings.TrimSuffix(value, ".")
