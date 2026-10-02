@@ -35,12 +35,8 @@ jobs:
       DAVOYAN_LEGACY_URL: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/domains/category-ru-legacy.txt
 
       # Positive-only RU allow-pool enrichments. These are NOT refilter/block feeds.
-      GOLUKON_AVAILABLE_URL: https://raw.githubusercontent.com/golukon/domains-only-russia/main/ru-available-only-inside
-      MOBILE_WHITELIST_URL: https://raw.githubusercontent.com/golukon/russia-mobile-internet-whitelist/main/whitelist.txt
-      DAVIDDT_RU_SUFFIX_URL: https://raw.githubusercontent.com/daviddt369/ru-not-ru-domain/main/rules/ru-domain-suffix.txt
-      DMITRIY_ENRICH_URL: https://raw.githubusercontent.com/Dmitriy9000/russia-minimal-geosite/main/enrich/ru-available-only-inside
       W1ZARDZ_RU_DIRECT_URL: https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/dist/ru-direct-domains.txt
-      SUPERTICO_DOMAINS_URL: https://raw.githubusercontent.com/supertico/linux-split-dns-for-amnezia-ru/main/z_russian_websites.txt
+      KYORESUAS_RU_STANDARD_URL: https://raw.githubusercontent.com/kyoresuas/ru-direct/release/ru-standard.domains.txt
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
@@ -51,12 +47,8 @@ jobs:
       KIRILL_INPUT_FILE: kirill-geosite.dat
       DIGNE_INPUT_FILE: digne-geosite.dat
       DAVOYAN_LEGACY_INPUT_FILE: davoyan-category-ru-legacy.txt
-      GOLUKON_AVAILABLE_INPUT_FILE: golukon-ru-available-only-inside.txt
-      MOBILE_WHITELIST_INPUT_FILE: mobile-whitelist.txt
-      DAVIDDT_RU_SUFFIX_INPUT_FILE: daviddt-ru-domain-suffix.txt
-      DMITRIY_ENRICH_INPUT_FILE: dmitriy-ru-available-only-inside.txt
       W1ZARDZ_RU_DIRECT_INPUT_FILE: w1zardz-ru-direct-domains.txt
-      SUPERTICO_DOMAINS_INPUT_FILE: supertico-russian-websites.txt
+      KYORESUAS_RU_STANDARD_INPUT_FILE: kyoresuas-ru-standard-domains.txt
       # Локальные ручные списки доменов
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
@@ -145,12 +137,8 @@ jobs:
           download_source "Kirill GeoSite" "$KIRILL_GEOSITE_URL" "$KIRILL_INPUT_FILE"
           download_source "Digne GeoSite" "$DIGNE_GEOSITE_URL" "$DIGNE_INPUT_FILE"
           download_source "Davoyan legacy" "$DAVOYAN_LEGACY_URL" "$DAVOYAN_LEGACY_INPUT_FILE"
-          download_source "Golukon RU available" "$GOLUKON_AVAILABLE_URL" "$GOLUKON_AVAILABLE_INPUT_FILE"
-          download_source "Mobile whitelist" "$MOBILE_WHITELIST_URL" "$MOBILE_WHITELIST_INPUT_FILE"
-          download_source "Daviddt RU suffix" "$DAVIDDT_RU_SUFFIX_URL" "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
-          download_source "Dmitriy enrich" "$DMITRIY_ENRICH_URL" "$DMITRIY_ENRICH_INPUT_FILE"
           download_source "W1ZARDZ RU direct domains" "$W1ZARDZ_RU_DIRECT_URL" "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
-          download_source "SuperTico Russian websites" "$SUPERTICO_DOMAINS_URL" "$SUPERTICO_DOMAINS_INPUT_FILE"
+          download_source "KYORESUAS RU standard domains" "$KYORESUAS_RU_STANDARD_URL" "$KYORESUAS_RU_STANDARD_INPUT_FILE"
 
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
@@ -162,14 +150,13 @@ jobs:
           test -s "$KIRILL_INPUT_FILE"
           test -s "$DIGNE_INPUT_FILE"
           test -s "$DAVOYAN_LEGACY_INPUT_FILE"
-          test -s "$GOLUKON_AVAILABLE_INPUT_FILE"
-          test -s "$MOBILE_WHITELIST_INPUT_FILE"
-          test -s "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
-          test -s "$DMITRIY_ENRICH_INPUT_FILE"
           test -s "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
-          test -s "$SUPERTICO_DOMAINS_INPUT_FILE"
           test -f "$LOCAL_RU_INPUT_FILE"
           test -f "$LOCAL_BLOCK_INPUT_FILE"
+
+          echo "Positive text sources:"
+          echo "  - W1ZARDZ RU direct"
+          echo "  - KYORESUAS RU standard"
 
           echo "Local RU list    : $LOCAL_RU_INPUT_FILE"
           echo "Local BLOCK list : $LOCAL_BLOCK_INPUT_FILE"
@@ -195,8 +182,6 @@ jobs:
           echo
           echo "Downloaded sources:"
           ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE" \
-            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" "$DMITRIY_ENRICH_INPUT_FILE" \
-            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" "$SUPERTICO_DOMAINS_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build RU category manifest from the current v2fly tree
@@ -918,16 +903,16 @@ jobs:
           }
 
           func main() {
-              // 0=program, 1..21=input/output. Keep the indexes explicit because
+              // 0=program, 1..17=input/output. Keep the indexes explicit because
               // this command has many positional arguments and an off-by-one here
               // can overwrite an input file instead of producing the DAT.
-              const outputArg = 21
-              const reportArg = 20
+              const outputArg = 17
+              const reportArg = 16
 
               if len(os.Args) != outputArg+1 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt w1zardz-ru-direct.txt supertico-domains.txt new-positive-report.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt w1zardz-ru-direct.txt kyoresuas-ru-standard-domains.txt new-positive-report.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -963,12 +948,8 @@ jobs:
                   name string
                   path string
               }{
-                  {"golukon-ru-available-only-inside", os.Args[14]},
-                  {"mobile-whitelist", os.Args[15]},
-                  {"daviddt-ru-domain-suffix", os.Args[16]},
-                  {"dmitriy-ru-available-only-inside", os.Args[17]},
-                  {"w1zardz-ru-direct-domains", os.Args[18]},
-                  {"supertico-russian-websites", os.Args[19]},
+                  {"w1zardz-ru-direct-domains", os.Args[14]},
+                  {"kyoresuas-ru-standard", os.Args[15]},
               }
 
               manifest, err := loadManifest(os.Args[10])
@@ -1445,12 +1426,8 @@ jobs:
             hydra_append_categories.txt \
             "$LOCAL_RU_INPUT_FILE" \
             "$LOCAL_BLOCK_INPUT_FILE" \
-            "$GOLUKON_AVAILABLE_INPUT_FILE" \
-            "$MOBILE_WHITELIST_INPUT_FILE" \
-            "$DAVIDDT_RU_SUFFIX_INPUT_FILE" \
-            "$DMITRIY_ENRICH_INPUT_FILE" \
             "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
-            "$SUPERTICO_DOMAINS_INPUT_FILE" \
+            "$KYORESUAS_RU_STANDARD_INPUT_FILE" \
             "$NEW_SOURCES_REPORT_FILE" \
             "$OUTPUT_FILE"
 
