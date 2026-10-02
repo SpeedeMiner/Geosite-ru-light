@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite
+name: Build Ultimate Light RU Geosite (Optimized v8)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -215,17 +215,21 @@ jobs:
           def normalize(name: str) -> str:
               return name.strip().lower()
 
+          def is_negative_category(name: str) -> bool:
+              name = normalize(name)
+              if not name:
+                  return False
+              if any(marker in name for marker in ("blocked", "geoblock", "re-filter", "refilter")):
+                  return True
+              return re.search(r"(^|[-_.])ban([-_.]|$)", name) is not None
+
           def is_excluded(name: str) -> bool:
               name = normalize(name)
               if not name:
                   return True
               if name in excluded:
                   return True
-              if any(marker in name for marker in ("blocked", "geoblock", "re-filter", "refilter")):
-                  return True
-              if re.search(r"(^|[-_.])ban([-_.]|$)", name):
-                  return True
-              return False
+              return is_negative_category(name)
 
           def visit(name: str):
               name = normalize(name)
@@ -244,8 +248,8 @@ jobs:
 
               try:
                   text = path.read_text(encoding="utf-8", errors="ignore")
-              except Exception:
-                  return
+              except Exception as exc:
+                  raise RuntimeError(f"failed to read v2fly category {name}: {exc}") from exc
 
               for raw_line in text.splitlines():
                   line = raw_line.split("#", 1)[0].strip()
@@ -328,56 +332,63 @@ jobs:
               if not is_excluded(item.split("|", 1)[1])
           }
 
+          def add_external_categories(source: str, categories) -> int:
+              excluded_count = 0
+              for raw_name in categories:
+                  name = normalize(raw_name)
+                  if not name:
+                      continue
+                  # Apply the same negative-category guard to every external
+                  # source. This prevents categories such as geoblock/blocked/
+                  # re-filter/ban from leaking into the positive RU pool.
+                  if is_negative_category(name):
+                      print(f"Excluded negative external category: {source}|{name}")
+                      excluded_count += 1
+                      continue
+                  selected.add(f"{source}|{name}")
+              return excluded_count
+
+          excluded_external_count = 0
+
           # hydraponique/roscomvpn-geosite
-          hydra_categories = {
+          excluded_external_count += add_external_categories("hydra", {
               "whitelist",
               "private",
               "category-ru",
-          }
-          for name in hydra_categories:
-              selected.add(f"hydra|{normalize(name)}")
+          })
 
           # mvrvntn/routing — только CATEGORY-RU добавляется в общий RU
-          mvr_categories = {
+          excluded_external_count += add_external_categories("mvrvntn", {
               "category-ru",
-          }
-          for name in mvr_categories:
-              selected.add(f"mvrvntn|{normalize(name)}")
+          })
 
           # Yularzhi/geosite_russia — CATEGORY-RU и PRIVATE добавляются в общий RU
-          yularzhi_categories = {
+          excluded_external_count += add_external_categories("yularzhi", {
               "category-ru",
               "private",
-          }
-          for name in yularzhi_categories:
-              selected.add(f"yularzhi|{normalize(name)}")
+          })
 
-          # vpnyasha/geosite — RU-focused enriched categories
-          vpnyasha_categories = {
+          # vpnyasha/geosite — RU-focused enriched categories. Negative
+          # categories are intentionally absent from this allowlist and are also
+          # rejected by the shared guard for future additions.
+          excluded_external_count += add_external_categories("vpnyasha", {
               "our-whitelist",
               "our-category-ru",
-              "our-geoblock-ru",
               "our-games",
-          }
-          for name in vpnyasha_categories:
-              selected.add(f"vpnyasha|{normalize(name)}")
+          })
 
           # kirilllavrov/RU-domain-list-for-whitelist
-          kirill_categories = {
+          excluded_external_count += add_external_categories("kirill", {
               "category-ru",
-          }
-          for name in kirill_categories:
-              selected.add(f"kirill|{normalize(name)}")
+          })
 
           # DigneZzZ/routing — только category-ru
-          digne_categories = {
+          excluded_external_count += add_external_categories("digne", {
               "category-ru",
-          }
-          for name in digne_categories:
-              selected.add(f"digne|{normalize(name)}")
+          })
 
           # GrimbirdUsers/ru-routing-dat
-          grimbird_categories = {
+          excluded_external_count += add_external_categories("grimbird", {
               "category-ru-whitelist",
               "ozon",
               "ru-analytics",
@@ -389,15 +400,23 @@ jobs:
               "ru-tv",
               "ru-whitelist-extended",
               "swift",
-          }
-          for name in grimbird_categories:
-              selected.add(f"grimbird|{normalize(name)}")
+          })
 
           selected = {
               item for item in selected
               if item and item.split("|", 1)[1]
               and not item.split("|", 1)[1].startswith(".")
           }
+
+          leaked_negative = sorted(
+              item for item in selected
+              if is_negative_category(item.split("|", 1)[1])
+          )
+          if leaked_negative:
+              print("ERROR: negative categories leaked into manifest:")
+              for item in leaked_negative:
+                  print(f"  - {item}")
+              raise SystemExit(1)
 
           with output.open("w", encoding="utf-8") as f:
               for item in sorted(selected):
@@ -435,7 +454,8 @@ jobs:
           print("========================================")
           print(f"Manifest entries: {len(selected)}")
           print(f"Manifest written to: {output}")
-          print(f"Excluded negative categories: {len(excluded)} + pattern rules")
+          print(f"Excluded negative v2fly categories: {len(excluded)} + pattern rules")
+          print(f"Excluded negative external categories: {excluded_external_count}")
           PY
 
           cp selected_ru_categories.txt "$CATEGORY_FILE"
@@ -494,6 +514,10 @@ jobs:
 
           func domainKey(domain *router.Domain) string {
               return fmt.Sprintf("%d|%s", domain.Type, normalizeName(domain.Value))
+          }
+
+          func domainValueKey(domainType router.Domain_Type, value string) string {
+              return fmt.Sprintf("%d|%s", domainType, normalizeName(value))
           }
 
           func pruneCoveredRootDomains(domains []*router.Domain) ([]*router.Domain, int) {
@@ -562,6 +586,7 @@ jobs:
 
               result := make(map[string]map[string]bool)
               scanner := bufio.NewScanner(file)
+              scanner.Buffer(make([]byte, 32*1024), 1024*1024)
 
               for scanner.Scan() {
                   line := strings.TrimSpace(scanner.Text())
@@ -602,6 +627,7 @@ jobs:
 
               var categories []string
               scanner := bufio.NewScanner(file)
+              scanner.Buffer(make([]byte, 32*1024), 1024*1024)
 
               for scanner.Scan() {
                   line := strings.TrimSpace(scanner.Text())
@@ -663,6 +689,7 @@ jobs:
               var domains []string
               seen := make(map[string]bool)
               scanner := bufio.NewScanner(file)
+              scanner.Buffer(make([]byte, 32*1024), 1024*1024)
 
               for scanner.Scan() {
                   line := strings.TrimSpace(strings.TrimPrefix(scanner.Text(), "\ufeff"))
@@ -722,7 +749,7 @@ jobs:
               return domains, nil
           }
 
-          func loadBlockDomainList(path string, requireNonEmpty bool) ([]*router.Domain, error) {
+          func loadBlockDomainList(path string) ([]*router.Domain, error) {
               file, err := os.Open(path)
               if err != nil {
                   return nil, err
@@ -732,6 +759,7 @@ jobs:
               var domains []*router.Domain
               seen := make(map[string]bool)
               scanner := bufio.NewScanner(file)
+              scanner.Buffer(make([]byte, 32*1024), 1024*1024)
 
               for scanner.Scan() {
                   line := strings.TrimSpace(strings.TrimPrefix(scanner.Text(), "\ufeff"))
@@ -777,7 +805,7 @@ jobs:
                       continue
                   }
 
-                  key := fmt.Sprintf("%d|%s", domainType, line)
+                  key := domainValueKey(domainType, line)
                   if seen[key] {
                       continue
                   }
@@ -790,9 +818,6 @@ jobs:
 
               if err := scanner.Err(); err != nil {
                   return nil, err
-              }
-              if len(domains) == 0 && requireNonEmpty {
-                  return nil, fmt.Errorf("local BLOCK domain list is empty")
               }
               return domains, nil
           }
@@ -876,13 +901,13 @@ jobs:
               return values, sourceLines, skippedRussianTLD, nil
           }
 
-          func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool, skipRussianTLD bool) (written, duplicates, removedRussian int) {
+          func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool) (written, duplicates, removedRussian int) {
               for _, value := range values {
                   value = normalizeName(value)
                   if value == "" {
                       continue
                   }
-                  if skipRussianTLD && isRussianTLD(value) {
+                  if isRussianTLD(value) {
                       removedRussian++
                       continue
                   }
@@ -939,7 +964,7 @@ jobs:
                   panic(fmt.Errorf("failed to read local RU list: %w", err))
               }
 
-              localBlockDomains, err := loadBlockDomainList(os.Args[13], false)
+              localBlockDomains, err := loadBlockDomainList(os.Args[13])
               if err != nil {
                   panic(fmt.Errorf("failed to read local BLOCK list: %w", err))
               }
@@ -1097,12 +1122,12 @@ jobs:
               }
 
               legacyDomainCount := len(legacyDomains)
-              legacyWritten, legacyDuplicateCount, legacyFilteredTLD := appendDomainStrings(ruCategory, legacyDomains, globalSeen, true)
+              legacyWritten, legacyDuplicateCount, legacyFilteredTLD := appendDomainStrings(ruCategory, legacyDomains, globalSeen)
               writtenDomainCount += legacyWritten
               duplicateDomainCount += legacyDuplicateCount
               removedRussianDomainCount += legacyFilteredTLD
 
-              localRUDomainCount, localRUDuplicateCount, localRUFilteredTLDCount = appendDomainStrings(ruCategory, localRUDomains, globalSeen, true)
+              localRUDomainCount, localRUDuplicateCount, localRUFilteredTLDCount = appendDomainStrings(ruCategory, localRUDomains, globalSeen)
               writtenDomainCount += localRUDomainCount
               duplicateDomainCount += localRUDuplicateCount
               removedRussianDomainCount += localRUFilteredTLDCount
@@ -1112,10 +1137,7 @@ jobs:
                       continue
                   }
 
-                  cleaned := &router.Domain{
-                      Type:  domain.Type,
-                      Value: normalizeManualDomain(domain.Value),
-                  }
+                  cleaned := domain
 
                   key := domainKey(cleaned)
                   if blockSeen[key] {
@@ -1129,7 +1151,7 @@ jobs:
               }
 
               for _, value := range []string{"ru", "xn--p1ai", "su"} {
-                  key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
+                  key := domainValueKey(router.Domain_RootDomain, value)
                   if !globalSeen[key] {
                       globalSeen[key] = true
                       ruCategory.Domain = append(ruCategory.Domain, &router.Domain{
@@ -1194,7 +1216,7 @@ jobs:
                       // covered by a parent added earlier from another positive source.
                       fmt.Fprintln(report, value)
 
-                      key := fmt.Sprintf("%d|%s", router.Domain_RootDomain, value)
+                      key := domainValueKey(router.Domain_RootDomain, value)
                       if globalSeen[key] || isCoveredByRoots(value, finalRoots) {
                           continue
                       }
@@ -1305,11 +1327,11 @@ jobs:
                           panic(fmt.Sprintf("attribute marker embedded in Hydra source domain value: %s", domain.Value))
                       }
 
-                      domainType := router.Domain_RootDomain
                       switch domain.Type {
                       case router.Domain_RootDomain:
                       case router.Domain_Full:
-                          domainType = router.Domain_RootDomain
+                          // Intentional: Full -> RootDomain increases coverage and
+                          // matches the RU normalization policy used by the build.
                           appendedConvertedFullToRootCount++
                       default:
                           // Never serialize keyword/regexp/other rule types as a
@@ -1320,7 +1342,7 @@ jobs:
                       }
 
                       cleaned := &router.Domain{
-                          Type:  domainType,
+                          Type:  router.Domain_RootDomain,
                           Value: val,
                       }
 
@@ -1542,6 +1564,22 @@ jobs:
                       2+len(expectedHydra),
                       len(list.Entry),
                   ))
+              }
+
+              for _, site := range list.Entry {
+                  if site == nil {
+                      panic("output contains nil category")
+                  }
+                  category := strings.ToLower(strings.TrimSpace(site.CountryCode))
+                  if strings.Contains(category, "@") {
+                      panic(fmt.Sprintf("attribute marker leaked into category name: %s", site.CountryCode))
+                  }
+                  if strings.Contains(category, "blocked") ||
+                      strings.Contains(category, "geoblock") ||
+                      strings.Contains(category, "re-filter") ||
+                      strings.Contains(category, "refilter") {
+                      panic(fmt.Sprintf("negative category leaked into output: %s", site.CountryCode))
+                  }
               }
 
               ru := list.Entry[0]
