@@ -38,12 +38,9 @@ jobs:
       GOLUKON_AVAILABLE_URL: https://raw.githubusercontent.com/golukon/domains-only-russia/main/ru-available-only-inside
       MOBILE_WHITELIST_URL: https://raw.githubusercontent.com/golukon/russia-mobile-internet-whitelist/main/whitelist.txt
       DAVIDDT_RU_SUFFIX_URL: https://raw.githubusercontent.com/daviddt369/ru-not-ru-domain/main/rules/ru-domain-suffix.txt
+      DMITRIY_ENRICH_URL: https://raw.githubusercontent.com/Dmitriy9000/russia-minimal-geosite/main/enrich/ru-available-only-inside
       W1ZARDZ_RU_DIRECT_URL: https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/dist/ru-direct-domains.txt
       SUPERTICO_DOMAINS_URL: https://raw.githubusercontent.com/supertico/linux-split-dns-for-amnezia-ru/main/z_russian_websites.txt
-      KYORESUAS_RU_STANDARD_URL: https://raw.githubusercontent.com/kyoresuas/ru-direct/release/ru-standard.domains.txt
-      OPENSMART_RU_DIRECT_URL: https://raw.githubusercontent.com/112fm/OpenSmart-Russia/main/direct-domains.txt
-      KHFDD_WHITELIST_URL: https://raw.githubusercontent.com/Khfdd/geosite-russia-whitelist-minimal/main/data/whitelist
-      WHISPER_RU_DIRECT_URL: https://raw.githubusercontent.com/WhisperOfTheSteppe/ru-rules-dat/main/data/ru-direct-domains.txt
 
       INPUT_FILE: source-geosite.dat
       HYDRA_INPUT_FILE: hydra-geosite.dat
@@ -57,12 +54,9 @@ jobs:
       GOLUKON_AVAILABLE_INPUT_FILE: golukon-ru-available-only-inside.txt
       MOBILE_WHITELIST_INPUT_FILE: mobile-whitelist.txt
       DAVIDDT_RU_SUFFIX_INPUT_FILE: daviddt-ru-domain-suffix.txt
+      DMITRIY_ENRICH_INPUT_FILE: dmitriy-ru-available-only-inside.txt
       W1ZARDZ_RU_DIRECT_INPUT_FILE: w1zardz-ru-direct-domains.txt
       SUPERTICO_DOMAINS_INPUT_FILE: supertico-russian-websites.txt
-      KYORESUAS_RU_STANDARD_INPUT_FILE: kyoresuas-ru-standard-domains.txt
-      OPENSMART_RU_DIRECT_INPUT_FILE: opensmart-ru-direct-domains.txt
-      KHFDD_WHITELIST_INPUT_FILE: khfdd-whitelist.txt
-      WHISPER_RU_DIRECT_INPUT_FILE: whisper-ru-direct-domains.txt
       # Локальные ручные списки доменов
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
@@ -154,12 +148,9 @@ jobs:
           download_source "Golukon RU available" "$GOLUKON_AVAILABLE_URL" "$GOLUKON_AVAILABLE_INPUT_FILE"
           download_source "Mobile whitelist" "$MOBILE_WHITELIST_URL" "$MOBILE_WHITELIST_INPUT_FILE"
           download_source "Daviddt RU suffix" "$DAVIDDT_RU_SUFFIX_URL" "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
+          download_source "Dmitriy enrich" "$DMITRIY_ENRICH_URL" "$DMITRIY_ENRICH_INPUT_FILE"
           download_source "W1ZARDZ RU direct domains" "$W1ZARDZ_RU_DIRECT_URL" "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
           download_source "SuperTico Russian websites" "$SUPERTICO_DOMAINS_URL" "$SUPERTICO_DOMAINS_INPUT_FILE"
-          download_source "KYORESUAS RU standard domains" "$KYORESUAS_RU_STANDARD_URL" "$KYORESUAS_RU_STANDARD_INPUT_FILE"
-          download_source "OpenSmart Russia direct domains" "$OPENSMART_RU_DIRECT_URL" "$OPENSMART_RU_DIRECT_INPUT_FILE"
-          download_source "Khfdd whitelist" "$KHFDD_WHITELIST_URL" "$KHFDD_WHITELIST_INPUT_FILE"
-          download_source "WhisperOfTheSteppe RU direct domains" "$WHISPER_RU_DIRECT_URL" "$WHISPER_RU_DIRECT_INPUT_FILE"
 
           test -s "$INPUT_FILE"
           test -s source-geosite.dat.sha256sum
@@ -174,12 +165,9 @@ jobs:
           test -s "$GOLUKON_AVAILABLE_INPUT_FILE"
           test -s "$MOBILE_WHITELIST_INPUT_FILE"
           test -s "$DAVIDDT_RU_SUFFIX_INPUT_FILE"
+          test -s "$DMITRIY_ENRICH_INPUT_FILE"
           test -s "$W1ZARDZ_RU_DIRECT_INPUT_FILE"
           test -s "$SUPERTICO_DOMAINS_INPUT_FILE"
-          test -s "$KYORESUAS_RU_STANDARD_INPUT_FILE"
-          test -s "$OPENSMART_RU_DIRECT_INPUT_FILE"
-          test -s "$KHFDD_WHITELIST_INPUT_FILE"
-          test -s "$WHISPER_RU_DIRECT_INPUT_FILE"
           test -f "$LOCAL_RU_INPUT_FILE"
           test -f "$LOCAL_BLOCK_INPUT_FILE"
 
@@ -207,10 +195,8 @@ jobs:
           echo
           echo "Downloaded sources:"
           ls -lh "$INPUT_FILE" "$HYDRA_INPUT_FILE" "$GRIMBIRD_INPUT_FILE" "$MVR_INPUT_FILE" "$YULARZHI_INPUT_FILE" "$VPNYASHA_INPUT_FILE" "$KIRILL_INPUT_FILE" "$DIGNE_INPUT_FILE" "$DAVOYAN_LEGACY_INPUT_FILE" \
-            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" \
-            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" "$SUPERTICO_DOMAINS_INPUT_FILE" \
-            "$KYORESUAS_RU_STANDARD_INPUT_FILE" "$OPENSMART_RU_DIRECT_INPUT_FILE" "$KHFDD_WHITELIST_INPUT_FILE" \
-            "$WHISPER_RU_DIRECT_INPUT_FILE"
+            "$GOLUKON_AVAILABLE_INPUT_FILE" "$MOBILE_WHITELIST_INPUT_FILE" "$DAVIDDT_RU_SUFFIX_INPUT_FILE" "$DMITRIY_ENRICH_INPUT_FILE" \
+            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" "$SUPERTICO_DOMAINS_INPUT_FILE"
 
       # ------------------------------------------------------------
       # 5. Build RU category manifest from the current v2fly tree
@@ -498,6 +484,13 @@ jobs:
               return strings.ToLower(strings.TrimSpace(value))
           }
 
+          // GeoSite attributes such as @ads/@cn are metadata on the Domain
+          // protobuf object, not part of the domain value. Never serialize them
+          // and never allow an attribute marker to become part of a literal domain.
+          func hasAttributeMarker(value string) bool {
+              return strings.Contains(value, "@")
+          }
+
           func isRussianTLD(value string) bool {
               value = normalizeName(value)
               value = strings.TrimSuffix(value, ".")
@@ -724,7 +717,7 @@ jobs:
 
                   line = normalizeManualDomain(line)
 
-                  if line == "" || strings.ContainsAny(line, " \t:/\\[](){}|$") || isNumericOnly(line) {
+                  if line == "" || hasAttributeMarker(line) || strings.ContainsAny(line, " \t:/\\[](){}|$") || isNumericOnly(line) {
                       continue
                   }
 
@@ -795,7 +788,7 @@ jobs:
 
                   line = normalizeManualDomain(line)
 
-                  if line == "" || strings.ContainsAny(line, " \t:/\\[](){}|$") || isNumericOnly(line) {
+                  if line == "" || hasAttributeMarker(line) || strings.ContainsAny(line, " \t:/\\[](){}|$") || isNumericOnly(line) {
                       continue
                   }
 
@@ -898,104 +891,6 @@ jobs:
               return values, sourceLines, skippedRussianTLD, nil
           }
 
-          // Collect a positive-only category from a GeoSite protobuf source.
-          // Only the requested category is read; all other categories in the DAT
-          // (including proxy/block feeds) are ignored.
-          func collectNewPositiveGeoSiteCategory(
-              path string,
-              categoryName string,
-              baseRoots map[string]bool,
-          ) (values []string, sourceLines int, skippedRussianTLD int, convertedFull int, unsupported int, err error) {
-              list, err := loadGeoSite(path)
-              if err != nil {
-                  return nil, 0, 0, 0, 0, err
-              }
-
-              categoryName = normalizeName(categoryName)
-              var site *router.GeoSite
-              matches := 0
-
-              for _, candidate := range list.Entry {
-                  if candidate == nil {
-                      continue
-                  }
-                  if normalizeName(candidate.CountryCode) != categoryName {
-                      continue
-                  }
-                  matches++
-                  if site != nil {
-                      return nil, 0, 0, 0, 0, fmt.Errorf(
-                          "duplicate GeoSite category %s in %s",
-                          categoryName, path,
-                      )
-                  }
-                  site = candidate
-              }
-
-              if matches == 0 || site == nil {
-                  return nil, 0, 0, 0, 0, fmt.Errorf(
-                      "GeoSite category %s not found in %s",
-                      categoryName, path,
-                  )
-              }
-
-              sourceValues := make([]string, 0, len(site.Domain))
-              for _, domain := range site.Domain {
-                  if domain == nil {
-                      continue
-                  }
-
-                  sourceLines++
-
-                  switch domain.Type {
-                  case router.Domain_RootDomain:
-                  case router.Domain_Full:
-                      convertedFull++
-                  default:
-                      unsupported++
-                      continue
-                  }
-
-                  value := normalizeName(domain.Value)
-                  if value == "" {
-                      continue
-                  }
-                  if isRussianTLD(value) {
-                      skippedRussianTLD++
-                      continue
-                  }
-                  if !strings.Contains(value, ".") {
-                      continue
-                  }
-                  sourceValues = append(sourceValues, value)
-              }
-
-              sort.Slice(sourceValues, func(i, j int) bool {
-                  di := strings.Count(sourceValues[i], ".")
-                  dj := strings.Count(sourceValues[j], ".")
-                  if di != dj {
-                      return di < dj
-                  }
-                  return sourceValues[i] < sourceValues[j]
-              })
-
-              seen := make(map[string]bool)
-              for _, value := range sourceValues {
-                  if seen[value] {
-                      continue
-                  }
-                  seen[value] = true
-
-                  if isCoveredByRoots(value, baseRoots) {
-                      continue
-                  }
-
-                  values = append(values, value)
-              }
-
-              return values, sourceLines, skippedRussianTLD, convertedFull, unsupported, nil
-          }
-
           func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool, skipRussianTLD bool) (written, duplicates, removedRussian int) {
               for _, value := range values {
                   value = normalizeName(value)
@@ -1023,16 +918,16 @@ jobs:
           }
 
           func main() {
-              // 0=program, 1..26=input/output. Keep the indexes explicit because
+              // 0=program, 1..21=input/output. Keep the indexes explicit because
               // this command has many positional arguments and an off-by-one here
               // can overwrite an input file instead of producing the DAT.
-              const outputArg = 24
-              const reportArg = 23
+              const outputArg = 21
+              const reportArg = 20
 
               if len(os.Args) != outputArg+1 {
                   fmt.Fprintf(
                       os.Stderr,
-                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt w1zardz-ru-direct.txt supertico-domains.txt kyoresuas-ru-standard.txt opensmart-ru-direct.txt khfdd-whitelist.txt whisper-ru-direct.txt new-positive-report.txt output.dat\n",
+                      "usage: %s runetfreedom.dat hydra.dat grimbird.dat mvrvntn.dat yularzhi.dat vpnyasha.dat kirill.dat digne.dat davoyan-legacy.txt selected.txt hydra_append.txt local-ru.txt local-block.txt golukon-available.txt mobile-whitelist.txt daviddt-ru-suffix.txt dmitriy-enrich.txt w1zardz-ru-direct.txt supertico-domains.txt new-positive-report.txt output.dat\n",
                       os.Args[0],
                   )
                   os.Exit(2)
@@ -1065,20 +960,15 @@ jobs:
               }
 
               positiveExtras := []struct {
-                  name     string
-                  path     string
-                  kind     string
-                  category string
+                  name string
+                  path string
               }{
-                  {"golukon-ru-available-only-inside", os.Args[14], "text", ""},
-                  {"mobile-whitelist", os.Args[15], "text", ""},
-                  {"daviddt-ru-domain-suffix", os.Args[16], "text", ""},
-                  {"w1zardz-ru-direct-domains", os.Args[17], "text", ""},
-                  {"supertico-russian-websites", os.Args[18], "text", ""},
-                  {"kyoresuas-ru-standard", os.Args[19], "text", ""},
-                  {"opensmart-ru-direct-domains", os.Args[20], "text", ""},
-                  {"khfdd-whitelist", os.Args[21], "text", ""},
-                  {"whisper-ru-direct-domains", os.Args[22], "text", ""},
+                  {"golukon-ru-available-only-inside", os.Args[14]},
+                  {"mobile-whitelist", os.Args[15]},
+                  {"daviddt-ru-domain-suffix", os.Args[16]},
+                  {"dmitriy-ru-available-only-inside", os.Args[17]},
+                  {"w1zardz-ru-direct-domains", os.Args[18]},
+                  {"supertico-russian-websites", os.Args[19]},
               }
 
               manifest, err := loadManifest(os.Args[10])
@@ -1116,6 +1006,8 @@ jobs:
               localBlockDuplicateCount := 0
               removedCoveredBlockDomainCount := 0
               missingExternalCount := 0
+              sourceAttributeCount := 0
+              hydraAttributeCount := 0
 
               newPositiveReportPath := os.Args[reportArg]
               outputPath := os.Args[outputArg]
@@ -1161,6 +1053,7 @@ jobs:
                           }
 
                           sourceDomainCount++
+                          sourceAttributeCount += len(domain.Attribute)
 
                           switch domain.Type {
                           case router.Domain_RootDomain:
@@ -1174,6 +1067,9 @@ jobs:
                           value := normalizeName(domain.Value)
                           if value == "" {
                               continue
+                          }
+                          if hasAttributeMarker(value) {
+                              panic(fmt.Sprintf("attribute marker embedded in RU source domain value: %s", domain.Value))
                           }
 
                           if isRussianTLD(value) {
@@ -1294,8 +1190,6 @@ jobs:
               totalPositiveAdded := 0
               totalPositiveInput := 0
               totalPositiveTLD := 0
-              totalPositiveFullConverted := 0
-              totalPositiveUnsupported := 0
 
               // Starts with the pre-enrichment RU coverage. As positive sources are
               // merged, newly added root domains also cover their child hostnames.
@@ -1305,28 +1199,7 @@ jobs:
               }
 
               for _, extra := range positiveExtras {
-                  var (
-                      values        []string
-                      sourceLines   int
-                      skippedTLD    int
-                      convertedFull int
-                      unsupported  int
-                      err           error
-                  )
-
-                  switch extra.kind {
-                  case "text":
-                      values, sourceLines, skippedTLD, err = collectNewPositiveSource(extra.path, baseRoots)
-                  case "geosite":
-                      values, sourceLines, skippedTLD, convertedFull, unsupported, err = collectNewPositiveGeoSiteCategory(
-                          extra.path,
-                          extra.category,
-                          baseRoots,
-                      )
-                  default:
-                      err = fmt.Errorf("unknown positive source kind %q", extra.kind)
-                  }
-
+                  values, sourceLines, skippedTLD, err := collectNewPositiveSource(extra.path, baseRoots)
                   if err != nil {
                       panic(fmt.Errorf("failed positive source %s: %w", extra.name, err))
                   }
@@ -1359,21 +1232,13 @@ jobs:
                   totalPositiveNew += len(values)
                   totalPositiveAdded += addedCount
                   totalPositiveTLD += skippedTLD
-                  totalPositiveFullConverted += convertedFull
-                  totalPositiveUnsupported += unsupported
-                  fmt.Fprintf(
-                      report,
-                      "# source_lines=%d new_vs_base=%d added_to_final_before_prune=%d skipped_ru_tld=%d full_to_root=%d unsupported=%d\n",
-                      sourceLines, len(values), addedCount, skippedTLD, convertedFull, unsupported,
-                  )
+                  fmt.Fprintf(report, "# source_lines=%d new_vs_base=%d added_to_final_before_prune=%d skipped_ru_tld=%d\n", sourceLines, len(values), addedCount, skippedTLD)
               }
 
               fmt.Fprintf(report, "\nTOTAL positive source lines: %d\n", totalPositiveInput)
               fmt.Fprintf(report, "TOTAL new vs base RU: %d\n", totalPositiveNew)
               fmt.Fprintf(report, "TOTAL added to final before prune: %d\n", totalPositiveAdded)
               fmt.Fprintf(report, "TOTAL skipped RU TLD: %d\n", totalPositiveTLD)
-              fmt.Fprintf(report, "TOTAL positive Full->RootDomain: %d\n", totalPositiveFullConverted)
-              fmt.Fprintf(report, "TOTAL positive unsupported rules: %d\n", totalPositiveUnsupported)
 
               var pruned int
               ruCategory.Domain, pruned = pruneCoveredRootDomains(ruCategory.Domain)
@@ -1450,9 +1315,13 @@ jobs:
                           continue
                       }
 
+                      hydraAttributeCount += len(domain.Attribute)
                       val := normalizeName(domain.Value)
                       if val == "" {
                           continue
+                      }
+                      if hasAttributeMarker(val) {
+                          panic(fmt.Sprintf("attribute marker embedded in Hydra source domain value: %s", domain.Value))
                       }
 
                       domainType := router.Domain_RootDomain
@@ -1530,12 +1399,12 @@ jobs:
               fmt.Printf("Full -> RootDomain (Hydra): %d\n", appendedConvertedFullToRootCount)
               fmt.Printf("Removed unsupported Hydra types: %d\n", appendedUnsupportedTypeCount)
               fmt.Printf("Covered Hydra domains removed: %d\n", appendedCoveredDomainCount)
+              fmt.Printf("Source attributes encountered: %d\n", sourceAttributeCount)
+              fmt.Printf("Hydra attributes encountered : %d\n", hydraAttributeCount)
               fmt.Printf("Positive source lines   : %d\n", totalPositiveInput)
               fmt.Printf("Positive NEW vs base RU : %d\n", totalPositiveNew)
               fmt.Printf("Positive added to final : %d\n", totalPositiveAdded)
               fmt.Printf("Positive skipped RU TLD : %d\n", totalPositiveTLD)
-              fmt.Printf("Positive Full->Root     : %d\n", totalPositiveFullConverted)
-              fmt.Printf("Positive unsupported    : %d\n", totalPositiveUnsupported)
               fmt.Printf("Positive delta report   : %s\n", newPositiveReportPath)
               fmt.Printf("Final categories        : %d\n", len(result.Entry))
               fmt.Printf("Final DAT size          : %d bytes\n", len(outputData))
@@ -1544,8 +1413,6 @@ jobs:
           EOF
 
           cd domain-list-community
-          echo "=== Formatting RU filter ==="
-          gofmt -w ./tools/ru-geosite-filter/main.go
           echo "=== Building RU filter ==="
           go build -o /tmp/ru-geosite-filter ./tools/ru-geosite-filter
           echo "Filter compiled successfully."
@@ -1581,12 +1448,9 @@ jobs:
             "$GOLUKON_AVAILABLE_INPUT_FILE" \
             "$MOBILE_WHITELIST_INPUT_FILE" \
             "$DAVIDDT_RU_SUFFIX_INPUT_FILE" \
+            "$DMITRIY_ENRICH_INPUT_FILE" \
             "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
             "$SUPERTICO_DOMAINS_INPUT_FILE" \
-            "$KYORESUAS_RU_STANDARD_INPUT_FILE" \
-            "$OPENSMART_RU_DIRECT_INPUT_FILE" \
-            "$KHFDD_WHITELIST_INPUT_FILE" \
-            "$WHISPER_RU_DIRECT_INPUT_FILE" \
             "$NEW_SOURCES_REPORT_FILE" \
             "$OUTPUT_FILE"
 
@@ -1739,6 +1603,9 @@ jobs:
                   if value == "" {
                       panic("RU contains empty domain value")
                   }
+                  if hasAttributeMarker(value) {
+                      panic(fmt.Sprintf("attribute marker leaked into RU value: %s", domain.Value))
+                  }
 
                   key := domainKey(domain)
                   if seenRU[key] {
@@ -1812,6 +1679,9 @@ jobs:
                   if value == "" {
                       panic("BLOCK contains empty domain value")
                   }
+                  if hasAttributeMarker(value) {
+                      panic(fmt.Sprintf("attribute marker leaked into BLOCK value: %s", domain.Value))
+                  }
                   key := domainKey(domain)
                   if seenBlock[key] {
                       panic(fmt.Sprintf("duplicate domain in BLOCK: %s", domain.Value))
@@ -1879,6 +1749,9 @@ jobs:
                       if value == "" {
                           panic(fmt.Sprintf("%s contains empty domain value", category))
                       }
+                      if hasAttributeMarker(value) {
+                          panic(fmt.Sprintf("attribute marker leaked into %s value: %s", category, domain.Value))
+                      }
 
                       if domain.Type == router.Domain_Full {
                           panic(fmt.Sprintf(
@@ -1925,16 +1798,15 @@ jobs:
               fmt.Printf("Categories: %d (RU + BLOCK + 16 Hydra)\n", len(list.Entry))
               fmt.Printf("RU rules:   %d\n", len(ru.Domain))
               fmt.Printf("BLOCK rules: %d\n", len(block.Domain))
-              fmt.Println("Attributes (@ads/@cn): 0 (strictly verified across all categories)")
+              fmt.Println("Attributes (@ads/@cn/etc.): 0 in output; Domain.Attribute and @ markers in values strictly verified")
           }
           EOF
 
-          gofmt -w ./tools/ru-geosite-filter/validate.go
           go run ./tools/ru-geosite-filter/validate.go "$GITHUB_WORKSPACE/$OUTPUT_FILE"
           test -s "$GITHUB_WORKSPACE/$NEW_SOURCES_REPORT_FILE"
 
       # ------------------------------------------------------------
-      # 10. Verify and publish GitHub Release
+      # 10. Publish GitHub Release
       # ------------------------------------------------------------
       - name: Verify release artifacts
         shell: bash
