@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v9)
+name: Build Ultimate Light RU Geosite (Optimized v10)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -554,15 +554,15 @@ jobs:
 
           // RU-zone compaction policy.
           //
-          // These roots are written to the RU category as RootDomain rules, i.e. the
-          // Xray routing equivalent of domain:<root>. Both ASCII/Punycode and the
-          // corresponding Unicode U-label are recognized on input, so e.g. foo.рф,
-          // foo.xn--p1ai and nested subdomains all collapse to the same compact root.
+          // TLD roots are the actual Russian / Russian-language top-level zones.
+          // Service roots are names that we deliberately compact for ecosystem
+          // coverage even when the label is not currently delegated as a TLD.
+          // All of these are serialized as RootDomain rules, i.e. domain:<root>.
           //
-          // IMPORTANT: plain .org/.com/.net are NOT in this list. They are global TLDs.
-          // The Cyrillic .орг/.ком zones are separate TLDs and may be compacted because
-          // they are explicitly part of the configured Russian-language zone policy.
-          var compactRussianRoots = []string{
+          // IMPORTANT: plain .org/.com/.net are NOT in the TLD list. They are global
+          // TLDs and must remain concrete service domains (example.org, sberbank.com,
+          // etc.) rather than becoming global roots.
+          var compactRussianTLDRoots = []string{
               "ru",             // .ru
               "su",             // .su
               "xn--p1ai",      // .рф
@@ -575,13 +575,21 @@ jobs:
               "xn--j1aef",     // .ком
               "xn--80aswg",    // .сайт
               "xn--80asehdb",  // .онлайн
+              "yandex",        // .yandex
+          }
+
+          // Service roots are compacted intentionally even though they are not
+          // currently part of the DNS root zone. This prepares the RU pool for the
+          // Sber ecosystem / future .sber naming without treating "sber" as a TLD.
+          var compactRussianServiceRoots = []string{
+              "sber",          // service root / future .sber coverage
           }
 
           var russianTLDLabels = func() map[string]bool {
               m := make(map[string]bool)
 
-              // Canonical ACE labels used in output.
-              for _, root := range compactRussianRoots {
+              // Canonical ACE/ASCII labels used in output.
+              for _, root := range compactRussianTLDRoots {
                   m[root] = true
               }
 
@@ -605,6 +613,7 @@ jobs:
 
           // isRussianTLD reports whether value is exactly one configured RU-family
           // TLD or is below one. The last-label check also handles Unicode U-labels.
+          // Service roots (for example sber) are deliberately excluded here.
           func isRussianTLD(value string) bool {
               value = strings.TrimSuffix(strings.TrimSpace(normalizeName(value)), ".")
               if value == "" {
@@ -620,8 +629,39 @@ jobs:
 
           func isCompactRussianRoot(value string) bool {
               value = normalizeName(value)
-              for _, root := range compactRussianRoots {
+              for _, root := range compactRussianTLDRoots {
                   if value == root {
+                      return true
+                  }
+              }
+              for _, root := range compactRussianServiceRoots {
+                  if value == root {
+                      return true
+                  }
+              }
+              return false
+          }
+
+          func isCompactRussianServiceRoot(value string) bool {
+              value = normalizeName(value)
+              for _, root := range compactRussianServiceRoots {
+                  if value == root {
+                      return true
+                  }
+              }
+              return false
+          }
+
+          // isCoveredByCompactServiceRoot reports whether value equals or is below a
+          // configured service root such as sber. These domains are removed from the
+          // concrete RU pool because the service root will be added explicitly later.
+          func isCoveredByCompactServiceRoot(value string) bool {
+              value = normalizeName(value)
+              if value == "" {
+                  return false
+              }
+              for _, root := range compactRussianServiceRoots {
+                  if value == root || strings.HasSuffix(value, "."+root) {
                       return true
                   }
               }
@@ -1077,6 +1117,7 @@ jobs:
               written              int
               duplicates           int
               removedRussian       int
+              removedServiceRoot   int
               removedBare          int
               removedInvalid       int
           }
@@ -1090,6 +1131,10 @@ jobs:
                   }
                   if isRussianTLD(value) {
                       stats.removedRussian++
+                      continue
+                  }
+                  if isCoveredByCompactServiceRoot(value) {
+                      stats.removedServiceRoot++
                       continue
                   }
                   if !strings.Contains(value, ".") {
@@ -1107,6 +1152,9 @@ jobs:
                   stats.written++
               }
 
+              if stats.removedServiceRoot > 0 {
+                  fmt.Printf("NOTE: %s: removed domains covered by compact service roots: %d\n", label, stats.removedServiceRoot)
+              }
               if stats.removedBare > 0 {
                   fmt.Printf("NOTE: %s: removed bare single-label rules: %d\n", label, stats.removedBare)
               }
@@ -1116,10 +1164,10 @@ jobs:
               return stats
           }
 
-          func collectNewPositiveSource(path, label string, baseRoots map[string]bool) (values []string, sourceLines int, skippedRussianTLD int, skippedBare int, skippedInvalid int, err error) {
+          func collectNewPositiveSource(path, label string, baseRoots map[string]bool) (values []string, sourceLines int, skippedRussianTLD int, skippedServiceRoot int, skippedBare int, skippedInvalid int, err error) {
               sourceValues, err := loadDomainList(path, true, label)
               if err != nil {
-                  return nil, 0, 0, 0, 0, err
+                  return nil, 0, 0, 0, 0, 0, err
               }
 
               sort.Slice(sourceValues, func(i, j int) bool {
@@ -1135,6 +1183,10 @@ jobs:
                   sourceLines++
                   if isRussianTLD(value) {
                       skippedRussianTLD++
+                      continue
+                  }
+                  if isCoveredByCompactServiceRoot(value) {
+                      skippedServiceRoot++
                       continue
                   }
                   if !strings.Contains(value, ".") {
@@ -1226,6 +1278,7 @@ jobs:
               var (
                   sourceCategoryCount, sourceDomainCount, writtenDomainCount     int
                   duplicateDomainCount, removedRussianDomainCount                int
+                  removedServiceRootDomainCount                                  int
                   removedUnsupportedTypeCount, convertedFullToRootCount          int
                   removedCoveredDomainCount                                      int
                   localBlockDomainCount, removedCoveredBlockDomainCount           int
@@ -1236,7 +1289,8 @@ jobs:
                   removedBareDomainCount, removedInvalidDomainCount              int
                   totalPositiveInput, totalPositiveNew, totalPositiveAdded       int
                   totalPositiveTLD, totalPositiveBare, totalPositiveInvalid       int
-                  compactRootsAdded                                                int
+                  totalPositiveServiceRoot                                          int
+                  compactTLDRootsAdded, compactServiceRootsAdded                    int
               )
 
               manifestSources := make([]string, 0, len(manifest))
@@ -1298,6 +1352,10 @@ jobs:
                               removedRussianDomainCount++
                               continue
                           }
+                          if isCoveredByCompactServiceRoot(value) {
+                              removedServiceRootDomainCount++
+                              continue
+                          }
                           if !strings.Contains(value, ".") {
                               removedBareDomainCount++
                               continue
@@ -1348,6 +1406,7 @@ jobs:
               writtenDomainCount += legacyStats.written
               duplicateDomainCount += legacyStats.duplicates
               removedRussianDomainCount += legacyStats.removedRussian
+              removedServiceRootDomainCount += legacyStats.removedServiceRoot
               removedBareDomainCount += legacyStats.removedBare
               removedInvalidDomainCount += legacyStats.removedInvalid
 
@@ -1355,6 +1414,7 @@ jobs:
               writtenDomainCount += localStats.written
               duplicateDomainCount += localStats.duplicates
               removedRussianDomainCount += localStats.removedRussian
+              removedServiceRootDomainCount += localStats.removedServiceRoot
               removedBareDomainCount += localStats.removedBare
               removedInvalidDomainCount += localStats.removedInvalid
 
@@ -1371,14 +1431,19 @@ jobs:
                   localBlockDomainCount++
               }
 
-              // Compact every configured RU-family TLD. This is deliberately broader
-              // than only .ru/.su/.рф because the configured goal is to make every
-              // domain in these Russian-language / Russian-region zones resolve to a
-              // single RootDomain rule rather than keep thousands of individual names.
-              for _, value := range compactRussianRoots {
+              // Compact every configured RU-family TLD, then every explicitly
+              // configured Russian service root. Both are represented by one
+              // RootDomain rule so thousands of concrete child names collapse.
+              for _, value := range compactRussianTLDRoots {
                   if addRoot(ruCategory, globalSeen, value) {
                       writtenDomainCount++
-                      compactRootsAdded++
+                      compactTLDRootsAdded++
+                  }
+              }
+              for _, value := range compactRussianServiceRoots {
+                  if addRoot(ruCategory, globalSeen, value) {
+                      writtenDomainCount++
+                      compactServiceRootsAdded++
                   }
               }
 
@@ -1391,7 +1456,7 @@ jobs:
               fmt.Fprintln(report, "# Positive-only RU source delta")
               fmt.Fprintln(report, "# NEW = source domain not covered by the pre-enrichment RU root-domain set")
               fmt.Fprintln(report, "# refilter/block/negative feeds are intentionally excluded")
-              fmt.Fprintln(report, "# Russian-family TLDs are compacted to configured RootDomain roots")
+              fmt.Fprintln(report, "# Russian-family TLDs and configured service roots are compacted to RootDomain roots")
               fmt.Fprintln(report)
 
               baseRoots := make(map[string]bool)
@@ -1407,7 +1472,7 @@ jobs:
               }
 
               for _, extra := range positiveExtras {
-                  values, sourceLines, skippedTLD, skippedBare, skippedInvalid, err := collectNewPositiveSource(extra.path, extra.name, baseRoots)
+                  values, sourceLines, skippedTLD, skippedService, skippedBare, skippedInvalid, err := collectNewPositiveSource(extra.path, extra.name, baseRoots)
                   if err != nil {
                       fatalf("failed positive source %s: %v", extra.name, err)
                   }
@@ -1433,15 +1498,17 @@ jobs:
                   totalPositiveNew += len(values)
                   totalPositiveAdded += addedCount
                   totalPositiveTLD += skippedTLD
+                  totalPositiveServiceRoot += skippedService
                   totalPositiveBare += skippedBare
                   totalPositiveInvalid += skippedInvalid
-                  fmt.Fprintf(report, "# source_lines=%d new_vs_base=%d added_to_final_before_prune=%d skipped_ru_tld=%d skipped_bare=%d skipped_invalid=%d\n", sourceLines, len(values), addedCount, skippedTLD, skippedBare, skippedInvalid)
+                  fmt.Fprintf(report, "# source_lines=%d new_vs_base=%d added_to_final_before_prune=%d skipped_ru_tld=%d skipped_service_root=%d skipped_bare=%d skipped_invalid=%d\n", sourceLines, len(values), addedCount, skippedTLD, skippedService, skippedBare, skippedInvalid)
               }
 
               fmt.Fprintf(report, "\nTOTAL positive source lines: %d\n", totalPositiveInput)
               fmt.Fprintf(report, "TOTAL new vs base RU: %d\n", totalPositiveNew)
               fmt.Fprintf(report, "TOTAL added to final before prune: %d\n", totalPositiveAdded)
               fmt.Fprintf(report, "TOTAL skipped RU TLD: %d\n", totalPositiveTLD)
+              fmt.Fprintf(report, "TOTAL skipped compact service root: %d\n", totalPositiveServiceRoot)
               fmt.Fprintf(report, "TOTAL skipped bare: %d\n", totalPositiveBare)
               fmt.Fprintf(report, "TOTAL skipped invalid: %d\n", totalPositiveInvalid)
 
@@ -1555,12 +1622,13 @@ jobs:
 
               fmt.Println()
               fmt.Println("========================================")
-              fmt.Println("RU LIGHT GEOSITE BUILD v9")
+              fmt.Println("RU LIGHT GEOSITE BUILD v10")
               fmt.Println("========================================")
               fmt.Printf("Source category matches       : %d\n", sourceCategoryCount)
               fmt.Printf("Source domain rules           : %d\n", sourceDomainCount)
               fmt.Printf("Written domain rules          : %d (before pruning)\n", writtenDomainCount)
               fmt.Printf("Removed configured RU TLD     : %d\n", removedRussianDomainCount)
+              fmt.Printf("Removed compact service domains : %d\n", removedServiceRootDomainCount)
               fmt.Printf("Removed bare single-label     : %d\n", removedBareDomainCount)
               fmt.Printf("Removed invalid domains      : %d\n", removedInvalidDomainCount)
               fmt.Printf("Removed regex/keyword        : %d\n", removedUnsupportedTypeCount)
@@ -1573,7 +1641,8 @@ jobs:
               fmt.Printf("Local BLOCK domains           : %d\n", localBlockDomainCount)
               fmt.Printf("Local BLOCK duplicates        : %d\n", localBlockDuplicateCount)
               fmt.Printf("Covered BLOCK domains removed : %d\n", removedCoveredBlockDomainCount)
-              fmt.Printf("Compact RU roots added        : %d/%d\n", compactRootsAdded, len(compactRussianRoots))
+              fmt.Printf("Compact RU TLD roots added    : %d/%d\n", compactTLDRootsAdded, len(compactRussianTLDRoots))
+              fmt.Printf("Compact service roots added    : %d/%d\n", compactServiceRootsAdded, len(compactRussianServiceRoots))
               fmt.Printf("Appended Hydra rules          : %d\n", appendedRuleCount)
               fmt.Printf("Hydra duplicates removed     : %d\n", appendedDuplicateCount)
               fmt.Printf("Full -> RootDomain (Hydra)    : %d\n", appendedConvertedFullToRootCount)
@@ -1585,6 +1654,7 @@ jobs:
               fmt.Printf("Positive NEW vs base RU      : %d\n", totalPositiveNew)
               fmt.Printf("Positive added to final      : %d\n", totalPositiveAdded)
               fmt.Printf("Positive skipped RU TLD       : %d\n", totalPositiveTLD)
+              fmt.Printf("Positive skipped service root : %d\n", totalPositiveServiceRoot)
               fmt.Printf("Positive skipped bare         : %d\n", totalPositiveBare)
               fmt.Printf("Positive skipped invalid      : %d\n", totalPositiveInvalid)
               fmt.Printf("Positive delta report         : %s\n", reportPath)
@@ -1594,8 +1664,12 @@ jobs:
               fmt.Printf("Final DAT size                : %d bytes\n", len(outputData))
               fmt.Printf("Output categories             : RU + BLOCK + %d Hydra categories (clean attributes)\n", len(hydraAppendCategories))
               fmt.Println()
-              fmt.Println("Configured compact RU-family roots:")
-              for _, root := range compactRussianRoots {
+              fmt.Println("Configured compact RU-family TLD roots:")
+              for _, root := range compactRussianTLDRoots {
+                  fmt.Printf("  domain:%s\n", root)
+              }
+              fmt.Println("Configured compact RU service roots:")
+              for _, root := range compactRussianServiceRoots {
                   fmt.Printf("  domain:%s\n", root)
               }
           }
@@ -1715,30 +1789,46 @@ jobs:
 
               validateRules("RU", ru.Domain, false)
 
-              compact := make(map[string]bool, len(compactRussianRoots))
-              for _, root := range compactRussianRoots {
-                  compact[root] = false
+              compactTLD := make(map[string]bool, len(compactRussianTLDRoots))
+              for _, root := range compactRussianTLDRoots {
+                  compactTLD[root] = false
+              }
+
+              compactService := make(map[string]bool, len(compactRussianServiceRoots))
+              for _, root := range compactRussianServiceRoots {
+                  compactService[root] = false
               }
 
               for _, domain := range ru.Domain {
                   value := normalizeName(domain.Value)
                   if isRussianTLD(value) {
-                      if _, ok := compact[value]; !ok {
+                      if _, ok := compactTLD[value]; !ok {
                           fatalf("uncompacted Russian-family TLD leaked into RU: %s", domain.Value)
                       }
                       if domain.Type != router.Domain_RootDomain {
                           fatalf("compact Russian-family TLD is not RootDomain: %s", domain.Value)
                       }
-                      compact[value] = true
+                      compactTLD[value] = true
+                  }
+                  if isCompactRussianServiceRoot(value) {
+                      if domain.Type != router.Domain_RootDomain {
+                          fatalf("compact Russian service root is not RootDomain: %s", domain.Value)
+                      }
+                      compactService[value] = true
                   }
                   if !strings.Contains(value, ".") && !isCompactRussianRoot(value) {
-                      fatalf("bare non-TLD rule leaked into RU: %s", domain.Value)
+                      fatalf("bare non-compact rule leaked into RU: %s", domain.Value)
                   }
               }
 
-              for root, ok := range compact {
+              for root, ok := range compactTLD {
                   if !ok {
                       fatalf("RU missing compact TLD root: %s", root)
+                  }
+              }
+              for root, ok := range compactService {
+                  if !ok {
+                      fatalf("RU missing compact service root: %s", root)
                   }
               }
 
@@ -1768,9 +1858,10 @@ jobs:
               fmt.Printf("Categories: %d (RU + BLOCK + %d Hydra)\n", len(list.Entry), len(expectedHydra))
               fmt.Printf("RU rules:   %d\n", len(ru.Domain))
               fmt.Printf("BLOCK rules: %d\n", len(block.Domain))
-              fmt.Printf("Compact RU-family roots: %d\n", len(compactRussianRoots))
+              fmt.Printf("Compact RU-family TLD roots: %d\n", len(compactRussianTLDRoots))
+              fmt.Printf("Compact RU service roots: %d\n", len(compactRussianServiceRoots))
               fmt.Println("Attributes (@ads/@cn/etc.): 0 in output")
-              fmt.Println("RU policy: Russian-family TLDs are represented only by compact RootDomain roots")
+              fmt.Println("RU policy: configured Russian-family TLDs and service roots are represented only by compact RootDomain roots")
           }
           EOF
 
@@ -1804,12 +1895,25 @@ jobs:
                   "service.сайт",
                   "service.xn--80asehdb",
                   "service.онлайн",
+                  "service.yandex",
               }
 
               for _, domain := range cases {
                   if !isRussianTLD(domain) {
                       t.Fatalf("expected Russian-family TLD: %q", domain)
                   }
+              }
+          }
+
+          func TestSberIsCompactServiceRootButNotRussianTLD(t *testing.T) {
+              if isRussianTLD("service.sber") {
+                  t.Fatalf("sber must not be classified as a TLD")
+              }
+              if !isCoveredByCompactServiceRoot("service.sber") {
+                  t.Fatalf("service.sber must be covered by compact service root sber")
+              }
+              if !isCompactRussianRoot("sber") || !isCompactRussianServiceRoot("sber") {
+                  t.Fatalf("sber must be configured as a compact service root")
               }
           }
 
@@ -1867,13 +1971,51 @@ jobs:
               }
           }
 
+          func TestRequiredCompactRootsArePresent(t *testing.T) {
+              required := map[string]bool{
+                  "ru": false,
+                  "su": false,
+                  "xn--p1ai": false,
+                  "moscow": false,
+                  "xn--80adxhks": false,
+                  "tatar": false,
+                  "xn--p1acf": false,
+                  "xn--d1acj3b": false,
+                  "xn--80asehdb": false,
+                  "xn--80aswg": false,
+                  "xn--c1avg": false,
+                  "xn--j1aef": false,
+                  "yandex": false,
+                  "sber": false,
+              }
+              for _, root := range compactRussianTLDRoots {
+                  required[root] = true
+              }
+              for _, root := range compactRussianServiceRoots {
+                  required[root] = true
+              }
+              for root, ok := range required {
+                  if !ok {
+                      t.Fatalf("required compact root missing from configuration: %s", root)
+                  }
+              }
+          }
+
           func TestCompactRootsAreCanonicalACE(t *testing.T) {
-              for _, root := range compactRussianRoots {
+              for _, root := range compactRussianTLDRoots {
                   if !isValidDomain(root) {
-                      t.Fatalf("configured compact root is not valid: %q", root)
+                      t.Fatalf("configured compact TLD root is not valid: %q", root)
                   }
                   if !isCompactRussianRoot(root) {
-                      t.Fatalf("root not recognized as compact root: %q", root)
+                      t.Fatalf("TLD root not recognized as compact root: %q", root)
+                  }
+              }
+              for _, root := range compactRussianServiceRoots {
+                  if !isValidDomain(root) {
+                      t.Fatalf("configured compact service root is not valid: %q", root)
+                  }
+                  if !isCompactRussianRoot(root) || !isCompactRussianServiceRoot(root) {
+                      t.Fatalf("service root not recognized as compact root: %q", root)
                   }
               }
           }
