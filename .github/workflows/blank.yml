@@ -1202,7 +1202,7 @@ jobs:
                   }
                   values = append(values, value)
               }
-              return values, sourceLines, skippedRussianTLD, skippedBare, skippedInvalid, nil
+              return values, sourceLines, skippedRussianTLD, skippedServiceRoot, skippedBare, skippedInvalid, nil
           }
 
           func runBuild(args []string) {
