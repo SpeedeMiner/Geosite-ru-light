@@ -49,3 +49,8 @@ domain:tracking.ott.yandex.net
 domain:wcm.weborama-tech.ru
 domain:web-static.mindbox.ru
 domain:xl-ads.co
+domain:beacons.gvt2.com
+domain:location.services.mozilla.com
+domain:gs-loc.apple.com
+domain:ls.apple.com
+domain:api.lbs.yandex.net
