@@ -1,0 +1,16 @@
+hydra|apple
+hydra|epicgames
+hydra|escapefromtarkov
+hydra|faceit
+hydra|github
+hydra|google-deepmind
+hydra|google-play
+hydra|microsoft
+hydra|pinterest
+hydra|riot
+hydra|steam
+hydra|telegram
+hydra|twitch
+hydra|twitch-ads
+hydra|youtube
+hydra|win-spy
