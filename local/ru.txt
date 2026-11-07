@@ -70,3 +70,16 @@ domain:ipv6-test.com
 domain:ipv6test.google.com
 domain:ip.test.azure.msft.net
 domain:webipv6tester.cern.ch
+domain:dawhois.com
+domain:ip.circl.lu
+domain:dnswatch.info
+domain:ip-address.cc
+domain:mycamip.com
+domain:yougetsignal.com
+domain:whatismybrowser.com
+domain:ipaddressapi.com
+domain:ipaddressguide.com
+domain:ipaddress.is
+domain:deviceinfo.me
+domain:myip.privex.io
+domain:address.computer
