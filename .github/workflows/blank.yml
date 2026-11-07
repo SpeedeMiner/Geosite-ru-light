@@ -264,8 +264,6 @@ jobs:
 
           excluded = {
               "private",
-              "category-ip-geo-detect",
-              "ipip",
               "tld-ru",
               "category-geoblock-ru",
           }
@@ -327,6 +325,9 @@ jobs:
                           visit(target)
 
           visit("category-ru")
+          # Explicit root: category-ru does not include this upstream category.
+          # Its include dependencies are merged through the same RU manifest path.
+          visit("category-ip-geo-detect")
 
           for path in sorted(DATA.iterdir()):
               if (
