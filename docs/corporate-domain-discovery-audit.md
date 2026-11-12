@@ -162,3 +162,30 @@ smaller-than-group-count budget.
 Each new HEAD must pass offline Python tests and semantic Go checks in CI
 before considering the implementation verified. This is not a justification
 to add discovered names automatically to RU-DIRECT or to publish v11.2.
+
+
+## Primary-source seed expansion (2026-11-13)
+
+Four first-party HTTPS endpoints were added to the versioned
+`data/corporate_discovery_seeds.tsv` source set (19 -> **23 seeds**).
+Each was independently corroborated by the service operator's own docs:
+
+| Seed | Corporate group | Primary operator reference |
+|---|---|---|
+| `disk.yandex.ru` | Yandex | [Yandex 360 network settings](https://yandex.ru/support/yandex-360/business/admin/ru/network-settings) |
+| `api.disk.yandex.net` | Yandex | [Yandex 360 network settings](https://yandex.ru/support/yandex-360/business/admin/ru/network-settings) |
+| `seller.ozon.ru` | Ozon | [Ozon seller platform agreement](https://docs.ozon.ru/legal/partners/service-provision/ozonology/agreement/) |
+| `api.selectel.ru` | Selectel | [Selectel API authorization docs](https://docs.selectel.ru/api/authorization/) |
+
+All four are **seed-only** sources, not proposed additions to the generated
+RU database. Candidate hosts found in their SAN, CSP or HTML are still subject
+to existing semantic DAT, BLOCK, 4PDA, hold/reject and exact-host reviews.
+Any seed HTTPS/TLS failure is recorded as an incomplete observation, not
+automatically bypassed. No authentication or protected APIs are called:
+the scanner only makes the same bounded public `GET /` as for existing seeds.
+The number of IP-first probes remains at 12, regardless of seed count.
+
+A mandatory offline regression now loads the real seed manifest, verifies
+the four expected host/group mappings and enforces uniqueness/budget.
+Live audit results must be read from the CI artifacts; inclusion in this
+file is not a claim that DNS, HTTPS or evidence collection succeeded.
