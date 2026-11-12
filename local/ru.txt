@@ -102,7 +102,6 @@ domain:alfabank.com
 domain:vtb.com
 domain:kaspersky.com
 domain:kaspersky-labs.com
-domain:ksn-crypto-info.com
 domain:ozon.com
 domain:2gis.com
 # Official 2GIS business microsites: https://law.2gis.kz/microsite/ru
@@ -115,3 +114,8 @@ domain:vk.com
 domain:vk.me
 domain:userapi.com
 domain:mycdn.me
+
+# ecom.tech (formerly Samokat.tech), official company transition:
+# https://samokat.tech/blog/name
+domain:samokat.tech
+domain:ecom.tech
