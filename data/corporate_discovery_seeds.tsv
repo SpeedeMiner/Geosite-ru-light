@@ -1,0 +1,21 @@
+# GROUP<TAB>FIRST_PARTY_SEED_HOST. Curated, fixed HTTPS targets only.
+# Only public IPs are contacted. No discovery candidate is contacted.
+Yandex	yandex.ru
+Yandex	cloud.yandex.ru
+VK/Mail.ru	vk.com
+Kaspersky	kaspersky.ru
+Wildberries	wildberries.ru
+Ozon	ozon.ru
+Sberbank	sberbank.ru
+T-Bank	tbank.ru
+Alfa-Bank	alfabank.ru
+VTB	vtb.ru
+Avito	avito.ru
+2GIS	2gis.ru
+SKB Kontur	kontur.ru
+Gazprombank	gpb.ru
+HeadHunter	hh.ru
+Habr	habr.com
+Tilda	tilda.cc
+1C	1cfresh.com
+Selectel	selectel.ru
