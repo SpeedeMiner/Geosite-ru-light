@@ -57,12 +57,41 @@ type externalCandidate struct {
 type externalInventory struct {
   Domains map[string]externalCandidate `json:"domains"`
 }
-func reportExternalCandidates(input, path string, categories map[string]rules) error {
+type reviewDecision struct {status string; rationale string}
+func loadReviewDecisions(path string) (map[string]reviewDecision,error) {
+  data,err:=os.ReadFile(path);if err!=nil{return nil,err}
+  reviews:=make(map[string]reviewDecision)
+  for n,line:=range strings.Split(string(data),"\n"){
+    line=strings.TrimSpace(line)
+    if line==""||strings.HasPrefix(line,"#"){continue}
+    fields:=strings.SplitN(line,"\t",3)
+    if len(fields)!=3{return nil,fmt.Errorf("invalid review row %d",n+1)}
+    domain:=strings.ToLower(strings.TrimSpace(fields[0]))
+    decision:=strings.TrimSpace(fields[1])
+    rationale:=strings.TrimSpace(fields[2])
+    if domain==""||strings.ContainsAny(domain," |/")||rationale==""{return nil,fmt.Errorf("invalid review domain/evidence at row %d",n+1)}
+    if decision!="reject"&&decision!="hold"&&decision!="confirmed"{return nil,fmt.Errorf("invalid decision at row %d: %s",n+1,decision)}
+    if _,ok:=reviews[domain];ok{return nil,fmt.Errorf("duplicate review: %s",domain)}
+    reviews[domain]=reviewDecision{decision,rationale}
+  }
+  return reviews,nil
+}
+func reportExternalCandidates(input, path, reviewPath string, categories map[string]rules) error {
   contents, err:=os.ReadFile(input);if err!=nil{return err}
   var inventory externalInventory
   if err:=json.Unmarshal(contents,&inventory);err!=nil{return err}
   if len(inventory.Domains)==0{return fmt.Errorf("empty candidate inventory")}
+  reviews,err:=loadReviewDecisions(reviewPath);if err!=nil{return err}
   ru:=categories["RU"]; block:=categories["BLOCK"]
+  for domain,review:=range reviews {
+    isRU:=covered(ru,domain,false)
+    if review.status=="reject"&&isRU{
+      return fmt.Errorf("rejected external domain %s is unexpectedly covered by RU",domain)
+    }
+    if review.status=="confirmed"&&!isRU{
+      return fmt.Errorf("confirmed candidate %s is missing from RU",domain)
+    }
+  }
   names:=make([]string,0,len(inventory.Domains))
   for domain:=range inventory.Domains{names=append(names,domain)}
   sort.Strings(names)
@@ -72,8 +101,8 @@ func reportExternalCandidates(input, path string, categories map[string]rules) e
   fmt.Fprintln(&b,"Source: w1zardz/amnezia-vpn-russia-split-tunneling data/external-candidates.json; upstream metadata may be stale.")
   fmt.Fprintln(&b,"DNS/ownership is **not** verified by this report. Review every uncovered candidate manually.")
   fmt.Fprintln(&b,"")
-  fmt.Fprintln(&b,"| Domain | Status | Sources | Upstream rejection reason |")
-  fmt.Fprintln(&b,"|---|---|---|---|")
+  fmt.Fprintln(&b,"| Domain | Coverage status | Review decision | Sources | Upstream rejection reason | Review rationale |")
+  fmt.Fprintln(&b,"|---|---|---|---|---|---|")
   count:=map[string]int{}
   for _,raw:=range names{
     d:=strings.ToLower(strings.TrimSuffix(strings.TrimSpace(raw),"."))
@@ -84,23 +113,29 @@ func reportExternalCandidates(input, path string, categories map[string]rules) e
     }else if covered(block,d,false){status="covered_BLOCK_review_conflict"
     }else if candidate.Reason!=""{status="uncovered_with_upstream_warning"}
     count[status]++
+    review:=reviews[d]
+    reviewLabel:=review.status
+    if reviewLabel==""{reviewLabel="unreviewed"}
+    count["decision_"+reviewLabel]++
     if status=="manual_review_uncovered" {
       fmt.Printf("CANDIDATE_REVIEW %s sources=%s\n",d,strings.Join(candidate.Sources,","))
     }
     why:=strings.ReplaceAll(candidate.Reason,"|","/")
     sources:=strings.Join(candidate.Sources,", ")
-    fmt.Fprintf(&b,"| `%s` | %s | %s | %s |\n",d,status,sources,why)
+    rationale:=strings.ReplaceAll(review.rationale,"|","/")
+    fmt.Fprintf(&b,"| `%s` | %s | %s | %s | %s | %s |\n",d,status,reviewLabel,sources,why,rationale)
   }
   if err:=os.WriteFile(path,[]byte(b.String()),0644);err!=nil{return err}
   fmt.Printf("EXTERNAL_CANDIDATES total=%d",len(inventory.Domains))
   for _,k:=range []string{"already_covered_RU","covered_BLOCK_review_conflict","uncovered_with_upstream_warning","manual_review_uncovered"}{
     fmt.Printf(" %s=%d",k,count[k])
   }
+  for _,k:=range []string{"decision_confirmed","decision_hold","decision_reject","decision_unreviewed"} {fmt.Printf(" %s=%d",k,count[k])}
   fmt.Println()
   return nil
 }
 func main(){
-  if len(os.Args)!=4 && len(os.Args)!=6 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md]");os.Exit(2)}
+  if len(os.Args)!=4 && len(os.Args)!=7 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md decisions.tsv]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
   var b strings.Builder
@@ -132,8 +167,8 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
-  if len(os.Args)==6 {
-    if err:=reportExternalCandidates(os.Args[4],os.Args[5],now);err!=nil{panic(err)}
+  if len(os.Args)==7 {
+    if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
   }
   if lostRU>0 {
     fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
