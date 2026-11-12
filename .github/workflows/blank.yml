@@ -1124,7 +1124,17 @@ jobs:
               return n
           }
 
+          // A positive source may contain foreign streaming endpoints. They must
+          // not be promoted into geosite:RU merely because a third-party list
+          // once marked them DIRECT. Keep this denial narrowly scoped to RU.
+          var excludedRUPositiveDomains = map[string]bool{
+              "stream.kick.com": true, // Kick international video stream CDN
+          }
+
           func addRoot(site *router.GeoSite, seen map[string]bool, value string) bool {
+              if normalizeName(site.CountryCode) == "ru" && excludedRUPositiveDomains[normalizeName(value)] {
+                  return false
+              }
               key := domainValueKey(router.Domain_RootDomain, value)
               if seen[key] {
                   return false
@@ -1984,6 +1994,20 @@ jobs:
               }
               if !isCompactRussianRoot("sber") || !isCompactRussianServiceRoot("sber") {
                   t.Fatalf("sber must be configured as a compact service root")
+              }
+          }
+
+          func TestForeignPositiveDomainsAreNotPromotedToRU(t *testing.T) {
+              ru := &router.GeoSite{CountryCode: "RU"}
+              seen := make(map[string]bool)
+              if addRoot(ru, seen, "stream.kick.com") {
+                  t.Fatal("foreign streaming CDN leaked into RU")
+              }
+              if len(ru.Domain) != 0 {
+                  t.Fatal("excluded rule was added to RU")
+              }
+              if !addRoot(ru, seen, "ddos-guard.net") {
+                  t.Fatal("legitimate RU service was rejected")
               }
           }
 
