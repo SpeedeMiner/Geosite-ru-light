@@ -80,46 +80,40 @@ func rejectedSubtreeConflict(r rules, zone string) string {
   }
   return ""
 }
-// verifyReviewedAdditions guards the PR against unexpected positive upstream
-// expansion (RU lost=0 alone does not prevent foreign domains entering DIRECT).
-// The manifest is an exact semantic diff against the published v10 release.
-func verifyReviewedAdditions(path string, actual []string) error {
+// A pinned manifest is not an exact delta against the floating release.
+// Every newly added effective RU rule must be pinned, while a previously
+// approved rule may already be in latest-optimized. It must nevertheless
+// remain covered by the candidate (and RootDomain may not degrade to Full).
+func ruleCoveredByCandidate(candidate rules, rule string) bool {
+  if strings.HasPrefix(rule,"domain:") {return covered(candidate,strings.TrimPrefix(rule,"domain:"),true)}
+  if strings.HasPrefix(rule,"full:") {return covered(candidate,strings.TrimPrefix(rule,"full:"),false)}
+  return false
+}
+func verifyReviewedAdditions(path string, actual []string, candidate rules) error {
   data,err:=os.ReadFile(path);if err!=nil{return err}
   approved:=make(map[string]bool)
   for i,line:=range strings.Split(string(data),"\n"){
     line=strings.TrimSpace(line)
     if line==""||strings.HasPrefix(line,"#"){continue}
-    if !strings.HasPrefix(line,"domain:") && !strings.HasPrefix(line,"full:") {
-      return fmt.Errorf("invalid approved RU rule on line %d: %s",i+1,line)
+    if !strings.HasPrefix(line,"domain:")&&!strings.HasPrefix(line,"full:"){
+      return fmt.Errorf("invalid approved RU rule at line %d: %s",i+1,line)
     }
-    if approved[line] {return fmt.Errorf("duplicate approved RU rule on line %d: %s",i+1,line)}
+    if approved[line]{return fmt.Errorf("duplicate approved rule at line %d: %s",i+1,line)}
     approved[line]=true
   }
-  if len(approved)==0{return fmt.Errorf("empty approved effective RU additions manifest: %s",path)}
-  seen:=make(map[string]bool)
+  if len(approved)==0{return fmt.Errorf("empty approved RU manifest")}
+  actualSeen:=make(map[string]bool)
   for _,rule:=range actual{
-    if !approved[rule] {return fmt.Errorf("unreviewed new effective RU rule: %s (update approval manifest after evidence review)",rule)}
-    if seen[rule] {return fmt.Errorf("duplicate effective RU addition: %s",rule)}
-    seen[rule]=true
+    if !approved[rule]{return fmt.Errorf("unreviewed effective new RU rule %s",rule)}
+    if actualSeen[rule]{return fmt.Errorf("duplicate effective new RU rule %s",rule)}
+    actualSeen[rule]=true
   }
-  // A missing reviewed addition indicates the baseline or source tree changed.
-  // Fail closed instead of claiming this is the same candidate.
-  for rule:=range approved {
-    if !seen[rule] {return fmt.Errorf("previously approved RU addition missing from effective delta: %s",rule)}
+  for rule:=range approved{
+    if !actualSeen[rule] && !ruleCoveredByCandidate(candidate,rule){
+      return fmt.Errorf("previously approved RU rule no longer effectively covered: %s",rule)
+    }
   }
   return nil
-}
-// After the first v11 publish, latest-optimized itself contains the reviewed
-// 30 additions. An identical effective RU set is safe for a subsequent PR,
-// while any new rule still requires the exact manifest of approved additions.
-func verifyCurrentReleaseTransition(path string, actual []string) error {
-  if len(actual)==0 {
-    // Keep the audit manifest mandatory even in the idempotent case.
-    info,err:=os.Stat(path);if err!=nil{return err}
-    if info.Size()==0{return fmt.Errorf("missing reviewed RU approval manifest content")}
-    return nil
-  }
-  return verifyReviewedAdditions(path,actual)
 }
 // External candidate inventories are only reviewed here; they are NEVER imported.
 type externalCandidate struct {
@@ -275,7 +269,7 @@ func main(){
   // are required. On subsequent idempotent v11 runs, zero new rules is valid;
   // any other drift fails closed before publishing to the release tag or branch.
   if len(os.Args)==5 {
-    if err:=verifyCurrentReleaseTransition(os.Args[4],addedRU);err!=nil{panic(err)}
+    if err:=verifyReviewedAdditions(os.Args[4],addedRU,now["RU"]);err!=nil{panic(err)}
     if len(addedRU)>0 {
       fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=initial_v11\n",len(addedRU))
     }else{
@@ -284,7 +278,7 @@ func main(){
   }
   if len(os.Args)==8 {
     if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
-    if err:=verifyCurrentReleaseTransition(os.Args[7],addedRU);err!=nil{panic(err)}
+    if err:=verifyReviewedAdditions(os.Args[7],addedRU,now["RU"]);err!=nil{panic(err)}
     if len(addedRU)==0 {
       fmt.Println("APPROVED_RU_NEW count=0 mode=published-release-parity")
     }else{
