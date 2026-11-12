@@ -2509,7 +2509,8 @@ jobs:
             --curated-ips data/corporate_discovery_core_ips.tsv \
             --output geosite_RU_discovery_raw.tsv \
             --status geosite_RU_ip_discovery_status.json \
-            --max-ips 12 --shodan-limit 3 --timeout 3
+            --max-ips 12 --shodan-limit 3 --timeout 3 \
+            --rotation "$GITHUB_RUN_NUMBER"
           (
             cd domain-list-community
             go run ./tools/geosite-delta discovery-review \
