@@ -65,6 +65,7 @@ func main(){
   for _,c:=range keys {
     a,z:=old[c],now[c]
     added:=differences(z,a);lost:=differences(a,z)
+    fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
     fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
     fmt.Fprintf(&b,"\n## %s — added effective rules (%d)\n\n",c,len(added))
     for _,v:=range added {fmt.Fprintln(&b,"- `"+v+"`")}
