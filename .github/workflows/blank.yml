@@ -2421,6 +2421,9 @@ jobs:
             cd domain-list-community
             go test ./tools/geosite-delta -count=1
           )
+          # Offline discovery regressions are mandatory; only the external
+          # network collection below is optional / non-blocking.
+          python3 tools/test_discover_corporate_domains.py
 
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
             # External inventory is for audit-only, never imported into RU.
@@ -2472,7 +2475,6 @@ jobs:
             printf '# Corporate discovery unavailable\n\nCandidate DAT was not produced.\n' > geosite_RU_discovered_candidates.md
             exit 0
           fi
-          python3 tools/test_discover_corporate_domains.py
           # Pinned, released GeoIP v41 prefix and ASN policy snapshots.
           # Any change of bytes requires deliberate review of the SHA values.
           BASE="https://github.com/SpeedeMiner/Geoip-ru-server/releases/download/latest-geoip-client-v41"
