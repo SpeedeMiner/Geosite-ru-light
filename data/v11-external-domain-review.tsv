@@ -89,3 +89,29 @@ jetbrains.com	reject	2026-11-12 first-party legal entity JetBrains s.r.o. Prague
 epam.com	reject	2026-11-12 EPAM Systems Inc headquarters Newtown Pennsylvania USA https://investors.epam.com/
 flightradar24.com	reject	2026-11-12 first-party legal Flightradar24 AB Sweden organization no. 556895-1213 https://www.flightradar24.com/terms-of-service
 joom.com	reject	2026-11-12 first-party legal Joom SIA Riga Latvia 40103993365 https://www.joom.com/en/faq/article/5e7201fdff117c3eb7d2cfd8
+abbyy.com	reject	Official ABBYY legal entities are US/EU/Cyprus; services not available in RU/BY https://www.abbyy.com/legal/entities/ ; historical RU founding is not current RU-DIRECT ownership
+akamaized.net	reject	Akamai Technologies global shared CDN with US headquarters https://www.akamai.com/why-akamai/contact-us ; entire customer CDN must not be RU
+bookmate.com	reject	Bookmate Limited Ireland is explicit website owner and operator https://bookmate.com/about/legal ; Yandex-origin Bookmate brand does not make global root RU
+busuu.com	reject	BUSUU LIMITED UK company no. 08172044 controlled by US Chegg Inc https://find-and-update.company-information.service.gov.uk/company/08172044/persons-with-significant-control
+coddy.academy	hold	CODDY Russian school first-party official domain is coddyschool.com https://coddyschool.com/ ; distinct coddy.academy has upstream NXDOMAIN and is not attested
+codewars.com	reject	Codewars owned and operated by US Andela Inc 580 5th Ave New York https://www.codewars.com/about/privacy
+coursera.org	reject	Coursera Inc US; official terms govern service https://www.coursera.org/about/terms
+edx.org	reject	edX LLC is a 2U LLC company per first-party terms https://www.edx.org/edx-terms-service
+englishdom.com	reject	First-party 2026 terms name Cypriot Edusoft Solutions Limited HE 478100 operator https://www.englishdom.com/ua/info/terms/terms-of-use/ru/
+gett.com	reject	Gett UK operates through GT Gettaxi UK Limited and company confirms exit from Russian market https://www.gett.com/uk/legal/terms ; https://www.gett.com/uk/about/
+gosuslugi.rf	hold	Not the official Cyrillic .рф ACE suffix and upstream DNS unresolved; no first-party Russian state operator reference established
+indriver.com	hold	InDrive started in Yakutsk and has Kazakhstan engineering staff https://careers.indrive.com/vacancies/?country=Kazakhstan ; current operator of legacy indriver.com and RU/KZ group control not yet proven
+italki.com	reject	2026 first-party privacy names italki HK Limited and Lingbe SL as operators https://moon-st.italki.cn/en/privacy
+khanacademy.org	reject	First-party 2026 terms identify Khan Academy Inc as US 501(c)(3) owner https://www.khanacademy.org/about/docs/khan-academy-terms-of-service
+leetcode.com	reject	First-party policy names LeetCode LLC as global operator https://leetcode.com/privacy/ ; no RU/KZ/BY ownership evidence
+luxoft.com	reject	Luxoft wholly owned by US DXC Technology since 2019 https://investors.dxc.com/investor-news/news-details/2019/DXC-Technology-Completes-Acquisition-Of-Leading-Digital-Innovator-Luxoft/default.aspx
+practicum.com	hold	2026 apex redirects to https://tripleten.com/ (international program), older first-party agreement Intertech Services AG https://yandex.com/legal/practicum_terms/en/ ; current RU entity/need unverified
+preply.com	reject	US SEC 2026 Form D shows Preply Inc incorporated in Delaware with US office https://www.sec.gov/Archives/edgar/data/1720581/000172058126000002/xslFormDX08/primary_doc.xml
+ru.aliexpress.com	reject	RU-language subdomain of global Alibaba service; 2026 terms assign CIS users to AliExpress CIS Holding Pte Ltd Singapore https://terms.alicdn.com/legal-agreement/terms/suit_bu1_aliexpress/suit_bu1_aliexpress202204182115_37406.html
+ru.iherb.com	reject	2026 first-party iHerb LLC / iHerb Netherlands BV service terms https://www.iherb.com/info/terms-of-use ; ru locale not local ownership
+sapsan.com	reject	Site explicitly serves Vietnamese scouting group HƯỚNG ĐẠO VIỆT NAM https://sapsan.com/ ; not Russian Railways Sapsan train
+svetofor.com	hold	Cannot verify registrant and purpose of this specific .com; Russian retailers use different verified sites https://buy.svetoforonline.ru/content/rekviziti/
+tinkoff.am	hold	Not independently verified as T-Bank controlled; 2026-11-12 site inaccessible and upstream global CDN warning; do not infer from Tinkoff brand
+uber.com	reject	US Uber Technologies Inc international service https://www.uber.com/us/en/legal/general-terms-of-use/
+www.tinkoff.am	hold	No confirmed ownership of apex tinkoff.am; cannot whitelist child without independent current bank attribution
+zara.com	reject	Spanish Inditex group first-party page names Zara brand and Spanish entity https://www.inditex.com/itxcomweb/nf/es/informacion/contacto
