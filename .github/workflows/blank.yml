@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v10)
+name: Build Ultimate Light RU Geosite (Optimized v11)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -7,6 +7,12 @@ concurrency:
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "local/**"
   schedule:
     # Каждый понедельник в 00:00 UTC
     - cron: "0 0 * * 1"
@@ -20,8 +26,8 @@ on:
 
 jobs:
   build:
-    # Publication is allowed only from the main branch.
-    if: github.ref == 'refs/heads/main'
+    # PR builds run all tests but never publish production artifacts.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -2179,6 +2185,7 @@ jobs:
           done
 
       - name: Publish Release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
@@ -2206,6 +2213,7 @@ jobs:
       # 11. Publish files to release branch and verify exact CDN content
       # ------------------------------------------------------------
       - name: Publish files to release branch and sync CDN
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
