@@ -44,7 +44,7 @@ wildberries.md	hold	2026-11-12 historical Moldova launches referenced md.wildber
 hexlet.io	confirmed	2026-11-12 first-party contacts list ООО Хекслет Рус INN 7325174845 https://ru.hexlet.io/pages/contacts and TOO Hexlet Kazakhstan BIN 230340043714 https://hexlet.io/pages/contacts
 4pda.to	hold	2026-11-12 authentic 4PDA site https://4pda.to/about/ but varying RU access from ISP without VPN in official forum https://4pda.to/forum/index.php?showtopic=1118259 ; routing DIRECT needs reachability confirmation
 www.4pda.to	hold	2026-11-12 child of authentic 4pda.to, but same ISP reachability concern; do not auto-add to DIRECT
-codeforces.com	hold	2026-11-12 Codeforces site and founder Russian links, but current legal owner and routing need independent validation https://codeforces.com/page/about-us?locale=ru
+codeforces.com	hold	2026-11-12 official https://codeforces.com/about names founder/owner IE Mikhail Mirzayanov with Bishkek Kyrgyzstan contact; https://codeforces.com/privacy names CODEFORCES GLOBAL FZCO (UAE). Russian origin alone is not RU/KZ/BY corporate ownership
 che.tv	hold	2026-11-12 official current CTC Media page points to chetv.ru, not che.tv https://ctc.media/channel/che
 dom-kino.tv	hold	2026-11-12 upstream no A/DNS; historical association with Dom Kino insufficient to include
 drom.com	hold	2026-11-12 first-party Drom.ru use of separate .com not verified; domain failed live fetch
@@ -76,3 +76,12 @@ hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://hu
 huggingface.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
 booking.com	reject	2026-11-12 first-party Booking.com legal identifies Booking.com B.V. Amsterdam https://www.booking.com/content/legal.html
 duolingo.com	reject	2026-11-12 Duolingo Inc incorporated Delaware USA, HQ Pittsburgh https://investors.duolingo.com/resources
+lingualeo.com	confirmed	2026-11-12 official site names Moscow ООО Лингуалео INN 7710749260 and defines lingualeo.com as user platform https://lingualeo.com/ru/blog/polozhenie-o-zashhite-personalnyih-dannyih/
+1c-fresh.com	hold	2026-11-12 upstream NXDOMAIN; current official 1C service uses 1cfresh.com not 1c-fresh.com https://1cv.tech/catalog/1c-fresh/ ; no confirmed owner/need
+sberzvuk.com	hold	2026-11-12 upstream NXDOMAIN and not verified as active first-party Sber/Zvuk site; must confirm historical ownership and current purpose
+www.sberzvuk.com	hold	2026-11-12 parent sberzvuk.com unconfirmed and upstream NXDOMAIN; hold exact host
+zenit.bank	hold	2026-11-12 upstream NXDOMAIN; current service use and operator domain ownership not confirmed
+kontur.extern	hold	2026-11-12 upstream NXDOMAIN and no validated operational hostname for Kontur services; do not infer brand TLD
+kontur.focus	hold	2026-11-12 upstream NXDOMAIN and no validated operational hostname for Kontur services; do not infer brand TLD
+mts.online	hold	2026-11-12 upstream NXDOMAIN; similarity to Russian MTS not proof of current registered corporate usage
+soc.fund	hold	2026-11-12 external-source CDN warning; no first-party government/social-fund reference or public registrant confirmation
