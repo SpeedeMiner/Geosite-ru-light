@@ -102,6 +102,13 @@ domain:alfabank.com
 domain:vtb.com
 # VTB official FX trading contact: https://www.vtb.ru/krupnyj-biznes/elektronnaya-torgovlya-fx/
 domain:vtbcapital.com
+# Exact service hostnames from VTB official FX terminal connectivity documentation.
+# Do not expand to ntprog.com: this vendor domain is not VTB-exclusive.
+# https://www.vtb.ru/krupnyj-biznes/elektronnaya-torgovlya-fx/
+domain:prod.ntprog.com
+domain:uat.ntprog.com
+domain:msk-prod-gate.ntprog.com
+domain:muat-gate.ntprog.com
 domain:kaspersky.com
 domain:kaspersky-labs.com
 domain:ozon.com
