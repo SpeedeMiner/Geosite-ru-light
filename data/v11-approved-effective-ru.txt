@@ -1,15 +1,22 @@
-# Approved effective RU additions relative to published v10 latest-optimized
-# Every row is a reviewed semantic RootDomain or Full addition, not a raw source line.
-# PR CI fails if any unexpected effective RU addition appears, or one of these vanishes.
-# To add domains: verify first-party ownership, routing use and minimal Full/Root scope;
-# update docs/v11-coverage-audit.md and data/v11-external-domain-review.tsv.
+# v11.1 pinned positive RU rules (30 v11 original additions + 25 newly reviewed technical roots)
+# RULES ARE NOT ASSUMED NEW RELATIVE TO A FLOATING BASELINE: an already-covered
+# pinned rule must still be effectively covered by candidate RU.
+# New candidate-to-release rules must be in this set; unreviewed upstream drift
+# must never be automatically promoted to production.
+# Explicit exclusions: 4pda.to entire suffix; ozon.am / ozon.kg /
+# servicepipe.io / selectel.org (insufficient direct first-party evidence).
+domain:1cfresh.com
 domain:2gis.biz
 domain:2gis.qa
+domain:avito.st
+domain:beget.com
+domain:beget.tech
 domain:by
 domain:cdn-tinkoff.com
 domain:ddos-guard.net
 domain:ecom.tech
 domain:edgecenter.io
+domain:habrastorage.org
 domain:hexlet.io
 domain:hh.uz
 domain:importx5.com
@@ -20,15 +27,35 @@ domain:lingualeo.com
 domain:m-line.expert
 domain:megabitus.com
 domain:merilo.one
+domain:mvk.com
+domain:naydex.net
+domain:ozon.uz
 domain:qrator.net
 domain:samokat.tech
 domain:skbkontur.com
 domain:soloviev.live
+domain:stormwall.pro
 domain:tbank.com
+domain:tilda.cc
+domain:tilda.ws
+domain:tildaapi.com
+domain:tildacdn.com
 domain:vigo.tech
+domain:vk-cdn.net
+domain:vk-portal.net
+domain:vkuser.net
+domain:vkuseraudio.net
+domain:vkuserlive.com
+domain:vkuservideo.net
 domain:vtbcapital.com
+domain:wildberries.am
+domain:wildberries.kg
+domain:wildberries.uz
 domain:xn--80ao21a
 domain:xn--90ais
+domain:ya.cc
+domain:yadi.sk
+domain:yandexcloud.net
 full:msk-prod-gate.ntprog.com
 full:muat-gate.ntprog.com
 full:prod.ntprog.com
