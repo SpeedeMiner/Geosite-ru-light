@@ -52,3 +52,49 @@ func TestReadDiscoveryTSVValidatesHeaderAndDomains(t *testing.T) {
     if err:=os.WriteFile(path,[]byte(header+strings.Replace(row,"new.example.net","../../etc/passwd",1)),0600);err!=nil{t.Fatal(err)}
     if _,err:=readDiscoveryTSV(path);err==nil{t.Fatal("unsafe domain must fail")}
 }
+
+func TestCrossCategoryCoverageIsNotRUApproval(t *testing.T) {
+    empty:=func()rules{return rules{roots:map[string]bool{},full:map[string]bool{},opaque:map[string]bool{}}}
+    yt:=empty();yt.roots["youtube.com"]=true;yt.roots["ytimg.com"]=true
+    tg:=empty();tg.roots["telegram.org"]=true
+    one:=empty();one.full["exact.example.net"]=true
+    categories:=map[string]rules{
+        "RU":empty(),"BLOCK":empty(),"YOUTUBE":yt,"TELEGRAM":tg,"CUSTOM":one,
+    }
+    rows:=[]discoveredDomainRow{
+        {Domain:"www.youtube.com",Signals:"CSP"},
+        {Domain:"s.ytimg.com",Signals:"CSP"},
+        {Domain:"telegram.org",Signals:"CSP"},
+        {Domain:"exact.example.net",Signals:"CSP"},
+        {Domain:"sub.exact.example.net",Signals:"CSP"},
+        {Domain:"thirdparty.example.io",Signals:"CSP"},
+    }
+    matches,n:=otherCompiledCategoryMatches(rows,categories)
+    if n!=4{t.Fatalf("expected 4 other-category matches, got %d",n)}
+    for _,tc:=range []struct{domain,cat string}{
+        {"www.youtube.com","YOUTUBE"},{"s.ytimg.com","YOUTUBE"},
+        {"telegram.org","TELEGRAM"},{"exact.example.net","CUSTOM"},
+    } {
+        if len(matches[tc.domain])!=1 || matches[tc.domain][0]!=tc.cat {
+            t.Fatalf("incorrect compiled DAT overlap for %s: %v",tc.domain,matches[tc.domain])
+        }
+    }
+    for _,domain:=range []string{"sub.exact.example.net","thirdparty.example.io"} {
+        if len(matches[domain])!=0{t.Fatalf("unexpected Full or absent coverage for %s: %v",domain,matches[domain])}
+    }
+    path:=filepath.Join(t.TempDir(),"review_queue.tsv")
+    if err:=writeDiscoveryReviewQueue(path,nil,rows,matches);err!=nil{t.Fatal(err)}
+    data,err:=os.ReadFile(path);if err!=nil{t.Fatal(err)}
+    output:=string(data)
+    for _,frag:=range []string{
+        "domain\treview_priority\tother_dat_categories",
+        "www.youtube.com\tWEAK_FOREIGN_DEPENDENCY\tYOUTUBE",
+        "thirdparty.example.io\tWEAK_FOREIGN_DEPENDENCY",
+        "UNREVIEWED\tNO",
+    } {
+        if !strings.Contains(output,frag){t.Fatalf("review queue missing %q",frag)}
+    }
+    if strings.Contains(output,"AUTO_APPROVED") || strings.Contains(output,"domain:youtube.com") {
+        t.Fatal("audit queue must not promote or widen rules")
+    }
+}
