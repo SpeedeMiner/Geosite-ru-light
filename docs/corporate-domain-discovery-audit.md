@@ -114,3 +114,21 @@ The IP-first sampler now allocates its bounded IP budget **round-robin across CO
 The repository provides `data/corporate_discovery_core_ips.tsv` with **no IPs prefilled**. Future maintainers may add an exact public IP and documentation of the first-party source. The CI invocation passes this file as `--curated-ips`, but every row is rejected unless it maps to the pinned CORE ASN prefixes. CIDR sweeps, ranges and non-global addresses are disallowed. Its SHA256 is written to `geosite_RU_ip_discovery_status.json` for reproducibility.
 
 The tests cover group-balanced selection, rejection of shared-hosting/foreign IPs, FCrDNS spoofing resistance, SAN verification paths, and separation of historic Shodan hostnames from confirmed first-party services.
+
+
+## Group-balanced final CI and inspected artifact (2026-11-13)
+
+**Exact PR HEAD before this journal update:** `f7226f417a02809b066e67552d1862e7b0e91999`.
+**Verified CI:** https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43289096449 — success.
+**Artifacts:** `geosite-ru-corporate-domain-discovery` + original `geosite-ru-v11-pr-audit`.
+
+After round-robin CORE group selection, bounded activity observed:
+- 12 of 26 CORE-qualified seed-resolved IPs were selected, **9 TLS chain-verified SNI probes**, **3 forward-confirmed PTRs**, **3 Shodan InternetDB** queries.
+- Direct first-party SAN/CSP: 33 unique hosts.
+- New IP-first evidence: 11 host observations; after de-duplication the combined total is **34** unique hosts, meaning **only one additional unique name**.
+- That additional name is **`srv133-129-240-87.vk.com`**, forward-confirmed PTR for public CORE IP `87.240.129.133` (published origin **AS47541**, group VK/Mail.ru). Its current A addresses include that same IP. Because `vk.com` is already covered by RootDomain in RU, no new positive rule is required. Other TLS SAN corroborated `api.vk.com`, `stats.vk-portal.net`, `vk.me`, etc. without requiring new routing entries.
+- Final semantic filter: **observed 34 / already RU 22 / BLOCK 0 / uncovered 12 / prioritized 0 / weak third-party CSP dependencies 12**; zero new valid corporate additions.
+- Bank seeds that failed trust verification were **not** bypassed: the IP-first status records `SSLCertVerificationError` for `alfabank.ru`, `sberbank.ru`, and `tbank.ru`; an IPv6 Yandex Cloud target also had an ordinary connection error. Failures count as incomplete observations, not positive or negative company ownership proof.
+- Two mandatory offline Python suites pass (**5 first-party tests + 7 IP-first tests**). Go semantic delta: **RU=3053, BLOCK=43, DAT=82237 bytes; newly_covered=0, lost=0 for RU and BLOCK**. All 57 pinned rules and user prohibition on `4pda.to` remain preserved.
+
+**Interpretation:** This verifies the revised Reality Scanner IP-first method and group-balanced selection; it does **not** imply full corporate domain completeness. To expand recall, review more first-party seed hosts or explicitly documented CORE IP addresses. Do not invent server addresses or automatically import existing global CDN references.
