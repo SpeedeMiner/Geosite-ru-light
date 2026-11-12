@@ -117,6 +117,12 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
     reviewLabel:=review.status
     if reviewLabel==""{reviewLabel="unreviewed"}
     count["decision_"+reviewLabel]++
+    if status=="manual_review_uncovered" && reviewLabel=="unreviewed" {
+      count["needs_unreviewed_manual_triage"]++
+    }
+    if status=="uncovered_with_upstream_warning" && reviewLabel=="unreviewed" {
+      count["needs_unreviewed_warning_triage"]++
+    }
     if status=="manual_review_uncovered" {
       fmt.Printf("CANDIDATE_REVIEW %s sources=%s\n",d,strings.Join(candidate.Sources,","))
     }
@@ -131,6 +137,9 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
     fmt.Printf(" %s=%d",k,count[k])
   }
   for _,k:=range []string{"decision_confirmed","decision_hold","decision_reject","decision_unreviewed"} {fmt.Printf(" %s=%d",k,count[k])}
+  for _,k:=range []string{"needs_unreviewed_manual_triage","needs_unreviewed_warning_triage"} {
+    fmt.Printf(" %s=%d",k,count[k])
+  }
   fmt.Println()
   return nil
 }
