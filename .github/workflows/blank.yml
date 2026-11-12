@@ -2325,7 +2325,8 @@ jobs:
       # 9b. Reproducible semantic delta against the currently published DAT.
       # ------------------------------------------------------------
       - name: Audit semantic DAT delta against release
-        if: github.event_name == 'pull_request'
+        # Fail closed before production publication, not just in PR builds.
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         shell: bash
         run: |
           set -euo pipefail
@@ -2333,28 +2334,51 @@ jobs:
             "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat" \
             -o /tmp/geosite-ru-released.dat
           test -s /tmp/geosite-ru-released.dat
-          # External candidate source is review-only: never appended to RU input.
+          # Verify the published reference asset against its own checksum.
+          # A stale/mismatched release reference must not authorize publishing.
           curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
-            "https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/data/external-candidates.json" \
-            -o /tmp/geosite-ru-external-candidates.json
-          test -s /tmp/geosite-ru-external-candidates.json
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat.sha256sum" \
+            -o /tmp/geosite-ru-released.dat.sha256sum
+          RELEASE_SHA="$(awk 'NR==1{print $1}' /tmp/geosite-ru-released.dat.sha256sum)"
+          test -n "$RELEASE_SHA"
+          ACTUAL_SHA="$(sha256sum /tmp/geosite-ru-released.dat | awk '{print $1}')"
+          test "$RELEASE_SHA" = "$ACTUAL_SHA" || { echo "ERROR: published DAT checksum differs from published SHA256" >&2; exit 1; }
+
           mkdir -p domain-list-community/tools/geosite-delta
           cp tools/geosite-delta/main.go tools/geosite-delta/main_test.go domain-list-community/tools/geosite-delta/
           (
             cd domain-list-community
             go test ./tools/geosite-delta -count=1
           )
-          (
-            cd domain-list-community
-            go run ./tools/geosite-delta \
-              /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
-              /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
-              ../data/v11-external-domain-review.tsv ../data/v11-approved-effective-ru.txt
-          )
+
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            # External inventory is for audit-only, never imported into RU.
+            curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+              "https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/data/external-candidates.json" \
+              -o /tmp/geosite-ru-external-candidates.json
+            test -s /tmp/geosite-ru-external-candidates.json
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
+                /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
+                ../data/v11-external-domain-review.tsv ../data/v11-approved-effective-ru.txt
+            )
+            test -s geosite_RU_external_candidate_audit.md
+            python3 tools/build_domain_research_queue.py geosite_RU_external_candidate_audit.md geosite_RU_attribution_research_queue.tsv
+            test -s geosite_RU_attribution_research_queue.tsv
+          else
+            # Production promotion: compare against the currently published
+            # release, require either EXACTLY the 30 reviewed v11 additions
+            # or an idempotent rebuild (zero additions). BLOCK must be unchanged.
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
+                ../data/v11-approved-effective-ru.txt
+            )
+          fi
           test -s geosite_RU_semantic_delta.md
-          test -s geosite_RU_external_candidate_audit.md
-          python3 tools/build_domain_research_queue.py geosite_RU_external_candidate_audit.md geosite_RU_attribution_research_queue.tsv
-          test -s geosite_RU_attribution_research_queue.tsv
 
       - name: Upload PR candidate DAT and audit report
         if: github.event_name == 'pull_request'
@@ -2402,7 +2426,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite"
+          name: "Optimized RU GeoSite v11"
           make_latest: true
 
           files: |
@@ -2413,9 +2437,16 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite
+            # Optimized RU GeoSite v11
 
-            Automatically generated Russian-region GeoSite database.
+            Verified Russian-region GeoSite update with compact RU/BY/KZ domain coverage.
+
+            - 30 audited effective new RU rules, no lost RU coverage against v10.
+            - BLOCK category unchanged (43 rules).
+            - 4pda.to and its subdomains are excluded from RU-DIRECT.
+            - Rebuilt assets include geosite_RU.dat and its SHA256 checksum.
+
+            Full audit: https://github.com/${{ github.repository }}/pull/1
 
           fail_on_unmatched_files: true
 
