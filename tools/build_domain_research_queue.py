@@ -44,8 +44,8 @@ def main():
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
     rows = sorted(read_audit(args.audit), key=lambda v: (v[1] != "manual_review_uncovered", v[0]))
-    if not rows:
-        raise SystemExit("empty uncovered and unreviewed research queue")
+    # No unreviewed candidates is a valid completed audit state.
+    # Emit the header-only TSV so downstream artifacts remain reproducible.
     with args.output.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle, delimiter="\t", lineterminator="\n")
         writer.writerow(["domain", "priority", "coverage_status", "sources", "upstream_warning",
