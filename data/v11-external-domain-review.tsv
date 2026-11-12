@@ -85,3 +85,7 @@ kontur.extern	hold	2026-11-12 upstream NXDOMAIN and no validated operational hos
 kontur.focus	hold	2026-11-12 upstream NXDOMAIN and no validated operational hostname for Kontur services; do not infer brand TLD
 mts.online	hold	2026-11-12 upstream NXDOMAIN; similarity to Russian MTS not proof of current registered corporate usage
 soc.fund	hold	2026-11-12 external-source CDN warning; no first-party government/social-fund reference or public registrant confirmation
+jetbrains.com	reject	2026-11-12 first-party legal entity JetBrains s.r.o. Prague Czech Republic https://www.jetbrains.com/legal/docs/terms/professional-services/
+epam.com	reject	2026-11-12 EPAM Systems Inc headquarters Newtown Pennsylvania USA https://investors.epam.com/
+flightradar24.com	reject	2026-11-12 first-party legal Flightradar24 AB Sweden organization no. 556895-1213 https://www.flightradar24.com/terms-of-service
+joom.com	reject	2026-11-12 first-party legal Joom SIA Riga Latvia 40103993365 https://www.joom.com/en/faq/article/5e7201fdff117c3eb7d2cfd8
