@@ -2300,6 +2300,7 @@ jobs:
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
             geosite_RU_external_candidate_audit.md
+            geosite_RU_attribution_research_queue.tsv
             data/v11-external-domain-review.tsv
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
