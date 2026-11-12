@@ -2416,11 +2416,15 @@ jobs:
           test "$RELEASE_SHA" = "$ACTUAL_SHA" || { echo "ERROR: published DAT checksum differs from published SHA256" >&2; exit 1; }
 
           mkdir -p domain-list-community/tools/geosite-delta
-          cp tools/geosite-delta/main.go tools/geosite-delta/main_test.go domain-list-community/tools/geosite-delta/
+          cp tools/geosite-delta/*.go domain-list-community/tools/geosite-delta/
           (
             cd domain-list-community
             go test ./tools/geosite-delta -count=1
           )
+          # Offline discovery regressions are mandatory; only the external
+          # network collection below is optional / non-blocking.
+          python3 tools/test_discover_corporate_domains.py
+          python3 tools/test_discover_corporate_ip_first.py
 
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
             # External inventory is for audit-only, never imported into RU.
@@ -2459,6 +2463,84 @@ jobs:
             )
           fi
           test -s geosite_RU_semantic_delta.md
+
+      # Independent audit-only discovery. External data and inferred ASN
+      # matches NEVER become RU rules in this workflow.
+      - name: Discover corporate-domain dependencies (TLS SAN, CSP, CORE ASN)
+        if: ${{ always() && (github.event_name == 'pull_request' || github.event_name == 'schedule') }}
+        shell: bash
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          if [ ! -s "$OUTPUT_FILE" ]; then
+            printf '# Corporate discovery unavailable\n\nCandidate DAT was not produced.\n' > geosite_RU_discovered_candidates.md
+            exit 0
+          fi
+          # Pinned, released GeoIP v41 prefix and ASN policy snapshots.
+          # Any change of bytes requires deliberate review of the SHA values.
+          BASE="https://github.com/SpeedeMiner/Geoip-ru-server/releases/download/latest-geoip-client-v41"
+          curl -fL --retry 2 --connect-timeout 12 --max-time 75 \
+            "$BASE/geoip_RU_company_asn_core_bgp_prefixes.txt" \
+            -o /tmp/geosite-v41-corporate-core.txt
+          curl -fL --retry 2 --connect-timeout 12 --max-time 75 \
+            "$BASE/geoip_RU_company_asn_policy.tsv" \
+            -o /tmp/geosite-v41-corporate-policy.tsv
+          printf '%s  %s\n' \
+            '9b2600280adb4a3622b3cb795225732b773a178455a302e4118c2263fc1b9b87' \
+            /tmp/geosite-v41-corporate-core.txt | sha256sum -c -
+          printf '%s  %s\n' \
+            '8a8026834fa309e7a2545fb866194a8713b4764ed8c8e79085abf293cfa3893b' \
+            /tmp/geosite-v41-corporate-policy.tsv | sha256sum -c -
+          timeout 210s python3 tools/discover_corporate_domains.py \
+            --seeds data/corporate_discovery_seeds.tsv \
+            --core-prefixes /tmp/geosite-v41-corporate-core.txt \
+            --asn-policy /tmp/geosite-v41-corporate-policy.tsv \
+            --timeout 3 --max-candidates 200 --max-dns 60 \
+            --output geosite_RU_discovery_site_raw.tsv \
+            --status geosite_RU_discovery_status.json
+          # Reworked reality-scanner-v2 IP-first discovery: never sweep CIDRs.
+          # Only public seed IPs proven inside the pinned CORE prefix snapshot
+          # are probed. No insecure TLS, no exposed API keys, no DIRECT writes.
+          timeout 140s python3 tools/discover_corporate_ip_first.py \
+            --seeds data/corporate_discovery_seeds.tsv \
+            --core-prefixes /tmp/geosite-v41-corporate-core.txt \
+            --asn-policy /tmp/geosite-v41-corporate-policy.tsv \
+            --base geosite_RU_discovery_site_raw.tsv \
+            --curated-ips data/corporate_discovery_core_ips.tsv \
+            --output geosite_RU_discovery_raw.tsv \
+            --status geosite_RU_ip_discovery_status.json \
+            --max-ips 12 --shodan-limit 3 --timeout 3 \
+            --rotation "$GITHUB_RUN_NUMBER"
+          (
+            cd domain-list-community
+            go run ./tools/geosite-delta discovery-review \
+              ../geosite_RU_discovery_raw.tsv "../$OUTPUT_FILE" \
+              ../data/v11-external-domain-review.tsv \
+              ../geosite_RU_discovered_candidates.md \
+              ../geosite_RU_discovery_review_queue.tsv
+          )
+          test -s geosite_RU_discovered_candidates.md
+          test -s geosite_RU_discovery_review_queue.tsv
+          echo "### Review-only corporate discovery" >> "$GITHUB_STEP_SUMMARY"
+          grep 'Observed:' geosite_RU_discovered_candidates.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Upload corporate-domain discovery audit
+        if: ${{ always() && (github.event_name == 'pull_request' || github.event_name == 'schedule') }}
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosite-ru-corporate-domain-discovery
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            geosite_RU_discovered_candidates.md
+            geosite_RU_discovery_review_queue.tsv
+            geosite_RU_discovery_raw.tsv
+            geosite_RU_discovery_site_raw.tsv
+            geosite_RU_discovery_status.json
+            geosite_RU_ip_discovery_status.json
+            data/corporate_discovery_seeds.tsv
+            data/corporate_discovery_core_ips.tsv
 
       # Unreviewed upstream additions must not silently land in a production
       # release. Preserve the candidate and the diff even if main/schedule gate
