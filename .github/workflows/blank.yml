@@ -2167,6 +2167,42 @@ jobs:
           cat "$OUTPUT_SHA_FILE"
 
       # ------------------------------------------------------------
+      # 9b. Reproducible semantic delta against the currently published DAT.
+      # ------------------------------------------------------------
+      - name: Audit semantic DAT delta against release
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat" \
+            -o /tmp/geosite-ru-released.dat
+          test -s /tmp/geosite-ru-released.dat
+          mkdir -p domain-list-community/tools/geosite-delta
+          cp tools/geosite-delta/main.go domain-list-community/tools/geosite-delta/main.go
+          (
+            cd domain-list-community
+            go run ./tools/geosite-delta \
+              /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md
+          )
+          test -s geosite_RU_semantic_delta.md
+
+      - name: Upload PR candidate DAT and audit report
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosite-ru-v11-pr-audit
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+            geosite_RU_semantic_delta.md
+            geosite_RU_categories.txt
+            geosite_RU_new_sources.txt
+            v2fly-corporate-extra-domains.txt
+
+      # ------------------------------------------------------------
       # 10. Publish GitHub Release
       # ------------------------------------------------------------
       - name: Verify release artifacts
