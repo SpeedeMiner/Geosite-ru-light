@@ -2506,6 +2506,7 @@ jobs:
             --core-prefixes /tmp/geosite-v41-corporate-core.txt \
             --asn-policy /tmp/geosite-v41-corporate-policy.tsv \
             --base geosite_RU_discovery_site_raw.tsv \
+            --curated-ips data/corporate_discovery_core_ips.tsv \
             --output geosite_RU_discovery_raw.tsv \
             --status geosite_RU_ip_discovery_status.json \
             --max-ips 12 --shodan-limit 3 --timeout 3
@@ -2535,6 +2536,7 @@ jobs:
             geosite_RU_discovery_status.json
             geosite_RU_ip_discovery_status.json
             data/corporate_discovery_seeds.tsv
+            data/corporate_discovery_core_ips.tsv
 
       # Unreviewed upstream additions must not silently land in a production
       # release. Preserve the candidate and the diff even if main/schedule gate
