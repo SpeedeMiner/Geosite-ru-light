@@ -142,3 +142,21 @@ func TestReviewedEffectiveRUAdditionsGate(t *testing.T) {
     t.Fatal("opaque rules need explicit separately reviewed policy")
   }
 }
+
+func TestReleaseTransitionAfterPublishedV11(t *testing.T) {
+  path:=filepath.Join(t.TempDir(),"approved.txt")
+  if err:=os.WriteFile(path,[]byte("domain:2gis.biz\nfull:prod.ntprog.com\n"),0600);err!=nil{t.Fatal(err)}
+  if err:=verifyCurrentReleaseTransition(path,nil);err!=nil {
+    t.Fatalf("no new RU rules after v11 publication should pass: %v",err)
+  }
+  if err:=verifyCurrentReleaseTransition(path,[]string{"domain:2gis.biz","full:prod.ntprog.com"});err!=nil {
+    t.Fatalf("first v11 promotion should preserve approved set: %v",err)
+  }
+  if err:=verifyCurrentReleaseTransition(path,[]string{"domain:unverified.foreign"});err==nil {
+    t.Fatal("new foreign root after v11 publication must fail closed")
+  }
+  if err:=os.Remove(path);err!=nil{t.Fatal(err)}
+  if err:=verifyCurrentReleaseTransition(path,nil);err==nil {
+    t.Fatal("missing approval manifest must not silently pass")
+  }
+}

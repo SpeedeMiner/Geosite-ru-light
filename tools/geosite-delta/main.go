@@ -109,6 +109,18 @@ func verifyReviewedAdditions(path string, actual []string) error {
   }
   return nil
 }
+// After the first v11 publish, latest-optimized itself contains the reviewed
+// 30 additions. An identical effective RU set is safe for a subsequent PR,
+// while any new rule still requires the exact manifest of approved additions.
+func verifyCurrentReleaseTransition(path string, actual []string) error {
+  if len(actual)==0 {
+    // Keep the audit manifest mandatory even in the idempotent case.
+    info,err:=os.Stat(path);if err!=nil{return err}
+    if info.Size()==0{return fmt.Errorf("missing reviewed RU approval manifest content")}
+    return nil
+  }
+  return verifyReviewedAdditions(path,actual)
+}
 // External candidate inventories are only reviewed here; they are NEVER imported.
 type externalCandidate struct {
   Sources []string `json:"sources"`
@@ -263,8 +275,8 @@ func main(){
   // are required. On subsequent idempotent v11 runs, zero new rules is valid;
   // any other drift fails closed before publishing to the release tag or branch.
   if len(os.Args)==5 {
+    if err:=verifyCurrentReleaseTransition(os.Args[4],addedRU);err!=nil{panic(err)}
     if len(addedRU)>0 {
-      if err:=verifyReviewedAdditions(os.Args[4],addedRU);err!=nil{panic(err)}
       fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=initial_v11\n",len(addedRU))
     }else{
       fmt.Println("PRODUCTION_RU_APPROVAL count=0 mode=idempotent_release")
@@ -272,8 +284,12 @@ func main(){
   }
   if len(os.Args)==8 {
     if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
-    if err:=verifyReviewedAdditions(os.Args[7],addedRU);err!=nil{panic(err)}
-    fmt.Printf("APPROVED_RU_NEW count=%d exact_match=true\n",len(addedRU))
+    if err:=verifyCurrentReleaseTransition(os.Args[7],addedRU);err!=nil{panic(err)}
+    if len(addedRU)==0 {
+      fmt.Println("APPROVED_RU_NEW count=0 mode=published-release-parity")
+    }else{
+      fmt.Printf("APPROVED_RU_NEW count=%d exact_match=true\n",len(addedRU))
+    }
   }
   if lostRU>0 {
     fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)

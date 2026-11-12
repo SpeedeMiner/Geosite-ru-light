@@ -2556,6 +2556,58 @@ jobs:
           fi
 
       # ------------------------------------------------------------
+      # 11b. Immutable versioned release and floating-tag alignment.
+      # ------------------------------------------------------------
+      - name: Publish immutable v11 release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # This tag represents the audited v11 source snapshot. Never move an
+          # existing versioned tag on future automated weekly rebuilds.
+          if gh release view v11 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11 release already exists; preserving its tag."
+          else
+            EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
+            gh release create v11 \
+              "$OUTPUT_FILE" \
+              "$OUTPUT_SHA_FILE" \
+              "$CATEGORY_FILE" \
+              "$HYDRA_APPEND_FILE" \
+              "$NEW_SOURCES_REPORT_FILE" \
+              --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" \
+              --title "GeoSite RU Light v11" \
+              --latest=false \
+              --notes "v11: 30 reviewed effective RU additions; zero lost RU coverage; all 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/1"
+          fi
+          gh release view v11 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+
+      - name: Align floating latest-optimized tag with successful main release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
+          echo "Previously published floating tag: $CURRENT"
+          if [ "$CURRENT" != "$GITHUB_SHA" ]; then
+            # latest-optimized is intentionally floating; v11 remains immutable.
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
+              -f sha="$GITHUB_SHA" -F force=true >/dev/null
+          fi
+          VERIFIED="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
+          test "$VERIFIED" = "$GITHUB_SHA" || {
+            echo "ERROR: floating release tag does not match main commit" >&2
+            exit 1
+          }
+          echo "latest-optimized tag now points to $VERIFIED"
+
+      # ------------------------------------------------------------
       # 12. Workflow summary
       # ------------------------------------------------------------
       - name: Print download URLs
