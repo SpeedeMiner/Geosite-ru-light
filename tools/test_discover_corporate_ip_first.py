@@ -98,6 +98,21 @@ class IPFirstTests(unittest.TestCase):
         self.assertEqual(img["signals"], "CSP,IP_TLS_SAN_VERIFIED")
         self.assertIn("CORE_IP 8.8.8.8", img["seeds"])
 
+    def test_ip_budget_is_balanced_across_core_groups(self):
+        data = {
+            "8.8.8.1": {"seeds": {"one"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "8.8.8.2": {"seeds": {"two"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "8.8.8.3": {"seeds": {"three"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "9.9.9.1": {"seeds": {"four"}, "asns": {"AS102"}, "groups": {"Beta"}},
+            "9.9.9.2": {"seeds": {"five"}, "asns": {"AS103"}, "groups": {"Gamma"}},
+        }
+        chosen = ipfirst.fair_core_targets(data, 3)
+        self.assertEqual(
+            [next(iter(item["groups"])) for _, item in chosen],
+            ["Alpha", "Beta", "Gamma"])
+        self.assertEqual(ipfirst.fair_core_targets(data, 0), [])
+        self.assertEqual(len(ipfirst.fair_core_targets(data, 99)), 5)
+
     def test_missing_core_means_no_targets(self):
         targets, errors, total = ipfirst.targets_from_seeds(
             [("Group", "corp.example.ru")], self.prefixes, self.policy, 10,
