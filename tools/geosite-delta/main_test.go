@@ -135,7 +135,13 @@ func TestReviewedEffectiveRUAdditionsGate(t *testing.T) {
     {"duplicate addition",[]string{"domain:by","domain:2gis.biz","full:prod.ntprog.com","domain:by"}},
   } {
     t.Run(tc.name,func(t *testing.T) {
-      if err:=verifyReviewedAdditions(file,tc.actual,approvedCandidate());err==nil {
+      candidate:=approvedCandidate()
+      if tc.name=="missing approved" {
+        // A pinned rule already present in candidate is not missing.
+        // Remove it from candidate as well to simulate real coverage loss.
+        delete(candidate.full,"prod.ntprog.com")
+      }
+      if err:=verifyReviewedAdditions(file,tc.actual,candidate);err==nil {
         t.Fatalf("expected rejection of unapproved/missing RU additions: %v",tc.actual)
       }
     })
