@@ -66,6 +66,16 @@ class CorporateDiscoveryTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 mod.read_core_prefixes(prefix, parsed)
 
+    def test_versioned_expanded_seed_manifest_is_bounded_and_unique(self):
+        seeds = mod.load_seeds(ROOT.parent / "data/corporate_discovery_seeds.tsv")
+        self.assertLessEqual(len(seeds), 35)
+        hosts = {name: group for group, name in seeds}
+        self.assertEqual(len(hosts), len(seeds))
+        self.assertEqual(hosts["disk.yandex.ru"], "Yandex")
+        self.assertEqual(hosts["api.disk.yandex.net"], "Yandex")
+        self.assertEqual(hosts["seller.ozon.ru"], "Ozon")
+        self.assertEqual(hosts["api.selectel.ru"], "Selectel")
+
     def test_discovery_never_approves_san_or_csp_by_itself(self):
         policy = {100: ("CORE_CORPORATE", "GroupA")}
         prefixes = [(mod.ipaddress.ip_network("8.8.8.0/24"), {100})]
