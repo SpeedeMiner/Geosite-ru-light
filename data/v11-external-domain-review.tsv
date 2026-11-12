@@ -13,3 +13,8 @@ vtbcapital.com	confirmed	VTB official eFX page references efx@vtbcapital.com
 vigo.tech	confirmed	Vigo corporate statement recorded in docs/v11-coverage-audit.md
 samokat.tech	confirmed	ecom.tech official rebrand announcement
 2gis.biz	confirmed	2GIS business microsites agreement
+soloviev.live	confirmed	Official channel OK community https://m.ok.ru/solovievlive ; broadcaster directory https://www.cableman.ru/channel/solovev-live
+poctechcorp.com	reject	Chinese device manufacturer Zhejiang POCTech owns https://poctechcorp.com/en/ ; not RU company
+yuwellanytime.co.uk	reject	UK distributor Urathon Europe and Chinese Yuwell https://www.yuwellanytime.co.uk/urathon/ ; not RU company
+poctechcgm.com	hold	POCTech name linked to Chinese medical company, but apex ownership not independently verified
+ok.games	hold	NS ns1.ok.ru / hostmaster.odnoklassniki.ru indicates infrastructure link; no official current domain assertion verified
