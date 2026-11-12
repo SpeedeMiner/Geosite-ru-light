@@ -105,3 +105,12 @@ An operator can use a local TSV with `IP<TAB>reason` rows, passed through `--cur
 - For privacy and operational safety, optional curated IPs are not bundled; the script's `--curated-ips` input remains opt-in and validates each entry. The next step for higher recall is carefully chosen additional **first-party IP seeds** with independently documented ownership, not faster/random scanning.
 
 A lack of new findings must not be represented as full coverage of every technical domain. The discovery only observed public data accessible from the GitHub runner in this one bounded execution.
+
+
+### Wider coverage without bulk scans
+
+The IP-first sampler now allocates its bounded IP budget **round-robin across CORE company groups**, rather than taking the first 12 lexicographically sorted IPs. This avoids overrepresenting one operator when multiple first-party seed hosts share its infrastructure.
+
+The repository provides `data/corporate_discovery_core_ips.tsv` with **no IPs prefilled**. Future maintainers may add an exact public IP and documentation of the first-party source. The CI invocation passes this file as `--curated-ips`, but every row is rejected unless it maps to the pinned CORE ASN prefixes. CIDR sweeps, ranges and non-global addresses are disallowed. Its SHA256 is written to `geosite_RU_ip_discovery_status.json` for reproducibility.
+
+The tests cover group-balanced selection, rejection of shared-hosting/foreign IPs, FCrDNS spoofing resistance, SAN verification paths, and separation of historic Shodan hostnames from confirmed first-party services.
