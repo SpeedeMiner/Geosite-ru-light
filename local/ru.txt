@@ -143,3 +143,7 @@ domain:merilo.one
 # https://who.is/rdap/importx5.com
 # https://ipv4.bgp.he.net/dns/importx5.com
 domain:importx5.com
+
+# Russian television service official channel lists the website:
+# https://m.ok.ru/solovievlive ; https://www.cableman.ru/channel/solovev-live
+domain:soloviev.live
