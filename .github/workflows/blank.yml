@@ -2424,6 +2424,7 @@ jobs:
           # Offline discovery regressions are mandatory; only the external
           # network collection below is optional / non-blocking.
           python3 tools/test_discover_corporate_domains.py
+          python3 tools/test_discover_corporate_ip_first.py
 
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
             # External inventory is for audit-only, never imported into RU.
@@ -2495,8 +2496,19 @@ jobs:
             --core-prefixes /tmp/geosite-v41-corporate-core.txt \
             --asn-policy /tmp/geosite-v41-corporate-policy.tsv \
             --timeout 3 --max-candidates 200 --max-dns 60 \
-            --output geosite_RU_discovery_raw.tsv \
+            --output geosite_RU_discovery_site_raw.tsv \
             --status geosite_RU_discovery_status.json
+          # Reworked reality-scanner-v2 IP-first discovery: never sweep CIDRs.
+          # Only public seed IPs proven inside the pinned CORE prefix snapshot
+          # are probed. No insecure TLS, no exposed API keys, no DIRECT writes.
+          timeout 140s python3 tools/discover_corporate_ip_first.py \
+            --seeds data/corporate_discovery_seeds.tsv \
+            --core-prefixes /tmp/geosite-v41-corporate-core.txt \
+            --asn-policy /tmp/geosite-v41-corporate-policy.tsv \
+            --base geosite_RU_discovery_site_raw.tsv \
+            --output geosite_RU_discovery_raw.tsv \
+            --status geosite_RU_ip_discovery_status.json \
+            --max-ips 12 --shodan-limit 3 --timeout 3
           (
             cd domain-list-community
             go run ./tools/geosite-delta discovery-review \
@@ -2519,7 +2531,9 @@ jobs:
           path: |
             geosite_RU_discovered_candidates.md
             geosite_RU_discovery_raw.tsv
+            geosite_RU_discovery_site_raw.tsv
             geosite_RU_discovery_status.json
+            geosite_RU_ip_discovery_status.json
             data/corporate_discovery_seeds.tsv
 
       # Unreviewed upstream additions must not silently land in a production
