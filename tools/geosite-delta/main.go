@@ -88,6 +88,9 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
     if review.status=="reject"&&isRU{
       return fmt.Errorf("rejected external domain %s is unexpectedly covered by RU",domain)
     }
+    if review.status=="hold"&&isRU{
+      return fmt.Errorf("external domain %s is on HOLD pending routing approval but has RU coverage",domain)
+    }
     if review.status=="confirmed"&&!isRU{
       return fmt.Errorf("confirmed candidate %s is missing from RU",domain)
     }
