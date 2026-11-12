@@ -60,3 +60,27 @@ func TestDecodePreservesOtherTypesAndRejectsDuplicateCategories(t *testing.T) {
   _,err=decode(write("duplicate.dat",ru,&router.GeoSite{CountryCode:"ru"}))
   if err==nil{t.Fatal("duplicate RU categories must be rejected")}
 }
+
+func TestRejectedSubtreePolicy4PDA(t *testing.T) {
+  blank := func() rules {
+    return rules{roots:map[string]bool{},full:map[string]bool{},opaque:map[string]bool{}}
+  }
+  for _, tc:=range []struct{name string; roots,full []string; wantConflict bool}{
+    {name:"uncovered",wantConflict:false},
+    {name:"sibling-only",roots:[]string{"4pda.ru","other.to"},wantConflict:false},
+    {name:"apex-root",roots:[]string{"4pda.to"},wantConflict:true},
+    {name:"ancestor-root",roots:[]string{"to"},wantConflict:true},
+    {name:"deep-suffix",roots:[]string{"media.cdn.4pda.to"},wantConflict:true},
+    {name:"exact-apex",full:[]string{"4pda.to"},wantConflict:true},
+    {name:"exact-subdomain",full:[]string{"forum.4pda.to"},wantConflict:true},
+    {name:"unrelated",full:[]string{"not4pda.to"},wantConflict:false},
+  } {
+    t.Run(tc.name,func(t *testing.T){
+      r:=blank()
+      for _,x:=range tc.roots{r.roots[x]=true}
+      for _,x:=range tc.full{r.full[x]=true}
+      got:=rejectedSubtreeConflict(r,"4pda.to")
+      if (got!="")!=tc.wantConflict{t.Fatalf("conflict=%q, want=%t",got,tc.wantConflict)}
+    })
+  }
+}
