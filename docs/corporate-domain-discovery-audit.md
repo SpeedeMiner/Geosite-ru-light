@@ -89,3 +89,19 @@ Original REALITY scanner may use `InsecureSkipVerify: true` for active handshake
 ### Manually curated IP option
 
 An operator can use a local TSV with `IP<TAB>reason` rows, passed through `--curated-ips path.tsv`. Public/global and CORE-prefix membership are mandatory; `SHARED_INFRA`, private IPs, and arbitrary third-party addresses cause the tool to reject the file. No curated IP list is bundled or guessed. Manual curated inputs may be run locally before proposing them as publicly approved seed evidence.
+
+
+## Verified IP-first CI after rewriting Reality Scanner (2026-11-13)
+
+**Successful workflow:** https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43288176902
+**Published production v11.1 unchanged:** RU=3053, BLOCK=43, DAT=82237 bytes. Semantic delta against published release RU added=0, lost=0; BLOCK added=0, lost=0.
+
+- `tools/discover_corporate_ip_first.py` is a new scoped replacement for the Reality Scanner v2 IP discovery path. No REALITY/H2 feasibility score, bulk ASN sweeps, insecure `utls` or embedded API keys.
+- 26 public seed-resolved IPs fell inside pinned CORE prefixes; budget chose 12 for probing. 7 verified TLS handshakes, 2 forward-confirmed PTR records, 3 keyless InternetDB requests.
+- **0 additional unique IP-first domains** were found in this run. Existing website-based collection still observed 33 exact domains (21 covered RU, 12 uncovered third-party dependencies from Selectel CSP, 0 priority candidates). No global CDN or parked domain is permitted into DIRECT from these signals.
+- Two mandatory offline Python test suites: first-party TLS/CSP **5 tests**, IP-first **6 tests**. Go semantic filtering remains mandatory and BLOCK/4PDA regression gates pass.
+- A test intentionally injected an untrusted `SHARED_INFRA` prefix into the IP matcher. We hardened `core_matches()` to **require the ASN's CORE_CORPORATE policy class even when a caller supplies malformed prefix sets**. The first CI with this new test failed, then the corrected implementation passed. Defence-in-depth is independent of the release-input validation.
+- Successful audit artifact `geosite-ru-corporate-domain-discovery` contains `geosite_RU_discovery_site_raw.tsv`, merged `geosite_RU_discovery_raw.tsv`, `geosite_RU_discovery_status.json`, `geosite_RU_ip_discovery_status.json`, and `geosite_RU_discovered_candidates.md`.
+- For privacy and operational safety, optional curated IPs are not bundled; the script's `--curated-ips` input remains opt-in and validates each entry. The next step for higher recall is carefully chosen additional **first-party IP seeds** with independently documented ownership, not faster/random scanning.
+
+A lack of new findings must not be represented as full coverage of every technical domain. The discovery only observed public data accessible from the GitHub runner in this one bounded execution.
