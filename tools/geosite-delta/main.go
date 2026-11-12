@@ -62,10 +62,16 @@ func main(){
   cats:=make(map[string]bool)
   for c:=range old{cats[c]=true};for c:=range now{cats[c]=true}
   keys:=make([]string,0,len(cats));for c:=range cats{keys=append(keys,c)};sort.Strings(keys)
+  lostRU:=0
   for _,c:=range keys {
     a,z:=old[c],now[c]
     added:=differences(z,a);lost:=differences(a,z)
     fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
+    if c=="RU" {
+      lostRU=len(lost)
+      for _,v:=range added {fmt.Printf("RU_NEW %s\n",v)}
+      for _,v:=range lost {fmt.Printf("RU_LOST %s\n",v)}
+    }
     fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
     fmt.Fprintf(&b,"\n## %s — added effective rules (%d)\n\n",c,len(added))
     for _,v:=range added {fmt.Fprintln(&b,"- `"+v+"`")}
@@ -75,4 +81,8 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
+  if lostRU>0 {
+    fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
+    os.Exit(1)
+  }
 }
