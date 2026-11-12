@@ -236,7 +236,9 @@ def core_matches(ips: list[str], prefixes, policy) -> tuple[list[str], list[str]
         address = ipaddress.ip_address(raw)
         for network, asns in prefixes:
             if address in network:
-                matched.update(asns)
+                # Defence in depth: reject SHARED_INFRA even if an unsafe
+                # caller supplied mixed or unvalidated origin evidence.
+                matched.update(a for a in asns if policy[a][0] == CORE_CLASS)
     return ([f"AS{a}" for a in sorted(matched)],
             sorted({policy[a][1] for a in matched}))
 
