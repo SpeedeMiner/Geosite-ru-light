@@ -34,16 +34,32 @@ def valid_public_ip(raw: str):
     return str(ip) if ip.is_global else None
 
 
-def fair_core_targets(targets: dict, budget: int):
-    """Round-robin across CORE company groups, not lexicographic IP ranges."""
+def fair_core_targets(targets: dict, budget: int, rotation: int = 0):
+    """Balanced, reproducibly rotated CORE probes without expanding IP ranges.
+
+    The same selection is replayable with the recorded rotation number. Both
+    groups and addresses within each group rotate so repeated CI runs do not
+    permanently starve groups or IPs beyond the fixed probe budget.
+    """
+    if budget <= 0:
+        return []
     buckets: dict[str, list] = {}
     for ip, record in sorted(targets.items()):
         primary = sorted(record["groups"])[0]
         buckets.setdefault(primary, []).append((ip, record))
+    groups = sorted(buckets)
+    if not groups:
+        return []
+    group_shift = rotation % len(groups)
+    groups = groups[group_shift:] + groups[:group_shift]
+    for group in groups:
+        items = buckets[group]
+        shift = rotation % len(items)
+        buckets[group] = items[shift:] + items[:shift]
     selected = []
     while len(selected) < budget:
         progressed = False
-        for group in sorted(buckets):
+        for group in groups:
             if not buckets[group]:
                 continue
             selected.append(buckets[group].pop(0))
@@ -56,7 +72,7 @@ def fair_core_targets(targets: dict, budget: int):
 
 
 def targets_from_seeds(seeds, prefixes, policy, max_ips: int, resolver=base.public_dns_ips,
-                       curated: Path | None = None):
+                       curated: Path | None = None, rotation: int = 0):
     """Nothing outside published CORE prefixes is ever a probe target."""
     targets = {}
     errors = []
@@ -97,8 +113,8 @@ def targets_from_seeds(seeds, prefixes, policy, max_ips: int, resolver=base.publ
             record["seeds"].add("CURATED_IP (" + cols[1].strip()[:64] + ")")
             record["asns"].update(asns)
             record["groups"].update(groups)
-    # Group-balanced deterministic budget; never sweep or sample CIDR IPs.
-    return fair_core_targets(targets, max_ips), errors, len(targets)
+    # Budgeted group/IP rotation only among explicit public CORE DNS/curated IPs.
+    return fair_core_targets(targets, max_ips, rotation), errors, len(targets)
 
 
 def confirmed_ptr_names(ip: str, resolver=base.public_dns_ips, reverse=socket.gethostbyaddr):
@@ -291,15 +307,19 @@ def main():
     parser.add_argument("--curated-ips", type=Path)
     parser.add_argument("--max-ips", type=int, default=12)
     parser.add_argument("--shodan-limit", type=int, default=0)
+    parser.add_argument("--rotation", type=int, default=0,
+                        help="replayable probe selection cycle; 0 preserves initial order")
     parser.add_argument("--timeout", type=float, default=3)
     args = parser.parse_args()
-    if not 1 <= args.max_ips <= 30 or not 0 <= args.shodan_limit <= 8 or not 1 <= args.timeout <= 7:
+    if (not 1 <= args.max_ips <= 30 or not 0 <= args.shodan_limit <= 8
+            or not 0 <= args.rotation <= 1000000000 or not 1 <= args.timeout <= 7):
         parser.error("IP / Shodan / timeout budget outside safe limits")
     policy = base.read_policy(args.asn_policy)
     prefixes = base.read_core_prefixes(args.core_prefixes, policy)
     seeds = base.load_seeds(args.seeds)
     targets, resolution_errors, total_valid = targets_from_seeds(
-        seeds, prefixes, policy, args.max_ips, curated=args.curated_ips)
+        seeds, prefixes, policy, args.max_ips, curated=args.curated_ips,
+        rotation=args.rotation)
     ip_rows, probe_stats, failures = capture_ip_evidence(
         targets, prefixes, policy, args.timeout, args.shodan_limit)
     combined = merge_rows(read_tsv(args.base), ip_rows)
@@ -313,6 +333,8 @@ def main():
         "source": SOURCE,
         "seed_ip_targets": total_valid,
         "seed_ips_probed": len(targets),
+        "selected_seed_ips": [ip for ip, _ in targets],
+        "selection_rotation": args.rotation,
         "extra_raw_domains": len(ip_rows),
         "merged_raw_domains": len(combined),
         "seed_dns_errors": resolution_errors,
