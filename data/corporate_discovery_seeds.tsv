@@ -2,10 +2,13 @@
 # Only public IPs are contacted. No discovery candidate is contacted.
 Yandex	yandex.ru
 Yandex	cloud.yandex.ru
+Yandex	disk.yandex.ru
+Yandex	api.disk.yandex.net
 VK/Mail.ru	vk.com
 Kaspersky	kaspersky.ru
 Wildberries	wildberries.ru
 Ozon	ozon.ru
+Ozon	seller.ozon.ru
 Sberbank	sberbank.ru
 T-Bank	tbank.ru
 Alfa-Bank	alfabank.ru
@@ -19,3 +22,4 @@ Habr	habr.com
 Tilda	tilda.cc
 1C	1cfresh.com
 Selectel	selectel.ru
+Selectel	api.selectel.ru
