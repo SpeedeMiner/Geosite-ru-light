@@ -243,3 +243,32 @@ CI не только сохраняет реестр `data/v11-external-domain-r
 - Никакие домены из вновь исследованных агрегаторов не добавлялись автоматически. Не приобретались платные выгрузки и не использовались API-ключи.
 
 Следующий практический шаг — пройти P1 домены по официальным страницам и публичным регистрационным сведениям, внести в `data/v11-external-domain-review.tsv` точное решение с доказательством. Сборка сохраняет статус Draft до проверки политики BLOCK и семантической безопасности.
+
+ 
+## Дополнение — P1 ownership audit и защита HOLD (12 ноября 2026)
+
+Источник: официальный сайт владельца (предпочтительнее агрегаторов) плюс отраслевые/реестровые подтверждения. Все URL проверены в рамках текущего прохода.
+
+| Кандидат | Решение | Подтверждение |
+| --- | --- | --- |
+| `soloviev.live` | confirmed, добавить RU | Официальный канал https://m.ok.ru/solovievlive и данные представителя телеканала https://www.cableman.ru/channel/solovev-live |
+| `m-line.expert` | confirmed, добавить RU | ООО «М-ЛАЙН», ИНН 7722749786, https://m-line.expert/contacts ; реестр медорганизаций https://oms44.ru/meditsinskie-organizatsii/1807-ooo-m-lajn |
+| `inme.store` | confirmed, добавить RU | ООО «ИНМИ», ИНН 7722648178, https://www.inme.store/contacts.html и https://inme.store/about/ |
+| `inme.technology` | confirmed, добавить RU | ООО «ИНМИ», https://inme.technology/ и https://m-line.expert/uploads/page/f0feb0ce4ba7a815cb4c35e884721efe.pdf |
+| `poctechcorp.com` | reject | https://poctechcorp.com/en/ — официальный сайт китайского Zhejiang POCTech |
+| `yuwellanytime.co.uk` | reject | https://www.yuwellanytime.co.uk/urathon/ — британский дистрибьютор китайского Yuwell |
+| `mts.am` | reject | https://armeps.am/ppcm/public/contracts/download-attachment?id=d54bf63d-7055-475f-acf9-eadd507694e5 — армянский оператор переименован в независимую Viva Armenia в 2024 |
+| `poctechcgm.com` | hold | Схожесть с POCTech, но самостоятельное владение apex не установлено |
+| `ok.games` | hold | NS и SOA указывают на инфраструктуру ok.ru, но официальное подтверждение самостоятельного домена ещё не найдено |
+| `upravel.com` | hold | https://upravel.com/policy : ООО «АПРЕЙВЕЛ» (РФ); https://mts-link.ru/legal/privacy-policy-soft.pdf : реклама/аналитика, требуется согласование DIRECT/BLOCK политики |
+| `syai.com` | hold | https://syaiofficial.ru/ : российский дистрибьютор, но разработчик исходного продукта — иностранное юридическое лицо |
+
+**Семантический результат после CI**: https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43261715145
+
+- RU=3046, BLOCK=37, DAT=81969 байт.
+- Новых эффективных RU относительно `latest-optimized`: **27**, потерянных **0**.
+- Внешний аудит: 926 всего, 820 уже RU, 74 непокрытых с предупреждением, 32 непокрытых без предупреждения.
+- Решения: confirmed=9, hold=11, reject=4; непроверенные непокрытые **17 P1 + 74 P2 = 91**.
+- Реестр `data/v11-external-domain-review.tsv` и `tools/geosite-delta/main.go` теперь делают ошибкой CI появление в RU любых доменов `reject` **или `hold`**, а также исчезновение `confirmed`. Дополнительное предупреждение/атрибуция не переводит ничего в DIRECT автоматически.
+
+**Осталось**: проверка 17 P1 и 74 P2 по первичным источникам и согласование шести удалённых BLOCK-правил. PR по-прежнему Draft.
