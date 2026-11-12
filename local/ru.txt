@@ -121,3 +121,13 @@ domain:mycdn.me
 # https://samokat.tech/blog/name
 domain:samokat.tech
 domain:ecom.tech
+
+# Vigo LLC (Russian network-quality software); official website and product.
+# https://vigo.tech/tpost/lp6r66yml1-s-3-marta-kompaniya-vigo-ooo-vigo-ispolz
+# https://www.merilo.one/en/personal_data/
+domain:vigo.tech
+
+# Vigo LLC (Russian network-quality software); official website and product.
+# https://vigo.tech/tpost/lp6r66yml1-s-3-marta-kompaniya-vigo-ooo-vigo-ispolz
+# https://www.merilo.one/en/personal_data/
+domain:merilo.one
