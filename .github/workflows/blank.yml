@@ -351,7 +351,7 @@ jobs:
               "mailru", "mailru-group", "max", "mosmetro", "mts", "ok", "okko",
               "ozon", "rutube", "sokolov", "wildberries", "wb", "wink", "x5",
               "yandex",
-              "beget", "carrotquest", "cdek", "comssone", "drweb", "envybox",
+              "beget", "carrotquest", "cdek", "comssone", "drweb", "envybox", "habr",
               "gismeteo", "group-ib", "headhunter", "ideco-ru", "kaspersky", "kontur",
               "mindbox", "myoffice-ru", "netcraze", "nic-ru", "positive-technologies",
               "regru", "selectel", "servicepipe", "skyeng", "smena", "tilda",
@@ -411,8 +411,12 @@ jobs:
                           if re.fullmatch(r"[A-Za-z0-9_.!+-]+", child):
                               import_corporate_category(child)
                       continue
-                  # Do not widen exact/keyword/regexp or attribute-filtered rules.
-                  if len(parts) != 1 or token.startswith(("full:", "regexp:", "keyword:")):
+                  # Keep suffix-only rules. Country-scoped @ru metadata is
+                  # permitted; advertising, telemetry, @!ru and foreign
+                  # country selectors are not promoted to DIRECT.
+                  if token.startswith(("full:", "regexp:", "keyword:")):
+                      continue
+                  if len(parts) > 1 and not all(part.lower() == "@ru" for part in parts[1:]):
                       continue
                   if token.startswith("domain:"):
                       token = token[7:]
@@ -669,6 +673,8 @@ jobs:
               // Unicode aliases seen in text sources.
               aliases := []string{
                   "рф",
+                  "бел",
+                  "қаз",
                   "москва",
                   "рус",
                   "дети",
@@ -1488,7 +1494,7 @@ jobs:
                               continue
                           }
 
-                          if !addRoot(ruCategory, globalSeen, value) {
+                          if !addPositiveRule(ruCategory, globalSeen, value) {
                               duplicateDomainCount++
                               continue
                           }
@@ -1609,10 +1615,14 @@ jobs:
                       if isCoveredByRoots(value, finalRoots) {
                           continue
                       }
-                      if !addRoot(ruCategory, globalSeen, value) {
+                      if !addPositiveRule(ruCategory, globalSeen, value) {
                           continue
                       }
-                      finalRoots[value] = true
+                      // Full vendor endpoints must not behave as broad suffix
+                      // roots in the positive-sources deduplication index.
+                      if !exactRUPositiveHosts[value] {
+                          finalRoots[value] = true
+                      }
                       writtenDomainCount++
                       addedCount++
                   }
@@ -2114,6 +2124,34 @@ jobs:
               }
           }
 
+          func TestV2flyAndTextPositiveSourcesCannotWidenVendorExactEndpoints(t *testing.T) {
+              ru:=&router.GeoSite{CountryCode:"RU"}
+              seen:=make(map[string]bool)
+              for _,value:=range []string{
+                  "prod.ntprog.com", "uat.ntprog.com",
+                  "msk-prod-gate.ntprog.com", "muat-gate.ntprog.com",
+              } {
+                  if !addPositiveRule(ru, seen, value) {
+                      t.Fatalf("first positive import did not add Full %s",value)
+                  }
+                  if addPositiveRule(ru, seen, value) {
+                      t.Fatalf("duplicate Full widened vendor domain %s",value)
+                  }
+                  if !exactRUPositiveHosts[value] {
+                      t.Fatalf("unexpected exact-host list difference %s",value)
+                  }
+              }
+              ru.Domain,_=pruneCoveredDomains(ru.Domain)
+              if len(ru.Domain)!=4 {
+                  t.Fatalf("expected four exact VTB endpoints, found %d",len(ru.Domain))
+              }
+              for _,d:=range ru.Domain {
+                  if d.Type!=router.Domain_Full {
+                      t.Fatalf("unexpected suffix expansion for %s",d.Value)
+                  }
+              }
+          }
+
           func TestVTBExternalGatewayHostsRemainExact(t *testing.T) {
               category := &router.GeoSite{CountryCode: "RU"}
               seen := make(map[string]bool)
@@ -2139,6 +2177,17 @@ jobs:
               }
               if exactCount != 4 || suffixCount != 1 {
                   t.Fatalf("unexpected exact/suffix counts: %d/%d", exactCount, suffixCount)
+              }
+          }
+
+          func TestUnicodeBelKazAndAceFamilyTLDsCollapse(t *testing.T) {
+              for _,domain:=range []string{
+                  "пример.бел", "мысал.қаз",
+                  "example.xn--90ais", "example.xn--80ao21a",
+              }{
+                  if !isRussianTLD(domain) {
+                      t.Fatalf("missing compact Unicode/ACE family TLD: %q",domain)
+                  }
               }
           }
 
