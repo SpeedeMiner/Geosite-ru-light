@@ -2367,6 +2367,15 @@ jobs:
             test -s geosite_RU_external_candidate_audit.md
             python3 tools/build_domain_research_queue.py geosite_RU_external_candidate_audit.md geosite_RU_attribution_research_queue.tsv
             test -s geosite_RU_attribution_research_queue.tsv
+            # Exercise the exact production promotion mode while this is still
+            # a Draft PR, before any release-tag or release-branch mutation.
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_production_preflight.md \
+                ../data/v11-approved-effective-ru.txt
+            )
+            test -s geosite_RU_production_preflight.md
           else
             # Production promotion: compare against the currently published
             # release, require either EXACTLY the 30 reviewed v11 additions
@@ -2391,6 +2400,7 @@ jobs:
             geosite_RU.dat
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
+            geosite_RU_production_preflight.md
             geosite_RU_external_candidate_audit.md
             geosite_RU_attribution_research_queue.tsv
             data/v11-external-domain-review.tsv
