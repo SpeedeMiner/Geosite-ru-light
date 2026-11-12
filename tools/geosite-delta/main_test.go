@@ -112,3 +112,33 @@ func TestReviewExcludes4PDAWithoutBanningSharedCDNChildren(t *testing.T) {
     t.Fatal("deleting mandatory 4pda.to exclusion must fail")
   }
 }
+
+func TestReviewedEffectiveRUAdditionsGate(t *testing.T) {
+  file:=filepath.Join(t.TempDir(),"approved.txt")
+  write:=func(body string) {
+    t.Helper()
+    if err:=os.WriteFile(file,[]byte(body),0600);err!=nil{t.Fatal(err)}
+  }
+  write("# reviewed\ndomain:by\ndomain:2gis.biz\nfull:prod.ntprog.com\n")
+  baseline:=[]string{"domain:2gis.biz","domain:by","full:prod.ntprog.com"}
+  if err:=verifyReviewedAdditions(file,baseline);err!=nil{t.Fatalf("approved list must pass: %v",err)}
+  for _,tc:=range []struct{name string;actual []string}{
+    {"new foreign upstream",append(append([]string{},baseline...),"domain:stream.kick.com")},
+    {"missing approved",[]string{"domain:by","domain:2gis.biz"}},
+    {"duplicate addition",[]string{"domain:by","domain:2gis.biz","full:prod.ntprog.com","domain:by"}},
+  } {
+    t.Run(tc.name,func(t *testing.T) {
+      if err:=verifyReviewedAdditions(file,tc.actual);err==nil {
+        t.Fatalf("expected rejection of unapproved/missing RU additions: %v",tc.actual)
+      }
+    })
+  }
+  write("domain:by\ndomain:by\n")
+  if err:=verifyReviewedAdditions(file,[]string{"domain:by"});err==nil {
+    t.Fatal("duplicate entries in approval manifest must be rejected")
+  }
+  write("opaque:unreviewed\n")
+  if err:=verifyReviewedAdditions(file,[]string{"opaque:unreviewed"});err==nil {
+    t.Fatal("opaque rules need explicit separately reviewed policy")
+  }
+}
