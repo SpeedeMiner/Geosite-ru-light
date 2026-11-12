@@ -60,6 +60,26 @@ func differences(from,to rules) []string {
   for d:=range from.opaque {if !to.opaque[d] {out=append(out,"opaque:"+d)}}
   sort.Strings(out); return out
 }
+// rejectedSubtreeConflict also catches newly imported subdomains under a
+// rejected apex (e.g. forum.4pda.to) even when the apex itself is not covered.
+// It is a safety gate over the actual decoded RU DAT, not the input lists.
+func rejectedSubtreeConflict(r rules, zone string) string {
+  if covered(r,zone,false) {
+    return "parent or apex covers "+zone
+  }
+  suffix:="."+zone
+  for root:=range r.roots {
+    if strings.HasSuffix(root,suffix) {
+      return "domain:"+root
+    }
+  }
+  for full:=range r.full {
+    if strings.HasSuffix(full,suffix) {
+      return "full:"+full
+    }
+  }
+  return ""
+}
 // External candidate inventories are only reviewed here; they are NEVER imported.
 type externalCandidate struct {
   Sources []string `json:"sources"`
@@ -96,8 +116,10 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   ru:=categories["RU"]; block:=categories["BLOCK"]
   for domain,review:=range reviews {
     isRU:=covered(ru,domain,false)
-    if review.status=="reject"&&isRU{
-      return fmt.Errorf("rejected external domain %s is unexpectedly covered by RU",domain)
+    if review.status=="reject" {
+      if conflict:=rejectedSubtreeConflict(ru,domain);conflict!="" {
+        return fmt.Errorf("rejected external domain %s (including subdomains) conflicts with RU: %s",domain,conflict)
+      }
     }
     if review.status=="hold"&&isRU{
       return fmt.Errorf("external domain %s is on HOLD pending routing approval but has RU coverage",domain)
