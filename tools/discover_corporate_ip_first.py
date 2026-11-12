@@ -319,6 +319,9 @@ def main():
                    "timeout": args.timeout},
         "core_prefix_sha256": base.sha256(args.core_prefixes),
         "policy_sha256": base.sha256(args.asn_policy),
+        "curated_ip_seed_sha256": (base.sha256(args.curated_ips)
+                                    if args.curated_ips is not None and args.curated_ips.exists()
+                                    else None),
     }
     args.status.write_text(json.dumps(status, ensure_ascii=False, indent=2,
                                       sort_keys=True) + "\n", encoding="utf-8")
