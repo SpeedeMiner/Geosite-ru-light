@@ -4,6 +4,7 @@ package main
 
 import (
   "fmt"
+  "encoding/json"
   "os"
   "sort"
   "strings"
@@ -48,8 +49,55 @@ func differences(from,to rules) []string {
   for d:=range from.full {if !covered(to,d,false) {out=append(out,"full:"+d)}}
   sort.Strings(out); return out
 }
+// External candidate inventories are only reviewed here; they are NEVER imported.
+type externalCandidate struct {
+  Sources []string `json:"sources"`
+  Reason string `json:"reason"`
+}
+type externalInventory struct {
+  Domains map[string]externalCandidate `json:"domains"`
+}
+func reportExternalCandidates(input, path string, categories map[string]rules) error {
+  contents, err:=os.ReadFile(input);if err!=nil{return err}
+  var inventory externalInventory
+  if err:=json.Unmarshal(contents,&inventory);err!=nil{return err}
+  if len(inventory.Domains)==0{return fmt.Errorf("empty candidate inventory")}
+  ru:=categories["RU"]; block:=categories["BLOCK"]
+  names:=make([]string,0,len(inventory.Domains))
+  for domain:=range inventory.Domains{names=append(names,domain)}
+  sort.Strings(names)
+  var b strings.Builder
+  fmt.Fprintln(&b,"# External domain candidates — audit only (no automatic DIRECT import)")
+  fmt.Fprintln(&b,"")
+  fmt.Fprintln(&b,"Source: w1zardz/amnezia-vpn-russia-split-tunneling data/external-candidates.json; upstream metadata may be stale.")
+  fmt.Fprintln(&b,"DNS/ownership is **not** verified by this report. Review every uncovered candidate manually.")
+  fmt.Fprintln(&b,"")
+  fmt.Fprintln(&b,"| Domain | Status | Sources | Upstream rejection reason |")
+  fmt.Fprintln(&b,"|---|---|---|---|")
+  count:=map[string]int{}
+  for _,raw:=range names{
+    d:=strings.ToLower(strings.TrimSuffix(strings.TrimSpace(raw),"."))
+    if d=="" || strings.ContainsAny(d," |\\\t\r\n") {continue}
+    candidate:=inventory.Domains[raw]
+    status:="manual_review_uncovered"
+    if covered(ru,d,false){status="already_covered_RU"
+    }else if covered(block,d,false){status="covered_BLOCK_review_conflict"
+    }else if candidate.Reason!=""{status="uncovered_with_upstream_warning"}
+    count[status]++
+    why:=strings.ReplaceAll(candidate.Reason,"|","/")
+    sources:=strings.Join(candidate.Sources,", ")
+    fmt.Fprintf(&b,"| `%s` | %s | %s | %s |\n",d,status,sources,why)
+  }
+  if err:=os.WriteFile(path,[]byte(b.String()),0644);err!=nil{return err}
+  fmt.Printf("EXTERNAL_CANDIDATES total=%d",len(inventory.Domains))
+  for _,k:=range []string{"already_covered_RU","covered_BLOCK_review_conflict","uncovered_with_upstream_warning","manual_review_uncovered"}{
+    fmt.Printf(" %s=%d",k,count[k])
+  }
+  fmt.Println()
+  return nil
+}
 func main(){
-  if len(os.Args)!=4 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md");os.Exit(2)}
+  if len(os.Args)!=4 && len(os.Args)!=6 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
   var b strings.Builder
@@ -81,6 +129,9 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
+  if len(os.Args)==6 {
+    if err:=reportExternalCandidates(os.Args[4],os.Args[5],now);err!=nil{panic(err)}
+  }
   if lostRU>0 {
     fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
     os.Exit(1)
