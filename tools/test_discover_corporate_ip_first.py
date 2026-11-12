@@ -31,6 +31,17 @@ class IPFirstTests(unittest.TestCase):
         self.assertEqual(target[0][1]["asns"], {"AS100"})
         self.assertIsNone(ipfirst.valid_public_ip("10.0.0.1"))
 
+    def test_core_address_beyond_first_eight_dns_answers(self):
+        # Shared or non-CORE answers must not starve later corporate IPs.
+        def resolve(_):
+            return ["9.9.9." + str(n) for n in range(1, 9)] + ["8.8.8.8"]
+        targets, errors, total = ipfirst.targets_from_seeds(
+            [("CorporateGroup", "corp.example.ru")], self.prefixes,
+            self.policy, 1, resolver=resolve)
+        self.assertEqual(errors, [])
+        self.assertEqual(total, 1)
+        self.assertEqual([ip for ip, _ in targets], ["8.8.8.8"])
+
     def test_curated_ip_must_be_core_not_hosting(self):
         with tempfile.TemporaryDirectory() as root:
             path = pathlib.Path(root) / "ips.tsv"
