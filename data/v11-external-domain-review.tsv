@@ -24,3 +24,20 @@ inme.technology	confirmed	ООО ИНМИ official https://inme.technology/ and 
 mts.am	reject	Official operator document confirms MTS Armenia renamed independent Viva Armenia on 2024-03-25 https://armeps.am/ppcm/public/contracts/download-attachment?id=d54bf63d-7055-475f-acf9-eadd507694e5
 upravel.com	hold	Official Russian legal entity ООО АПРЕЙВЕЛ INN 7728462211 https://upravel.com/policy ; third-party https://mts-link.ru/legal/privacy-policy-soft.pdf lists domain as web-analytics/adtech, routing policy not approved
 syai.com	hold	Official RU distributor https://syaiofficial.ru/ cites ООО МедФарм Дистрибуция, but iOS app developer SYAI HEALTH TECHNOLOGY PTE. LTD and primary syai.com are foreign: https://foxdata.com/ru/app-marketing-analytics/6695746020/as/RU/syai-ru/
+2gis.qa	confirmed	2026-11-12 official 2GIS LLC redirect: https://2gis.qa/ -> https://info.2gis.com/ (2GIS L.L.C. footer)
+anytimeviewru.com	reject	2026-11-12 first-party agreement https://www.anytimeviewru.com/static/3.0.0.0/en-CMTHvzKy.html names Polish operator Yuwell Medtech Poland Sp. z o.o.; RU letters are not ownership
+mts.it	reject	2026-11-12 Italian registrant Puglia.com S.r.l.s. and parked ParkLogic NS https://robtex.com/en/dns-lookup/it/mts ; https://webrate.org/site/mts.it/
+2gis.sa	hold	2026-11-12 third-party 2GIS regional-domain catalog https://apify.com/bovi/2gis-places-scraper/input-schema ; no confirmed active first-party redirect or public registrant
+dv.team	hold	2026-11-12 historical shared hosting evidence https://ipv4.bgp.he.net/net/185.71.64.0/22 ; no first-party corporate registration established
+icq.net	hold	2026-11-12 VK discontinued ICQ messenger June 26 2024 https://www.kommersant.ru/doc/6791128 ; current use and registered owner unconfirmed
+mail.ua	hold	2026-11-12 registrant MGL.Mail.ru Internet Assets Limited but registry status clientHold and no live DNS https://dig.ua/en/search/mail.ua/about ; affiliation does not imply functional DIRECT
+mobile-vk.com	hold	2026-11-12 appears in historical dedicated VKONTAKTE-FRONT network https://2ip.io/ru/net/93.186.224.0-93.186.231.255/ ; first-party current use unconfirmed
+mos.city	hold	2026-11-12 no authoritative confirmation of official Moscow municipal or other RU corporate ownership; brand similarity is insufficient
+mts.md	hold	2026-11-12 no verifiable affiliation with Russian MTS group; .md and similar name not evidence
+mts.ua	hold	2026-11-12 previously Ukrainian MTS/Vodafone site https://amcu.gov.ua/static-objects/amcu/uploads/public/5db/1c4/508/5db1c4508e09c030122477.pdf ; current corporate ownership and active service unverified
+ozon.de	hold	2026-11-12 no official Ozon corporate reference or current legal domain owner; .de brand collision risk
+ozon.vip	hold	2026-11-12 no official Ozon reference or current corporate registrant; possible brand impersonation
+sber.online	hold	2026-11-12 https://help.ptsecurity.com/ru-RU/projects/nad/12.3/help/5820224779 lists Sber.online as application label not proof of this registered hostname
+t-cdn.net	hold	2026-11-12 mentioned as example domain in historical third-party CDN patent https://patents.google.com/patent/WO2012152765A1 ; no RU operator attribution
+wildberries.az	hold	2026-11-12 historical redirect to wildberries.ru https://builtwith.com/ru/redirects/wildberries.ru ; not enough evidence for active 2026 control or intended service
+wildberries.md	hold	2026-11-12 historical Moldova launches referenced md.wildberries.ru, not wildberries.md https://kz.fashionnetwork.com/newsPdf/downloadPdf/?id=1317113 ; first-party current domain use unconfirmed
