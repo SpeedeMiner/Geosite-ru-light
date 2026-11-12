@@ -159,3 +159,8 @@ domain:inme.store
 # ООО ИНМИ, INN 7722648178; official product/contact page and hosted device manual:
 # https://inme.technology/ ; https://m-line.expert/uploads/page/f0feb0ce4ba7a815cb4c35e884721efe.pdf
 domain:inme.technology
+
+# 2GIS Qatar domain redirects to 2GIS LLC official info website (checked 2026-11-12):
+# https://2gis.qa/ -> https://info.2gis.com/ (2GIS L.L.C. footer, razr@2gis.ru)
+# https://apify.com/bovi/2gis-places-scraper/input-schema
+domain:2gis.qa
