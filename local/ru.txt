@@ -211,3 +211,12 @@ domain:wildberries.uz
 domain:wildberries.kg
 # Ozon Uzbekistan official store https://www.ozon.uz/seller/ozon/ (other ozon.am/.kg unverified)
 domain:ozon.uz
+
+# v11.1 newly independently confirmed roots; 2026-11-12.
+# Ozon Kyrgyzstan official seller storefront and Ozon executive's confirmation:
+# https://seller.ozon.kg/ ; https://24.kg/english/263414__Ozonkg_marketplace_to_be_opened_in_Kyrgyzstan/
+domain:ozon.kg
+# Selectel-owned technical DNS / infrastructure, including company-internal api subdomains:
+# https://selectel.ru/blog/from-idea-to-exploit/
+# https://selectel.ru/blog/upravlenie-domenami-s-selectel-dns-api/
+domain:selectel.org
