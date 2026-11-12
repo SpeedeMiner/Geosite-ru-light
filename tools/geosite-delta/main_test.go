@@ -84,3 +84,31 @@ func TestRejectedSubtreePolicy4PDA(t *testing.T) {
     })
   }
 }
+
+func TestReviewExcludes4PDAWithoutBanningSharedCDNChildren(t *testing.T) {
+  directory:=t.TempDir()
+  inventory:=filepath.Join(directory,"candidates.json")
+  reviews:=filepath.Join(directory,"reviews.tsv")
+  output:=filepath.Join(directory,"report.md")
+  if err:=os.WriteFile(inventory,[]byte(`{"domains":{"4pda.to":{"sources":["test"]},"akamaized.net":{"sources":["test"]}}}`),0600);err!=nil{t.Fatal(err)}
+  content:="4pda.to\treject\tUser rule\nwww.4pda.to\treject\tUser rule\nakamaized.net\treject\tShared CDN\n"
+  if err:=os.WriteFile(reviews,[]byte(content),0600);err!=nil{t.Fatal(err)}
+  makeCats:=func(ruRoots ...string) map[string]rules {
+    roots:=map[string]bool{}
+    for _,r:=range ruRoots{roots[r]=true}
+    return map[string]rules{
+      "RU":{roots:roots,full:map[string]bool{},opaque:map[string]bool{}},
+      "BLOCK":{roots:map[string]bool{},full:map[string]bool{},opaque:map[string]bool{}},
+    }
+  }
+  if err:=reportExternalCandidates(inventory,output,reviews,makeCats("kp-config-smart-tv.akamaized.net"));err!=nil{
+    t.Fatalf("foreign shared CDN may host approved RU-specific endpoint: %v",err)
+  }
+  if err:=reportExternalCandidates(inventory,output,reviews,makeCats("forum.4pda.to"));err==nil{
+    t.Fatal("4pda.to descendants must be forbidden")
+  }
+  if err:=os.WriteFile(reviews,[]byte("akamaized.net\treject\tShared CDN\n"),0600);err!=nil{t.Fatal(err)}
+  if err:=reportExternalCandidates(inventory,output,reviews,makeCats());err==nil{
+    t.Fatal("deleting mandatory 4pda.to exclusion must fail")
+  }
+}
