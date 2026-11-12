@@ -105,6 +105,8 @@ domain:kaspersky-labs.com
 domain:ksn-crypto-info.com
 domain:ozon.com
 domain:2gis.com
+# Official 2GIS business microsites: https://law.2gis.kz/microsite/ru
+domain:2gis.biz
 domain:skbkontur.com
 domain:beeline.kz
 domain:hh.kz
