@@ -2285,6 +2285,10 @@ jobs:
           )
           test -s geosite_RU_semantic_delta.md
           test -s geosite_RU_external_candidate_audit.md
+          python3 tools/build_domain_research_queue.py \
+            geosite_RU_external_candidate_audit.md
+            geosite_RU_attribution_research_queue.tsv geosite_RU_attribution_research_queue.tsv
+          test -s geosite_RU_attribution_research_queue.tsv
 
       - name: Upload PR candidate DAT and audit report
         if: github.event_name == 'pull_request'
