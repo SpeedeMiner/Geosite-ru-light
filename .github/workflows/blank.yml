@@ -422,8 +422,8 @@ jobs:
               raise SystemExit("empty direct v2fly corporate domain extraction")
           direct_output = Path("v2fly-corporate-extra-domains.txt")
           direct_output.write_text(
-              "# Generated positive v2fly suffix rules\\n"
-              + "".join(f"domain:{value}\\n" for value in sorted(corporate_domains)),
+              "# Generated positive v2fly suffix rules\n"
+              + "".join(f"domain:{value}\n" for value in sorted(corporate_domains)),
               encoding="utf-8",
           )
           print(f"Direct v2fly corporate suffix rules: {len(corporate_domains)}")
