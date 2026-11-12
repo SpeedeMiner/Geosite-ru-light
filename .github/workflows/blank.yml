@@ -2508,6 +2508,7 @@ jobs:
 
       - name: Upload corporate-domain discovery audit
         if: ${{ always() && (github.event_name == 'pull_request' || github.event_name == 'schedule') }}
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: geosite-ru-corporate-domain-discovery
