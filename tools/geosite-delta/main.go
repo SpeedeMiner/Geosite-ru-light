@@ -13,7 +13,7 @@ import (
   "google.golang.org/protobuf/proto"
 )
 
-type rules struct {roots map[string]bool; full map[string]bool}
+type rules struct {roots map[string]bool; full map[string]bool; opaque map[string]bool}
 func decode(path string) (map[string]rules,error) {
   data,err:=os.ReadFile(path); if err!=nil{return nil,err}
   var db router.GeoSiteList
@@ -22,12 +22,22 @@ func decode(path string) (map[string]rules,error) {
   for _,site:=range db.Entry {
     if site==nil {continue}
     cat:=strings.ToUpper(strings.TrimSpace(site.CountryCode))
-    r:=rules{make(map[string]bool),make(map[string]bool)}
+    if cat=="" {return nil,fmt.Errorf("empty category in %s",path)}
+    if _,duplicate:=out[cat];duplicate{return nil,fmt.Errorf("duplicate category %s in %s",cat,path)}
+    r:=rules{roots:make(map[string]bool),full:make(map[string]bool),opaque:make(map[string]bool)}
     for _,d:=range site.Domain {
       if d==nil {continue}
       name:=strings.TrimSuffix(strings.ToLower(strings.TrimSpace(d.Value)),".")
-      if d.Type==router.Domain_RootDomain {r.roots[name]=true}
-      if d.Type==router.Domain_Full {r.full[name]=true}
+      switch d.Type {
+      case router.Domain_RootDomain:
+        r.roots[name]=true
+      case router.Domain_Full:
+        r.full[name]=true
+      default:
+        // Regex / Plain / future types cannot be reduced to suffix semantics.
+        // Preserve their exact original encoding as a conservative regression gate.
+        r.opaque[fmt.Sprintf("%v:%s",d.Type,strings.TrimSpace(d.Value))]=true
+      }
     }
     out[cat]=r
   }
@@ -47,6 +57,7 @@ func differences(from,to rules) []string {
   var out []string
   for d:=range from.roots {if !covered(to,d,true) {out=append(out,"domain:"+d)}}
   for d:=range from.full {if !covered(to,d,false) {out=append(out,"full:"+d)}}
+  for d:=range from.opaque {if !to.opaque[d] {out=append(out,"opaque:"+d)}}
   sort.Strings(out); return out
 }
 // External candidate inventories are only reviewed here; they are NEVER imported.
@@ -153,7 +164,7 @@ func main(){
   var b strings.Builder
   fmt.Fprintln(&b,"# Semantic comparison: release DAT vs v11 candidate")
   fmt.Fprintln(&b,"")
-  fmt.Fprintln(&b,"Rules are compared by effective suffix/full-domain coverage; no inferred DNS ownership.")
+  fmt.Fprintln(&b,"Rules are compared by effective suffix/full-domain coverage. Regex/Plain or future rule types, if any, are compared conservatively by exact encoding; no inferred DNS ownership.")
   fmt.Fprintln(&b,"")
   fmt.Fprintln(&b,"| Category | Release rules | Candidate rules | Newly covered rules | No longer covered rules |")
   fmt.Fprintln(&b,"|---|---:|---:|---:|---:|")
@@ -164,13 +175,13 @@ func main(){
   for _,c:=range keys {
     a,z:=old[c],now[c]
     added:=differences(z,a);lost:=differences(a,z)
-    fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
+    fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
     if c=="RU" {
       lostRU=len(lost)
       for _,v:=range added {fmt.Printf("RU_NEW %s\n",v)}
       for _,v:=range lost {fmt.Printf("RU_LOST %s\n",v)}
     }
-    fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full),len(z.roots)+len(z.full),len(added),len(lost))
+    fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
     fmt.Fprintf(&b,"\n## %s — added effective rules (%d)\n\n",c,len(added))
     for _,v:=range added {fmt.Fprintln(&b,"- `"+v+"`")}
     fmt.Fprintf(&b,"\n## %s — no longer covered (%d)\n\n",c,len(lost))
