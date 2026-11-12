@@ -169,3 +169,8 @@ domain:2gis.qa
 # https://ru.hexlet.io/pages/contacts (ООО Хекслет Рус, INN 7325174845)
 # https://hexlet.io/pages/contacts (TOO Hexlet Kazakhstan, BIN 230340043714)
 domain:hexlet.io
+
+# ООО Лингуалео, Moscow INN 7710749260; first-party service and legal operator:
+# https://lingualeo.com/ru/blog/yuridicheskaya-informacziya/
+# https://lingualeo.com/ru/blog/polozhenie-o-zashhite-personalnyih-dannyih/
+domain:lingualeo.com
