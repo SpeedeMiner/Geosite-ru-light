@@ -113,6 +113,13 @@ func TestReviewExcludes4PDAWithoutBanningSharedCDNChildren(t *testing.T) {
   }
 }
 
+func approvedCandidate() rules {
+  return rules{
+    roots:map[string]bool{"by":true,"2gis.biz":true,"new.example.org":true},
+    full:map[string]bool{"prod.ntprog.com":true}, opaque:map[string]bool{},
+  }
+}
+
 func TestReviewedEffectiveRUAdditionsGate(t *testing.T) {
   file:=filepath.Join(t.TempDir(),"approved.txt")
   write:=func(body string) {
@@ -121,42 +128,55 @@ func TestReviewedEffectiveRUAdditionsGate(t *testing.T) {
   }
   write("# reviewed\ndomain:by\ndomain:2gis.biz\nfull:prod.ntprog.com\n")
   baseline:=[]string{"domain:2gis.biz","domain:by","full:prod.ntprog.com"}
-  if err:=verifyReviewedAdditions(file,baseline);err!=nil{t.Fatalf("approved list must pass: %v",err)}
+  if err:=verifyReviewedAdditions(file,baseline,approvedCandidate());err!=nil{t.Fatalf("approved list must pass: %v",err)}
   for _,tc:=range []struct{name string;actual []string}{
     {"new foreign upstream",append(append([]string{},baseline...),"domain:stream.kick.com")},
     {"missing approved",[]string{"domain:by","domain:2gis.biz"}},
     {"duplicate addition",[]string{"domain:by","domain:2gis.biz","full:prod.ntprog.com","domain:by"}},
   } {
     t.Run(tc.name,func(t *testing.T) {
-      if err:=verifyReviewedAdditions(file,tc.actual);err==nil {
+      candidate:=approvedCandidate()
+      if tc.name=="missing approved" {
+        // A pinned rule already present in candidate is not missing.
+        // Remove it from candidate as well to simulate real coverage loss.
+        delete(candidate.full,"prod.ntprog.com")
+      }
+      if err:=verifyReviewedAdditions(file,tc.actual,candidate);err==nil {
         t.Fatalf("expected rejection of unapproved/missing RU additions: %v",tc.actual)
       }
     })
   }
   write("domain:by\ndomain:by\n")
-  if err:=verifyReviewedAdditions(file,[]string{"domain:by"});err==nil {
+  if err:=verifyReviewedAdditions(file,[]string{"domain:by"},approvedCandidate());err==nil {
     t.Fatal("duplicate entries in approval manifest must be rejected")
   }
   write("opaque:unreviewed\n")
-  if err:=verifyReviewedAdditions(file,[]string{"opaque:unreviewed"});err==nil {
+  if err:=verifyReviewedAdditions(file,[]string{"opaque:unreviewed"},approvedCandidate());err==nil {
     t.Fatal("opaque rules need explicit separately reviewed policy")
   }
 }
 
-func TestReleaseTransitionAfterPublishedV11(t *testing.T) {
-  path:=filepath.Join(t.TempDir(),"approved.txt")
-  if err:=os.WriteFile(path,[]byte("domain:2gis.biz\nfull:prod.ntprog.com\n"),0600);err!=nil{t.Fatal(err)}
-  if err:=verifyCurrentReleaseTransition(path,nil);err!=nil {
-    t.Fatalf("no new RU rules after v11 publication should pass: %v",err)
+func TestPinnedRUAfterReleaseAndRootCoverage(t *testing.T) {
+  file:=filepath.Join(t.TempDir(),"pinned.txt")
+  if err:=os.WriteFile(file,[]byte("domain:2gis.biz\nfull:prod.ntprog.com\n"),0600);err!=nil{t.Fatal(err)}
+  c:=approvedCandidate()
+  if err:=verifyReviewedAdditions(file,nil,c);err!=nil{
+    t.Fatalf("already published pinned roots must pass: %v",err)
   }
-  if err:=verifyCurrentReleaseTransition(path,[]string{"domain:2gis.biz","full:prod.ntprog.com"});err!=nil {
-    t.Fatalf("first v11 promotion should preserve approved set: %v",err)
+  if err:=verifyReviewedAdditions(file,[]string{"domain:2gis.biz"},c);err!=nil{
+    t.Fatalf("approved new rule plus old Full should pass: %v",err)
   }
-  if err:=verifyCurrentReleaseTransition(path,[]string{"domain:unverified.foreign"});err==nil {
-    t.Fatal("new foreign root after v11 publication must fail closed")
+  if err:=verifyReviewedAdditions(file,[]string{"domain:unverified.foreign"},c);err==nil{
+    t.Fatal("unreviewed new root must never pass")
   }
-  if err:=os.Remove(path);err!=nil{t.Fatal(err)}
-  if err:=verifyCurrentReleaseTransition(path,nil);err==nil {
-    t.Fatal("missing approval manifest must not silently pass")
+  // A Full rule is not allowed to substitute for an approved RootDomain.
+  c.roots=map[string]bool{}
+  c.full["2gis.biz"]=true
+  if err:=verifyReviewedAdditions(file,nil,c);err==nil{
+    t.Fatal("RootDomain must not silently narrow to Full")
+  }
+  if err:=os.Remove(file);err!=nil{t.Fatal(err)}
+  if err:=verifyReviewedAdditions(file,nil,approvedCandidate());err==nil{
+    t.Fatal("missing manifest must fail")
   }
 }

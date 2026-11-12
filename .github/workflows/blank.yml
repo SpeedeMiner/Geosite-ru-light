@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11)
+name: Build Ultimate Light RU Geosite (Optimized v11.1)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -16,6 +16,7 @@ on:
       # Audit policy and comparator changes must also trigger PR checks.
       - "data/**"
       - "tools/**"
+      - "docs/**"
   schedule:
     # Каждый понедельник в 00:00 UTC
     - cron: "0 0 * * 1"
@@ -351,7 +352,7 @@ jobs:
               "mailru", "mailru-group", "max", "mosmetro", "mts", "ok", "okko",
               "ozon", "rutube", "sokolov", "wildberries", "wb", "wink", "x5",
               "yandex",
-              "beget", "carrotquest", "cdek", "comssone", "drweb", "envybox",
+              "beget", "carrotquest", "cdek", "comssone", "drweb", "envybox", "habr",
               "gismeteo", "group-ib", "headhunter", "ideco-ru", "kaspersky", "kontur",
               "mindbox", "myoffice-ru", "netcraze", "nic-ru", "positive-technologies",
               "regru", "selectel", "servicepipe", "skyeng", "smena", "tilda",
@@ -390,6 +391,32 @@ jobs:
           corporate_visited = set()
           corporate_missing = set()
 
+          def safe_corporate_suffix_tokens(parts):
+              if not parts:
+                  return False
+              token = parts[0].lower()
+              if token.startswith(("full:", "regexp:", "keyword:", "include:")):
+                  return False
+              # v2fly attributes are selectors. Do not treat arbitrary
+              # @cn/@!ru/@ads/@telemetry as RU-owned domain evidence.
+              return all(attr.lower() == "@ru" for attr in parts[1:])
+
+          # Regression tests run at each PR and main/scheduled build.
+          assert safe_corporate_suffix_tokens(["service.example.com"])
+          assert safe_corporate_suffix_tokens(["service.example.com", "@ru"])
+          assert safe_corporate_suffix_tokens(["service.example.com", "@RU", "@ru"])
+          for sample in (
+              ["service.example.com", "@ads"],
+              ["service.example.com", "@ru", "@ads"],
+              ["service.example.com", "@!ru"],
+              ["service.example.com", "@cn"],
+              ["service.example.com", "@telemetry"],
+              ["full:service.example.com", "@ru"],
+              ["regexp:.*", "@ru"],
+              ["keyword:service", "@ru"],
+          ):
+              assert not safe_corporate_suffix_tokens(sample), sample
+
           def import_corporate_category(name: str):
               name = normalize(name)
               if name in corporate_visited or is_excluded(name):
@@ -411,8 +438,7 @@ jobs:
                           if re.fullmatch(r"[A-Za-z0-9_.!+-]+", child):
                               import_corporate_category(child)
                       continue
-                  # Do not widen exact/keyword/regexp or attribute-filtered rules.
-                  if len(parts) != 1 or token.startswith(("full:", "regexp:", "keyword:")):
+                  if not safe_corporate_suffix_tokens(parts):
                       continue
                   if token.startswith("domain:"):
                       token = token[7:]
@@ -669,6 +695,8 @@ jobs:
               // Unicode aliases seen in text sources.
               aliases := []string{
                   "рф",
+                  "бел",
+                  "қаз",
                   "москва",
                   "рус",
                   "дети",
@@ -1488,7 +1516,7 @@ jobs:
                               continue
                           }
 
-                          if !addRoot(ruCategory, globalSeen, value) {
+                          if !addPositiveRule(ruCategory, globalSeen, value) {
                               duplicateDomainCount++
                               continue
                           }
@@ -1609,10 +1637,14 @@ jobs:
                       if isCoveredByRoots(value, finalRoots) {
                           continue
                       }
-                      if !addRoot(ruCategory, globalSeen, value) {
+                      if !addPositiveRule(ruCategory, globalSeen, value) {
                           continue
                       }
-                      finalRoots[value] = true
+                      // Full vendor endpoints must not behave as broad suffix
+                      // roots in the positive-sources deduplication index.
+                      if !exactRUPositiveHosts[value] {
+                          finalRoots[value] = true
+                      }
                       writtenDomainCount++
                       addedCount++
                   }
@@ -2114,6 +2146,34 @@ jobs:
               }
           }
 
+          func TestV2flyAndTextPositiveSourcesCannotWidenVendorExactEndpoints(t *testing.T) {
+              ru:=&router.GeoSite{CountryCode:"RU"}
+              seen:=make(map[string]bool)
+              for _,value:=range []string{
+                  "prod.ntprog.com", "uat.ntprog.com",
+                  "msk-prod-gate.ntprog.com", "muat-gate.ntprog.com",
+              } {
+                  if !addPositiveRule(ru, seen, value) {
+                      t.Fatalf("first positive import did not add Full %s",value)
+                  }
+                  if addPositiveRule(ru, seen, value) {
+                      t.Fatalf("duplicate Full widened vendor domain %s",value)
+                  }
+                  if !exactRUPositiveHosts[value] {
+                      t.Fatalf("unexpected exact-host list difference %s",value)
+                  }
+              }
+              ru.Domain,_=pruneCoveredDomains(ru.Domain)
+              if len(ru.Domain)!=4 {
+                  t.Fatalf("expected four exact VTB endpoints, found %d",len(ru.Domain))
+              }
+              for _,d:=range ru.Domain {
+                  if d.Type!=router.Domain_Full {
+                      t.Fatalf("unexpected suffix expansion for %s",d.Value)
+                  }
+              }
+          }
+
           func TestVTBExternalGatewayHostsRemainExact(t *testing.T) {
               category := &router.GeoSite{CountryCode: "RU"}
               seen := make(map[string]bool)
@@ -2139,6 +2199,17 @@ jobs:
               }
               if exactCount != 4 || suffixCount != 1 {
                   t.Fatalf("unexpected exact/suffix counts: %d/%d", exactCount, suffixCount)
+              }
+          }
+
+          func TestUnicodeBelKazAndAceFamilyTLDsCollapse(t *testing.T) {
+              for _,domain:=range []string{
+                  "пример.бел", "мысал.қаз",
+                  "example.xn--90ais", "example.xn--80ao21a",
+              }{
+                  if !isRussianTLD(domain) {
+                      t.Fatalf("missing compact Unicode/ACE family TLD: %q",domain)
+                  }
               }
           }
 
@@ -2389,6 +2460,24 @@ jobs:
           fi
           test -s geosite_RU_semantic_delta.md
 
+      # Unreviewed upstream additions must not silently land in a production
+      # release. Preserve the candidate and the diff even if main/schedule gate
+      # fails so maintainers can inspect and approve the incremental change.
+      - name: Preserve blocked auto-update candidate for review
+        if: ${{ failure() && github.ref == 'refs/heads/main' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosite-ru-main-blocked-update-review
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+            geosite_RU_semantic_delta.md
+            geosite_RU_categories.txt
+            geosite_RU_new_sources.txt
+            data/v11-approved-effective-ru.txt
+
       - name: Upload PR candidate DAT and audit report
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
@@ -2436,7 +2525,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11"
+          name: "Optimized RU GeoSite v11.1"
           make_latest: true
 
           files: |
@@ -2447,7 +2536,7 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite v11
+            # Optimized RU GeoSite v11.1
 
             Verified Russian-region GeoSite update with compact RU/BY/KZ domain coverage.
 
@@ -2558,20 +2647,20 @@ jobs:
       # ------------------------------------------------------------
       # 11b. Immutable versioned release and floating-tag alignment.
       # ------------------------------------------------------------
-      - name: Publish immutable v11 release
+      - name: Publish immutable v11.1 release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # This tag represents the audited v11 source snapshot. Never move an
+          # This tag represents the audited v11.1 source snapshot. Never move an
           # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11 release already exists; preserving its tag."
+          if gh release view v11.1 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11.1 release already exists; preserving its tag."
           else
             EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11 \
+            gh release create v11.1 \
               "$OUTPUT_FILE" \
               "$OUTPUT_SHA_FILE" \
               "$CATEGORY_FILE" \
@@ -2579,12 +2668,12 @@ jobs:
               "$NEW_SOURCES_REPORT_FILE" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11" \
+              --title "GeoSite RU Light v11.1" \
               --latest=false \
-              --notes "v11: 30 reviewed effective RU additions; zero lost RU coverage; all 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/1"
+              --notes "v11.1: 57 reviewed pinned RU rules, technical CDN and corporate expansion, safe @ru parser, Belarus/Kazakhstan Unicode aliases, exact VTB vendor hosts and zero lost RU coverage. All 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/3"
           fi
-          gh release view v11 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+          gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Align floating latest-optimized tag with successful main release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -2596,7 +2685,7 @@ jobs:
           CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
           echo "Previously published floating tag: $CURRENT"
           if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 remains immutable.
+            # latest-optimized is intentionally floating; v11 and v11.1 remain immutable.
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
               -f sha="$GITHUB_SHA" -F force=true >/dev/null
           fi
