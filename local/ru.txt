@@ -83,3 +83,33 @@ domain:ipaddress.is
 domain:deviceinfo.me
 domain:myip.privex.io
 domain:address.computer
+
+# Corporate and infrastructure domains outside compact RU/BY/KZ TLD roots.
+# These are domain suffixes, not ASN-derived or IP-wide rules.
+domain:ddos-guard.net
+domain:ngenix.net
+domain:qrator.net
+domain:selcdn.net
+domain:selectel.com
+domain:edgecenter.io
+domain:timeweb.cloud
+domain:timeweb.com
+domain:tinkoff.com
+domain:cdn-tinkoff.com
+domain:tbank.com
+domain:sberbank.com
+domain:alfabank.com
+domain:vtb.com
+domain:kaspersky.com
+domain:kaspersky-labs.com
+domain:ksn-crypto-info.com
+domain:ozon.com
+domain:2gis.com
+domain:skbkontur.com
+domain:beeline.kz
+domain:hh.kz
+domain:hh.uz
+domain:vk.com
+domain:vk.me
+domain:userapi.com
+domain:mycdn.me
