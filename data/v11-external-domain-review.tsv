@@ -1,0 +1,15 @@
+# Domain<TAB>Decision<TAB>Evidence / rationale
+# Decision: reject = fail CI if covered by RU; hold = do not import; confirmed = source-verified
+sbrf.com	reject	2026-11-12: parked Sedo; brand similarity alone is insufficient
+avito.net	hold	2026-11-12: ownership and production usage not confirmed
+rutube.io	hold	2026-11-12: official RUTUBE company page identifies rutube.ru, not .io
+ozoncloud.com	hold	2026-11-12: cannot infer Ozon ownership from similar string
+2gis.io	hold	2026-11-12: not present in official 2GIS domain-list-community category; attribution unverified
+gosuslugi.org	hold	2026-11-12: government association and usage not established
+kinopoisk.net	hold	2026-11-12: DNS delegation or historic parking does not establish current purpose
+hbrd.io	hold	2026-11-12: analytics/short-link use needs exact host scope verification
+importx5.com	confirmed	X5 registrant and domains.x5.ru contact recorded in docs/v11-coverage-audit.md
+vtbcapital.com	confirmed	VTB official eFX page references efx@vtbcapital.com
+vigo.tech	confirmed	Vigo corporate statement recorded in docs/v11-coverage-audit.md
+samokat.tech	confirmed	ecom.tech official rebrand announcement
+2gis.biz	confirmed	2GIS business microsites agreement
