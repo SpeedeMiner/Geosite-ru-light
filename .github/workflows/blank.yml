@@ -380,8 +380,9 @@ jobs:
               for name in optional_missing:
                   print(f"  - {name}")
 
-          # Import v2fly positive suffix rules directly: a v2fly category may
+          # Import positive RU-tree suffix rules directly: a v2fly category may
           # be absent as a top-level category in runetfreedom's compiled DAT.
+          # No global DNS/TLD, generic cloud provider or negative category promotion.
           corporate_domains = set()
           corporate_visited = set()
           corporate_missing = set()
@@ -419,7 +420,10 @@ jobs:
                   if re.fullmatch(r"[a-z0-9-]+(?:\.[a-z0-9-]+)+", token):
                       corporate_domains.add(token)
 
-          for category in sorted(extra_categories):
+          # All positive include dependencies of category-ru and extra_categories.
+          # This catches bank/retail/entertainment source-only rules, not just
+          # manually enumerated corporate categories.
+          for category in sorted(visited):
               if (DATA / category).is_file():
                   import_corporate_category(category)
           if corporate_missing:
@@ -432,7 +436,7 @@ jobs:
               + "".join(f"domain:{value}\n" for value in sorted(corporate_domains)),
               encoding="utf-8",
           )
-          print(f"Direct v2fly corporate suffix rules: {len(corporate_domains)}")
+          print(f"Direct v2fly positive RU-tree suffix rules: {len(corporate_domains)}")
 
           def add_external_categories(source: str, categories) -> int:
               excluded_count = 0
