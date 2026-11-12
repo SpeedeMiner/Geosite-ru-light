@@ -68,6 +68,45 @@ func strongerDiscoveryEvidence(row discoveredDomainRow) bool {
     return len(strings.Split(row.Seeds,"; "))>=2
 }
 
+// otherCompiledCategoryMatches distinguishes missing RU coverage from absence
+// in the entire compiled DAT. Other categories do NOT imply RU-DIRECT.
+func otherCompiledCategoryMatches(rows []discoveredDomainRow, all map[string]rules) (map[string][]string, int) {
+    matches:=make(map[string][]string)
+    found:=0
+    for _,row:=range rows {
+        var names []string
+        for cat,r:=range all {
+            if cat=="RU"||cat=="BLOCK"{continue}
+            if covered(r,row.Domain,false){names=append(names,cat)}
+        }
+        sort.Strings(names)
+        matches[row.Domain]=names
+        if len(names)>0{found++}
+    }
+    return matches,found
+}
+
+// writeDiscoveryReviewQueue emits only human-review work items.
+// It never creates approved rules, modifies source lists or writes a DAT.
+func writeDiscoveryReviewQueue(path string, priority,weak []discoveredDomainRow, other map[string][]string) error {
+    f,err:=os.Create(path);if err!=nil{return err}
+    writer:=csv.NewWriter(f);writer.Comma='\t'
+    header:=[]string{"domain","review_priority","other_dat_categories","signals","seeds","evidence","matched_core_asns","dns_checked","review_decision","auto_direct"}
+    if err=writer.Write(header);err!=nil{f.Close();return err}
+    for _,group:=range []struct{rows []discoveredDomainRow; label string}{
+        {priority,"PRIORITY_MANUAL_REVIEW"},{weak,"WEAK_FOREIGN_DEPENDENCY"},
+    } {
+        for _,row:=range group.rows {
+            cats:=strings.Join(other[row.Domain],",")
+            fields:=[]string{row.Domain,group.label,cats,row.Signals,row.Seeds,row.Evidence,row.ASNs,row.DNSChecked,"UNREVIEWED","NO"}
+            if err=writer.Write(fields);err!=nil{f.Close();return err}
+        }
+    }
+    writer.Flush()
+    if err=writer.Error();err!=nil{f.Close();return err}
+    return f.Close()
+}
+
 // filterDiscoveryCandidates compares actual protobuf RootDomain/Full coverage.
 // The prior human review is independent evidence: neither an ASN match nor a
 // TLS SAN/first-party CSP is sufficient to override a hold/reject.
@@ -110,13 +149,19 @@ func filterDiscoveryCandidates(rows []discoveredDomainRow, ru, block rules, revi
     return priority,weak,counts
 }
 
-func discoveryReport(rawPath,datPath,reviewPath,outPath string) error {
+func discoveryReport(rawPath,datPath,reviewPath,outPath string,queuePath ...string) error {
     rows,err:=readDiscoveryTSV(rawPath);if err!=nil{return err}
     categories,err:=decode(datPath);if err!=nil{return err}
     if _,ok:=categories["RU"];!ok{return fmt.Errorf("candidate DAT missing RU")}
     if _,ok:=categories["BLOCK"];!ok{return fmt.Errorf("candidate DAT missing BLOCK")}
     reviews,err:=loadReviewDecisions(reviewPath);if err!=nil{return err}
     priority,weak,counts:=filterDiscoveryCandidates(rows,categories["RU"],categories["BLOCK"],reviews)
+    candidates:=append(append([]discoveredDomainRow{},priority...),weak...)
+    other,otherCount:=otherCompiledCategoryMatches(candidates,categories)
+    if len(queuePath)>1{return fmt.Errorf("only one optional review queue path allowed")}
+    if len(queuePath)==1 {
+        if err:=writeDiscoveryReviewQueue(queuePath[0],priority,weak,other);err!=nil{return err}
+    }
     var b strings.Builder
     fmt.Fprintln(&b,"# Corporate-domain discovery: prioritized manual research")
     fmt.Fprintln(&b,"")
@@ -130,6 +175,22 @@ func discoveryReport(rawPath,datPath,reviewPath,outPath string) error {
         counts["review_hold"],counts["review_reject"])
     fmt.Fprintf(&b,"Uncovered and unreviewed: **%d**; prioritized for ownership verification: **%d**; low-evidence external dependencies: **%d**.\n",
         counts["new"],counts["priority_review"],counts["weak_external_dependencies"])
+    fmt.Fprintln(&b,"")
+    fmt.Fprintf(&b,"Among domains outside RU, **%d** are covered by other compiled DAT categories; **%d** have no exact or suffix coverage in any compiled category. These are different from the RU routing category.\n",
+        otherCount,counts["new"]-otherCount)
+    fmt.Fprintln(&b,"")
+    fmt.Fprintln(&b,"## Cross-category coverage of uncovered RU candidates")
+    fmt.Fprintln(&b,"Other-category coverage does **not** make a domain eligible for RU-DIRECT.")
+    fmt.Fprintln(&b,"| Domain | Other compiled DAT categories | Review priority |")
+    fmt.Fprintln(&b,"|---|---|---|")
+    if len(candidates)==0 {fmt.Fprintln(&b,"| — | None | — |")}
+    for _,row:=range candidates {
+        label:="weak: external dependency"
+        if strongerDiscoveryEvidence(row){label="manual ownership review"}
+        cats:="none"
+        if len(other[row.Domain])>0{cats=strings.Join(other[row.Domain],", ")}
+        fmt.Fprintf(&b,"| %c%s%c | %s | %s |\n",96,row.Domain,96,safeMarkdown(cats),label)
+    }
     fmt.Fprintln(&b,"")
     fmt.Fprintln(&b,"## Prioritized candidates (still require ownership verification)")
     fmt.Fprintln(&b,"CORE hosting, exact TLS SAN, or appearance on multiple independent seed pages.")
@@ -161,6 +222,8 @@ func discoveryReport(rawPath,datPath,reviewPath,outPath string) error {
     fmt.Fprintln(&b,"Verify first-party legal/domain ownership, service purpose, and minimal Full/Root scope.")
     fmt.Fprintln(&b,"Record source URL and rationale in a versioned review before any new positive rule.")
     if err:=os.WriteFile(outPath,[]byte(b.String()),0644);err!=nil{return err}
+    fmt.Printf("CORPORATE_DISCOVERY_DAT_COVERAGE outside_ru=%d also_in_other_categories=%d absent_all_categories=%d\n",
+        counts["new"],otherCount,counts["new"]-otherCount)
     fmt.Printf("CORPORATE_DISCOVERY_FILTER observed=%d uncovered=%d prioritized=%d weak=%d already_ru=%d block_overlap=%d holds=%d rejects=%d banned_4pda=%d report=%s\n",
         counts["observed"],counts["new"],counts["priority_review"],counts["weak_external_dependencies"],
         counts["covered_RU"],counts["covered_BLOCK"],counts["review_hold"],
