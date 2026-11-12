@@ -41,7 +41,13 @@ def normalize_domain(name: str) -> str | None:
         return None
     try:
         name = name.encode("idna").decode("ascii")
-    except (UnicodeError, ValueError):
+        # Literal IPs are not domain names and must never be suggested as
+        # new positive suffixes.
+        ipaddress.ip_address(name)
+        return None
+    except ValueError:
+        pass
+    except UnicodeError:
         return None
     if not DOMAIN_RE.fullmatch(name):
         return None
