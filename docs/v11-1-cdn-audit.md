@@ -9,14 +9,12 @@ Uploaded reference: `Geosite-ru-light-main_v11_improved.zip`.
 
 **Not applied verbatim.** The archive was built from an earlier main snapshot, before the immutable `v11` tag and rolling `latest-optimized` tag safety fixes were merged in PR #2. Blindly replacing its `.github/workflows/blank.yml` or `tools/geosite-delta` would revert released behavior.
 
-The archive lists 59 pinned rules (30 from v11 and 29 proposed). Of these, **25 newly proposed roots are pinned** in the current PR, bringing `data/v11-approved-effective-ru.txt` to **55**. Four require stronger evidence and were **not** imported:
+The archive lists 59 pinned rules (30 from v11 and 29 proposed). Of these, **27 newly proposed roots are pinned** in the current PR, bringing `data/v11-approved-effective-ru.txt` to **57**. Two still lack sufficient direct evidence and were **not** imported:
 
 | Domain | Decision | Reason |
 | --- | --- | --- |
 | `ozon.am` | hold; not DIRECT | Ozon confirms shipments to Armenia, but this does not establish ownership or use of this **specific apex**. Official Ozon link: https://docs.ozon.ru/common/dostavka/dostavka-za-predely-rossii/?country=ARM |
-| `ozon.kg` | hold; not DIRECT | Ozon confirms shipments to Kyrgyzstan from `ozon.ru`; no first-party proof for `ozon.kg`. |
 | `servicepipe.io` | hold; not DIRECT | Russian company official site is `https://servicepipe.ru/`; the domain `servicepipe.io` was not established as a first-party endpoint. |
-| `selectel.org` | hold; not DIRECT | Current upstream `v2fly/data/selectel` lists `selectel.com`, `selectel.info`, `selectel.io` etc., but not `selectel.org`; ownership/use needs verification. |
 
 ## Confirmed or strongly supported pinning
 
@@ -30,7 +28,9 @@ Newly pinned, suffix-scoped domains:
 - StormWall: `stormwall.pro`, official https://stormwall.pro/
 - 1C: `1cfresh.com`, official https://www.1cfresh.com/about
 - Wildberries: `wildberries.am`, `wildberries.uz`, `wildberries.kg`, upstream `v2fly/data/wildberries`; official storefronts https://www.wildberries.am/ and https://www.wildberries.uz/
-- Ozon: `ozon.uz`, official https://www.ozon.uz/seller/ozon/ ; https://docs.ozon.kz/legal/terms-of-use/site/content-policy/
+- Ozon: `ozon.uz`, official https://www.ozon.uz/seller/ozon/ ; `ozon.kg`, operational first-party regional seller page https://seller.ozon.kg/ , company executive's 2023 naming confirmation https://24.kg/english/263414__Ozonkg_marketplace_to_be_opened_in_Kyrgyzstan/ .
+
+- Selectel: `selectel.org`, company-hosted technical application https://selectel.ru/blog/from-idea-to-exploit/ and earlier DNS API documentation https://selectel.ru/blog/upravlenie-domenami-s-selectel-dns-api/ confirm company use of the zone.
 
 **Caveat:** shared services such as Yandex Cloud Object Storage, Tilda or anti-DDoS providers host third-party content. Pinning the operator domain routes the shared infrastructure directly, including potential foreign customer assets; it does not prove individual customer ownership.
 
@@ -53,13 +53,19 @@ Checked suggested standalone names against actual `v2fly/domain-list-community/d
 
 ## Verified PR CI
 
-https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43277381905
+https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43279851508
 
-- RU **3051**, BLOCK **43**, DAT **82206 bytes**.
-- Effective delta against published v11: **RU +2 (`ozon.uz`, `stormwall.pro`), RU lost 0, BLOCK +0/-0**.
-- All **55** pinned rules remain effectively covered (some by v11 or upstream already).
+- RU **3053**, BLOCK **43**, DAT **82237 bytes**.
+- Effective delta against published v11: **RU +4 (`ozon.kg`, `ozon.uz`, `selectel.org`, `stormwall.pro`), RU lost 0, BLOCK +0/-0**.
+- All **57** pinned rules remain effectively covered (some by v11 or upstream already).
 - `4pda.to` remains outside DIRECT. Two-stage Go tests and comparison pass.
 
 ## Release status
 
 This is a **Draft PR**, not a production release. Latest published immutable `v11` and rolling `latest-optimized` remain unchanged. Do not deploy the uploaded archive directly or present `v11.1` as published before merged production CI and digest verification.
+
+## Final release review (2026-11-12)
+
+- The existing immutable `v11` tag is left unchanged. The production workflow has been changed to create and then preserve immutable `v11.1` at the successfully published source commit, while floating `latest-optimized` and `release` update as before.
+- No automatic approval of unknown weekly third-party domains: an unapproved positive rule blocks publishing and uploads the failed candidate and semantic delta for review.
+- Do not merge unless the current head has a green CI run and `DELTA RU lost=0`, `DELTA BLOCK newly_covered=0 lost=0`, `4pda.to` absent, 57 pinned rules covered.
