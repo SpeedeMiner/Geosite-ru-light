@@ -1134,8 +1134,22 @@ jobs:
               "stream.kick.com": true, // Kick international video stream CDN
           }
 
+          // The user explicitly forbids any DIRECT coverage of 4pda.to,
+          // including its subdomains. Check both descendants and a RootDomain
+          // ancestor (e.g. a future "to" root) that would cover 4pda.to.
+          func forbidden4PDAInRU(typ router.Domain_Type, value string) bool {
+              const apex = "4pda.to"
+              name := normalizeName(value)
+              if name == apex || strings.HasSuffix(name, "."+apex) {
+                  return true
+              }
+              return typ == router.Domain_RootDomain && strings.HasSuffix(apex, "."+name)
+          }
+
           func addRoot(site *router.GeoSite, seen map[string]bool, value string) bool {
-              if normalizeName(site.CountryCode) == "ru" && excludedRUPositiveDomains[normalizeName(value)] {
+              if normalizeName(site.CountryCode) == "ru" &&
+                  (excludedRUPositiveDomains[normalizeName(value)] ||
+                      forbidden4PDAInRU(router.Domain_RootDomain, value)) {
                   return false
               }
               key := domainValueKey(router.Domain_RootDomain, value)
@@ -1215,6 +1229,10 @@ jobs:
           }
 
           func addPositiveRule(category *router.GeoSite, seen map[string]bool, value string) bool {
+              if normalizeName(category.CountryCode) == "ru" &&
+                  forbidden4PDAInRU(router.Domain_Full, value) {
+                  return false
+              }
               if normalizeName(category.CountryCode) == "ru" && exactRUPositiveHosts[value] {
                   key := domainValueKey(router.Domain_Full, value)
                   if seen[key] {
@@ -1627,6 +1645,13 @@ jobs:
               var pruned int
               ruCategory.Domain, pruned = pruneCoveredDomains(ruCategory.Domain)
               removedCoveredDomainCount += pruned
+              // Required even in scheduled main builds, where PR-only delta
+              // checks do not run. Never emit forbidden DIRECT coverage.
+              for _, domain := range ruCategory.Domain {
+                  if forbidden4PDAInRU(domain.Type, domain.Value) {
+                      fatalf("4pda.to no-DIRECT production policy violated: %v:%s", domain.Type, domain.Value)
+                  }
+              }
               sortDomains(ruCategory.Domain)
 
               blockCategory.Domain, removedCoveredBlockDomainCount = pruneCoveredDomains(blockCategory.Domain)
@@ -1895,6 +1920,11 @@ jobs:
               // Only the four explicitly approved VTB vendor hostnames may be
               // Full in RU; all other imported RU entries stay RootDomain.
               validateRules("RU", ru.Domain, true)
+              for _, entry := range ru.Domain {
+                  if forbidden4PDAInRU(entry.Type, entry.Value) {
+                      fatalf("4pda.to prohibited in output RU DAT: %v:%s", entry.Type, entry.Value)
+                  }
+              }
               exactSeen := make(map[string]bool)
               for _, entry := range ru.Domain {
                   if entry.Type == router.Domain_Full {
@@ -2050,6 +2080,37 @@ jobs:
               }
               if !addRoot(ru, seen, "ddos-guard.net") {
                   t.Fatal("legitimate RU service was rejected")
+              }
+          }
+
+          func TestNo4PDADirectInScheduledAndPRBuild(t *testing.T) {
+              for _, value := range []string{
+                  "4pda.to", "www.4pda.to", "forum.4pda.to",
+                  "cdn.static.4pda.to", "to",
+              } {
+                  ru := &router.GeoSite{CountryCode: "RU"}
+                  seen := make(map[string]bool)
+                  if !forbidden4PDAInRU(router.Domain_RootDomain, value) {
+                      t.Fatalf("forbidden 4PDA coverage was not recognized: %s", value)
+                  }
+                  if addRoot(ru, seen, value) || len(ru.Domain) != 0 {
+                      t.Fatalf("forbidden 4PDA root leaked into RU: %s", value)
+                  }
+              }
+              for _, value := range []string{"4pda.ru", "not4pda.to", "foo4pda.to"} {
+                  ru := &router.GeoSite{CountryCode: "RU"}
+                  if forbidden4PDAInRU(router.Domain_RootDomain, value) {
+                      t.Fatalf("unrelated domain falsely forbidden: %s", value)
+                  }
+                  if !addRoot(ru, make(map[string]bool), value) {
+                      t.Fatalf("unrelated RU candidate rejected: %s", value)
+                  }
+              }
+              if !forbidden4PDAInRU(router.Domain_Full, "forum.4pda.to") {
+                  t.Fatal("Full subdomain must also be forbidden")
+              }
+              if forbidden4PDAInRU(router.Domain_Full, "to") {
+                  t.Fatal("Full 'to' is not a suffix root and cannot cover 4pda.to")
               }
           }
 
