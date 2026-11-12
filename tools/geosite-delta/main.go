@@ -60,9 +60,9 @@ func differences(from,to rules) []string {
   for d:=range from.opaque {if !to.opaque[d] {out=append(out,"opaque:"+d)}}
   sort.Strings(out); return out
 }
-// rejectedSubtreeConflict also catches newly imported subdomains under a
-// rejected apex (e.g. forum.4pda.to) even when the apex itself is not covered.
-// It is a safety gate over the actual decoded RU DAT, not the input lists.
+// rejectedSubtreeConflict catches any RU rule under a specifically forbidden
+// apex (e.g. forum.4pda.to). Do not apply it to generic foreign CDN roots:
+// independently approved RU services can use foreign shared CDN domains.
 func rejectedSubtreeConflict(r rules, zone string) string {
   if covered(r,zone,false) {
     return "parent or apex covers "+zone
@@ -114,12 +114,22 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   if len(inventory.Domains)==0{return fmt.Errorf("empty candidate inventory")}
   reviews,err:=loadReviewDecisions(reviewPath);if err!=nil{return err}
   ru:=categories["RU"]; block:=categories["BLOCK"]
+  // User-selected no-DIRECT subtree. Independent of external inventory and
+  // review file: removing a TSV line cannot weaken this routing policy.
+  for _,domain:=range []string{"4pda.to","www.4pda.to"} {
+    if reviews[domain].status!="reject" {
+      return fmt.Errorf("mandatory no-DIRECT policy missing reject decision for %s",domain)
+    }
+  }
+  if conflict:=rejectedSubtreeConflict(ru,"4pda.to");conflict!="" {
+    return fmt.Errorf("4pda.to no-DIRECT subtree policy violated: %s",conflict)
+  }
   for domain,review:=range reviews {
     isRU:=covered(ru,domain,false)
-    if review.status=="reject" {
-      if conflict:=rejectedSubtreeConflict(ru,domain);conflict!="" {
-        return fmt.Errorf("rejected external domain %s (including subdomains) conflicts with RU: %s",domain,conflict)
-      }
+    // A generic reject is exact to this domain, NOT a blanket ban for all
+    // descendants: shared Akamai/Cloudflare CDNs can host RU-specific services.
+    if review.status=="reject"&&isRU {
+      return fmt.Errorf("rejected external domain %s is unexpectedly covered by RU",domain)
     }
     if review.status=="hold"&&isRU{
       return fmt.Errorf("external domain %s is on HOLD pending routing approval but has RU coverage",domain)
