@@ -348,6 +348,7 @@ jobs:
               "regru", "selectel", "servicepipe", "skyeng", "smena", "tilda",
               "timeweb", "ucoz", "whoosh",
               "megafon", "mts-ru", "rostelecom", "t2-ru",
+              "vk", "sberbank", "tinkoff", "alfabank", "vtb", "gazprombank",
           }
 
           optional_missing = []
@@ -372,6 +373,60 @@ jobs:
               print("Optional standalone categories absent in current v2fly data (not fatal):")
               for name in optional_missing:
                   print(f"  - {name}")
+
+          # Import v2fly positive suffix rules directly: a v2fly category may
+          # be absent as a top-level category in runetfreedom's compiled DAT.
+          corporate_domains = set()
+          corporate_visited = set()
+          corporate_missing = set()
+
+          def import_corporate_category(name: str):
+              name = normalize(name)
+              if name in corporate_visited or is_excluded(name):
+                  return
+              corporate_visited.add(name)
+              path = DATA / name
+              if not path.is_file():
+                  corporate_missing.add(name)
+                  return
+              for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                  entry = raw.split("#", 1)[0].strip()
+                  if not entry:
+                      continue
+                  parts = entry.split()
+                  token = parts[0]
+                  if token.lower().startswith("include:"):
+                      if len(parts) == 1:
+                          child = token.split(":", 1)[1]
+                          if re.fullmatch(r"[A-Za-z0-9_.!+-]+", child):
+                              import_corporate_category(child)
+                      continue
+                  # Do not widen exact/keyword/regexp or attribute-filtered rules.
+                  if len(parts) != 1 or token.startswith(("full:", "regexp:", "keyword:")):
+                      continue
+                  if token.startswith("domain:"):
+                      token = token[7:]
+                  try:
+                      token = token.strip(".").lower().encode("idna").decode("ascii")
+                  except UnicodeError:
+                      continue
+                  if re.fullmatch(r"[a-z0-9-]+(?:\\.[a-z0-9-]+)+", token):
+                      corporate_domains.add(token)
+
+          for category in sorted(extra_categories):
+              if (DATA / category).is_file():
+                  import_corporate_category(category)
+          if corporate_missing:
+              raise SystemExit("missing v2fly dependencies: " + ", ".join(sorted(corporate_missing)))
+          if not corporate_domains:
+              raise SystemExit("empty direct v2fly corporate domain extraction")
+          direct_output = Path("v2fly-corporate-extra-domains.txt")
+          direct_output.write_text(
+              "# Generated positive v2fly suffix rules\\n"
+              + "".join(f"domain:{value}\\n" for value in sorted(corporate_domains)),
+              encoding="utf-8",
+          )
+          print(f"Direct v2fly corporate suffix rules: {len(corporate_domains)}")
 
           def add_external_categories(source: str, categories) -> int:
               excluded_count = 0
@@ -566,6 +621,10 @@ jobs:
           var compactRussianTLDRoots = []string{
               "ru",             // .ru
               "su",             // .su
+              "by",             // .by
+              "kz",             // .kz
+              "xn--90ais",      // .бел
+              "xn--80ao21a",    // .қаз
               "xn--p1ai",      // .рф
               "moscow",        // .moscow
               "tatar",         // .tatar
@@ -1976,6 +2035,10 @@ jobs:
               required := map[string]bool{
                   "ru": false,
                   "su": false,
+                  "by": false,
+                  "kz": false,
+                  "xn--90ais": false,
+                  "xn--80ao21a": false,
                   "xn--p1ai": false,
                   "moscow": false,
                   "xn--80adxhks": false,
@@ -2041,6 +2104,9 @@ jobs:
 
           rm -f "$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$NEW_SOURCES_REPORT_FILE"
 
+          test -s v2fly-corporate-extra-domains.txt
+          cat "$LOCAL_RU_INPUT_FILE" v2fly-corporate-extra-domains.txt > /tmp/geosite-ru-v11-merged-local.txt
+
           /tmp/ru-geosite-filter build \
             "$INPUT_FILE" \
             "$HYDRA_INPUT_FILE" \
@@ -2053,7 +2119,7 @@ jobs:
             "$DAVOYAN_LEGACY_INPUT_FILE" \
             "$CATEGORY_FILE" \
             "$HYDRA_APPEND_FILE" \
-            "$LOCAL_RU_INPUT_FILE" \
+            /tmp/geosite-ru-v11-merged-local.txt \
             "$LOCAL_BLOCK_INPUT_FILE" \
             "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
             "$KYORESUAS_RU_STANDARD_INPUT_FILE" \
