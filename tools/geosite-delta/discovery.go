@@ -59,13 +59,23 @@ func excluded4PDASubtree(name string) bool {
     return name=="4pda.to"||strings.HasSuffix(name,".4pda.to")
 }
 
+// Evidence priority is a review heuristic, not ownership determination.
+// A single foreign CSP dependency without a CORE match or a second seed is
+// weak evidence and should be reported separately, not as an RU candidate.
+func strongerDiscoveryEvidence(row discoveredDomainRow) bool {
+    if strings.TrimSpace(row.ASNs)!="" {return true}
+    if strings.Contains(row.Signals,"TLS_SAN"){return true}
+    return len(strings.Split(row.Seeds,"; "))>=2
+}
+
 // filterDiscoveryCandidates compares actual protobuf RootDomain/Full coverage.
 // The prior human review is independent evidence: neither an ASN match nor a
 // TLS SAN/first-party CSP is sufficient to override a hold/reject.
 func filterDiscoveryCandidates(rows []discoveredDomainRow, ru, block rules, reviews map[string]reviewDecision) (
-    actionable []discoveredDomainRow, counts map[string]int) {
+    priority, weak []discoveredDomainRow, counts map[string]int) {
     counts=map[string]int{"observed":0,"covered_RU":0,"covered_BLOCK":0,
-        "review_hold":0,"review_reject":0,"4pda_excluded":0,"new":0}
+        "review_hold":0,"review_reject":0,"4pda_excluded":0,"new":0,
+        "priority_review":0,"weak_external_dependencies":0}
     for _,row:=range rows{
         counts["observed"]++
         if excluded4PDASubtree(row.Domain) {
@@ -87,10 +97,17 @@ func filterDiscoveryCandidates(rows []discoveredDomainRow, ru, block rules, revi
             }
         }
         counts["new"]++
-        actionable=append(actionable,row)
+        if strongerDiscoveryEvidence(row) {
+            counts["priority_review"]++
+            priority=append(priority,row)
+        }else{
+            counts["weak_external_dependencies"]++
+            weak=append(weak,row)
+        }
     }
-    sort.Slice(actionable,func(i,j int) bool{return actionable[i].Domain<actionable[j].Domain})
-    return actionable,counts
+    sort.Slice(priority,func(i,j int) bool{return priority[i].Domain<priority[j].Domain})
+    sort.Slice(weak,func(i,j int) bool{return weak[i].Domain<weak[j].Domain})
+    return priority,weak,counts
 }
 
 func discoveryReport(rawPath,datPath,reviewPath,outPath string) error {
@@ -99,38 +116,54 @@ func discoveryReport(rawPath,datPath,reviewPath,outPath string) error {
     if _,ok:=categories["RU"];!ok{return fmt.Errorf("candidate DAT missing RU")}
     if _,ok:=categories["BLOCK"];!ok{return fmt.Errorf("candidate DAT missing BLOCK")}
     reviews,err:=loadReviewDecisions(reviewPath);if err!=nil{return err}
-    remaining,counts:=filterDiscoveryCandidates(rows,categories["RU"],categories["BLOCK"],reviews)
+    priority,weak,counts:=filterDiscoveryCandidates(rows,categories["RU"],categories["BLOCK"],reviews)
     var b strings.Builder
-    fmt.Fprintln(&b,"# Newly discovered corporate-domain candidates — manual review only")
+    fmt.Fprintln(&b,"# Corporate-domain discovery: prioritized manual research")
     fmt.Fprintln(&b,"")
-    fmt.Fprintln(&b,"**Never auto-import these candidates into DIRECT or BLOCK.**")
-    fmt.Fprintln(&b,"First-party TLS SAN and CSP signal a possible relation or dependency, not legal ownership.")
-    fmt.Fprintln(&b,"Matching a CORE_CORPORATE origin prefix is additional hosting evidence, not proof")
-    fmt.Fprintln(&b,"that a domain is owned by the same company. CSP may reference unrelated foreign vendors.")
-    fmt.Fprintln(&b,"Only exact hosts are extracted; wildcards must not be widened into RootDomain.")
+    fmt.Fprintln(&b,"**Audit-only. No domains are automatically imported into DIRECT or BLOCK.**")
+    fmt.Fprintln(&b,"TLS SAN, CSP and CORE_CORPORATE ASN signals are corroborating evidence,")
+    fmt.Fprintln(&b,"not legal ownership. CSP may explicitly list unrelated foreign vendors.")
+    fmt.Fprintln(&b,"Wildcards are excluded; no wildcard is widened into RootDomain.")
     fmt.Fprintln(&b,"")
-    fmt.Fprintf(&b,"Observed: **%d**; already RU: **%d**; BLOCK overlap: **%d**; 4PDA excluded: **%d**; review hold: **%d**; review reject: **%d**; **new for review: %d**.\n",
+    fmt.Fprintf(&b,"Observed: **%d**; already RU: **%d**; BLOCK overlap: **%d**; 4PDA excluded: **%d**; existing hold/reject: **%d/%d**.\n",
         counts["observed"],counts["covered_RU"],counts["covered_BLOCK"],counts["4pda_excluded"],
-        counts["review_hold"],counts["review_reject"],counts["new"])
+        counts["review_hold"],counts["review_reject"])
+    fmt.Fprintf(&b,"Uncovered and unreviewed: **%d**; prioritized for ownership verification: **%d**; low-evidence external dependencies: **%d**.\n",
+        counts["new"],counts["priority_review"],counts["weak_external_dependencies"])
     fmt.Fprintln(&b,"")
+    fmt.Fprintln(&b,"## Prioritized candidates (still require ownership verification)")
+    fmt.Fprintln(&b,"CORE hosting, exact TLS SAN, or appearance on multiple independent seed pages.")
     fmt.Fprintln(&b,"| Domain | Signals | Corporate seed and evidence | CORE ASN and group (hosting signal only) | Public DNS IPs | DNS checked |")
     fmt.Fprintln(&b,"|---|---|---|---|---|---|")
-    if len(remaining)==0{
-        fmt.Fprintln(&b,"| — | No new uncovered candidates | — | — | — | — |")
-    }
-    for _,r:=range remaining {
+    if len(priority)==0 {fmt.Fprintln(&b,"| — | No prioritized uncovered candidates | — | — | — | — |")}
+    for _,r:=range priority {
         host:=safeMarkdown(r.Seeds+" — "+r.Evidence)
         asns:=safeMarkdown(r.ASNs+" "+r.Groups)
         fmt.Fprintf(&b,"| %c%s%c | %s | %s | %s | %s | %s |\n",
             96,r.Domain,96,safeMarkdown(r.Signals),host,asns,safeMarkdown(r.IPs),r.DNSChecked)
     }
     fmt.Fprintln(&b,"")
+    fmt.Fprintln(&b,"## Weak external dependencies (do not consider DIRECT without new proof)")
+    fmt.Fprintln(&b,"A single website CSP/preconnect dependency with no CORE match can be a foreign CDN,")
+    fmt.Fprintln(&b,"analytics endpoint, or embedded third-party application. Keep for transparency,")
+    fmt.Fprintln(&b,"but do not treat as a Russian domain discovery.")
+    fmt.Fprintln(&b,"| Domain | Signals | Observed on | CORE match |")
+    fmt.Fprintln(&b,"|---|---|---|---|")
+    if len(weak)==0{fmt.Fprintln(&b,"| — | None | — | — |")}
+    for _,r:=range weak {
+        match:="none"
+        if r.ASNs!=""{match=safeMarkdown(r.ASNs)}
+        fmt.Fprintf(&b,"| %c%s%c | %s | %s | %s |\n",
+            96,r.Domain,96,safeMarkdown(r.Signals),safeMarkdown(r.Seeds),match)
+    }
+    fmt.Fprintln(&b,"")
     fmt.Fprintln(&b,"## Next action")
     fmt.Fprintln(&b,"Verify first-party legal/domain ownership, service purpose, and minimal Full/Root scope.")
-    fmt.Fprintln(&b,"Record source URL and rationale in versioned review before any new positive rule.")
+    fmt.Fprintln(&b,"Record source URL and rationale in a versioned review before any new positive rule.")
     if err:=os.WriteFile(outPath,[]byte(b.String()),0644);err!=nil{return err}
-    fmt.Printf("CORPORATE_DISCOVERY_FILTER observed=%d new=%d already_ru=%d block_overlap=%d holds=%d rejects=%d banned_4pda=%d report=%s\n",
-        counts["observed"],counts["new"],counts["covered_RU"],counts["covered_BLOCK"],
-        counts["review_hold"],counts["review_reject"],counts["4pda_excluded"],outPath)
+    fmt.Printf("CORPORATE_DISCOVERY_FILTER observed=%d uncovered=%d prioritized=%d weak=%d already_ru=%d block_overlap=%d holds=%d rejects=%d banned_4pda=%d report=%s\n",
+        counts["observed"],counts["new"],counts["priority_review"],counts["weak_external_dependencies"],
+        counts["covered_RU"],counts["covered_BLOCK"],counts["review_hold"],
+        counts["review_reject"],counts["4pda_excluded"],outPath)
     return nil
 }
