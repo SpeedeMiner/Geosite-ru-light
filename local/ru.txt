@@ -164,3 +164,8 @@ domain:inme.technology
 # https://2gis.qa/ -> https://info.2gis.com/ (2GIS L.L.C. footer, razr@2gis.ru)
 # https://apify.com/bovi/2gis-places-scraper/input-schema
 domain:2gis.qa
+
+# Hexlet education platform, Russian LLC + Kazakhstan LLP on official pages:
+# https://ru.hexlet.io/pages/contacts (ООО Хекслет Рус, INN 7325174845)
+# https://hexlet.io/pages/contacts (TOO Hexlet Kazakhstan, BIN 230340043714)
+domain:hexlet.io
