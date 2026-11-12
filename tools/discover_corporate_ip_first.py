@@ -34,6 +34,27 @@ def valid_public_ip(raw: str):
     return str(ip) if ip.is_global else None
 
 
+def fair_core_targets(targets: dict, budget: int):
+    """Round-robin across CORE company groups, not lexicographic IP ranges."""
+    buckets: dict[str, list] = {}
+    for ip, record in sorted(targets.items()):
+        primary = sorted(record["groups"])[0]
+        buckets.setdefault(primary, []).append((ip, record))
+    selected = []
+    while len(selected) < budget:
+        progressed = False
+        for group in sorted(buckets):
+            if not buckets[group]:
+                continue
+            selected.append(buckets[group].pop(0))
+            progressed = True
+            if len(selected) >= budget:
+                break
+        if not progressed:
+            break
+    return selected
+
+
 def targets_from_seeds(seeds, prefixes, policy, max_ips: int, resolver=base.public_dns_ips,
                        curated: Path | None = None):
     """Nothing outside published CORE prefixes is ever a probe target."""
@@ -73,8 +94,8 @@ def targets_from_seeds(seeds, prefixes, policy, max_ips: int, resolver=base.publ
             record["seeds"].add("CURATED_IP (" + cols[1].strip()[:64] + ")")
             record["asns"].update(asns)
             record["groups"].update(groups)
-    # Stable, deterministic budget. Not a CIDR sweep or random address sampler.
-    return list(sorted(targets.items()))[:max_ips], errors, len(targets)
+    # Group-balanced deterministic budget; never sweep or sample CIDR IPs.
+    return fair_core_targets(targets, max_ips), errors, len(targets)
 
 
 def confirmed_ptr_names(ip: str, resolver=base.public_dns_ips, reverse=socket.gethostbyaddr):
