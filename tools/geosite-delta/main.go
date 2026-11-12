@@ -84,6 +84,9 @@ func reportExternalCandidates(input, path string, categories map[string]rules) e
     }else if covered(block,d,false){status="covered_BLOCK_review_conflict"
     }else if candidate.Reason!=""{status="uncovered_with_upstream_warning"}
     count[status]++
+    if status=="manual_review_uncovered" {
+      fmt.Printf("CANDIDATE_REVIEW %s sources=%s\n",d,strings.Join(candidate.Sources,","))
+    }
     why:=strings.ReplaceAll(candidate.Reason,"|","/")
     sources:=strings.Join(candidate.Sources,", ")
     fmt.Fprintf(&b,"| `%s` | %s | %s | %s |\n",d,status,sources,why)
