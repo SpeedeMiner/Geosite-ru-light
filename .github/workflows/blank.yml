@@ -2285,7 +2285,7 @@ jobs:
             go run ./tools/geosite-delta \
               /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
               /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
-              ../data/v11-external-domain-review.tsv
+              ../data/v11-external-domain-review.tsv ../data/v11-approved-effective-ru.txt
           )
           test -s geosite_RU_semantic_delta.md
           test -s geosite_RU_external_candidate_audit.md
@@ -2306,6 +2306,7 @@ jobs:
             geosite_RU_external_candidate_audit.md
             geosite_RU_attribution_research_queue.tsv
             data/v11-external-domain-review.tsv
+            data/v11-approved-effective-ru.txt
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
             v2fly-corporate-extra-domains.txt
