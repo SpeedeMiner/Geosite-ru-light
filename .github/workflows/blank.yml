@@ -2275,7 +2275,11 @@ jobs:
             -o /tmp/geosite-ru-external-candidates.json
           test -s /tmp/geosite-ru-external-candidates.json
           mkdir -p domain-list-community/tools/geosite-delta
-          cp tools/geosite-delta/main.go domain-list-community/tools/geosite-delta/main.go
+          cp tools/geosite-delta/main.go tools/geosite-delta/main_test.go domain-list-community/tools/geosite-delta/
+          (
+            cd domain-list-community
+            go test ./tools/geosite-delta -count=1
+          )
           (
             cd domain-list-community
             go run ./tools/geosite-delta \
