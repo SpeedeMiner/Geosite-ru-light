@@ -42,8 +42,8 @@ t-cdn.net	hold	2026-11-12 mentioned as example domain in historical third-party 
 wildberries.az	hold	2026-11-12 historical redirect to wildberries.ru https://builtwith.com/ru/redirects/wildberries.ru ; not enough evidence for active 2026 control or intended service
 wildberries.md	hold	2026-11-12 historical Moldova launches referenced md.wildberries.ru, not wildberries.md https://kz.fashionnetwork.com/newsPdf/downloadPdf/?id=1317113 ; first-party current domain use unconfirmed
 hexlet.io	confirmed	2026-11-12 first-party contacts list ООО Хекслет Рус INN 7325174845 https://ru.hexlet.io/pages/contacts and TOO Hexlet Kazakhstan BIN 230340043714 https://hexlet.io/pages/contacts
-4pda.to	hold	2026-11-12 authentic 4PDA site https://4pda.to/about/ but varying RU access from ISP without VPN in official forum https://4pda.to/forum/index.php?showtopic=1118259 ; routing DIRECT needs reachability confirmation
-www.4pda.to	hold	2026-11-12 child of authentic 4pda.to, but same ISP reachability concern; do not auto-add to DIRECT
+4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
+www.4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
 codeforces.com	hold	2026-11-12 official https://codeforces.com/about names founder/owner IE Mikhail Mirzayanov with Bishkek Kyrgyzstan contact; https://codeforces.com/privacy names CODEFORCES GLOBAL FZCO (UAE). Russian origin alone is not RU/KZ/BY corporate ownership
 che.tv	hold	2026-11-12 official current CTC Media page points to chetv.ru, not che.tv https://ctc.media/channel/che
 dom-kino.tv	hold	2026-11-12 upstream no A/DNS; historical association with Dom Kino insufficient to include
