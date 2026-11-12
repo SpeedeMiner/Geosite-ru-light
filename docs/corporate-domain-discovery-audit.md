@@ -47,3 +47,23 @@ On `pull_request` and weekly Monday `schedule`, an independent GitHub Actions st
 The existing v11.1 immutable release remains untouched. This PR changes **only research tooling**, Go audit mode, fixed input seed configuration and workflow report attachment. It must preserve the same RU/BLOCK protobuf output as the current release. If a new upstream candidate appears, it goes into the report, not into DIRECT.
 
 Workflow logs and reports are authoritative for counts. Reachability and evidence freshness vary by run and are not inferred from a static description.
+
+
+## First verified live run and false-positive triage
+
+First successful GitHub Actions run: https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43284267055
+Refined, semantically equivalent CI: https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43284912362
+
+- 19 seeded first-party HTTPS hosts; 15 successfully probed, 4 bank domains (`sberbank.ru`, `tbank.ru`, `alfabank.ru`, `vtb.ru`) failed chain validation on the runner. No insecure bypass or unverifiable certificate fallback.
+- Validated **283** exact CORE prefixes and **31 CORE ASN** against pinned release SHA256.
+- 33 unique exact host observations (SAN/CSP/preconnect); 21 already effectively covered by candidate RU; no BLOCK matches; 12 uncovered and no prior hold/reject.
+- All 12 uncovered domains came from **one** `selectel.ru` CSP and are globally operated dependencies (Google, YouTube, Zapier, Telegram, Statuspal etc.), without CORE matches. They are **not** reasonable automatic RU candidates.
+- Updated report splits **prioritized candidates** (CORE evidence, exact SAN or at least two independent seed observations) from **low-evidence external dependencies** (single-source CSP/preconnect without CORE). For this run: **0 prioritized**, **12 weak**, **0 DIRECT changes**.
+- The raw TSV preserves all candidates and evidence. The Markdown report prominently labels weak external dependencies and forbids automatic addition to DIRECT.
+- Required offline Python/Go tests run in the fail-closed semantic CI step; live network collection and audit artifact upload are best-effort, so TLS/DNS outages cannot block production publication.
+
+### Interpretation limits
+
+A real certificate SAN or CSP directive does not prove that the host belongs to the same company. A website may intentionally use third-party CDN, fonts, analytics, video widgets or payment services. A DNS answer in a CORE prefix can also describe hosting or business partnership. Multiple technical signals increase the priority for further manual evidence review; they cannot replace proof of current first-party ownership and intended routing behavior.
+
+**Explicit 4PDA policy remains unchanged:** `4pda.to` and all descendants are excluded from RU-DIRECT.
