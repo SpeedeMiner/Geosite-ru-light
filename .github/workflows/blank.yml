@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11)
+name: Build Ultimate Light RU Geosite (Optimized v11.1)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -2525,7 +2525,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11"
+          name: "Optimized RU GeoSite v11.1"
           make_latest: true
 
           files: |
@@ -2536,7 +2536,7 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite v11
+            # Optimized RU GeoSite v11.1
 
             Verified Russian-region GeoSite update with compact RU/BY/KZ domain coverage.
 
@@ -2647,20 +2647,20 @@ jobs:
       # ------------------------------------------------------------
       # 11b. Immutable versioned release and floating-tag alignment.
       # ------------------------------------------------------------
-      - name: Publish immutable v11 release
+      - name: Publish immutable v11.1 release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # This tag represents the audited v11 source snapshot. Never move an
+          # This tag represents the audited v11.1 source snapshot. Never move an
           # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11 release already exists; preserving its tag."
+          if gh release view v11.1 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11.1 release already exists; preserving its tag."
           else
             EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11 \
+            gh release create v11.1 \
               "$OUTPUT_FILE" \
               "$OUTPUT_SHA_FILE" \
               "$CATEGORY_FILE" \
@@ -2668,12 +2668,12 @@ jobs:
               "$NEW_SOURCES_REPORT_FILE" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11" \
+              --title "GeoSite RU Light v11.1" \
               --latest=false \
-              --notes "v11: 30 reviewed effective RU additions; zero lost RU coverage; all 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/1"
+              --notes "v11.1: 57 reviewed pinned RU rules, technical CDN and corporate expansion, safe @ru parser, Belarus/Kazakhstan Unicode aliases, exact VTB vendor hosts and zero lost RU coverage. All 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/3"
           fi
-          gh release view v11 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+          gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Align floating latest-optimized tag with successful main release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -2685,7 +2685,7 @@ jobs:
           CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
           echo "Previously published floating tag: $CURRENT"
           if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 remains immutable.
+            # latest-optimized is intentionally floating; v11 and v11.1 remain immutable.
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
               -f sha="$GITHUB_SHA" -F force=true >/dev/null
           fi
