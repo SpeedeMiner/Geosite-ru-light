@@ -189,3 +189,66 @@ A mandatory offline regression now loads the real seed manifest, verifies
 the four expected host/group mappings and enforces uniqueness/budget.
 Live audit results must be read from the CI artifacts; inclusion in this
 file is not a claim that DNS, HTTPS or evidence collection succeeded.
+
+
+## PR #4 production impact review — 2026-11-13
+
+**Verified CI before the reporting improvement:**
+[run 43293169602](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43293169602),
+commit `434877ea9554676cc24bd0eee78ddff5f4f52686`, build **success**.
+The downloaded corporate discovery artifact was inspected, not inferred from the
+PR description or a generic green job status.
+
+- 23 curated first-party HTTPS seeds, **18 successful**, 5 TLS-chain-verified
+  failures (Yandex Disk API plus four bank seeds), no insecure bypass.
+- 96 site SAN/CSP/preconnect unique observations; 11 IP-first observations
+  added only one further unique hostname; **97** combined.
+- 30 eligible public CORE IPs, 12 selected; 9 verified TLS sessions,
+  2 forward-confirmed PTR, 3 keyless InternetDB calls.
+- Semantic result: **85 already RU-covered, 12 absent from RU, 0 BLOCK,
+  0 prioritized missing corporate domains**.
+- Inspection of the actual 18-category candidate `geosite_RU.dat` showed:
+  **3 of those 12 already belong to other compiled categories**:
+  `s.ytimg.com` and `www.youtube.com` via RootDomain coverage in
+  `YOUTUBE`; `telegram.org` via RootDomain in `TELEGRAM`.
+  **9 are absent from every category** but only have weak foreign Selectel
+  CSP references (e.g. Google/AMP, Zapier, Statuspal), not independently
+  verified first-party RU ownership. Other-category overlap is *not*
+  equivalent to the RU routing rule and does not justify promoting a domain.
+- Published/candidate semantic parity: **RU=3053, BLOCK=43, 16 additional
+  Hydra categories, 0 newly covered and 0 lost in every category**.
+  The PR has **zero production additions** and is research-only.
+
+### How candidates could eventually reach the RU release
+
+The candidate pipeline is deliberately separate:
+
+1. `discover_corporate_domains.py` and `discover_corporate_ip_first.py`
+   collect provenance-bearing raw observations, not approvals.
+2. `geosite-delta discovery-review` uses the *built* DAT to eliminate
+   existing RU/BLOCK coverage, apply the standing 4PDA prohibition and
+   hold/reject decisions, and classify missing RU domains.
+3. New reporting also shows overlap with **other** compiled categories and
+   writes `geosite_RU_discovery_review_queue.tsv`. Every row starts
+   `review_decision=UNREVIEWED,auto_direct=NO`, including priority rows.
+4. For a future genuinely missing first-party service: independently verify
+   the operator's published domain/endpoints, the reason for RU-DIRECT,
+   and the minimal `full:` versus `domain:` scope. Record a traceable
+   human decision, update the relevant reviewed source input and the pinned
+   `data/v11-approved-effective-ru.txt` allowance **in a separate
+   release-change review**. Approval alone does not inject a rule:
+   the build must have an intentionally changed, versioned positive input.
+5. Rebuild, run protobuf semantic checks, require no BLOCK or unrelated
+   category drift, and allow a release only through existing production
+   gates. The published `v11.1` tag is never overwritten.
+
+The manifest lists *permitted effective additions*, not automatically
+discovered domains. PR #4 does **not** modify positive sources, approvals,
+`main`, `release`, or the published DAT. This distinction matters:
+merging the audit by itself will not cause the release to accumulate 97,
+12, 9 or even 1 rule.
+
+**Release decision:** the PR can be considered an optional, bounded research
+collector after its new CI passes, but there is currently **no evidence-based
+RU coverage delta to promote**. Avoid importing foreign CSP references
+merely to increase rule counts.
