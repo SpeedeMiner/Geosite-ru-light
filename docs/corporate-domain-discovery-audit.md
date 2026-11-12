@@ -132,3 +132,33 @@ After round-robin CORE group selection, bounded activity observed:
 - Two mandatory offline Python suites pass (**5 first-party tests + 7 IP-first tests**). Go semantic delta: **RU=3053, BLOCK=43, DAT=82237 bytes; newly_covered=0, lost=0 for RU and BLOCK**. All 57 pinned rules and user prohibition on `4pda.to` remain preserved.
 
 **Interpretation:** This verifies the revised Reality Scanner IP-first method and group-balanced selection; it does **not** imply full corporate domain completeness. To expand recall, review more first-party seed hosts or explicitly documented CORE IP addresses. Do not invent server addresses or automatically import existing global CDN references.
+
+
+## Iterative CORE DNS/IP recall without larger scan budgets (2026-11-13)
+
+The original seed-to-IP conversion considered only the first eight DNS answers
+from a first-party seed. That arbitrary truncation could discard a CORE address
+after an initial run of foreign/shared IPs. Discovery now examines the entire
+public DNS answer set for each curated seed, filters by the SHA-pinned CORE
+prefix snapshot, **then** applies the global IP probe budget. No CIDR ranges
+are expanded and no additional third-party hosts are contacted.
+
+The IP-first audit now accepts `--rotation N`, defaulting to `0` for
+backward-compatible deterministic selection. PR and scheduled CI pass
+`--rotation "$GITHUB_RUN_NUMBER"`. The group order shifts each run; within
+each group the IP pointer advances after every complete group-order cycle.
+This avoids permanently starving addresses when group count and group size
+share factors. Repeating the same run number against the same seed, DNS
+and pinned CORE snapshots reproduces the selected sample.
+
+`geosite_RU_ip_discovery_status.json` records `selection_rotation` and the
+exact ordered `selected_seed_ips`, because seed DNS can change over time.
+The step still probes **at most 12 public CORE IPs** and performs at most
+**three keyless Shodan requests**. New regression tests cover a CORE record
+beyond the first eight DNS answers and eventual sample coverage under a
+smaller-than-group-count budget.
+
+**Verification boundary:** code and tests are committed to the Draft PR.
+Each new HEAD must pass offline Python tests and semantic Go checks in CI
+before considering the implementation verified. This is not a justification
+to add discovered names automatically to RU-DIRECT or to publish v11.2.
