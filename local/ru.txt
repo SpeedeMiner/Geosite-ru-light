@@ -138,3 +138,8 @@ domain:vigo.tech
 # https://vigo.tech/tpost/lp6r66yml1-s-3-marta-kompaniya-vigo-ooo-vigo-ispolz
 # https://www.merilo.one/en/personal_data/
 domain:merilo.one
+
+# X5 Group / corporate import platform; RDAP registrant X5 Corporate Centre
+# https://who.is/rdap/importx5.com
+# https://ipv4.bgp.he.net/dns/importx5.com
+domain:importx5.com
