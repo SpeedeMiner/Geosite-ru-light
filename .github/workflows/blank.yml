@@ -390,6 +390,32 @@ jobs:
           corporate_visited = set()
           corporate_missing = set()
 
+          def safe_corporate_suffix_tokens(parts):
+              if not parts:
+                  return False
+              token = parts[0].lower()
+              if token.startswith(("full:", "regexp:", "keyword:", "include:")):
+                  return False
+              # v2fly attributes are selectors. Do not treat arbitrary
+              # @cn/@!ru/@ads/@telemetry as RU-owned domain evidence.
+              return all(attr.lower() == "@ru" for attr in parts[1:])
+
+          # Regression tests run at each PR and main/scheduled build.
+          assert safe_corporate_suffix_tokens(["service.example.com"])
+          assert safe_corporate_suffix_tokens(["service.example.com", "@ru"])
+          assert safe_corporate_suffix_tokens(["service.example.com", "@RU", "@ru"])
+          for sample in (
+              ["service.example.com", "@ads"],
+              ["service.example.com", "@ru", "@ads"],
+              ["service.example.com", "@!ru"],
+              ["service.example.com", "@cn"],
+              ["service.example.com", "@telemetry"],
+              ["full:service.example.com", "@ru"],
+              ["regexp:.*", "@ru"],
+              ["keyword:service", "@ru"],
+          ):
+              assert not safe_corporate_suffix_tokens(sample), sample
+
           def import_corporate_category(name: str):
               name = normalize(name)
               if name in corporate_visited or is_excluded(name):
@@ -411,12 +437,7 @@ jobs:
                           if re.fullmatch(r"[A-Za-z0-9_.!+-]+", child):
                               import_corporate_category(child)
                       continue
-                  # Keep suffix-only rules. Country-scoped @ru metadata is
-                  # permitted; advertising, telemetry, @!ru and foreign
-                  # country selectors are not promoted to DIRECT.
-                  if token.startswith(("full:", "regexp:", "keyword:")):
-                      continue
-                  if len(parts) > 1 and not all(part.lower() == "@ru" for part in parts[1:]):
+                  if not safe_corporate_suffix_tokens(parts):
                       continue
                   if token.startswith("domain:"):
                       token = token[7:]
