@@ -25,7 +25,8 @@ DOMAIN_RE = re.compile(r"(?=.{1,253}$)[a-z0-9-]+(?:\.[a-z0-9-]+)+$")
 ALLOWED_CSP = {"img-src", "script-src", "style-src", "connect-src",
                "media-src", "font-src", "worker-src"}
 EXCLUDED_TLDS = {"ru", "su", "by", "kz", "xn--p1ai", "xn--90ais",
-                 "xn--80ao21a", "yandex", "sber"}
+                 "xn--80ao21a", "yandex", "sber", "local", "localhost",
+                 "internal", "invalid", "test", "example", "onion", "arpa"}
 FIELDS = ["domain", "signals", "seeds", "evidence", "public_dns_ips",
           "matched_core_asns", "matched_core_groups", "dns_checked"]
 USER_AGENT = "GeoSiteCorporateAudit/1.0 (review-only; no automatic routing)"
