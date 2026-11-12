@@ -416,7 +416,7 @@ jobs:
                       token = token.strip(".").lower().encode("idna").decode("ascii")
                   except UnicodeError:
                       continue
-                  if re.fullmatch(r"[a-z0-9-]+(?:\\.[a-z0-9-]+)+", token):
+                  if re.fullmatch(r"[a-z0-9-]+(?:\.[a-z0-9-]+)+", token):
                       corporate_domains.add(token)
 
           for category in sorted(extra_categories):
