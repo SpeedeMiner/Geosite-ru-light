@@ -2202,14 +2202,21 @@ jobs:
             "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat" \
             -o /tmp/geosite-ru-released.dat
           test -s /tmp/geosite-ru-released.dat
+          # External candidate source is review-only: never appended to RU input.
+          curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+            "https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/data/external-candidates.json" \
+            -o /tmp/geosite-ru-external-candidates.json
+          test -s /tmp/geosite-ru-external-candidates.json
           mkdir -p domain-list-community/tools/geosite-delta
           cp tools/geosite-delta/main.go domain-list-community/tools/geosite-delta/main.go
           (
             cd domain-list-community
             go run ./tools/geosite-delta \
-              /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md
+              /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
+              /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md
           )
           test -s geosite_RU_semantic_delta.md
+          test -s geosite_RU_external_candidate_audit.md
 
       - name: Upload PR candidate DAT and audit report
         if: github.event_name == 'pull_request'
@@ -2222,6 +2229,7 @@ jobs:
             geosite_RU.dat
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
+            geosite_RU_external_candidate_audit.md
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
             v2fly-corporate-extra-domains.txt
