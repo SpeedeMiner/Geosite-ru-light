@@ -16,15 +16,24 @@ func TestFilterDiscoveryNeverOverridesExistingPolicy(t *testing.T) {
     }
     names:=[]string{"img.example.ru","only.example.net","sub.track.example.org",
         "foreign.example.com","uncertain.example.net","media.4pda.to",
-        "new.example.com","new.example.org"}
+        "new.example.com","new.example.org","foreign-external.example.io"}
     var input []discoveredDomainRow
-    for _,n:=range names{input=append(input,discoveredDomainRow{Domain:n,Signals:"CSP",Seeds:"seed.ru"})}
-    out,counts:=filterDiscoveryCandidates(input,ru,block,reviews)
+    for _,n:=range names{
+        r:=discoveredDomainRow{Domain:n,Signals:"CSP",Seeds:"seed.ru"}
+        if n=="new.example.com"{r.Signals="TLS_SAN"}
+        if n=="new.example.org"{r.Seeds="seed.ru; partner.ru"}
+        input=append(input,r)
+    }
+    out,weak,counts:=filterDiscoveryCandidates(input,ru,block,reviews)
     if len(out)!=2||out[0].Domain!="new.example.com"||out[1].Domain!="new.example.org" {
         t.Fatalf("unexpected actionable domain list: %+v",out)
     }
-    for k,expected:=range map[string]int{"observed":8,"covered_RU":2,"covered_BLOCK":1,
-        "review_reject":1,"review_hold":1,"4pda_excluded":1,"new":2} {
+    if len(weak)!=1||weak[0].Domain!="foreign-external.example.io"{
+        t.Fatalf("third-party single CSP with no CORE should be weak evidence: %+v",weak)
+    }
+    for k,expected:=range map[string]int{"observed":9,"covered_RU":2,"covered_BLOCK":1,
+        "review_reject":1,"review_hold":1,"4pda_excluded":1,"new":3,
+        "priority_review":2,"weak_external_dependencies":1} {
         if counts[k]!=expected{t.Errorf("%s: got %d expected %d",k,counts[k],expected)}
     }
 }
