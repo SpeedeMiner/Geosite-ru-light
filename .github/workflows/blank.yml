@@ -2516,9 +2516,11 @@ jobs:
             go run ./tools/geosite-delta discovery-review \
               ../geosite_RU_discovery_raw.tsv "../$OUTPUT_FILE" \
               ../data/v11-external-domain-review.tsv \
-              ../geosite_RU_discovered_candidates.md
+              ../geosite_RU_discovered_candidates.md \
+              ../geosite_RU_discovery_review_queue.tsv
           )
           test -s geosite_RU_discovered_candidates.md
+          test -s geosite_RU_discovery_review_queue.tsv
           echo "### Review-only corporate discovery" >> "$GITHUB_STEP_SUMMARY"
           grep 'Observed:' geosite_RU_discovered_candidates.md >> "$GITHUB_STEP_SUMMARY" || true
 
@@ -2532,6 +2534,7 @@ jobs:
           if-no-files-found: warn
           path: |
             geosite_RU_discovered_candidates.md
+            geosite_RU_discovery_review_queue.tsv
             geosite_RU_discovery_raw.tsv
             geosite_RU_discovery_site_raw.tsv
             geosite_RU_discovery_status.json
