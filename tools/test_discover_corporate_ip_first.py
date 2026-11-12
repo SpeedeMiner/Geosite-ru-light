@@ -124,6 +124,26 @@ class IPFirstTests(unittest.TestCase):
         self.assertEqual(ipfirst.fair_core_targets(data, 0), [])
         self.assertEqual(len(ipfirst.fair_core_targets(data, 99)), 5)
 
+    def test_rotation_changes_groups_and_addresses_without_expanding_budget(self):
+        data = {
+            "8.8.8.1": {"seeds": {"a"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "8.8.8.2": {"seeds": {"a"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "8.8.8.3": {"seeds": {"a"}, "asns": {"AS100"}, "groups": {"Alpha"}},
+            "8.8.8.4": {"seeds": {"b"}, "asns": {"AS101"}, "groups": {"Beta"}},
+            "8.8.8.5": {"seeds": {"c"}, "asns": {"AS102"}, "groups": {"Gamma"}},
+        }
+        sample0 = ipfirst.fair_core_targets(data, 2, rotation=0)
+        sample1 = ipfirst.fair_core_targets(data, 2, rotation=1)
+        sample2 = ipfirst.fair_core_targets(data, 2, rotation=2)
+        self.assertEqual([ip for ip, _ in sample0], ["8.8.8.1", "8.8.8.4"])
+        self.assertEqual([ip for ip, _ in sample1], ["8.8.8.4", "8.8.8.5"])
+        self.assertEqual([ip for ip, _ in sample2], ["8.8.8.5", "8.8.8.3"])
+        self.assertEqual(ipfirst.fair_core_targets(data, 2, rotation=2), sample2)
+        self.assertEqual({ip for batch in (sample0, sample1, sample2)
+                          for ip, _ in batch},
+                         {"8.8.8.1", "8.8.8.3", "8.8.8.4", "8.8.8.5"})
+        self.assertEqual(len(ipfirst.fair_core_targets(data, 1, rotation=1001)), 1)
+
     def test_missing_core_means_no_targets(self):
         targets, errors, total = ipfirst.targets_from_seeds(
             [("Group", "corp.example.ru")], self.prefixes, self.policy, 10,
