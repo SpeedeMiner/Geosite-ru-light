@@ -67,3 +67,25 @@ Refined, semantically equivalent CI: https://github.com/SpeedeMiner/Geosite-ru-l
 A real certificate SAN or CSP directive does not prove that the host belongs to the same company. A website may intentionally use third-party CDN, fonts, analytics, video widgets or payment services. A DNS answer in a CORE prefix can also describe hosting or business partnership. Multiple technical signals increase the priority for further manual evidence review; they cannot replace proof of current first-party ownership and intended routing behavior.
 
 **Explicit 4PDA policy remains unchanged:** `4pda.to` and all descendants are excluded from RU-DIRECT.
+
+
+## Reality Scanner v2 — IP-first adaptation (2026-11-13)
+
+Adapted *discovery ideas*, not the scanner's REALITY/SNI suitability algorithm:
+
+- Source: https://github.com/SpeedeMiner/reality-scanner-v2 (`activeProbeIP`, `resolvePTRRaw`, `extractDomainsFromTLS`, `fetchShodanInternetDB`). Code here is a **rewritten independent Python implementation** under `tools/discover_corporate_ip_first.py`; no vendored scanner, no copied embedded API tokens, no REALITY probing.
+- Input targets: A/AAAA of the 19 versioned first-party seed hostnames from `corporate_discovery_seeds.tsv`. **Only public IPs within the SHA-pinned GeoIP v41 CORE prefix file** survive. A manually curated IP TSV may also be supplied via `--curated-ips`; all rows are validated against the same CORE prefixes. No random sampling or sweep across any of the 283 prefixes.
+- Per limited IP: reverse PTR, require **forward-confirmed DNS** (FCRDNS), and then probe HTTPS 443 with **verified TLS + SNI** using a known seed host or confirmed PTR host. Parse SAN exact DNS hosts only; no wildcard widening, insecure TLS fallback, or guessing SNI.
+- Optional, keyless **Shodan InternetDB** IP hostname history (default disabled in CLI; CI capped to 3 IP requests). Observations are labelled `IP_SHODAN_HISTORY`; they remain historical OSINT, not ownership evidence.
+- Network budgets: at most 12 selected CORE IPs in CI, 3 SSL seconds per connection, at most 3 SNI names per IP, 3 public OSINT requests, no more than 80 SAN names per certificate; `timeout 140s` bounds the full IP-first stage.
+- Evidence schema: versioned `geosite_RU_discovery_site_raw.tsv` (direct first-party SAN/CSP), merged `geosite_RU_discovery_raw.tsv` (site+IP), `geosite_RU_discovery_status.json`, and `geosite_RU_ip_discovery_status.json`. Exact domain signal markers: `IP_PTR_FCRDNS`, `IP_TLS_SAN_VERIFIED`, `IP_SHODAN_HISTORY`.
+- Both sources feed the already proven `geosite-delta discovery-review` semantic subtraction (RU/BLOCK + user ban `4pda.to` + prior hold/reject). Signals can raise **manual review priority** only. Even multiple signals or matched CORE ASN **never automatically add a RootDomain or Full rule**.
+- All Python IP-first tests are mandatory in PR semantic CI. Live network probes are best-effort and cannot cause a production release failure, but missing network data must be described explicitly by the status JSON rather than assumed successful.
+
+### Important source caveat
+
+Original REALITY scanner may use `InsecureSkipVerify: true` for active handshake reconnaissance; this implementation **does not** copy that behavior. The original also includes apparent third-party API token defaults: these must be rotated/removed in the scanner repository separately, never imported into `Geosite-ru-light`. Hostname relationships inferred from a shared certificate, PTR or Shodan result are **not legal ownership evidence**.
+
+### Manually curated IP option
+
+An operator can use a local TSV with `IP<TAB>reason` rows, passed through `--curated-ips path.tsv`. Public/global and CORE-prefix membership are mandatory; `SHARED_INFRA`, private IPs, and arbitrary third-party addresses cause the tool to reject the file. No curated IP list is bundled or guessed. Manual curated inputs may be run locally before proposing them as publicly approved seed evidence.
