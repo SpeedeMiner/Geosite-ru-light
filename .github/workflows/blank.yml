@@ -1202,6 +1202,28 @@ jobs:
               removedInvalid       int
           }
 
+          // These third-party-vendor hosts are confirmed by an official VTB page.
+          // We only have evidence for these exact hostnames, not all subdomains.
+          var exactRUPositiveHosts = map[string]bool{
+              "prod.ntprog.com": true,
+              "uat.ntprog.com": true,
+              "msk-prod-gate.ntprog.com": true,
+              "muat-gate.ntprog.com": true,
+          }
+
+          func addPositiveRule(category *router.GeoSite, seen map[string]bool, value string) bool {
+              if normalizeName(category.CountryCode) == "ru" && exactRUPositiveHosts[value] {
+                  key := domainValueKey(router.Domain_Full, value)
+                  if seen[key] {
+                      return false
+                  }
+                  seen[key] = true
+                  category.Domain = append(category.Domain, &router.Domain{Type: router.Domain_Full, Value: value})
+                  return true
+              }
+              return addRoot(category, seen, value)
+          }
+
           func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool, label string) appendDomainStats {
               stats := appendDomainStats{}
               for _, value := range values {
@@ -1225,7 +1247,7 @@ jobs:
                       stats.removedInvalid++
                       continue
                   }
-                  if !addRoot(category, seen, value) {
+                  if !addPositiveRule(category, seen, value) {
                       stats.duplicates++
                       continue
                   }
@@ -2008,6 +2030,34 @@ jobs:
               }
               if !addRoot(ru, seen, "ddos-guard.net") {
                   t.Fatal("legitimate RU service was rejected")
+              }
+          }
+
+          func TestVTBExternalGatewayHostsRemainExact(t *testing.T) {
+              category := &router.GeoSite{CountryCode: "RU"}
+              seen := make(map[string]bool)
+              values := []string{
+                  "prod.ntprog.com", "uat.ntprog.com",
+                  "msk-prod-gate.ntprog.com", "muat-gate.ntprog.com",
+                  "other-company.com",
+              }
+              stats := appendDomainStrings(category, values, seen, "exact-host-policy")
+              if stats.written != 5 {
+                  t.Fatalf("expected five positive rules, got %d", stats.written)
+              }
+              exactCount, suffixCount := 0, 0
+              for _, d := range category.Domain {
+                  if exactRUPositiveHosts[d.Value] {
+                      if d.Type != router.Domain_Full {
+                          t.Fatalf("%s must remain Full, got %v", d.Value, d.Type)
+                      }
+                      exactCount++
+                  } else if d.Type == router.Domain_RootDomain {
+                      suffixCount++
+                  }
+              }
+              if exactCount != 4 || suffixCount != 1 {
+                  t.Fatalf("unexpected exact/suffix counts: %d/%d", exactCount, suffixCount)
               }
           }
 
