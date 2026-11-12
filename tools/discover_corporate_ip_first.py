@@ -54,7 +54,10 @@ def fair_core_targets(targets: dict, budget: int, rotation: int = 0):
     groups = groups[group_shift:] + groups[:group_shift]
     for group in groups:
         items = buckets[group]
-        shift = rotation % len(items)
+        # Advance each group's IP pointer after every full group-order cycle.
+        # Using rotation alone can starve IPs when group count and bucket
+        # size share factors (e.g. two groups with two IPs, budget one).
+        shift = (rotation // len(groups)) % len(items)
         buckets[group] = items[shift:] + items[:shift]
     selected = []
     while len(selected) < budget:
