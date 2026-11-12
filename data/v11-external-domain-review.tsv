@@ -1,0 +1,117 @@
+# Domain<TAB>Decision<TAB>Evidence / rationale
+# Decision: reject = fail CI if covered by RU; hold = do not import; confirmed = source-verified
+sbrf.com	reject	2026-11-12: parked Sedo; brand similarity alone is insufficient
+avito.net	hold	2026-11-12: ownership and production usage not confirmed
+rutube.io	hold	2026-11-12: official RUTUBE company page identifies rutube.ru, not .io
+ozoncloud.com	hold	2026-11-12: cannot infer Ozon ownership from similar string
+2gis.io	hold	2026-11-12: not present in official 2GIS domain-list-community category; attribution unverified
+gosuslugi.org	hold	2026-11-12: government association and usage not established
+kinopoisk.net	hold	2026-11-12: DNS delegation or historic parking does not establish current purpose
+hbrd.io	hold	2026-11-12: analytics/short-link use needs exact host scope verification
+importx5.com	confirmed	X5 registrant and domains.x5.ru contact recorded in docs/v11-coverage-audit.md
+vtbcapital.com	confirmed	VTB official eFX page references efx@vtbcapital.com
+vigo.tech	confirmed	Vigo corporate statement recorded in docs/v11-coverage-audit.md
+samokat.tech	confirmed	ecom.tech official rebrand announcement
+2gis.biz	confirmed	2GIS business microsites agreement
+soloviev.live	confirmed	Official channel OK community https://m.ok.ru/solovievlive ; broadcaster directory https://www.cableman.ru/channel/solovev-live
+poctechcorp.com	reject	Chinese device manufacturer Zhejiang POCTech owns https://poctechcorp.com/en/ ; not RU company
+yuwellanytime.co.uk	reject	UK distributor Urathon Europe and Chinese Yuwell https://www.yuwellanytime.co.uk/urathon/ ; not RU company
+poctechcgm.com	hold	POCTech name linked to Chinese medical company, but apex ownership not independently verified
+ok.games	hold	NS ns1.ok.ru / hostmaster.odnoklassniki.ru indicates infrastructure link; no official current domain assertion verified
+m-line.expert	confirmed	Official ООО М-ЛАЙН contacts INN 7722749786 https://m-line.expert/contacts and official medical insurance register https://oms44.ru/meditsinskie-organizatsii/1807-ooo-m-lajn
+inme.store	confirmed	ООО ИНМИ official contacts INN 7722648178 https://www.inme.store/contacts.html and company https://inme.store/about/
+inme.technology	confirmed	ООО ИНМИ official https://inme.technology/ and hosted device passport https://m-line.expert/uploads/page/f0feb0ce4ba7a815cb4c35e884721efe.pdf
+mts.am	reject	Official operator document confirms MTS Armenia renamed independent Viva Armenia on 2024-03-25 https://armeps.am/ppcm/public/contracts/download-attachment?id=d54bf63d-7055-475f-acf9-eadd507694e5
+upravel.com	hold	Official Russian legal entity ООО АПРЕЙВЕЛ INN 7728462211 https://upravel.com/policy ; third-party https://mts-link.ru/legal/privacy-policy-soft.pdf lists domain as web-analytics/adtech, routing policy not approved
+syai.com	hold	Official RU distributor https://syaiofficial.ru/ cites ООО МедФарм Дистрибуция, but iOS app developer SYAI HEALTH TECHNOLOGY PTE. LTD and primary syai.com are foreign: https://foxdata.com/ru/app-marketing-analytics/6695746020/as/RU/syai-ru/
+2gis.qa	confirmed	2026-11-12 official 2GIS LLC redirect: https://2gis.qa/ -> https://info.2gis.com/ (2GIS L.L.C. footer)
+anytimeviewru.com	reject	2026-11-12 first-party agreement https://www.anytimeviewru.com/static/3.0.0.0/en-CMTHvzKy.html names Polish operator Yuwell Medtech Poland Sp. z o.o.; RU letters are not ownership
+mts.it	reject	2026-11-12 Italian registrant Puglia.com S.r.l.s. and parked ParkLogic NS https://robtex.com/en/dns-lookup/it/mts ; https://webrate.org/site/mts.it/
+2gis.sa	hold	2026-11-12 third-party 2GIS regional-domain catalog https://apify.com/bovi/2gis-places-scraper/input-schema ; no confirmed active first-party redirect or public registrant
+dv.team	hold	2026-11-12 historical shared hosting evidence https://ipv4.bgp.he.net/net/185.71.64.0/22 ; no first-party corporate registration established
+icq.net	hold	2026-11-12 VK discontinued ICQ messenger June 26 2024 https://www.kommersant.ru/doc/6791128 ; current use and registered owner unconfirmed
+mail.ua	hold	2026-11-12 registrant MGL.Mail.ru Internet Assets Limited but registry status clientHold and no live DNS https://dig.ua/en/search/mail.ua/about ; affiliation does not imply functional DIRECT
+mobile-vk.com	hold	2026-11-12 appears in historical dedicated VKONTAKTE-FRONT network https://2ip.io/ru/net/93.186.224.0-93.186.231.255/ ; first-party current use unconfirmed
+mos.city	hold	2026-11-12 no authoritative confirmation of official Moscow municipal or other RU corporate ownership; brand similarity is insufficient
+mts.md	hold	2026-11-12 no verifiable affiliation with Russian MTS group; .md and similar name not evidence
+mts.ua	hold	2026-11-12 previously Ukrainian MTS/Vodafone site https://amcu.gov.ua/static-objects/amcu/uploads/public/5db/1c4/508/5db1c4508e09c030122477.pdf ; current corporate ownership and active service unverified
+ozon.de	hold	2026-11-12 no official Ozon corporate reference or current legal domain owner; .de brand collision risk
+ozon.vip	hold	2026-11-12 no official Ozon reference or current corporate registrant; possible brand impersonation
+sber.online	hold	2026-11-12 https://help.ptsecurity.com/ru-RU/projects/nad/12.3/help/5820224779 lists Sber.online as application label not proof of this registered hostname
+t-cdn.net	hold	2026-11-12 mentioned as example domain in historical third-party CDN patent https://patents.google.com/patent/WO2012152765A1 ; no RU operator attribution
+wildberries.az	hold	2026-11-12 historical redirect to wildberries.ru https://builtwith.com/ru/redirects/wildberries.ru ; not enough evidence for active 2026 control or intended service
+wildberries.md	hold	2026-11-12 historical Moldova launches referenced md.wildberries.ru, not wildberries.md https://kz.fashionnetwork.com/newsPdf/downloadPdf/?id=1317113 ; first-party current domain use unconfirmed
+hexlet.io	confirmed	2026-11-12 first-party contacts list ООО Хекслет Рус INN 7325174845 https://ru.hexlet.io/pages/contacts and TOO Hexlet Kazakhstan BIN 230340043714 https://hexlet.io/pages/contacts
+4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
+www.4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
+codeforces.com	hold	2026-11-12 official https://codeforces.com/about names founder/owner IE Mikhail Mirzayanov with Bishkek Kyrgyzstan contact; https://codeforces.com/privacy names CODEFORCES GLOBAL FZCO (UAE). Russian origin alone is not RU/KZ/BY corporate ownership
+che.tv	hold	2026-11-12 official current CTC Media page points to chetv.ru, not che.tv https://ctc.media/channel/che
+dom-kino.tv	hold	2026-11-12 upstream no A/DNS; historical association with Dom Kino insufficient to include
+drom.com	hold	2026-11-12 first-party Drom.ru use of separate .com not verified; domain failed live fetch
+www.drom.com	hold	2026-11-12 parent drom.com ownership not verified; no working endpoint confirmed
+api.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+blog.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+chat.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+console.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+docs.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+edge.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+enterprise.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+finance.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+labs.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+perplexity-ai.cloudflareaccess.com	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+pplx-next-static-public.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+r2cdn.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+shopping.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+status.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+tools.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+travel.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+www.perplexity.ai	reject	2026-11-12 Perplexity AI Inc is US-operated per first-party ToS https://www.perplexity.ai/ru/hub/legal/terms-of-service ; Cloudflare access endpoint is also not a RU corporate domain
+cas-bridge.xethub.hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+cdn-lfs-eu-1.hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+cdn-lfs-us-1.hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+cdn-lfs.hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+cdn-lfs.huggingface.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+hf.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+huggingface.co	reject	2026-11-12 first-party Hugging Face Inc Delaware company https://huggingface.co/terms-of-service ; its CDN/short domains documented at https://huggingface.co/docs/huggingface_hub/package_reference/hf_uris and https://discuss.huggingface.co/t/how-to-get-a-list-of-all-huggingface-download-redirections-to-whitelist/30486
+booking.com	reject	2026-11-12 first-party Booking.com legal identifies Booking.com B.V. Amsterdam https://www.booking.com/content/legal.html
+duolingo.com	reject	2026-11-12 Duolingo Inc incorporated Delaware USA, HQ Pittsburgh https://investors.duolingo.com/resources
+lingualeo.com	confirmed	2026-11-12 official site names Moscow ООО Лингуалео INN 7710749260 and defines lingualeo.com as user platform https://lingualeo.com/ru/blog/polozhenie-o-zashhite-personalnyih-dannyih/
+1c-fresh.com	hold	2026-11-12 upstream NXDOMAIN; current official 1C service uses 1cfresh.com not 1c-fresh.com https://1cv.tech/catalog/1c-fresh/ ; no confirmed owner/need
+sberzvuk.com	hold	2026-11-12 upstream NXDOMAIN and not verified as active first-party Sber/Zvuk site; must confirm historical ownership and current purpose
+www.sberzvuk.com	hold	2026-11-12 parent sberzvuk.com unconfirmed and upstream NXDOMAIN; hold exact host
+zenit.bank	hold	2026-11-12 upstream NXDOMAIN; current service use and operator domain ownership not confirmed
+kontur.extern	hold	2026-11-12 upstream NXDOMAIN and no validated operational hostname for Kontur services; do not infer brand TLD
+kontur.focus	hold	2026-11-12 upstream NXDOMAIN and no validated operational hostname for Kontur services; do not infer brand TLD
+mts.online	hold	2026-11-12 upstream NXDOMAIN; similarity to Russian MTS not proof of current registered corporate usage
+soc.fund	hold	2026-11-12 external-source CDN warning; no first-party government/social-fund reference or public registrant confirmation
+jetbrains.com	reject	2026-11-12 first-party legal entity JetBrains s.r.o. Prague Czech Republic https://www.jetbrains.com/legal/docs/terms/professional-services/
+epam.com	reject	2026-11-12 EPAM Systems Inc headquarters Newtown Pennsylvania USA https://investors.epam.com/
+flightradar24.com	reject	2026-11-12 first-party legal Flightradar24 AB Sweden organization no. 556895-1213 https://www.flightradar24.com/terms-of-service
+joom.com	reject	2026-11-12 first-party legal Joom SIA Riga Latvia 40103993365 https://www.joom.com/en/faq/article/5e7201fdff117c3eb7d2cfd8
+abbyy.com	reject	Official ABBYY legal entities are US/EU/Cyprus; services not available in RU/BY https://www.abbyy.com/legal/entities/ ; historical RU founding is not current RU-DIRECT ownership
+akamaized.net	reject	Akamai Technologies global shared CDN with US headquarters https://www.akamai.com/why-akamai/contact-us ; entire customer CDN must not be RU
+bookmate.com	reject	Bookmate Limited Ireland is explicit website owner and operator https://bookmate.com/about/legal ; Yandex-origin Bookmate brand does not make global root RU
+busuu.com	reject	BUSUU LIMITED UK company no. 08172044 controlled by US Chegg Inc https://find-and-update.company-information.service.gov.uk/company/08172044/persons-with-significant-control
+coddy.academy	hold	CODDY Russian school first-party official domain is coddyschool.com https://coddyschool.com/ ; distinct coddy.academy has upstream NXDOMAIN and is not attested
+codewars.com	reject	Codewars owned and operated by US Andela Inc 580 5th Ave New York https://www.codewars.com/about/privacy
+coursera.org	reject	Coursera Inc US; official terms govern service https://www.coursera.org/about/terms
+edx.org	reject	edX LLC is a 2U LLC company per first-party terms https://www.edx.org/edx-terms-service
+englishdom.com	reject	First-party 2026 terms name Cypriot Edusoft Solutions Limited HE 478100 operator https://www.englishdom.com/ua/info/terms/terms-of-use/ru/
+gett.com	reject	Gett UK operates through GT Gettaxi UK Limited and company confirms exit from Russian market https://www.gett.com/uk/legal/terms ; https://www.gett.com/uk/about/
+gosuslugi.rf	hold	Not the official Cyrillic .рф ACE suffix and upstream DNS unresolved; no first-party Russian state operator reference established
+indriver.com	hold	InDrive started in Yakutsk and has Kazakhstan engineering staff https://careers.indrive.com/vacancies/?country=Kazakhstan ; current operator of legacy indriver.com and RU/KZ group control not yet proven
+italki.com	reject	2026 first-party privacy names italki HK Limited and Lingbe SL as operators https://moon-st.italki.cn/en/privacy
+khanacademy.org	reject	First-party 2026 terms identify Khan Academy Inc as US 501(c)(3) owner https://www.khanacademy.org/about/docs/khan-academy-terms-of-service
+leetcode.com	reject	First-party policy names LeetCode LLC as global operator https://leetcode.com/privacy/ ; no RU/KZ/BY ownership evidence
+luxoft.com	reject	Luxoft wholly owned by US DXC Technology since 2019 https://investors.dxc.com/investor-news/news-details/2019/DXC-Technology-Completes-Acquisition-Of-Leading-Digital-Innovator-Luxoft/default.aspx
+practicum.com	hold	2026 apex redirects to https://tripleten.com/ (international program), older first-party agreement Intertech Services AG https://yandex.com/legal/practicum_terms/en/ ; current RU entity/need unverified
+preply.com	reject	US SEC 2026 Form D shows Preply Inc incorporated in Delaware with US office https://www.sec.gov/Archives/edgar/data/1720581/000172058126000002/xslFormDX08/primary_doc.xml
+ru.aliexpress.com	reject	RU-language subdomain of global Alibaba service; 2026 terms assign CIS users to AliExpress CIS Holding Pte Ltd Singapore https://terms.alicdn.com/legal-agreement/terms/suit_bu1_aliexpress/suit_bu1_aliexpress202204182115_37406.html
+ru.iherb.com	reject	2026 first-party iHerb LLC / iHerb Netherlands BV service terms https://www.iherb.com/info/terms-of-use ; ru locale not local ownership
+sapsan.com	reject	Site explicitly serves Vietnamese scouting group HƯỚNG ĐẠO VIỆT NAM https://sapsan.com/ ; not Russian Railways Sapsan train
+svetofor.com	hold	Cannot verify registrant and purpose of this specific .com; Russian retailers use different verified sites https://buy.svetoforonline.ru/content/rekviziti/
+tinkoff.am	hold	Not independently verified as T-Bank controlled; 2026-11-12 site inaccessible and upstream global CDN warning; do not infer from Tinkoff brand
+uber.com	reject	US Uber Technologies Inc international service https://www.uber.com/us/en/legal/general-terms-of-use/
+www.tinkoff.am	hold	No confirmed ownership of apex tinkoff.am; cannot whitelist child without independent current bank attribution
+zara.com	reject	Spanish Inditex group first-party page names Zara brand and Spanish entity https://www.inditex.com/itxcomweb/nf/es/informacion/contacto

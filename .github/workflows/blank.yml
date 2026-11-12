@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v10)
+name: Build Ultimate Light RU Geosite (Optimized v11)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -7,6 +7,15 @@ concurrency:
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/**"
+      - "local/**"
+      # Audit policy and comparator changes must also trigger PR checks.
+      - "data/**"
+      - "tools/**"
   schedule:
     # Каждый понедельник в 00:00 UTC
     - cron: "0 0 * * 1"
@@ -20,8 +29,8 @@ on:
 
 jobs:
   build:
-    # Publication is allowed only from the main branch.
-    if: github.ref == 'refs/heads/main'
+    # PR builds run all tests but never publish production artifacts.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -348,6 +357,7 @@ jobs:
               "regru", "selectel", "servicepipe", "skyeng", "smena", "tilda",
               "timeweb", "ucoz", "whoosh",
               "megafon", "mts-ru", "rostelecom", "t2-ru",
+              "vk", "sberbank", "tinkoff", "alfabank", "vtb", "gazprombank",
           }
 
           optional_missing = []
@@ -372,6 +382,64 @@ jobs:
               print("Optional standalone categories absent in current v2fly data (not fatal):")
               for name in optional_missing:
                   print(f"  - {name}")
+
+          # Import positive RU-tree suffix rules directly: a v2fly category may
+          # be absent as a top-level category in runetfreedom's compiled DAT.
+          # No global DNS/TLD, generic cloud provider or negative category promotion.
+          corporate_domains = set()
+          corporate_visited = set()
+          corporate_missing = set()
+
+          def import_corporate_category(name: str):
+              name = normalize(name)
+              if name in corporate_visited or is_excluded(name):
+                  return
+              corporate_visited.add(name)
+              path = DATA / name
+              if not path.is_file():
+                  corporate_missing.add(name)
+                  return
+              for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+                  entry = raw.split("#", 1)[0].strip()
+                  if not entry:
+                      continue
+                  parts = entry.split()
+                  token = parts[0]
+                  if token.lower().startswith("include:"):
+                      if len(parts) == 1:
+                          child = token.split(":", 1)[1]
+                          if re.fullmatch(r"[A-Za-z0-9_.!+-]+", child):
+                              import_corporate_category(child)
+                      continue
+                  # Do not widen exact/keyword/regexp or attribute-filtered rules.
+                  if len(parts) != 1 or token.startswith(("full:", "regexp:", "keyword:")):
+                      continue
+                  if token.startswith("domain:"):
+                      token = token[7:]
+                  try:
+                      token = token.strip(".").lower().encode("idna").decode("ascii")
+                  except UnicodeError:
+                      continue
+                  if re.fullmatch(r"[a-z0-9-]+(?:\.[a-z0-9-]+)+", token):
+                      corporate_domains.add(token)
+
+          # All positive include dependencies of category-ru and extra_categories.
+          # This catches bank/retail/entertainment source-only rules, not just
+          # manually enumerated corporate categories.
+          for category in sorted(visited):
+              if (DATA / category).is_file():
+                  import_corporate_category(category)
+          if corporate_missing:
+              raise SystemExit("missing v2fly dependencies: " + ", ".join(sorted(corporate_missing)))
+          if not corporate_domains:
+              raise SystemExit("empty direct v2fly corporate domain extraction")
+          direct_output = Path("v2fly-corporate-extra-domains.txt")
+          direct_output.write_text(
+              "# Generated positive v2fly suffix rules\n"
+              + "".join(f"domain:{value}\n" for value in sorted(corporate_domains)),
+              encoding="utf-8",
+          )
+          print(f"Direct v2fly positive RU-tree suffix rules: {len(corporate_domains)}")
 
           def add_external_categories(source: str, categories) -> int:
               excluded_count = 0
@@ -566,6 +634,10 @@ jobs:
           var compactRussianTLDRoots = []string{
               "ru",             // .ru
               "su",             // .su
+              "by",             // .by
+              "kz",             // .kz
+              "xn--90ais",      // .бел
+              "xn--80ao21a",    // .қаз
               "xn--p1ai",      // .рф
               "moscow",        // .moscow
               "tatar",         // .tatar
@@ -1055,7 +1127,31 @@ jobs:
               return n
           }
 
+          // A positive source may contain foreign streaming endpoints. They must
+          // not be promoted into geosite:RU merely because a third-party list
+          // once marked them DIRECT. Keep this denial narrowly scoped to RU.
+          var excludedRUPositiveDomains = map[string]bool{
+              "stream.kick.com": true, // Kick international video stream CDN
+          }
+
+          // The user explicitly forbids any DIRECT coverage of 4pda.to,
+          // including its subdomains. Check both descendants and a RootDomain
+          // ancestor (e.g. a future "to" root) that would cover 4pda.to.
+          func forbidden4PDAInRU(typ router.Domain_Type, value string) bool {
+              const apex = "4pda.to"
+              name := normalizeName(value)
+              if name == apex || strings.HasSuffix(name, "."+apex) {
+                  return true
+              }
+              return typ == router.Domain_RootDomain && strings.HasSuffix(apex, "."+name)
+          }
+
           func addRoot(site *router.GeoSite, seen map[string]bool, value string) bool {
+              if normalizeName(site.CountryCode) == "ru" &&
+                  (excludedRUPositiveDomains[normalizeName(value)] ||
+                      forbidden4PDAInRU(router.Domain_RootDomain, value)) {
+                  return false
+              }
               key := domainValueKey(router.Domain_RootDomain, value)
               if seen[key] {
                   return false
@@ -1123,6 +1219,32 @@ jobs:
               removedInvalid       int
           }
 
+          // These third-party-vendor hosts are confirmed by an official VTB page.
+          // We only have evidence for these exact hostnames, not all subdomains.
+          var exactRUPositiveHosts = map[string]bool{
+              "prod.ntprog.com": true,
+              "uat.ntprog.com": true,
+              "msk-prod-gate.ntprog.com": true,
+              "muat-gate.ntprog.com": true,
+          }
+
+          func addPositiveRule(category *router.GeoSite, seen map[string]bool, value string) bool {
+              if normalizeName(category.CountryCode) == "ru" &&
+                  forbidden4PDAInRU(router.Domain_Full, value) {
+                  return false
+              }
+              if normalizeName(category.CountryCode) == "ru" && exactRUPositiveHosts[value] {
+                  key := domainValueKey(router.Domain_Full, value)
+                  if seen[key] {
+                      return false
+                  }
+                  seen[key] = true
+                  category.Domain = append(category.Domain, &router.Domain{Type: router.Domain_Full, Value: value})
+                  return true
+              }
+              return addRoot(category, seen, value)
+          }
+
           func appendDomainStrings(category *router.GeoSite, values []string, seen map[string]bool, label string) appendDomainStats {
               stats := appendDomainStats{}
               for _, value := range values {
@@ -1146,7 +1268,7 @@ jobs:
                       stats.removedInvalid++
                       continue
                   }
-                  if !addRoot(category, seen, value) {
+                  if !addPositiveRule(category, seen, value) {
                       stats.duplicates++
                       continue
                   }
@@ -1523,6 +1645,13 @@ jobs:
               var pruned int
               ruCategory.Domain, pruned = pruneCoveredDomains(ruCategory.Domain)
               removedCoveredDomainCount += pruned
+              // Required even in scheduled main builds, where PR-only delta
+              // checks do not run. Never emit forbidden DIRECT coverage.
+              for _, domain := range ruCategory.Domain {
+                  if forbidden4PDAInRU(domain.Type, domain.Value) {
+                      fatalf("4pda.to no-DIRECT production policy violated: %v:%s", domain.Type, domain.Value)
+                  }
+              }
               sortDomains(ruCategory.Domain)
 
               blockCategory.Domain, removedCoveredBlockDomainCount = pruneCoveredDomains(blockCategory.Domain)
@@ -1788,7 +1917,29 @@ jobs:
                   fatalf("RU has only %d rules (minimum %d)", len(ru.Domain), floor)
               }
 
-              validateRules("RU", ru.Domain, false)
+              // Only the four explicitly approved VTB vendor hostnames may be
+              // Full in RU; all other imported RU entries stay RootDomain.
+              validateRules("RU", ru.Domain, true)
+              for _, entry := range ru.Domain {
+                  if forbidden4PDAInRU(entry.Type, entry.Value) {
+                      fatalf("4pda.to prohibited in output RU DAT: %v:%s", entry.Type, entry.Value)
+                  }
+              }
+              exactSeen := make(map[string]bool)
+              for _, entry := range ru.Domain {
+                  if entry.Type == router.Domain_Full {
+                      name := normalizeName(entry.Value)
+                      if !exactRUPositiveHosts[name] {
+                          fatalf("unapproved Full rule in RU: %s", name)
+                      }
+                      exactSeen[name] = true
+                  }
+              }
+              for name := range exactRUPositiveHosts {
+                  if !exactSeen[name] {
+                      fatalf("required exact VTB host missing from RU DAT: %s", name)
+                  }
+              }
 
               compactTLD := make(map[string]bool, len(compactRussianTLDRoots))
               for _, root := range compactRussianTLDRoots {
@@ -1918,6 +2069,79 @@ jobs:
               }
           }
 
+          func TestForeignPositiveDomainsAreNotPromotedToRU(t *testing.T) {
+              ru := &router.GeoSite{CountryCode: "RU"}
+              seen := make(map[string]bool)
+              if addRoot(ru, seen, "stream.kick.com") {
+                  t.Fatal("foreign streaming CDN leaked into RU")
+              }
+              if len(ru.Domain) != 0 {
+                  t.Fatal("excluded rule was added to RU")
+              }
+              if !addRoot(ru, seen, "ddos-guard.net") {
+                  t.Fatal("legitimate RU service was rejected")
+              }
+          }
+
+          func TestNo4PDADirectInScheduledAndPRBuild(t *testing.T) {
+              for _, value := range []string{
+                  "4pda.to", "www.4pda.to", "forum.4pda.to",
+                  "cdn.static.4pda.to", "to",
+              } {
+                  ru := &router.GeoSite{CountryCode: "RU"}
+                  seen := make(map[string]bool)
+                  if !forbidden4PDAInRU(router.Domain_RootDomain, value) {
+                      t.Fatalf("forbidden 4PDA coverage was not recognized: %s", value)
+                  }
+                  if addRoot(ru, seen, value) || len(ru.Domain) != 0 {
+                      t.Fatalf("forbidden 4PDA root leaked into RU: %s", value)
+                  }
+              }
+              for _, value := range []string{"4pda.ru", "not4pda.to", "foo4pda.to"} {
+                  ru := &router.GeoSite{CountryCode: "RU"}
+                  if forbidden4PDAInRU(router.Domain_RootDomain, value) {
+                      t.Fatalf("unrelated domain falsely forbidden: %s", value)
+                  }
+                  if !addRoot(ru, make(map[string]bool), value) {
+                      t.Fatalf("unrelated RU candidate rejected: %s", value)
+                  }
+              }
+              if !forbidden4PDAInRU(router.Domain_Full, "forum.4pda.to") {
+                  t.Fatal("Full subdomain must also be forbidden")
+              }
+              if forbidden4PDAInRU(router.Domain_Full, "to") {
+                  t.Fatal("Full 'to' is not a suffix root and cannot cover 4pda.to")
+              }
+          }
+
+          func TestVTBExternalGatewayHostsRemainExact(t *testing.T) {
+              category := &router.GeoSite{CountryCode: "RU"}
+              seen := make(map[string]bool)
+              values := []string{
+                  "prod.ntprog.com", "uat.ntprog.com",
+                  "msk-prod-gate.ntprog.com", "muat-gate.ntprog.com",
+                  "other-company.com",
+              }
+              stats := appendDomainStrings(category, values, seen, "exact-host-policy")
+              if stats.written != 5 {
+                  t.Fatalf("expected five positive rules, got %d", stats.written)
+              }
+              exactCount, suffixCount := 0, 0
+              for _, d := range category.Domain {
+                  if exactRUPositiveHosts[d.Value] {
+                      if d.Type != router.Domain_Full {
+                          t.Fatalf("%s must remain Full, got %v", d.Value, d.Type)
+                      }
+                      exactCount++
+                  } else if d.Type == router.Domain_RootDomain {
+                      suffixCount++
+                  }
+              }
+              if exactCount != 4 || suffixCount != 1 {
+                  t.Fatalf("unexpected exact/suffix counts: %d/%d", exactCount, suffixCount)
+              }
+          }
+
           func TestGlobalTLDsAreNotCollapsed(t *testing.T) {
               cases := []string{
                   "service.org",
@@ -1976,6 +2200,10 @@ jobs:
               required := map[string]bool{
                   "ru": false,
                   "su": false,
+                  "by": false,
+                  "kz": false,
+                  "xn--90ais": false,
+                  "xn--80ao21a": false,
                   "xn--p1ai": false,
                   "moscow": false,
                   "xn--80adxhks": false,
@@ -2041,6 +2269,9 @@ jobs:
 
           rm -f "$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$NEW_SOURCES_REPORT_FILE"
 
+          test -s v2fly-corporate-extra-domains.txt
+          cat "$LOCAL_RU_INPUT_FILE" v2fly-corporate-extra-domains.txt > /tmp/geosite-ru-v11-merged-local.txt
+
           /tmp/ru-geosite-filter build \
             "$INPUT_FILE" \
             "$HYDRA_INPUT_FILE" \
@@ -2053,7 +2284,7 @@ jobs:
             "$DAVOYAN_LEGACY_INPUT_FILE" \
             "$CATEGORY_FILE" \
             "$HYDRA_APPEND_FILE" \
-            "$LOCAL_RU_INPUT_FILE" \
+            /tmp/geosite-ru-v11-merged-local.txt \
             "$LOCAL_BLOCK_INPUT_FILE" \
             "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
             "$KYORESUAS_RU_STANDARD_INPUT_FILE" \
@@ -2091,6 +2322,94 @@ jobs:
           cat "$OUTPUT_SHA_FILE"
 
       # ------------------------------------------------------------
+      # 9b. Reproducible semantic delta against the currently published DAT.
+      # ------------------------------------------------------------
+      - name: Audit semantic DAT delta against release
+        # Fail closed before production publication, not just in PR builds.
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat" \
+            -o /tmp/geosite-ru-released.dat
+          test -s /tmp/geosite-ru-released.dat
+          # Verify the published reference asset against its own checksum.
+          # A stale/mismatched release reference must not authorize publishing.
+          curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/geosite_RU.dat.sha256sum" \
+            -o /tmp/geosite-ru-released.dat.sha256sum
+          RELEASE_SHA="$(awk 'NR==1{print $1}' /tmp/geosite-ru-released.dat.sha256sum)"
+          test -n "$RELEASE_SHA"
+          ACTUAL_SHA="$(sha256sum /tmp/geosite-ru-released.dat | awk '{print $1}')"
+          test "$RELEASE_SHA" = "$ACTUAL_SHA" || { echo "ERROR: published DAT checksum differs from published SHA256" >&2; exit 1; }
+
+          mkdir -p domain-list-community/tools/geosite-delta
+          cp tools/geosite-delta/main.go tools/geosite-delta/main_test.go domain-list-community/tools/geosite-delta/
+          (
+            cd domain-list-community
+            go test ./tools/geosite-delta -count=1
+          )
+
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            # External inventory is for audit-only, never imported into RU.
+            curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+              "https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/master/data/external-candidates.json" \
+              -o /tmp/geosite-ru-external-candidates.json
+            test -s /tmp/geosite-ru-external-candidates.json
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
+                /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
+                ../data/v11-external-domain-review.tsv ../data/v11-approved-effective-ru.txt
+            )
+            test -s geosite_RU_external_candidate_audit.md
+            python3 tools/build_domain_research_queue.py geosite_RU_external_candidate_audit.md geosite_RU_attribution_research_queue.tsv
+            test -s geosite_RU_attribution_research_queue.tsv
+            # Exercise the exact production promotion mode while this is still
+            # a Draft PR, before any release-tag or release-branch mutation.
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_production_preflight.md \
+                ../data/v11-approved-effective-ru.txt
+            )
+            test -s geosite_RU_production_preflight.md
+          else
+            # Production promotion: compare against the currently published
+            # release, require either EXACTLY the 30 reviewed v11 additions
+            # or an idempotent rebuild (zero additions). BLOCK must be unchanged.
+            (
+              cd domain-list-community
+              go run ./tools/geosite-delta \
+                /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
+                ../data/v11-approved-effective-ru.txt
+            )
+          fi
+          test -s geosite_RU_semantic_delta.md
+
+      - name: Upload PR candidate DAT and audit report
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosite-ru-v11-pr-audit
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+            geosite_RU_semantic_delta.md
+            geosite_RU_production_preflight.md
+            geosite_RU_external_candidate_audit.md
+            geosite_RU_attribution_research_queue.tsv
+            data/v11-external-domain-review.tsv
+            data/v11-approved-effective-ru.txt
+            geosite_RU_categories.txt
+            geosite_RU_new_sources.txt
+            v2fly-corporate-extra-domains.txt
+
+      # ------------------------------------------------------------
       # 10. Publish GitHub Release
       # ------------------------------------------------------------
       - name: Verify release artifacts
@@ -2113,10 +2432,11 @@ jobs:
           done
 
       - name: Publish Release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite"
+          name: "Optimized RU GeoSite v11"
           make_latest: true
 
           files: |
@@ -2127,9 +2447,16 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite
+            # Optimized RU GeoSite v11
 
-            Automatically generated Russian-region GeoSite database.
+            Verified Russian-region GeoSite update with compact RU/BY/KZ domain coverage.
+
+            - 30 audited effective new RU rules, no lost RU coverage against v10.
+            - BLOCK category unchanged (43 rules).
+            - 4pda.to and its subdomains are excluded from RU-DIRECT.
+            - Rebuilt assets include geosite_RU.dat and its SHA256 checksum.
+
+            Full audit: https://github.com/${{ github.repository }}/pull/1
 
           fail_on_unmatched_files: true
 
@@ -2140,6 +2467,7 @@ jobs:
       # 11. Publish files to release branch and verify exact CDN content
       # ------------------------------------------------------------
       - name: Publish files to release branch and sync CDN
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -83,3 +83,94 @@ domain:ipaddress.is
 domain:deviceinfo.me
 domain:myip.privex.io
 domain:address.computer
+
+# Corporate and infrastructure domains outside compact RU/BY/KZ TLD roots.
+# These are domain suffixes, not ASN-derived or IP-wide rules.
+domain:ddos-guard.net
+domain:ngenix.net
+domain:qrator.net
+domain:selcdn.net
+domain:selectel.com
+domain:edgecenter.io
+domain:timeweb.cloud
+domain:timeweb.com
+domain:tinkoff.com
+domain:cdn-tinkoff.com
+domain:tbank.com
+domain:sberbank.com
+domain:alfabank.com
+domain:vtb.com
+# VTB official FX trading contact: https://www.vtb.ru/krupnyj-biznes/elektronnaya-torgovlya-fx/
+domain:vtbcapital.com
+# Exact service hostnames from VTB official FX terminal connectivity documentation.
+# Do not expand to ntprog.com: this vendor domain is not VTB-exclusive.
+# https://www.vtb.ru/krupnyj-biznes/elektronnaya-torgovlya-fx/
+full:prod.ntprog.com
+full:uat.ntprog.com
+full:msk-prod-gate.ntprog.com
+full:muat-gate.ntprog.com
+domain:kaspersky.com
+domain:kaspersky-labs.com
+domain:ozon.com
+domain:2gis.com
+# Official 2GIS business microsites: https://law.2gis.kz/microsite/ru
+domain:2gis.biz
+domain:skbkontur.com
+domain:beeline.kz
+domain:hh.kz
+domain:hh.uz
+domain:vk.com
+domain:vk.me
+domain:userapi.com
+domain:mycdn.me
+
+# ecom.tech (formerly Samokat.tech), official company transition:
+# https://samokat.tech/blog/name
+domain:samokat.tech
+domain:ecom.tech
+
+# Vigo LLC (Russian network-quality software); official website and product.
+# https://vigo.tech/tpost/lp6r66yml1-s-3-marta-kompaniya-vigo-ooo-vigo-ispolz
+# https://www.merilo.one/en/personal_data/
+domain:vigo.tech
+
+# Vigo LLC (Russian network-quality software); official website and product.
+# https://vigo.tech/tpost/lp6r66yml1-s-3-marta-kompaniya-vigo-ooo-vigo-ispolz
+# https://www.merilo.one/en/personal_data/
+domain:merilo.one
+
+# X5 Group / corporate import platform; RDAP registrant X5 Corporate Centre
+# https://who.is/rdap/importx5.com
+# https://ipv4.bgp.he.net/dns/importx5.com
+domain:importx5.com
+
+# Russian television service official channel lists the website:
+# https://m.ok.ru/solovievlive ; https://www.cableman.ru/channel/solovev-live
+domain:soloviev.live
+
+# ООО М-ЛАЙН, INN 7722749786; official contact and registry:
+# https://m-line.expert/contacts ; https://oms44.ru/meditsinskie-organizatsii/1807-ooo-m-lajn
+domain:m-line.expert
+
+# ООО ИНМИ, INN 7722648178; official website, legal and product disclosures:
+# https://www.inme.store/contacts.html ; https://inme.store/about/
+domain:inme.store
+
+# ООО ИНМИ, INN 7722648178; official product/contact page and hosted device manual:
+# https://inme.technology/ ; https://m-line.expert/uploads/page/f0feb0ce4ba7a815cb4c35e884721efe.pdf
+domain:inme.technology
+
+# 2GIS Qatar domain redirects to 2GIS LLC official info website (checked 2026-11-12):
+# https://2gis.qa/ -> https://info.2gis.com/ (2GIS L.L.C. footer, razr@2gis.ru)
+# https://apify.com/bovi/2gis-places-scraper/input-schema
+domain:2gis.qa
+
+# Hexlet education platform, Russian LLC + Kazakhstan LLP on official pages:
+# https://ru.hexlet.io/pages/contacts (ООО Хекслет Рус, INN 7325174845)
+# https://hexlet.io/pages/contacts (TOO Hexlet Kazakhstan, BIN 230340043714)
+domain:hexlet.io
+
+# ООО Лингуалео, Moscow INN 7710749260; first-party service and legal operator:
+# https://lingualeo.com/ru/blog/yuridicheskaya-informacziya/
+# https://lingualeo.com/ru/blog/polozhenie-o-zashhite-personalnyih-dannyih/
+domain:lingualeo.com

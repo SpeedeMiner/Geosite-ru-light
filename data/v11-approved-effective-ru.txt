@@ -1,0 +1,35 @@
+# Approved effective RU additions relative to published v10 latest-optimized
+# Every row is a reviewed semantic RootDomain or Full addition, not a raw source line.
+# PR CI fails if any unexpected effective RU addition appears, or one of these vanishes.
+# To add domains: verify first-party ownership, routing use and minimal Full/Root scope;
+# update docs/v11-coverage-audit.md and data/v11-external-domain-review.tsv.
+domain:2gis.biz
+domain:2gis.qa
+domain:by
+domain:cdn-tinkoff.com
+domain:ddos-guard.net
+domain:ecom.tech
+domain:edgecenter.io
+domain:hexlet.io
+domain:hh.uz
+domain:importx5.com
+domain:inme.store
+domain:inme.technology
+domain:kz
+domain:lingualeo.com
+domain:m-line.expert
+domain:megabitus.com
+domain:merilo.one
+domain:qrator.net
+domain:samokat.tech
+domain:skbkontur.com
+domain:soloviev.live
+domain:tbank.com
+domain:vigo.tech
+domain:vtbcapital.com
+domain:xn--80ao21a
+domain:xn--90ais
+full:msk-prod-gate.ntprog.com
+full:muat-gate.ntprog.com
+full:prod.ntprog.com
+full:uat.ntprog.com
