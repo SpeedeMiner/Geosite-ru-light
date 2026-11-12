@@ -80,6 +80,35 @@ func rejectedSubtreeConflict(r rules, zone string) string {
   }
   return ""
 }
+// verifyReviewedAdditions guards the PR against unexpected positive upstream
+// expansion (RU lost=0 alone does not prevent foreign domains entering DIRECT).
+// The manifest is an exact semantic diff against the published v10 release.
+func verifyReviewedAdditions(path string, actual []string) error {
+  data,err:=os.ReadFile(path);if err!=nil{return err}
+  approved:=make(map[string]bool)
+  for i,line:=range strings.Split(string(data),"\n"){
+    line=strings.TrimSpace(line)
+    if line==""||strings.HasPrefix(line,"#"){continue}
+    if !strings.HasPrefix(line,"domain:") && !strings.HasPrefix(line,"full:") {
+      return fmt.Errorf("invalid approved RU rule on line %d: %s",i+1,line)
+    }
+    if approved[line] {return fmt.Errorf("duplicate approved RU rule on line %d: %s",i+1,line)}
+    approved[line]=true
+  }
+  if len(approved)==0{return fmt.Errorf("empty approved effective RU additions manifest: %s",path)}
+  seen:=make(map[string]bool)
+  for _,rule:=range actual{
+    if !approved[rule] {return fmt.Errorf("unreviewed new effective RU rule: %s (update approval manifest after evidence review)",rule)}
+    if seen[rule] {return fmt.Errorf("duplicate effective RU addition: %s",rule)}
+    seen[rule]=true
+  }
+  // A missing reviewed addition indicates the baseline or source tree changed.
+  // Fail closed instead of claiming this is the same candidate.
+  for rule:=range approved {
+    if !seen[rule] {return fmt.Errorf("previously approved RU addition missing from effective delta: %s",rule)}
+  }
+  return nil
+}
 // External candidate inventories are only reviewed here; they are NEVER imported.
 type externalCandidate struct {
   Sources []string `json:"sources"`
@@ -190,7 +219,7 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   return nil
 }
 func main(){
-  if len(os.Args)!=4 && len(os.Args)!=7 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md decisions.tsv]");os.Exit(2)}
+  if len(os.Args)!=4 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
   var b strings.Builder
@@ -204,6 +233,7 @@ func main(){
   for c:=range old{cats[c]=true};for c:=range now{cats[c]=true}
   keys:=make([]string,0,len(cats));for c:=range cats{keys=append(keys,c)};sort.Strings(keys)
   lostRU:=0
+  var addedRU []string
   blockAdded,blockLost:=0,0
   for _,c:=range keys {
     a,z:=old[c],now[c]
@@ -214,6 +244,7 @@ func main(){
       blockAdded,blockLost=len(added),len(lost)
     }
     if c=="RU" {
+      addedRU=added
       lostRU=len(lost)
       for _,v:=range added {fmt.Printf("RU_NEW %s\n",v)}
       for _,v:=range lost {fmt.Printf("RU_LOST %s\n",v)}
@@ -227,8 +258,10 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
-  if len(os.Args)==7 {
+  if len(os.Args)==8 {
     if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
+    if err:=verifyReviewedAdditions(os.Args[7],addedRU);err!=nil{panic(err)}
+    fmt.Printf("APPROVED_RU_NEW count=%d exact_match=true\n",len(addedRU))
   }
   if lostRU>0 {
     fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
