@@ -204,10 +204,15 @@ func main(){
   for c:=range old{cats[c]=true};for c:=range now{cats[c]=true}
   keys:=make([]string,0,len(cats));for c:=range cats{keys=append(keys,c)};sort.Strings(keys)
   lostRU:=0
+  blockAdded,blockLost:=0,0
   for _,c:=range keys {
     a,z:=old[c],now[c]
     added:=differences(z,a);lost:=differences(a,z)
     fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
+    if c=="BLOCK" {
+      // v11 is RU expansion only: BLOCK changes require a separate review.
+      blockAdded,blockLost=len(added),len(lost)
+    }
     if c=="RU" {
       lostRU=len(lost)
       for _,v:=range added {fmt.Printf("RU_NEW %s\n",v)}
@@ -227,6 +232,10 @@ func main(){
   }
   if lostRU>0 {
     fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
+    os.Exit(1)
+  }
+  if blockAdded>0 || blockLost>0 {
+    fmt.Fprintf(os.Stderr,"ERROR: BLOCK policy changed without separate approval: %d newly covered, %d lost\n",blockAdded,blockLost)
     os.Exit(1)
   }
 }
