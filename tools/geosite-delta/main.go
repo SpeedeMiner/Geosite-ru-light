@@ -225,8 +225,8 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   return nil
 }
 func main(){
-  if len(os.Args)==6 && os.Args[1]=="discovery-review" {
-    if err:=discoveryReport(os.Args[2],os.Args[3],os.Args[4],os.Args[5]);err!=nil{panic(err)}
+  if (len(os.Args)==6 || len(os.Args)==7) && os.Args[1]=="discovery-review" {
+    if err:=discoveryReport(os.Args[2],os.Args[3],os.Args[4],os.Args[5],os.Args[6:]...);err!=nil{panic(err)}
     return
   }
   if len(os.Args)!=4 && len(os.Args)!=5 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [approved-effective-RU.txt | external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
