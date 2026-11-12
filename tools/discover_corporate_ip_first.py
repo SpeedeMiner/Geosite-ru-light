@@ -66,7 +66,10 @@ def targets_from_seeds(seeds, prefixes, policy, max_ips: int, resolver=base.publ
         except (OSError, ValueError) as exc:
             errors.append({"source": seed, "error": type(exc).__name__})
             continue
-        for raw in ips[:8]:
+        # Examine every returned DNS address before applying the global IP
+        # probe budget. DNS answer ordering must not hide CORE addresses.
+        # No CIDR expansion or additional DNS queries are performed here.
+        for raw in ips:
             ip = valid_public_ip(raw)
             if ip is None:
                 continue
