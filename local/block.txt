@@ -9,6 +9,7 @@
 # Все записи здесь попадают в отдельную категорию BLOCK.
 # BLOCK не фильтрует российские домены и не пересекается автоматически с RU.
 domain:ad.mail.ru
+domain:api.mindbox.ru
 domain:app-analytics-services.com
 domain:app-measurement.com
 domain:app.adjust.com
@@ -30,10 +31,14 @@ domain:ip.tool.lu
 domain:ipify.com
 domain:ipleak.net
 domain:iplocation.net
+domain:ipv4-internet.yandex.net
+domain:ipv6-internet.yandex.net
 domain:mc.yandex.com
 domain:mc.yandex.ru
+domain:mobile.yandex.net
 domain:moyu88.xyz
 domain:myexternalip.com
+domain:proxy.mob.maps.yandex.net
 domain:r0.mail.ru
 domain:r0.mradx.net
 domain:rv.mail.ru
@@ -45,3 +50,4 @@ domain:wcm.weborama-tech.ru
 domain:web-static.mindbox.ru
 domain:xl-ads.co
 domain:location.services.mozilla.com
+domain:api.lbs.yandex.net
