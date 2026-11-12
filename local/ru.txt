@@ -147,3 +147,15 @@ domain:importx5.com
 # Russian television service official channel lists the website:
 # https://m.ok.ru/solovievlive ; https://www.cableman.ru/channel/solovev-live
 domain:soloviev.live
+
+# ООО М-ЛАЙН, INN 7722749786; official contact and registry:
+# https://m-line.expert/contacts ; https://oms44.ru/meditsinskie-organizatsii/1807-ooo-m-lajn
+domain:m-line.expert
+
+# ООО ИНМИ, INN 7722648178; official website, legal and product disclosures:
+# https://www.inme.store/contacts.html ; https://inme.store/about/
+domain:inme.store
+
+# ООО ИНМИ, INN 7722648178; official product/contact page and hosted device manual:
+# https://inme.technology/ ; https://m-line.expert/uploads/page/f0feb0ce4ba7a815cb4c35e884721efe.pdf
+domain:inme.technology
