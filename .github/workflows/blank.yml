@@ -2280,7 +2280,8 @@ jobs:
             cd domain-list-community
             go run ./tools/geosite-delta \
               /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
-              /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md
+              /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
+              ../data/v11-external-domain-review.tsv
           )
           test -s geosite_RU_semantic_delta.md
           test -s geosite_RU_external_candidate_audit.md
@@ -2297,6 +2298,7 @@ jobs:
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
             geosite_RU_external_candidate_audit.md
+            data/v11-external-domain-review.tsv
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
             v2fly-corporate-extra-domains.txt
