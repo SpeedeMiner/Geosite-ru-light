@@ -1,0 +1,6 @@
+# Public IPv4 or IPv6<TAB>source/provenance reference.
+# Optional manually reviewed inputs for bounded IP-first discovery.
+# Do not paste entire ASN/CIDR ranges or automatically enumerate prefixes here.
+# Every noncomment IP must be globally routable AND in pinned GeoIP CORE prefixes.
+# Add only after verifying a documented first-party service and keeping rate limits.
+# Intentionally empty until an individual endpoint is verified by the maintainer.
