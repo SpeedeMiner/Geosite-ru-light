@@ -219,7 +219,7 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   return nil
 }
 func main(){
-  if len(os.Args)!=4 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
+  if len(os.Args)!=4 && len(os.Args)!=5 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [approved-effective-RU.txt | external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
   var b strings.Builder
@@ -258,6 +258,18 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
+  // Production main/schedule audit compares against the currently published
+  // release. Before the first v11 publish, exactly the 30 approved RU additions
+  // are required. On subsequent idempotent v11 runs, zero new rules is valid;
+  // any other drift fails closed before publishing to the release tag or branch.
+  if len(os.Args)==5 {
+    if len(addedRU)>0 {
+      if err:=verifyReviewedAdditions(os.Args[4],addedRU);err!=nil{panic(err)}
+      fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=initial_v11\n",len(addedRU))
+    }else{
+      fmt.Println("PRODUCTION_RU_APPROVAL count=0 mode=idempotent_release")
+    }
+  }
   if len(os.Args)==8 {
     if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
     if err:=verifyReviewedAdditions(os.Args[7],addedRU);err!=nil{panic(err)}
