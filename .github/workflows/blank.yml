@@ -2459,6 +2459,24 @@ jobs:
           fi
           test -s geosite_RU_semantic_delta.md
 
+      # Unreviewed upstream additions must not silently land in a production
+      # release. Preserve the candidate and the diff even if main/schedule gate
+      # fails so maintainers can inspect and approve the incremental change.
+      - name: Preserve blocked auto-update candidate for review
+        if: ${{ failure() && github.ref == 'refs/heads/main' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosite-ru-main-blocked-update-review
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+            geosite_RU_semantic_delta.md
+            geosite_RU_categories.txt
+            geosite_RU_new_sources.txt
+            data/v11-approved-effective-ru.txt
+
       - name: Upload PR candidate DAT and audit report
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
