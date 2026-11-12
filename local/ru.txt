@@ -174,3 +174,40 @@ domain:hexlet.io
 # https://lingualeo.com/ru/blog/yuridicheskaya-informacziya/
 # https://lingualeo.com/ru/blog/polozhenie-o-zashhite-personalnyih-dannyih/
 domain:lingualeo.com
+
+# v11.1 pinned RU ecosystem media/CDN roots (independently reviewed 2026-11-12).
+# Technical vendor roots can serve third-party customers; keep only verified operator zones.
+# Avito and Habr technical static assets; Habr official https://habr.com/ru/articles/103146/; Avito gallery pic1.avito.st used by avito site
+domain:avito.st
+domain:habrastorage.org
+# Yandex Cloud/Disc technical domains, first-party Yandex Cloud docs https://yandex.cloud/ru/docs/storage/concepts/bucket, v2fly yandex source
+domain:yandexcloud.net
+domain:yadi.sk
+domain:ya.cc
+domain:naydex.net
+# VK video/audio CDN, v2fly data/vk (also contains mvk.com) https://github.com/v2fly/domain-list-community/blob/master/data/vk
+domain:vkuser.net
+domain:vkuseraudio.net
+domain:vkuservideo.net
+domain:vkuserlive.com
+domain:vk-cdn.net
+domain:vk-portal.net
+domain:mvk.com
+# Tilda CDN and publishing infrastructure verified via v2fly data/tilda https://help-ru.tilda.cc/settings
+domain:tildacdn.com
+domain:tilda.ws
+domain:tilda.cc
+domain:tildaapi.com
+# Beget hosting platform, v2fly data/beget https://github.com/v2fly/domain-list-community/blob/master/data/beget
+domain:beget.com
+domain:beget.tech
+# StormWall official domain https://stormwall.pro and publicly listed Selectel ecosystem candidate
+domain:stormwall.pro
+# 1C SaaS official service https://www.1cfresh.com/about
+domain:1cfresh.com
+# Wildberries regional storefronts, v2fly data/wildberries; https://www.wildberries.am/ and https://www.wildberries.uz/
+domain:wildberries.am
+domain:wildberries.uz
+domain:wildberries.kg
+# Ozon Uzbekistan official store https://www.ozon.uz/seller/ozon/ (other ozon.am/.kg unverified)
+domain:ozon.uz
