@@ -86,7 +86,9 @@ def confirmed_ptr_names(ip: str, resolver=base.public_dns_ips, reverse=socket.ge
     result = []
     for raw in [primary, *aliases][:6]:
         name = base.normalize_domain(raw)
-        if name is None or not base.is_target(name):
+        # .ru/.by/.kz PTR hostnames are useful verified SNI seeds even though
+        # they are already covered by the GeoSite root categories.
+        if name is None or name.rsplit(".", 1)[-1] in {"local", "internal", "invalid", "test", "localhost"}:
             continue
         try:
             addresses = resolver(name)
