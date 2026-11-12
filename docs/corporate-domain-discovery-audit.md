@@ -1,0 +1,49 @@
+# Corporate-domain discovery: GeoIP v41 CORE × GeoSite (audit only)
+
+Status: proposed for PR CI and Monday schedule. **Never writes DIRECT, BLOCK, or approved-domain manifests.**
+
+## Ground truth
+
+Source is the published immutable-by-convention [Geoip-ru-server v41 release](https://github.com/SpeedeMiner/Geoip-ru-server/releases/tag/latest-geoip-client-v41), **not** a generic entire-RU GeoIP category.
+
+- Policy: `geoip_RU_company_asn_policy.tsv`, released SHA256 `8a8026834fa309e7a2545fb866194a8713b4764ed8c8e79085abf293cfa3893b`
+- Exact-origin CORE prefix list: `geoip_RU_company_asn_core_bgp_prefixes.txt`, SHA256 `9b2600280adb4a3622b3cb795225732b773a178455a302e4118c2263fc1b9b87`
+- Policy snapshot includes **57 selected ASN rows**, **31 CORE_CORPORATE** and **25 SHARED_INFRA**; CORE covers **14 distinct company groups**. The other corporate/hosting categories are not treated as first-party origin evidence.
+- Prefix rows have the format `CIDR # AS123,AS456`; mixed MOAS prefixes must contain at least one explicitly CORE ASN. Matched ASN and group are recorded as evidence, not a legal owner assertion.
+- The GeoIP v41 inputs are pinned to released asset digests. An asset update must be reviewed and SHA pin changed explicitly.
+
+## Discovery sources and restrictions
+
+- `data/corporate_discovery_seeds.tsv` is a small explicit first-party HTTPS seed list across the 14 CORE groups plus CDN/education vendors.
+- `tools/discover_corporate_domains.py` opens HTTPS 443 to **public addresses** of each seed with certificate validation and correct SNI. It does not follow redirects to other hosts.
+- Extracts exact-host `subjectAltName` DNS names from live certificates and exact hosts in CSP directives `script-src`, `img-src`, `style-src`, `media-src`, `connect-src`, `font-src`, `worker-src`. Report-Only policies are marked separately.
+- Also parses `<link rel="preconnect">` from at most 96 KiB of the seed HTML body. Wildcards `*.example.net` **are not widened** to `example.net`.
+- No direct HTTP connection is made to a candidate domain, only DNS A/AAAA lookups for limited candidates. Public IP answers are compared with pinned CORE-origin prefixes. Core-hosted does **not** mean company-owned.
+- Script has bounded timeout, maximum candidates, DNS count, HTTPS body size, and no external API key.
+- CSP can reference global or advertising domains, a shared SAN can include unrelated hostnames, and corporate ASN can serve partners. All results are **review candidates only**, never `confirmed` based solely on a match.
+
+## Semantic filtering and output
+
+The new `geosite-delta discovery-review` mode uses the **actual newly built protobuf DAT**:
+
+- Subtracts already covered `geosite:RU` according to both RootDomain and Full semantics;
+- excludes `geosite:BLOCK` overlaps;
+- excludes user-prohibited `4pda.to` and its subdomains;
+- suppresses domains with existing `hold` or `reject` decisions from `data/v11-external-domain-review.tsv`;
+- outputs `geosite_RU_discovered_candidates.md`, for human attribution, not a list to apply automatically.
+
+Raw source observations and provenance are persisted in `geosite_RU_discovery_raw.tsv` and `geosite_RU_discovery_status.json`. Status includes seed failures, input SHA256, DNS budget, and counts; no real user DNS logs are collected.
+
+On `pull_request` and weekly Monday `schedule`, an independent GitHub Actions step downloads the two pinned GeoIP v41 release assets and runs offline regression tests, live first-party discovery, and Go filtering. The step is `continue-on-error: true` so that intermittent external DNS/TLS failures cannot derail production release. Audit artifacts are uploaded independently for 14 days. **No discovered domain is appended to `local/ru.txt` by CI.**
+
+## Future optional sources
+
+- Local `dnscrypt-proxy`/`Xray`/router logs may reveal domain-level routing misses, but require user-provided anonymized input and a careful distinction between DNS result, geosite match, and actual selected routing rule. They are **not** part of public CI to protect privacy.
+- APK `network_security_config.xml` and certificate pinning require licensing/redistribution review of mobile APKs and provenance; they are offline manual evidence sources, not unattended public CI inputs.
+- crt.sh organization searches can discover CT SANs, but Organization fields can be absent (DV certs); avoid claiming that SAN co-tenancy proves common legal ownership. This step currently uses only direct TLS and CSP.
+
+## Release policy
+
+The existing v11.1 immutable release remains untouched. This PR changes **only research tooling**, Go audit mode, fixed input seed configuration and workflow report attachment. It must preserve the same RU/BLOCK protobuf output as the current release. If a new upstream candidate appears, it goes into the report, not into DIRECT.
+
+Workflow logs and reports are authoritative for counts. Reachability and evidence freshness vary by run and are not inferred from a static description.
