@@ -137,11 +137,15 @@ class IPFirstTests(unittest.TestCase):
         sample2 = ipfirst.fair_core_targets(data, 2, rotation=2)
         self.assertEqual([ip for ip, _ in sample0], ["8.8.8.1", "8.8.8.4"])
         self.assertEqual([ip for ip, _ in sample1], ["8.8.8.4", "8.8.8.5"])
-        self.assertEqual([ip for ip, _ in sample2], ["8.8.8.5", "8.8.8.3"])
+        self.assertEqual([ip for ip, _ in sample2], ["8.8.8.5", "8.8.8.1"])
         self.assertEqual(ipfirst.fair_core_targets(data, 2, rotation=2), sample2)
-        self.assertEqual({ip for batch in (sample0, sample1, sample2)
-                          for ip, _ in batch},
-                         {"8.8.8.1", "8.8.8.3", "8.8.8.4", "8.8.8.5"})
+        # A small budget must still reach all IPs in a less frequently
+        # selected group after subsequent full group-order cycles.
+        batches = [ipfirst.fair_core_targets(data, 2, rotation=r)
+                   for r in range(9)]
+        self.assertEqual({ip for batch in batches for ip, _ in batch},
+                         set(data))
+        self.assertEqual([ip for ip, _ in batches[6]], ["8.8.8.3", "8.8.8.4"])
         self.assertEqual(len(ipfirst.fair_core_targets(data, 1, rotation=1001)), 1)
 
     def test_missing_core_means_no_targets(self):
