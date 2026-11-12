@@ -1,10 +1,7 @@
-# v11.1 pinned positive RU rules (30 v11 original additions + 25 newly reviewed technical roots)
-# RULES ARE NOT ASSUMED NEW RELATIVE TO A FLOATING BASELINE: an already-covered
-# pinned rule must still be effectively covered by candidate RU.
-# New candidate-to-release rules must be in this set; unreviewed upstream drift
-# must never be automatically promoted to production.
-# Explicit exclusions: 4pda.to entire suffix; ozon.am / ozon.kg /
-# servicepipe.io / selectel.org (insufficient direct first-party evidence).
+# v11.1 pinned positive RU rules: 30 v11 + 27 independently verified roots.
+# Only exact approved rule types are permitted as effective new RU coverage.
+# Approved older roots must remain effectively covered after upstream refresh.
+# Excluded pending first-party ownership: ozon.am and servicepipe.io.
 domain:1cfresh.com
 domain:2gis.biz
 domain:2gis.qa
@@ -29,9 +26,11 @@ domain:megabitus.com
 domain:merilo.one
 domain:mvk.com
 domain:naydex.net
+domain:ozon.kg
 domain:ozon.uz
 domain:qrator.net
 domain:samokat.tech
+domain:selectel.org
 domain:skbkontur.com
 domain:soloviev.live
 domain:stormwall.pro
