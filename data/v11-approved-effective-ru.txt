@@ -218,3 +218,11 @@ full:northwest.aero
 full:www.northwest.aero
 full:www.flyredwings.com
 full:www.flysmartavia.com
+
+# Verified Russian ticketing and travel hosts. Exact names only.
+full:chip.travel
+full:travelata.com
+full:tury.travel
+full:ufs.travel
+full:www.ufs.travel
+full:www.unitiki.com
