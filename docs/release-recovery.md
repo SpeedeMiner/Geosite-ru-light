@@ -47,3 +47,33 @@ DAT to a rolling channel. A production rollback would be a separate
 operational action and should account for the rules lost in the older
 version and the time a CDN can continue serving cached bytes. This runbook
 applies to Light only. The one-category Server artifact is not a substitute.
+
+## Required check before a numbered release
+
+The build job runs the numbered recovery check after the semantic release
+gate. When the candidate DAT matches the approved numbered SHA-256, CI:
+
+1. Packs the verified inputs into a temporary ZIP, restores the ZIP against
+   the checked-in lock and rebuilds in a fresh directory with Go network
+   module access disabled. All five release files must match byte-for-byte.
+2. Downloads and stages the previously approved numbered release against the
+   independent recovery registry. No rebuild is used for this step.
+3. Sends a JSON receipt and its SHA-256 to the publishing job in the same
+   run. That job verifies the receipt, lock, baseline, and the five candidate
+   files before it calls GitHub. A missing or invalid receipt blocks that
+   numbered candidate. It also checks the five published asset digests for
+   the matching numbered snapshot.
+
+The receipt is available in the PR audit or approved release bundle. The ZIP
+containing upstream inputs is temporary and is not uploaded by CI. Save a
+private copy using [the input backup commands](reproducible-build.md#keep-a-private-recovery-archive).
+Scheduled discovery and rolling builds with a different DAT do not need a
+new numbered recovery receipt.
+
+To prepare a new numbered snapshot, set the four `NUMBERED_*` values at the
+top of `.github/workflows/blank.yml` in the release PR. Use the reviewed
+candidate SHA-256, the previous numbered tag from the recovery registry,
+and a checked-in release notes file. Verify the PR's recovery step before
+merging. After publishing, record the new numbered snapshot's exact five
+sizes, digests and source commit in `data/geosite-recovery-releases.json`
+before selecting it as a future rollback baseline.

@@ -2,7 +2,9 @@
 # Publish only the sealed, same-run bundle from the read-only build job.
 set -euo pipefail
 
-cd "${1:?approved bundle directory required}"
+bundle="$(cd "${1:?approved bundle directory required}" && pwd -P)"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+cd "$bundle"
 [[ "$GITHUB_REF" == refs/heads/main && "$GITHUB_EVENT_NAME" != pull_request ]]
 [[ "$CANDIDATE_SHA" =~ ^[0-9a-f]{64}$ && "$BUNDLE_SHA" =~ ^[0-9a-f]{64}$ && "$ROLLING_SHA" =~ ^[0-9a-f]{64}$ ]]
 [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
@@ -16,6 +18,20 @@ cmp release-bundle.sha256sum "$tmp/expected-manifest"
 printf '%s  %s\n' "$BUNDLE_SHA" release-bundle.sha256sum | sha256sum --check --strict
 printf '%s  geosite_RU.dat\n' "$CANDIDATE_SHA" | cmp geosite_RU.dat.sha256sum -
 sha256sum --check --strict geosite_RU.dat.sha256sum
+
+# This check is local and precedes any release API call. The read-only
+# build job must have rehearsed recovery for these exact numbered bytes.
+if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
+  [[ "$NUMBERED_RELEASE" =~ ^v[0-9]+[.][0-9]+([.][0-9]+)?$ ]]
+  [[ "${NUMBERED_DAT_SHA:-}" =~ ^[0-9a-f]{64}$ ]]
+  if [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
+    (
+      cd "$root"
+      python3 tools/verify_numbered_geosite_recovery.py verify-receipt \
+        "$NUMBERED_RELEASE" "$NUMBERED_DAT_SHA" "${NUMBERED_RECOVERY_BASELINE:-}" "$bundle" "${RECOVERY_SHA:-}"
+    )
+  fi
+fi
 
 repo="https://github.com/$GITHUB_REPOSITORY"
 api="repos/$GITHUB_REPOSITORY"
@@ -50,9 +66,11 @@ if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
       echo "candidate DAT is not the approved numbered snapshot" >&2
       exit 1
     }
+    [[ "${NUMBERED_RELEASE_NOTES:-}" =~ ^docs/[a-zA-Z0-9][a-zA-Z0-9._-]+[.]md$ ]]
+    test -s "$root/$NUMBERED_RELEASE_NOTES"
     gh release create "$NUMBERED_RELEASE" "${files[@]}" --repo "$GITHUB_REPOSITORY" \
       --draft --target "$GITHUB_SHA" --latest=false --title "GeoSite RU Light $NUMBERED_RELEASE" \
-      --notes "Adds six exact ALT Linux hosts. No losses or changes to BLOCK or Hydra. DAT SHA-256: $NUMBERED_DAT_SHA. See $repo/blob/$GITHUB_SHA/docs/v11-6-alt-linux.md"
+      --notes-file "$root/$NUMBERED_RELEASE_NOTES"
     id="$(numbered_id)"
   fi
   [[ "$id" =~ ^[0-9]+$ ]]
@@ -72,6 +90,12 @@ if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
     '.tag_name == $tag and .draft == false and .prerelease == false
       and any(.assets[]; .name == "geosite_RU.dat" and .digest == $digest)' \
     "$tmp/numbered.json" >/dev/null
+  if [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
+    for file in "${files[@]}"; do
+      want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
+      [[ "$(jq -er --arg name "$file" '.assets[] | select(.name == $name) | .digest' "$tmp/numbered.json")" == "$want" ]]
+    done
+  fi
 fi
 
 # The existing release branch is kept as a normal fast-forward history.

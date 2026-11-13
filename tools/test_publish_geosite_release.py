@@ -35,6 +35,8 @@ class PublishBoundaryTest(unittest.TestCase):
                         ROLLING_SHA=self.candidate_sha, GITHUB_REF="refs/heads/main",
                         GITHUB_EVENT_NAME="push", GITHUB_SHA="a" * 40,
                         GITHUB_REPOSITORY="Owner/Repo", GITHUB_STEP_SUMMARY=str(self.path / "summary"))
+        for key in ("NUMBERED_RELEASE", "NUMBERED_DAT_SHA", "NUMBERED_RECOVERY_BASELINE", "RECOVERY_SHA"):
+            self.env.pop(key, None)
         # The first network/remote-side command is gh. Make it observable and
         # prevent every test from using the real binary.
         self.called = self.path / "called"
@@ -44,7 +46,8 @@ class PublishBoundaryTest(unittest.TestCase):
         self.env["PATH"] = f"{self.path}:{self.env['PATH']}"
 
     def run_publisher(self):
-        return subprocess.run(["bash", str(SCRIPT), str(self.bundle)], env=self.env,
+        return subprocess.run(["bash", "tools/" + SCRIPT.name, str(self.bundle)],
+                              cwd=SCRIPT.parent.parent, env=self.env,
                               capture_output=True, text=True, check=False)
 
     def test_verified_bundle_reaches_main_revision_check(self):
@@ -53,6 +56,14 @@ class PublishBoundaryTest(unittest.TestCase):
         self.assertIn("main changed", run.stderr)
         self.assertEqual(self.called.read_text().splitlines(),
                          ["api repos/Owner/Repo/git/ref/heads/main --jq .object.sha"])
+
+    def test_missing_numbered_recovery_receipt_blocks_before_any_remote_call(self):
+        self.env.update(NUMBERED_RELEASE="v11.6", NUMBERED_DAT_SHA=self.candidate_sha,
+                        NUMBERED_RECOVERY_BASELINE="v11.5")
+        run = self.run_publisher()
+        self.assertNotEqual(run.returncode, 0)
+        self.assertIn("numbered recovery receipt", run.stderr)
+        self.assertFalse(self.called.exists())
 
     def test_tampered_asset_stops_before_any_remote_call(self):
         (self.bundle / FILES[2]).write_text("changed\n")

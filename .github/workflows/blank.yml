@@ -33,6 +33,14 @@ on:
       - "go.mod"
       - "go.sum"
 
+# A numbered release selects an approved DAT and a reviewed recovery baseline.
+# Change these together in the PR preparing the next numbered release.
+env:
+  NUMBERED_RELEASE: v11.6
+  NUMBERED_DAT_SHA: b0be3f70f8a4950fde0aec2d237d8af5bbfc156c99079ac11cfb41f386d74107
+  NUMBERED_RECOVERY_BASELINE: v11.5
+  NUMBERED_RELEASE_NOTES: docs/v11-6-alt-linux.md
+
 jobs:
   build:
     # PR builds run all tests but never publish production artifacts.
@@ -46,6 +54,7 @@ jobs:
       manifest_sha: ${{ steps.release_bundle.outputs.manifest_sha }}
       bundle_name: ${{ steps.release_bundle.outputs.bundle_name }}
       rolling_sha: ${{ steps.semantic_gate.outputs.rolling_sha }}
+      recovery_sha: ${{ steps.numbered_recovery.outputs.receipt_sha }}
 
     permissions:
       contents: read
@@ -249,6 +258,20 @@ jobs:
             fi
           fi
 
+      - name: Verify numbered release recovery
+        id: numbered_recovery
+        if: github.event_name != 'schedule' && steps.semantic_gate.outputs.publish_allowed == 'true'
+        run: |
+          set -euo pipefail
+          receipt=geosite_numbered_recovery.json
+          python3 tools/verify_numbered_geosite_recovery.py check \
+            "$NUMBERED_RELEASE" "$NUMBERED_DAT_SHA" "$NUMBERED_RECOVERY_BASELINE" "$receipt"
+          if [ -f "$receipt" ]; then
+            echo "receipt_sha=$(sha256sum "$receipt" | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+            printf '### Numbered release recovery verified\n- Offline replay reproduced all five %s assets.\n- All five %s rollback assets verified without rebuilding.\n' \
+              "$NUMBERED_RELEASE" "$NUMBERED_RECOVERY_BASELINE" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Audit optional external candidate inventory
         if: github.event_name == 'pull_request'
         continue-on-error: true
@@ -298,6 +321,7 @@ jobs:
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
             geosite_RU_production_preflight.md
+            geosite_numbered_recovery.json
             geosite_RU_external_candidate_audit.md
             geosite_RU_attribution_research_queue.tsv
             data/v11-external-domain-review.tsv
@@ -356,6 +380,7 @@ jobs:
             geosite_RU_new_sources.txt
             release-bundle.sha256sum
             geosite_RU_inputs.json
+            geosite_numbered_recovery.json
 
   publish:
     needs: build
@@ -382,8 +407,7 @@ jobs:
           CANDIDATE_SHA: ${{ needs.build.outputs.candidate_sha }}
           BUNDLE_SHA: ${{ needs.build.outputs.manifest_sha }}
           ROLLING_SHA: ${{ needs.build.outputs.rolling_sha }}
-          NUMBERED_RELEASE: v11.6
-          NUMBERED_DAT_SHA: b0be3f70f8a4950fde0aec2d237d8af5bbfc156c99079ac11cfb41f386d74107
+          RECOVERY_SHA: ${{ needs.build.outputs.recovery_sha }}
         run: bash tools/publish_geosite_release.sh dist
 
   weekly-review:
