@@ -148,3 +148,9 @@ seller.ozon.am	confirmed	2026-11-13: reviewed full scope; https://seller.ozon.co
 seller.ozonru.cn	confirmed	2026-11-13: reviewed full scope; https://seller.ozon.com/, https://seller.ozonru.cn/
 vtb.am	confirmed	2026-11-13: reviewed domain scope; https://www.cba.am/en/licensed-banks, https://vtb.am/NewVersion/uploads/Reports/2025/PrimFS_4kv2025_rus.pdf, https://www.vtb.am/
 vtb.az	confirmed	2026-11-13: reviewed domain scope; https://www.cbar.az/page-195/banks?language=az, https://vtb.az/site/assets/files/9158/2025_annual_report.pdf, https://vtb.az/ru/
+bugzilla.altlinux.org	confirmed	2026-11-13: exact only; ALT Linux Bugzilla linked from the official errata index; https://errata.altlinux.org/branches/
+bugs.altlinux.org	confirmed	2026-11-13: exact only; documented bug-report entry point; https://docs.altlinux.org/ru-RU/platform/10.1/html-single/alt-platform/
+errata.altlinux.org	confirmed	2026-11-13: exact only; official ALT Linux package-fix bulletins; https://errata.altlinux.org/branches/
+forum.altlinux.org	confirmed	2026-11-13: exact only; official community forum; https://docs.altlinux.org/ru-RU/platform/10.1/html-single/alt-platform/
+git.altlinux.org	confirmed	2026-11-13: exact only; documented build system and Git interface; https://docs.altlinux.org/ru-RU/platform/10.1/html-single/alt-platform/
+lists.altlinux.org	confirmed	2026-11-13: exact only; documented community mailing lists; https://docs.altlinux.org/ru-RU/platform/10.1/html-single/alt-platform/

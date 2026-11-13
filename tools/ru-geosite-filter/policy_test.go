@@ -373,7 +373,7 @@ func TestSuppressionIsLabelBoundedAndRUOnly(t *testing.T) {
 		t.Fatal(err)
 	}
 	data, err := os.ReadFile(path)
-	if err != nil || !strings.Contains(string(data), "altlinux.org\tdocs.altlinux.org,ftp.altlinux.org,packages.altlinux.org\n") {
+	if err != nil || !strings.Contains(string(data), "altlinux.org\tbugs.altlinux.org,bugzilla.altlinux.org,docs.altlinux.org,errata.altlinux.org,forum.altlinux.org,ftp.altlinux.org,git.altlinux.org,lists.altlinux.org,packages.altlinux.org\n") {
 		t.Fatalf("missing deterministic suppression evidence: %q (%v)", data, err)
 	}
 }

@@ -255,3 +255,11 @@ full:reg.trueconf.com
 full:registry.deckhouse.io
 full:seller.ozon.am
 full:seller.ozonru.cn
+
+# v11.6 ALT Linux infrastructure. Exact names only.
+full:bugzilla.altlinux.org
+full:bugs.altlinux.org
+full:errata.altlinux.org
+full:forum.altlinux.org
+full:git.altlinux.org
+full:lists.altlinux.org
