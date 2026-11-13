@@ -41,9 +41,14 @@ jobs:
     timeout-minutes: 30
     outputs:
       review_pending: ${{ steps.semantic_gate.outputs.review_pending }}
+      publish_allowed: ${{ steps.semantic_gate.outputs.publish_allowed }}
+      candidate_sha: ${{ steps.release_bundle.outputs.candidate_sha }}
+      manifest_sha: ${{ steps.release_bundle.outputs.manifest_sha }}
+      bundle_name: ${{ steps.release_bundle.outputs.bundle_name }}
+      rolling_sha: ${{ steps.semantic_gate.outputs.rolling_sha }}
 
     permissions:
-      contents: write
+      contents: read
 
     env:
       # Актуальная полная GeoSite-база runetfreedom
@@ -77,6 +82,9 @@ jobs:
 
       # Shared by the filter and the semantic promotion gate.
       RU_APPROVED_MANIFEST: ${{ github.workspace }}/data/v11-approved-effective-ru.txt
+      RU_REVIEW_DECISIONS: data/v11-external-domain-review.tsv
+      RELEASE_FLOOR_TAG: v11.5
+      RELEASE_FLOOR_SHA256: 9e13ae5da4122ea9567bb99c5c108503079083ed3eb5d7c97ca0f940ac9e068f
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
 
@@ -95,7 +103,7 @@ jobs:
       # 1. Repository
       # ------------------------------------------------------------
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
 
@@ -103,7 +111,7 @@ jobs:
       # 2. Clone current domain-list-community
       # ------------------------------------------------------------
       - name: Clone domain-list-community
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: v2fly/domain-list-community
           path: domain-list-community
@@ -114,7 +122,7 @@ jobs:
       # 3. Setup Go according to current domain-list-community
       # ------------------------------------------------------------
       - name: Setup Go
-        uses: actions/setup-go@v7
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7
         with:
           go-version-file: go.mod
           cache-dependency-path: go.sum
@@ -123,7 +131,7 @@ jobs:
       # 4. Fetch sources. Only successful main builds seed future caches.
       # ------------------------------------------------------------
       - name: Restore last known-good Tier-2 source snapshots
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         continue-on-error: true
         with:
           path: .geosite-source-cache
@@ -225,7 +233,7 @@ jobs:
 
       - name: Upload validated input for corporate audit
         if: github.event_name == 'pull_request' || github.event_name == 'schedule'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         continue-on-error: true
         with:
           name: geosite-corporate-audit-input
@@ -258,18 +266,19 @@ jobs:
           test -n "$RELEASE_SHA"
           ACTUAL_SHA="$(sha256sum /tmp/geosite-ru-released.dat | awk '{print $1}')"
           test "$RELEASE_SHA" = "$ACTUAL_SHA" || { echo "ERROR: published DAT checksum differs from published SHA256" >&2; exit 1; }
-          # Require the complete, exact promotion and preserve all non-RU
-          # categories when building against the verified v11.1 snapshot.
-          if [ "$ACTUAL_SHA" = "450f7b0d837671121c34f5a08adc35ef95f845e5abaa35fa47b0d0444a73ca83" ]; then
-            export GEOSITE_EXPECTED_RU_ADDITIONS=33
-          fi
+          [[ "$ACTUAL_SHA" =~ ^[0-9a-f]{64}$ ]]
+          echo "rolling_sha=$ACTUAL_SHA" >> "$GITHUB_OUTPUT"
 
-          # This production gate also runs in pull requests and must not rely
-          # on the optional external candidate inventory.
+          # Independently lock the audited v11.5 bytes. The rolling reference
+          # still detects losses from any later, reviewed additions.
+          curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+            "https://github.com/${GITHUB_REPOSITORY}/releases/download/$RELEASE_FLOOR_TAG/geosite_RU.dat" \
+            -o /tmp/geosite-ru-release-floor.dat
+          printf '%s  %s\n' "$RELEASE_FLOOR_SHA256" /tmp/geosite-ru-release-floor.dat | sha256sum --check --strict
           RESULT=0
-          /tmp/geosite-delta \
-            /tmp/geosite-ru-released.dat "$OUTPUT_FILE" geosite_RU_semantic_delta.md \
-            "$RU_APPROVED_MANIFEST" || RESULT=$?
+          /tmp/geosite-delta release-check \
+            /tmp/geosite-ru-released.dat /tmp/geosite-ru-release-floor.dat \
+            "$OUTPUT_FILE" geosite_RU_semantic_delta.md "$RU_APPROVED_MANIFEST" "$RU_REVIEW_DECISIONS" || RESULT=$?
           if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ -s geosite_RU_semantic_delta.md ]; then
             cp geosite_RU_semantic_delta.md geosite_RU_production_preflight.md
           fi
@@ -305,7 +314,7 @@ jobs:
       # fails so maintainers can inspect and approve the incremental change.
       - name: Preserve blocked auto-update candidate for review
         if: ${{ !cancelled() && github.ref == 'refs/heads/main' && (failure() || steps.semantic_gate.outputs.review_pending == 'true') }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: geosite-ru-main-blocked-update-review
           retention-days: 14
@@ -322,7 +331,7 @@ jobs:
 
       - name: Upload PR candidate DAT and audit report
         if: ${{ !cancelled() && github.event_name == 'pull_request' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: geosite-ru-v11-pr-audit
           retention-days: 14
@@ -342,237 +351,68 @@ jobs:
             geosite_RU_suppressed_roots.tsv
             v2fly-corporate-extra-domains.txt
 
-      # ------------------------------------------------------------
-      # 10. Publish GitHub Release
-      # ------------------------------------------------------------
-      - name: Verify release artifacts
-        if: steps.semantic_gate.outputs.publish_allowed == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          echo "========================================"
-          echo "VERIFY RELEASE ARTIFACTS"
-          echo "========================================"
-
-          for file in \
-            "$OUTPUT_FILE" \
-            "$OUTPUT_SHA_FILE" \
-            "$CATEGORY_FILE" \
-            "$HYDRA_APPEND_FILE" \
-            "$NEW_SOURCES_REPORT_FILE"; do
-            test -s "$GITHUB_WORKSPACE/$file"
-            echo "OK: $file"
-          done
-
       - name: Cache validated fresh Tier-2 snapshots from main
         if: success() && github.ref == 'refs/heads/main' && steps.semantic_gate.outputs.publish_allowed == 'true' && steps.source_downloads.outputs.all_tier2_fresh == 'true'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         continue-on-error: true
         with:
           path: .geosite-source-cache
           key: geosite-tier2-v1-${{ hashFiles('tools/fetch_geosite_sources.py') }}-${{ github.run_id }}-${{ github.run_attempt }}
 
-      - name: Publish Release
+      - name: Seal approved release bundle
+        id: release_bundle
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
-        uses: softprops/action-gh-release@v2
+        run: |
+          set -euo pipefail
+          files=("$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$CATEGORY_FILE" "$HYDRA_APPEND_FILE" "$NEW_SOURCES_REPORT_FILE")
+          for file in "${files[@]}"; do test -s "$file"; done
+          sha256sum --check --strict "$OUTPUT_SHA_FILE"
+          sha256sum -- "${files[@]}" > release-bundle.sha256sum
+          echo "bundle_name=geosite-approved-release-$GITHUB_RUN_ATTEMPT" >> "$GITHUB_OUTPUT"
+          echo "candidate_sha=$(sha256sum "$OUTPUT_FILE" | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+          echo "manifest_sha=$(sha256sum release-bundle.sha256sum | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload approved release bundle
+        if: steps.release_bundle.outcome == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11.5"
-          make_latest: true
+          name: ${{ steps.release_bundle.outputs.bundle_name }}
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
+            geosite_RU_categories.txt
+            geosite_RU_hydra_appended_categories.txt
+            geosite_RU_new_sources.txt
+            release-bundle.sha256sum
 
-          files: |
-            ${{ env.OUTPUT_FILE }}
-            ${{ env.OUTPUT_SHA_FILE }}
-            ${{ env.CATEGORY_FILE }}
-            ${{ env.HYDRA_APPEND_FILE }}
-            ${{ env.NEW_SOURCES_REPORT_FILE }}
-
-          body: |
-            # Optimized RU GeoSite v11.5
-
-            - Opens or updates a report-only weekly Draft PR for unreviewed RU additions.
-            - Does not publish pending candidates or import audit findings into RU or BLOCK.
-            - Retains the v11.3 protection for exact hosts and Tier-2 fallback.
-            - 4pda.to and its subdomains remain excluded from RU-DIRECT.
-
-            Details: https://github.com/${{ github.repository }}/blob/main/docs/v11-5-weekly-review.md
-
-          fail_on_unmatched_files: true
-
+  publish:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.build.outputs.publish_allowed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout publisher
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Download this run's approved release bundle
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: ${{ needs.build.outputs.bundle_name }}
+          path: dist
+      - name: Verify and publish approved release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # ------------------------------------------------------------
-      # 11. Publish files to release branch and verify exact CDN content
-      # ------------------------------------------------------------
-      - name: Publish files to release branch and sync CDN
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
-        shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-
-          STAGE="$(mktemp -d)"
-          trap 'rm -rf "$STAGE"' EXIT
-
-          for file in \
-            "$OUTPUT_FILE" \
-            "$OUTPUT_SHA_FILE" \
-            "$CATEGORY_FILE" \
-            "$HYDRA_APPEND_FILE" \
-            "$NEW_SOURCES_REPORT_FILE"; do
-            cp "$file" "$STAGE/"
-          done
-
-          cd "$STAGE"
-
-          git init -q -b release
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add .
-          git commit -q -m "Update optimized RU GeoSite"
-
-          AUTH="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          echo "::add-mask::$AUTH"
-          git -c "http.extraheader=AUTHORIZATION: basic ${AUTH}" \
-            push --force "https://github.com/${GITHUB_REPOSITORY}.git" release
-
-          echo "========================================"
-          echo "Waiting for GitHub raw cache propagation"
-          echo "========================================"
-
-          EXPECTED_SHA="$(awk '{print $1}' "$OUTPUT_SHA_FILE")"
-          echo "Target SHA256: $EXPECTED_SHA"
-
-          RAW_UPDATED=false
-          for i in {1..12}; do
-            REMOTE_SHA="$(curl -fsSL --max-time 10 "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/release/${OUTPUT_SHA_FILE}?cb=$(date +%s%N)" | awk '{print $1}' || true)"
-            if [ "$REMOTE_SHA" = "$EXPECTED_SHA" ]; then
-              echo "GitHub raw updated successfully (check $i/12)."
-              RAW_UPDATED=true
-              break
-            fi
-            sleep 5
-          done
-
-          if [ "$RAW_UPDATED" != true ]; then
-            echo "WARNING: GitHub raw checksum has not propagated within the validation window."
-            echo "WARNING: Release branch is updated, but raw.githubusercontent.com may still serve cached content."
-          fi
-
-          echo "========================================"
-          echo "Purging jsDelivr CDN cache"
-          echo "========================================"
-
-          curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/" || true
-          echo
-          curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/${OUTPUT_FILE}" || true
-          echo
-          curl -sS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/${OUTPUT_SHA_FILE}" || true
-          echo
-
-          echo "========================================"
-          echo "Verifying exact jsDelivr SHA256"
-          echo "========================================"
-
-          CDN_UPDATED=false
-          for i in {1..12}; do
-            CDN_SHA="$(curl -fsSL --max-time 30 "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/${OUTPUT_FILE}?cb=$(date +%s%N)" | sha256sum | awk '{print $1}' || true)"
-            echo "CDN SHA (check $i/12): $CDN_SHA"
-            if [ "$CDN_SHA" = "$EXPECTED_SHA" ]; then
-              echo "SUCCESS: jsDelivr content SHA256 matches local DAT."
-              CDN_UPDATED=true
-              break
-            fi
-            sleep 5
-          done
-
-          if [ "$CDN_UPDATED" != true ]; then
-            echo "WARNING: jsDelivr content SHA256 did not match within the validation window."
-            echo "WARNING: The release branch is updated; CDN edge propagation may still be in progress."
-          fi
-
-      # ------------------------------------------------------------
-      # 11b. Immutable versioned release and floating-tag alignment.
-      # ------------------------------------------------------------
-      - name: Publish immutable v11.5 release
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
-        shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          # This tag represents the audited v11.5 source snapshot. Never move an
-          # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11.5 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11.5 release already exists; preserving its tag."
-          else
-            EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11.5 \
-              "$OUTPUT_FILE" \
-              "$OUTPUT_SHA_FILE" \
-              "$CATEGORY_FILE" \
-              "$HYDRA_APPEND_FILE" \
-              "$NEW_SOURCES_REPORT_FILE" \
-              --repo "$GITHUB_REPOSITORY" \
-              --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11.5" \
-              --latest=false \
-              --notes "v11.5: a weekly Draft PR queues unreviewed RU additions without publishing them. DAT SHA256: $EXPECTED_SHA. Details: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-5-weekly-review.md"
-          fi
-          gh release view v11.5 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11.5 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
-
-      - name: Align floating latest-optimized tag with successful main release
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
-        shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
-          echo "Previously published floating tag: $CURRENT"
-          if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 through v11.5 remain immutable.
-            gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
-              -f sha="$GITHUB_SHA" -F force=true >/dev/null
-          fi
-          VERIFIED="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
-          test "$VERIFIED" = "$GITHUB_SHA" || {
-            echo "ERROR: floating release tag does not match main commit" >&2
-            exit 1
-          }
-          echo "latest-optimized tag now points to $VERIFIED"
-
-      # ------------------------------------------------------------
-      # 12. Workflow summary
-      # ------------------------------------------------------------
-      - name: Print download URLs
-        if: steps.semantic_gate.outputs.publish_allowed == 'true'
-        shell: bash
-        run: |
-          echo
-          echo "========================================"
-          echo "DOWNLOAD URLS"
-          echo "========================================"
-          echo
-          echo "GitHub Release:"
-          echo "https://github.com/${GITHUB_REPOSITORY}/releases/download/latest-optimized/${OUTPUT_FILE}"
-          echo
-          echo "Raw release branch:"
-          echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/release/${OUTPUT_FILE}"
-          echo
-          echo "jsDelivr CDN:"
-          echo "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@release/${OUTPUT_FILE}"
-          echo
-          echo "Positive-source delta report:"
-          echo "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/release/${NEW_SOURCES_REPORT_FILE}"
-          echo
-          echo "SHA256:"
-          cat "$OUTPUT_SHA_FILE"
+          GH_TOKEN: ${{ github.token }}
+          GH_PROMPT_DISABLED: "1"
+          GIT_TERMINAL_PROMPT: "0"
+          CANDIDATE_SHA: ${{ needs.build.outputs.candidate_sha }}
+          BUNDLE_SHA: ${{ needs.build.outputs.manifest_sha }}
+          ROLLING_SHA: ${{ needs.build.outputs.rolling_sha }}
+        run: bash tools/publish_geosite_release.sh dist
 
   weekly-review:
     # Only trusted scheduled builds can invoke this write-capable job.
@@ -585,13 +425,13 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout review tooling
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
           fetch-depth: 0
           ref: ${{ github.sha }}
       - name: Download blocked candidate evidence
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: geosite-ru-main-blocked-update-review
           path: ${{ runner.temp }}/geosite-weekly-review
@@ -612,18 +452,18 @@ jobs:
       contents: read
     steps:
       - name: Checkout audit tools
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
       - name: Setup Go
-        uses: actions/setup-go@v7
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7
         with:
           go-version-file: go.mod
           cache-dependency-path: go.sum
           cache: false
       - name: Download validated DAT
         id: audit_input
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         continue-on-error: true
         with:
           name: geosite-corporate-audit-input
@@ -647,7 +487,7 @@ jobs:
           fi
       - name: Upload corporate audit evidence
         if: ${{ !cancelled() && steps.audit_input.outcome == 'success' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         continue-on-error: true
         with:
           name: geosite-ru-corporate-domain-discovery
