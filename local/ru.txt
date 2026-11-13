@@ -373,3 +373,9 @@ full:spblk.dalli-service.com
 full:www.dalli-service.com
 full:www.khv.aero
 full:www.kja.aero
+
+# Verified aviation hosts and active carrier redirects.
+full:northwest.aero
+full:www.northwest.aero
+full:www.flyredwings.com
+full:www.flysmartavia.com
