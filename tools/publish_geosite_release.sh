@@ -134,6 +134,42 @@ if [[ "$tag_sha" != "$GITHUB_SHA" ]]; then
 fi
 [[ "$(gh api "$api/git/ref/tags/$rolling" --jq '.object.sha')" == "$GITHUB_SHA" ]]
 
+# Keep GitHub's Latest badge and the stable rolling URL. Change only metadata
+# after the release assets and Git tag have been verified above.
+rolling_title='Optimized RU GeoSite Light'
+{
+  printf 'The rolling GeoSite RU Light build. The download URL stays the same.\n\n'
+  if [[ -n "${NUMBERED_RELEASE:-}" && "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
+    printf 'Current build: [%s](%s/releases/tag/%s).\n\n' \
+      "$NUMBERED_RELEASE" "$repo" "$NUMBERED_RELEASE"
+  elif [[ -n "${NUMBERED_RELEASE:-}" ]]; then
+    printf 'Current build: unnumbered rolling snapshot.\n\n'
+    printf 'Latest configured numbered snapshot: [%s](%s/releases/tag/%s).\n\n' \
+      "$NUMBERED_RELEASE" "$repo" "$NUMBERED_RELEASE"
+  else
+    printf 'Current build: unnumbered rolling snapshot.\n\n'
+  fi
+  printf -- '- Source commit: [`%s`](%s/commit/%s)\n- DAT SHA-256: `%s`\n' \
+    "$GITHUB_SHA" "$repo" "$GITHUB_SHA" "$CANDIDATE_SHA"
+} > "$tmp/rolling-notes.md"
+rolling_id="$(jq -er '.id' "$tmp/release.json")"
+gh api "$api/releases/latest" > "$tmp/latest.json"
+if ! jq -e --arg title "$rolling_title" --rawfile notes "$tmp/rolling-notes.md" \
+     --argjson id "$rolling_id" '.id == $id and .name == $title and .body == $notes' \
+     "$tmp/latest.json" >/dev/null; then
+  gh api --method PATCH "$api/releases/$rolling_id" \
+    -f name="$rolling_title" -F body=@"$tmp/rolling-notes.md" -f make_latest=true >/dev/null
+fi
+gh api "$api/releases/latest" > "$tmp/latest.json"
+jq -e --arg tag "$rolling" --arg title "$rolling_title" --rawfile notes "$tmp/rolling-notes.md" \
+  --arg digest "sha256:$CANDIDATE_SHA" --argjson id "$rolling_id" \
+  '.id == $id and .tag_name == $tag and .name == $title and .body == $notes
+    and any(.assets[]; .name == "geosite_RU.dat" and .digest == $digest)' \
+  "$tmp/latest.json" >/dev/null || {
+    echo "rolling release metadata or Latest badge differs from the verified bundle" >&2
+    exit 1
+  }
+
 # The CDN is eventually consistent. Report actual DAT+checksum parity, never
 # infer it from the return code of a purge or from the checksum asset alone.
 cdn="https://cdn.jsdelivr.net/gh/$GITHUB_REPOSITORY@release"

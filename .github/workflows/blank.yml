@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11.13)
+name: Build Ultimate Light RU Geosite (Optimized v11.14)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -36,10 +36,10 @@ on:
 # A numbered release selects an approved DAT and a reviewed recovery baseline.
 # Change these together in the PR preparing the next numbered release.
 env:
-  NUMBERED_RELEASE: v11.13
-  NUMBERED_DAT_SHA: 88feded848191924dd06744e99256c30abf2a4322e80a7dac79dcbe06ed5fb4c
-  NUMBERED_RECOVERY_BASELINE: v11.12
-  NUMBERED_RELEASE_NOTES: docs/v11-13-airports-and-logistics.md
+  NUMBERED_RELEASE: v11.14
+  NUMBERED_DAT_SHA: bc5a646347f6bb6e4102fae41c4d27064aada33642c6bf397f9861c4e9a02e33
+  NUMBERED_RECOVERY_BASELINE: v11.13
+  NUMBERED_RELEASE_NOTES: docs/v11-14-aviation-hosts.md
 
 jobs:
   build:
