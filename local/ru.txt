@@ -384,3 +384,20 @@ full:www.flysmartavia.com
 full:aviastartu.com
 full:www.airbridgecargo.com
 full:www.volga-dnepr.com
+
+# Verified collaboration, EDI, CDN, training, telephony and data service hosts.
+full:api.novofon.com
+full:api.pachca.com
+full:app.pachca.com
+full:arenadc.io
+full:dashboard.cdnvideo.com
+full:dev.pachca.com
+full:doc.cdnvideo.com
+full:docsvision.com
+full:help.docsvision.com
+full:novofon.com
+full:pachca.com
+full:pruffmelab.com
+full:sign.me
+full:status.pachca.com
+full:www.docsvision.com
