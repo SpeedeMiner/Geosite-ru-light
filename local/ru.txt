@@ -344,3 +344,6 @@ full:wiki.wirenboard.com
 full:www.interfax.com
 full:www.rencapbank.com
 full:yougile.com
+
+# Verified official RUTUBE redirect. Exact hostname only.
+full:rutube.news

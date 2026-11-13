@@ -231,3 +231,4 @@ www.rencapbank.com	confirmed	2026-11-13: exact only; РенКап Банк; firs
 yougile.com	confirmed	2026-11-13: exact only; YouGile; first-party role and verified TLS from multiple Russian ASNs; docs/v11-11-service-companions.md; https://api.globalping.io/v1/measurements/2UxwewCAAMuDI262y00021Uq0
 dme.aero	hold	2026-11-13: Public endpoint did not pass TLS validation on any of the three Russian probes. See docs/v11-11-service-companions.md.
 ddxfitness.me	hold	2026-11-13: Public site returned HTTP 200, but its connection to the production application or service workflow is not established. See docs/v11-11-service-companions.md.
+rutube.news	confirmed	2026-11-13: exact only; documented RUTUBE satellite returns a TLS-verified 301 to https://rutube.ru from AS12389, AS3216 and AS207957. https://api.globalping.io/v1/measurements/21a5flqJ6phbl6XRu00021Uqw; docs/rockblack-source-audit.md
