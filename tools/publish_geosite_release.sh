@@ -35,6 +35,45 @@ published_dat="$(asset_digest geosite_RU.dat)"
   exit 1
 }
 
+# Publish a numbered snapshot from the same verified bundle. Subsequent runs
+# verify its pinned DAT without trying to replace it with a newer rolling DAT.
+if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
+  [[ "$NUMBERED_RELEASE" =~ ^v[0-9]+[.][0-9]+([.][0-9]+)?$ ]]
+  [[ "$NUMBERED_DAT_SHA" =~ ^[0-9a-f]{64}$ ]]
+  numbered_id() {
+    gh api --paginate "$api/releases?per_page=100" |
+      jq -rs --arg tag "$NUMBERED_RELEASE" 'add | .[] | select(.tag_name == $tag) | .id'
+  }
+  id="$(numbered_id)"
+  if [[ -z "$id" ]]; then
+    [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]] || {
+      echo "candidate DAT is not the approved numbered snapshot" >&2
+      exit 1
+    }
+    gh release create "$NUMBERED_RELEASE" "${files[@]}" --repo "$GITHUB_REPOSITORY" \
+      --draft --target "$GITHUB_SHA" --latest=false --title "GeoSite RU Light $NUMBERED_RELEASE" \
+      --notes "Adds six exact ALT Linux hosts. No losses or changes to BLOCK or Hydra. DAT SHA-256: $NUMBERED_DAT_SHA. See $repo/blob/$GITHUB_SHA/docs/v11-6-alt-linux.md"
+    id="$(numbered_id)"
+  fi
+  [[ "$id" =~ ^[0-9]+$ ]]
+  gh api "$api/releases/$id" > "$tmp/numbered.json"
+  [[ "$(jq -r '.prerelease' "$tmp/numbered.json")" == false ]]
+  if [[ "$(jq -r '.draft' "$tmp/numbered.json")" == true ]]; then
+    [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]
+    [[ "$(jq -r '.target_commitish' "$tmp/numbered.json")" == "$GITHUB_SHA" ]]
+    for file in "${files[@]}"; do
+      want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
+      [[ "$(jq -er --arg name "$file" '.assets[] | select(.name == $name) | .digest' "$tmp/numbered.json")" == "$want" ]]
+    done
+    gh release edit "$NUMBERED_RELEASE" --draft=false --latest=false --repo "$GITHUB_REPOSITORY"
+  fi
+  gh api "$api/releases/tags/$NUMBERED_RELEASE" > "$tmp/numbered.json"
+  jq -e --arg digest "sha256:$NUMBERED_DAT_SHA" --arg tag "$NUMBERED_RELEASE" \
+    '.tag_name == $tag and .draft == false and .prerelease == false
+      and any(.assets[]; .name == "geosite_RU.dat" and .digest == $digest)' \
+    "$tmp/numbered.json" >/dev/null
+fi
+
 # The existing release branch is kept as a normal fast-forward history.
 gh auth setup-git --hostname github.com
 git clone --quiet --depth=1 --single-branch --branch release "$repo.git" "$tmp/raw"

@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11.5)
+name: Build Ultimate Light RU Geosite (Optimized v11.6)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -412,6 +412,8 @@ jobs:
           CANDIDATE_SHA: ${{ needs.build.outputs.candidate_sha }}
           BUNDLE_SHA: ${{ needs.build.outputs.manifest_sha }}
           ROLLING_SHA: ${{ needs.build.outputs.rolling_sha }}
+          NUMBERED_RELEASE: v11.6
+          NUMBERED_DAT_SHA: b0be3f70f8a4950fde0aec2d237d8af5bbfc156c99079ac11cfb41f386d74107
         run: bash tools/publish_geosite_release.sh dist
 
   weekly-review:
