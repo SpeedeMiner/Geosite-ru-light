@@ -276,3 +276,24 @@ full:flysmartavia.com
 full:payinrussia.com
 full:rdea.rosdomofon.com
 full:rosdomofon.com
+
+# v11.9 — public endpoints verified from Russian networks. Exact names only.
+full:api.pyrus.com
+full:app.weeek.net
+full:apply.innopolis.university
+full:cdek.digital
+full:check-in.flysmartavia.com
+full:cloud.trassir.com
+full:download.payinrussia.com
+full:fw-releases.wirenboard.com
+full:nbc.aero
+full:pruffme.com
+full:ref.flysmartavia.com
+full:ru.cloud.trassir.com
+full:ru.yougile.com
+full:s3.regru.cloud
+full:sdo.mpgu.org
+full:sigma.cloud.trassir.com
+full:telemedicine.medpoisk.com
+full:www.alrosa.aero
+full:www.rusline.aero

@@ -110,6 +110,21 @@ func writeSemanticDelta(path string, old, now map[string]rules) (addedRU, lostRU
 	return
 }
 
+const approvedCrashlyticsBlock = "crashlyticsreports-pa.googleapis.com"
+
+// Allow only the explicit Full addition, including when comparing against the
+// historical floor. Removals, type changes and other additions stay protected.
+func approvedBlockAddition(old, now rules) bool {
+	if old.full[approvedCrashlyticsBlock] || !now.full[approvedCrashlyticsBlock] ||
+		covered(old, approvedCrashlyticsBlock, true) || !maps.Equal(old.roots, now.roots) ||
+		!maps.Equal(old.opaque, now.opaque) {
+		return false
+	}
+	full := maps.Clone(now.full)
+	delete(full, approvedCrashlyticsBlock)
+	return maps.Equal(old.full, full)
+}
+
 func verifyCategoryTransition(old, now map[string]rules, addedRU, lostRU, changed []string) error {
 	if _, ok := old["RU"]; !ok {
 		return fmt.Errorf("comparison base is missing RU")
@@ -123,7 +138,8 @@ func verifyCategoryTransition(old, now map[string]rules, addedRU, lostRU, change
 	if _, ok := now["BLOCK"]; !ok {
 		return fmt.Errorf("candidate is missing BLOCK")
 	}
-	if len(changed) > 0 {
+	if len(changed) > 0 &&
+		!(len(changed) == 1 && changed[0] == "BLOCK" && approvedBlockAddition(old["BLOCK"], now["BLOCK"])) {
 		return fmt.Errorf("unreviewed protected category changes: %s", strings.Join(changed, ", "))
 	}
 	if len(lostRU) > 0 {
@@ -161,6 +177,9 @@ func checkRelease(paths []string) error {
 	if err = verifyCategoryTransition(locked, now, added, differences(locked["RU"], now["RU"]),
 		changedProtectedCategories(locked, now)); err != nil {
 		return fmt.Errorf("locked release floor: %w", err)
+	}
+	if !now["BLOCK"].full[approvedCrashlyticsBlock] || covered(now["BLOCK"], approvedCrashlyticsBlock, true) {
+		return fmt.Errorf("candidate BLOCK must contain exact full:%s without a covering suffix", approvedCrashlyticsBlock)
 	}
 	reviews, err := loadReviewDecisions(paths[5])
 	if err != nil {
