@@ -183,3 +183,19 @@ full:wiki.wirenboard.com
 full:www.interfax.com
 full:www.rencapbank.com
 full:yougile.com
+
+# Domodedovo procurement portal verified from Russian networks.
+full:market.dme.aero
+
+# Aviation service hosts verified from Russian networks. Exact names only.
+full:aaq.aero
+full:aer.aero
+full:ikar.aero
+full:krr.aero
+full:mcx.aero
+full:ticket.rusline.aero
+full:www.nbc.aero
+full:zia.aero
+
+# Verified official RUTUBE redirect. Exact hostname only.
+full:rutube.news
