@@ -102,3 +102,9 @@ full:errata.altlinux.org
 full:forum.altlinux.org
 full:git.altlinux.org
 full:lists.altlinux.org
+
+# v11.7 — documented vendor infrastructure, exact names only.
+full:86.license5.ispsystem.com
+full:hub.adsw.io
+full:license5.ispsystem.com
+full:metricreport.ispsystem.net
