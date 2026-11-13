@@ -115,3 +115,36 @@ tinkoff.am	hold	Not independently verified as T-Bank controlled; 2026-11-12 site
 uber.com	reject	US Uber Technologies Inc international service https://www.uber.com/us/en/legal/general-terms-of-use/
 www.tinkoff.am	hold	No confirmed ownership of apex tinkoff.am; cannot whitelist child without independent current bank attribution
 zara.com	reject	Spanish Inditex group first-party page names Zara brand and Spanish entity https://www.inditex.com/itxcomweb/nf/es/informacion/contacto
+1c-dn.com	confirmed	2026-11-13: reviewed domain scope; https://v8.1c.ru/static/drugie-sayty-1s/, https://1c-dn.com/terms/
+1c.market	confirmed	2026-11-13: reviewed domain scope; https://v8.1c.ru/static/drugie-sayty-1s/, https://1c.market/
+1ci.com	confirmed	2026-11-13: reviewed domain scope; https://1c.com/, https://www.1ci.com/terms-of-use/
+arenadata.tech	confirmed	2026-11-13: reviewed domain scope; https://arenadata.tech/ru, https://arenadata.tech/ru/legal-information/privacy-agreement
+ascon.net	confirmed	2026-11-13: reviewed domain scope; https://ascon.ru/news/2024/12/20/vyshel-kompas-3d-v23-na-anglijskom-yazyke/, https://ascon.net/online-academy/, https://c3d.ascon.net/doc/viewer/install.html
+c3dlabs.com	confirmed	2026-11-13: reviewed domain scope; https://ascon.ru/team/234/, https://c3dlabs.com/
+cdek-express.com	confirmed	2026-11-13: reviewed domain scope; https://www.cdek.ru/ru/, https://cdek-express.com/
+cdek.media	confirmed	2026-11-13: reviewed domain scope; https://www.cdek.ru/ru/, https://cdek.media/
+docker-registry.ispsystem.com	confirmed	2026-11-13: reviewed full scope; https://www.ispsystem.ru/docs/dcimanager-admin/o-platforme/trebovaniya-k-serveru-v2026111, https://www.ispsystem.ru/docs/dcimanager-admin/ustanovka-i-obnovlenie/ustanovka-v2026091
+docs.altlinux.org	confirmed	2026-11-13: reviewed full scope; https://docs.altlinux.org/ru-RU/index.html
+docs.arenadata.io	confirmed	2026-11-13: reviewed full scope; https://arenadata.tech/ru/products/adcm, https://docs.arenadata.io/ru/releases/index.html
+download.ispmanager.com	confirmed	2026-11-13: reviewed full scope; https://www.ispmanager.ru/docs/ispmanager/ustanovka-ispmanager, https://www.ispmanager.ru/knowledge-base/ne-obnovlyaetsya-panel-ispmanager-6
+download.ispsystem.com	confirmed	2026-11-13: reviewed full scope; https://www.ispsystem.ru/docs/vmmanager-admin/o-platforme/trebovaniya-k-serveru-v2026061, https://www.ispsystem.ru/docs/vmmanager-admin/ustanovka-i-obnovlenie/ustanovka-v2026091-7
+ftp.altlinux.org	confirmed	2026-11-13: reviewed full scope; https://docs.altlinux.org/ru-RU/platform/11.0/html/alt-platform/nastrojka_spiska_repozitoriev_apt.html
+helpdesk.ispmanager.tech	confirmed	2026-11-13: reviewed full scope; https://www.ispmanager.ru/docs/ispmanager/ustanovka-ispmanager, https://www.ispmanager.com/
+hub.arenadata.io	confirmed	2026-11-13: reviewed full scope; https://docs.arenadata.io/ru/ADCM/current/get-started/install.html
+infowatch.com	confirmed	2026-11-13: reviewed domain scope; https://www.infowatch.ru/o-kompanii-infowatch, https://infowatch.com/
+license.ispmanager.com	confirmed	2026-11-13: reviewed full scope; https://www.ispmanager.ru/knowledge-base/kak-izmenit-server-licenzij
+license6.ispsystem.com	confirmed	2026-11-13: reviewed full scope; https://www.ispsystem.ru/docs/vmmanager-admin/o-platforme/trebovaniya-k-serveru-v2026061, https://www.ispsystem.ru/docs/dcimanager-admin/o-platforme/trebovaniya-k-serveru-v2026111
+mirror.trueconf.com	confirmed	2026-11-13: reviewed full scope; https://trueconf.ru/docs/group/ru/control-panel-settings/
+moysklad.uz	confirmed	2026-11-13: reviewed domain scope; https://www.moysklad.uz/, https://events.moysklad.uz/upload/files/oferta_uz.pdf, https://dev.moysklad.ru/doc/api/remap/1.2/
+mts.ai	confirmed	2026-11-13: reviewed domain scope; https://mts.ai/cookie-usage-policy/, https://mts.ai/product/generative-ai-solutions/cotype-doc-admin/, https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html
+my.ispsystem.com	confirmed	2026-11-13: reviewed full scope; https://www.ispsystem.ru/docs/vmmanager-admin/o-platforme/litsenzirovanie-v2026051, https://www.ispsystem.ru/docs/dcimanager-admin/ustanovka-i-obnovlenie/ustanovka-v2026091
+network.arenadata.io	confirmed	2026-11-13: reviewed full scope; https://arenadata.tech/ru/products/adcm
+packages.altlinux.org	confirmed	2026-11-13: reviewed full scope; https://www.basealt.ru/repository
+packages.trueconf.com	confirmed	2026-11-13: reviewed full scope; https://trueconf.ru/docs/group/ru/control-panel-settings/
+reg.trueconf.com	confirmed	2026-11-13: reviewed full scope; https://trueconf.ru/docs/server/ru/admin/registration/, https://trueconf.com/blog/knowledge-base/ports-trueconf-server-use
+registry.deckhouse.io	confirmed	2026-11-13: reviewed full scope; https://deckhouse.io/products/kubernetes-platform/documentation/v1/installing/, https://deckhouse.ru/modules/deckhouse/configuration.html
+robokassa.com	confirmed	2026-11-13: reviewed domain scope; https://docs.robokassa.ru/ru/quick-start, https://robokassa.com/about/
+seller.ozon.am	confirmed	2026-11-13: reviewed full scope; https://seller.ozon.com/, https://seller.ozon.am/?__rr=2
+seller.ozonru.cn	confirmed	2026-11-13: reviewed full scope; https://seller.ozon.com/, https://seller.ozonru.cn/
+vtb.am	confirmed	2026-11-13: reviewed domain scope; https://www.cba.am/en/licensed-banks, https://vtb.am/NewVersion/uploads/Reports/2025/PrimFS_4kv2025_rus.pdf, https://www.vtb.am/
+vtb.az	confirmed	2026-11-13: reviewed domain scope; https://www.cbar.az/page-195/banks?language=az, https://vtb.az/site/assets/files/9158/2025_annual_report.pdf, https://vtb.az/ru/
