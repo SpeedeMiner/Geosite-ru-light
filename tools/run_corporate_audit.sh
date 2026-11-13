@@ -43,3 +43,19 @@ timeout 150s python3 tools/discover_corporate_domains.py \
 "$tmp/geosite-delta" discovery-review geosite_RU_discovery_raw.tsv "$input/geosite_RU.dat" \
   data/v11-external-domain-review.tsv geosite_RU_discovered_candidates.md \
   geosite_RU_discovery_review_queue.tsv
+
+python3 - <<'PYCODE'
+import json
+from pathlib import Path
+
+status = json.loads(Path("geosite_RU_discovery_status.json").read_text())
+state = status["collection_state"]
+if state != "complete":
+    report = Path("geosite_RU_discovered_candidates.md")
+    title, rest = report.read_text().split("\n", 1)
+    successes = status["seeds_successful"]
+    total = status["seeds_configured"]
+    note = (f"**Collection incomplete. {successes}/{total} curated HTTPS seeds returned "
+            "verified metadata. An empty queue is not evidence of complete coverage.**")
+    report.write_text(f"{title}\n\n{note}\n{rest}")
+PYCODE

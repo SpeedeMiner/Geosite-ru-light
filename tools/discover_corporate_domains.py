@@ -363,8 +363,11 @@ def main() -> int:
         writer = csv.DictWriter(stream, fieldnames=FIELDS, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+    collection_state = ("complete" if successes == len(seeds)
+                        else "partial" if successes else "no_seed_data")
     status = {
         "mode": "AUDIT_ONLY_NEVER_IMPORT",
+        "collection_state": collection_state,
         "seeds_configured": len(seeds), "seeds_successful": successes,
         "observed_domain_count": total, "rows": len(rows),
         "policy_asns": len(policy),

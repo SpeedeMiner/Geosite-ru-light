@@ -597,7 +597,7 @@ jobs:
         run: |
           if [ "$AUDIT_OUTCOME" = success ]; then
             echo "### Corporate discovery (review only)" >> "$GITHUB_STEP_SUMMARY"
-            grep '^Observed:' geosite_RU_discovered_candidates.md >> "$GITHUB_STEP_SUMMARY"
+            grep -E '^Observed:|^\*\*Collection incomplete' geosite_RU_discovered_candidates.md >> "$GITHUB_STEP_SUMMARY"
           else
             echo "### Corporate discovery unavailable" >> "$GITHUB_STEP_SUMMARY"
             echo "No successful review report was generated. See this job's logs." >> "$GITHUB_STEP_SUMMARY"
