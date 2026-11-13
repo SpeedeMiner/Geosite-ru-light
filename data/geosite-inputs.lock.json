@@ -2,7 +2,8 @@
   "schema": 1,
   "domain_list_community": {
     "repository": "v2fly/domain-list-community",
-    "revision": "777d056afe68b2643c1ef15f80e7bde3dfa149b1"
+    "revision": "777d056afe68b2643c1ef15f80e7bde3dfa149b1",
+    "archive_tree_sha256": "b427128918027cbb0873703a6e9b63c8f5a2a484fc0b86693f346bfbda36bbe0"
   },
   "sources": [
     {

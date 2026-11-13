@@ -28,6 +28,9 @@ def read_lock(path=LOCK):
     tree = lock["domain_list_community"]
     require(tree["repository"] == "v2fly/domain-list-community" and
             re.fullmatch(r"[0-9a-f]{40}", tree["revision"]), "invalid v2fly revision")
+    tree_hash = tree.get("archive_tree_sha256")
+    require(tree_hash is None or re.fullmatch(r"[0-9a-f]{64}", tree_hash),
+            "invalid v2fly archive fingerprint")
     rows = lock["sources"]
     require(isinstance(rows, list) and rows, "empty input lock")
     names, outputs = set(), set()
@@ -119,6 +122,10 @@ def live_report(lock, inputs, revision, report=REPORT):
     }, indent=2) + "\n")
 
 
+def offline_sources(lock):
+    return [Source(row["name"], row["url"], Path(row["output"]), 0) for row in lock["sources"]]
+
+
 if __name__ == "__main__":
     try:
         mode, *args = sys.argv[1:]
@@ -126,15 +133,26 @@ if __name__ == "__main__":
         if mode == "ref" and not args:
             print(lock["domain_list_community"]["revision"])
         elif mode == "materialize" and len(args) <= 1:
+            from geosite_input_archive import verify_data_tree
+
             verify_tree(lock)
-            inputs = sources() if not args else [
-                Source(r["name"], r["url"], Path(r["output"]), 0) for r in lock["sources"]
-            ]
-            materialize(lock, inputs, Path(args[0]) if args else None)
+            if "archive_tree_sha256" in lock["domain_list_community"]:
+                verify_data_tree(lock, Path("domain-list-community"))
+            materialize(lock, sources() if not args else offline_sources(lock),
+                        Path(args[0]) if args else None)
+        elif mode == "materialize-archive" and len(args) == 1:
+            from geosite_input_archive import verify_data_tree
+
+            snapshot = Path(args[0])
+            require((snapshot / LOCK.name).read_bytes() == LOCK.read_bytes(),
+                    "restored snapshot uses a different input lock")
+            # The compiler consumes the local tree, not the one in the snapshot directory.
+            verify_data_tree(lock, Path("domain-list-community"))
+            materialize(lock, offline_sources(lock), snapshot / "inputs")
         elif mode == "discovery-report" and len(args) == 1 and re.fullmatch(r"[a-f0-9]{40}", args[0]):
             live_report(lock, sources(), args[0])
         else:
-            raise ValueError("use ref, materialize [snapshot-dir], or discovery-report V2FLY_SHA")
+            raise ValueError("use ref, materialize [payloads-dir], materialize-archive RESTORED_DIR, or discovery-report V2FLY_SHA")
     except (ValueError, OSError, KeyError, TypeError, subprocess.SubprocessError) as error:
         print(f"GeoSite input lock: {error}", file=sys.stderr)
         sys.exit(1)
