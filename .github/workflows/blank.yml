@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11.1)
+name: Build Ultimate Light RU Geosite (Optimized v11.2)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -68,6 +68,8 @@ jobs:
       W1ZARDZ_RU_DIRECT_INPUT_FILE: w1zardz-ru-direct-domains.txt
       KYORESUAS_RU_STANDARD_INPUT_FILE: kyoresuas-ru-standard-domains.txt
 
+      # Shared by the filter and the semantic promotion gate.
+      RU_APPROVED_MANIFEST: ${{ github.workspace }}/data/v11-approved-effective-ru.txt
       LOCAL_RU_INPUT_FILE: local/ru.txt
       LOCAL_BLOCK_INPUT_FILE: local/block.txt
 
@@ -604,6 +606,12 @@ jobs:
           func main() {
               if len(os.Args) < 2 {
                   usage()
+              }
+
+              var err error
+              exactRUPositiveHosts, err = loadExactRUPositiveHosts(os.Getenv("RU_APPROVED_MANIFEST"))
+              if err != nil {
+                  fatalf("cannot load approved exact RU hosts: %v", err)
               }
 
               switch os.Args[1] {
@@ -1247,13 +1255,33 @@ jobs:
               removedInvalid       int
           }
 
-          // These third-party-vendor hosts are confirmed by an official VTB page.
-          // We only have evidence for these exact hostnames, not all subdomains.
-          var exactRUPositiveHosts = map[string]bool{
-              "prod.ntprog.com": true,
-              "uat.ntprog.com": true,
-              "msk-prod-gate.ntprog.com": true,
-              "muat-gate.ntprog.com": true,
+          // Exact hosts are explicit approval policy, not source-list inference.
+          // Use the same manifest as the production semantic delta gate.
+          var exactRUPositiveHosts map[string]bool
+
+          func loadExactRUPositiveHosts(path string) (map[string]bool, error) {
+              data, err := os.ReadFile(path)
+              if err != nil {
+                  return nil, err
+              }
+              exact := make(map[string]bool)
+              for i, raw := range strings.Split(string(data), "\n") {
+                  line := strings.TrimSpace(raw)
+                  if !strings.HasPrefix(line, "full:") {
+                      continue
+                  }
+                  value := strings.TrimPrefix(line, "full:")
+                  if value != normalizeName(value) || !isValidDomain(value) ||
+                      !strings.Contains(value, ".") || isRussianTLD(value) ||
+                      forbidden4PDAInRU(router.Domain_Full, value) || exact[value] {
+                      return nil, fmt.Errorf("invalid or duplicate Full rule on line %d: %q", i+1, line)
+                  }
+                  exact[value] = true
+              }
+              if len(exact) == 0 {
+                  return nil, fmt.Errorf("approved manifest has no Full rules")
+              }
+              return exact, nil
           }
 
           func addPositiveRule(category *router.GeoSite, seen map[string]bool, value string) bool {
@@ -1949,8 +1977,8 @@ jobs:
                   fatalf("RU has only %d rules (minimum %d)", len(ru.Domain), floor)
               }
 
-              // Only the four explicitly approved VTB vendor hostnames may be
-              // Full in RU; all other imported RU entries stay RootDomain.
+              // Only explicitly approved hosts may be Full in RU.
+              // Validation requires their exact type even if a source changes.
               validateRules("RU", ru.Domain, true)
               for _, entry := range ru.Domain {
                   if forbidden4PDAInRU(entry.Type, entry.Value) {
@@ -1969,7 +1997,7 @@ jobs:
               }
               for name := range exactRUPositiveHosts {
                   if !exactSeen[name] {
-                      fatalf("required exact VTB host missing from RU DAT: %s", name)
+                      fatalf("required approved exact host missing from RU DAT: %s", name)
                   }
               }
 
@@ -2053,10 +2081,54 @@ jobs:
           package main
 
           import (
+              "fmt"
+              "os"
+              "path/filepath"
               "testing"
 
               router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
           )
+
+          func TestMain(m *testing.M) {
+              var err error
+              exactRUPositiveHosts, err = loadExactRUPositiveHosts(os.Getenv("RU_APPROVED_MANIFEST"))
+              if err != nil {
+                  fmt.Fprintln(os.Stderr, err)
+                  os.Exit(1)
+              }
+              os.Exit(m.Run())
+          }
+
+          func TestReviewedManifestExactHostScope(t *testing.T) {
+              const host = "seller.ozon.am"
+              if !exactRUPositiveHosts[host] || exactRUPositiveHosts["ozon.am"] ||
+                  exactRUPositiveHosts["nested."+host] {
+                  t.Fatal("approved policy widened an exact hostname")
+              }
+              ru := &router.GeoSite{CountryCode: "RU"}
+              if !addPositiveRule(ru, make(map[string]bool), host) ||
+                  len(ru.Domain) != 1 || ru.Domain[0].Type != router.Domain_Full {
+                  t.Fatal("reviewed local host did not build as Full")
+              }
+          }
+
+          func TestExactManifestRejectsInvalidRules(t *testing.T) {
+              path := filepath.Join(t.TempDir(), "reviewed.txt")
+              for _, data := range []string{
+                  "domain:example.com\n",
+                  "full:EXAMPLE.com\n",
+                  "full:a.example.com\nfull:a.example.com\n",
+                  "full:www.4pda.to\n",
+                  "full:*.example.com\n",
+              } {
+                  if err := os.WriteFile(path, []byte(data), 0600); err != nil {
+                      t.Fatal(err)
+                  }
+                  if _, err := loadExactRUPositiveHosts(path); err == nil {
+                      t.Fatalf("invalid Full policy accepted: %q", data)
+                  }
+              }
+          }
 
           func TestRussianFamilyTLDsCollapseIncludingUnicode(t *testing.T) {
               cases := []string{
@@ -2414,6 +2486,11 @@ jobs:
           test -n "$RELEASE_SHA"
           ACTUAL_SHA="$(sha256sum /tmp/geosite-ru-released.dat | awk '{print $1}')"
           test "$RELEASE_SHA" = "$ACTUAL_SHA" || { echo "ERROR: published DAT checksum differs from published SHA256" >&2; exit 1; }
+          # Require the complete, exact promotion and preserve all non-RU
+          # categories when building against the verified v11.1 snapshot.
+          if [ "$ACTUAL_SHA" = "450f7b0d837671121c34f5a08adc35ef95f845e5abaa35fa47b0d0444a73ca83" ]; then
+            export GEOSITE_EXPECTED_RU_ADDITIONS=33
+          fi
 
           mkdir -p domain-list-community/tools/geosite-delta
           cp tools/geosite-delta/main.go tools/geosite-delta/main_test.go domain-list-community/tools/geosite-delta/
@@ -2433,7 +2510,7 @@ jobs:
               go run ./tools/geosite-delta \
                 /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
                 /tmp/geosite-ru-external-candidates.json ../geosite_RU_external_candidate_audit.md \
-                ../data/v11-external-domain-review.tsv ../data/v11-approved-effective-ru.txt
+                ../data/v11-external-domain-review.tsv "$RU_APPROVED_MANIFEST"
             )
             test -s geosite_RU_external_candidate_audit.md
             python3 tools/build_domain_research_queue.py geosite_RU_external_candidate_audit.md geosite_RU_attribution_research_queue.tsv
@@ -2444,18 +2521,18 @@ jobs:
               cd domain-list-community
               go run ./tools/geosite-delta \
                 /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_production_preflight.md \
-                ../data/v11-approved-effective-ru.txt
+                "$RU_APPROVED_MANIFEST"
             )
             test -s geosite_RU_production_preflight.md
           else
             # Production promotion: compare against the currently published
-            # release, require either EXACTLY the 30 reviewed v11 additions
-            # or an idempotent rebuild (zero additions). BLOCK must be unchanged.
+            # release and require reviewed RU rules with no lost coverage.
+            # BLOCK must be unchanged.
             (
               cd domain-list-community
               go run ./tools/geosite-delta \
                 /tmp/geosite-ru-released.dat "../$OUTPUT_FILE" ../geosite_RU_semantic_delta.md \
-                ../data/v11-approved-effective-ru.txt
+                "$RU_APPROVED_MANIFEST"
             )
           fi
           test -s geosite_RU_semantic_delta.md
@@ -2525,7 +2602,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11.1"
+          name: "Optimized RU GeoSite v11.2"
           make_latest: true
 
           files: |
@@ -2536,16 +2613,14 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite v11.1
+            # Optimized RU GeoSite v11.2
 
-            Verified Russian-region GeoSite update with compact RU/BY/KZ domain coverage.
+            - 33 reviewed additions since v11.1 (14 domain suffixes and 19 exact hosts).
+            - No RU coverage removed. BLOCK and the 16 appended Hydra categories are unchanged for this promotion.
+            - 4pda.to and its subdomains remain excluded from RU-DIRECT.
+            - The local source and approval manifest are versioned. Live discovery does not feed this build.
 
-            - 30 audited effective new RU rules, no lost RU coverage against v10.
-            - BLOCK category unchanged (43 rules).
-            - 4pda.to and its subdomains are excluded from RU-DIRECT.
-            - Rebuilt assets include geosite_RU.dat and its SHA256 checksum.
-
-            Full audit: https://github.com/${{ github.repository }}/pull/1
+            Evidence: https://github.com/${{ github.repository }}/blob/main/docs/v11-2-reviewed-domains.md
 
           fail_on_unmatched_files: true
 
@@ -2647,20 +2722,20 @@ jobs:
       # ------------------------------------------------------------
       # 11b. Immutable versioned release and floating-tag alignment.
       # ------------------------------------------------------------
-      - name: Publish immutable v11.1 release
+      - name: Publish immutable v11.2 release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # This tag represents the audited v11.1 source snapshot. Never move an
+          # This tag represents the audited v11.2 source snapshot. Never move an
           # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11.1 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11.1 release already exists; preserving its tag."
+          if gh release view v11.2 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11.2 release already exists; preserving its tag."
           else
             EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11.1 \
+            gh release create v11.2 \
               "$OUTPUT_FILE" \
               "$OUTPUT_SHA_FILE" \
               "$CATEGORY_FILE" \
@@ -2668,12 +2743,12 @@ jobs:
               "$NEW_SOURCES_REPORT_FILE" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11.1" \
+              --title "GeoSite RU Light v11.2" \
               --latest=false \
-              --notes "v11.1: 57 reviewed pinned RU rules, technical CDN and corporate expansion, safe @ru parser, Belarus/Kazakhstan Unicode aliases, exact VTB vendor hosts and zero lost RU coverage. All 43 BLOCK rules preserved; 4pda.to excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Full audit: https://github.com/$GITHUB_REPOSITORY/pull/3"
+              --notes "v11.2: 33 reviewed RU additions (14 suffixes, 19 exact hosts), no lost RU coverage, unchanged BLOCK and Hydra. 4pda.to remains excluded from DIRECT. DAT SHA256: $EXPECTED_SHA. Evidence: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-2-reviewed-domains.md"
           fi
-          gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11.1 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+          gh release view v11.2 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11.2 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Align floating latest-optimized tag with successful main release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -2685,7 +2760,7 @@ jobs:
           CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
           echo "Previously published floating tag: $CURRENT"
           if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 and v11.1 remain immutable.
+            # latest-optimized is intentionally floating; v11, v11.1 and v11.2 remain immutable.
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
               -f sha="$GITHUB_SHA" -F force=true >/dev/null
           fi

@@ -8,6 +8,7 @@ import (
   "os"
   "sort"
   "strings"
+  "strconv"
 
   router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
   "google.golang.org/protobuf/proto"
@@ -229,7 +230,7 @@ func main(){
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
   var b strings.Builder
-  fmt.Fprintln(&b,"# Semantic comparison: release DAT vs v11 candidate")
+  fmt.Fprintln(&b,"# Semantic comparison: release DAT vs candidate")
   fmt.Fprintln(&b,"")
   fmt.Fprintln(&b,"Rules are compared by effective suffix/full-domain coverage. Regex/Plain or future rule types, if any, are compared conservatively by exact encoding; no inferred DNS ownership.")
   fmt.Fprintln(&b,"")
@@ -241,10 +242,14 @@ func main(){
   lostRU:=0
   var addedRU []string
   blockAdded,blockLost:=0,0
+  var changedNonRU []string
   for _,c:=range keys {
     a,z:=old[c],now[c]
     added:=differences(z,a);lost:=differences(a,z)
     fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
+    if c!="RU" && (len(added)>0 || len(lost)>0 || len(a.roots)+len(a.full)+len(a.opaque)!=len(z.roots)+len(z.full)+len(z.opaque)) {
+      changedNonRU=append(changedNonRU,c)
+    }
     if c=="BLOCK" {
       // v11 is RU expansion only: BLOCK changes require a separate review.
       blockAdded,blockLost=len(added),len(lost)
@@ -264,14 +269,19 @@ func main(){
   if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
   fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
-  // Production main/schedule audit compares against the currently published
-  // release. Before the first v11 publish, exactly the 30 approved RU additions
-  // are required. On subsequent idempotent v11 runs, zero new rules is valid;
-  // any other drift fails closed before publishing to the release tag or branch.
+  // The initial v11.2 promotion pins the known v11.1 DAT delta. Normal
+  // later updates still use the cumulative approvals and the BLOCK gate.
+  if raw:=os.Getenv("GEOSITE_EXPECTED_RU_ADDITIONS");raw!="" {
+    expected,err:=strconv.Atoi(raw)
+    if err!=nil || expected<0 || len(addedRU)!=expected || len(changedNonRU)>0 {
+      fmt.Fprintf(os.Stderr,"ERROR: release promotion expected %q RU additions and non-RU parity; got %d RU additions, changed non-RU categories: %v\n",raw,len(addedRU),changedNonRU)
+      os.Exit(1)
+    }
+  }
   if len(os.Args)==5 {
     if err:=verifyReviewedAdditions(os.Args[4],addedRU,now["RU"]);err!=nil{panic(err)}
     if len(addedRU)>0 {
-      fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=initial_v11\n",len(addedRU))
+      fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=reviewed_additions\n",len(addedRU))
     }else{
       fmt.Println("PRODUCTION_RU_APPROVAL count=0 mode=idempotent_release")
     }
