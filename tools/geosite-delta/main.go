@@ -8,7 +8,6 @@ import (
   "fmt"
   "os"
   "sort"
-  "strconv"
   "strings"
 
   router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
@@ -151,7 +150,7 @@ func loadReviewDecisions(path string) (map[string]reviewDecision,error) {
     domain:=strings.ToLower(strings.TrimSpace(fields[0]))
     decision:=strings.TrimSpace(fields[1])
     rationale:=strings.TrimSpace(fields[2])
-    if domain==""||strings.ContainsAny(domain," |/")||rationale==""{return nil,fmt.Errorf("invalid review domain/evidence at row %d",n+1)}
+    if !validDiscoveryDomain(domain)||rationale==""{return nil,fmt.Errorf("invalid review domain/evidence at row %d",n+1)}
     if decision!="reject"&&decision!="hold"&&decision!="confirmed"{return nil,fmt.Errorf("invalid decision at row %d: %s",n+1,decision)}
     if _,ok:=reviews[domain];ok{return nil,fmt.Errorf("duplicate review: %s",domain)}
     reviews[domain]=reviewDecision{decision,rationale}
@@ -165,30 +164,7 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   if len(inventory.Domains)==0{return fmt.Errorf("empty candidate inventory")}
   reviews,err:=loadReviewDecisions(reviewPath);if err!=nil{return err}
   ru:=categories["RU"]; block:=categories["BLOCK"]
-  // User-selected no-DIRECT subtree. Independent of external inventory and
-  // review file: removing a TSV line cannot weaken this routing policy.
-  for _,domain:=range []string{"4pda.to","www.4pda.to"} {
-    if reviews[domain].status!="reject" {
-      return fmt.Errorf("mandatory no-DIRECT policy missing reject decision for %s",domain)
-    }
-  }
-  if conflict:=rejectedSubtreeConflict(ru,"4pda.to");conflict!="" {
-    return fmt.Errorf("4pda.to no-DIRECT subtree policy violated: %s",conflict)
-  }
-  for domain,review:=range reviews {
-    isRU:=covered(ru,domain,false)
-    // A generic reject is exact to this domain, NOT a blanket ban for all
-    // descendants: shared Akamai/Cloudflare CDNs can host RU-specific services.
-    if review.status=="reject"&&isRU {
-      return fmt.Errorf("rejected external domain %s is unexpectedly covered by RU",domain)
-    }
-    if review.status=="hold"&&isRU{
-      return fmt.Errorf("external domain %s is on HOLD pending routing approval but has RU coverage",domain)
-    }
-    if review.status=="confirmed"&&!isRU{
-      return fmt.Errorf("confirmed candidate %s is missing from RU",domain)
-    }
-  }
+  if err:=verifyRoutingDecisions(ru,reviews);err!=nil{return err}
   names:=make([]string,0,len(inventory.Domains))
   for domain:=range inventory.Domains{names=append(names,domain)}
   sort.Strings(names)
@@ -241,6 +217,22 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   return nil
 }
 func main(){
+  if len(os.Args)>1 && os.Args[1]=="release-check" {
+    if len(os.Args)!=8 {
+      fmt.Fprintln(os.Stderr,"usage: geosite-delta release-check rolling.dat locked.dat candidate.dat report.md approvals.txt decisions.tsv")
+      os.Exit(2)
+    }
+    if err:=checkRelease(os.Args[2:]);err!=nil{
+      var pending *pendingRUReview
+      if errors.As(err,&pending) {
+        fmt.Fprintln(os.Stderr,"PENDING_RU_REVIEW:",err)
+        os.Exit(3)
+      }
+      fmt.Fprintln(os.Stderr,"ERROR:",err)
+      os.Exit(1)
+    }
+    return
+  }
   if len(os.Args)>1 && os.Args[1]=="discovery-review" {
     if len(os.Args)!=6 && len(os.Args)!=7 {
       fmt.Fprintln(os.Stderr,"usage: geosite-delta discovery-review evidence.tsv candidate.dat decisions.tsv report.md [queue.tsv]")
@@ -256,61 +248,10 @@ func main(){
   if len(os.Args)!=4 && len(os.Args)!=5 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [approved-effective-RU.txt | external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
-  var b,details strings.Builder
-  fmt.Fprintln(&b,"# Semantic comparison: release DAT vs candidate")
-  fmt.Fprintln(&b,"")
-  fmt.Fprintln(&b,"Rules are compared by effective suffix/full-domain coverage. Regex/Plain or future rule types, if any, are compared conservatively by exact encoding; no inferred DNS ownership.")
-  fmt.Fprintln(&b,"")
-  fmt.Fprintln(&b,"| Category | Release rules | Candidate rules | Newly covered rules | No longer covered rules |")
-  fmt.Fprintln(&b,"|---|---:|---:|---:|---:|")
-  cats:=make(map[string]bool)
-  for c:=range old{cats[c]=true};for c:=range now{cats[c]=true}
-  keys:=make([]string,0,len(cats));for c:=range cats{keys=append(keys,c)};sort.Strings(keys)
-  lostRU:=0
-  var addedRU []string
-  blockAdded,blockLost:=0,0
-  var changedNonRU []string
-  for _,c:=range keys {
-    a,z:=old[c],now[c]
-    added:=differences(z,a);lost:=differences(a,z)
-    fmt.Printf("DELTA %s: release=%d candidate=%d newly_covered=%d lost=%d\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
-    if c!="RU" && (len(added)>0 || len(lost)>0 || len(a.roots)+len(a.full)+len(a.opaque)!=len(z.roots)+len(z.full)+len(z.opaque)) {
-      changedNonRU=append(changedNonRU,c)
-    }
-    if c=="BLOCK" {
-      // v11 is RU expansion only: BLOCK changes require a separate review.
-      blockAdded,blockLost=len(added),len(lost)
-    }
-    if c=="RU" {
-      addedRU=added
-      lostRU=len(lost)
-      for _,v:=range added {fmt.Printf("RU_NEW %s\n",v)}
-      for _,v:=range lost {fmt.Printf("RU_LOST %s\n",v)}
-    }
-    fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
-    fmt.Fprintf(&details,"\n## %s — added effective rules (%d)\n\n",c,len(added))
-    for _,v:=range added {fmt.Fprintln(&details,"- `"+v+"`")}
-    fmt.Fprintf(&details,"\n## %s — no longer covered (%d)\n\n",c,len(lost))
-    for _,v:=range lost {fmt.Fprintln(&details,"- `"+v+"`")}
-  }
-  if err:=os.WriteFile(os.Args[3],[]byte(b.String()+details.String()),0644);err!=nil{panic(err)}
-  fmt.Print(b.String())
-  fmt.Printf("Complete report saved: %s\n",os.Args[3])
-  // The initial v11.2 promotion pins the known v11.1 DAT delta. Normal
-  // later updates still use the cumulative approvals and the BLOCK gate.
-  if raw:=os.Getenv("GEOSITE_EXPECTED_RU_ADDITIONS");raw!="" {
-    expected,err:=strconv.Atoi(raw)
-    if err!=nil || expected<0 || len(addedRU)!=expected || len(changedNonRU)>0 {
-      fmt.Fprintf(os.Stderr,"ERROR: release promotion expected %q RU additions and non-RU parity; got %d RU additions, changed non-RU categories: %v\n",raw,len(addedRU),changedNonRU)
-      os.Exit(1)
-    }
-  }
-  if lostRU>0 {
-    fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
-    os.Exit(1)
-  }
-  if blockAdded>0 || blockLost>0 {
-    fmt.Fprintf(os.Stderr,"ERROR: BLOCK policy changed without separate approval: %d newly covered, %d lost\n",blockAdded,blockLost)
+  addedRU,lostRU,changedNonRU,err:=writeSemanticDelta(os.Args[3],old,now)
+  if err!=nil{panic(err)}
+  if err:=verifyCategoryTransition(old,now,addedRU,lostRU,changedNonRU);err!=nil{
+    fmt.Fprintln(os.Stderr,"ERROR:",err)
     os.Exit(1)
   }
   if len(os.Args)==5 {
@@ -320,22 +261,12 @@ func main(){
         fmt.Fprintf(os.Stderr,"PENDING_RU_REVIEW: %v\n",pending)
         os.Exit(3)
       }
-      fmt.Fprintf(os.Stderr,"ERROR: %v\n",err)
+      fmt.Fprintln(os.Stderr,"ERROR:",err)
       os.Exit(1)
-    }
-    if len(addedRU)>0 {
-      fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=reviewed_additions\n",len(addedRU))
-    }else{
-      fmt.Println("PRODUCTION_RU_APPROVAL count=0 mode=idempotent_release")
     }
   }
   if len(os.Args)==8 {
     if err:=reportExternalCandidates(os.Args[4],os.Args[5],os.Args[6],now);err!=nil{panic(err)}
     if err:=verifyReviewedAdditions(os.Args[7],addedRU,now["RU"]);err!=nil{panic(err)}
-    if len(addedRU)==0 {
-      fmt.Println("APPROVED_RU_NEW count=0 mode=published-release-parity")
-    }else{
-      fmt.Printf("APPROVED_RU_NEW count=%d exact_match=true\n",len(addedRU))
-    }
   }
 }
