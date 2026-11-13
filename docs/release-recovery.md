@@ -3,7 +3,7 @@
 Use a numbered GitHub release for recovery, not a rolling URL, the current
 release branch, or an unverified CDN response. The recovery registry records
 the source commit and exact size and SHA-256 of each of the five published
-assets for v11.5 and v11.6. Extend it in a reviewed change after publishing
+assets for v11.5, v11.6 and v11.7. Extend it in a reviewed change after publishing
 another numbered release. A checksum downloaded alongside a DAT is not the
 independent trust anchor. The registry in a trusted checkout is.
 
@@ -30,7 +30,7 @@ want recovery without GitHub access.
 
 ## Rehearsal result
 
-Both numbered releases' five assets were verified. In an isolated directory,
+The five assets of both v11.5 and v11.6 were verified. In an isolated directory,
 an active symlink was switched from v11.6 to v11.5 and then back to v11.6.
 At each switch the active DAT and checksum matched the relevant numbered
 release byte-for-byte. Neither GitHub publication nor a client reload was
@@ -40,6 +40,12 @@ part of the rehearsal.
 | --- | ---: | --- |
 | v11.5 | 82,947 | `9e13ae5da4122ea9567bb99c5c108503079083ed3eb5d7c97ca0f940ac9e068f` |
 | v11.6 | 83,092 | `b0be3f70f8a4950fde0aec2d237d8af5bbfc156c99079ac11cfb41f386d74107` |
+| v11.7 | 83,200 | `b51429c5277c75cd40f889eeb8786937ac5f2df236764c0f60b7a700344879db` |
+
+For v11.7, all five numbered assets were independently downloaded, staged,
+and compared byte-for-byte with the verified build. The same files were
+staged a second time with no network access. A rollback from v11.7 to v11.6
+would remove the four exact rules listed in [the v11.7 release notes](v11-7-vendor-endpoints.md).
 
 v11.5 does not contain the six exact ALT Linux hosts added by v11.6. The
 recovery tool does not change the gate, move any tags, or publish an older
