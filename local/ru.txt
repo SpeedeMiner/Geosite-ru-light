@@ -297,3 +297,16 @@ full:sigma.cloud.trassir.com
 full:telemedicine.medpoisk.com
 full:www.alrosa.aero
 full:www.rusline.aero
+
+# v11.10 — functional SDK endpoints. Branch App Links are scoped to their dedicated suffix.
+full:api-eu.mixpanel.com
+full:api-in.mixpanel.com
+full:api.lab.amplitude.com
+full:api.lab.eu.amplitude.com
+full:api.onesignal.com
+full:api2.branch.io
+domain:app.link
+full:cdn.onesignal.com
+full:flag.lab.amplitude.com
+full:flag.lab.eu.amplitude.com
+full:onesignal.com
