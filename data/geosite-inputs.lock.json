@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "domain_list_community": {
+    "repository": "v2fly/domain-list-community",
+    "revision": "777d056afe68b2643c1ef15f80e7bde3dfa149b1"
+  },
+  "sources": [
+    {
+      "name": "runetfreedom",
+      "output": "source-geosite.dat",
+      "repository": "runetfreedom/russia-blocked-geosite",
+      "revision": "c439d0fb3819eee32a70fd980572c71a4839661b",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/c439d0fb3819eee32a70fd980572c71a4839661b/geosite.dat",
+      "sha256": "c9c0d66b931aab09a5eb5522f95fd3962b69832d4cf29bcd44edf2e6a9a5d57e",
+      "size": 87447305
+    },
+    {
+      "name": "hydra",
+      "output": "hydra-geosite.dat",
+      "repository": "hydraponique/roscomvpn-geosite",
+      "revision": "bb0e6b38617b4075c257c13c34d0d6f01c17f5da",
+      "asset": {
+        "id": 633350276,
+        "digest": "sha256:6fadc9298116c5523b1e3cfa46c6c5fed5a218b9b6365be831e358f4823ea464",
+        "size": 68423,
+        "tag": "202610120948"
+      },
+      "url": "https://github.com/hydraponique/roscomvpn-geosite/releases/download/202610120948/geosite.dat",
+      "sha256": "6fadc9298116c5523b1e3cfa46c6c5fed5a218b9b6365be831e358f4823ea464",
+      "size": 68423
+    },
+    {
+      "name": "grimbird",
+      "output": "grimbird-geosite.dat",
+      "repository": "GrimbirdUsers/ru-routing-dat",
+      "revision": "bea48cd34166485ef8d999e1981d8cf3ca297253",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/GrimbirdUsers/ru-routing-dat/bea48cd34166485ef8d999e1981d8cf3ca297253/geosite.dat",
+      "sha256": "4d7f96727c444a0b592779d7e5314ac2f0f1cb90f8d33cc7b5f056ef723392a1",
+      "size": 268526
+    },
+    {
+      "name": "mvrvntn",
+      "output": "mvrvntn-geosite.dat",
+      "repository": "mvrvntn/routing",
+      "revision": "e5919162e421791e42f5a796aaed7129ace210ec",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/mvrvntn/routing/e5919162e421791e42f5a796aaed7129ace210ec/geosite.dat",
+      "sha256": "7923e0aba8d584c031d2b0167d0a0216e39acd57bd9036003f1e66bbf4f5ccb2",
+      "size": 98382
+    },
+    {
+      "name": "yularzhi",
+      "output": "yularzhi-geosite.dat",
+      "repository": "Yularzhi/geosite_russia",
+      "revision": "0979cc831b3985d15583c0cc189be3772d7131ee",
+      "asset": {
+        "id": 738938539,
+        "digest": "sha256:b1afeee7fa14e2fba3ef2fa0fea6afa58e35b64004503d165df075ea35782cfc",
+        "size": 2578057,
+        "tag": "latest-geosite-322-1"
+      },
+      "url": "https://github.com/Yularzhi/geosite_russia/releases/download/latest-geosite-322-1/geosite.dat",
+      "sha256": "b1afeee7fa14e2fba3ef2fa0fea6afa58e35b64004503d165df075ea35782cfc",
+      "size": 2578057
+    },
+    {
+      "name": "vpnyasha",
+      "output": "vpnyasha-geosite.dat",
+      "repository": "vpnyasha/geosite",
+      "revision": "9dfe2e172af8cbe759c26e425fc88a0ccfd7d440",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/vpnyasha/geosite/9dfe2e172af8cbe759c26e425fc88a0ccfd7d440/geosite.dat",
+      "sha256": "43096f1bc2dac0629ef74be7265080bb1a798ed5ce89227c05acc358aba6c662",
+      "size": 70431
+    },
+    {
+      "name": "kirill",
+      "output": "kirill-geosite.dat",
+      "repository": "kirilllavrov/RU-domain-list-for-whitelist",
+      "revision": "d8504bdc4564815297a07f7f469a188c4f0bb165",
+      "asset": {
+        "id": 377104629,
+        "digest": "sha256:f2aef12078ef05dfd09a19e76382f67ab5cd37f351d553d91ec7d5727ae968be",
+        "size": 375933,
+        "tag": "0.3.11"
+      },
+      "url": "https://github.com/kirilllavrov/RU-domain-list-for-whitelist/releases/download/0.3.11/dlc.dat",
+      "sha256": "f2aef12078ef05dfd09a19e76382f67ab5cd37f351d553d91ec7d5727ae968be",
+      "size": 375933
+    },
+    {
+      "name": "digne",
+      "output": "digne-geosite.dat",
+      "repository": "DigneZzZ/routing",
+      "revision": "0dd4a18e4400fe69955151acbcdc7388848f9250",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/DigneZzZ/routing/0dd4a18e4400fe69955151acbcdc7388848f9250/v2ray/geosite.dat",
+      "sha256": "e8c8c74e4d9d989940a38780f4bf640c5dcc25f8c982c712b3aaccf5be268ca6",
+      "size": 623906
+    },
+    {
+      "name": "davoyan",
+      "output": "davoyan-category-ru-legacy.txt",
+      "repository": "Davoyan/mihomo-rule-sets",
+      "revision": "11e5ea0b1feeb5bd7873cd3b2e04b67013b5811c",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/11e5ea0b1feeb5bd7873cd3b2e04b67013b5811c/domains/category-ru-legacy.txt",
+      "sha256": "243648e608a37fbdd0c63fd8d436878f3d141295df5d14900f5e6039eacb72a7",
+      "size": 34156
+    },
+    {
+      "name": "w1zardz",
+      "output": "w1zardz-ru-direct-domains.txt",
+      "repository": "w1zardz/amnezia-vpn-russia-split-tunneling",
+      "revision": "8c8c6aaeb805ba9adc9620a0ba6267d248e6fc27",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/w1zardz/amnezia-vpn-russia-split-tunneling/8c8c6aaeb805ba9adc9620a0ba6267d248e6fc27/dist/ru-direct-domains.txt",
+      "sha256": "3d070c92423b3624f5b67e6980698f3c12e335e54febc7de1e908301c1cf99a7",
+      "size": 14409
+    },
+    {
+      "name": "kyoresuas",
+      "output": "kyoresuas-ru-standard-domains.txt",
+      "repository": "kyoresuas/ru-direct",
+      "revision": "c21042d6983f5766ab43f39dd7318899d7740dd1",
+      "asset": null,
+      "url": "https://raw.githubusercontent.com/kyoresuas/ru-direct/c21042d6983f5766ab43f39dd7318899d7740dd1/ru-standard.domains.txt",
+      "sha256": "1240c1df7d98d28429383d670589ccb9e57e31a044cd12246eaeffc029861953",
+      "size": 29801
+    }
+  ]
+}

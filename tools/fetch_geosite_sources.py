@@ -14,6 +14,7 @@ import time
 CACHE_TTL = 21 * 86400
 REPORT = Path("geosite_RU_source_fetch.tsv")
 CACHE = Path(".geosite-source-cache")
+MAX_SOURCE_BYTES = 128 * 1024 * 1024
 
 
 @dataclass(frozen=True)
@@ -47,11 +48,11 @@ def digest(path):
         return file_digest(f, "sha256").hexdigest()
 
 
-def curl(url, output):
+def curl(url, output, *, max_size=MAX_SOURCE_BYTES):
     subprocess.run([
         "curl", "-fsSL", "--connect-timeout", "15", "--max-time", "120",
         "--retry", "2", "--retry-delay", "2", "--retry-max-time", "160",
-        "--retry-all-errors", "-o", str(output), "--", url,
+        "--retry-all-errors", "--max-filesize", str(max_size), "-o", str(output), "--", url,
     ], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
     if not output.stat().st_size:
         raise ValueError("empty response")
@@ -64,7 +65,7 @@ def snapshot(source, cache, now, dest):
     fetched = info["fetched_at"]
     if (info["url"] != source.url or type(fetched) is not int
             or not 0 <= now - fetched <= CACHE_TTL
-            or not blob.stat().st_size or digest(blob) != info["sha256"]):
+            or not 0 < blob.stat().st_size <= MAX_SOURCE_BYTES or digest(blob) != info["sha256"]):
         raise ValueError("cached URL, age or SHA-256 mismatch")
     shutil.copyfile(blob, dest)
     return info["sha256"], fetched
@@ -102,8 +103,8 @@ def fetch(source, cache, now, download=curl, runet_sha_url=None):
                     raise ValueError("upstream DAT/SHA-256 mismatch")
             else:
                 download(source.url, dest)
-            if not dest.stat().st_size:
-                raise ValueError("empty response")
+            if not 0 < dest.stat().st_size <= MAX_SOURCE_BYTES:
+                raise ValueError("empty or oversized response")
             checksum = digest(dest)
         except (OSError, ValueError, subprocess.SubprocessError) as error:
             if source.tier == 1:
