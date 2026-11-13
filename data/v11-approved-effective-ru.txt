@@ -108,3 +108,10 @@ full:86.license5.ispsystem.com
 full:hub.adsw.io
 full:license5.ispsystem.com
 full:metricreport.ispsystem.net
+
+# v11.8 — documented transport, intercom and payment services. Exact names only.
+full:flyredwings.com
+full:flysmartavia.com
+full:payinrussia.com
+full:rdea.rosdomofon.com
+full:rosdomofon.com
