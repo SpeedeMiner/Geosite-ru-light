@@ -43,9 +43,19 @@ TRASSIR sign-in: https://cloud.trassir.com → https://ru.cloud.trassir.com → 
 | `sip.rosdomofon.com` | Three matching A responses only, with no check of a working SIP session | [Measurement](https://api.globalping.io/v1/measurements/2myX7zCy8BZtyJsNz00021Uoy) |
 | `www.dme.aero` | HTTP responses had unverified TLS, with additional handshake timeouts | [Measurement](https://api.globalping.io/v1/measurements/26Pcfw9NLCbTm4e0o00021Uox) |
 
+## Exact BLOCK addition
+
+`full:crashlyticsreports-pa.googleapis.com` is the only BLOCK change. The
+[Firebase SDK project](https://github.com/firebase/firebase-android-sdk/issues/4474)
+identifies this hostname as a crash-report upload endpoint.
+[Firebase documentation](https://firebase.google.com/docs/android/play-data-disclosure#crashlytics)
+describes stack traces, relevant application state and device metadata.
+The Google APIs apex, sibling names and descendants of this host are not
+added to BLOCK by this rule. The Server DAT intentionally exports only RU.
+
 ## Build results
 
-Light contains **3,120 RU rules (+19, −0)** and 18 categories. The other categories are unchanged. Its DAT is 83,757 bytes, SHA-256 `399da203d79f729201ec249e9e8b457b9dae6801f070ae24ade447bbe21ebb48`.
+Light contains **3,120 RU rules (+19, −0)** and 18 categories. BLOCK contains 44 rules (+1, −0). The 16 other categories are unchanged. Its DAT is 83,799 bytes, SHA-256 `cf728ca7f6620fd12460f29e9f8d541e93eeb754276368e095f0ef6ec22410cc`.
 The existing Server projection contains **3,008 RU rules (+19, −0)** in its single RU category. Its DAT is 54,367 bytes, SHA-256 `843b041c6baa137aeeb5eecc8f6fca811f002c32c5008d9581b3169f98c7238d`. No Server policy change is needed.
 
 Offline replay reproduced all five candidate assets. The five pinned v11.8 rollback assets were verified independently. Python and Go suites passed.

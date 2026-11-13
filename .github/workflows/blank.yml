@@ -37,7 +37,7 @@ on:
 # Change these together in the PR preparing the next numbered release.
 env:
   NUMBERED_RELEASE: v11.9
-  NUMBERED_DAT_SHA: 399da203d79f729201ec249e9e8b457b9dae6801f070ae24ade447bbe21ebb48
+  NUMBERED_DAT_SHA: cf728ca7f6620fd12460f29e9f8d541e93eeb754276368e095f0ef6ec22410cc
   NUMBERED_RECOVERY_BASELINE: v11.8
   NUMBERED_RELEASE_NOTES: docs/v11-9-russia-verified-hosts.md
 

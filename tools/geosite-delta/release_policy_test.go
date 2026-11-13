@@ -35,6 +35,9 @@ func TestLockedReleaseGate(t *testing.T) {
 			{CountryCode: "RU", Domain: ru},
 			{CountryCode: "BLOCK", Domain: []*router.Domain{rule(suffix, "blocked.example")}},
 		}
+		if file == "candidate.dat" {
+			sites[1].Domain = append(sites[1].Domain, rule(exact, approvedCrashlyticsBlock))
+		}
 		if keepApple {
 			sites = append(sites, &router.GeoSite{CountryCode: "APPLE", Domain: apple})
 		}
@@ -121,5 +124,50 @@ func TestProtectedCategoryDetectsSameCoverageTypeChanges(t *testing.T) {
 	}
 	if got := changedProtectedCategories(old, now); len(got) != 1 || got[0] != "APPLE" {
 		t.Fatalf("typed rules changed without detection: %v", got)
+	}
+}
+
+func TestApprovedCrashlyticsBlockTransition(t *testing.T) {
+	block := func(roots, full []string) rules {
+		r := rules{roots: map[string]bool{}, full: map[string]bool{}}
+		for _, h := range roots {
+			r.roots[h] = true
+		}
+		for _, h := range full {
+			r.full[h] = true
+		}
+		return r
+	}
+	before := block([]string{"blocked.example"}, nil)
+	after := block([]string{"blocked.example"}, []string{approvedCrashlyticsBlock})
+	for _, tc := range []struct {
+		name     string
+		from, to rules
+		reject   bool
+	}{
+		{"allow one exact addition", before, after, false},
+		{"unchanged after publication", after, after, false},
+		{"reject removal", after, before, true},
+		{"reject sibling addition", before, block([]string{"blocked.example"}, []string{approvedCrashlyticsBlock, "other.googleapis.com"}), true},
+		{"reject other removal", before, block(nil, []string{approvedCrashlyticsBlock}), true},
+		{"reject suffix conversion", after, block([]string{"blocked.example", approvedCrashlyticsBlock}, nil), true},
+		{"reject broad Google API suffix", before, block([]string{"blocked.example", "googleapis.com"}, []string{approvedCrashlyticsBlock}), true},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			old := map[string]rules{"RU": {}, "BLOCK": tc.from}
+			now := map[string]rules{"RU": {}, "BLOCK": tc.to}
+			err := verifyCategoryTransition(old, now, nil, nil, changedProtectedCategories(old, now))
+			if (err != nil) != tc.reject {
+				t.Fatalf("reject=%v, got %v", tc.reject, err)
+			}
+		})
+	}
+	if !covered(after, approvedCrashlyticsBlock, false) {
+		t.Fatal("expected Crashlytics host to match")
+	}
+	for _, h := range []string{"googleapis.com", "maps.googleapis.com", "sub." + approvedCrashlyticsBlock} {
+		if covered(after, h, false) {
+			t.Fatalf("exact Crashlytics rule unexpectedly covers %s", h)
+		}
 	}
 }
