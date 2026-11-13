@@ -344,3 +344,6 @@ full:wiki.wirenboard.com
 full:www.interfax.com
 full:www.rencapbank.com
 full:yougile.com
+
+# Domodedovo procurement portal. Exact host only; dme.aero apex remains on HOLD.
+full:market.dme.aero
