@@ -183,3 +183,6 @@ full:wiki.wirenboard.com
 full:www.interfax.com
 full:www.rencapbank.com
 full:yougile.com
+
+# Domodedovo procurement portal verified from Russian networks.
+full:market.dme.aero
