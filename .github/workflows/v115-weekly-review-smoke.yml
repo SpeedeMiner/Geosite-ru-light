@@ -24,6 +24,10 @@ jobs:
           ref: 3a6b31071d04a9f85ab80bbabb434e962e3aeac7
           fetch-depth: 0
           persist-credentials: false
+      - name: Use the review writer under test
+        shell: bash
+        run: |
+          git show "$GITHUB_SHA:tools/publish_weekly_review.py" > tools/publish_weekly_review.py
       - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
@@ -97,7 +101,7 @@ jobs:
 
           # Only redirect the published writer to an isolated draft branch.
           # It still uses the production token permissions, git and gh paths.
-          weekly.BRANCH = "auto/weekly-review-smoke-v115-20261113"
+          weekly.BRANCH = "auto/weekly-review-smoke-v115-refresh-20261113"
           weekly.BRANCH_REF = f"refs/heads/{weekly.BRANCH}"
           weekly.TITLE = "[SMOKE TEST, do not merge] v11.5 weekly Draft PR"
           os.environ.update(

@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 
 BRANCH = "auto/weekly-ru-candidates"
 BRANCH_REF = f"refs/heads/{BRANCH}"
@@ -77,25 +78,46 @@ def make_body(report, repo_url, run_id, commit):
 
 
 def lookup_pr(repo):
+    # Use the repository REST endpoint with an owner-qualified head filter.
+    # It reads the PR itself rather than the indexed gh pr list search.
     response = gh(
-        "pr", "list", "--repo", repo, "--state", "open", "--base", "main",
-        "--head", BRANCH, "--limit", "2",
-        "--json", "number,isDraft,body,url,headRefOid,headRepositoryOwner,isCrossRepository",
+        "api", "--method", "GET", f"repos/{repo}/pulls", "-f", "state=open",
+        "-f", "base=main", "-f", f"head={repo.split('/')[0]}:{BRANCH}",
     )
-    prs = json.loads(response)
-    # Never adopt a PR from a fork that happens to reuse the branch name.
     owned = [
-        pr for pr in prs if not pr["isCrossRepository"]
-        and pr["headRepositoryOwner"]["login"].lower() == repo.split("/")[0].lower()
+        pr for pr in json.loads(response)
+        if (pr["head"].get("repo") or {}).get("full_name", "").lower() == repo.lower()
+        and pr["head"]["ref"] == BRANCH
     ]
     if len(owned) > 1:
         raise RuntimeError("multiple open PRs match the automation branch")
-    if owned:
-        pr = owned[0]
-        if not pr["isDraft"] or not pr["body"].startswith(MARKER + "\n"):
-            raise RuntimeError("existing PR is not an automation-managed draft; leaving it unchanged")
-        return pr
-    return None
+    if not owned:
+        return None
+    pr = owned[0]
+    if (not pr["draft"] or pr["user"]["login"] != "github-actions[bot]"
+            or not (pr["body"] or "").startswith(MARKER + "\n")):
+        raise RuntimeError("existing PR is not an automation-managed draft; leaving it unchanged")
+    return dict(number=pr["number"], isDraft=pr["draft"], body=pr["body"],
+                url=pr["html_url"], headRefOid=pr["head"]["sha"])
+
+
+def wait_for_draft_head(repo, previous, commit, pause=time.sleep):
+    # A successful git push can precede propagation to PR metadata. Wait
+    # only for that known stale SHA. Never replace an unexpected edit.
+    delays = (1, 2, 4, 8)
+    for attempt in range(len(delays) + 1):
+        current = lookup_pr(repo)
+        if (not current or current["number"] != previous["number"]
+                or current["body"] != previous["body"]
+                or current["headRefOid"] not in (previous["headRefOid"], commit)):
+            raise RuntimeError("draft PR changed while preparing the new report")
+        if current["headRefOid"] == commit:
+            if remote_sha(BRANCH_REF) != commit:
+                raise RuntimeError("weekly branch moved while preparing the new report")
+            return
+        if attempt < len(delays):
+            pause(delays[attempt])
+    raise RuntimeError("GitHub has not refreshed the draft head after the branch update")
 
 
 def remote_sha(ref):
@@ -171,11 +193,9 @@ def publish(path):
     body = make_body(report, f"{server}/{repo}", run_id, commit)
     if pr:
         if body.strip() != pr["body"].strip():
-            # Recheck ownership and draft state immediately before editing.
-            current = lookup_pr(repo)
-            if not current or current["number"] != pr["number"] or current["headRefOid"] != commit:
-                raise RuntimeError("draft PR changed while preparing the new report")
-            gh("pr", "edit", str(pr["number"]), "--repo", repo, "--body-file", "-", input_text=body)
+            wait_for_draft_head(repo, pr, commit)
+            gh("api", "--method", "PATCH", f"repos/{repo}/pulls/{pr['number']}",
+               "--input", "-", input_text=json.dumps({"body": body}))
         url = pr["url"]
     else:
         try:

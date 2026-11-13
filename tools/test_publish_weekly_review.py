@@ -65,21 +65,24 @@ class ReviewWriterTest(unittest.TestCase):
         weekly.git("push", "origin", "main")
 
     def mock_gh(self, *args, input_text=None):
-        self.requests.append(args[:2])
-        if args[:2] == ("pr", "list"):
+        self.requests.append(args[:3] if args[0] == "api" else args[:2])
+        if args[:3] == ("api", "--method", "GET"):
             if not self.pr:
                 return "[]"
-            return json.dumps([dict(self.pr, headRefOid=weekly.remote_sha(weekly.BRANCH_REF))])
+            return json.dumps([dict(self.pr, head={
+                "sha": weekly.remote_sha(weekly.BRANCH_REF),
+                "repo": {"full_name": "Owner/Repo"}, "ref": weekly.BRANCH,
+            })])
         if args[:2] == ("pr", "create"):
             self.assertIn("--draft", args)
             self.assertIn("--body-file", args)
-            self.pr = dict(number=1, isDraft=True, body=input_text,
-                           url="https://github.com/Owner/Repo/pull/1",
-                           isCrossRepository=False, headRepositoryOwner={"login": "Owner"})
-            return self.pr["url"]
-        if args[:2] == ("pr", "edit"):
-            self.assertEqual(args[2], "1")
-            self.pr["body"] = input_text
+            self.pr = dict(number=1, draft=True, body=input_text,
+                           html_url="https://github.com/Owner/Repo/pull/1",
+                           user={"login": "github-actions[bot]"})
+            return self.pr["html_url"]
+        if args[:3] == ("api", "--method", "PATCH"):
+            self.assertEqual(args[3], "repos/Owner/Repo/pulls/1")
+            self.pr["body"] = json.loads(input_text)["body"]
             return ""
         self.fail(f"unexpected request: {args}")
 
@@ -96,7 +99,7 @@ class ReviewWriterTest(unittest.TestCase):
         self.assertIn(REPORT, self.pr["body"])
         self.assertIn("actions/runs/42", self.pr["body"])
         self.assertEqual(self.publish(), first)
-        self.assertNotIn(("pr", "edit"), self.requests)
+        self.assertNotIn(("api", "--method", "PATCH"), self.requests)
 
         self.commit_main("changed source")
         self.env["GITHUB_SHA"] = weekly.git("rev-parse", "HEAD")
@@ -108,17 +111,17 @@ class ReviewWriterTest(unittest.TestCase):
         self.assertEqual(weekly.git("rev-parse", f"{second}^2"), first)
         self.assertEqual(weekly.git("diff", "--name-only", self.env["GITHUB_SHA"], second), weekly.REPORT)
         self.assertEqual(self.requests.count(("pr", "create")), 1)
-        self.assertEqual(self.requests.count(("pr", "edit")), 1)
+        self.assertEqual(self.requests.count(("api", "--method", "PATCH")), 1)
         self.assertIn("different.example.net", self.pr["body"])
         self.assertIn("actions/runs/43", self.pr["body"])
 
     def test_human_changes_and_non_schedule_do_not_mutate(self):
         first = self.publish()
-        self.pr["isDraft"] = False
+        self.pr["draft"] = False
         with self.assertRaisesRegex(RuntimeError, "automation-managed"):
             self.publish()
         self.assertEqual(weekly.remote_sha(weekly.BRANCH_REF), first)
-        self.pr["isDraft"] = True
+        self.pr["draft"] = True
 
         weekly.git("switch", "-c", "human", first)
         Path("unexpected.txt").write_text("manual change", encoding="utf-8")
@@ -140,6 +143,32 @@ class ReviewWriterTest(unittest.TestCase):
             self.publish()
         self.assertIsNone(weekly.remote_sha(weekly.BRANCH_REF))
         self.assertEqual(self.requests, [])
+
+    def test_wait_accepts_only_expected_old_and_new_sha(self):
+        before = dict(number=1, body="unchanged", headRefOid="old")
+        after = dict(before, headRefOid="new")
+        sleeps = []
+        with patch.object(weekly, "lookup_pr", side_effect=[before, before, after]), \
+                patch.object(weekly, "remote_sha", return_value="new"):
+            weekly.wait_for_draft_head("Owner/Repo", before, "new", sleeps.append)
+        self.assertEqual(sleeps, [1, 2])
+
+        for unsafe in (None, dict(after, number=2), dict(after, body="edited"),
+                       dict(after, headRefOid="unexpected")):
+            with patch.object(weekly, "lookup_pr", return_value=unsafe):
+                with self.assertRaisesRegex(RuntimeError, "draft PR changed"):
+                    weekly.wait_for_draft_head("Owner/Repo", before, "new", self.fail)
+
+        with patch.object(weekly, "lookup_pr", return_value=before):
+            sleeps.clear()
+            with self.assertRaisesRegex(RuntimeError, "has not refreshed"):
+                weekly.wait_for_draft_head("Owner/Repo", before, "new", sleeps.append)
+            self.assertEqual(sleeps, [1, 2, 4, 8])
+
+        with patch.object(weekly, "lookup_pr", return_value=after), \
+                patch.object(weekly, "remote_sha", return_value="human"):
+            with self.assertRaisesRegex(RuntimeError, "branch moved"):
+                weekly.wait_for_draft_head("Owner/Repo", before, "new", self.fail)
 
     def test_long_body_is_bounded_and_links_full_report(self):
         report = REPORT + "- repeated detail\n" * 10000
