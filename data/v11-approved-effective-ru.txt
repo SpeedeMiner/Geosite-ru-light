@@ -218,3 +218,8 @@ full:northwest.aero
 full:www.northwest.aero
 full:www.flyredwings.com
 full:www.flysmartavia.com
+
+# Verified official cargo aviation hosts. Exact names only.
+full:aviastartu.com
+full:www.airbridgecargo.com
+full:www.volga-dnepr.com

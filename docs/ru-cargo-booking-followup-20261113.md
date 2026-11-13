@@ -2,15 +2,21 @@
 
 Baseline: published [Light v11.14](https://github.com/SpeedeMiner/Geosite-ru-light/releases/tag/v11.14) and [Server v11.14](https://github.com/SpeedeMiner/Geosite-ru-server/releases/tag/v11.14). Their DAT digests matched GitHub release asset metadata. Both have the four v11.14 exact aviation additions. Light has 3,188 RU and 44 BLOCK rules. Server has 3,076 RU rules and no other category.
 
-## Queue for Russian-network verification
+## Verified exact RU rules
 
-| Candidate for an exact rule | First-party public page | v11.14 coverage | Status |
+Anonymous HTTPS GETs on 2026-11-13 at 16:07 UTC from AS12389 (Kostroma),
+AS3216 (Ufa) and AS207957 (Moscow or Novosibirsk). All nine requests
+returned 200 with authorized TLS and the exact hostname in the certificate
+SAN. The responses were public carrier pages and none was an HTTP redirect.
+No login, tracking number, booking submission or purchase was used.
+
+| Exact hostname | First-party page | Public path and measurement | Certificate issuer |
 | --- | --- | --- | --- |
-| `www.volga-dnepr.com` | [Volga-Dnepr official cargo site](https://www.volga-dnepr.com/) | Neither RU nor BLOCK | Published page identified. Check public HTTPS from Russian networks. |
-| `www.airbridgecargo.com` | [AirBridgeCargo Russian-language site](https://www.airbridgecargo.com/ru) | Neither RU nor BLOCK | Corporate site identified. Check public HTTPS from Russian networks. |
-| `aviastartu.com` | [Aviastar-TU English-language cargo site](https://aviastartu.com/) and [Russian site](https://aviastartu.ru/) | Neither RU nor BLOCK for the .com site | Corporate page identified. Check public HTTPS from Russian networks. The .ru site is already covered. |
+| `aviastartu.com` | [Aviastar-TU English-language cargo homepage](https://aviastartu.com/) | [`/` · 200 / 200 / 200](https://api.globalping.io/v1/measurements/28Q10KMt2TP2CoDam00021Utb) | Let’s Encrypt YR2 |
+| `www.airbridgecargo.com` | [AirBridgeCargo Russian-language cargo homepage](https://www.airbridgecargo.com/ru) | [`/ru` · 200 / 200 / 200](https://api.globalping.io/v1/measurements/2WBMumEsUh402kzzv00021Utb) | Let’s Encrypt YE2 |
+| `www.volga-dnepr.com` | [Volga-Dnepr official cargo homepage](https://www.volga-dnepr.com/) | [`/` · 200 / 200 / 200](https://api.globalping.io/v1/measurements/2IPjCuSOK45Z3He5S00021Utb) | Let’s Encrypt YR1 |
 
-The sources above establish page identity, not reachability in Russia. The environment did not reach the Globalping API. Before proposing production rules, verify TLS and hostname validation from at least two Russian networks on the public paths above. Record redirects and separately check their target hosts. No login, tracking number, booking submission or purchase is needed.
+All three names were absent from RU in both v11.14 DATs and from BLOCK in Light.
 
 ## Not promoted
 
@@ -20,6 +26,8 @@ The sources above establish page identity, not reachability in Russia. The envir
 - `aero.alrosa.ru` and `booking.aero.alrosa.ru` already match `domain:ru`. [ALROSA announced its site migration](https://aero.alrosa.ru/airline/news/new-website/). Existing rules for the old `.aero` hosts were not removed.
 - The inspected S3/Swift endpoints at Selectel, Cloud.ru, VK Cloud, Yandex Cloud and MWS already match RU in both DATs, as do the previously published Dalli and KIT API hosts.
 
-## Offline checks
+## Build scope
 
-Reprojecting the published Light DAT with the checked-in Server policy reproduced the published Server DAT byte-for-byte. A trial adding only the three cargo hostnames to Light RU yielded 3,191 Light RU and 3,079 Server RU rules, with exactly three new Server rules, no coverage losses, and no change to the non-RU Light categories. This was an in-memory trial, not a release build. No routing lists, inputs, workflows, GeoIP, production releases or tags were changed.
+Add only these three full rules to the local RU source and approval manifest.
+No suffix expansion, BLOCK edits, upstream pin changes, or GeoIP changes.
+The Server projection retains a single RU category.
