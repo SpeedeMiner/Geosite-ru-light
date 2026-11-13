@@ -107,13 +107,15 @@ jobs:
         with:
           persist-credentials: false
 
-      # ------------------------------------------------------------
-      # 2. Clone current domain-list-community
-      # ------------------------------------------------------------
+      - name: Read reviewed source revisions
+        id: input_lock
+        run: echo "v2fly_ref=$(python3 tools/locked_geosite_inputs.py ref)" >> "$GITHUB_OUTPUT"
+
       - name: Clone domain-list-community
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           repository: v2fly/domain-list-community
+          ref: ${{ github.event_name != 'schedule' && steps.input_lock.outputs.v2fly_ref || '' }}
           path: domain-list-community
           fetch-depth: 1
           persist-credentials: false
@@ -131,6 +133,7 @@ jobs:
       # 4. Fetch sources. Only successful main builds seed future caches.
       # ------------------------------------------------------------
       - name: Restore last known-good Tier-2 source snapshots
+        if: github.event_name == 'schedule'
         uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         continue-on-error: true
         with:
@@ -138,22 +141,19 @@ jobs:
           key: geosite-tier2-v1-${{ hashFiles('tools/fetch_geosite_sources.py') }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             geosite-tier2-v1-${{ hashFiles('tools/fetch_geosite_sources.py') }}-
-      - name: Download source GeoSite files
-        id: source_downloads
-        run: python3 tools/fetch_geosite_sources.py
-
-      # ------------------------------------------------------------
-      # 5. Build RU category manifest from the current v2fly tree
-      # ------------------------------------------------------------
-      - name: Build RU category manifest
-        shell: bash
+      - name: Materialize reviewed GeoSite inputs
+        if: github.event_name != 'schedule'
         run: |
           set -euo pipefail
+          python3 tools/locked_geosite_inputs.py materialize
 
-          python3 tools/build_ru_category_manifest.py
-
-          test -s "$CATEGORY_FILE"
-          test -s "$HYDRA_APPEND_FILE"
+      - name: Discover changes in live sources
+        if: github.event_name == 'schedule'
+        id: source_downloads
+        run: |
+          set -euo pipefail
+          python3 tools/fetch_geosite_sources.py
+          python3 tools/locked_geosite_inputs.py discovery-report "$(git -C domain-list-community rev-parse HEAD)"
 
       # ------------------------------------------------------------
       # 6. Compile and unit-test the RU GeoSite tool
@@ -169,56 +169,8 @@ jobs:
           go build -o /tmp/geosite-delta ./tools/geosite-delta
           echo "Filter compiled and policy-tested successfully."
 
-      # ------------------------------------------------------------
-      # 7. Generate final lightweight geosite_RU.dat
-      # ------------------------------------------------------------
-      - name: Build lightweight geosite_RU.dat
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          rm -f "$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$NEW_SOURCES_REPORT_FILE"
-
-          test -s v2fly-corporate-extra-domains.txt
-          cat "$LOCAL_RU_INPUT_FILE" v2fly-corporate-extra-domains.txt > /tmp/geosite-ru-v11-merged-local.txt
-
-          /tmp/ru-geosite-filter build \
-            "$INPUT_FILE" \
-            "$HYDRA_INPUT_FILE" \
-            "$GRIMBIRD_INPUT_FILE" \
-            "$MVR_INPUT_FILE" \
-            "$YULARZHI_INPUT_FILE" \
-            "$VPNYASHA_INPUT_FILE" \
-            "$KIRILL_INPUT_FILE" \
-            "$DIGNE_INPUT_FILE" \
-            "$DAVOYAN_LEGACY_INPUT_FILE" \
-            "$CATEGORY_FILE" \
-            "$HYDRA_APPEND_FILE" \
-            /tmp/geosite-ru-v11-merged-local.txt \
-            "$LOCAL_BLOCK_INPUT_FILE" \
-            "$W1ZARDZ_RU_DIRECT_INPUT_FILE" \
-            "$KYORESUAS_RU_STANDARD_INPUT_FILE" \
-            "$NEW_SOURCES_REPORT_FILE" \
-            "$OUTPUT_FILE"
-
-          test -s "$OUTPUT_FILE"
-
-          echo
-          echo "========================================"
-          echo "OUTPUT"
-          echo "========================================"
-          ls -lh "$OUTPUT_FILE"
-
-      # ------------------------------------------------------------
-      # 8. Final validation
-      # ------------------------------------------------------------
-      - name: Validate final DAT
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          /tmp/ru-geosite-filter validate "$OUTPUT_FILE" "$HYDRA_APPEND_FILE"
-          test -s "$NEW_SOURCES_REPORT_FILE"
+      - name: Build and validate lightweight DAT
+        run: bash tools/build_geosite_dat.sh /tmp/ru-geosite-filter
 
       # ------------------------------------------------------------
       # 9. Calculate checksum
@@ -290,7 +242,11 @@ jobs:
             exit "$RESULT"
           else
             test -s geosite_RU_semantic_delta.md
-            echo "publish_allowed=true" >> "$GITHUB_OUTPUT"
+            if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+              echo "### Live discovery is report-only. Publish via reviewed locked inputs." >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "publish_allowed=true" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       - name: Audit optional external candidate inventory
@@ -326,6 +282,7 @@ jobs:
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
             geosite_RU_source_fetch.tsv
+            geosite_RU_inputs.json
             geosite_RU_suppressed_roots.tsv
             data/v11-approved-effective-ru.txt
 
@@ -348,11 +305,23 @@ jobs:
             geosite_RU_categories.txt
             geosite_RU_new_sources.txt
             geosite_RU_source_fetch.tsv
+            geosite_RU_inputs.json
             geosite_RU_suppressed_roots.tsv
             v2fly-corporate-extra-domains.txt
 
-      - name: Cache validated fresh Tier-2 snapshots from main
-        if: success() && github.ref == 'refs/heads/main' && steps.semantic_gate.outputs.publish_allowed == 'true' && steps.source_downloads.outputs.all_tier2_fresh == 'true'
+      - name: Preserve live source observations
+        if: github.event_name == 'schedule' && !cancelled()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: geosite-live-source-observations
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            geosite_RU_inputs.json
+            geosite_RU_source_fetch.tsv
+
+      - name: Cache validated fresh Tier-2 discovery snapshots
+        if: success() && github.ref == 'refs/heads/main' && github.event_name == 'schedule' && steps.source_downloads.outputs.all_tier2_fresh == 'true'
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         continue-on-error: true
         with:
@@ -361,7 +330,7 @@ jobs:
 
       - name: Seal approved release bundle
         id: release_bundle
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'schedule' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         run: |
           set -euo pipefail
           files=("$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$CATEGORY_FILE" "$HYDRA_APPEND_FILE" "$NEW_SOURCES_REPORT_FILE")
@@ -386,10 +355,11 @@ jobs:
             geosite_RU_hydra_appended_categories.txt
             geosite_RU_new_sources.txt
             release-bundle.sha256sum
+            geosite_RU_inputs.json
 
   publish:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.build.outputs.publish_allowed == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'schedule' && github.event_name != 'pull_request' && needs.build.outputs.publish_allowed == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
