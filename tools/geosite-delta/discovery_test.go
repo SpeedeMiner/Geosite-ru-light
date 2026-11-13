@@ -32,15 +32,15 @@ func TestFilterDiscoveryNeverOverridesExistingPolicy(t *testing.T) {
 		input = append(input, r)
 	}
 	out, weak, counts := filterDiscoveryCandidates(input, ru, block, reviews)
-	if len(out) != 2 || out[0].Domain != "new.example.com" || out[1].Domain != "new.example.org" {
+	if len(out) != 1 || out[0].Domain != "new.example.com" {
 		t.Fatalf("unexpected actionable domain list: %+v", out)
 	}
-	if len(weak) != 1 || weak[0].Domain != "foreign-external.example.io" {
+	if len(weak) != 2 || weak[0].Domain != "foreign-external.example.io" || weak[1].Domain != "new.example.org" {
 		t.Fatalf("third-party single CSP with no CORE should be weak evidence: %+v", weak)
 	}
 	for k, expected := range map[string]int{"observed": 9, "covered_RU": 2, "covered_BLOCK": 1,
 		"review_reject": 1, "review_hold": 1, "4pda_excluded": 1, "new": 3,
-		"priority_review": 2, "weak_external_dependencies": 1} {
+		"priority_review": 1, "weak_external_dependencies": 2} {
 		if counts[k] != expected {
 			t.Errorf("%s: got %d expected %d", k, counts[k], expected)
 		}
@@ -135,9 +135,10 @@ func TestCrossCategoryCoverageIsNotRUApproval(t *testing.T) {
 	}
 }
 
-func TestSameGroupAndInventoryAreNotIndependentOwnershipEvidence(t *testing.T) {
+func TestRepeatedCSPAndInventoryDoNotRaisePriority(t *testing.T) {
 	for _, row := range []discoveredDomainRow{
 		{Signals: "CSP", Seeds: "a.example.com (Group A); b.example.com (Group A)"},
+		{Signals: "CSP", Seeds: "a.example.com (Group A); b.example.com (Group B)"},
 		{Signals: "EXTERNAL_INVENTORY"},
 		{Signals: "NOT_TLS_SAN"},
 	} {

@@ -148,8 +148,8 @@ func excluded4PDASubtree(name string) bool {
 }
 
 // Evidence priority is a review heuristic, not ownership determination.
-// A single foreign CSP dependency without a CORE match or a second seed is
-// weak evidence and should be reported separately, not as an RU candidate.
+// Common vendors can appear in many unrelated CSPs. Repetition does not
+// establish first-party affiliation or increase the review priority.
 func strongerDiscoveryEvidence(row discoveredDomainRow) bool {
 	if strings.TrimSpace(row.ASNs) != "" {
 		return true
@@ -159,13 +159,7 @@ func strongerDiscoveryEvidence(row discoveredDomainRow) bool {
 			return true
 		}
 	}
-	groups := map[string]bool{}
-	for _, seed := range strings.Split(row.Seeds, "; ") {
-		if index := strings.LastIndex(seed, " ("); index >= 0 && strings.HasSuffix(seed, ")") {
-			groups[seed[index+2:len(seed)-1]] = true
-		}
-	}
-	return len(groups) >= 2
+	return false
 }
 
 // otherCompiledCategoryMatches distinguishes missing RU coverage from absence
@@ -342,7 +336,7 @@ func discoveryReport(rawPath, datPath, reviewPath, outPath string, queuePath ...
 	}
 	fmt.Fprintln(&b, "")
 	fmt.Fprintln(&b, "## Prioritized candidates (still require ownership verification)")
-	fmt.Fprintln(&b, "CORE hosting, exact TLS SAN, or appearance on seed pages from multiple corporate groups.")
+	fmt.Fprintln(&b, "CORE hosting or exact TLS SAN. CSP/preconnect frequency does not increase priority.")
 	fmt.Fprintln(&b, "| Domain | Signals | Corporate seed and evidence | CORE ASN and group (hosting signal only) | Public DNS IPs | DNS checked |")
 	fmt.Fprintln(&b, "|---|---|---|---|---|---|")
 	if len(priority) == 0 {
@@ -356,7 +350,7 @@ func discoveryReport(rawPath, datPath, reviewPath, outPath string, queuePath ...
 	}
 	fmt.Fprintln(&b, "")
 	fmt.Fprintln(&b, "## Weak external dependencies (do not consider DIRECT without new proof)")
-	fmt.Fprintln(&b, "An inventory-only entry or a website dependency without independent corroboration may be a foreign CDN,")
+	fmt.Fprintln(&b, "Without CORE hosting or an exact TLS SAN, a website dependency may be a foreign CDN,")
 	fmt.Fprintln(&b, "analytics endpoint, or embedded third-party application. Keep for transparency,")
 	fmt.Fprintln(&b, "but do not treat as a Russian domain discovery.")
 	fmt.Fprintln(&b, "| Domain | Signals | Observed on | CORE match |")

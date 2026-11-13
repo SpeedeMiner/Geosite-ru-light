@@ -34,7 +34,8 @@ coverage, overlaps with other categories, and weak third-party evidence.
 All queued names start with UNREVIEWED and NO for automatic DIRECT.
 Failed seeds are counted in the status, and incomplete coverage is
 called out in the report and Actions summary.
-Multiple seeds from the same corporate group are not independent evidence.
+CSP/preconnect references alone remain weak even when observed across
+multiple companies. Only a CORE hosting match or exact SAN raises priority.
 
 Even an exact TLS SAN or a CORE match is not legal ownership proof. A
 rule needs a separate review and explicit changes to the rule list and
