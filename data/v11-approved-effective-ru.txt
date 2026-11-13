@@ -183,3 +183,13 @@ full:wiki.wirenboard.com
 full:www.interfax.com
 full:www.rencapbank.com
 full:yougile.com
+
+# Aviation service hosts verified from Russian networks. Exact names only.
+full:aaq.aero
+full:aer.aero
+full:ikar.aero
+full:krr.aero
+full:mcx.aero
+full:ticket.rusline.aero
+full:www.nbc.aero
+full:zia.aero
