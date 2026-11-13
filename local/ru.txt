@@ -360,3 +360,16 @@ full:zia.aero
 
 # Verified official RUTUBE redirect. Exact hostname only.
 full:rutube.news
+
+# Airport and logistics service endpoints. Exact names only.
+full:api.dalli-service.com
+full:capi.tk-kit.com
+full:dalli-service.com
+full:e-kit.pro
+full:khv.aero
+full:kja.aero
+full:lk.dalli-service.com
+full:spblk.dalli-service.com
+full:www.dalli-service.com
+full:www.khv.aero
+full:www.kja.aero
