@@ -226,6 +226,18 @@ func reportExternalCandidates(input, path, reviewPath string, categories map[str
   return nil
 }
 func main(){
+  if len(os.Args)>1 && os.Args[1]=="discovery-review" {
+    if len(os.Args)!=6 && len(os.Args)!=7 {
+      fmt.Fprintln(os.Stderr,"usage: geosite-delta discovery-review evidence.tsv candidate.dat decisions.tsv report.md [queue.tsv]")
+      os.Exit(2)
+    }
+    if err:=discoveryReport(os.Args[2],os.Args[3],os.Args[4],os.Args[5],os.Args[6:]...);err!=nil{panic(err)}
+    return
+  }
+  if len(os.Args)==6 && os.Args[1]=="discovery-inventory" {
+    if err:=pendingDiscoveryInventory(os.Args[2],os.Args[3],os.Args[4],os.Args[5]);err!=nil{panic(err)}
+    return
+  }
   if len(os.Args)!=4 && len(os.Args)!=5 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [approved-effective-RU.txt | external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}

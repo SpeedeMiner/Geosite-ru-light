@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11.3)
+name: Build Ultimate Light RU Geosite (Optimized v11.4)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -153,7 +153,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          python3 -m unittest discover -s tools -p test_fetch_geosite_sources.py
+          python3 -m unittest discover -s tools -p 'test_*.py'
           go test ./...
           go build -o /tmp/ru-geosite-filter ./tools/ru-geosite-filter
           go build -o /tmp/geosite-delta ./tools/geosite-delta
@@ -220,6 +220,18 @@ jobs:
 
           sha256sum "$OUTPUT_FILE" > "$OUTPUT_SHA_FILE"
           cat "$OUTPUT_SHA_FILE"
+
+      - name: Upload validated input for corporate audit
+        if: github.event_name == 'pull_request' || github.event_name == 'schedule'
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: geosite-corporate-audit-input
+          retention-days: 2
+          if-no-files-found: error
+          path: |
+            geosite_RU.dat
+            geosite_RU.dat.sha256sum
 
       # ------------------------------------------------------------
       # 9b. Reproducible semantic delta against the currently published DAT.
@@ -352,7 +364,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11.3"
+          name: "Optimized RU GeoSite v11.4"
           make_latest: true
 
           files: |
@@ -363,14 +375,14 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite v11.3
+            # Optimized RU GeoSite v11.4
 
-            - Preserves the v11.2 routing policy, including its 23 exact hosts.
-            - Unapproved parent suffixes cannot absorb protected exact rules.
-            - The standalone builder uses verified recent Tier-2 snapshots on download failure.
+            - Adds an isolated corporate-domain research report.
+            - Does not import audit candidates into RU or BLOCK.
+            - Retains the v11.3 protection for exact hosts and Tier-2 fallback.
             - 4pda.to and its subdomains remain excluded from RU-DIRECT.
 
-            Details: https://github.com/${{ github.repository }}/blob/main/docs/v11-3-build-reliability.md
+            Details: https://github.com/${{ github.repository }}/blob/main/docs/v11-4-corporate-audit.md
 
           fail_on_unmatched_files: true
 
@@ -472,20 +484,20 @@ jobs:
       # ------------------------------------------------------------
       # 11b. Immutable versioned release and floating-tag alignment.
       # ------------------------------------------------------------
-      - name: Publish immutable v11.3 release
+      - name: Publish immutable v11.4 release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # This tag represents the audited v11.3 source snapshot. Never move an
+          # This tag represents the audited v11.4 source snapshot. Never move an
           # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11.3 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11.3 release already exists; preserving its tag."
+          if gh release view v11.4 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11.4 release already exists; preserving its tag."
           else
             EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11.3 \
+            gh release create v11.4 \
               "$OUTPUT_FILE" \
               "$OUTPUT_SHA_FILE" \
               "$CATEGORY_FILE" \
@@ -493,12 +505,12 @@ jobs:
               "$NEW_SOURCES_REPORT_FILE" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11.3" \
+              --title "GeoSite RU Light v11.4" \
               --latest=false \
-              --notes "v11.3: standalone builder, 23 protected exact hosts and verified Tier-2 download fallback. DAT SHA256: $EXPECTED_SHA. Details: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-3-build-reliability.md"
+              --notes "v11.4: read-only corporate domain audit using pinned GeoIP v41 CORE data. No automatic DIRECT changes. DAT SHA256: $EXPECTED_SHA. Details: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-4-corporate-audit.md"
           fi
-          gh release view v11.3 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11.3 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+          gh release view v11.4 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11.4 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Align floating latest-optimized tag with successful main release
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -510,7 +522,7 @@ jobs:
           CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
           echo "Previously published floating tag: $CURRENT"
           if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 through v11.3 remain immutable.
+            # latest-optimized is intentionally floating; v11 through v11.4 remain immutable.
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
               -f sha="$GITHUB_SHA" -F force=true >/dev/null
           fi
@@ -546,3 +558,61 @@ jobs:
           echo
           echo "SHA256:"
           cat "$OUTPUT_SHA_FILE"
+
+  corporate-audit:
+    # This job consumes an artifact. No build or publishing step depends on it.
+    needs: build
+    if: ${{ !cancelled() && (github.event_name == 'pull_request' || github.event_name == 'schedule') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout audit tools
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Setup Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+          cache: false
+      - name: Download validated DAT
+        id: audit_input
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: geosite-corporate-audit-input
+          path: .corporate-audit-input
+      - name: Generate review-only corporate report
+        id: audit_report
+        if: steps.audit_input.outcome == 'success'
+        continue-on-error: true
+        run: bash tools/run_corporate_audit.sh
+      - name: Summarize audit status
+        if: ${{ !cancelled() }}
+        env:
+          AUDIT_OUTCOME: ${{ steps.audit_report.outcome }}
+        run: |
+          if [ "$AUDIT_OUTCOME" = success ]; then
+            echo "### Corporate discovery (review only)" >> "$GITHUB_STEP_SUMMARY"
+            grep -E '^Observed:|^\*\*Collection incomplete' geosite_RU_discovered_candidates.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "### Corporate discovery unavailable" >> "$GITHUB_STEP_SUMMARY"
+            echo "No successful review report was generated. See this job's logs." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload corporate audit evidence
+        if: ${{ !cancelled() && steps.audit_input.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: geosite-ru-corporate-domain-discovery
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            geosite_RU_discovered_candidates.md
+            geosite_RU_discovery_raw.tsv
+            geosite_RU_discovery_review_queue.tsv
+            geosite_RU_discovery_status.json
+            data/corporate_discovery_seeds.tsv
