@@ -3,12 +3,13 @@
 package main
 
 import (
-  "fmt"
   "encoding/json"
+  "errors"
+  "fmt"
   "os"
   "sort"
-  "strings"
   "strconv"
+  "strings"
 
   router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
   "google.golang.org/protobuf/proto"
@@ -90,6 +91,11 @@ func ruleCoveredByCandidate(candidate rules, rule string) bool {
   if strings.HasPrefix(rule,"full:") {return covered(candidate,strings.TrimPrefix(rule,"full:"),false)}
   return false
 }
+type pendingRUReview struct { rules []string }
+func (e *pendingRUReview) Error() string {
+  return fmt.Sprintf("%d unreviewed effective new RU rule(s): %s",len(e.rules),strings.Join(e.rules,", "))
+}
+
 func verifyReviewedAdditions(path string, actual []string, candidate rules) error {
   data,err:=os.ReadFile(path);if err!=nil{return err}
   approved:=make(map[string]bool)
@@ -104,16 +110,25 @@ func verifyReviewedAdditions(path string, actual []string, candidate rules) erro
   }
   if len(approved)==0{return fmt.Errorf("empty approved RU manifest")}
   actualSeen:=make(map[string]bool)
+  var pending []string
   for _,rule:=range actual{
-    if !approved[rule]{return fmt.Errorf("unreviewed effective new RU rule %s",rule)}
     if actualSeen[rule]{return fmt.Errorf("duplicate effective new RU rule %s",rule)}
     actualSeen[rule]=true
+    if !approved[rule]{
+      // An unsupported rule type is a hard error, not an ordinary
+      // upstream addition awaiting review.
+      if !strings.HasPrefix(rule,"domain:") && !strings.HasPrefix(rule,"full:"){
+        return fmt.Errorf("unsupported new effective RU rule: %q",rule)
+      }
+      pending=append(pending,rule)
+    }
   }
   for rule:=range approved{
-    if !actualSeen[rule] && !ruleCoveredByCandidate(candidate,rule){
+    if !ruleCoveredByCandidate(candidate,rule){
       return fmt.Errorf("previously approved RU rule no longer effectively covered: %s",rule)
     }
   }
+  if len(pending)>0{return &pendingRUReview{rules:pending}}
   return nil
 }
 // External candidate inventories are only reviewed here; they are NEVER imported.
@@ -241,7 +256,7 @@ func main(){
   if len(os.Args)!=4 && len(os.Args)!=5 && len(os.Args)!=8 {fmt.Fprintln(os.Stderr,"usage: geosite-delta release.dat candidate.dat report.md [approved-effective-RU.txt | external-candidates.json external-review.md decisions.tsv approved-effective-RU.txt]");os.Exit(2)}
   old,err:=decode(os.Args[1]);if err!=nil{panic(err)}
   now,err:=decode(os.Args[2]);if err!=nil{panic(err)}
-  var b strings.Builder
+  var b,details strings.Builder
   fmt.Fprintln(&b,"# Semantic comparison: release DAT vs candidate")
   fmt.Fprintln(&b,"")
   fmt.Fprintln(&b,"Rules are compared by effective suffix/full-domain coverage. Regex/Plain or future rule types, if any, are compared conservatively by exact encoding; no inferred DNS ownership.")
@@ -273,13 +288,13 @@ func main(){
       for _,v:=range lost {fmt.Printf("RU_LOST %s\n",v)}
     }
     fmt.Fprintf(&b,"| %s | %d | %d | %d | %d |\n",c,len(a.roots)+len(a.full)+len(a.opaque),len(z.roots)+len(z.full)+len(z.opaque),len(added),len(lost))
-    fmt.Fprintf(&b,"\n## %s — added effective rules (%d)\n\n",c,len(added))
-    for _,v:=range added {fmt.Fprintln(&b,"- `"+v+"`")}
-    fmt.Fprintf(&b,"\n## %s — no longer covered (%d)\n\n",c,len(lost))
-    for _,v:=range lost {fmt.Fprintln(&b,"- `"+v+"`")}
+    fmt.Fprintf(&details,"\n## %s — added effective rules (%d)\n\n",c,len(added))
+    for _,v:=range added {fmt.Fprintln(&details,"- `"+v+"`")}
+    fmt.Fprintf(&details,"\n## %s — no longer covered (%d)\n\n",c,len(lost))
+    for _,v:=range lost {fmt.Fprintln(&details,"- `"+v+"`")}
   }
-  if err:=os.WriteFile(os.Args[3],[]byte(b.String()),0644);err!=nil{panic(err)}
-  fmt.Print(strings.SplitN(b.String(),"\n## ",2)[0])
+  if err:=os.WriteFile(os.Args[3],[]byte(b.String()+details.String()),0644);err!=nil{panic(err)}
+  fmt.Print(b.String())
   fmt.Printf("Complete report saved: %s\n",os.Args[3])
   // The initial v11.2 promotion pins the known v11.1 DAT delta. Normal
   // later updates still use the cumulative approvals and the BLOCK gate.
@@ -290,8 +305,24 @@ func main(){
       os.Exit(1)
     }
   }
+  if lostRU>0 {
+    fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
+    os.Exit(1)
+  }
+  if blockAdded>0 || blockLost>0 {
+    fmt.Fprintf(os.Stderr,"ERROR: BLOCK policy changed without separate approval: %d newly covered, %d lost\n",blockAdded,blockLost)
+    os.Exit(1)
+  }
   if len(os.Args)==5 {
-    if err:=verifyReviewedAdditions(os.Args[4],addedRU,now["RU"]);err!=nil{panic(err)}
+    if err:=verifyReviewedAdditions(os.Args[4],addedRU,now["RU"]);err!=nil{
+      var pending *pendingRUReview
+      if errors.As(err,&pending) {
+        fmt.Fprintf(os.Stderr,"PENDING_RU_REVIEW: %v\n",pending)
+        os.Exit(3)
+      }
+      fmt.Fprintf(os.Stderr,"ERROR: %v\n",err)
+      os.Exit(1)
+    }
     if len(addedRU)>0 {
       fmt.Printf("PRODUCTION_RU_APPROVAL count=%d exact_match=true mode=reviewed_additions\n",len(addedRU))
     }else{
@@ -306,13 +337,5 @@ func main(){
     }else{
       fmt.Printf("APPROVED_RU_NEW count=%d exact_match=true\n",len(addedRU))
     }
-  }
-  if lostRU>0 {
-    fmt.Fprintf(os.Stderr,"ERROR: %d release RU rules no longer covered; review before merge\n",lostRU)
-    os.Exit(1)
-  }
-  if blockAdded>0 || blockLost>0 {
-    fmt.Fprintf(os.Stderr,"ERROR: BLOCK policy changed without separate approval: %d newly covered, %d lost\n",blockAdded,blockLost)
-    os.Exit(1)
   }
 }

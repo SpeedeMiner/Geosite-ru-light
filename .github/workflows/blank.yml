@@ -1,4 +1,4 @@
-name: Build Ultimate Light RU Geosite (Optimized v11.4)
+name: Build Ultimate Light RU Geosite (Optimized v11.5)
 
 concurrency:
   group: build-ultimate-light-ru-geosite
@@ -39,6 +39,8 @@ jobs:
     if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    outputs:
+      review_pending: ${{ steps.semantic_gate.outputs.review_pending }}
 
     permissions:
       contents: write
@@ -237,6 +239,7 @@ jobs:
       # 9b. Reproducible semantic delta against the currently published DAT.
       # ------------------------------------------------------------
       - name: Audit semantic DAT delta against release
+        id: semantic_gate
         # Fail closed before production publication, not just in PR builds.
         if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         shell: bash
@@ -263,13 +266,23 @@ jobs:
 
           # This production gate also runs in pull requests and must not rely
           # on the optional external candidate inventory.
+          RESULT=0
           /tmp/geosite-delta \
             /tmp/geosite-ru-released.dat "$OUTPUT_FILE" geosite_RU_semantic_delta.md \
-            "$RU_APPROVED_MANIFEST"
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            "$RU_APPROVED_MANIFEST" || RESULT=$?
+          if [ "$GITHUB_EVENT_NAME" = pull_request ] && [ -s geosite_RU_semantic_delta.md ]; then
             cp geosite_RU_semantic_delta.md geosite_RU_production_preflight.md
           fi
-          test -s geosite_RU_semantic_delta.md
+          if [ "$RESULT" = 3 ] && [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            test -s geosite_RU_semantic_delta.md
+            echo "review_pending=true" >> "$GITHUB_OUTPUT"
+            echo "### New RU rules need manual approval. Publication skipped." >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$RESULT" != 0 ]; then
+            exit "$RESULT"
+          else
+            test -s geosite_RU_semantic_delta.md
+            echo "publish_allowed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Audit optional external candidate inventory
         if: github.event_name == 'pull_request'
@@ -291,7 +304,7 @@ jobs:
       # release. Preserve the candidate and the diff even if main/schedule gate
       # fails so maintainers can inspect and approve the incremental change.
       - name: Preserve blocked auto-update candidate for review
-        if: ${{ failure() && github.ref == 'refs/heads/main' }}
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' && (failure() || steps.semantic_gate.outputs.review_pending == 'true') }}
         uses: actions/upload-artifact@v4
         with:
           name: geosite-ru-main-blocked-update-review
@@ -333,6 +346,7 @@ jobs:
       # 10. Publish GitHub Release
       # ------------------------------------------------------------
       - name: Verify release artifacts
+        if: steps.semantic_gate.outputs.publish_allowed == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -352,7 +366,7 @@ jobs:
           done
 
       - name: Cache validated fresh Tier-2 snapshots from main
-        if: success() && github.ref == 'refs/heads/main' && steps.source_downloads.outputs.all_tier2_fresh == 'true'
+        if: success() && github.ref == 'refs/heads/main' && steps.semantic_gate.outputs.publish_allowed == 'true' && steps.source_downloads.outputs.all_tier2_fresh == 'true'
         uses: actions/cache/save@v4
         continue-on-error: true
         with:
@@ -360,11 +374,11 @@ jobs:
           key: geosite-tier2-v1-${{ hashFiles('tools/fetch_geosite_sources.py') }}-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Publish Release
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest-optimized
-          name: "Optimized RU GeoSite v11.4"
+          name: "Optimized RU GeoSite v11.5"
           make_latest: true
 
           files: |
@@ -375,14 +389,14 @@ jobs:
             ${{ env.NEW_SOURCES_REPORT_FILE }}
 
           body: |
-            # Optimized RU GeoSite v11.4
+            # Optimized RU GeoSite v11.5
 
-            - Adds an isolated corporate-domain research report.
-            - Does not import audit candidates into RU or BLOCK.
+            - Opens or updates a report-only weekly Draft PR for unreviewed RU additions.
+            - Does not publish pending candidates or import audit findings into RU or BLOCK.
             - Retains the v11.3 protection for exact hosts and Tier-2 fallback.
             - 4pda.to and its subdomains remain excluded from RU-DIRECT.
 
-            Details: https://github.com/${{ github.repository }}/blob/main/docs/v11-4-corporate-audit.md
+            Details: https://github.com/${{ github.repository }}/blob/main/docs/v11-5-weekly-review.md
 
           fail_on_unmatched_files: true
 
@@ -393,7 +407,7 @@ jobs:
       # 11. Publish files to release branch and verify exact CDN content
       # ------------------------------------------------------------
       - name: Publish files to release branch and sync CDN
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -484,20 +498,20 @@ jobs:
       # ------------------------------------------------------------
       # 11b. Immutable versioned release and floating-tag alignment.
       # ------------------------------------------------------------
-      - name: Publish immutable v11.4 release
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+      - name: Publish immutable v11.5 release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          # This tag represents the audited v11.4 source snapshot. Never move an
+          # This tag represents the audited v11.5 source snapshot. Never move an
           # existing versioned tag on future automated weekly rebuilds.
-          if gh release view v11.4 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            echo "Immutable v11.4 release already exists; preserving its tag."
+          if gh release view v11.5 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Immutable v11.5 release already exists; preserving its tag."
           else
             EXPECTED_SHA="$(awk 'NR==1{print $1}' "$OUTPUT_SHA_FILE")"
-            gh release create v11.4 \
+            gh release create v11.5 \
               "$OUTPUT_FILE" \
               "$OUTPUT_SHA_FILE" \
               "$CATEGORY_FILE" \
@@ -505,15 +519,15 @@ jobs:
               "$NEW_SOURCES_REPORT_FILE" \
               --repo "$GITHUB_REPOSITORY" \
               --target "$GITHUB_SHA" \
-              --title "GeoSite RU Light v11.4" \
+              --title "GeoSite RU Light v11.5" \
               --latest=false \
-              --notes "v11.4: read-only corporate domain audit using pinned GeoIP v41 CORE data. No automatic DIRECT changes. DAT SHA256: $EXPECTED_SHA. Details: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-4-corporate-audit.md"
+              --notes "v11.5: a weekly Draft PR queues unreviewed RU additions without publishing them. DAT SHA256: $EXPECTED_SHA. Details: https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/docs/v11-5-weekly-review.md"
           fi
-          gh release view v11.4 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
-          test "$(gh release view v11.4 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
+          gh release view v11.5 --repo "$GITHUB_REPOSITORY" --json tagName,url --jq '.url'
+          test "$(gh release view v11.5 --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = "false"
 
       - name: Align floating latest-optimized tag with successful main release
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -522,7 +536,7 @@ jobs:
           CURRENT="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/latest-optimized" --jq '.object.sha')"
           echo "Previously published floating tag: $CURRENT"
           if [ "$CURRENT" != "$GITHUB_SHA" ]; then
-            # latest-optimized is intentionally floating; v11 through v11.4 remain immutable.
+            # latest-optimized is intentionally floating; v11 through v11.5 remain immutable.
             gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/latest-optimized" \
               -f sha="$GITHUB_SHA" -F force=true >/dev/null
           fi
@@ -537,6 +551,7 @@ jobs:
       # 12. Workflow summary
       # ------------------------------------------------------------
       - name: Print download URLs
+        if: steps.semantic_gate.outputs.publish_allowed == 'true'
         shell: bash
         run: |
           echo
@@ -558,6 +573,34 @@ jobs:
           echo
           echo "SHA256:"
           cat "$OUTPUT_SHA_FILE"
+
+  weekly-review:
+    # Only trusted scheduled builds can invoke this write-capable job.
+    needs: build
+    if: github.event_name == 'schedule' && github.ref == 'refs/heads/main' && needs.build.outputs.review_pending == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout review tooling
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+      - name: Download blocked candidate evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: geosite-ru-main-blocked-update-review
+          path: ${{ runner.temp }}/geosite-weekly-review
+      - name: Open or update the weekly Draft PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_PROMPT_DISABLED: "1"
+          GIT_TERMINAL_PROMPT: "0"
+        run: python3 tools/publish_weekly_review.py "$RUNNER_TEMP/geosite-weekly-review/geosite_RU_semantic_delta.md"
 
   corporate-audit:
     # This job consumes an artifact. No build or publishing step depends on it.
