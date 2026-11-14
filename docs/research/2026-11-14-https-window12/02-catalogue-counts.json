@@ -1,0 +1,93 @@
+{
+  "dat_sha256": "1c51a873e01bd901ff51fba7c39004e6a5747c0bb93cd98b41e90212bf2e93a8",
+  "source_sha256": {
+    "moa.html": "0199de56cbb3871d264f58a25a2f3518a688aeed35bb6a50b2fd57a5c7f08ede",
+    "agritek.html": "1d9f0f70c6b37395c2b74a335e571db914ddb9a398cd2c97080768c46304f695",
+    "mmca-list.html": "40f6a06cf54aa49021a26289ec09133313139a98cc996ca548197a621286cd36",
+    "furn-russia.html": "4bc02bc0252832d95bbee91b6754be9bd24d7830507f2fcd64d6bf391d3eed7d"
+  },
+  "ministry": {
+    "total": 14,
+    "coverage": {
+      "RU": 14
+    }
+  },
+  "agritek": {
+    "exhibitor_rows": 248,
+    "explicit_website_fields": 0
+  },
+  "mining": {
+    "rows": 533,
+    "countries": {
+      "Казахстан": 172,
+      "Россия": 64,
+      "Турция": 10,
+      "Китай": 168,
+      "Франция": 5,
+      "Объединенные Арабские Эмираты": 4,
+      "Германия": 38,
+      "Австрия": 5,
+      "Канада": 11,
+      "Латвия": 1,
+      "Италия": 4,
+      "Финляндия": 7,
+      "Республика Беларусь": 3,
+      "Австралия": 4,
+      "Индия": 7,
+      "": 3,
+      "Украина": 1,
+      "Соединённые Штаты Америки": 3,
+      "Хорватия": 1,
+      "Испания": 2,
+      "Швеция": 1,
+      "Польша": 4,
+      "Греция": 1,
+      "Кипр": 1,
+      "Великобритания": 5,
+      "Иран": 1,
+      "Узбекистан": 1,
+      "Швейцария": 1,
+      "Кыргызстан": 1,
+      "Нидерланды": 1,
+      "Чехия": 1,
+      "Южная Корея": 2
+    },
+    "regional_cards": 239,
+    "cards": {
+      "no_website": 214,
+      "not_retrieved": 25
+    },
+    "coverage": {
+      "no_website": 214,
+      "unresolved": 25
+    }
+  },
+  "furniture": {
+    "index_cards": 262,
+    "cards": {
+      "website": 230,
+      "no_website": 32
+    },
+    "unique_hosts": 226,
+    "uncovered_hosts": [
+      "best-dreams.com",
+      "mebelstan.com",
+      "salnikova-art.com",
+      "springsever.com",
+      "www.komteh.net",
+      "www.liutextile.com",
+      "www.mf.plastigy.com",
+      "www.motifs.store",
+      "www.plastexpert.pro",
+      "www.rosla.com",
+      "www.salini-srl.com",
+      "www.skifltd.com",
+      "www.standart.pro",
+      "www.stanki.online",
+      "www.teks-o-park.com",
+      "www.vdm-52.xn--p1ag",
+      "www.vektor.club",
+      "www.xn--b1agaljik6adkl3isb.com"
+    ]
+  }
+}

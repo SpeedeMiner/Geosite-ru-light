@@ -1,0 +1,7 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+www.motifs.store	hold_redirect	RU	https://www.motifs.store/	2bXQ19GH5iGZYQUl000021VHX	https://motifs.store/	WWW из карточки, независимо от основного домена	redirect
+www.rosla.com	hold_redirect	RU	https://www.rosla.com/contacts/	2T4ptUue4j8PkVuiy00021VHX	https://rosla.com/contacts/	Точное WWW из карточки Р.О.С.Л.А.	redirect
+www.skifltd.com	hold_redirect	RU	https://www.skifltd.com/kontaktyi	2k5GLeRsM3BZIHrpm00021VHX	https://skifltd.com/kontaktyi	Точное WWW из карточки СКИФ	redirect
+www.standart.pro	hold_redirect	RU	https://www.standart.pro/contacts	28tRvnjspdCJOCVqy00021VHX	https://standart.pro/contacts	Точное WWW из карточки ТБ Стандарт	redirect
+www.stanki.online	hold_redirect	RU	https://www.stanki.online/contact-us/	24qGrWWrxLO1YBtqg00021VHX	https://stanki.online/contact-us/	Точное WWW из карточки ООО Практик	redirect
+www.teks-o-park.com	hold_redirect	RU	https://www.teks-o-park.com/contacts/	2C1FoVhBwvXXrgY2S00021VHX	https://teks-o-park.com/contacts/	Точное WWW из карточки Тексопарк	redirect
