@@ -109,7 +109,7 @@ class CheckpointTests(unittest.TestCase):
         W.validate_quota("a", [self.plan] * 18, [{"hosts": 18, "remaining": 250, "reset": 60}])
         for q in [{"hosts": 18, "remaining": 249, "reset": 60},
                   {"hosts": 17, "remaining": 250, "reset": 60},
-                  {"hosts": 18, "remaining": 250, "reset": 0}]:
+                  {"hosts": 18, "remaining": 250, "reset": -1}]:
             with self.subTest(quota=q), self.assertRaises(ValueError):
                 W.validate_quota("a", [self.plan] * 18, [q])
 

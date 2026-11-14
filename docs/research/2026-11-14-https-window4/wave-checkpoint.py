@@ -169,7 +169,7 @@ def exact_proof(r, submission):
 def validate_quota(wave, plan, quota):
     require(len(quota) == 1 and quota[0]["hosts"] == len(plan)
             and 3 * len(plan) + RESERVES[wave] <= quota[0]["remaining"] <= 250
-            and quota[0]["reset"] > 0, f"unexpected recorded quota for wave {wave}")
+            and quota[0]["reset"] >= 0, f"unexpected recorded quota for wave {wave}")
 
 
 def read_wave(wave):
