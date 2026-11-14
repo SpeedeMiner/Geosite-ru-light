@@ -130,6 +130,7 @@ iqdata.center	RU	hold_https	https://iqdata.center/requisites/	2WFaoG8fF4RXEwgL20
 isimplelab.com	RU	hold_content	https://isimplelab.com/privacy-policy/	2ItsZGJjSLRKSuMPl00021VKC	content_unproven	https://www.fintechru.org/about/	Политика и лицензии дали 200 и заголовок, но видимого тела нет. Действующий .ru уже покрыт.
 jambyltv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
 kahman.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+kamerny-teatr.ru	RU	covered_both				https://kamerny-teatr.ru/	Совпадает с существующими правилами обоих релизных DAT.
 kamlab.kz	KZ	covered_both				https://kamlab.kz/ru	Совпадает с существующими правилами обоих релизных DAT.
 kaskad.tv	RU	queue				https://kaskad.tv/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
 kazelektrokabel.kz	KZ	covered_both				https://kazelektrokabel.kz/contacts.html	Совпадает с существующими правилами обоих релизных DAT.
@@ -209,6 +210,7 @@ qazindustry.gov.kz	KZ	covered_both				https://qazindustry.gov.kz/v2/ru/ktp-regis
 qazradio.fm	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
 qazsporttv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
 qostanaitv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+quicktickets.ru	RU	covered_both				https://quicktickets.ru/tulskiy-kamernyy-dramaticheskiy-teatr/contact	Совпадает с существующими правилами обоих релизных DAT.
 qyzyljartv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
 qyzylordatv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
 ramsqz.com	KZ	hold_https	https://ramsqz.com/ru/support	24ZJsn7u8K00La0rz00021VKG	content_unproven	https://ramsqz.com/ru/home	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
@@ -426,7 +428,7 @@ www.kantengri.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1
 www.kazkabel.kz	KZ	covered_both				https://www.elektrokabel.ru/members/ao_kazenergokabel-3035	Совпадает с существующими правилами обоих релизных DAT.
 www.kcab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kalujskiy_kabelnyiy_zavod-5736	Совпадает с существующими правилами обоих релизных DAT.
 www.kcp.kz	KZ	covered_both				https://kazenergy.com/association/chleny-assotsiatsii/	Совпадает с существующими правилами обоих релизных DAT.
-www.kdteatr.net	RU	hold_identity				https://reestr.stdrf.ru/reestr_list	На WWW опубликован театр, на apex индексируется несвязанный игровой контент. Нужны свежая точная проверка WWW и отсутствие редиректа.
+www.kdteatr.net	RU	reject_identity				https://reestr.stdrf.ru/reestr_list	Старая карточка СТД и поисковый заголовок были устаревшими. Прямое чтение WWW и apex показало посторонний игровой контент. Текущий kamerny-teatr.ru уже покрыт.
 www.knauf.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
 www.knaufinsulation.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
 www.kogalymavia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
