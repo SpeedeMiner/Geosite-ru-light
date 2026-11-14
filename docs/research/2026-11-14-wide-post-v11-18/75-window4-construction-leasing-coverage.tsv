@@ -1,0 +1,25 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+bi.group	KZ	building	https://bi.group/ru/company	BI Group	BI Group	https://kase.kz/ru/listing/issuers/BIGR	full:bi.group	full:bi.group		no	covered_both
+ramsqz.com	KZ	building	https://ramsqz.com/ru/support	RAMS Qazaqstan	RAMS	https://ramsqz.com/ru/home				no	new_uncovered
+aspb.kz	KZ	building	https://aspb.kz/contacts/	АСП Билд	АСП Билд	https://sskaz.kz/chleny-soyuza/	domain:kz	domain:kz		no	covered_both
+sskaz.kz	KZ	building	https://sskaz.kz/chleny-soyuza/	Союз строителей Казахстана	Союз строителей	https://sskaz.kz/chleny-soyuza/	domain:kz	domain:kz		no	covered_both
+bcn.kz	KZ	building	https://bcn.kz/contacts	BCN	BCN	https://bcn.kz/contacts	domain:kz	domain:kz		no	covered_both
+sensata.kz	KZ	building	https://sensata.kz/contacts	Sensata	Sensata	https://sensata.kz/contacts	domain:kz	domain:kz		no	covered_both
+asko-kst.kz	KZ	building	https://asko-kst.kz/	Ассоциация строителей	Ассоциация строителей	https://asko-kst.kz/	domain:kz	domain:kz		no	covered_both
+kazkabel.kz	KZ	cable	https://kazkabel.kz/contacts-ru	Казэнергокабель	Казэнергокабель	https://www.elektrokabel.ru/members/ao_kazenergokabel-3035	domain:kz	domain:kz		no	covered_both
+www.akcable.kz	KZ	cable	https://www.akcable.kz/	Ак Кабель	Ак Кабель	https://www.akcable.kz/	domain:kz	domain:kz		no	covered_both
+qazenergo.kz	KZ	cable	https://qazenergo.kz/contacts	QazEnergo	QazEnergo	https://qazenergo.kz/contacts	domain:kz	domain:kz		no	covered_both
+kazelektrokabel.kz	KZ	cable	https://kazelektrokabel.kz/contacts.html	КазЭлектроКабель	КазЭлектроКабель	https://kazelektrokabel.kz/contacts.html	domain:kz	domain:kz		no	covered_both
+qazindustry.gov.kz	KZ	cable	https://qazindustry.gov.kz/v2/ru/ktp-register	QazIndustry	QazIndustry	https://qazindustry.gov.kz/v2/ru/ktp-register	domain:kz	domain:kz		no	covered_both
+leasing-belarus.by	BY	leasing	https://leasing-belarus.by/ob-associacii/struktura/	Ассоциация лизингодателей	Ассоциация лизингодателей	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
+sbl-leasing.by	BY	leasing	https://sbl-leasing.by/	СБЛ-Лизинг	СБЛ-Лизинг	https://sbl-leasing.by/news/srochnaya-novost-/	domain:by	domain:by		no	covered_both
+factorleasing.by	BY	leasing	https://factorleasing.by/info/	ФакторЛизинг	ФакторЛизинг	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
+i-l.by	BY	leasing	https://i-l.by/about-us	Интеллект-Лизинг	Интеллект-Лизинг	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
+leasing-expert.by	BY	leasing	https://leasing-expert.by/otchetnost	Лизинг Эксперт	Лизинг Эксперт	https://leasing-expert.by/	domain:by	domain:by		no	covered_both
+www.sil.by	BY	leasing	https://www.sil.by/disclosure	СИЛ	СИЛ	https://www.sil.by/disclosure	domain:by	domain:by		no	covered_both
+rietumu-leasing.by	BY	leasing	https://rietumu-leasing.by/	Rietumu Лизинг	Rietumu	https://rietumu-leasing.by/	domain:by	domain:by		no	covered_both
+t-leasing.by	BY	leasing	https://t-leasing.by/lizing/regulirovanie-lizinga-zakonodatelstvo.html	Т-Лизинг	Лизинг	https://t-leasing.by/	domain:by	domain:by		no	covered_both
+avangard.by	BY	leasing	https://avangard.by/home/company/regulatory_disclosure/	Авангард Лизинг	Авангард	https://avangard.by/	domain:by	domain:by		no	covered_both
+lir.by	BY	leasing	https://lir.by/about-us/information/	Лизинг-Ресурс	Лизинг-Ресурс	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
+vlc.by	BY	leasing	https://vlc.by/contact.html	Внешнеэкономическая Лизинговая Компания	Лизинговая Компания	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
+finstore.by	BY	leasing	https://finstore.by/cn/kompanii/76	Ювилс Лизинг	Ювилс Лизинг	https://leasing-belarus.by/ob-associacii/struktura/	domain:by	domain:by		no	covered_both
