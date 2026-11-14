@@ -1,0 +1,9 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+talantikum.com	accept	RU	https://talantikum.com/page/politika-konfidencialnosti	2JKEK8RjNCN1YlH9M00021VEi	https://talantikum.com/page/politika-konfidencialnosti	ИП Семенова Ольга Сергеевна, ОГРНИП 311028025800291	Во всех трёх доверенных ответах читается текст точной политики, а документ напрямую связывает apex и российского ИП с ОГРНИП 311028025800291.
+theuralleader.com	hold_content	RU	https://theuralleader.com/	2yhaReMhDuRnTSLI500021VEi	https://new.xn----7sba6avlahemo4a.xn--p1ai/privacy	ООО «Уральский Лидер Плюс», ИНН 7460027692	api_truncated, short_visible_body
+sf.education	hold_content	RU	https://sf.education/information	29DiWilQJiZJfWo5i00021VEi	https://sf.education/information	ООО «Современные формы образования», ИНН 7841081586	api_truncated, short_visible_body
+potok.io	hold_content	RU	https://potok.io/import_substitution/	2AL9ADQKTEf5ZpQs800021VEi	https://assets.potok.io/potok_pdn_2024.pdf	ООО «Поток», ИНН 7713444724	api_truncated, short_visible_body, brand_missing
+elpi.pro	hold_content	RU	https://elpi.pro/include/licenses_detail.php	2PtnZ783S3wElSff200021VEi	https://elpi.pro/company/requisites/	ООО «ЭЛПИ - Трейд», ИНН 7453094539	api_truncated, short_visible_body
+logiclike.com	hold_content	BY/RU	https://logiclike.com/logic-app	2M1vbH5qMTSjupSPp00021VEi	https://logiclike.com/en/docs/public-ru	ООО «ЛогикЛайк», регистрация в Беларуси 191929015	api_truncated, short_visible_body
+pcr.news	hold_http	RU	https://pcr.news/o-proekte/	2MDeCdwtcoFeOJWNr00021VEi	https://pcr.news/oferta/	АО «Сайенс Медиа Проджектс», ИНН 7702451857	http_not_200
+prostorlab.com	hold_content	RU	https://prostorlab.com/prostor-platforma2/	2OyvSo1oiOuhB3GEG00021VEi	https://prostorlab.com/home/o-kompanii/	ООО «Лаборатория ПРОСТОР»	api_truncated, short_visible_body
