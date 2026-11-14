@@ -1,0 +1,8 @@
+order	host	scope	url	primary	brand_marker	operator
+1	www.aigp.asia	KZ	https://www.aigp.asia/en/contact/our-contact-addresses/	https://aema.kz/uchastniki/too-abdiibrahim-global-farm/	Abdi Ibrahim|Global Pharm	ТОО «АбдиИбрахим Глобал Фарм», местное производство в Алматинской области, не головная компания Турции
+2	aigp.asia	KZ	https://aigp.asia/en/contact/our-contact-addresses/	https://www.aigp.asia/en/contact/our-contact-addresses/	Abdi Ibrahim|Global Pharm	Тот же производитель, apex проверяется отдельно, без наследования результата WWW
+3	vonadi.com	BY	https://vonadi.com/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B/	https://vonadi.com/	Вонади|192006725	ООО «Вонади», УНП 192006725, Минск, поставщик медоборудования
+4	belagrobel.com	BY	https://belagrobel.com/contacts/	https://belagrobel.com/	Belagro|Белагро	ООО «АСК Белагро-сервис», витрина белорусского бизнеса
+5	www.globalports.com	RU	https://www.globalports.com/ru/terms/privacy-notice/	https://www.globalports.com/ru/terms/privacy-notice/	Глобал Портс|Global Ports	ООО «Управляющая компания Глобал Портс», Санкт-Петербург, точный WWW прямо назван
+6	globalports.com	RU	https://globalports.com/ru/contacts/	https://www.globalports.com/ru/terms/privacy-notice/	Глобал Портс|Global Ports	Тот же оператор, apex проверяется отдельно, без наследования результата WWW
+7	www.polpharma-santo.com	KZ	https://www.polpharma-santo.com/	https://www.polpharma-santo.com/	SANTO|Химфарм	Кандидат на локальную витрину казахстанского производителя, отдельно проверить совпадение контента и оператора
