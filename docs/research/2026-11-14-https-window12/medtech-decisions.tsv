@@ -1,0 +1,3 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+www.spectrix.biz	hold_content	BY	https://www.spectrix.biz/	2EGAmyAhSAIffReYU00021VHW	https://www.spectrix.biz/	Белорусское направление швейцарского поставщика; только проверка, принадлежность местному оператору отдельно	api_truncated, short_visible_body
+spectrix.biz	hold_content	BY	https://spectrix.biz/	2DzBBNEAiJWAOx45W00021VHW	https://www.spectrix.biz/	Точное имя без WWW и связь с местным представительством отдельно	api_truncated, short_visible_body
