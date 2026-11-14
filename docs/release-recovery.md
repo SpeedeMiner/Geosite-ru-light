@@ -83,3 +83,13 @@ and a checked-in release notes file. Verify the PR's recovery step before
 merging. After publishing, record the new numbered snapshot's exact five
 sizes, digests and source commit in `data/geosite-recovery-releases.json`
 before selecting it as a future rollback baseline.
+
+## Derived sing-box rule-sets
+
+The five pinned assets above remain the inputs to the numbered recovery
+receipt. The SRS files are derived from the exact verified DAT, not from live
+source lists. To reproduce them from a staged release, run
+`bash tools/build_geosite_srs.sh --dat /path/to/staged/geosite_RU.dat --output-dir /path/to/srs`
+on Linux x86-64. The script verifies the pinned compiler archive and checks
+every rule-set by decompilation. When available, compare the resulting
+`geosite_srs.sha256sum` with the numbered release's SRS manifest.

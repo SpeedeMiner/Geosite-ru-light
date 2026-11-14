@@ -258,6 +258,10 @@ jobs:
             fi
           fi
 
+      - name: Build and round-trip verify sing-box rule-sets
+        if: github.event_name != 'schedule' && steps.semantic_gate.outputs.publish_allowed == 'true'
+        run: bash tools/build_geosite_srs.sh --dat "$OUTPUT_FILE"
+
       - name: Verify numbered release recovery
         id: numbered_recovery
         if: github.event_name != 'schedule' && steps.semantic_gate.outputs.publish_allowed == 'true'
@@ -321,6 +325,8 @@ jobs:
             geosite_RU.dat.sha256sum
             geosite_RU_semantic_delta.md
             geosite_RU_production_preflight.md
+            geosite_*.srs
+            geosite_srs.sha256sum
             geosite_numbered_recovery.json
             geosite_RU_external_candidate_audit.md
             geosite_RU_attribution_research_queue.tsv
@@ -358,6 +364,9 @@ jobs:
         run: |
           set -euo pipefail
           files=("$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$CATEGORY_FILE" "$HYDRA_APPEND_FILE" "$NEW_SOURCES_REPORT_FILE")
+          srs_files="$(python3 tools/build_geosite_srs.py verify-assets --dat "$OUTPUT_FILE")"
+          mapfile -t srs_assets <<< "$srs_files"
+          files+=("${srs_assets[@]}")
           for file in "${files[@]}"; do test -s "$file"; done
           sha256sum --check --strict "$OUTPUT_SHA_FILE"
           sha256sum -- "${files[@]}" > release-bundle.sha256sum
@@ -378,6 +387,8 @@ jobs:
             geosite_RU_categories.txt
             geosite_RU_hydra_appended_categories.txt
             geosite_RU_new_sources.txt
+            geosite_*.srs
+            geosite_srs.sha256sum
             release-bundle.sha256sum
             geosite_RU_inputs.json
             geosite_numbered_recovery.json
