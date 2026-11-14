@@ -1,0 +1,63 @@
+cohort	type	rule	host	url	markers	source
+hold	candidate	inconkz.com	inconkz.com	https://inconkz.com/ru/glavnaya/kontakty	Integra Construction|Интегра	https://inconkz.com/ru
+hold	candidate	regtorg.com	regtorg.com	https://regtorg.com/info.html	Региональная торговая площадка	https://regtorg.com/info.html
+hold	candidate	smlab.digital	smlab.digital	https://smlab.digital/kontakty	Спортмастер|Sportmaster	https://apkit.ru/about/members/
+hold	candidate	akbiday.com	akbiday.com	https://akbiday.com/	Ак Бидай|Ak Biday	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/
+hold	candidate	akashi.cloud	akashi.cloud	https://akashi.cloud/ru/construction-progress/	Akashi Data Center	https://www.gov.kz/org/astana-uir/press/news/details/1299153?lang=ru
+hold	candidate	www.ixcellerate.com	www.ixcellerate.com	https://www.ixcellerate.com/faq/	IXcellerate	https://www.ixcellerate.com/requisites/
+hold	candidate	remz.cab	remz.cab	https://remz.cab/kontakty/	РЭМЗ	https://natamac.ru/members/
+hold	candidate	gazo-beton.org	gazo-beton.org	https://gazo-beton.org/celi-i-zadachi	НААГ|Газобетона	https://natamac.ru/members/
+hold	candidate	rosizol.org	rosizol.org	https://rosizol.org/about	Росизол	https://natamac.ru/members/
+hold	candidate	kaskad.tv	kaskad.tv	https://kaskad.tv/kontakty	Каскад	https://kaskad.tv/
+hold	candidate	www.amurobl.tv	www.amurobl.tv	https://www.amurobl.tv/about/mediakit	Амурское областное телевидение	https://www.amurobl.tv/about/mediakit
+hold	candidate	teatrodicapua.com	teatrodicapua.com	https://teatrodicapua.com/pressa/	Театро Ди Капуа	https://reestr.stdrf.ru/reestr_list
+hold	candidate	miachkovo.com	miachkovo.com	https://miachkovo.com/kontakty/	Мячково	https://miachkovo.com/kontakty/
+hold	candidate	qazaqgreen.com	qazaqgreen.com	https://qazaqgreen.com/contacts/	Qazaq Green	https://qazaqgreen.com/contacts/
+hold	candidate	energy-aven.org	energy-aven.org	https://energy-aven.org/about/439	Возобновляемая энергетика	https://energy-aven.org/about/439
+hold	candidate	kazenergy.com	kazenergy.com	https://kazenergy.com/association/contacts/	KAZENERGY	https://kazenergy.com/association/chleny-assotsiatsii/
+hold	candidate	kazrenergy.com	kazrenergy.com	https://kazrenergy.com/members	АВЭК|Ассоциация возобновляемой энергетики	https://kazrenergy.com/members
+hold	candidate	ramsqz.com	ramsqz.com	https://ramsqz.com/ru/home	RAMS	https://ramsqz.com/ru/support
+hold	candidate	amurobl.tv	amurobl.tv	https://amurobl.tv/feedback	Амурское областное телевидение	https://www.amurobl.tv/about/mediakit
+candidate	full	akzholtravel.com	akzholtravel.com	https://akzholtravel.com/ru/contacts/	Akzhol Travel	https://akzholtravel.com/ru/contacts/
+candidate	full	avicenna.online	avicenna.online	https://avicenna.online/Privacy-Policy.html	Авиценна|Cushpen Group	https://avicenna.online/Privacy-Policy.html
+candidate	full	baipm.com	baipm.com	https://baipm.com/15-aipm/about/205-contact	Ассоциация международных|Фармацевтических	https://baipm.com/15-aipm/about/205-contact
+candidate	full	belur.ooo	belur.ooo	https://belur.ooo/	Белур	https://belur.ooo/
+candidate	full	business.tiyn.io	business.tiyn.io	https://business.tiyn.io/about	Tiyn	https://business.tiyn.io/about
+candidate	full	career.slk-cement.com	career.slk-cement.com	https://career.slk-cement.com/	СЛК Цемент	https://career.slk-cement.com/
+candidate	full	cont.eurosib.biz	cont.eurosib.biz	https://cont.eurosib.biz/ru/regular-services	Евросиб|Eurosib	https://cont.eurosib.biz/ru/regular-services
+candidate	full	eskm.net	eskm.net	https://eskm.net/contacts/	ЭСКМ|ESKM	https://eskm.net/contacts/
+candidate	full	eurosib-logistics.com	eurosib-logistics.com	https://eurosib-logistics.com/contacts/	Евросиб|Eurosib	https://eurosib-logistics.com/contacts/
+candidate	full	hellopay.online	hellopay.online	https://hellopay.online/	Hello Payments|Хелло	https://hellopay.online/
+candidate	full	kz.hillstarpay.com	kz.hillstarpay.com	https://kz.hillstarpay.com/kz	Hillstar	https://kz.hillstarpay.com/kz
+candidate	full	machunit.com	machunit.com	https://machunit.com/contacts/	МАШ ЮНИТ	https://machunit.com/contacts/
+candidate	full	noytech.com	noytech.com	https://noytech.com/policy/	НОЙТЭК|Noytech	https://noytech.com/policy/
+candidate	full	rostovport.com	rostovport.com	https://rostovport.com/contacts/	Ростовский морской мультимодальный порт|Ростовпорт	https://rostovport.com/contacts/
+candidate	full	rtlltd.com	rtlltd.com	https://rtlltd.com/	РТЛ|Русские транспортные линии|RTL	https://rtlltd.com/
+candidate	full	ru.geropharm.com	ru.geropharm.com	https://ru.geropharm.com/press/contacts	Герофарм|Geropharm	https://ru.geropharm.com/press/contacts
+candidate	full	salampay.com	salampay.com	https://salampay.com/legal/publichania-oferta	САЛАМПЭЙ|SalamPay	https://salampay.com/legal/publichania-oferta
+candidate	full	sendy.land	sendy.land	https://sendy.land/contacts/	Sendy|Цифровой Платеж	https://sendy.land/contacts/
+candidate	full	solopharm.com	solopharm.com	https://solopharm.com/about/contacts	Solopharm|Гротекс	https://solopharm.com/about/contacts
+candidate	full	tengizchevroil.com	tengizchevroil.com	https://tengizchevroil.com/contact-us	Тенгизшевройл|Tengizchevroil	https://tengizchevroil.com/contact-us
+candidate	full	tiyn.io	tiyn.io	https://tiyn.io/documents	Tiyn	https://tiyn.io/documents
+candidate	full	unitedbanks.org	unitedbanks.org	https://unitedbanks.org/	UnitedBanks|Система банковской кооперации	https://unitedbanks.org/
+candidate	full	www.akzholtravel.com	www.akzholtravel.com	https://www.akzholtravel.com/en/news/item/271/	Akzhol Travel	https://www.akzholtravel.com/en/news/item/271/
+candidate	full	www.el-torg.com	www.el-torg.com	https://www.el-torg.com/	ЭСП|Электронная площадка	https://www.el-torg.com/
+candidate	full	www.eurosib-logistics.com	www.eurosib-logistics.com	https://www.eurosib-logistics.com/services/russia/	Евросиб|Eurosib	https://www.eurosib-logistics.com/services/russia/
+candidate	full	www.fintechru.org	www.fintechru.org	https://www.fintechru.org/about/	ФинТех	https://www.fintechru.org/about/
+candidate	full	www.hellopay.online	www.hellopay.online	https://www.hellopay.online/	HelloPay|Хелло	https://www.hellopay.online/
+candidate	full	www.noytech.com	www.noytech.com	https://www.noytech.com/policy/	НОЙТЭК|Noytech	https://www.noytech.com/policy/
+candidate	full	www.sendy.land	www.sendy.land	https://www.sendy.land/o-nas/	Sendy|Цифровой Платеж	https://www.sendy.land/o-nas/
+candidate	full	www.unitedbanks.org	www.unitedbanks.org	https://www.unitedbanks.org/	UnitedBanks|Система банковской кооперации	https://www.unitedbanks.org/
+candidate	full	www.valentapharm.com	www.valentapharm.com	https://www.valentapharm.com/contacts/	Валента|Valenta	https://www.valentapharm.com/contacts/
+baseline	full	market.dme.aero	market.dme.aero	https://market.dme.aero/	Домодедово|Domodedovo	https://market.dme.aero/
+baseline	full	bamap.org	bamap.org	https://bamap.org/	БАМАП|BAMAP	https://bamap.org/
+baseline	full	aaq.aero	aaq.aero	https://aaq.aero/	Анапа|Аэропорт|Anapa	https://aaq.aero/
+baseline	full	12storeez.com	12storeez.com	https://12storeez.com/	12 STOREEZ	https://12storeez.com/
+baseline	full	adilet.net	adilet.net	https://adilet.net/	Әділет|Адилет|Adilet	https://adilet.net/
+baseline	full	account.documentolog.com	account.documentolog.com	https://account.documentolog.com/	Documentolog	https://account.documentolog.com/
+suffix_sample	domain	ru	ya.ru	https://ya.ru/	Яндекс	https://ya.ru/
+suffix_sample	domain	kz	kaspi.kz	https://kaspi.kz/	Kaspi.kz	https://kaspi.kz/
+suffix_sample	domain	by	beltelecom.by	https://beltelecom.by/	Белтелеком	https://beltelecom.by/
+suffix_sample	domain	get-ipv4.com	get-ipv4.com	https://get-ipv4.com/		https://get-ipv4.com/
+suffix_sample	domain	get-ipv6.com	get-ipv6.com	https://get-ipv6.com/		https://get-ipv6.com/
+control	control	example.com	example.com	https://example.com/	Example Domain	https://example.com/
