@@ -29,3 +29,5 @@ Light DAT SHA-256 `0b8c1e6ec6232e0ebc6b0280f24e49ad37f65b33e5340d070618a0590259e
 python3 verify-checkpoint.py
 python3 -m unittest discover -s . -p 'test_*.py'
 ```
+
+После первой фиксации повторно прошли 1026 проверок матчера и побайтное сравнение обоих DAT с replay. Квитанцию из репетиции отдельно принял штатный локальный `verify-receipt`.
