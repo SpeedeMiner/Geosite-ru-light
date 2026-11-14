@@ -1,0 +1,14 @@
+host	preliminary_scope	https_path	source	note
+alfa-transit.com	RU	https://alfa-transit.com/contact-us/	https://alfa-transit.com/contact-us/	Страница контактов «Альфа Транзит» вместо нестабильной главной.
+education.polpred.com	RU	https://education.polpred.com/	https://www.alco.polpred.com/user-guide	Руководство ПОЛПРЕД называет точный ресурс. www.education.polpred.com не заменяет apex.
+escuela.pro	RU	https://escuela.pro/	https://escuela.pro/	Публичная витрина школы. Не принимать без проверки актуального оператора.
+korolan.com	RU	https://korolan.com/contacts/	https://korolan.com/contacts/	ООО «Королан», российские контакты и реквизиты на точном сайте.
+medialab.team	RU	https://medialab.team/	https://www.edu.medialab.team/	АНО «Лаборатория медиа» подтверждена на образовательной витрине. Apex может отдавать только JS-оболочку.
+optimelle.org	RU	https://optimelle.org/	https://optimelle.org/	Витрина Optimelle. Связь издателя с АО «СЦИТ» сверить по реквизитам, не только по карточке выставки.
+samson-rus.com	RU	https://samson-rus.com/contact	https://samson-rus.com/contact	Контакты «САМСОН Групп». Apex проверить отдельно от www, принятого ранее.
+visiomed.ai	RU	https://visiomed.ai/privacy	https://visiomed.ai/privacy	Политика называет ООО «ВизиоМедИИ». Не переносить решение на личный кабинет или другие поддомены.
+www.cardboardia.info	RU	https://www.cardboardia.info/	https://madein.cardboardia.info/	Проект основан в Москве. Текущий точный www и местного оператора проверить отдельно от мастерской.
+www.nptpl.com	RU	https://www.nptpl.com/	https://nptpl.com/privacy-policy	Политика apex и контакты в Новороссийске. Точный www требует проверки своего TLS и страницы.
+www.phm.group	RU	https://www.phm.group/contacts	https://www.phm.group/polzovatelskoe-soglashenie	ООО «Фармментал Групп». На www есть реквизиты и отдельное соглашение.
+www.promed.one	RU	https://www.promed.one/	https://www.promed.one/	Публичная витрина «ПРОмед», Москва. Проверить текущее юрлицо.
+www.vitavallis.com	RU	https://www.vitavallis.com/	https://www.vitavallis.com/	Публичный сайт бренда «Аквелит», требуется сверка юридической страницы.

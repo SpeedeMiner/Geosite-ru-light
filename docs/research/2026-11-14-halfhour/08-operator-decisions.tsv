@@ -1,0 +1,22 @@
+host	decision	scope	reason	source
+akosta.info	defer	RU	Apex не подтверждён по HTTPS. Исторический SAN и недоверенная цепочка у www не переносятся на apex.	https://ca.kontur.ru/systems
+digitalhorizon.com	defer	mixed	Сайт инвестиционной группы указывает присутствие на Каймановых островах. Российское происхождение отдельных участников не подтверждает местного издателя общего сайта.	https://digitalhorizon.com/
+eddu.io	defer	unknown	Индексированный HTML точного домена не даёт содержимого, которое подтверждает образовательный сервис.	https://eddu.io/
+eworld.pro	exclude_changed	unknown	Точный домен перенаправляет на страницу продажи домена GoDaddy.	https://eworld.pro/
+itstep.org	defer	mixed	Общий портал международной сети. Сам проект указывает украинское происхождение, а региональные филиалы требуют отдельного точного хоста.	https://itstep.org/
+lab50.net	defer	RU	Членство и точный адрес подтверждает РУССОФТ, но актуальный публичный ответ не получен.	https://russoft.org/participant/laboratoriya-50/
+npo-at.com	defer	unknown	Историческая карточка EdTech не подкреплена рабочей точной страницей.	https://npo-at.com/
+openmind.study	defer	unknown	Рабочая точная страница и юридический оператор не подтверждены.	https://openmind.study/
+rabis.biz	defer	RU	РУССОФТ указывает продукт, но по точному имени не подтверждена публичная страница.	https://russoft.org/participant/bacup-it/
+smlab.digital	defer	RU	Есть запись АПКИТ, вспомогательные запросы вернули 503/502. Это не вывод о блокировке из РФ.	https://apkit.ru/about/members/
+teatrodicapua.com	defer	RU	Точный адрес указан в реестре СТД РФ, но нет проверенной текущей рабочей страницы.	https://reestr.stdrf.ru/reestr_list
+theatreadliberum.com	defer	RU	Реестр СТД указывает театр Карелии, текущая страница не подтверждена.	https://reestr.stdrf.ru/reestr_list
+www.asiamixtravel.com	defer	KZ	Есть старая карточка КТА, но текущее назначение и доступность точного www не подтверждены.	https://old.kaztour-association.com/kta2-4_1.htm
+www.clevver.me	defer	unknown	Индексируемый заголовок Castle Quiz не заменяет рабочую страницу и документ об операторе.	https://www.clevver.me/
+www.globalair-kz.com	defer	KZ	Текущий реестр КТА указывает сайт globalair.kz. Старый .com подтверждён как почтовый домен, но не как текущий веб-сайт.	https://reestr.kaztour-association.com/turagenstva/global-air/
+www.gold-theatre.com	defer	RU	Реестр СТД связывает домен с театром, но текущая страница не проверена.	https://reestr.stdrf.ru/reestr_list
+www.idialogue.com	defer	unknown	Вспомогательные запросы 502 или таймаут. Для точного www нет подтверждённого назначения.	https://www.idialogue.com/
+www.panditrans.com	defer	RU	Выставочная карточка связывает точный www с компанией, но проверка из рабочего окружения вернула 502.	https://www.panditrans.com/
+www.royalpharms.com	exclude	CN	Точный сайт указывает китайскую Jinlan Pharm и офис в Ханчжоу.	https://www.royalpharms.com/
+www.teclot.com	defer	RU	Связь с площадкой есть в каталоге ЕКТРУ, но нет текущего ответа по точному хосту.	https://ectru.ru/page/torg
+www.uralkali.com	defer	RU	Точная главная возвращает CAPTCHA вместо содержимого. Не принимать по прежним 200/200.	https://www.uralkali.com/
