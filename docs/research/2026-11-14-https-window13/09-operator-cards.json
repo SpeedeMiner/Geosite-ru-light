@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ASTANA CERAMIC",
+    "scope": "KZ",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xccd776eeee2e8c4d9eb510302d12bc23&Code=000037610",
+    "site": "https://astanaceramic.com/contacts",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  },
+  {
+    "name": "ASTANA CERAMIC",
+    "scope": "KZ",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xccd776eeee2e8c4d9eb510302d12bc23&Code=000037610",
+    "site": "https://www.astanaceramic.com/about",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  },
+  {
+    "name": "AVCOM KAZAKHSTAN",
+    "scope": "KZ",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0x95b753c799dac84a8aa00344043b689c&Code=000037815",
+    "site": "https://www.avcom.kz/",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  },
+  {
+    "name": "GARANT TRANZIT PLUS",
+    "scope": "KZ",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xdc96a09873fb1746a7d5f96e12542bd9&Code=000037636",
+    "site": "https://garantt.kz/",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  },
+  {
+    "name": "ПОЛИМЕРМЕТАЛЛ-Т",
+    "scope": "KZ",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0x24e85521300f4d4f9516cb28e2c5e062&Code=000037543",
+    "site": "https://pm-t.kz/kontakty",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  },
+  {
+    "name": "М-КОНСТРУКТОР",
+    "scope": "RU",
+    "card": "https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xc5c8e0bf58ef4f4196afba683115d817&Code=000037542",
+    "site": "https://www.m-konstruktor.ru/o-kompanii",
+    "state": "operator_crosscheck",
+    "source": "astanabuild_operator"
+  }
+]
