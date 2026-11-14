@@ -34,11 +34,13 @@ def verify(args):
     original = keyed(table(HALF / "12-next-https.tsv"), "host")
     priority = keyed(table(HERE / "01-priority-plan.tsv"), "host")
     second = keyed(table(HERE / "02-second-plan.tsv"), "host")
+    reserve = keyed(table(HERE / "05-reserve-plan.tsv"), "host")
     review = keyed(table(HERE / "03-operator-review.tsv"), "host")
     assert len(original) == 159 and len(priority) == 22 and len(second) == len(review) == 53
     assert second.keys() == review.keys()
     assert not priority.keys() & second.keys()
-    for plan in (priority, second):
+    assert not reserve.keys() & (priority.keys() | second.keys())
+    for plan in (priority, second, reserve):
         for host, r in plan.items():
             u = urlsplit(r["url"])
             assert u.hostname == host and u.scheme == "https"
@@ -56,7 +58,7 @@ def verify(args):
                                  "hold_operator", "hold_redirect", "hold_measurement"}
         if d["decision"] != "accept":
             continue
-        assert host in priority or review[host]["evidence_level"] == "verified"
+        assert host in priority or host in reserve or review[host]["evidence_level"] == "verified"
         assert d["scope"] in SCOPES and d["operator_url"].startswith("https://")
         evidence = proofs[d["id"]]
         url = urlsplit(evidence["url"])
