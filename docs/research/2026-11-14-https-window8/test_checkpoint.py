@@ -6,11 +6,11 @@ import checkpoint as C
 
 class CheckpointTest(unittest.TestCase):
     def test_exact_plan_pins_and_inherited_copy(self):
-        self.assertEqual([len(C.plan(w)) for w in C.WAVES], [16, 5, 5, 4])
+        self.assertEqual([len(C.plan(w)) for w in C.WAVES], [16, 5, 5, 4, 6])
         all_rows = [r for w in C.WAVES for r in C.plan(w)]
         repeated = [h for h in {r["host"] for r in all_rows}
                     if sum(r["host"] == h for r in all_rows) > 1]
-        self.assertEqual(repeated, ["ontid.com"])
+        self.assertEqual(sorted(repeated), ["ontid.com", "paluba.media", "unicont.com"])
         self.assertEqual({r["url"] for r in all_rows if r["host"] == "ontid.com"},
                          {"https://ontid.com/about", "https://ontid.com/about-us/"})
         self.assertEqual(len({r["url"] for r in all_rows}), len(all_rows))
