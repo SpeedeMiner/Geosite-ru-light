@@ -1333,7 +1333,6 @@ full:visiomed.ai
 full:visit.atom.museum
 full:vit-medical.com
 full:voka.tv
-full:wefiftytwo.com
 full:winnum.io
 full:woodtrade.market
 full:woodworking.minskexpo.com

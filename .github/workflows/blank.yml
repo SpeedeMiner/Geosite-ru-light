@@ -37,7 +37,7 @@ on:
 # Change these together in the PR preparing the next numbered release.
 env:
   NUMBERED_RELEASE: v11.18
-  NUMBERED_DAT_SHA: 9c1ff7caef0345b944bdf6afc37fc3609394fae42408ca1b42a663445399c6c3
+  NUMBERED_DAT_SHA: 6f5fbc20e045a7314603d115931bff1bdd82a22788fd38ecc8f5578171b1329c
   NUMBERED_RECOVERY_BASELINE: v11.17
   NUMBERED_RELEASE_NOTES: docs/v11-18-reviewed-regional-ru.md
 
