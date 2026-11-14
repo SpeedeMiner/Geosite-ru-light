@@ -1,0 +1,6 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+svo.su	RU	airport	https://svo.su/ru/contacts	Аэропорт Шереметьево	Шереметьево	https://www.mskagency.ru/materials/3523201	domain:su	domain:su		no	covered_both
+pulkovoairport.ru	RU	airport	https://pulkovoairport.ru/about/contacts/	Аэропорт Пулково	Пулково	https://pulkovoairport.ru/about/contacts/	domain:ru	domain:ru		no	covered_both
+ar-bqs.ru	RU	airport	https://ar-bqs.ru/	Аэропорт Благовещенск	Благовещенск	https://admblag.ru/information/ooo-abs-blagoveshchensk-soobshchaet-o-smene-domennogo-imeni-ofitsialnogo-sayta-mezhdunarodnogo-aerop/	domain:ru	domain:ru		no	covered_both
+www.airport-norilsk.ru	RU	airport	https://www.airport-norilsk.ru/ob-aeroporte/contacts/	Аэропорт Норильск	Норильск	https://www.airport-norilsk.ru/ob-aeroporte/contacts/	domain:ru	domain:ru		no	covered_both
+miachkovo.com	RU	airport	https://miachkovo.com/kontakty/	Аэродром Мячково	Мячково	https://miachkovo.com/kontakty/				no	new_uncovered
