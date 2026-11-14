@@ -1,0 +1,12 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+express-pay.by	BY	payments	https://express-pay.by/	Экспресс Пэй	ExpressPay|Экспресс Пэй	https://express-pay.by/	domain:by	domain:by		no	covered_both
+www.paypro.by	BY	payments	https://www.paypro.by/	Банковский процессинговый центр	PayPro	https://www.paypro.by/	domain:by	domain:by		no	covered_both
+docs.assist.ru	BY	payments	https://docs.assist.ru/pages/viewpage.action?pageId=46333993	Assist	Assist	https://docs.assist.ru/pages/viewpage.action?pageId=46333993	domain:ru	domain:ru		no	covered_both
+ctt.by	BY	edo	https://ctt.by/services/	Современные технологии торговли	СТТ|Современные технологии торговли	https://kontur.ru/diadoc/mtedo/oferta_tedo	domain:by	domain:by		no	covered_both
+1c.by	BY	edo	https://1c.by/news/detail/1212781/	1С-ЭДО Беларусь	1С-ЭДО	https://1c.by/news/detail/1212781/	domain:by	domain:by		no	covered_both
+metaera.kz	KZ	edo	https://metaera.kz/dokumentooborot/	МетаЭра	МетаЭра|MetaEra	https://kontur.ru/diadoc/mtedo/oferta_tedo	domain:kz	domain:kz		no	covered_both
+bellakt.com	BY	industry	https://bellakt.com/	Волковысское ОАО Беллакт	Беллакт|Bellakt	https://www.bellakt.ru/about/contacts/				yes	prior_measured
+www.bellakt.ru	BY	industry	https://www.bellakt.ru/about/contacts/	Беллакт РФ	Беллакт|Bellakt	https://www.bellakt.ru/about/contacts/	domain:ru	domain:ru		no	covered_both
+trafory.com	BY	work	https://trafory.com/company	Trafory	Trafory	https://trafory.com/company				no	new_uncovered
+stafflow.by	BY	work	https://stafflow.by/team	Stafflow	Stafflow	https://stafflow.by/team	domain:by	domain:by		no	covered_both
+emedosmotr.kz	KZ	medical	https://emedosmotr.kz/privacy_policy.pdf	Digital Med 365	е-Медосмотр	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
