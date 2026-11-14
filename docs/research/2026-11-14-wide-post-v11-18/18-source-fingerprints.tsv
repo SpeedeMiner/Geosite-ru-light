@@ -1,0 +1,8 @@
+source	sha256	observed_scope
+https://www.cbr.ru/vfs/finmarkets/files/supervision/list_ops.xlsx	604587b953f551492221c5139a0902c8e09adbf501f64accf7b0903e344c117a	30 active operator rows, 35 explicit websites
+https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx	4084066df1181ad551f85159b97d656ad3e51c53d4dc3e5db790a32447ebf751	86 operator names, no site column
+https://www.cbr.ru/vfs/PSystem/rops/list_electronic_money_operators.xlsx	447aebde50db41bccabfdd23fa949fa2be8de909e4c61b2ce77c16157461315a	operator identities only, no site column
+https://www.cbr.ru/vfs/PSystem/rops/list_info_exchange_service_op.xlsx	d3e56697ad8f9b17733a504180656557e74c513a45ba60d507f5195df90d8994	233 operator names, no site column
+https://www.cbr.ru/vfs/PSystem/rops/list_payment_app_prov.xlsx	7a4f4da439a5caf008521c1c29af6aba363943a374afe2a7e3139cc28ac055f8	29 providers, no site column
+https://www.gov.kz/api/v1/public/assets/2026/10/29/d7da0168ab8253d233578354ed4cb4961a3d6765685bedc0e458ea24853d5236_original.23535.docx	d7da0168ab8253d233578354ed4cb4961a3d6765685bedc0e458ea24853d5236	49 medical and 19 laboratory systems
+https://www.gov.kz/memleket/entities/edu/press/article/details/19664?directionId=3599&lang=ru	de6205b298db5c443c51f776d597a78292a813aff0fa769a9e7e08b6aeb6c9fd	source for distance learning platforms
