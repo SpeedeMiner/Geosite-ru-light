@@ -84,6 +84,7 @@ def main():
                 site=next(iter(field.xpath(".//a/@href")),txt(field)).strip() if field is not None else ""
                 state="website" if A.normalize(site) else "no_website" if not site else "invalid_website"
         records.append(row("prodexpo",r["name"],scope,r["url"],state,site,fp if fp.is_file() else None))
+    belagro_web=j(d/"belagro-web.json") if (d/"belagro-web.json").is_file() else {}
     for key,r in j(d/"belagro-index.json").items():
         fp=d/f"belagro-card-{key}.html"
         state="not_retrieved"
@@ -92,6 +93,9 @@ def main():
             t=doc(fp)
             links=t.xpath('//main//a[starts-with(@href,"https://") or starts-with(@href,"http://")]/@href')
             state="website" if links else "no_website"
+        if not fp.is_file() and belagro_web.get(r["url"],{}).get("contact_excerpt"):
+            links=belagro_web[r["url"]]["sites"]
+            state="website_web_excerpt" if links else "no_website_web_excerpt"
         for site in dict.fromkeys(links or [""]):
             records.append(row("belagro",r["name"],"RU",r["url"],state,site,fp if fp.is_file() else None))
     astana=j(d/"astanabuild-index.json")

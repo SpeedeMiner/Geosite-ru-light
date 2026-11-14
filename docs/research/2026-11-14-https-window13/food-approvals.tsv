@@ -1,0 +1,2 @@
+host	id	operator_url	rationale
+grenkoff.com	2U62URAwRveEWuinV00021VHt	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377758?stand=7B055	Основной текст раздела содержит адрес в деревне Павловское, контакты отделов и подпись ООО «Компания ГРЕНКОВЪ» на трёх точках РФ с доверенным TLS. Отдельный WWW возвращает 301 и не добавляется.
