@@ -1,0 +1,59 @@
+host	scope	result	public_url	measurement_id	source	operator_evidence	reason
+academy.d8n.ai	KZ	accept_200	https://academy.d8n.ai/personal-data/	2Cy7LqaDyi6V58yOn00021VBe	https://academy.d8n.ai/personal-data/	ТОО Documentolog указано в политике на точном хосте	
+action.group	RU	accept_200	https://action.group/contacts/	2LvlC7rlHiXNUe87800021VBe	https://action.group/contacts/	Группа «Актион», корпоративные контакты в Москве	
+alma.plus	KZ	accept_200	https://alma.plus/	2fSSBfI6lMZhZkHzl00021VBe	https://alma.plus/agreements/	Казахстанский оператор almaPLUS, официальный раздел договоров	
+amrcloud.net	RU	accept_200	https://amrcloud.net/ru/	2BCjkAoUXjaV7UHOp00021VBe	https://amrcloud.net/ru/	Русскоязычный проект AMRcloud, разработчики и организации указаны на странице проекта	
+aorion.aero	BY	deferred					HTTP 200 и совпадающий SAN, но цепочка не доверена ни в одной из трёх сетей.
+app.birge.tv	KZ	accept_200	https://app.birge.tv/agreement	2wsLoPBTstoaiO2o500021VBe	https://rtrk.kz/ru/press-releases/207/	Официальное веб-приложение платформы Birge.TV	
+arzamas.academy	RU	accept_200	https://arzamas.academy/	2Y3D9LKO6grDXaPPU00021VBe	https://arzamas.academy/license	Оператор российского проекта указан в пользовательском соглашении	
+balapan.tv	KZ	accept_200	https://balapan.tv/	2hNeKzlbmexTjVuqm00021VBe	https://rtrk.kz/ru/info-law-assets/	РТРК «Казахстан» указывает точное имя телеканала	
+base.biathlonrus.com	RU	accept_200	https://base.biathlonrus.com/	20qFctUA5DqQDZPge00021VBg	https://base.biathlonrus.com/coach	Официальная база Союза биатлонистов России	
+bil24.pro	RU	accept_200	https://bil24.pro/	2wXlMa8NkOnqqL2JC00021VBe	https://bil24.pro/docs/Operator_agreement_oferta.pdf	Оферта российской билетной платформы BIL24	
+birge.tv	KZ	accept_200	https://birge.tv/	295ZmHUfzeSe0rJ4J00021VBe	https://rtrk.kz/ru/press-releases/207/	Официальный запуск платформы РТРК «Казахстан»	
+bw-tours.com	KZ	deferred					HTTP 200 и совпадающий SAN, но цепочка не доверена ни в одной из трёх сетей.
+by.mir24.tv	BY	accept_200	https://by.mir24.tv/	2pTAIlCU27ks5RI7e00021VBe	https://by.mir24.tv/about/feedback	Национальное представительство МТРК «Мир» в Беларуси	
+carx-online.com	RU	accept_200	https://carx-online.com/ru/legal/carx-technologies-disclosure	2AtZC75rpJ1PW6gpN00021VBf	https://carx-online.com/ru/legal/carx-technologies-disclosure	ООО «Кар Икс Технолоджис», опубликованные реквизиты аккредитованной ИТ-компании	
+coddyschool.com	RU	accept_200	https://coddyschool.com/	2fXe9AWT0ULDNhAX800021VBd	https://coddyschool.com/information/	Сведения школы CODDY и её российские образовательные программы	
+coreapp.ai	RU	accept_200	https://coreapp.ai/	2CNRwHISyD20h66Lx00021VBd	https://coreapp.ai/docs/offer.pdf	Публичная оферта на этом хосте, ООО «Цифровая жажда», и рабочая витрина платформы	
+ctc.media	RU	deferred					HTTP 403 в трёх сетях на /licensing. Нужен рабочий публичный путь.
+d8n.ai	KZ	accept_200	https://d8n.ai/en/	2nGW2ZNidL6mbYSUh00021VBg	https://d8n.ai/en/	Официальная платформа Documentolog, рабочий путь /en/ проверен отдельно	
+d8n.documentolog.com	KZ	deferred					Нет подтверждённого публичного ответа по HTTPS. Сервисное имя отложено.
+documedica.ai	KZ	accept_200	https://documedica.ai/ru	2vbuEsbmre991vEwY00021VBg	https://old.goszakup.gov.kz/kz/registry/show_supplier/930552	ТОО 3MIS, государственный реестр связывает компанию с точным доменом	
+e-queo.com	RU	accept_200	https://e-queo.com/contacts/	2kIHz0tg3AtNBkllc00021VBf	https://e-queo.com/contacts/	ООО «Эквио», ИНН 7709947115	
+eduson.academy	RU	accept_200	https://eduson.academy/	23Md0jIfVutMCjYyv00021VBd	https://eduson.academy/license	ООО «Эдюсон» и российская образовательная лицензия	
+idocs.me	KZ	accept_200	https://idocs.me/	201tn71j48WCW24Mf00021VBe	https://idocs.kz/terms-and-conditions	Точный хост отдаёт витрину idocs и ссылки на idocs.kz, чей оператор ТОО IDOCSKZ	
+impresaltd.com	BY	accept_200	https://impresaltd.com/contacts-us/	2nwRByBbVhx5VczFP00021VBe	https://impresaltd.com/contacts-us/	На точном хосте опубликованы контакты белорусской компании	
+journals.rcsi.science	RU	accept_200	https://journals.rcsi.science/	2u22AvRTOGDXXi32O00021VBe	https://journals.rcsi.science/2/about/contact	Контакты ФГБУ РЦНИ на платформе журналов	
+kampus.team	RU	accept_200	https://kampus.team/	2pcTiFOd4GdbC4jvX00021VBd	https://kampus.team/toc	Лицензионный договор связывает точный домен с ООО «Теории от практиков»	
+kz.mir24.tv	KZ	accept_200	https://kz.mir24.tv/about/feedback	2vJCbqoiXZtcxLkZK00021VBe	https://kz.mir24.tv/about/feedback	Национальное представительство МТРК «Мир» в Казахстане	
+medelement.com	KZ/RU	accept_200	https://medelement.com/page/kontakty	2Wr8OfLknH6F65tId00021VBe	https://medelement.com/page/kontakty	Официальные контакты ТОО MedElement и российского подразделения	
+mir24.tv	RU/BY/KZ	deferred					HTTP 403 в трёх сетях на /about/advertising. Не переносить результат с региональных поддоменов.
+my.2035.university	RU	accept_200	https://my.2035.university/contact	25z6Hz23GGOh3D8MX00021VBe	https://my.2035.university/agreement	Пользовательское соглашение АНО «Университет Национальной технологической инициативы 2035»	
+nornickel.com	RU	accept_200	https://nornickel.com/contacts/	2LJNXsWilnyuVBN1y00021VBe	https://nornickel.com/contacts/	Корпоративные контакты «Норникеля»	
+p24.app	RU	accept_200	https://p24.app/	2UT0TKfSh64CDTIPV00021VBe	https://p24.app/policy/user-agreement	ООО «Платформа24», пользовательское соглашение называет точный хост	
+podpiska.rcsi.science	RU	accept_200	https://podpiska.rcsi.science/about/	2k2cLUk8GHZ0Yi6K700021VBe	https://podpiska.rcsi.science/about/	Публичный ресурс национальной подписки ФГБУ РЦНИ	
+polpred.com	RU	accept_200	https://polpred.com/	2ZnHeLI1XiZGYZXql00021VBe	https://polpred.com/?showpage=contacts	ООО «ПОЛПРЕД Справочники», данные регистрации	
+prebook.pro	RU	accept_redirect	https://prebook.pro/	20RK1JnpwjNr15tj100021VBf	https://p24.app/policy/user-agreement	Алиас на p24.app, оба имени перечислены в пользовательском соглашении	
+qazaqstan.tv	KZ	accept_200	https://qazaqstan.tv/	2NWDocfNDsg05vds100021VBg	https://rtrk.kz/ru/about/	Национальный телеканал РТРК «Казахстан», проверена главная вместо устаревшего /birgetv	
+qazradio.fm	KZ	accept_200	https://qazradio.fm/kz/	2biicU0NoxaqvImra00021VBg	https://qazradio.fm/kz/	Радио РТРК «Казахстан», рабочий путь /kz/ проверен отдельно	
+rosneft.com	RU	accept_200	https://rosneft.com/	2pvJTp2XmX212rJ2Z00021VBe	https://www.rosneft.com/about/contacts/	Корпоративная витрина «Роснефти», проверена отдельно от www	
+ru.examus.net	RU	accept_200	https://ru.examus.net/	2QwQwsl5t75JlZuRo00021VBe	https://ru.examus.net/docs_	Российский оператор ООО «Электронные платформы», документы называют точный хост	
+sparm.com	RU	accept_200	https://sparm.com/home/contact	2qIFq0wyUohkOhmm500021VBe	https://sparm.com/home/contact	Российский разработчик СП.АРМ, официальные контакты	
+ticketscloud.com	RU	accept_200	https://ticketscloud.com/it-accreditation	2lsaYX5AizyoXP5fy00021VBe	https://ticketscloud.com/it-accreditation	ООО «Тикетсклауд», раздел для правообладателей	
+ticketscloud.org	RU	deferred					HTTP 404, сертификат не прошёл проверку имени и доверия. На doc.ticketscloud.org это решение не распространяется.
+tutgood.com	RU	accept_200	https://tutgood.com/	23zwVHAkzutC8wP6r00021VBe	https://tutgood.com/accreditation.pdf	Официальный документ связывает домен с ООО «ТУТГУД»	
+voka.tv	BY	deferred					Точный /ru-RU доступен. Не завершено подтверждение оператора первичным юридическим документом.
+www.2035.university	RU	accept_200	https://www.2035.university/	2Ci7Fmhz3RPqk3dk200021VBe	https://www.2035.university/	Официальная витрина Университета 2035	
+www.aeprom.com	BY	accept_200	https://www.aeprom.com/	29bBdC6cgmSjcZVPn00021VBe	https://mgtp.by/rezidentstvo/rezidenty/	Аэроэнергопром, совпадают сайт предприятия и карточка Минского городского технопарка	
+www.cerebrohq.com	RU	accept_redirect	https://www.cerebrohq.com/ru	2C68ZNNk8Q7nLwlOy00021VBf	https://cerebrohq.com/ru/company/	Точный HTTPS-алиас на уже проверенный cerebrohq.com/ru	
+www.dolya.com	BY	accept_200	https://www.dolya.com/	2MHGx9W4HXKJBBPhj00021VBe	https://www.dolya.com/	ЗАО «Доля», Минск	
+www.medelement.com	KZ/RU	deferred					Есть HTTPS-редирект на https://medelement.com/. В текущем проходе подтверждена страница контактов apex, но не точная цель редиректа.
+www.morteshka.com	RU	accept_200	https://www.morteshka.com/ru	2uSqqd2LCKwGIkTwP00021VBf	https://www.morteshka.com/ru/the-mooseman	Пермская студия Morteshka, на /ru совпадают метаданные и бренд, отдельно подтверждено происхождение	
+www.polpred.com	RU	accept_200	https://www.polpred.com/	2Jdn193KcXXGTP6cf00021VBf	https://polpred.com/?showpage=contacts	Рабочий корень www проверен отдельно от пути контактов, который вернул 404	
+www.rcsi.science	RU	accept_200	https://www.rcsi.science/	2JX7DGF4oPLurjJB000021VBe	https://www.rcsi.science/	Российский центр научной информации, идентификация по метаданным и содержимому	
+www.rosneft.com	RU	accept_200	https://www.rosneft.com/about/contacts/	2gdZ7ABic1vZ9S7fn00021VBe	https://www.rosneft.com/about/contacts/	Официальная страница контактов «Роснефти»	
+www.rovalant.com	BY	deferred					Повтор дал 200 и совпадающий SAN, но TLS-цепочка не прошла проверку.
+www.samson-rus.com	RU	accept_200	https://www.samson-rus.com/contact	2eD3hyaZwU3BdUZkf00021VBe	https://www.samson-rus.com/contact	Контактная страница «САМСОН Групп», Санкт-Петербург	
+www.ugtu.net	RU	accept_200	https://www.ugtu.net/	2EqzRoakvhBvlwaXU00021VBe	https://en.ugtu.net/official-information	Ухтинский государственный технический университет	
+www.voka.tv	BY	deferred					Точный алиас подтверждён по TLS, но его целевой voka.tv пока не принят.
+www.volgatech.net	RU	accept_200	https://www.volgatech.net/	2Mhi1sbyhAtBFZrJt00021VBe	https://ccu.volgatech.net/contacts	Поволжский государственный технологический университет, официальный центр коллективного пользования подтверждает организацию	
