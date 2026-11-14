@@ -1,0 +1,415 @@
+host	scope	decision	exact_urls	measurement_ids	states	primary_source	reason
+1c.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+229etp.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+3logic.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+a-k-d.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+active.domains	RU	hold_https	https://active.domains/contacts/|https://active.domains/about/	2Rk58DQoMi2B868FE00021VJq|2LEOEuIWwAkVER6Vu00021VJv	content_unproven|content_unproven	https://www.nic.kz/ru/registrars/list	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+aedonline.ru	RU	covered_both				https://aedonline.ru/	Совпадает с существующими правилами обоих релизных DAT.
+afk.kz	KZ	covered_both				https://afk.kz/ru/o-nas/reestr-chlenov-afk.html	Совпадает с существующими правилами обоих релизных DAT.
+agc.lotexpert.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+agregatoreat.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+agro.zakupki.tomsk.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+agrobelarus.by	BY	covered_both				https://agrobelarus.by/company/molochnaya_produktsiya_i_maslosyrodelie/	Совпадает с существующими правилами обоих релизных DAT.
+aim-association.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+aistorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+akbiday.com	KZ	hold_tls	https://akbiday.com/	2q26UgW7RQ6WaML4y00021VK5	tls_or_transport_unproven	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	Официальная ссылка государственной Продкорпорации, но три HTTPS-проверки не подтвердили доверие и SAN.
+akosta.info	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+aktivmarket.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+aladdin-rd.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+alageum.com	KZ	covered_both				https://old.goszakup.gov.kz/ru/registry/show_supplier/208121	Совпадает с существующими правилами обоих релизных DAT.
+alageumsales.com	KZ	hold_https	https://alageumsales.com/	27enReTj6PcGA94b400021VJu	content_unproven	https://alageum.com/ru/predpriyatiya	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+aldena.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+alfalot.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ams.lotexpert.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+anrsk-ssr.ru	RU	covered_both				https://anrsk-ssr.ru/	Совпадает с существующими правилами обоих релизных DAT.
+anzan.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+apex-real.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+aphmik.kz	KZ	covered_both				https://aphmik.kz/members	Совпадает с существующими правилами обоих релизных DAT.
+apo.kz	KZ	covered_both				https://apo.kz/participants	Совпадает с существующими правилами обоих релизных DAT.
+arbitat.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+aristotel.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+arpe.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+arppsoft.ru	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+asiatrafo.kz	KZ	covered_both				https://alageum.com/ru/predpriyatiya	Совпадает с существующими правилами обоих релизных DAT.
+assotech.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+astgoz.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+astra.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+astratorg.lotexpert.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+astyk-k.kz	KZ	covered_both				https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	Совпадает с существующими правилами обоих релизных DAT.
+atctrade.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+atk-gps.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+au-pro.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+auction63.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+aukcioncenter.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ausib.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+av-prom.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+avicenna.online	KZ	approved_candidate	https://avicenna.online/Privacy-Policy.html	2PZTAiEf0oIdbGjQk00021VJr	https_candidate	https://avicenna.online/Privacy-Policy.html	Политика бренда на точном хосте называет Cushpen Group и Казахстан. Контент и идентичность сервиса подтверждены; корпоративный cushpengroup.com не включается по аналогии.
+ayarplast.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+azintelecom.az	AZ	reject_scope				https://dts.gov.kz/ru/registered_ru/	Оператор Азербайджана; наличие в списке торговых площадок не доказывает принадлежность RU/BY/KZ.
+b2b-center.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+babushkina.by	BY	covered_both				https://icatalog.expocentr.ru/ru/exhibitions/d3a90aa7-bdf4-11eb-80cc-a0d3c1fab97f/exhibitors/83296?stand=FD135	Совпадает с существующими правилами обоих релизных DAT.
+baipm.com	BY	approved_candidate	https://baipm.com/15-aipm/about/205-contact	2H073r9dqQkQJbLez00021VJz	https_candidate	https://baipm.com/15-aipm/about/205-contact	Публичные реквизиты белорусской ассоциации: название и адрес в Минске; три ответа с отраслевой навигацией.
+bamap.org	BY	covered_both				https://www.iru.org/ru/novosti-i-spravochnye-materialy/spisok-chlenov-iru/bamap	Совпадает с существующими правилами обоих релизных DAT.
+bankrupt.etpu.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+bashzakaz.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+bbm.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+belarusmedica.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+belfarmmanager.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+belinnovation.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+belproming.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+bepspb.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+bgs.by	BY	covered_both				https://www.belsono.by/partnery	Совпадает с существующими правилами обоих релизных DAT.
+bilim.group	KZ	covered_both				https://bilim.group/about/ru	Совпадает с существующими правилами обоих релизных DAT.
+biocad.ru	RU	covered_both				https://arfp.ru/chleny-arfp/	Совпадает с существующими правилами обоих релизных DAT.
+bntp.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+borlas.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+bric.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+bugenergo.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+ca.gamma.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+career.bilim.group	KZ	hold_content	https://career.bilim.group/|https://career.bilim.group/ru	2gy8mrYN4wCJEb0Oy00021VK5|230yHNYsw2MS86NYa00021VK5	content_unproven|content_unproven	https://bilim.group/about/ru	Официальная ссылка Bilim Group; оба маршрута отдают 200 с доверенным TLS, но видимое тело в пробах отсутствует.
+cdtrf.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+centerr.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+cis.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+citnet.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+clickit.team	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+commercial-technologies.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+contentai.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+coordination-sportlab.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+cyberprotect.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+dcunion.ru	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+debtfair.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+dfa.fintechru.org	RU	hold_content	https://dfa.fintechru.org/contacts/	2nsNiT0pHhj55ZxSe00021VK5	content_unproven	https://dfa.fintechru.org/contacts/	Контакты отдают валидные 200, только 29 видимых символов. Не распространяем допуск www на другие имена.
+dolcepharm.kz	KZ	covered_both				https://old2.sk-pharmacy.kz/rus/sotrudnichestvo/podderzhka_otech_proizvoditele/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+dziki.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+ea.omskzakaz.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ed.mail.kz	KZ	covered_both				https://ed.mail.kz/public/ru	Совпадает с существующими правилами обоих релизных DAT.
+edn.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+edumarket.digital	RU	hold_archive				https://edumarket.digital/	Публичное исследование полезно как источник, но текущий самостоятельный сервис не подтверждён.
+el-torg.com	RU	covered_both				https://www.el-torg.com/	Совпадает с существующими правилами обоих релизных DAT.
+el-torg.net	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+electro-torgi.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+electroinfovation.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+eltorg.org	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+elvis.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+eneca.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+eshop-ptz.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+eshoprzd.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+eskm.net	RU	approved_candidate	https://eskm.net/contacts/	2ZXVVhUY70vUazJ6E00021VJq	https_candidate	https://eskm.net/contacts/	Контактная страница именует российскую корпорацию ЭСКМ; контакты и навигация в трёх ответах.
+esmart.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+estp.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp-avtodor.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp-bankrotstvo.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp-profit.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp-region.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp-torgi.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.asgor.su	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.comita.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.eltox.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.kartoteka.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.rosseti.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.s-vfu.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp.tatneft.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp223.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp229.torgi-sila.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etp24torg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etpcaz.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etpexpert.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etplider.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etprf.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etpu.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+etpugra.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ets24.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+eurtp.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+extrit.com	BY	hold_https	https://extrit.com/	2UsNtdNSZOn9GFvY500021VJv	redirect	https://bntp.by/residents/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+fabrikant.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+falconkz.com	KZ	hold_content	https://falconkz.com/kontakty/|https://falconkz.com/contacts.html	2aZowtShQTCCWUvD400021VJr|2V5efqn74SiUgSiJu00021VJv	content_unproven|redirect	https://kffanek.kz/too-falcon-logistic-group	Точные URL недостаточны для подтверждения отдельного рабочего хоста по трём пробам.
+fbmdata.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+fcc.kz	KZ	covered_both				https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	Совпадает с существующими правилами обоих релизных DAT.
+federal1.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+fort-russia.com	RU	hold_https	https://fort-russia.com/kontakty/	21c9RvML62nzTfbP300021VJu	tls_or_transport_unproven	https://fort-russia.com/kontakty/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+ft.by	BY	covered_both				https://ft.by/	Совпадает с существующими правилами обоих релизных DAT.
+gazneftetorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+geropharm.ru	RU	covered_both				https://geropharm.ru/press/contacts	Совпадает с существующими правилами обоих релизных DAT.
+gia-russia.com	RU_catalogue	hold_transport	https://gia-russia.com/	2DEqwb4Z0FEwjvbZz00021VK3	tls_or_transport_unproven	https://apkit.ru/about/members/	Публичная ссылка АПКИТ не дала HTTPS-ответа ни из одной из трёх сетей.
+glavtelecom.com	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+gloriaservice.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+gomelcable.com	BY	covered_both				https://gomelcable.com/	Совпадает с существующими правилами обоих релизных DAT.
+gos.etpgpb.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+gostorgionline.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+goszakup.gov.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+goszakupki.by	BY	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+growers.kz	KZ	covered_both				https://growers.kz/pages/spisok-uchastnikov/	Совпадает с существующими правилами обоих релизных DAT.
+gz-spb.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+idocs.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+iitrust.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+importtele.com	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+in-line.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+inconkz.com	KZ	hold_content	https://inconkz.com/ru|https://inconkz.com/ru/glavnaya/kontakty	2VAbpFxM9KEgd7l7f00021VJq|2BBdVfFiLsU4dG84B00021VJz	https_candidate|content_unproven	https://inconkz.com/ru/glavnaya/kontakty	На обеих страницах подтверждены TLS и HTTP, но API вернул усечённый шаблон до основной части. Официальная публикация подтверждает личность, недостаточно видимой части именно трёх проб.
+infopost.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+infotecs-edu.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+infotecs.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+intech.team	RU_catalogue	hold_history				https://apkit.ru/about/members/	Найденная страница раскрытия уже измерялась, повтор не сделан.
+interprocom.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+isimplelab.com	RU	hold_https	https://isimplelab.com/licenses/	2cLO4SuQuYnA4aE8u00021VJz	content_unproven	https://www.fintechru.org/about/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+isimplelab.ru	RU	covered_both				https://www.fintechru.org/about/	Совпадает с существующими правилами обоих релизных DAT.
+issoft.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+it-city.tech	BY	hold_https	https://it-city.tech/	2bQ8aGOEyhKAOpIAR00021VJv	http_not_200	https://beltime.by/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+it-school.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+it-vbc.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+itclastersib.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+itender-online.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+itps.com	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+iva.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+ive-co.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+jet.su	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+kabel-company.by	BY	covered_both				https://rkkabel.by/news/izgotoviteli-i-postavshchiki-kabelno-provodnikovoy-produkcii-v-respublike-belarus	Совпадает с существующими правилами обоих релизных DAT.
+kamaztrade.kz	KZ	covered_both				https://akab.kz/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+kaz-grain.kz	KZ	covered_both				https://kaz-grain.kz/	Совпадает с существующими правилами обоих релизных DAT.
+kazkabel.kz	KZ	covered_both				https://kazkabel.kz/contacts-ru	Совпадает с существующими правилами обоих релизных DAT.
+kbrb.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+kim-atom.roseltorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+kontur-sertumpro.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+kontur.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+kortis.msk.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+korusconsulting.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+kphk.kz	KZ	covered_both				https://procurement.gov.kz/ru/registry/show_supplier/303022	Совпадает с существующими правилами обоих релизных DAT.
+ktz-alageum.com	KZ	hold_history				https://alageum.com/ru/predpriyatiya	Результат в архиве сохранён, новой подходящей страницы не выбрано.
+lacit.net	BY	hold_https	https://lacit.net/	2f3GwOnn5NQqP4Qxj00021VJv	tls_or_transport_unproven	https://beltime.by/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+latech.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+lekpharm.by	BY	covered_both				https://lekpharm.by/	Совпадает с существующими правилами обоих релизных DAT.
+lk.tokeon.ru	RU	covered_both				https://tokeon.ru/	Совпадает с существующими правилами обоих релизных DAT.
+lot-online.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+lot-sale.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+m-ets.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+market.otc.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+mba.belorusneft.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+medvax.by	BY	covered_both				https://medvax.by/	Совпадает с существующими правилами обоих релизных DAT.
+merlion.com	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+meta-invest.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+metaera.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+mts.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+muconex.kz	KZ	covered_both				https://muconex.kz/o-kompanii/	Совпадает с существующими правилами обоих релизных DAT.
+my.edu.kz	KZ	covered_both				https://my.edu.kz/	Совпадает с существующими правилами обоих релизных DAT.
+nationalbank.kz	KZ	covered_both				https://nationalbank.kz/ru/news/reestr-platezhnyh-sistem	Совпадает с существующими правилами обоих релизных DAT.
+nces.by	BY	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+ncip.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+neb24.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+new.etpgpb.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+nik24.online	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+nistp.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+niva.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+npovts.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+nsal.ru	RU	covered_both				https://nsal.ru/open	Совпадает с существующими правилами обоих релизных DAT.
+nwtender.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+onlinecontract.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+optikabel.kz	KZ	covered_both				https://optikabel.kz/	Совпадает с существующими правилами обоих релизных DAT.
+otc.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+otr.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+ozon.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+p-grain-receipt.qoldau.kz	KZ	covered_both				https://p-grain-receipt.qoldau.kz/ru/gr-info/granaries?flStatus=Active&p=7	Совпадает с существующими правилами обоих релизных DAT.
+parsingsite.ru	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+partner.yarfintrast.com	RU	hold_public_page				https://www.fintechru.org/about/	Членство бренда подтверждено. Нужна общедоступная страница этого точного хоста, не вход или авторизованная часть.
+petra.by	BY	covered_both				https://bntp.by/residents/	Совпадает с существующими правилами обоих релизных DAT.
+pharmasyntez.com	RU	hold_https	https://pharmasyntez.com/contacts/	2YKmU2FANcOVG19ZB00021VJs	tls_or_transport_unproven	https://pharmasyntez.com/contacts/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+pharmsynthez.com	RU	hold_https	https://pharmsynthez.com/kontakty/|https://pharmsynthez.com/about/	2UPzw19fNoxLZ5wVr00021VJr|2XCbq1OGKDHfCdmR600021VJv	content_unproven|content_unproven	https://pharmsynthez.com/about/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+pirit.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+pki.gov.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+portal.inconkz.com	KZ	hold_redirect	https://portal.inconkz.com/	2mLZt1AFgeFpCwcHP00021VJv	redirect	https://inconkz.com/ru	Публичная ссылка оператора известна, но измеренный ответ — редирект без подтверждённой отдельной страницы.
+portal.itradesystem.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+potato-russia.com	RU	hold_content	https://potato-russia.com/participants|https://potato-russia.com/policy	2iRSxx7p1TzhG6Tf800021VK5|2xCVouD0PdN48jNLM00021VK5	content_unproven|content_unproven	https://potato-russia.com/participants	Список участников и политика дали 200 и валидный TLS, но без видимого тела в пробах.
+promkonsalt.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+propertytrade.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+proway.tech	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+ptp-center.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+qaztehna.kz	KZ	covered_both				https://akab.kz/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+r-pharm.com	RU	hold_https	https://r-pharm.com/	2qS9x1ApblyqurU2S00021VJr	content_unproven	https://arfp.ru/chleny-arfp/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+r7-office.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rb2b.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+rbdigital.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rce.by	BY	covered_both				https://rce.by/members/strahow.php	Совпадает с существующими правилами обоих релизных DAT.
+red-net.tech	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+region-ast.center	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+regiontorgi.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+regtorg.com	RU	hold_encoding	https://regtorg.com/info.html	2v3LZy4MyXzElXrP600021VJw	content_unproven	https://ecp-shop.ru/listftp/	Три HTTPS-ответа 200 и валидный TLS; Windows-1251 уже заменён U+FFFD в API. Исходные байты не восстановить, полный текст подтверждает только отдельный индекс.
+resurs-media.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rhtorg.com	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+rkkabel.by	BY	covered_both				https://rkkabel.by/	Совпадает с существующими правилами обоих релизных DAT.
+roseltorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+rscgroup.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rt-dc.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rtlalliance.com		hold_history					Не повторён уже измеренный точный URL /o-nas/.
+rts-tender.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ru-trade24.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+ru.geropharm.com	RU	approved_candidate	https://ru.geropharm.com/press/contacts	2QnFsJkFM3KtdtS1J00021VJr	https_candidate	https://ru.geropharm.com/press/contacts	Русская версия ГЕРОФАРМ на отдельном хосте: бренд и продуктовая навигация в трёх ответах.
+rubytech.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rudesktop.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+rus-on.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+rusbiopharm.ru	RU	covered_both				https://rusbiopharm.ru/contacts/	Совпадает с существующими правилами обоих релизных DAT.
+russoft.org	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+sakhaeltorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sasta.ru	RU	covered_both				https://stankoinstrument.ru/sasta	Совпадает с существующими правилами обоих релизных DAT.
+savushkin.by	BY	covered_both				https://www.chefs.by/company/savushkin/	Совпадает с существующими правилами обоих релизных DAT.
+sberb2b.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sberbank-ast.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sberstrah.by	BY	covered_both				https://sberstrah.by/	Совпадает с существующими правилами обоих релизных DAT.
+sbertech.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+sdsys.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+searchinform.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+selt-online.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+seltim.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+setonline.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sibprime.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sibtoptrade.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+sistematorg.com	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+smiholding.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+smlab.digital	RU_catalogue	hold_tls	https://smlab.digital/politika-obrabotki-personalnyh-dannyh	2Tq9y5IW876LVC0RX00021VK3	tls_or_transport_unproven	https://apkit.ru/about/members/	В трёх ответах 200 и бренд, но цепочка не доверена: UNABLE_TO_VERIFY_LEAF_SIGNATURE.
+softmall.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+solopharm.com	RU	approved_candidate	https://solopharm.com/about/contacts	25tqhR0q5J5n2ONHA00021VJs	https_candidate	https://solopharm.com/about/contacts	Маркированные контакты российского производителя и навигация, без редиректа.
+sstorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+stan-company.ru	RU	covered_both				https://stan-company.ru/	Совпадает с существующими правилами обоих релизных DAT.
+storgi.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+stroytorgi.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+study.edtechs.ru	RU	covered_both				https://study.edtechs.ru/	Совпадает с существующими правилами обоих релизных DAT.
+svyaz.1prof.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+synergycrm.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+t1.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+task.by	BY	covered_both				https://www.belsono.by/partnery	Совпадает с существующими правилами обоих релизных DAT.
+taxcom.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+tech.rocketfirm.com	KZ	hold_https	https://tech.rocketfirm.com/about/history/	2gwNY7sguZmPmUN3S00021VJr	content_unproven	https://tech.rocketfirm.com/about/contacts/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+tektorg.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+telinter.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+tender-ug.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+tender.eurotransstroy.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+tender.one	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+tender.pik.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+tendergarant.com	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+tenderros.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+tengizchevroil.com	KZ	approved_candidate	https://tengizchevroil.com/contact-us|https://tengizchevroil.com/company	2aoeFrdQWnVxxWONN00021VJr|2apiKB7Cv9GFCcALr00021VJz	https_candidate|https_candidate	https://tengizchevroil.com/company	Официальная страница казахстанского оператора на apex. На /company и /contact-us по три подтверждённых ответа; ранее включённый www остаётся без изменений.
+tensor.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+tk-soft.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+tokeon.ru	RU	covered_both				https://tokeon.ru/documents/	Совпадает с существующими правилами обоих релизных DAT.
+tonk.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+torgi.burzakup.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+torgi.dfsamara.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+torgi.eltorg.org	RU	hold_https	https://torgi.eltorg.org/admin/ReglamentNew.aspx	29lqBah2xbB12nflA00021VJw	content_unproven	https://eltorg.org/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+torgi.org	RU	hold_https	https://torgi.org/?SysName=about-operator&action=View&class=Article	2uSmHB6ditoJbrcmx00021VJw	tls_or_transport_unproven	https://ecp-shop.ru/listftp/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+torgi223.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+torgi82.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+torgibankrot.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+torgidv.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+trbel.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+ttz.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+tulparpay.com	KZ	hold_https	https://tulparpay.com/rules	298pStwEBX50iDynv00021VJr	content_unproven	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+ucgo.gov.kz	KZ	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+uiip.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+ultimatec.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+umz-vrn.etc.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+urbantechgroup.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+usergate.com	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+utender.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+utpl.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+vertrades.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+vistan.ru	BY	covered_both				https://vistan.ru/	Совпадает с существующими правилами обоих релизных DAT.
+vk.company	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+vtb-center.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+vvpgroup.com	indeterminate_global	hold_scope				https://apkit.ru/about/members/	Групповой домен, нужна граница локального сервиса, а не один член ассоциации.
+webtorgi.samregion.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+wt.udmr.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+www.absoluttrade.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.acer.ru	indeterminate_global	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.advokat.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.aigp.asia	KZ	hold_history				https://www.aigp.asia/en/	Результат в архиве сохранён, новой подходящей страницы не выбрано.
+www.aigp.kz	KZ	covered_both				https://aema.kz/uchastniki/too-abdiibrahim-global-farm/	Совпадает с существующими правилами обоих релизных DAT.
+www.aktiv-company.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.apkit.ru	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.appp.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.aq.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.arppsoft.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.astyktrans.kz	KZ	covered_both				https://www.astyktrans.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.at-consulting.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.atol.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.auxo-it.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.bairc.org	BY	hold_redirect	https://www.bairc.org/	2XLsv6GwF3pJsrOGw00021VJr	redirect	https://www.iru.org/ru/novosti-i-spravochnye-materialy/spisok-chlenov-iru/bamap	Перенаправляет на HTTP bamap.org. Точный bamap.org уже в обоих DAT.
+www.bcc.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.belhard.com	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.belsono.by	BY	covered_both				https://www.belsono.by/partnery	Совпадает с существующими правилами обоих релизных DAT.
+www.bpk-spb.ru	RU	covered_both				https://www.bpk-spb.ru/	Совпадает с существующими правилами обоих релизных DAT.
+www.bulatgroup.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.cft.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.consultant.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ctm.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.daewoobus.kz	KZ	covered_both				https://akab.kz/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+www.defacto-group.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.dns-shop.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.el-torg.com	RU	approved_candidate	https://www.el-torg.com/	2eauB9D93mKOSWTLL00021VJw	https_candidate	https://www.el-torg.com/	Отдельный публичный WWW хост оператора «Электронные системы Поволжья» с валидным TLS и содержимым. Apex уже покрыт.
+www.fabrikant.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+www.falconkz.com	KZ	hold_redirect	https://www.falconkz.com/	246Z0aCT13aZbItvF00021VJr	redirect	https://kffanek.kz/too-falcon-logistic-group	Перенаправляет на apex, который не прошёл самостоятельную проверку.
+www.fintechru.org	RU	approved_candidate	https://www.fintechru.org/about/	2A2aA60IICoIw2rpR00021VJz	https_candidate	https://www.fintechru.org/about/	Публичная страница российской Ассоциации ФинТех; заголовок, бренд и содержательная навигация совпадают по трём сетям.
+www.fors.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.fort-russia.com	RU	hold_https	https://www.fort-russia.com/kontakty/	2c8GkI2HNQiTmKuoK00021VJv	tls_or_transport_unproven	https://www.bpk-spb.ru/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+www.galaktika.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.galex.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.gaz-is.ru	RU	covered_both				https://dts.gov.kz/ru/registered_ru/	Совпадает с существующими правилами обоих релизных DAT.
+www.generium.ru	RU	covered_both				https://www.generium.ru/	Совпадает с существующими правилами обоих релизных DAT.
+www.grainunion.kz	KZ	covered_both				https://www.grainunion.kz/ru/union-members	Совпадает с существующими правилами обоих релизных DAT.
+www.grammidin.kz	KZ	covered_both				https://www.grammidin.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.huawei.com	indeterminate_global	hold_scope				https://apkit.ru/about/members/	Участие местного подразделения и путь /ru/ не делают общий международный hostname локальным.
+www.i-teco.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ibs.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.icl.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ictt.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.infosec.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.infosystems.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ingavirin.kz	KZ	covered_both				https://www.ingavirin.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.inlinegroup.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.instituteiba.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.it-academy.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.izvarino-pharma.ru	RU	covered_both				https://arfp.ru/chleny-arfp/	Совпадает с существующими правилами обоих релизных DAT.
+www.kaspersky.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.krgpharm.com	KZ	hold_https	https://www.krgpharm.com/kontakty	2TAZiiqEmylQ1pfyh00021VJs	tls_or_transport_unproven	https://www.krgpharm.com/kontakty	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+www.lanit.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.lekpharm.com	BY	covered_both				https://www.lekpharm.com/kompaniya/o-kompanii/	Совпадает с существующими правилами обоих релизных DAT.
+www.marvel.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.mics.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.mont.com	indeterminate_global	hold_scope				https://apkit.ru/about/members/	Каталог даёт только локализованный путь международного оператора, не отдельный локальный hostname.
+www.narpa.ru	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.national-platform.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.netlab.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.netwell.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.nevainter.com		hold_application_error					Две страницы ранее отдали фатальную ошибку, признаков восстановления не найдено.
+www.nobel.kz	KZ	covered_both				https://www.nobel.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.ocs.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.oldi.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ot.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.park.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.polymedia.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ptsecurity.com	indeterminate_global	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.qazedu.kz	KZ	covered_both				https://www.qazedu.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.rdtex.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.reksoft.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.rosagroleasing.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+www.sap.com.kz	KZ	covered_both				https://akab.kz/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+www.securitycode.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.semaz.kz	KZ	covered_both				https://akab.kz/proizvoditeli/	Совпадает с существующими правилами обоих релизных DAT.
+www.skala-r.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.softline.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.solvo.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.sovintegra.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.stech.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.technoevolab.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.torgi.org	RU	hold_https	https://www.torgi.org/?SysName=support-service&action=View&class=Article	2cRjUKsl3FSxeXyRu00021VJw	tls_or_transport_unproven	https://www.torgi.org/?SysName=support-service&action=View&class=Article	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+www.trinitygroup.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.uncomtech.ru	RU	covered_both				https://www.elektrokabel.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.usergate.com	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.valentapharm.com	RU	approved_candidate	https://www.valentapharm.com/contacts/	2CE2Mg0uJDyM1WVFP00021VJr	https_candidate	https://www.valentapharm.com/contacts/	Публичные контакты российского фармпроизводителя, название и адрес офиса. Измерен WWW, не вся доменная зона.
+www.wildberries.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+yandex.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+yugmax.com	RU	hold_https	https://yugmax.com/	2AbK8xN2t9QIUhqY200021VJq	content_unproven	https://far-aerf.ru/chleny-associacii-2	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+zakazrf.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+zakupki.butb.by	BY	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+zakupki.etalon-etp.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+zakupki.gov.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+zakupki.mos.ru	RU	covered_both				https://ecp-shop.ru/listftp/	Совпадает с существующими правилами обоих релизных DAT.
+zakupki.ugmk.com	RU	queue				https://ecp-shop.ru/listftp/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+zecurion.ru	RU_catalogue	covered_both				https://apkit.ru/about/members/	Совпадает с существующими правилами обоих релизных DAT.
+zenium.by	BY	covered_both				https://beltime.by/members/	Совпадает с существующими правилами обоих релизных DAT.
