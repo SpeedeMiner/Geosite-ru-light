@@ -1,0 +1,7 @@
+host	decision	scope	reason	source
+anovator.online	defer	unknown	Каталог ссылается на отдельную страницу BIORISE внутри anovator.online. Принадлежность одной страницы не доказывает издателя общего хоста.	https://anovator.online/biorise.ru
+attikkawpc.info	defer	unknown	Текущая точная страница не даёт читаемой публичной витрины, а выставочная карточка описывает международную группу.	https://attikkawpc.info/
+co-lab.life	defer	RU	Вспомогательная страница дала 200 и совпадающий бренд, но не подтверждён действующий издатель, нет трёхсетевого TLS.	https://co-lab.life/
+neopolis.company	defer	RU	Ссылка выставочного участника и витрина не заменяют юридическое подтверждение и TLS из трёх сетей.	https://neopolis.company/
+www.harbinpharmtech.com	defer	unknown	Индексированная витрина не дала достаточно данных о местном операторе. Не выводить страну по названию или стенду.	https://www.harbinpharmtech.com/mobile/contact/index.html
+www.termobrest.net	defer	BY	Каталог указывает домен рядом с российским .ru, но точный www не подтвердил актуальную публичную страницу.	https://www.termobrest.net/

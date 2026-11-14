@@ -1,0 +1,22 @@
+host	preliminary_scope	https_path	source	note
+china-pp.pro	RU	https://china-pp.pro/aboutus	https://china-pp.pro/aboutus	Витрина поставщика с московскими контактами, отличать от китайских изготовителей.
+deep.online	RU/KZ	https://deep.online/ru/user-agreement/	https://deep.online/ru/user-agreement/	Российская оферта называет ООО «ЦНСиБ», казахстанская указывает отдельного местного агента. Проверить точный apex и рабочий путь.
+dveri-indoors.com	RU	https://dveri-indoors.com/	https://dveri-indoors.com/	Витрина производителя inDOORs. Нужна действующая страница реквизитов.
+e-treid.com	RU	https://e-treid.com/	https://e-treid.com/	Витрина дверей E-Trade. Связь с российским юрлицом отдельно подтверждается.
+elpi.pro	RU	https://elpi.pro/	https://elpi.pro/	Точная витрина группы ЭЛПИ. Сверить оператора конкретного домена.
+forteholding.biz	RU	https://forteholding.biz/contacts	https://forteholding.biz/contacts	Опубликованы российские контакты группы. Оператор и конкретные иностранные производители различаются.
+fsdecor.com	RU	https://fsdecor.com/contacts/	https://fsdecor.com/contacts/	«Фабрика сладкого декора», публичная страница российских контактов.
+glavportal.com	RU	https://glavportal.com/about	https://glavportal.com/about	В разделе о СМИ указан российский учредитель и издатель.
+helpinver.com	RU	https://helpinver.com/o-proekte/index.php	https://helpinver.com/o-proekte/index.php	Портал «Хелпинвер», точная страница о проекте и российские контакты.
+itsolutions.city	RU	https://itsolutions.city/	https://itsolutions.city/policy.pdf	В политике на точном сайте названо ООО «Айти-Солюшнс».
+lar.tech	RU	https://lar.tech/contacts/	https://lar.tech/contacts/	Контакты и реквизиты ООО «Лартех» опубликованы на точном домене.
+omnidom.pro	RU	https://omnidom.pro/	https://omnidom.pro/	Российский интегратор. Партнёрство с Яндексом не заменяет проверку оператора.
+packplace.me	RU	https://packplace.me/	https://packplace.me/wp-content/themes/packplace/assets/files/oferta.pdf	Оферта на точном домене связывает витрину с российским поставщиком.
+rosholod.org	RU	https://rosholod.org/about	https://rosholod.org/about	Дилерский портал «Росхолод». Проверять публичный раздел, не логин.
+teplofor.pro	RU	https://teplofor.pro/	https://teplofor.pro/	Витрина российского завода отопительного оборудования. Нужны реквизиты.
+versta.pro	RU	https://versta.pro/contacts	https://versta.pro/contacts	Контакты производителя «Верста».
+www.tdquartz.com	RU	https://www.tdquartz.com/	https://tdquartz.com/contacts/	Витрина АО «ТД Кварц». Не переносить замер apex на www.
+www.visit-crimea.com	RU	https://www.visit-crimea.com/publichnaja-oferta/	https://www.visit-crimea.com/publichnaja-oferta/	Оферта связывает точное имя с российским юридическим лицом.
+www.zemlekop.pro	RU	https://www.zemlekop.pro/kontakty/	https://www.zemlekop.pro/privacy-policy/	ООО «Диггер-Про», официальный оператор по политике точного хоста.
+zavodnasos.com	RU	https://zavodnasos.com/	https://zavodnasos.com/	Точная публичная витрина завода ООО «Курс».
+zavodstroyprom.com	RU	https://zavodstroyprom.com/contacts	https://zavodstroyprom.com/yandex-agreement	ООО «Завод Стройпром». Оператор подтверждён правовым документом на точном домене.
