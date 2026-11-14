@@ -1,0 +1,9 @@
+order	host	scope	url	primary	brand_marker	operator
+1	www.biooperations.com	KZ	https://www.biooperations.com/contacts/	https://aaf.kz/group/bio	BioOperations|ПЕРЕРАБОТКЕ ЗЕРНА	ТОО BioOperations, Северо-Казахстанская область, связь подтверждена группой АзияАгроФуд
+2	biooperations.com	KZ	https://biooperations.com/contacts/	https://www.kfp.kz/contacts	BioOperations|ПЕРЕРАБОТКЕ ЗЕРНА	Казахстанский производитель из списка KazFoodProducts, apex не наследует проверку WWW
+3	www.salamatcompany.com	KZ	https://www.salamatcompany.com/kontakty	https://salamatcompany.kz/	Salamat|Саламат	Костанайское производство, .kz указывает почту .com, требуется также сверить основной текст точного WWW
+4	www.raimbek.com	KZ	https://www.raimbek.com/	https://raimbek.com/	Raimbek Group|Raimbek	Казахстанский производитель, apex уже в RU, WWW отдельно проверяется и не принимается по одному редиректу
+5	hub-shipping.com	RU	https://hub-shipping.com/local-charge/hub-shipping_import-local-charges-flyer_novorossiysk_nle_01-12-2023_eng/	https://hub-shipping.com/privacy-policy/	ХАБ ШИППИНГ|HUB SHIPPING	Точная отдельная HTML-страница тарифа, российское ООО ИНН 9701207056
+6	necoline.net	RU	https://necoline.net/services-page/shipping-page/	https://necoline.net/wp-content/uploads/2025/07/uvedomlenie-o-povyshenii-tarifov.pdf	НЭКО ЛАЙН|Necoline	Точный публичный раздел перевозок, документ на том же сайте называет ООО «НЭКО ЛАЙН АЗИЯ»
+7	acex.net	RU	https://acex.net/en/contact/2327/	https://acex.net/ru/privacy-policy/cookie.php	КАРГО-ЭКСПРЕСС|ACEX	Страница ACEX Russia перечисляет два российских юрлица, сверять оператор сайта и реквизиты
+8	bulbash.com	BY	https://bulbash.com/about/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377302?stand=11B010	Бульбашъ|Bulbash	Белорусская компания из Продэкспо, домен бренда, оператор сверяется по корпоративным ссылкам
