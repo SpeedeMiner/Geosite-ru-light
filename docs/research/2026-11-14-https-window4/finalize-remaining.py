@@ -29,6 +29,10 @@ def main():
     accepted.add("germesplit.com")
     prior = W.index(W.tsv(PREV / "08-wave-later.tsv"), "host")
     alternatives = W.index(W.tsv(HERE / "02-later-paths.tsv"), "host")
+    new_fallbacks = W.index(W.tsv(HERE / "09-new-fallbacks.tsv"), "host")
+    historical_urls = {r["url"] for f in sorted(OLDER.glob("0[89]-*-evidence-*.jsonl"))
+                       + sorted(OLDER.glob("1[01]-*-evidence-*.jsonl"))
+                       for r in W.jsonl(f) if r.get("id")}
     latest = {}
     latest_measurement = {}
     attempted_urls = set()
@@ -65,8 +69,10 @@ def main():
                 status, note = op["status"], op["note"]
             unmeasured.append(dict(host=host, order=old["order"], status=status,
                                    exact_url=(ready or {}).get("url", tried.get("url", op["exact_url"])),
-                                   operator_url=(ready or {}).get("primary", op["operator_source"]),
-                                   operator=(ready or {}).get("operator", op["operator"]), note=note))
+                                   operator_url=excludes[host]["operator_source"] if host in excludes
+                                   else (ready or {}).get("primary", op["operator_source"]),
+                                   operator=excludes[host]["operator"] if host in excludes
+                                   else (ready or {}).get("operator", op["operator"]), note=note))
         else:
             if result:
                 outcome, url, mid = result["decision"], result["url"], result["id"]
@@ -74,14 +80,17 @@ def main():
                 original = held[host]
                 outcome, url, mid = (original[k] for k in ("decision", "url", "id"))
             alt = alternatives.get(host)
-            available = (alt or {}).get("exact_url") or prior.get(host, {}).get("url", "")
-            if available in attempted_urls:
+            available = (new_fallbacks.get(host, {}).get("exact_url") or (alt or {}).get("exact_url")
+                         or prior.get(host, {}).get("url", ""))
+            if available in attempted_urls | historical_urls:
                 available = ""
             measured.append(dict(host=host, order=old["order"], last_decision=outcome, last_url=url,
                                  id=mid, last_wave=result["wave"] if result else "window2",
                                  later_exact_url=available))
-    for group, file in ((unmeasured, "07-unmeasured.tsv"), (measured, "07-measured-holds.tsv")):
+    for group, file in ((unmeasured, "10-unmeasured.tsv"), (measured, "10-measured-holds.tsv")):
         W.save_tsv(HERE / file, group, group[0].keys(), a.check)
+    planned = {r["host"] for r in measured if r["later_exact_url"]}
+    W.require(new_fallbacks.keys() <= planned, "new fallback URL already tried or no longer eligible")
     W.require(len(accepted) == 49 and len(unmeasured) == 25 and len(measured) == 85, "wrong original partition")
     W.require(len(latest) == 78 and len(latest_measurement) == 73 and len(attempted_urls) == 82, "wrong wave totals")
     print("Original 159:", len(accepted), len(measured), len(unmeasured))

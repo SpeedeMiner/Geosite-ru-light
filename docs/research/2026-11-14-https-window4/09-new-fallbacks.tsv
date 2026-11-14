@@ -1,0 +1,10 @@
+host	exact_url	source_url	note
+bitronicslab.com	https://bitronicslab.com/terms	https://bitronicslab.com/contacts	Точное соглашение вместо обрезанных главной, контактов и политики.
+gip-vision.pro	https://gip-vision.pro/corporate/	https://gip-vision.pro/personal-data-consent/	Публичный корпоративный раздел после усечённого согласия.
+helpinver.com	https://helpinver.com/index.php	https://helpinver.com/o-proekte/kontaktnaya-informatsiya.php	Точный корневой index отдельно после двух 404 по вложенным путям.
+neiroseti.ai	https://neiroseti.ai/contacts	https://neiroseti.ai/award	Новый точный путь контактов вместо обрезанного раздела команды.
+rosholod.org	https://rosholod.org/about	https://rosholod.org/contacts	Точный публичный раздел о дилерском портале вместо обрезанных контактов.
+vilperus.com	https://vilperus.com/industrialconstruction	https://vilperus.com/seals	Точный публичный раздел применения производителя, не www.
+www.asi-log.com	https://www.asi-log.com/	https://storage.yandexcloud.net/media.ite.group/transrussia.ru/files/TransRussia_SkladTech_2026_catalogue_light.pdf	Публичный корень того же www найден после 404 старого index, без переноса на внешнюю витрину.
+www.eltis.com	https://www.eltis.com/en/	https://www.eltis.com/download/ELTIS_catalogue_Engl.pdf	Английский публичный путь того же www, чтобы проверить видимый читаемый текст независимо от Windows-1251.
+www.primecartonpak.com	https://www.primecartonpak.com/company/	https://www.primecartonpak.com/include/licenses_detail.php	Точная публичная статья называет оператора после обрезанных контактов.

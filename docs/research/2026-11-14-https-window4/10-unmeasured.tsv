@@ -1,0 +1,26 @@
+host	order	status	exact_url	operator_url	operator	note
+china-pp.pro	32	hold_operator	https://china-pp.pro/aboutus	https://storage.yandexcloud.net/media.ite.group/rosupack.com/files/RosUpack2026Spreads.pdf		Официальный каталог связывает точное имя с российским участником, но не раскрывает юрлицо. Не подменять владельца витрины производителями оборудования.
+e-treid.com	38	ready_first	https://e-treid.com/contact.html	https://xfirm.ru/company/7743421682	ООО «Е-ТРЕЙД», ИНН 7743421682	Оператор подтверждён в новом окне, замера ещё нет.
+forteholding.biz	46	hold_operator	https://forteholding.biz/contacts	https://forteholding.biz/contacts		Операционная витрина группы, но несколько похожих юрлиц, разные юрисдикции. Не выводить оператора по одному филиалу.
+gsr.net	54	hold_operator	https://gsr.net/	https://gsr.net/		Сайт группы и юрлицо из Москвы пока не связаны достаточным доказательством. Проверить международного оператора.
+kam.travel	67	hold_alias	https://kam.travel/	https://atik-41.ru/chleny_associacii	ООО «Камчатское бюро путешествий»	Ассоциация связывает оператор с www.kam.travel. Apex ещё не показан как работающая витрина отдельно от www.
+kotelok.net	72	hold_operator	https://kotelok.net/kontakty/	https://kotelok.net/kontakty/		Видны магазин, почта и доставка по РФ. Маркетплейс связывает бренд, не называет того же издателя на точном сайте.
+logion.pw	79	retry_no_probes	https://logion.pw/	https://logion-academy.pro/	ООО «Логион»	API отказал в создании измерения, записанного ID нет.
+medialab.team	80	hold_content	https://medialab.team/	https://edu.medialab.team/	АНО «Лаборатория медиа»	Справочно видна только оболочка apex. Отдельный образовательный поддомен не является заменой.
+omnidom.pro	86	ready_first	https://omnidom.pro/offer	https://omnidom.pro/offer	ООО «Лаборатория Умного комфорта»	Оператор подтверждён в новом окне, замера ещё нет.
+pmclub.pro	94	ready_first	https://pmclub.pro/contacts	https://pmclub.pro/contacts	Российский ИП по реквизитам точной витрины	Оператор подтверждён в новом окне, замера ещё нет.
+rublevka34.com	103	ready_first	https://rublevka34.com/kontakty/	https://www.volgogradcci.ru/chleny-vtpp/torgovyy-dom-rublevka/	ООО «ТДР», ИНН 3428986143	Оператор подтверждён в новом окне, замера ещё нет.
+talantikum.com	108	hold_operator	https://talantikum.com/page/pomosch	https://talantikum.com/		Оригинальный контент виден, юридический оператор не установлен по первичному документу.
+theuralleader.com	112	hold_operator	https://theuralleader.com/	https://theuralleader.com/		Торговая витрина указывает работу в нескольких странах, собственного юридического оператора пока не нашли.
+travelcrimea.com	115	ready_first	https://travelcrimea.com/docs/contacts/index.html	https://travelcrimea.com/docs/contacts/index.html	АНО «Крымский туристский центр», ИНН 9102300144	Оператор подтверждён в новом окне, замера ещё нет.
+www.benders.rs	127	ready_first	https://www.benders.rs/contacts/	https://rosupack.com/static/8b1afa8525706dd39d8e2d02426c09f4/RU-2025-SPREADS.pdf	ООО «БЭНДЕРС РС», ИНН 7701896966	Оператор подтверждён в новом окне, замера ещё нет.
+www.cardboardia.info	128	hold_content	https://www.cardboardia.info/	https://reestr.stdrf.ru/reestr_list	Проект «Картония», Москва	Реестр СТД прямо указывает точный www. Текущую витрину не переносить с cardboardia.ru или сайта мастерской.
+www.eatech-nv.com	132	exclude_candidate	https://www.eatech-nv.com/contact/	https://www.oei-analitika.ru/kurilka/order_info.php?order_id=748079	Wuhan Tongsheng Technology Co., Ltd., China	Описание типа связывает правообладателя и изготовителя с точным доменом и корпоративной почтой. Нет подтверждённого российского оператора сайта.
+www.glassline.pro	136	hold_operator	https://www.glassline.pro/politic	https://www.glassline.pro/		Совпали адрес представительства и реквизиты ООО «Гласслайн Рус» (ИНН 4000025732), но сайт указывает copyright немецкой GmbH и политика не называет юрлицо. Нужна точная привязка оператора.
+www.imex.llc	139	ready_first	https://www.imex.llc/about	https://www.alta.ru/tamdoc/19bn0132/	ООО «ИМЭКС», ИНН 7810871626	Оператор подтверждён в новом окне, замера ещё нет.
+www.polairgroup.com	145	hold_operator	https://www.polairgroup.com/	https://www.polairgroup.com/		На точном домене опубликована политика PDF, оператор групповой витрины требует отдельной сверки. Не выводить по дочерней фабрике.
+www.scheltec.group	149	ready_first	https://www.scheltec.group/	https://exhibitors-itegroup.exhibitoronlinemanual.com/analitika-expo-2025/ru/Exhibitor/ExbDetails/Mjkw	ООО «ШЕЛТЕК ГРУПП», ИНН 7729422740	Оператор подтверждён в новом окне, замера ещё нет.
+www.vitavallis.com	154	ready_first	https://www.vitavallis.com/contacts/	https://xn--g1an9b.xn--p1ai/residents/akvelit/	ООО «Аквелит», ИНН 7017110773	Оператор подтверждён в новом окне, замера ещё нет.
+zavodnasos.com	156	retry_no_probes	https://zavodnasos.com/privacy_policy/	https://zavodnasos.com/privacy_policy/	ООО НПО «Курс»	API отказал в создании измерения, записанного ID нет.
+zdorovo-eda.com	158	submission_unknown	https://zdorovo-eda.com/kontakty/	https://www.prod-expo.ru/common/img/uploaded/exhibitions/prodexpo/doc_2026/prod26cat.pdf	ООО «МТО Индустрия»	Нет HTTP-ответа и ID. Не повторять вслепую.
+zealandia.pro	159	submission_unknown	https://zealandia.pro/	https://zealandia.pro/	ООО «Юнифуд»	Нет HTTP-ответа и ID. Не повторять вслепую.
