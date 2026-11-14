@@ -12,7 +12,10 @@ spec = importlib.util.spec_from_file_location("previous", PREV / "checkpoint.py"
 C = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(C)
 W = C.W
-WAVES = ("first", "wide")
+WAVES = ("first", "wide", "extra")
+PLANS = {"first": ("01-wave-inherited.tsv", "01-plan.sha256sum"),
+         "wide": ("03-wave-wide.tsv", "03-plan.sha256sum"),
+         "extra": ("05-wave-extra.tsv", "05-plan.sha256sum")}
 BASE_SHA = "8723f789d9d838f68e4a2ace29d328e09237948cc660db1de19f0425e7d98e8a"
 
 
@@ -27,8 +30,8 @@ def history():
 
 
 def plan(wave):
-    name = "01-wave-inherited.tsv" if wave == "first" else "03-wave-wide.tsv"
-    pin = HERE / ("01-plan.sha256sum" if wave == "first" else "03-plan.sha256sum")
+    name, pin_name = PLANS[wave]
+    pin = HERE / pin_name
     digest, pinned = pin.read_text().strip().split("  ", 1)
     path = HERE / name
     W.require(pinned == name and sha256(path.read_bytes()).hexdigest() == digest, "plan digest mismatch")
