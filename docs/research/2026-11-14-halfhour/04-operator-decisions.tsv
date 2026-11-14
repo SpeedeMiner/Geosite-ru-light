@@ -1,0 +1,13 @@
+host	decision	scope	reason	source
+brainika.co	exclude	US	Официальная страница проекта называет американскую Bilingval Inc., Флорида. Русская локализация и каталог EdTech не меняют оператора.	https://brainika.co/english/
+intellectokids.com	exclude	GB	Подписочная политика на точном сайте называет компанию IntellectoKids Ltd, зарегистрированную в Англии и Уэльсе.	https://intellectokids.com/subscription-policy/
+javarush.com	exclude	UA	Русскоязычная оферта ссылается на ГК Украины, а сам проект представляет себя украинским сервисом. Уточнять другой хост отдельно.	https://javarush.com/about/offer
+logiclike.com	pending_https	BY/RU	Политика точного сайта называет контроллера Logiclike LLC (Минск), региональная оферта также называет российского лицензиара. Нужен строгий HTTPS-замер на точном хосте.	https://logiclike.com/en/docs/privacy
+parta.school	defer	unknown	Текущий сайт — редакционный блог «Парта Онлайн». Принадлежность одноимённой школе не доказана по титулу.	https://parta.school/
+sbiblio.com	exclude_changed	unknown	Прежний библиотечный путь /biblio/ теперь содержит сайт Ligaciputra. Старый каталог университета не подтверждает текущее назначение.	https://sbiblio.com/biblio/
+smartschool.pro	pending_https	RU	Старый сайт содержит официальное объявление о переходе на «Умный Сад». Новый smartsad.pro имеет отдельную оферту и требует независимой проверки.	https://smartschool.pro/smart-school-pro-teper-umnyj-sad-vash-cifrovoj-pomoshhnik/
+studyqa.com	defer	unknown	Условия международного сайта называют GMM Ltd и UK GDPR, но эти сведения не подтверждают привязку точного домена к RU/BY/KZ.	https://studyqa.com/internships/terms
+unicolrus.com	defer	mixed	Каталог выставки указывает www.unicolrus.com у ООО «ЮНИКОЛ РУС», а ответ apex из рабочего окружения озаглавлен UNICOL COMPRESSOR JIANGSU CO., LTD. Развести apex и www и проверить текущего оператора каждого.	https://icatalog.expocentr.ru/ru/exhibitions/f33d0466-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/380687?stand=10D010
+www.c-contractors.com	exclude_changed	US	Каталог KazService действительно ссылался на этот хост из карточки казахстанского ТОО. Текущая публичная витрина принадлежит ландшафтной компании из Техаса и не совпадает с оператором в карточке.	https://www.c-contractors.com/
+www.kdteatr.net	exclude_changed	unknown	Старое имя театра теперь перенаправляет на посторонний сайт азартных игр. Не переносить в RU по реестру СТД и старому HTTP 200.	https://www.kdteatr.net/
+www.temtour.com	exclude	TR	Точный сайт и его корпоративная страница представляют турецкого оператора с лицензией в Турции. Туры по Казахстану не делают этот общий сайт казахстанским.	https://temtour.com/en/corporate
