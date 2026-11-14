@@ -1,0 +1,36 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+www.habarovskie-avialinii.ru	RU	aviation	https://www.habarovskie-avialinii.ru/contact/	Хабаровские авиалинии	Хабаровские авиалинии	https://www.habarovskie-avialinii.ru/contact/	domain:ru	domain:ru		no	covered_both
+chukotavia.ru	RU	aviation	https://chukotavia.ru/ru/contacts	ЧукотАВИА	Чукотавиа	https://chukotavia.ru/ru/contacts	domain:ru	domain:ru		no	covered_both
+avianao.ru	RU	aviation	https://avianao.ru/	Нарьян-Марский объединённый авиаотряд	авиаотряд|Нарьян-Мар	https://avianao.ru/	domain:ru	domain:ru		no	covered_both
+silaavia.ru	RU	aviation	https://silaavia.ru/	Сибирская Легкая Авиация	Сибирская Легкая Авиация|СиЛА	https://silaavia.ru/	domain:ru	domain:ru		no	covered_both
+www.komiaviatrans.ru	RU	aviation	https://www.komiaviatrans.ru/	Комиавиатранс	Комиавиатранс	https://www.komiaviatrans.ru/	domain:ru	domain:ru		no	covered_both
+vologodskoe-aviapredpriyatie.ru	RU	aviation	https://vologodskoe-aviapredpriyatie.ru/	Вологодское авиапредприятие	Вологодское авиапредприятие	https://vologodskoe-aviapredpriyatie.ru/	domain:ru	domain:ru		no	covered_both
+kostromaavia.ru	RU	aviation	https://kostromaavia.ru/passengers	Костромское авиапредприятие	Костромское авиапредприятие	https://kostromaavia.ru/passengers	domain:ru	domain:ru		no	covered_both
+aviastartu.ru	RU	aviation	https://aviastartu.ru/agents	Авиастар-Ту	Авиастар-Ту|Aviastar	https://aviastartu.ru/agents	domain:ru	domain:ru		no	covered_both
+aokap.ru	RU	aviation	https://aokap.ru/	Камчатское авиапредприятие	Камчатское авиационное предприятие|Камчатское авиапредприятие	https://aokap.ru/	domain:ru	domain:ru		no	covered_both
+www.2aoao.ru	RU	aviation	https://www.2aoao.ru/	Арктические авиалинии	Арктические авиалинии|Архангельский объединенный авиаотряд	https://www.2aoao.ru/	domain:ru	domain:ru		no	covered_both
+www.krasavia.ru	RU	aviation	https://www.krasavia.ru/	КрасАвиа	КрасАвиа	https://www.krasavia.ru/	domain:ru	domain:ru		no	covered_both
+vietjetqazaqstan.kz	KZ	aviation	https://vietjetqazaqstan.kz/ru	Vietjet Qazaqstan	Vietjet Qazaqstan	https://egov.kz/cms/ru/articles/air_transport/airlines_kz?mobile=no	domain:kz	domain:kz		no	covered_both
+www.zhetysuavia.kz	KZ	aviation	https://www.zhetysuavia.kz/ru	Жетысу	Жетысу|Zhetysu	https://egov.kz/cms/ru/articles/air_transport/airlines_kz?mobile=no	domain:kz	domain:kz		no	covered_both
+platio.by	BY	payments	https://platio.by/	Platio	Platio|Платио	https://platio.by/	domain:by	domain:by		no	covered_both
+bepaid.by	BY	payments	https://bepaid.by/cards	bePaid	bePaid	https://bepaid.by/cards	domain:by	domain:by		no	covered_both
+webpay.by	BY	payments	https://webpay.by/cards/	WEBPAY	WEBPAY	https://webpay.by/cards/	domain:by	domain:by		no	covered_both
+www.wooppay.com	KZ	payments	https://www.wooppay.com/services	Wooppay	Wooppay	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	full:www.wooppay.com	full:www.wooppay.com		no	covered_both
+qiwi.kz	KZ	payments	https://qiwi.kz/	QPlus	QIWI|QPlus	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.kassa24.kz	KZ	payments	https://www.kassa24.kz/	Личная Касса	Kassa24|Касса24	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.one.kz	KZ	payments	https://www.one.kz/	ONE Technologies	ONE Technologies	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+avtobys.kz	KZ	payments	https://avtobys.kz/?lang=ru	Avtobys	Avtobys|Автобус	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.1-click.kz	KZ	payments	https://www.1-click.kz/	One Click	One Click|MAER Soft	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.wallet1.kz	KZ	payments	https://www.wallet1.kz/	Wallet One	Wallet One|Единый кошелек	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.qazpost.kz	KZ	payments	https://www.qazpost.kz/	Казпочта	Qazpost|Казпочта	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.yurta.me	KZ	payments	https://www.yurta.me/	Yurta	Yurta|RPS Asia	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+www.simply.cards	KZ	payments	https://www.simply.cards/	Simply	Simply|Казевромобайл	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+asiapay.kz	KZ	payments	https://asiapay.kz/	AsiaPay	AsiaPay|Азияпэй	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+aitupay.kz	KZ	payments	https://aitupay.kz/	AituPay	AituPay|Aitu Pay	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+interpay.kz	KZ	payments	https://interpay.kz/	Interpay	Interpay	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+cashello.kz	KZ	payments	https://cashello.kz/	Cashello	Cashello|PayDala	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+s1lkpay.com	KZ	payments	https://s1lkpay.com/	S1LK PAY Kazakhstan	S1LK PAY|S1LKPAY	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+tarlanpayments.kz	KZ	payments	https://tarlanpayments.kz/	Tarlan Payments	Tarlan Payments|Тарлан Пэйментс	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+jetpay.kz	KZ	payments	https://jetpay.kz/	JetPay	JetPay	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.finteca.kz	KZ	payments	https://www.finteca.kz/	Finteca	Finteca	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+onevision.kz	KZ	payments	https://onevision.kz/ru	OneVision	OneVision	https://nationalbank.kz/kz/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
