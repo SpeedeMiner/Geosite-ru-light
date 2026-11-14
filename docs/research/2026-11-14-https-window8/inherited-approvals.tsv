@@ -1,0 +1,6 @@
+host	id	operator_url	rationale
+studio.ncspeech.ai	2hjeL3CUiU2panWw400021VFX	https://studio.ncspeech.ai/offer	Три точки прочитали страницу реквизитов с точным именем, БИН и адресом ТОО в Алматы; имя совпадает с собственной офертой.
+cyberpack.ai	2hLJ6nUbNPTDUAsyj00021VFX	https://cyberpack.ai/terms-of-use/ru	На трёх точках виден текст условий, идентифицирующий ТОО CYBERPACK и образовательную платформу.
+med.elektrodetal.com	22PRYbdbUsOdmyDKU00021VFX	https://galvanika.elektrodetal.com/policy/	Все три ответа содержат полноценную главную МЦ «Милосердие», связь с АО и разделы услуг. Число 404 относится к строке меню, не к HTTP-статусу или содержимому страницы.
+galvanika.elektrodetal.com	21gpwCcFzRhxjWUiq00021VFX	https://galvanika.elektrodetal.com/policy/	На трёх точках читаются политика и производственные разделы; политика прямо связывает точное имя с АО.
+smartexpress.me	2FfVuaOSh57JtKsHm00021VFX	https://rus-elektronika.ru/ru-RU/Documents/er-putevoditel.aspx	Все три точки прочитали брендированный профиль и услуги. Москва и Петербург в телефонах совпадают с контактами из путеводителя.
