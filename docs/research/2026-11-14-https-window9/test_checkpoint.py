@@ -68,6 +68,14 @@ class CheckpointTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "incomplete"):
             e.extract([html[:-7]])
 
+    def test_website_field_excludes_mail_and_organizer_navigation(self):
+        e = load_file("extract-prodexpo-websites")
+        html = ('<a href="https://organizer.example/">Navigation</a>'
+                '<dt>E-mail:</dt><dd><a href="mailto:shop@example.org">Mail</a></dd>'
+                '<dt>Сайт: </dt><dd><a href="http://www.example.org">Company</a>'
+                '<a href="https://user:password@example.org">Invalid</a></dd>')
+        self.assertEqual(e.websites(html), ["http://www.example.org"])
+
 
 if __name__ == "__main__":
     unittest.main()

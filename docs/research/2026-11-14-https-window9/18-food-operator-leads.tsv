@@ -1,0 +1,7 @@
+host	scope	https_candidate_url	primary	status
+www.abcfood.net	BY	https://www.abcfood.net/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/376883?stand=8C010	Организатор указал HTTP, HTTPS-оператор не подтверждён. Apex уже в RU.
+www.gurmina.com	BY	https://www.gurmina.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377826?stand=7C050	Организатор указал HTTP WWW, HTTPS WWW не подтверждён.
+gurmina.com	BY	https://gurmina.com/	https://finstore.by/upload/files/344e538e63e27c7522fd0ad6961dcc3a.pdf	Документ называет точный apex ООО «Гурмина-ПРО», собственная страница найдена. Проверить из трёх российских сетей.
+www.malvina-group.com	BY	https://www.malvina-group.com/	https://malvina-group.com/kontakty/	Организатор указал WWW, сверить точный хост отдельно от сайта белорусского ЗАО.
+www.mzbn.com	BY	https://www.mzbn.com/	https://mzbn.com/	Организатор указал HTTP WWW, отдельная HTTPS-проверка нужна, apex не наследуется.
+www.complimilk.com	BY	https://www.complimilk.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377211?stand=3D090	Сайт из карточки, проверить точный HTTPS и принадлежность оператору до измерения.
