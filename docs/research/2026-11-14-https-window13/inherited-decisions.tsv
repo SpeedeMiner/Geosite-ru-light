@@ -1,0 +1,10 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+ab-machinery.com	hold_content	KZ	https://ab-machinery.com/	2XuHzymISP0vmYVfa00021VHl	https://ab-machinery.com/kz	Казахстанское Almaty Brands Machinery, другой языковой раздел	api_truncated, short_visible_body
+salini-srl.com	hold_content	RU	https://salini-srl.com/	2CMceIUBmEbuXeWk100021VHl	https://salini-srl.com/contacts/	ООО ТД Салини, главная с продукцией отдельно от страницы контактов	api_truncated, short_visible_body
+springsever.com	hold_content	RU	https://springsever.com/category/nezavisimyy-pruzhinnyy-blok/	21vzCM5CFLYZb5Kcb00021VHl	https://springsever.com/ru/	Русский производитель пружинных блоков, прямая категория	api_truncated, brand_missing
+rosla.com	hold_review	RU	https://rosla.com/	2pUtpev4NYQAnIaJ200021VHl	https://rosla.com/contacts/	Р.О.С.Л.А., главная с информацией о производстве	https_candidate
+skifltd.com	hold_review	RU	https://skifltd.com/poleznaya-informacziya/chasto-zadavaemyie-voprosyi	2IqyT6GQeGliitQkp00021VHl	https://skifltd.com/o-fabrike/o-nas	Российская фабрика СКИФ, отдельный раздел FAQ	https_candidate
+teks-o-park.com	hold_content	RU	https://teks-o-park.com/shop/	2QGTMNOms3ecYc80k00021VHl	https://teks-o-park.com/about/	Российский поставщик тканей, точный каталог	api_truncated, short_visible_body
+www.xn--b1agaljik6adkl3isb.com	hold_redirect	RU	https://www.xn--b1agaljik6adkl3isb.com/	2oXHhMbQko6zywjaG00021VHl	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385740?stand=14F122	Точное IDN имя из карточки, проверяется только если совпадут оператор и основное содержимое	redirect
+standart.pro	hold_content	RU	https://standart.pro/	2LLqk24eUfw6fuYGd00021VHl	https://standart.pro/contacts	Российский поставщик, главная отдельно от усечённых контактов	api_truncated, short_visible_body
+mf.plastigy.com	hold_content	RU	https://mf.plastigy.com/catalog/mebelnaya-furnitura	2Iz1b0F13hJs3o76U00021VHl	https://mf.plastigy.com/proizvodstvo	Производитель мебельной фурнитуры, Калуга, раздел каталога	api_truncated, short_visible_body

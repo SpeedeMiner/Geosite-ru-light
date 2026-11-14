@@ -1,0 +1,3 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+woodworking.minskexpo.com	accept	BY	https://woodworking.minskexpo.com/press-reliz-2019-8919	26oq8wHDWBl9yvpeb00021VHm	https://cci.tj/upload/documents/e0df43d9-129b-4024-b677-eac8ac33ff51.pdf	Точный адрес пресс-релиза 2026 из меню организатора	Три независимых ASN РФ: доверенный TLS и HTTP 200, в основном тексте пресс-релиза есть выставка «ДЕРЕВООБРАБОТКА-2026», даты 27–30 октября, Минск и адрес манежа. Каталог выставки и план ЕЭК связывают её с ЗАО «МИНСКЭКСПО».
+mf.plastigy.com	hold_content	RU	https://mf.plastigy.com/contacts	2p8LQhTIrmkPUS8sP00021VHm	https://mf.plastigy.com/proizvodstvo	Контактный раздел производителя из Калуги	api_truncated, short_visible_body
