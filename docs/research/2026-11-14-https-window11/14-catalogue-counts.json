@@ -1,0 +1,76 @@
+{
+  "source_sha256": {
+    "power.html": "11910f99006b4e5dba5db24c3baca9d3e72c30a9e39098071d09178d172ceae0",
+    "kioge-list.html": "5b5ab3d736e1c14d00cf8eb731bc512d536eaf3e26f8bdc2a4f997d236fdbce4",
+    "electronics.html": "9d4fa7204072068fac5a2a509adfbdf0162687562abd237599b3575518a96d55",
+    "electronics.pdf": "9501be0c9c3413f4bb70fdea634ffc79c760d442a92454d539dea04d653c3736"
+  },
+  "power": {
+    "rows": 285,
+    "by_country": {
+      "Казахстан": 62,
+      "Китай": 169,
+      "Чехия": 2,
+      "Турция": 1,
+      "Германия": 4,
+      "Австрия": 1,
+      "": 1,
+      "Польша": 1,
+      "Франция": 1,
+      "Россия": 40,
+      "Республика Беларусь": 3
+    },
+    "detail_rows": 65,
+    "explicit_sites": 0
+  },
+  "kioge": {
+    "rows": 487,
+    "by_country": {
+      "Kazakhstan": 162,
+      "": 13,
+      "Saudi Arabia": 2,
+      "India": 21,
+      "China": 137,
+      "Germany": 19,
+      "Russia": 80,
+      "Italy": 25,
+      "United Arab Emirates": 5,
+      "Singapore": 2,
+      "United States of America": 1,
+      "Turkey": 2,
+      "Romania": 1,
+      "Denmark": 1,
+      "Azerbaijan": 2,
+      "Oman": 2,
+      "United Kingdom": 2,
+      "Netherlands": 1,
+      "Thailand": 1,
+      "Austria": 1,
+      "Hong Kong": 1,
+      "Uzbekistan": 3,
+      "Malaysia": 1,
+      "Iran": 1,
+      "Finland": 1
+    },
+    "regional_rows": 242
+  },
+  "electronics_first_page": {
+    "rows": 21,
+    "website_rows": 19,
+    "after": {
+      "RU": 19,
+      "no_website": 2
+    }
+  },
+  "electronics_pdf": {
+    "website_rows": 90,
+    "before": {
+      "RU": 83,
+      "uncovered": 7
+    },
+    "after": {
+      "RU": 84,
+      "uncovered": 6
+    }
+  }
+}
