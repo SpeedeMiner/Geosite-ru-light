@@ -1,0 +1,3312 @@
+[
+  {
+    "batch": "priority",
+    "host": "price.myseldon.com",
+    "url": "https://price.myseldon.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2A0SDRqxg17d9oaM000021VAJ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Price — Обоснование начальной максимальной цены контракта"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Price — Обоснование начальной максимальной цены контракта"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Price — Обоснование начальной максимальной цены контракта"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://price.myseldon.com/services"
+  },
+  {
+    "batch": "priority",
+    "host": "help.myseldon.com",
+    "url": "https://help.myseldon.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/29H11Zbx5nGDwasca00021VAJ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://price.myseldon.com/"
+  },
+  {
+    "batch": "priority",
+    "host": "tender.myseldon.com",
+    "url": "https://tender.myseldon.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2pTHRAtT7emIROotM00021VAJ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск закупок, госзаказ, тендеры"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск закупок, госзаказ, тендеры"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск закупок, госзаказ, тендеры"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://tender.myseldon.com/company/"
+  },
+  {
+    "batch": "priority",
+    "host": "basis.myseldon.com",
+    "url": "https://basis.myseldon.com/ru/landing",
+    "evidence": "https://api.globalping.io/v1/measurements/2CpDp7DS1r7IRRHTp00021VAJ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Basis — поиск и проверка контрагентов"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Basis — поиск и проверка контрагентов"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Basis — поиск и проверка контрагентов"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.aetp.ru/"
+  },
+  {
+    "batch": "priority",
+    "host": "pro.myseldon.com",
+    "url": "https://pro.myseldon.com/en/promo",
+    "evidence": "https://api.globalping.io/v1/measurements/2sRODXJdYZThh72Pt00021VAJ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Pro — Successful participation in tenders"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Pro — Successful participation in tenders"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon.Pro — Successful participation in tenders"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.aetp.ru/"
+  },
+  {
+    "batch": "priority",
+    "host": "nexign.com",
+    "url": "https://nexign.com/ru/contact-us",
+    "evidence": "https://api.globalping.io/v1/measurements/2HUvAo7IBdiRUnSbm00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты компании Nexign"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты компании Nexign"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты компании Nexign"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://nexign.com/ru/contact-us"
+  },
+  {
+    "batch": "priority",
+    "host": "n3.tech",
+    "url": "https://n3.tech/",
+    "evidence": "https://api.globalping.io/v1/measurements/2cVUagLUNaSeSO3o500021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ИТ-группа N3.Tech"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ИТ-группа N3.Tech"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ИТ-группа N3.Tech"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://n3.tech/"
+  },
+  {
+    "batch": "priority",
+    "host": "nettox.net",
+    "url": "https://nettox.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2lMDsBy1RkZDnMyFe00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Nettox"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Nettox"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Nettox"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://fiata.org/directory/by/"
+  },
+  {
+    "batch": "priority",
+    "host": "el-torg.com",
+    "url": "https://el-torg.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2yXQJr1NlW0NtBxtp00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная площадка ЭСП"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная площадка ЭСП"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная площадка ЭСП"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://el-torg.com/"
+  },
+  {
+    "batch": "priority",
+    "host": "tender.one",
+    "url": "https://tender.one/",
+    "evidence": "https://api.globalping.io/v1/measurements/2ADaT6LMmViLzEGGl00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная Торговая Площадка - Tender Technologies"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная Торговая Площадка - Tender Technologies"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Электронная Торговая Площадка - Tender Technologies"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://tender.one/"
+  },
+  {
+    "batch": "priority",
+    "host": "meets.tender.one",
+    "url": "https://meets.tender.one/",
+    "evidence": "https://api.globalping.io/v1/measurements/2snFUQtMmXge67JIw00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Meets — Сервис для проведения собраний в электронной форме"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Meets — Сервис для проведения собраний в электронной форме"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Meets — Сервис для проведения собраний в электронной форме"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://tender.one/"
+  },
+  {
+    "batch": "priority",
+    "host": "sunlight.net",
+    "url": "https://sunlight.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2oyt7gaDBiV9NWkKQ00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Ювелирный интернет-магазин SUNLIGHT — купить ювелирные изделия на официальном сайте Санлайт в каталоге с ценами, фото — продажа ювелирных украшений онлайн в Москве"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Ювелирный интернет-магазин SUNLIGHT — купить ювелирные изделия на официальном сайте Санлайт в каталоге с ценами, фото — продажа ювелирных украшений онлайн в Москве"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Ювелирный интернет-магазин SUNLIGHT — купить ювелирные изделия на официальном сайте Санлайт в каталоге с ценами, фото — продажа ювелирных украшений онлайн в Москве"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://corp.sunlight.net/"
+  },
+  {
+    "batch": "priority",
+    "host": "corp.sunlight.net",
+    "url": "https://corp.sunlight.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2J2s7CiS5CIaXr3uT00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "SUNLIGHT — ведущая ювелирная сеть в России"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "SUNLIGHT — ведущая ювелирная сеть в России"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "SUNLIGHT — ведущая ювелирная сеть в России"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://corp.sunlight.net/"
+  },
+  {
+    "batch": "priority",
+    "host": "guw.aero",
+    "url": "https://guw.aero/",
+    "evidence": "https://api.globalping.io/v1/measurements/2hI6aFIvdYN9mXUyC00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://guw.aero/"
+  },
+  {
+    "batch": "priority",
+    "host": "www.guw.aero",
+    "url": "https://www.guw.aero/",
+    "evidence": "https://api.globalping.io/v1/measurements/2jNvXn5sxzgURrEod00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Международный аэропорт Атырау (GUW) | Официальный сайт"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.guw.aero/"
+  },
+  {
+    "batch": "priority",
+    "host": "kazan.aero",
+    "url": "https://kazan.aero/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Tr68nWoJPGJlpnp600021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "Отложено: HTTP 200 отдаёт JS challenge realauth",
+    "primary": "https://kazan.aero/"
+  },
+  {
+    "batch": "priority",
+    "host": "npo-pas.com",
+    "url": "https://npo-pas.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2vRoJPM2ov5F54Eue00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "НПО ПАС - КОМПЛЕКСНЫЕ СИСТЕМЫ ГАЗОВОГО ПОЖАРОТУШЕНИЯ"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "НПО ПАС - КОМПЛЕКСНЫЕ СИСТЕМЫ ГАЗОВОГО ПОЖАРОТУШЕНИЯ"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "НПО ПАС - КОМПЛЕКСНЫЕ СИСТЕМЫ ГАЗОВОГО ПОЖАРОТУШЕНИЯ"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://npo-pas.com/info"
+  },
+  {
+    "batch": "priority",
+    "host": "www.npo-pas.com",
+    "url": "https://www.npo-pas.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2tJMAOfD0VV0on1xL00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://npo-pas.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://npo-pas.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://npo-pas.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://npo-pas.com/info/rekvizity-npo-pas"
+  },
+  {
+    "batch": "priority",
+    "host": "ru.siberianhealth.com",
+    "url": "https://ru.siberianhealth.com/ru/",
+    "evidence": "https://api.globalping.io/v1/measurements/29OfTA5I0qN6uBDQd00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Siberian Wellness (Сибирское здоровье) — официальный сайт и интернет-магазин компании в России"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Siberian Wellness (Сибирское здоровье) — официальный сайт и интернет-магазин компании в России"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Siberian Wellness (Сибирское здоровье) — официальный сайт и интернет-магазин компании в России"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://ru.siberianhealth.com/ru/shop/page/contacts/"
+  },
+  {
+    "batch": "priority",
+    "host": "faberlic.com",
+    "url": "https://faberlic.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2980ZEKiLF7KPjYPN00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      }
+    ],
+    "decision": "принят по другой пробе",
+    "primary": "https://faberlic.com/index.php?Itemid=5313&id=65&lang=ru&layout=blog&option=com_content&view=category"
+  },
+  {
+    "batch": "priority",
+    "host": "www.faberlic.com",
+    "url": "https://www.faberlic.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2NaAWrcfPUcHlAiOk00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 303,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://faberlic.com/ru/ru/",
+        "title": ""
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://faberlic.com/tr/ru/register"
+  },
+  {
+    "batch": "priority",
+    "host": "www.akosta.info",
+    "url": "https://www.akosta.info/akosta/page-content.xhtml?page_unid=5",
+    "evidence": "https://api.globalping.io/v1/measurements/2mPLVZXVCNpiG9XM500021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": false,
+        "tls_error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+        "status": "finished",
+        "location": null,
+        "title": "А-КОСТА - ЭТП"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": false,
+        "tls_error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+        "status": "finished",
+        "location": null,
+        "title": "А-КОСТА - ЭТП"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": false,
+        "tls_error": "UNABLE_TO_VERIFY_LEAF_SIGNATURE",
+        "status": "finished",
+        "location": null,
+        "title": "А-КОСТА - ЭТП"
+      }
+    ],
+    "decision": "Отложено: HTTP 200 при недоверенной цепочке TLS",
+    "primary": "https://www.akosta.info/"
+  },
+  {
+    "batch": "priority",
+    "host": "kgf.aero",
+    "url": "https://kgf.aero/ru/",
+    "probe_error": "no_probes_found"
+  },
+  {
+    "batch": "priority",
+    "host": "www.kgf.aero",
+    "url": "https://www.kgf.aero/ru/contacts/",
+    "evidence": "https://api.globalping.io/v1/measurements/23GkIiX23uTMot59a00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Контакты"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.kgf.aero/ru/contacts/"
+  },
+  {
+    "batch": "priority",
+    "host": "cerebrohq.com",
+    "url": "https://cerebrohq.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/293LVX7SIU3GpljAN00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/en",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/en",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/en",
+        "title": "302 Found"
+      }
+    ],
+    "decision": "Отложено: цепочка редиректов не подтверждена",
+    "primary": "https://cerebrohq.com/ru/company/"
+  },
+  {
+    "batch": "priority",
+    "host": "www.usergate.com",
+    "url": "https://www.usergate.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/23gOlOGKfzurp4CD500021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://usergate.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://usergate.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://usergate.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://usergate.com/company"
+  },
+  {
+    "batch": "priority",
+    "host": "istock.link",
+    "url": "https://istock.link/",
+    "evidence": "https://api.globalping.io/v1/measurements/2fiK0C13dM91vOpAy00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация закупок и продаж: SRM и CRM | iStockLink"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация закупок и продаж: SRM и CRM | iStockLink"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация закупок и продаж: SRM и CRM | iStockLink"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://istock.link/aboutus"
+  },
+  {
+    "batch": "priority",
+    "host": "abcfood.net",
+    "url": "https://abcfood.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2TQSLLCrtlhxDe2BR00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ОДО «ФИРМА ABC» — Здоровые продукты!"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ОДО «ФИРМА ABC» — Здоровые продукты!"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "ОДО «ФИРМА ABC» — Здоровые продукты!"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://agrobelarus.by/company/voda_pitevaya_i_mineralnaya_napitki_bezalkogolnye/firma_avs_odo_g_grodno/"
+  },
+  {
+    "batch": "priority",
+    "host": "asapcg.com",
+    "url": "https://asapcg.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2DGTum1zfdaIqc7Wx00021VAK",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация производства на 1C:ERP/MES/APS систем - АСАП Разработка"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация производства на 1C:ERP/MES/APS систем - АСАП Разработка"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Автоматизация производства на 1C:ERP/MES/APS систем - АСАП Разработка"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://asapcg.com/contacts/"
+  },
+  {
+    "batch": "follow",
+    "host": "faberlic.com",
+    "url": "https://faberlic.com/ru/ru/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Pez3oZ3BOj0enS2800021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://faberlic.com/index.php?Itemid=5313&id=65&lang=ru&layout=blog&option=com_content&view=category"
+  },
+  {
+    "batch": "follow",
+    "host": "kgf.aero",
+    "url": "https://kgf.aero/ru/",
+    "evidence": "https://api.globalping.io/v1/measurements/2kXsWk5Fv9ZD7nSwH00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://caa.gov.kz/ru/kontakty"
+  },
+  {
+    "batch": "follow",
+    "host": "cerebrohq.com",
+    "url": "https://cerebrohq.com/ru",
+    "evidence": "https://api.globalping.io/v1/measurements/2yyNHL9N71YzwKb6200021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "Отложено: цепочка редиректов не подтверждена",
+    "primary": "https://cerebrohq.com/ru/company/"
+  },
+  {
+    "batch": "follow",
+    "host": "seldon.org",
+    "url": "https://seldon.org/",
+    "evidence": "https://api.globalping.io/v1/measurements/2vEalaF7CSmOJX2oh00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск тендеров и аналитика"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск тендеров и аналитика"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Seldon - Поиск тендеров и аналитика"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://seldon.org/"
+  },
+  {
+    "batch": "follow",
+    "host": "konversta.com",
+    "url": "https://konversta.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2G8G9zLMHgyTxN4aQ00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://konversta.com/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://konversta.com/ru/",
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://konversta.com/ru/",
+        "title": ""
+      }
+    ],
+    "decision": "принят по другой пробе",
+    "primary": "https://konversta.com/ru/information/details/"
+  },
+  {
+    "batch": "follow",
+    "host": "kazan.aero",
+    "url": "https://kazan.aero/",
+    "evidence": "https://api.globalping.io/v1/measurements/2jhGJbURvmtybbJD100021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "Отложено: HTTP 200 отдаёт JS challenge realauth",
+    "primary": "https://kazan.aero/"
+  },
+  {
+    "batch": "follow",
+    "host": "armtel.com",
+    "url": "https://armtel.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2cWi0Ut4p3KuqHP7v00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Home"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Home"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Home"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://armtel.com/ru/kontakty/"
+  },
+  {
+    "batch": "follow",
+    "host": "bercut.com",
+    "url": "https://bercut.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2nZSttv5wfxFFdTzh00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Компания Bercut – поставщик IT-решений и бизнес-продуктов для операторов связи и провайдеров услуг"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Компания Bercut – поставщик IT-решений и бизнес-продуктов для операторов связи и провайдеров услуг"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Компания Bercut – поставщик IT-решений и бизнес-продуктов для операторов связи и провайдеров услуг"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://bercut.com/contacts/"
+  },
+  {
+    "batch": "follow",
+    "host": "gigaenterprise.ai",
+    "url": "https://gigaenterprise.ai/",
+    "evidence": "https://api.globalping.io/v1/measurements/28JvDb5bHwgjxf5cI00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Корпоративная ИИ-платформа ГигаЧат Бизнес"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Корпоративная ИИ-платформа ГигаЧат Бизнес"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Корпоративная ИИ-платформа ГигаЧат Бизнес"
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "follow",
+    "host": "fact.digital",
+    "url": "https://fact.digital/",
+    "evidence": "https://api.globalping.io/v1/measurements/2v3OdQttDVH9mAuKe00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Факт - создание и развитие сайтов и e-commerce проектов на 1С-Битрикс"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Факт - создание и развитие сайтов и e-commerce проектов на 1С-Битрикс"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Факт - создание и развитие сайтов и e-commerce проектов на 1С-Битрикс"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://fact.digital/contacts/"
+  },
+  {
+    "batch": "follow",
+    "host": "nexign.com",
+    "url": "https://nexign.com/ru/",
+    "evidence": "https://api.globalping.io/v1/measurements/21q61Lo4HGqb4csoE00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://nexign.com/ru",
+        "title": "Redirecting to https://nexign.com/ru"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://nexign.com/ru",
+        "title": "Redirecting to https://nexign.com/ru"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://nexign.com/ru",
+        "title": "Redirecting to https://nexign.com/ru"
+      }
+    ],
+    "decision": "принят по другой пробе",
+    "primary": "https://nexign.com/ru/contact-us"
+  },
+  {
+    "batch": "follow",
+    "host": "torggroup.org",
+    "url": "https://torggroup.org/",
+    "evidence": "https://api.globalping.io/v1/measurements/2cXVvjER8FVFk9E1M00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "follow",
+    "host": "lachevsky.group",
+    "url": "https://lachevsky.group/",
+    "evidence": "https://api.globalping.io/v1/measurements/2KRaRmxOb2vTpDxXL00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Разработка ПО для бизнеса - Lachevsky Group"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Разработка ПО для бизнеса - Lachevsky Group"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Разработка ПО для бизнеса - Lachevsky Group"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.lachevsky.group/dokumentyi/"
+  },
+  {
+    "batch": "follow",
+    "host": "nordclan.com",
+    "url": "https://nordclan.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2drYc11hypy7irNCY00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Цифровые и ИИ-решения для бизнеса"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Цифровые и ИИ-решения для бизнеса"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Цифровые и ИИ-решения для бизнеса"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://nordclan.com/contacts"
+  },
+  {
+    "batch": "follow",
+    "host": "naveksoft.com",
+    "url": "https://naveksoft.com/ru",
+    "evidence": "https://api.globalping.io/v1/measurements/2ktgzwyIUxf75odUo00021VAL",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Naveksoft - Beyond the Usual"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Naveksoft - Beyond the Usual"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Naveksoft - Beyond the Usual"
+      }
+    ],
+    "decision": "уже покрыт",
+    "primary": null
+  },
+  {
+    "batch": "follow",
+    "host": "help.myseldon.com",
+    "url": "https://help.myseldon.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/22v4pGSGb7yMV3IZ100021VAM",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "База знаний"
+      }
+    ],
+    "decision": "принят по другой пробе",
+    "primary": "https://price.myseldon.com/"
+  },
+  {
+    "batch": "follow",
+    "host": "sistematorg.com",
+    "url": "https://sistematorg.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2KwSTSAoj9StlyDOJ00021VAM",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Объединенные системы торгов"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Объединенные системы торгов"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Объединенные системы торгов"
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "101xp.com",
+    "url": "https://101xp.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2mizihFqRMOihmwWr00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "101XP"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "101XP"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "101XP"
+      }
+    ],
+    "decision": "Не включать: оператор услуги за пределами RU/BY/KZ",
+    "primary": "https://en.101xp.com/terms"
+  },
+  {
+    "batch": "games",
+    "host": "1cgs.net",
+    "url": "https://1cgs.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2pW2ZGghQsTlMdzn100021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "1C Game Studios"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "1C Game Studios"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "1C Game Studios"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://1cgs.net/"
+  },
+  {
+    "batch": "games",
+    "host": "7winds.mobi",
+    "url": "https://7winds.mobi/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Qqoqsm2xjSpI9clo00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Студия мобильной разработки Seven Winds | Приложения и игры, AR VR и геймификация"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Студия мобильной разработки Seven Winds | Приложения и игры, AR VR и геймификация"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Студия мобильной разработки Seven Winds | Приложения и игры, AR VR и геймификация"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://7winds.mobi/contacts"
+  },
+  {
+    "batch": "games",
+    "host": "ardor-gaming.com",
+    "url": "https://ardor-gaming.com/",
+    "probe_error": "no_probes_found"
+  },
+  {
+    "batch": "games",
+    "host": "fibrum.com",
+    "url": "https://fibrum.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2yvC0FyLy250m7EE100021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Fibrum"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Fibrum"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Fibrum"
+      }
+    ],
+    "decision": "Не включать: доступен, но в документах Fibrum Limited / FIBRUM LLC Cyprus; одноимённое ООО в РФ не устанавливает оператора",
+    "primary": "https://fibrum.com/privacy_policy"
+  },
+  {
+    "batch": "games",
+    "host": "gfagames.com",
+    "url": "https://gfagames.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2DgvtcRRRzxwY3BUA00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "ice-pick.com",
+    "url": "https://ice-pick.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2r2YX9VrdO9LZ8qV400021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "I C E - P I C K"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "I C E - P I C K"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "I C E - P I C K"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://ice-pick.com/"
+  },
+  {
+    "batch": "games",
+    "host": "kometa.games",
+    "url": "https://kometa.games/",
+    "evidence": "https://api.globalping.io/v1/measurements/2rIlnHG1AmxM55FBS00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kometa.Games"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kometa.Games"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kometa.Games"
+      }
+    ],
+    "decision": "Не включать: Yadarko Trading Ltd, Cyprus",
+    "primary": "https://kometa.games/privacy-ma.html"
+  },
+  {
+    "batch": "games",
+    "host": "kosmos.games",
+    "url": "https://kosmos.games/",
+    "evidence": "https://api.globalping.io/v1/measurements/2YZmMwegqRnekFffp00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kosmos – A comfortable and reliable gaming company. We have colorful and successful casual games that are played by more than 300,000 users every day. We appreciate our achievements, team and accumulated expertise!"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kosmos – A comfortable and reliable gaming company. We have colorful and successful casual games that are played by more than 300,000 users every day. We appreciate our achievements, team and accumulated expertise!"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Kosmos – A comfortable and reliable gaming company. We have colorful and successful casual games that are played by more than 300,000 users every day. We appreciate our achievements, team and accumulated expertise!"
+      }
+    ],
+    "decision": "Не включать: Kosmos Games (Cyprus) Ltd",
+    "primary": "https://kosmos.games/privacy/"
+  },
+  {
+    "batch": "games",
+    "host": "nebula-gaming.com",
+    "url": "https://nebula-gaming.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2gJOVNemjvTLiFI3h00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.nebula-gaming.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.nebula-gaming.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.nebula-gaming.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "Не включать: редирект на сайт другого назначения",
+    "primary": "https://www.nebula-gaming.com/"
+  },
+  {
+    "batch": "games",
+    "host": "nv-games.com",
+    "url": "https://nv-games.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Efa8jZy0wHiDqe9000021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "red-square.org",
+    "url": "https://red-square.org/",
+    "evidence": "https://api.globalping.io/v1/measurements/237c3tOlAHtCfZFvA00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "vintorog.com",
+    "url": "https://vintorog.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2zYtyL0QuoEqfDBAa00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Винторог - студия разработки игр, портирование, образование и мероприятия в игровой индустрии"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Винторог - студия разработки игр, портирование, образование и мероприятия в игровой индустрии"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Винторог - студия разработки игр, портирование, образование и мероприятия в игровой индустрии"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://vintorog.com/"
+  },
+  {
+    "batch": "games",
+    "host": "wattstudio.art",
+    "url": "https://wattstudio.art/",
+    "probe_error": "no_probes_found"
+  },
+  {
+    "batch": "games",
+    "host": "wefiftytwo.com",
+    "url": "https://wefiftytwo.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2AC21CqlGGEsYyeHg00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "www.battlestategames.com",
+    "url": "https://www.battlestategames.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/28lRl73A3BD4FBj5Q00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Battlestate Games Limited"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Battlestate Games Limited"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Battlestate Games Limited"
+      }
+    ],
+    "decision": "Не включать: Battlestate Games Limited, UK",
+    "primary": "https://www.battlestategames.com/"
+  },
+  {
+    "batch": "games",
+    "host": "www.carx-tech.com",
+    "url": "https://www.carx-tech.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2qnbbo0HQtmk2Rttn00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": "https://carx-online.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": "https://carx-online.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": "https://carx-online.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "Отложено: ошибка TLS на алиасе; отдельно проверять актуальное имя",
+    "primary": "https://carx-online.com/"
+  },
+  {
+    "batch": "games",
+    "host": "www.herocraft.com",
+    "url": "https://www.herocraft.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2srQhow64e20kVSIR00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://herocraft.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://herocraft.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://herocraft.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "www.inkstainsgames.net",
+    "url": "https://www.inkstainsgames.net/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Sz4irZ4fpyrYDJlW00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "games",
+    "host": "www.morteshka.com",
+    "url": "https://www.morteshka.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/22kSiX9591VlYgULb00021VAO",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "newscope",
+    "host": "melnitsa.com",
+    "url": "https://melnitsa.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2iSkQHMgxS4lOL8Ic00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "newscope",
+    "host": "parovoz.tv",
+    "url": "https://parovoz.tv/",
+    "probe_error": "no_probes_found"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.parovoz.tv",
+    "url": "https://www.parovoz.tv/",
+    "evidence": "https://api.globalping.io/v1/measurements/2OsThVUxR2CAaqkBm00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://parovoz.tv/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://parovoz.tv/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://parovoz.tv/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://parovoz.tv/contact"
+  },
+  {
+    "batch": "newscope",
+    "host": "yarko.com",
+    "url": "https://yarko.com/",
+    "probe_error": "no_probes_found"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.100kwt.com",
+    "url": "https://www.100kwt.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2sEK8rMyfCIfXAr0b00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.100kwt.com/aboutus"
+  },
+  {
+    "batch": "newscope",
+    "host": "100kwt.com",
+    "url": "https://100kwt.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2rwDQsaBcT0KPseTU00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.100kwt.com/aboutus"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.sharstudio.com",
+    "url": "https://www.sharstudio.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2Iy4YLGd8OSIG5Bnn00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": null,
+        "title": "Домен не привязан к хостингу"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": null,
+        "title": "Домен не привязан к хостингу"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": false,
+        "tls_error": "ERR_TLS_CERT_ALTNAME_INVALID",
+        "status": "finished",
+        "location": null,
+        "title": "Домен не привязан к хостингу"
+      }
+    ],
+    "decision": "Не включать: парковка и ошибка TLS",
+    "primary": "https://www.sharstudio.com/"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.mechtalet.com",
+    "url": "https://www.mechtalet.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2IvEUAuUcYskBOp1d00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://mechtalet.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://mechtalet.com/",
+        "title": "301 Moved Permanently"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 301,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://mechtalet.com/",
+        "title": "301 Moved Permanently"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://mechtalet.com/contacts"
+  },
+  {
+    "batch": "newscope",
+    "host": "rgbrosstudio.com",
+    "url": "https://rgbrosstudio.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2syCQDm3q2C4TToc100021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "RGBros Studio"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "RGBros Studio"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "RGBros Studio"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://rgbrosstudio.com/"
+  },
+  {
+    "batch": "newscope",
+    "host": "rocketf.com",
+    "url": "https://rocketf.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/25u2vbEiWCKY2bS6a00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Рокет Фокс — независимая анимационная студия сериалов для детей"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Рокет Фокс — независимая анимационная студия сериалов для детей"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Рокет Фокс — независимая анимационная студия сериалов для детей"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://rocketf.com/"
+  },
+  {
+    "batch": "newscope",
+    "host": "multilandia.tv",
+    "url": "https://multilandia.tv/",
+    "evidence": "https://api.globalping.io/v1/measurements/28BUyevQx6NxTmZTr00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": null,
+        "tls": false,
+        "tls_error": null,
+        "status": "failed",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "отложено: не хватает сведений",
+    "primary": null
+  },
+  {
+    "batch": "newscope",
+    "host": "www.cerebrohq.com",
+    "url": "https://www.cerebrohq.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2aqP5ctDwkU9AxBxN00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.cerebrohq.com/en",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.cerebrohq.com/en",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://www.cerebrohq.com/en",
+        "title": "302 Found"
+      }
+    ],
+    "decision": "Отложено: цепочка редиректов не подтверждена",
+    "primary": "https://cerebrohq.com/ru/company/"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.cgfww.com",
+    "url": "https://www.cgfww.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2bxFus1n7NDZRbdPi00021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "CGF"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "CGF"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "CGF"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://www.cgfww.com/"
+  },
+  {
+    "batch": "newscope",
+    "host": "www.wizartanimation.com",
+    "url": "https://www.wizartanimation.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2cVaM1sRVDBGWs7M500021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 404,
+        "tls": false,
+        "tls_error": "DEPTH_ZERO_SELF_SIGNED_CERT",
+        "status": "finished",
+        "location": null,
+        "title": "404 Not Found"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 404,
+        "tls": false,
+        "tls_error": "DEPTH_ZERO_SELF_SIGNED_CERT",
+        "status": "finished",
+        "location": null,
+        "title": "404 Not Found"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 404,
+        "tls": false,
+        "tls_error": "DEPTH_ZERO_SELF_SIGNED_CERT",
+        "status": "finished",
+        "location": null,
+        "title": "404 Not Found"
+      }
+    ],
+    "decision": "Отложено: 404 и ошибка TLS",
+    "primary": "https://www.wizartanimation.com/"
+  },
+  {
+    "batch": "newscope",
+    "host": "konversta.com",
+    "url": "https://konversta.com/ru/",
+    "evidence": "https://api.globalping.io/v1/measurements/2WUaNoByks91vNMN500021VAQ",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Конверста | Цифровые технологии для логистики"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Конверста | Цифровые технологии для логистики"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Конверста | Цифровые технологии для логистики"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://konversta.com/ru/information/details/"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "parovoz.tv",
+    "url": "https://parovoz.tv/",
+    "evidence": "https://api.globalping.io/v1/measurements/2tmkfvaXf6ianK0EX00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная • Анимационная студия «Паровоз»"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная • Анимационная студия «Паровоз»"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная • Анимационная студия «Паровоз»"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://parovoz.tv/contact"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "mechtalet.com",
+    "url": "https://mechtalet.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2LntOo95irJdw4G9Z00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная - Анимационная студия «Мечталëт»"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная - Анимационная студия «Мечталëт»"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Главная - Анимационная студия «Мечталëт»"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://mechtalet.com/contacts"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "cerebrohq.com",
+    "url": "https://cerebrohq.com/ru/company/",
+    "evidence": "https://api.globalping.io/v1/measurements/2kYRYWj9fHLioE7yW00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      }
+    ],
+    "decision": "Отложено: цепочка редиректов не подтверждена",
+    "primary": "https://cerebrohq.com/ru/company/"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "www.cerebrohq.com",
+    "url": "https://www.cerebrohq.com/ru/company/",
+    "evidence": "https://api.globalping.io/v1/measurements/2TqNokCl7x4H91uFB00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 302,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": "https://cerebrohq.com/ru",
+        "title": "302 Found"
+      }
+    ],
+    "decision": "Отложено: цепочка редиректов не подтверждена",
+    "primary": "https://cerebrohq.com/ru/company/"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "www.nebula-gaming.com",
+    "url": "https://www.nebula-gaming.com/",
+    "evidence": "https://api.globalping.io/v1/measurements/2ZvSZIPqj2nGUr1Wm00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 502,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 502,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 502,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": ""
+      }
+    ],
+    "decision": "Не включать: поисковый снимок показывает крикет, живые пробы 502",
+    "primary": "https://www.nebula-gaming.com/"
+  },
+  {
+    "batch": "finalprobe",
+    "host": "cgfww.com",
+    "url": "https://cgfww.com/contact",
+    "evidence": "https://api.globalping.io/v1/measurements/2QGLbzKE5E5aSgO5k00021VAT",
+    "details": [
+      {
+        "country": "RU",
+        "asn": 12389,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Contact"
+      },
+      {
+        "country": "RU",
+        "asn": 3216,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Contact"
+      },
+      {
+        "country": "RU",
+        "asn": 207957,
+        "http": 200,
+        "tls": true,
+        "tls_error": null,
+        "status": "finished",
+        "location": null,
+        "title": "Contact"
+      }
+    ],
+    "decision": "принят по этой пробе",
+    "primary": "https://cgfww.com/contact"
+  }
+]
