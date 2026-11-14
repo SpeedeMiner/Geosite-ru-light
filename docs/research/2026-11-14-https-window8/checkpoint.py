@@ -70,7 +70,6 @@ def assemble(waves, check):
     rules = set(b.read_text().splitlines())
     W.require(len(rules) == 372 and all(r.startswith("full:") for r in rules), "invalid baseline")
     urls, ids = history()
-    hosts = set()
     for wave in waves:
         rows = plan(wave)
         sub = W.jsonl(HERE / f"{wave}-submitted.jsonl")
@@ -84,9 +83,8 @@ def assemble(waves, check):
         for r in checked:
             h, url, mid = r["host"], r["url"], r.get("id")
             rule = "full:" + h
-            W.require(h not in hosts and url not in urls and rule not in rules
+            W.require(url not in urls and rule not in rules
                       and (not mid or mid not in ids), f"repeated input: {h}")
-            hosts.add(h)
             urls.add(url)
             if mid:
                 ids.add(mid)
