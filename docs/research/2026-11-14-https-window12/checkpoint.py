@@ -21,14 +21,19 @@ BASE_SHA = "407821700c33ae794b2186a1bf9f6e138d565460639840c496e0db0373207246"
 
 
 def history():
-    urls, ids = C.history()
-    for f in PREV.glob("*-evidence-*.jsonl"):
-        for r in W.jsonl(f):
-            urls.add(r["url"])
-            if r.get("id"):
-                ids.add(r["id"])
+    # The previous checkpoint's supplemental scan is not scoped to its
+    # own historical cut. Reconstruct the same inputs without current/future files.
+    urls, ids = C.C.history()
+    for directory in (C.PREV, PREV):
+        for f in directory.glob("*-evidence-*.jsonl"):
+            for r in W.jsonl(f):
+                urls.add(r["url"])
+                if r.get("id"):
+                    ids.add(r["id"])
     for f in HERE.parent.rglob("*.tsv"):
-        if f.parent == HERE or ("decision" not in f.name and "status-all" not in f.name):
+        suffix = f.parent.name.removeprefix("2026-11-14-https-window")
+        if ((suffix.isdecimal() and int(suffix) >= 12)
+                or ("decision" not in f.name and "status-all" not in f.name)):
             continue
         with f.open() as stream:
             for r in csv.DictReader(stream, delimiter="\t"):

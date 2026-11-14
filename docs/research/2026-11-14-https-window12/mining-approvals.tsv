@@ -1,0 +1,3 @@
+host	id	operator_url	rationale
+igateway.ltd	26rBoB1GYCah2BLXN00021VHV	https://miningworld.kz/ru/vystavka/spisok-uchastnikov/details?link=0x81032e73ffa0137e11f0aa4ff774d369&Code=000036700	Во всех трёх сетях виден основной контактный блок с адресом в Алматы. Карточка организатора и БИН 980340000667 подтверждают местное ТОО iGateway Ltd; ссылки на зарубежные площадки не наследуются.
+www.igateway.ltd	2khbWu0mnKlK1iscz00021VHV	https://igateway.ltd/contact.html	Точное WWW независимо ответило во всех трёх сетях без редиректа, с тем же контактным блоком Алматы и валидным TLS.
