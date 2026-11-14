@@ -1,0 +1,21 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+seaarea.com	CN	registrars	https://seaarea.com	seaarea.com		https://www.nic.kz/ru/registrars/list				no	new_uncovered
+www.atakdomain.com	TR	registrars	https://www.atakdomain.com/ru	www.atakdomain.com		https://www.nic.kz/ru/registrars/list				no	new_uncovered
+active.domains	RU	registrars	https://active.domains	active.domains		https://www.nic.kz/ru/registrars/list				no	new_uncovered
+www.ahost.uz	UZ	registrars	https://www.ahost.uz	www.ahost.uz		https://www.nic.kz/ru/registrars/list				no	new_uncovered
+unihost.kz	KZ	registrars	https://unihost.kz	unihost.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+itgroup.kz	KZ	registrars	https://itgroup.kz	itgroup.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+megahost.kz	KZ	registrars	https://megahost.kz	megahost.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+www.cnet.kz	KZ	registrars	https://www.cnet.kz	www.cnet.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+hoster.kz	KZ	registrars	https://hoster.kz	hoster.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+www.ps.kz	KZ	registrars	https://www.ps.kz	www.ps.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+www.r01.ru	RU	registrars	https://www.r01.ru	www.r01.ru		https://www.nic.kz/ru/registrars/list	domain:ru	domain:ru		no	covered_both
+www.webnames.ru	RU	registrars	https://www.webnames.ru	www.webnames.ru		https://www.nic.kz/ru/registrars/list	domain:ru	domain:ru		no	covered_both
+www.reg.gov.kz	KZ	registrars	https://www.reg.gov.kz	www.reg.gov.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+www.idhost.kz	KZ	registrars	https://www.idhost.kz	www.idhost.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+www.bladeweb.kz	KZ	registrars	https://www.bladeweb.kz	www.bladeweb.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+zebratel.kz	KZ	registrars	https://zebratel.kz	zebratel.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+reg.edu.kz	KZ	registrars	https://reg.edu.kz	reg.edu.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+host24.kz	KZ	registrars	https://host24.kz	host24.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+reg.mail.kz	KZ	registrars	https://reg.mail.kz	reg.mail.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
+everet.kz	KZ	registrars	https://everet.kz	everet.kz		https://www.nic.kz/ru/registrars/list	domain:kz	domain:kz		no	covered_both
