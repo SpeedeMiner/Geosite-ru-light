@@ -1,0 +1,7 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+saulecompany.com	accept	KZ	https://saulecompany.com/partners/	2YbVYE3x8uyNnmYLm00021VGY	https://halaldamu.kz/company/saule/	ТОО «Кондитерская фабрика Сауле», Тараз, БИН 171240008583, из реестра экспортёров	На всех трёх российских ASN видны основной текст КФ Saule, оптовые продажи и экспорт; независимая карточка подтверждает производителя из Тараза.
+www.saulecompany.com	hold_redirect	KZ	https://www.saulecompany.com/contacts	2C5MW03dr4TTmUwsi00021VGY	https://saulecompany.com/	Старая витрина с тем же названием производителя, оператор проверяется отдельно	redirect
+www.gro.now	hold_content	KZ	https://www.gro.now/ru/legal/user-agreement	2El7Bb90K7ORvSqes00021VGY	https://www.gro.now/ru/legal/user-agreement	Соглашение называет ТОО «Pwron» БИН 241040012133, Алматы	api_truncated, short_visible_body
+gro.now	hold_redirect	KZ	https://gro.now/ru/legal/cookie-policy	2qHHqBnIAWZB9RLFH00021VGY	https://www.gro.now/ru/legal/cookie-policy	Политика называет точный apex и местного оператора, HTTP отдельно	redirect
+www.alageum.com	hold_redirect	KZ	https://www.alageum.com/ru/kompaniya/o-nas	2oq11BctHm3vOltxi00021VGY	https://old.goszakup.gov.kz/ru/registry/show_supplier/208121	Казахстанская группа, основной apex уже в RU, WWW не наследует доступность	redirect
+blog.pmserv.com	hold_transport	RU	https://blog.pmserv.com/our-contacts	25aB4oWeOFwFy6xyK00021VGY	https://www.pmserv.com/	Реквизиты ООО ИТЦ «Пищмашсервис», только точный вспомогательный сайт	tls_or_transport_unproven

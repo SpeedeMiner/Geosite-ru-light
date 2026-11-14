@@ -1,0 +1,6 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+www.pmserv.com	hold_content	RU	https://www.pmserv.com/catalog-our-products	23V5W984aJnhRE3j300021VGY	https://blog.pmserv.com/our-contacts	ООО ИТЦ «Пищмашсервис», каталог и собственные реквизиты	api_truncated, short_visible_body
+pmserv.com	hold_redirect	RU	https://pmserv.com/	2afKS3WYH64c7pjax00021VGY	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/383823?stand=13D190	Российское ООО, apex из карточки отдельно от WWW	redirect
+prodmashts.com	hold_content	RU	https://prodmashts.com/kontakty/	2ffKUUCOblfT44mcP00021VGY	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/383685?stand=13B245	ООО «Продмаш Техсервис», оператор производственного сайта	api_truncated, short_visible_body
+www.prodmashts.com	hold_redirect	RU	https://www.prodmashts.com/kontakty/	2fR0XELnxGzvVCcir00021VGY	https://prodmashts.com/kontakty/	Точный WWW из карточки, не наследует доступность apex	redirect
+www.rostzip.com	hold_redirect	RU	https://www.rostzip.com/contacts/	2gxnqGKaOKKBjGiBH00021VGY	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/384256?stand=13D192	WWW из карточки, проверяется самостоятельно	redirect

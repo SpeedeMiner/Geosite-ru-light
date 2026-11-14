@@ -1,0 +1,6 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+altaimai.com	hold_content	KZ	https://altaimai.com/aboutus-ru	2X4F3ElGQBFQyRTXY00021VGX	https://www.gov.kz/memleket/entities/moa/press/news/details/1125191?lang=ru	ТОО ALTAI MAI, Восточный Казахстан, подтверждено Минсельхозом	api_truncated, short_visible_body
+www.altaimai.com	hold_content	KZ	https://www.altaimai.com/	2tz9vAp0g9dBUhv6H00021VGX	https://altaimai.com/contact-ru	Производитель растительных масел в Казахстане, отдельная витрина	api_truncated, short_visible_body
+goprep.gg	hold_content	KZ	https://goprep.gg/ru/refund	2jd4p0chHjd82S4e400021VGX	https://astanahub.com/en/article/uchastniki-astana-hub-pobedili-v-chetyrekh-nominatsiiakh-ai-digital-bridge-awards-2026	ТОО ALEEM LABS БИН 250840008956, Шымкент, политика на том же сайте	api_truncated, short_visible_body
+www.rosholod.org	hold_content	RU	https://www.rosholod.org/about	2mceVhxBVplNb9rnk00021VGX	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/384293?stand=15D140	Альтернативный WWW российского дистрибьютора, отдельно от apex	api_truncated, short_visible_body
+signal-pack.com	hold_redirect	RU	https://signal-pack.com/contacts/	2ugr6fxiy4h9LCOn200021VGX	https://www.signal-pack.com/company/	ООО ВКП «Сигнал-Пак», apex отдельно от WWW	redirect
