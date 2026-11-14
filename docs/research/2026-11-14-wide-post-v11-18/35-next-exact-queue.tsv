@@ -8,3 +8,7 @@ priority	host	exact_url	primary_source	state
 2	tech.rocketfirm.com	https://tech.rocketfirm.com/about/history/	https://tech.rocketfirm.com/about/contacts/	New exact path; current firm site; not measured
 2	tulparpay.com	https://tulparpay.com/rules	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	New exact path; prior alternate body empty in samples
 2	www.nevainter.com	https://www.nevainter.com/organizers/	https://www.morport.com/rus/about/members	Two paths had application error; only recheck with reason to expect recovery
+1	falconkz.com	https://falconkz.com/kontakty/	https://kffanek.kz/too-falcon-logistic-group	KZ operator; root must be checked separately
+1	www.falconkz.com	https://www.falconkz.com/	https://kffanek.kz/too-falcon-logistic-group	Officially listed WWW; independent check
+1	tengizchevroil.com	https://tengizchevroil.com/contact-us	https://kffanek.kz/deystvitelnye	WWW covered, apex absent
+2	www.bairc.org	https://www.bairc.org/	https://www.iru.org/ru/novosti-i-spravochnye-materialy/spisok-chlenov-iru/bamap	Alternative exact name cited by IRU; no current result
