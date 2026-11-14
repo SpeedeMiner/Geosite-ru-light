@@ -35,6 +35,9 @@ class AuditTests(unittest.TestCase):
     def test_placeholder_and_encoding(self):
         self.assertEqual(probe("<title>Just a moment</title>")["state"],"challenge_or_placeholder")
         self.assertEqual(probe("<body>\ufffd</body>")["state"],"encoding_loss")
+    def test_policy_is_not_a_challenge(self):
+        body="<main>Good Brand Доступа к медицинским сведениям. "+("Набор данных ограничен. "*7)+"</main>"
+        self.assertEqual(probe(body)["state"],"body_marker_observed")
     def test_aaaa_only(self):
         r=item("",answers=[{"type":"A","value":"192.0.2.1"},{"type":"AAAA","value":"2001:db8::1"}])
         self.assertEqual(probe_summary(ROW,"dns",6,r)["dns_answers"],["2001:db8::1"])
