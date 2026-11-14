@@ -1,0 +1,9 @@
+full:business.tiyn.io
+full:hellopay.online
+full:salampay.com
+full:sendy.land
+full:tiyn.io
+full:unitedbanks.org
+full:www.hellopay.online
+full:www.sendy.land
+full:www.unitedbanks.org
