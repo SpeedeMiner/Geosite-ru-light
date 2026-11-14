@@ -20,12 +20,11 @@ from prepare import hostname,records
 API = "https://api.globalping.io/v1"
 ASNS = (3216,12389,207957)
 SAFE_ID=re.compile(r"[A-Za-z0-9_-]{1,100}\Z")
-ISSUE=re.compile(r"just a moment|checking your browser|access denied|captcha|domain is for sale|buy this domain|домен прода[её]тся|домен припаркован|сайт на обслуживании|database error|доступ.*ограничен",re.I)
+ISSUE=re.compile(r"just a moment|checking your browser|access denied|verify you are human|complete the captcha|domain is for sale|buy this domain|домен прода[её]тся|домен припаркован|сайт на обслуживании|database error|\bдоступ\s+(?:к\s+(?:сайту|ресурсу|странице)\s+)?ограничен\b",re.I)
 BODY_LIMIT=10000
 
 class Page(HTMLParser):
     HIDDEN={"head","script","style","svg","template","noscript"}
-    VOID={"area","base","br","col","embed","hr","img","input","link","meta","param","source","track","wbr"}
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.hidden=[]; self.main=[]; self.visible=[]; self.title=[]
@@ -132,7 +131,7 @@ def probe_summary(row,kind,requested,item):
                 visible_chars=len(visible),main_chars=len(principal),body_chars=len(body),
                 body_utf8_sha256=sha256(body.encode()).hexdigest() if body else None,
                 api_truncated=r.get("truncated"),encoding_loss=charset_loss,content_type=ctype,
-                markers=markers,title_markers=title_markers,challenge=challenge[0] if challenge else None,
+                markers=markers,title_markers=title_markers,challenge=challenge[0][:120] if challenge else None,
                 redirect_location=dest,redirect_host=redirect_host,redirect_followed=False)
 
 def request(path,payload=None):
