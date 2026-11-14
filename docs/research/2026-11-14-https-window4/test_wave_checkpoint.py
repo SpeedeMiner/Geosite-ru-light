@@ -72,6 +72,7 @@ class CheckpointTests(unittest.TestCase):
                     W, "previous_plan", return_value=[self.plan]):
                 W.save_jsonl(t / "a-evidence-01.jsonl", [self.r])
                 W.save_jsonl(t / "a-submitted.jsonl", [self.sub])
+                W.save_jsonl(t / "a-quota.jsonl", [{"hosts": 1, "remaining": 250, "reset": 100}])
                 W.save_tsv(t / "a-approvals.tsv", [], ("host", "id", "operator_url", "rationale"))
                 W.assemble(["a"])
                 self.assertIn("hold_review", (t / "a-decisions.tsv").read_text())
@@ -97,11 +98,20 @@ class CheckpointTests(unittest.TestCase):
                     W, "previous_plan", return_value=[self.plan]):
                 W.save_jsonl(t / "a-evidence-01.jsonl", [self.r])
                 W.save_jsonl(t / "a-submitted.jsonl", [self.sub])
+                W.save_jsonl(t / "a-quota.jsonl", [{"hosts": 1, "remaining": 250, "reset": 100}])
                 approval = dict(host=self.host, id="known", operator_url="https://elsewhere.example/",
                                 rationale="unrelated source")
                 W.save_tsv(t / "a-approvals.tsv", [approval], approval.keys())
                 with self.assertRaisesRegex(ValueError, "invalid operator approval"):
                     W.assemble(["a"])
+
+    def test_quota_requires_budget_and_reserve(self):
+        W.validate_quota("a", [self.plan] * 18, [{"hosts": 18, "remaining": 250, "reset": 60}])
+        for q in [{"hosts": 18, "remaining": 249, "reset": 60},
+                  {"hosts": 17, "remaining": 250, "reset": 60},
+                  {"hosts": 18, "remaining": 250, "reset": 0}]:
+            with self.subTest(quota=q), self.assertRaises(ValueError):
+                W.validate_quota("a", [self.plan] * 18, [q])
 
     def test_redact_query_credentials_and_non_http_redirects(self):
         self.assertEqual(W.sanitized("https://example.com/info?token=1#id"), "https://example.com/info")

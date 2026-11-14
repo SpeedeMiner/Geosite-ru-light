@@ -13,6 +13,7 @@ from urllib.parse import urlsplit, urlunsplit
 HERE = Path(__file__).resolve().parent
 PREV = HERE.parent / "2026-11-14-https-window3"
 ASNS = {3216, 12389, 207957}
+RESERVES = dict(a=196, b=118, c=40, d=19)
 STATES = {
     "https_candidate", "content_unproven", "http_not_200", "tls_or_transport_unproven",
     "invalid_measurement", "redirect", "not_submitted", "skipped_after_rate_limit",
@@ -119,10 +120,14 @@ def archive(wave, root):
     for r in rows:
         for p in r.get("probes", []):
             p["location"] = sanitized(p.get("location"))
+            # Raw HTML metadata is not needed for replaying the admission gate.
+            p.pop("og", None)
     for n in range(0, len(rows), 8):
         save_jsonl(HERE / f"{wave}-evidence-{1+n//8:02}.jsonl", rows[n:n+8])
     save_jsonl(HERE / f"{wave}-submitted.jsonl", submissions)
-    save_jsonl(HERE / f"{wave}-quota.jsonl", jsonl(root / "quota.jsonl"))
+    quota = jsonl(root / "quota.jsonl")
+    validate_quota(wave, plan, quota)
+    save_jsonl(HERE / f"{wave}-quota.jsonl", quota)
     print(wave, Counter(r["state"] for r in rows))
 
 
@@ -155,10 +160,18 @@ def exact_proof(r, submission):
                 f"probe gate not satisfied: {host} AS{p['asn']}")
 
 
+def validate_quota(wave, plan, quota):
+    require(len(quota) == 1 and quota[0]["hosts"] == len(plan)
+            and 3 * len(plan) + RESERVES[wave] <= quota[0]["remaining"] <= 250
+            and quota[0]["reset"] > 0, f"unexpected recorded quota for wave {wave}")
+
+
 def read_wave(wave):
     files = sorted(HERE.glob(f"{wave}-evidence-*.jsonl"))
     subs = jsonl(HERE / f"{wave}-submitted.jsonl")
-    rows = list(normalize_output(previous_plan(wave), [r for f in files for r in jsonl(f)], subs))
+    plan = previous_plan(wave)
+    validate_quota(wave, plan, jsonl(HERE / f"{wave}-quota.jsonl"))
+    rows = list(normalize_output(plan, [r for f in files for r in jsonl(f)], subs))
     return rows, index(subs, "host")
 
 
