@@ -4,6 +4,7 @@ import argparse
 from collections import Counter
 import csv
 from datetime import datetime
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -87,7 +88,12 @@ def sanitized(url):
 
 
 def previous_plan(wave):
-    return tsv(PREV / f"08-wave-{wave}.tsv")
+    name = f"08-wave-{wave}.tsv"
+    path = PREV / name
+    pins = dict(reversed(line.split("  ", 1))
+                for line in (HERE / "04-plan-pins.sha256sum").read_text().splitlines())
+    require(hashlib.sha256(path.read_bytes()).hexdigest() == pins[name], f"modified exact plan: {name}")
+    return tsv(path)
 
 
 def normalize_output(plan, records, submissions):
