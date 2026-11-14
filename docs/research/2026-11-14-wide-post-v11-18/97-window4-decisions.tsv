@@ -1,0 +1,563 @@
+host	scope	decision	exact_urls	measurement_ids	states	primary_source	reason
+a1.by	BY	covered_both				https://a1.by/	Совпадает с существующими правилами обоих релизных DAT.
+abaitv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+adant.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+aerr.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+agrocabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_zavod_agrokabel-5327	Совпадает с существующими правилами обоих релизных DAT.
+ahost.kz	KZ	covered_both				https://ahost.kz/	Совпадает с существующими правилами обоих релизных DAT.
+airaltay.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airkem.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airport-rzhevka.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airport.astrakhan.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airport.tomsk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airporteysk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+airtravel.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+akashi.cloud	KZ	hold_content	https://akashi.cloud/ru/about/|https://akashi.cloud/ru/construction-progress/	2u9w49ZG0RilviP7i00021VKD|2MMrhFYoERGee2zTN00021VKE	https_candidate|https_candidate	https://www.gov.kz/org/astana-uir/press/news/details/1299153?lang=ru	На двух официальных страницах идентичность доказана заголовком и независимым источником акимата, но в каждой из 6 отдельных проб только 26 видимых символов меню.
+akashi.pro	KZ	hold_content	https://akashi.pro/	215nQoN3bFKLqrxzj00021VKD	content_unproven	https://akashi.pro/	Отдельное точное имя. Нет доказанного содержимого из трёх сетей. Принадлежность не переносим с .cloud.
+akbiday.com		hold_tls					В прежней проверке одновременно не подтверждены доверие и SAN. В этой серии не повторяли тот же URL.
+akteatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+akzholtravel.com	KZ	approved_candidate	https://akzholtravel.com/ru/contacts/	2eZNBVm6dWjmurcFW00021VKI	https_candidate	https://akzholtravel.com/ru/contacts/	Карточка КТА и видимые контакты туроператора в Алматы; отдельный apex, без переадресации во всех трёх пробах.
+alcondc.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+alfaradio.by	BY	covered_both				https://alfaradio.by/about/contacts/	Совпадает с существующими правилами обоих релизных DAT.
+allons.kz	KZ	covered_both				https://allons.kz/site/about	Совпадает с существующими правилами обоих релизных DAT.
+alphacable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_alfakabel-7109	Совпадает с существующими правилами обоих релизных DAT.
+altaitv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+anyway.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+apkm.pro	RU	hold_https	https://apkm.pro/contacts/	2SHbanz8QsZPUluQ700021VKH	content_unproven	https://natamac.ru/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+apksmrf.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+aqjaiyqtv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+aqtobetv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+ar-bqs.ru	RU	covered_both				https://admblag.ru/information/ooo-abs-blagoveshchensk-soobshchaet-o-smene-domennogo-imeni-ofitsialnogo-sayta-mezhdunarodnogo-aerop/	Совпадает с существующими правилами обоих релизных DAT.
+arctictheater.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+areal-shp.com	RU	hold_https	https://areal-shp.com/	2EUXDO7ednAAj4ABC00021VKH	content_unproven	https://natamac.ru/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+aroninspace.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+artluxe-spb.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+artmuseum.karelia.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+asfaltmash.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+asko-kst.kz	KZ	covered_both				https://asko-kst.kz/	Совпадает с существующими правилами обоих релизных DAT.
+aspb.kz	KZ	covered_both				https://sskaz.kz/chleny-soyuza/	Совпадает с существующими правилами обоих релизных DAT.
+associaciasip.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+atlantlift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+att.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+atyrautv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+avagroup.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+avangard.by	BY	covered_both				https://avangard.by/	Совпадает с существующими правилами обоих релизных DAT.
+aviaperm.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+azhb.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+balapan.tv	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+balashiha-dramteatr.bitrix24.site	shared_review	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+base.dcunion.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+bcn.kz	KZ	covered_both				https://bcn.kz/contacts	Совпадает с существующими правилами обоих релизных DAT.
+becloud.by	BY	covered_both				https://providers.by/by-providers/becloud/	Совпадает с существующими правилами обоих релизных DAT.
+bel-orientir.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+beltime.by	BY	covered_both				https://beltime.by/ratings/map/	Совпадает с существующими правилами обоих релизных DAT.
+belur.ooo	RU	approved_candidate	https://belur.ooo/	2R7k6acHIYDilYN2m00021VKC	https_candidate	https://belur.ooo/	Список РЛО и видимый каталог лифтового оборудования, с контактами московского и челябинского офисов.
+bergauf.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+beton-beton.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+bi.group	KZ	covered_both				https://kase.kz/ru/listing/issuers/BIGR	Совпадает с существующими правилами обоих релизных DAT.
+bimlib.pro	RU	hold_https	https://bimlib.pro/legal/user_agreement	2N0CotDANWHNu2ebc00021VKI	content_unproven	https://natamac.ru/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+bitru.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+bonolit.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+c3solutions.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+caplex.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kapleks-6215	Совпадает с существующими правилами обоих релизных DAT.
+career.bilim.group	KZ	hold_content	https://career.bilim.group/vacancy/ru	2JqNZOnwlJJiZytGw00021VKB	content_unproven	https://bilim.group/about/ru	Третья публичная страница, список вакансий, не дала видимого содержимого в сохранённых ответах.
+career.slk-cement.com	RU	approved_candidate	https://career.slk-cement.com/	2x7mlVOIMzAv0ImbY00021VKI	https_candidate	https://career.slk-cement.com/	Отдельный публичный сайт вакансий ООО «СЛК Цемент». Видимые название компании, регион деятельности и навигация по вакансиям.
+carusel.tomsk.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+cementum.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+cmpro.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+colorplit.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+csmrk.kz	KZ	covered_both				https://csmrk.kz/public/ru	Совпадает с существующими правилами обоих релизных DAT.
+d-ostrov.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+datark.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+dcdeforum.kz	KZ	covered_both				https://dcdeforum.kz/uchastniki-0	Совпадает с существующими правилами обоих релизных DAT.
+dcdeforum.ru	RU	covered_both				https://dcdeforum.ru/participants	Совпадает с существующими правилами обоих релизных DAT.
+dcsummit.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+dcunion.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+dds.kz	KZ	covered_both				https://dds.kz/data-center-kazahtelekom/	Совпадает с существующими правилами обоих релизных DAT.
+demolition-nado.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+dfa.fintechru.org	RU	hold_content	https://dfa.fintechru.org/	2hErZM9RcIXoCNCY900021VKB	content_unproven	https://dfa.fintechru.org/contacts/	Точный сайт доступен по TLS, главная и контакты не подтвердили достаточную идентичность в телах проб.
+distribution.kaztrk.kz	KZ	covered_both				https://rtrk.kz/ru/about/	Совпадает с существующими правилами обоих релизных DAT.
+dmb.aero	KZ	covered_both				https://www.gov.kz/article/625?lang=ru	Совпадает с существующими правилами обоих релизных DAT.
+docs.ps.kz	KZ	covered_both				https://www.ps.kz/company/contacts	Совпадает с существующими правилами обоих релизных DAT.
+donrosha.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+dzenforest.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+e-museum.kz	KZ	covered_both				https://e-museum.kz/	Совпадает с существующими правилами обоих релизных DAT.
+ecabel.com	RU	covered_both				https://www.elektrokabel.ru/members/ooo_npp_inteh-6079	Совпадает с существующими правилами обоих релизных DAT.
+eccon.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+eedi.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+elevatek.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+elinar.ru	RU	covered_both				https://www.elektrokabel.ru/members/oao_holdingovaya_kompaniya_elinar-3133	Совпадает с существующими правилами обоих релизных DAT.
+elkacable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_okp_elka-kabel-6213	Совпадает с существующими правилами обоих релизных DAT.
+en-el.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+energy-aven.org	BY	queue				https://energy-aven.org/about/439	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+enplusgroup.com	scope_review	hold_scope				https://natamac.ru/members/	Источник приводит путь на сайте международной группы. Для точного hostname нужно отдельно проверить границы регионального использования.
+eonessi.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+erkon.moscow	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+ertistv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+euraros.com	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+euroliftmash.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+evrazsteel.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+expert-cable.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+expresspartner.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+factorleasing.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+farphor.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+fasonlit.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+filanco.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+finstore.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+firmapodiy.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+freestyle-tech.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+gazo-beton.org	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+geograf.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+gomelcable.com	BY	covered_both				https://www.elektrokabel.ru/members/soao_gomelkabel-3032	Совпадает с существующими правилами обоих релизных DAT.
+gostcable.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+goteatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+greenplatformkazakhstan.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+gydromix.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+habsans.com	RU	hold_https	https://habsans.com/kontakty	2SK5a8fFr5cPUnpXe00021VKI	content_unproven	https://www.elektrokabel.ru/members/ip_ivankevich_vera_vladimirovna-7115	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+hoster.by	BY	covered_both				https://hoster.by/	Совпадает с существующими правилами обоих релизных DAT.
+hotel-novocherkassk.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+hoteldom9.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+i-l.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+iaravia.ru	RU	covered_both				https://iaravia.ru/ob-aeroporte/way	Совпадает с существующими правилами обоих релизных DAT.
+ietc-electro.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+igardens.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+incab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_inkab-3046	Совпадает с существующими правилами обоих релизных DAT.
+inclusioncenter.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+inconkz.com		hold_content					Основная часть HTML отсутствует в прежних трёх пробах. Первичный материал найден, нужен пригодный независимый ответ.
+interpan.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+invamat.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+iqdata.center	RU	hold_https	https://iqdata.center/requisites/	2WFaoG8fF4RXEwgL200021VKE	content_unproven	https://dcunion.ru/chleny-i-uchastniki/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+isimplelab.com	RU	hold_content	https://isimplelab.com/privacy-policy/	2ItsZGJjSLRKSuMPl00021VKC	content_unproven	https://www.fintechru.org/about/	Политика и лицензии дали 200 и заголовок, но видимого тела нет. Действующий .ru уже покрыт.
+jambyltv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+kahman.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+kamlab.kz	KZ	covered_both				https://kamlab.kz/ru	Совпадает с существующими правилами обоих релизных DAT.
+kaskad.tv	RU	queue				https://kaskad.tv/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+kazelektrokabel.kz	KZ	covered_both				https://kazelektrokabel.kz/contacts.html	Совпадает с существующими правилами обоих релизных DAT.
+kazenergy.com	KZ	queue				https://kazenergy.com/association/chleny-assotsiatsii/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+kazkabel.kz	KZ	covered_both				https://www.elektrokabel.ru/members/ao_kazenergokabel-3035	Совпадает с существующими правилами обоих релизных DAT.
+kazrenergy.com	KZ	queue				https://kazrenergy.com/members	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+kazsolarenergy.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+kazteleport.kz	KZ	covered_both				https://kazteleport.kz/	Совпадает с существующими правилами обоих релизных DAT.
+keaz.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+kntplast.com	RU	hold_https	https://kntplast.com/contacts	2b8K1bNp0VitB6tPE00021VKH	content_unproven	https://natamac.ru/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+kokshetv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+krost.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+ksk-grupp.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_ksk-grupp-6068	Совпадает с существующими правилами обоих релизных DAT.
+kubancabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_kabelnyiy_zavod_kubankabel-3055	Совпадает с существующими правилами обоих релизных DAT.
+kuklateatr.www.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+kus.kz	KZ	covered_both				https://kase.kz/ru/listing/issuers/KSYS	Совпадает с существующими правилами обоих релизных DAT.
+lcmrus.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+leasing-belarus.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+leasing-expert.by	BY	covered_both				https://leasing-expert.by/	Совпадает с существующими правилами обоих релизных DAT.
+lencabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_lenkabel-6069	Совпадает с существующими правилами обоих релизных DAT.
+letaem.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+levelgroup-rb.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+library.rusmuseum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+lift-neiron.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+liftorg.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+lir.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+lokoz.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+lommeta.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+lovitour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+lzspb.com	RU	hold_content	https://lzspb.com/contacts/|https://lzspb.com/about/	2MJGIcAUPxsQC5qmK00021VKC|2vNfV6CaQdFOJFh9v00021VKE	content_unproven|content_unproven	https://ela-lift.ru/members	Контакты и «О заводе» отдают подходящий заголовок, но в телах проб нет полезного текста.
+machunit.com	RU	approved_candidate	https://machunit.com/contacts/	2iSh5Cshe4DNkB8yX00021VKC	https_candidate	https://machunit.com/contacts/	Прямая ссылка ЕЛА, контакты российского разработчика, рабочая навигация и совпадающий юридический контекст.
+mangystautv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+mega-tour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+mercure-rostov-na-donu-tsentr.ruhotel.su	shared_review	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+metall-inzh.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+meyerhold.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+miachkovo.com	RU	queue				https://miachkovo.com/kontakty/	Аэродром публикует действующую страницу контактов. Нужен первый тройной HTTPS-замер точного apex.
+mkf.mkm.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_moskabel-fudjikura-4952	Совпадает с существующими правилами обоих релизных DAT.
+modifikator.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+mosizolyator.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_izolyator_aks-5949	Совпадает с существующими правилами обоих релизных DAT.
+ms31.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+mzpm.net	RU	hold_https	https://mzpm.net/	26BMgTqY9ocQkPeLQ00021VKC	tls_or_transport_unproven	https://rlolift.ru/list	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+nationalbank.kz	KZ	covered_both				https://nationalbank.kz/	Совпадает с существующими правилами обоих релизных DAT.
+neotour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+nevskylift.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+nicstm.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+niisf.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+nmrk.kz	KZ	covered_both				https://nmrk.kz/ru/about-museum/normative-legal-acts/	Совпадает с существующими правилами обоих релизных DAT.
+npf-lke.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+npoar.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+nuoao.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+nym.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_konkord-4382	Совпадает с существующими правилами обоих релизных DAT.
+obltv.ru	RU	covered_both				https://obltv.ru/company	Совпадает с существующими правилами обоих релизных DAT.
+okb-gamma.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_okb_gamma-4383	Совпадает с существующими правилами обоих релизных DAT.
+ontustiktv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+oooppz.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+opticenergo.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_optikenergo-3066	Совпадает с существующими правилами обоих релизных DAT.
+orelkabel.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+ort-tv.ru	RU	covered_both				https://ort-tv.ru/about/	Совпадает с существующими правилами обоих релизных DAT.
+osobnjak.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+parnaslift.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+plastrain.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+pokomplex.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+polyplast-un.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+poptm.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_po_zavod_penztekstilmash-3122	Совпадает с существующими правилами обоих релизных DAT.
+potato-russia.com	RU	hold_content	https://potato-russia.com/about	2YLlKcivT2yXfMc3j00021VKB	content_unproven	https://potato-russia.com/about	Страница о выставке, как и две прежние, не дала видимого тела.
+privod.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+procurement.gov.kz	KZ	covered_both				https://procurement.gov.kz/ru/registry/show_supplier/425121	Совпадает с существующими правилами обоих релизных DAT.
+project.grafika-eng.com	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+provincehotels.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+pulkovoairport.ru	RU	covered_both				https://pulkovoairport.ru/about/contacts/	Совпадает с существующими правилами обоих релизных DAT.
+qazaqgreen.com	KZ	queue				https://qazaqgreen.com/contacts/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+qazaqgreen.kz	KZ	covered_both				https://qazaqgreen.kz/ru/contacts	Совпадает с существующими правилами обоих релизных DAT.
+qazaqstan.tv	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+qazenergo.kz	KZ	covered_both				https://qazenergo.kz/contacts	Совпадает с существующими правилами обоих релизных DAT.
+qazindustry.gov.kz	KZ	covered_both				https://qazindustry.gov.kz/v2/ru/ktp-register	Совпадает с существующими правилами обоих релизных DAT.
+qazradio.fm	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+qazsporttv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+qostanaitv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+qyzyljartv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+qyzylordatv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+ramsqz.com	KZ	hold_https	https://ramsqz.com/ru/support	24ZJsn7u8K00La0rz00021VKG	content_unproven	https://ramsqz.com/ru/home	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+rapex-org.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+raww.ru	RU	covered_both				https://raww.ru/ob-assocziaczii/chlenyi-assocziaczii.html	Совпадает с существующими правилами обоих релизных DAT.
+regcab.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+regtorg.com		hold_encoding					Для повторной оценки нужен исходный Windows-1251, а не ответ API с потерянными буквами.
+remz.cab	RU	hold_content	https://remz.cab/kontakty/	2iaXhhDxKI1BaORHd00021VKK	content_unproven	https://natamac.ru/members/	Контакты получили три валидных ответа 200, но тело не содержит видимого текста.
+rietumu-leasing.by	BY	covered_both				https://rietumu-leasing.by/	Совпадает с существующими правилами обоих релизных DAT.
+rmgallery.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+rnd.blablahostels.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+romana.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+roofers-union.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+rosizol.org	RU	hold_https	https://rosizol.org/contacts	2TItUm1UqNTRnkkrS00021VKH	content_unproven	https://natamac.ru/members/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+ru.prysmiangroup.com	scope_review	hold_scope				https://www.elektrokabel.ru/members/ooo_prismian_rus-3359	Локализованный корпоративный хост из двух карточек. Текущая связь с указанными операторами и охват требуют проверки.
+rusfiber.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_optikovolokonnyie_sistemyi-4384	Совпадает с существующими правилами обоих релизных DAT.
+rusmuseum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+rusmuseumvrm.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+rusoil.net	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+rwl.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+rytech.pro	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+saint-gobain.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+saryarqatv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+sbl-leasing.by	BY	covered_both				https://sbl-leasing.by/news/srochnaya-novost-/	Совпадает с существующими правилами обоих релизных DAT.
+segz.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+selcab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_po_smolenskelektrokabel-6214	Совпадает с существующими правилами обоих релизных DAT.
+semeitv.kz	KZ	covered_both				https://rtrk.kz/kz/info-law-assets/	Совпадает с существующими правилами обоих релизных DAT.
+sensata.kz	KZ	covered_both				https://sensata.kz/contacts	Совпадает с существующими правилами обоих релизных DAT.
+sherton.ruhotel.su	shared_review	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+sht.spb.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+sibinformburo.ru	RU	covered_both				https://sibinformburo.ru/about/	Совпадает с существующими правилами обоих релизных DAT.
+skt-g.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_skt_grupp-5930	Совпадает с существующими правилами обоих релизных DAT.
+slavinvest.org	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+slk-cement.com	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+slz-lift.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+smart-e.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+smlab.digital	RU	hold_tls	https://smlab.digital/kontakty	2O9deditMixcEVeKG00021VKB	tls_or_transport_unproven	https://apkit.ru/about/members/	Контакты содержат бренд и ответ 200, но цепочка не доверена во всех трёх сетях.
+smoktravel.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+soccom.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_sokk-5929	Совпадает с существующими правилами обоих релизных DAT.
+solarway.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+sololiftplast.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+soyuzrp.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+sp-praktika.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+spb-lift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+srtplus.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+sskaz.kz	KZ	covered_both				https://sskaz.kz/chleny-soyuza/	Совпадает с существующими правилами обоих релизных DAT.
+stalverk.net	RU	hold_identity				https://www.elektrokabel.ru/members/ooo_stalverk-7065	В карточке Сталверк, текущая страница озаглавлена ПромИнвест. Нужны доказательства связи либо исключение.
+statuscenter.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+stdarh.ru	RU	covered_both				https://stdrf.ru/regioni/	Совпадает с существующими правилами обоих релизных DAT.
+stdbr.ru	RU	covered_both				https://stdrf.ru/regioni/	Совпадает с существующими правилами обоих релизных DAT.
+stdrh.ru	RU	covered_both				https://stdrf.ru/regioni/	Совпадает с существующими правилами обоих релизных DAT.
+supr.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_supr-6066	Совпадает с существующими правилами обоих релизных DAT.
+svo.su	RU	covered_both				https://www.mskagency.ru/materials/3523201	Совпадает с существующими правилами обоих релизных DAT.
+systeme.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+t-leasing.by	BY	covered_both				https://t-leasing.by/	Совпадает с существующими правилами обоих релизных DAT.
+tarkett.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+tdme.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+tdst.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+teatr-mirt.narod.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+teatr-versia.tomsk.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+teatrdveo.tilda.ws	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+teatrodicapua.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+teatrpodmostki.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+technadzor62.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+tehstroi.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+tempesto.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+theballettheatre.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+tikkurila.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+tlzavod.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+toplift24.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+toptour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+traktorodetal.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+transenergo.nnov.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+trastinfo.com	RU	hold_https	https://trastinfo.com/	28cJ865LByVg1z14j00021VKE	tls_or_transport_unproven	https://dcunion.ru/chleny-i-uchastniki/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+trastlift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+travelhub.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+travelmy.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+trustinfo.net	RU	hold_https	https://trustinfo.net/contacts/	2brnOBRWwqlyU9eTJ00021VKE	tls_or_transport_unproven	https://dcunion.ru/chleny-i-uchastniki/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+trustinfo.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+tsheat.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_pk_ts_polyus-5948	Совпадает с существующими правилами обоих релизных DAT.
+tv-gubernia.ru	RU	covered_both				https://tv-gubernia.ru/o_kompanii/	Совпадает с существующими правилами обоих релизных DAT.
+ugaga.by	BY	covered_both				https://ugaga.by/vylety-prilety/	Совпадает с существующими правилами обоих релизных DAT.
+uglichcable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_uglichkabel-4953	Совпадает с существующими правилами обоих релизных DAT.
+united.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+uptrade.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+ura.aero	KZ	covered_both				https://www.gov.kz/article/625?lang=ru	Совпадает с существующими правилами обоих релизных DAT.
+uralcsd.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+utkino.com	RU	hold_https	https://utkino.com/kontakty/	2E2pNBd4OrmkgIF1o00021VKI	content_unproven	https://hospitality-prof.ru/apig/chleny-associacii/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+vao.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+vellift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+vestplast.com	RU	covered_both				https://www.elektrokabel.ru/members/ooo_zavod_vestplast-4958	Совпадает с существующими правилами обоих релизных DAT.
+vhz31.ru	RU	covered_both				https://www.elektrokabel.ru/members/pao_vladimirskiy_himicheskiy_zavod-3114	Совпадает с существующими правилами обоих релизных DAT.
+vim-cable.com	RU	hold_legacy	https://vim-cable.com/	2LI9ELeysmyBVnZdV00021VKI	tls_or_transport_unproven	https://www.elektrokabel.ru/members/ooo_vim-kabel-3039	Историческая ссылка отраслевого каталога не ответила. Действующий vimcable.ru уже покрыт.
+visa.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+vkcloud.kz	KZ	covered_both				https://vkcloud.kz/	Совпадает с существующими правилами обоих релизных DAT.
+vlc.by	BY	covered_both				https://leasing-belarus.by/ob-associacii/struktura/	Совпадает с существующими правилами обоих релизных DAT.
+vlp.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+vm.kemsu.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+weld.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+welltour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+witchel.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+woodwill.moscow	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.2ky.tomsk.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.321.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.abakan-airport.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.abstour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.adant.ru	RU	covered_both				https://dcunion.ru/chleny-i-uchastniki/	Совпадает с существующими правилами обоих релизных DAT.
+www.adit.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.aerobratsk.narod.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aerochita.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aeroomsk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aeroport-74.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aeroport-rostov.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.agiogk.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.airkhv.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airmagnitka.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airoport.orenair.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-begishevo.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-kaliningrad.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-magadan.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-murmansk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-norilsk.ru	RU	covered_both				https://www.airport-norilsk.ru/ob-aeroporte/contacts/	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-surgut.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport-yakutsk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport.bryansk.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airport.samara.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airportbaikal.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airportufa.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.airportus.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aka-group.com	scope_review	hold_scope				https://greenplatformkazakhstan.kz/ru/about/chleny	Членство локальной организации не доказывает, что глобальный сайт обслуживает только целевые регионы.
+www.akcable.kz	KZ	covered_both				https://www.akcable.kz/	Совпадает с существующими правилами обоих релизных DAT.
+www.akron-holding.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_akron_holding-5642	Совпадает с существующими правилами обоих релизных DAT.
+www.akzholtravel.com	KZ	approved_candidate	https://www.akzholtravel.com/en/news/item/271/	2ciaXWpcpcgSfuoDk00021VKI	https_candidate	https://www.akzholtravel.com/en/news/item/271/	Отдельный WWW без редиректа: видимые туристические услуги в Казахстане и новости казахстанского оператора; подтверждён отдельно от apex.
+www.alatantour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.allons.rtb.kz	KZ	covered_both				https://allons.kz/site/about	Совпадает с существующими правилами обоих релизных DAT.
+www.altema46.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.alur.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kabelnyiy_zavod_alyur-3037	Совпадает с существующими правилами обоих релизных DAT.
+www.alykel.org	catalogue_historical	hold_legacy				https://expressaero.ru/airport/air_inter.html	Текущие контакты аэропорта Норильск размещены на www.airport-norilsk.ru, который уже покрыт.
+www.amadeus.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.amurobl.tv	RU	queue				https://www.amurobl.tv/about/mediakit	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.anapa-airport.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.apsochi.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.aquanet.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.arlekiniada.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.artcenteromsk.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.artrz.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.arts-museum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.artsstudio.com	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.atlas-1.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.avito.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.avtoprovod.com	BY	covered_both				https://www.elektrokabel.ru/members/oao_schuchinskiy_zavod_avtoprovod-3029	Совпадает с существующими правилами обоих релизных DAT.
+www.bashplast.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_bashplast-3348	Совпадает с существующими правилами обоих релизных DAT.
+www.belgorodavia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.beltelecabel.by	BY	covered_both				https://www.elektrokabel.ru/members/szao_beltelekabel-3031	Совпадает с существующими правилами обоих релизных DAT.
+www.bimlib.pro	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.blgair.fanvis.com	catalogue_historical	hold_legacy				https://expressaero.ru/airport/air_inter.html	Администрация Благовещенска ссылается на новое доменное имя ar-bqs.ru; старый адрес не активирован.
+www.boutiquehotel39.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+www.cathedral.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.cdrrb.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.cemix.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.chinacable.ru	scope_review	covered_both				https://www.elektrokabel.ru/members/ooo_gerasimov-6819	Совпадает с существующими правилами обоих релизных DAT.
+www.circus-antique.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.ck.mkm.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_zavod_moskabel-3059	Совпадает с существующими правилами обоих релизных DAT.
+www.clubvertical.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+www.complete.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.coral.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.cstroy.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.culture.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.dagair.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.dedal-provod.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_dedal-provod-5737	Совпадает с существующими правилами обоих релизных DAT.
+www.domodedovo.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.don-plaza.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+www.du.tj	TJ	reject_scope				https://natamac.ru/members/	Источник указывает на сайт в домене Таджикистана. Нет отдельной атрибуции к RU, KZ или BY.
+www.ecotour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.elkab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_elkab-kabelnyiy_zavod-3096	Совпадает с существующими правилами обоих релизных DAT.
+www.elkat.mkm.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_elkat-3097	Совпадает с существующими правилами обоих релизных DAT.
+www.elprovod.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_elektroprovod-3094	Совпадает с существующими правилами обоих релизных DAT.
+www.energokab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_zavod_energokabel-3098	Совпадает с существующими правилами обоих релизных DAT.
+www.enfant-terrible.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.esgpartners.kz	KZ	covered_both				https://greenplatformkazakhstan.kz/ru/about/chleny	Совпадает с существующими правилами обоих релизных DAT.
+www.eskizy.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.etour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.expert-cable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kabelnyiy_zavod_ekspert-kabel-7001	Совпадает с существующими правилами обоих релизных DAT.
+www.expocable.ru	RU	covered_both				https://www.elektrokabel.ru/members/oao_ekspokabel-3092	Совпадает с существующими правилами обоих релизных DAT.
+www.farabtourism.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.farial.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_tolyattinskiy_kabelnyiy_zavod-5940	Совпадает с существующими правилами обоих релизных DAT.
+www.favorit-travel.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.funnybell.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.future.museum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.gallery.permonline.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.gazo-beton.org	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.globalair-kz.com	KZ	hold_legacy	https://www.globalair-kz.com/	2u6Zpe1qyKWR85Cmv00021VKI	tls_or_transport_unproven	https://old.kaztour-association.com/kta2-4_1.htm	Старая ссылка КТА не прошла транспортную проверку. Опубликованный действующий адрес globalair.kz уже покрыт суффиксом.
+www.globotour.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.gmgs.spb.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.gold-theatre.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.goldentour.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.hermitagemuseum.org	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.hilti.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.hotel-platov.ru	RU	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+www.icmglass.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.icon-art.info	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.iktport.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.ilas.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.intercity.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.iqdata.center	RU	hold_https	https://www.iqdata.center/contacts/	24B5LshTisRMbfyIR00021VKE	content_unproven	https://dcunion.ru/chleny-i-uchastniki/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+www.itplus.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.ixcellerate.com	RU	hold_https	https://www.ixcellerate.com/requisites/|https://www.ixcellerate.com/contact-us/	2XaBoBUWpcA5N8TlJ00021VKD|2tCWXLWxNI6M618YK00021VKE	content_unproven|content_unproven	https://www.ixcellerate.com/requisites/	У наблюдений нет достаточного подтверждения содержимого и идентичности точного рабочего хоста.
+www.izhavia.udm.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.jewishmuseum.by	BY	covered_both				https://www.jewishmuseum.by/	Совпадает с существующими правилами обоих релизных DAT.
+www.k-flex.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.kabelarsenal.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.kamkabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kamskiy_kabel-7047	Совпадает с существующими правилами обоих релизных DAT.
+www.kamkat.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kamenskaya_katanka-4235	Совпадает с существующими правилами обоих релизных DAT.
+www.kantengri.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.kazkabel.kz	KZ	covered_both				https://www.elektrokabel.ru/members/ao_kazenergokabel-3035	Совпадает с существующими правилами обоих релизных DAT.
+www.kcab.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_kalujskiy_kabelnyiy_zavod-5736	Совпадает с существующими правилами обоих релизных DAT.
+www.kcp.kz	KZ	covered_both				https://kazenergy.com/association/chleny-assotsiatsii/	Совпадает с существующими правилами обоих релизных DAT.
+www.kdteatr.net	RU	hold_identity				https://reestr.stdrf.ru/reestr_list	На WWW опубликован театр, на apex индексируется несвязанный игровой контент. Нужны свежая точная проверка WWW и отсутствие редиректа.
+www.knauf.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.knaufinsulation.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.kogalymavia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.koltsovo.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.kolyada-theatre.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.kreml.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.kzktm.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_kabelnyiy_zavod_kavkazkabel_tm-3605	Совпадает с существующими правилами обоих релизных DAT.
+www.l-compaund.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_lider-kompaund-3350	Совпадает с существующими правилами обоих релизных DAT.
+www.led.aero	catalogue_historical	hold_legacy				https://expressaero.ru/airport/air_inter.html	Публичные контакты Пулково сейчас на pulkovoairport.ru; старый адрес не прошёл самостоятельной проверки.
+www.lekron.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_tehinvest-m-6928	Совпадает с существующими правилами обоих релизных DAT.
+www.lift-diagnostica.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+www.liftmach.by	BY	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+www.lipetsk-airport.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.lkds.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.ltclub.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.ludinovocable.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_lyudinovokabel-3056	Совпадает с существующими правилами обоих релизных DAT.
+www.lzspb.com	RU	hold_redirect	https://www.lzspb.com/	2vCExGmmk1uytbZYe00021VKC	redirect	https://rlolift.ru/list	В трёх измерениях только 301 на apex. Сам apex не допущен.
+www.magavia.com	BY	hold_legacy	https://www.magavia.com/	2Wyt5c4efPdEMmznv00021VKI	tls_or_transport_unproven	https://www.toursoyuz.by/members/	Каталог подписывает ссылку как .by, но ведёт на исторический .com. Текущий .by уже покрыт. .com не прошёл проверку.
+www.manege.spb.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.mav.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.megapir.info	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.melteatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.memoterm-mm.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_memoterm-mm-3118	Совпадает с существующими правилами обоих релизных DAT.
+www.meridiand.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.metro.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.miachkovo.com	catalogue_historical	hold_identity				https://expressaero.ru/airport/air_inter.html	Официальная страница подтверждена на apex, отдельный WWW не подтверждён.
+www.mio.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.mkm.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_moskabelmet-3060	Совпадает с существующими правилами обоих релизных DAT.
+www.moslift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.mosregionlift.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.mosvodokanal.ru	RU	covered_both				https://www.mosvodokanal.ru/press/smi/11906	Совпадает с существующими правилами обоих релизных DAT.
+www.mtheat.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.museum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.museum.vladimir.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.muzped.net	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.ncca.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.ncoc.kz	KZ	covered_both				https://www.ncoc.kz/ru/	Совпадает с существующими правилами обоих релизных DAT.
+www.new.anfas.biz	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.nlp-group.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.ntt.su	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.oblmuseums.spb.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.ommet.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.oreolkabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_oreol-5941	Совпадает с существующими правилами обоих релизных DAT.
+www.ostafyevo-airport.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.ostrov-teatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.otis.com	scope_review	reject_scope				https://natamac.ru/members/	Глобальный сайт международной группы. Региональная карточка не делает весь hostname локальным.
+www.otrar.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.panorama-production.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.paritet.su	RU	covered_both				https://www.elektrokabel.ru/members/ooo_torgovo-promyishlennyiy_dom_paritet-3067	Совпадает с существующими правилами обоих релизных DAT.
+www.pavlovskmuseum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.penoplex.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.pgz-dekor.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.phosagro.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.podolskkabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/oao_np_podolskkabel-3068	Совпадает с существующими правилами обоих релизных DAT.
+www.poleskazok.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.polyplastic.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.printsmuseum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.ps.kz	KZ	covered_both				https://www.ps.kz/company/contacts	Совпадает с существующими правилами обоих релизных DAT.
+www.radmuseumart.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.robinzon.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.roerich-museum.org	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.rosting.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.rusal.ru	RU	covered_both				https://www.elektrokabel.ru/members/oao_ok_rusal_td-3358	Совпадает с существующими правилами обоих релизных DAT.
+www.rusmuseum.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.rusmuseumshop.com	scope_review	queue				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.samaracable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_samarskaya_kabelnaya_kompaniya-3074	Совпадает с существующими правилами обоих релизных DAT.
+www.sanat.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.santushti.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.saravia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.sazi-group.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.sdk-kristall.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.severstal-avia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.sibkabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_sibkabel-3078	Совпадает с существующими правилами обоих релизных DAT.
+www.sidur.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.sil.by	BY	covered_both				https://www.sil.by/disclosure	Совпадает с существующими правилами обоих релизных DAT.
+www.silktour.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.sistemaservis.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_tatneft-kabel-3083	Совпадает с существующими правилами обоих релизных DAT.
+www.smartpotolok.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.sminex.com	RU	queue				https://natamac.ru/members/	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.softtour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.spbgasu.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.spetskabel.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_npp_spetskabel-3081	Совпадает с существующими правилами обоих релизных DAT.
+www.spkb.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_spkb_tehno-3082	Совпадает с существующими правилами обоих релизных DAT.
+www.spsss.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.srkplus.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.stanislavsky-centre.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.stantsia.com	RU	queue				https://reestr.stdrf.ru/reestr_list	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.stroystandart.su	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.svo.aero	catalogue_historical	hold_legacy				https://expressaero.ru/airport/air_inter.html	Пресс-служба аэропорта назвала новым адресом svo.su, который уже покрыт. Индекс старого URL указывает на новый.
+www.takoy-teatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.tamerlantour.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.tatlift.com	RU	hold_application_error	https://www.tatlift.com/	2n6e4OzhiPHBdk9Am00021VKC	http_not_200	https://ela-lift.ru/members	Бренд указан в реестре. Три независимых наблюдения вернули ошибку базы данных.
+www.tdvniikp.ru	RU	covered_both				https://www.elektrokabel.ru/members/zao_td_vniikp-3129	Совпадает с существующими правилами обоих релизных DAT.
+www.teatron.pro	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.temtour.com	KZ	hold_scope	https://www.temtour.com/	2GwXw35eqiWGMUs2T00021VKI	https_candidate	https://old.kaztour-association.com/kta2-4_1.htm	В трёх пробах международный сайт с турецко-ориентированной навигацией. Запись в старом КТА не доказывает локальный казахстанский портал.
+www.tjm.aero	catalogue_historical	queue				https://expressaero.ru/airport/air_inter.html	Сверено с DAT; отдельного доказательства на трёх ASN в этом окне нет.
+www.tk-teatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.tn.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.tolmachevo.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.tovtour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.transaerotours.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.transavia.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.transenergo.ru	RU	covered_both				https://www.elektrokabel.ru/members/ooo_transenergo-6566	Совпадает с существующими правилами обоих релизных DAT.
+www.travelclub.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.tretyakovgallery.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.tunoshna.com	catalogue_historical	hold_legacy				https://expressaero.ru/airport/air_inter.html	Нынешний официальный сайт аэропорта Золотое кольцо iaravia.ru уже покрыт.
+www.turanasia.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.tvercable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_tverenergokabel-3084	Совпадает с существующими правилами обоих релизных DAT.
+www.tzar.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.ugraavia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.ulvost.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.uralcable.ru	RU	covered_both				https://www.elektrokabel.ru/members/ao_uralkabel-3088	Совпадает с существующими правилами обоих релизных DAT.
+www.uralpodemnik.ru	RU	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+www.vampuka.com	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.vdt-vrn.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.ventart.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.viapol.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.vikab.by	BY	covered_both				https://www.elektrokabel.ru/members/ooo_po_energokomplekt-3034	Совпадает с существующими правилами обоих релизных DAT.
+www.vnukovo.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.voronezhavia.ru	catalogue_historical	covered_both				https://expressaero.ru/airport/air_inter.html	Совпадает с существующими правилами обоих релизных DAT.
+www.voztech.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+www.vsdn.ru	RU	covered_both				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Совпадает с существующими правилами обоих релизных DAT.
+www.vsk.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.vsuduteatr.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+www.vtour.by	BY	covered_both				https://www.toursoyuz.by/members/	Совпадает с существующими правилами обоих релизных DAT.
+www.wga.hu	HU	reject_scope				https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	Внешний архив из списка полезных ссылок, не сайт локального учреждения.
+www.yassawi.kz	KZ	covered_both				https://old.kaztour-association.com/kta2-4_1.htm	Совпадает с существующими правилами обоих релизных DAT.
+www.zavodmel.ru	RU	covered_both				https://rlolift.ru/list	Совпадает с существующими правилами обоих релизных DAT.
+yar.razlet.ru	RU	covered_both				https://yar.razlet.ru/	Совпадает с существующими правилами обоих релизных DAT.
+yellowkvadrat.ru	RU	covered_both				https://reestr.stdrf.ru/reestr_list	Совпадает с существующими правилами обоих релизных DAT.
+yzvi.ru	RU	covered_both				https://natamac.ru/members/	Совпадает с существующими правилами обоих релизных DAT.
+zaria.ucoz.ru	shared_review	covered_both				https://hospitality-prof.ru/apig/chleny-associacii/	Совпадает с существующими правилами обоих релизных DAT.
+zenit.by	BY	covered_both				https://ela-lift.ru/members	Совпадает с существующими правилами обоих релизных DAT.
+zhanataswpp.kz	KZ	covered_both				https://kazrenergy.com/members	Совпадает с существующими правилами обоих релизных DAT.
