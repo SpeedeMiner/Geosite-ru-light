@@ -57,6 +57,29 @@ class CheckpointTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             C.decision(invalid, s, a)
 
+    def test_first_batch_replays_and_updates_partition(self):
+        plans = C.plan()
+        source = C.HERE
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for f in source.glob("01-*"):
+                (root / f.name).write_bytes(f.read_bytes())
+            rows = [dict(r, state="not_submitted", api_status=0) for r in plans["first"]]
+            h = rows[0]["host"]
+            rows[0].update(state="content_unproven", id="new-proof", content_causes=["api_truncated"])
+            sub = [dict(host=h, url=rows[0]["url"], id="new-proof",
+                        submitted_at="2026-11-14T14:00:00+00:00")]
+            C.W.save_jsonl(root / "first-evidence-01.jsonl", rows)
+            C.W.save_jsonl(root / "first-quota.jsonl", [dict(hosts=10, remaining=250, reset=80)])
+            C.W.save_jsonl(root / "first-submitted.jsonl", sub)
+            C.W.save_tsv(root / "first-approvals.tsv", [], ("host", "id", "operator_url", "rationale"))
+            with patch.object(C, "HERE", root):
+                C.assemble(["first"])
+                C.assemble(["first"], check=True)
+            self.assertEqual(C.W.tsv(root / "first-decisions.tsv")[0]["decision"], "hold_content")
+            self.assertEqual(C.W.tsv(root / "first-decisions.tsv")[1]["decision"], "submission_unknown")
+            self.assertFalse((root / "candidate-358.txt").exists())
+
     def test_archive_refuses_result_replacement_and_missing_hosts(self):
         plans = C.plan()
         with tempfile.TemporaryDirectory() as folder:
