@@ -1,0 +1,26 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+akashi.cloud	KZ	dc	https://akashi.cloud/ru/about/	Akashi Data Center	Akashi Data Center	https://www.gov.kz/org/astana-uir/press/news/details/1299153?lang=ru				no	new_uncovered
+akashi.pro	KZ	dc	https://akashi.pro/	Akashi Khan Data Center	Akashi	https://akashi.pro/				no	new_uncovered
+kazteleport.kz	KZ	dc	https://kazteleport.kz/	Kazteleport	Kazteleport	https://kazteleport.kz/	domain:kz	domain:kz		no	covered_both
+dds.kz	KZ	dc	https://dds.kz/data-center-kazahtelekom/	Казахтелеком	Казахтелеком	https://dds.kz/data-center-kazahtelekom/	domain:kz	domain:kz		no	covered_both
+ahost.kz	KZ	dc	https://ahost.kz/	Ahost	Ahost	https://ahost.kz/	domain:kz	domain:kz		no	covered_both
+vkcloud.kz	KZ	dc	https://vkcloud.kz/	VK Cloud Казахстан	VK Cloud	https://vkcloud.kz/	domain:kz	domain:kz		no	covered_both
+www.allons.rtb.kz	KZ	dc	https://www.allons.rtb.kz/	Allons Telecom	Allons Telecom	https://allons.kz/site/about	domain:kz	domain:kz		no	covered_both
+allons.kz	KZ	dc	https://allons.kz/site/about	Allons Telecom	Allons Telecom	https://allons.kz/site/about	domain:kz	domain:kz		no	covered_both
+www.ps.kz	KZ	dc	https://www.ps.kz/company/contacts	PS Cloud Services	PS Cloud Services	https://www.ps.kz/company/contacts	domain:kz	domain:kz		no	covered_both
+docs.ps.kz	KZ	dc	https://docs.ps.kz/ru/data-center/data-center-overview/network-providers	PS Cloud Services	PS Cloud Services	https://www.ps.kz/company/contacts	domain:kz	domain:kz		no	covered_both
+www.ncoc.kz	KZ	dc	https://www.ncoc.kz/ru/	NCOC	NCOC	https://www.ncoc.kz/ru/	domain:kz	domain:kz		no	covered_both
+procurement.gov.kz	KZ	dc	https://procurement.gov.kz/ru/registry/show_supplier/425121	Freedom Data Centers	Freedom Data Centers	https://procurement.gov.kz/ru/registry/show_supplier/425121	domain:kz	domain:kz		no	covered_both
+dcdeforum.kz	KZ	dc	https://dcdeforum.kz/uchastniki-0	Data Center Design & Engineering	DCDE|Data Center	https://dcdeforum.kz/uchastniki-0	domain:kz	domain:kz		no	covered_both
+nationalbank.kz	KZ	dc	https://nationalbank.kz/	Национальный Банк Казахстана	Национальный Банк	https://nationalbank.kz/	domain:kz	domain:kz		no	covered_both
+www.ixcellerate.com	RU	dc	https://www.ixcellerate.com/requisites/	IXcellerate	IXcellerate	https://www.ixcellerate.com/requisites/				no	new_uncovered
+www.adant.ru	RU	dc	https://www.adant.ru/	Адант	ADANT	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+adant.ru	RU	dc	https://adant.ru/privacy	Адант	ADANT	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+dcunion.ru	RU	dc	https://dcunion.ru/chleny-i-uchastniki/	Ассоциация участников отрасли ЦОД	Ассоциация	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+base.dcunion.ru	RU	dc	https://base.dcunion.ru/	Ассоциация участников отрасли ЦОД	Ассоциация	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+dcdeforum.ru	RU	dc	https://dcdeforum.ru/participants	Data Center Design & Engineering	DCDE|Data Center	https://dcdeforum.ru/participants	domain:ru	domain:ru		no	covered_both
+dcsummit.ru	RU	dc	https://dcsummit.ru/	Ассоциация участников отрасли ЦОД	DCSummit	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+becloud.by	BY	dc	https://becloud.by/	beCloud	beCloud	https://providers.by/by-providers/becloud/	domain:by	domain:by		no	covered_both
+hoster.by	BY	dc	https://hoster.by/	hoster.by	hoster.by	https://hoster.by/	domain:by	domain:by		no	covered_both
+a1.by	BY	dc	https://a1.by/	A1	A1	https://a1.by/	domain:by	domain:by		no	covered_both
+beltime.by	BY	dc	https://beltime.by/ratings/map/	АВТИ	АВТИ	https://beltime.by/ratings/map/	domain:by	domain:by		no	covered_both
