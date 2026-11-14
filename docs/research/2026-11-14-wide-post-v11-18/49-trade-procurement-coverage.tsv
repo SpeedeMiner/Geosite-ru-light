@@ -1,0 +1,148 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+www.gaz-is.ru	RU	trust	https://www.gaz-is.ru/	【10†Общество с ограниченной ответственностью «Газинформсервис» (ООО «Газинформсервис»)†www.gaz-is.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+nces.by	BY	trust	https://nces.by/	【11†Национальный центр электронных услуг Республики Беларусь†nces.by】		https://dts.gov.kz/ru/registered_ru/	domain:by	domain:by		no	covered_both
+azintelecom.az	AZ	trust	https://azintelecom.az/	【12†Национальная третья сторона Азербайджанской Республики†azintelecom.az】		https://dts.gov.kz/ru/registered_ru/				no	new_uncovered
+pki.gov.kz	KZ	trust	https://pki.gov.kz/	【13†Национальный удостоверяющий центр Республики Казахстан†pki.gov.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+ucgo.gov.kz	KZ	trust	https://ucgo.gov.kz/	【14†Удостоверяющий центр государственных органов Республики Казахстан†ucgo.gov.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+ca.gamma.kz	KZ	trust	https://ca.gamma.kz/	【15†Удостоверяющий центр «Инфраструктура открытых ключей ТОО «НИЛ «Гамма Технологии»†ca.gamma.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+taxcom.ru	RU	trust	https://taxcom.ru/	【16†Общество с ограниченной ответственностью  «Такском» (ООО «Такском»)†taxcom.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+tensor.ru	RU	trust	https://tensor.ru/	【17†Общество с ограниченной ответственностью «Компания «Тензор» (ООО «Компания «Тензор»)†tensor.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+iitrust.ru	RU	trust	https://iitrust.ru/	【18†Удостоверяющий центр АО “Инфотекс Интернет Траст”†iitrust.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+kontur.ru	RU	trust	https://kontur.ru/	【19†Акционерное Общество «ПФ «СКБ Контур»†kontur.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+kontur-sertumpro.ru	RU	trust	https://kontur-sertumpro.ru/	【20†Общество с ограниченной ответственностью «Сертум-Про» (ООО «Сертум-Про»)†kontur-sertumpro.ru】		https://dts.gov.kz/ru/registered_ru/	domain:ru	domain:ru		no	covered_both
+goszakup.gov.kz	KZ	trust	https://goszakup.gov.kz/	【21†АИИС “Электронные государственные закупки Республики Казахстан”†goszakup.gov.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+idocs.kz	KZ	trust	https://idocs.kz/	【22†Товарищество с ограниченной ответственностью «IDOCSKZ»†idocs.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+metaera.kz	KZ	trust	https://metaera.kz/	【23†Товарищество с ограниченной ответственностью «МетаЭра»†metaera.kz】		https://dts.gov.kz/ru/registered_ru/	domain:kz	domain:kz		no	covered_both
+zakupki.gov.ru	RU	trade	https://zakupki.gov.ru/	Единая информационная система в сфере закупок (ЕИС)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sberbank-ast.ru	RU	trade	https://sberbank-ast.ru/	Сбербанк-АСТ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+roseltorg.ru	RU	trade	https://roseltorg.ru/	Росэлторг / Единая электронная торговая площадка (ЕЭТП)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+zakazrf.ru	RU	trade	https://zakazrf.ru/	ЗаказРФ (ZakazRF) Общероссийская система электронной торговли		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+rts-tender.ru	RU	trade	https://rts-tender.ru/	РТС-Тендер		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+www.fabrikant.ru	RU	trade	https://www.fabrikant.ru/	Фабрикант, секция 44-ФЗ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+lot-online.ru	RU	trade	https://lot-online.ru/	Российский аукционный дом (РАД)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tektorg.ru	RU	trade	https://tektorg.ru/	ТЭК-Торг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+gos.etpgpb.ru	RU	trade	https://gos.etpgpb.ru/	ЭТП ГПБ (Газпромбанк)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+new.etpgpb.ru	RU	trade	https://new.etpgpb.ru/	ЭТП ГПБ Закупки.Стратег — специализированная площадка для закрытых торгов		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+astgoz.ru	RU	trade	https://astgoz.ru/	АСТ ГОЗ (ГосОборонЗаказ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+zakupki.mos.ru	RU	trade	https://zakupki.mos.ru/	Портал поставщиков Москвы		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+agregatoreat.ru	RU	trade	https://agregatoreat.ru/	ЕАТ.РФ (Единый агрегатор торговли)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etprf.ru	RU	trade	https://etprf.ru/	Экосистема ЭТПРФ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp-avtodor.ru	RU	trade	https://etp-avtodor.ru/	Автодор-ТП		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+aistorg.ru	RU	trade	https://aistorg.ru/	АИСТ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+akosta.info	RU	trade	https://akosta.info/	АКОСТА info		https://ecp-shop.ru/listftp/				no	new_uncovered
+alfalot.ru	RU	trade	https://alfalot.ru/	Альфалот (Все секции)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ams.lotexpert.ru	RU	trade	https://ams.lotexpert.ru/	АМС-Сервис (ЛотЭксперт Pro)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+arbitat.ru	RU	trade	https://arbitat.ru/	Арбитат		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp.asgor.su	RU	trade	https://etp.asgor.su/	АСГОР		https://ecp-shop.ru/listftp/	domain:su	domain:su		no	covered_both
+eshop-ptz.ru	RU	trade	https://eshop-ptz.ru/	АСЭТ Электронный магазин Петрозаводского городского округа		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+au-pro.ru	RU	trade	https://au-pro.ru/	АукционПро (АукционPRO)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+aukcioncenter.ru	RU	trade	https://aukcioncenter.ru/	Аукцион-центр		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+a-k-d.ru	RU	trade	https://a-k-d.ru/	Аукционный Конкурсный Дом		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgidv.ru	RU	trade	https://torgidv.ru/	Аукционы Дальнего Востока		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ausib.ru	RU	trade	https://ausib.ru/	Аукционы Сибири		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+bepspb.ru	RU	trade	https://bepspb.ru/	Балтийская электронная площадка		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp-bankrotstvo.ru	RU	trade	https://etp-bankrotstvo.ru/	Банкротство РТ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+zakupki.butb.by	BY	trade	https://zakupki.butb.by/	Белорусская универсальная товарная биржа — Закупки		https://ecp-shop.ru/listftp/	domain:by	domain:by		no	covered_both
+vertrades.ru	RU	trade	https://vertrades.ru/	Вердиктъ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+vtb-center.ru	RU	trade	https://vtb-center.ru/	ВТБ-Центр		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+gazneftetorg.ru	RU	trade	https://gazneftetorg.ru/	ГАЗНЕФТЕТОРГ.РУ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+gostorgionline.ru	RU	trade	https://gostorgionline.ru/	Госторгионлайн		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgi.burzakup.ru	RU	trade	https://torgi.burzakup.ru/	Государственный заказ республики Бурятия		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+eurtp.ru	RU	trade	https://eurtp.ru/	Евразийская торговая площадка		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tender.eurotransstroy.ru	RU	trade	https://tender.eurotransstroy.ru/	ЕвроТрансСтрой (ЕТС)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+wt.udmr.ru	RU	trade	https://wt.udmr.ru/	Единая система закупок Удмуртской республики		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+estp.ru	RU	trade	https://estp.ru/	ЕСТП Универсальная электронная торговая площадка ESTP.RU		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+kim-atom.roseltorg.ru	RU	trade	https://kim-atom.roseltorg.ru/	ЕЭТП Корпоративный интернет-магазин ГК Росатом		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tender.pik.ru	RU	trade	https://tender.pik.ru/	Закупки Группы Компаний ПИК		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+gz-spb.ru	RU	trade	https://gz-spb.ru/	Закупки Петербурга		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+rb2b.ru	RU	trade	https://rb2b.ru/	Закупочные и маркетинговые системы RB2B.RU		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+commercial-technologies.ru	RU	trade	https://commercial-technologies.ru/	Коммерческие технологии		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgi82.ru	RU	trade	https://torgi82.ru/	Крымская ЭТП		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etplider.ru	RU	trade	https://etplider.ru/	Лидер		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+lot-sale.ru	RU	trade	https://lot-sale.ru/	Лот сэйл		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+astratorg.lotexpert.ru	RU	trade	https://astratorg.lotexpert.ru/	ЛотЭксперт Pro		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+webtorgi.samregion.ru	RU	trade	https://webtorgi.samregion.ru/	Малые закупки Самарской области		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+m-ets.ru	RU	trade	https://m-ets.ru/	Межрегиональная Электронная Торговая Система (МЭТС)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+meta-invest.ru	RU	trade	https://meta-invest.ru/	МЕТА-ИНВЕСТ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+goszakupki.by	BY	trade	https://goszakupki.by/	Национальный центр маркетинга Беларусии		https://ecp-shop.ru/listftp/	domain:by	domain:by		no	covered_both
+nwtender.ru	RU	trade	https://nwtender.ru/	НВ Тендер		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+nik24.online	RU	trade	https://nik24.online/	НИК24		https://ecp-shop.ru/listftp/				no	new_uncovered
+nistp.ru	RU	trade	https://nistp.ru/	НИС (Новые информационные сервисы)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+npovts.ru	RU	trade	https://npovts.ru/	НПО Верхневолжский торговый союз		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp-torgi.ru	RU	trade	https://etp-torgi.ru/	НЭП Имущественные торги		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+utpl.ru	RU	trade	https://utpl.ru/	Объединенная Торговая Площадка (ОТП)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sistematorg.com	RU	trade	https://sistematorg.com/	Объединенные системы торгов СИСТЕМАТОРГ		https://ecp-shop.ru/listftp/	full:sistematorg.com	full:sistematorg.com		no	covered_both
+otc.ru	RU	trade	https://otc.ru/	ОТС		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ptp-center.ru	RU	trade	https://ptp-center.ru/	Поволжская торговая площадка (ПТП-Центр)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+auction63.ru	RU	trade	https://auction63.ru/	Поволжский Аукционный Дом		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+promkonsalt.ru	RU	trade	https://promkonsalt.ru/	ПРОМ-Консалтинг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp-profit.ru	RU	trade	https://etp-profit.ru/	Профит		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp-region.ru	RU	trade	https://etp-region.ru/	РЕГИОН		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+gloriaservice.ru	RU	trade	https://gloriaservice.ru/	Регион «Глория Сервис»		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+regiontorgi.ru	RU	trade	https://regiontorgi.ru/	РегионТорг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+229etp.ru	RU	trade	https://229etp.ru/	РесТорг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+www.rosagroleasing.ru	RU	trade	https://www.rosagroleasing.ru/	Росагролизинг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp.rosseti.ru	RU	trade	https://etp.rosseti.ru/	Россети		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ru-trade24.ru	RU	trade	https://ru-trade24.ru/	РуТрейд24ру		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+debtfair.ru	RU	trade	https://debtfair.ru/	Рынок долгов		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgi.dfsamara.ru	RU	trade	https://torgi.dfsamara.ru/	Сайт городского округа Самара для осуществления закупок		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp.s-vfu.ru	RU	trade	https://etp.s-vfu.ru/	Северо-Восточный фед.университет им. Аммосова		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+agro.zakupki.tomsk.ru	RU	trade	https://agro.zakupki.tomsk.ru/	Сибирская Аграрная Группа		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sibtoptrade.ru	RU	trade	https://sibtoptrade.ru/	Сибирская торговая площадка		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+seltim.ru	RU	trade	https://seltim.ru/	Система Электронных Торгов Имуществом (СЭЛТИМ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sibprime.ru	RU	trade	https://sibprime.ru/	Система электронных торгов ООО Агрохолдинг Сибирский Премьер		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sakhaeltorg.ru	RU	trade	https://sakhaeltorg.ru/	Система электронных торгов республики Саха		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+itender-online.ru	RU	trade	https://itender-online.ru/	Система электронных торгов iTender		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+selt-online.ru	RU	trade	https://selt-online.ru/	Системы ЭЛектронных Торгов (СЭЛТ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+storgi.ru	RU	trade	https://storgi.ru/	СПЕЦТОРГИ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+stroytorgi.ru	RU	trade	https://stroytorgi.ru/	СтройТорги		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp.tatneft.ru	RU	trade	https://etp.tatneft.ru/	Татнефть		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tendergarant.com	RU	trade	https://tendergarant.com/	Тендер Гарант		https://ecp-shop.ru/listftp/				no	new_uncovered
+tender-ug.ru	RU	trade	https://tender-ug.ru/	Тендер-ЮГ		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tenderros.ru	RU	trade	https://tenderros.ru/	ТендерРос		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgi223.ru	RU	trade	https://torgi223.ru/	Торги 223		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp229.torgi-sila.ru	RU	trade	https://etp229.torgi-sila.ru/	ТОРГИ-СИЛА		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgi.org	RU	trade	https://torgi.org/	Торги.орг		https://ecp-shop.ru/listftp/				no	new_uncovered
+sstorg.ru	RU	trade	https://sstorg.ru/	Торговая Система Спецстройторг		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+zakupki.ugmk.com	RU	trade	https://zakupki.ugmk.com/	УГМК (Уральская Горно-Металлургическая Компания)		https://ecp-shop.ru/listftp/				no	new_uncovered
+etp.comita.ru	RU	trade	https://etp.comita.ru/	Универсальная электронная торговая площадка		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+umz-vrn.etc.ru	RU	trade	https://umz-vrn.etc.ru/	Управление муниципальных закупок города Воронеж		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+bankrupt.etpu.ru	RU	trade	https://bankrupt.etpu.ru/	Уральская электронная торговая площадка (УЭТП) секция 223-ФЗ, секция 127-ФЗ Банкротство (секция банкротство требует		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etpu.ru	RU	trade	https://etpu.ru/	Уральская электронная торговая площадка (УЭТП) секция 223-ФЗ, секция 127-ФЗ Банкротство (секция банкротство требует		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+federal1.ru	RU	trade	https://federal1.ru/	Федерация		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etpcaz.ru	RU	trade	https://etpcaz.ru/	Центр Автоматизации Закупок		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+cdtrf.ru	RU	trade	https://cdtrf.ru/	Центр дистанционных торгов (ЦДТ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+centerr.ru	RU	trade	https://centerr.ru/	Центр реализации		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+neb24.ru	RU	trade	https://neb24.ru/	Электронная национальная биржа		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ea.omskzakaz.ru	RU	trade	https://ea.omskzakaz.ru/	Электронные аукционы Сибири		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+el-torg.com	RU	trade	https://el-torg.com/	Электронные системы Поволжья (ЭСП)		https://ecp-shop.ru/listftp/	full:el-torg.com	full:el-torg.com		no	covered_both
+etp.eltox.ru	RU	trade	https://etp.eltox.ru/	Элтокс		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+eltorg.org	RU	trade	https://eltorg.org/	ЭЛТорг ЭТП		https://ecp-shop.ru/listftp/	full:eltorg.org	full:eltorg.org		no	covered_both
+zakupki.etalon-etp.ru	RU	trade	https://zakupki.etalon-etp.ru/	Эталон		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp223.ru	RU	trade	https://etp223.ru/	ЭТП 223		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp24torg.ru	RU	trade	https://etp24torg.ru/	ЭТП24		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+ets24.ru	RU	trade	https://ets24.ru/	ЭТС24		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etpugra.ru	RU	trade	https://etpugra.ru/	ЮГРА		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+torgibankrot.ru	RU	trade	https://torgibankrot.ru/	Южная ЭТП		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+agc.lotexpert.ru	RU	trade	https://agc.lotexpert.ru/	AGC Glass Unlimited		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+bashzakaz.ru	RU	trade	https://bashzakaz.ru/	BashZakaz.ru		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+el-torg.net	RU	trade	https://el-torg.net/	EL-TORG		https://ecp-shop.ru/listftp/				no	new_uncovered
+electro-torgi.ru	RU	trade	https://electro-torgi.ru/	ELECTRO-TORGI (электро-торги)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etpexpert.ru	RU	trade	https://etpexpert.ru/	EXPERT		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+portal.itradesystem.ru	RU	trade	https://portal.itradesystem.ru/	iTS-online (АЙТРЕЙДСИСТЕМ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+etp.kartoteka.ru	RU	trade	https://etp.kartoteka.ru/	KARTOTEKA.RU		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+onlinecontract.ru	RU	trade	https://onlinecontract.ru/	ONLINECONTRACT		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+market.otc.ru	RU	trade	https://market.otc.ru/	OTC-market		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+propertytrade.ru	RU	trade	https://propertytrade.ru/	Property Trade		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+region-ast.center	RU	trade	https://region-ast.center/	REGION-AST Региональная автоматизированная система торгов		https://ecp-shop.ru/listftp/				no	new_uncovered
+rhtorg.com	RU	trade	https://rhtorg.com/	Rhtorg.com		https://ecp-shop.ru/listftp/				no	new_uncovered
+rus-on.ru	RU	trade	https://rus-on.ru/	RUSSIA OnLine		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+sberb2b.ru	RU	trade	https://sberb2b.ru/	SberB2B		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+setonline.ru	RU	trade	https://setonline.ru/	Setonline (СЭТОНЛАЙН)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+tender.one	RU	trade	https://tender.one/	TENDER TECHNOLOGIES. Электронная торговая площадка (Только Арестованное имущество и 223-ФЗ)		https://ecp-shop.ru/listftp/	full:tender.one	full:tender.one		no	covered_both
+utender.ru	RU	trade	https://utender.ru/	uTender		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+atctrade.ru	RU	trade	https://atctrade.ru/	Аукционный тендерный центр (АТЦ)		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+regtorg.com	RU	trade	https://regtorg.com/	Регторг (Региональная торговая площадка)		https://ecp-shop.ru/listftp/				no	new_uncovered
+fabrikant.ru	RU	trade	https://fabrikant.ru/	"Фабрикант, секции: ""Закупки по 223-Ф3"", ""Коммерческие процедуры"", ""Торги по банкротству"""		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+eshoprzd.ru	RU	trade	https://eshoprzd.ru/	Электронный магазин ОАО РЖД		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
+b2b-center.ru	RU	trade	https://b2b-center.ru/	B2B-Center		https://ecp-shop.ru/listftp/	domain:ru	domain:ru		no	covered_both
