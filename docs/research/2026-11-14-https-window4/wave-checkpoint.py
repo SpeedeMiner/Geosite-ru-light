@@ -14,7 +14,7 @@ from urllib.parse import urlsplit, urlunsplit
 HERE = Path(__file__).resolve().parent
 PREV = HERE.parent / "2026-11-14-https-window3"
 ASNS = {3216, 12389, 207957}
-RESERVES = dict(a=196, b=118, c=40, d=19)
+RESERVES = dict(a=196, b=118, c=40, d=19, e=19)
 STATES = {
     "https_candidate", "content_unproven", "http_not_200", "tls_or_transport_unproven",
     "invalid_measurement", "redirect", "not_submitted", "skipped_after_rate_limit",
@@ -88,10 +88,13 @@ def sanitized(url):
 
 
 def previous_plan(wave):
-    name = f"08-wave-{wave}.tsv"
-    path = PREV / name
+    if wave == "e":
+        name, path, pin = "05-wave-e.tsv", HERE / "05-wave-e.tsv", "05-plan-pin.sha256sum"
+    else:
+        name = f"08-wave-{wave}.tsv"
+        path, pin = PREV / name, "04-plan-pins.sha256sum"
     pins = dict(reversed(line.split("  ", 1))
-                for line in (HERE / "04-plan-pins.sha256sum").read_text().splitlines())
+                for line in (HERE / pin).read_text().splitlines())
     require(hashlib.sha256(path.read_bytes()).hexdigest() == pins[name], f"modified exact plan: {name}")
     return tsv(path)
 
@@ -189,7 +192,7 @@ def load_base():
 
 
 def assemble(waves, check=False):
-    base, accepted, seen, ids = load_base(), set(), set(), set()
+    base, accepted, seen, ids, urls = load_base(), set(), set(), set(), set()
     for wave in waves:
         records, submit = read_wave(wave)
         approvals = index(tsv(HERE / f"{wave}-approvals.tsv"), "host")
@@ -197,8 +200,11 @@ def assemble(waves, check=False):
         decisions = []
         for r in records:
             host, mid = r["host"], r.get("id")
-            require(host not in seen and (not mid or mid not in ids), f"duplicate host or ID: {host}")
+            require((host not in seen or wave == "e") and r["url"] not in urls
+                    and (not mid or mid not in ids), f"duplicate host, URL or ID: {host}")
+            require("full:" + host not in base | accepted, f"unnecessary recheck: {host}")
             seen.add(host)
+            urls.add(r["url"])
             if mid:
                 ids.add(mid)
             decision = HOLDS.get(r["state"], "hold_measurement")
@@ -234,16 +240,16 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     commands = p.add_subparsers(dest="command", required=True)
     a = commands.add_parser("archive")
-    a.add_argument("wave", choices="abcd")
+    a.add_argument("wave", choices="abcde")
     a.add_argument("root", type=Path)
     c = commands.add_parser("assemble")
-    c.add_argument("waves", choices="abcd", nargs="+")
+    c.add_argument("waves", choices="abcde", nargs="+")
     c.add_argument("--check", action="store_true")
     args = p.parse_args()
     if args.command == "archive":
         archive(args.wave, args.root)
     else:
-        require(args.waves == list("abcd"[:len(args.waves)]), "use the ordered wave prefix A–D")
+        require(args.waves == list("abcde"[:len(args.waves)]), "use the ordered wave prefix A–E")
         assemble(args.waves, args.check)
 
 

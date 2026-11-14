@@ -26,7 +26,7 @@ def table(rs):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("waves", nargs="*", choices=["a", "b", "c", "d"])
+    p.add_argument("waves", nargs="*", choices=["a", "b", "c", "d", "e"])
     args = p.parse_args()
     original = set(table(rows(HALF / "12-next-https.tsv")))
     unmeasured = set(table(rows(OLDER / "98-remaining-unmeasured.tsv")))
@@ -42,7 +42,7 @@ def main():
         decisions = table(rows(HERE / f"{w}-decisions.tsv"))
         evidence = table([json.loads(l) for f in sorted(HERE.glob(f"{w}-evidence-*.jsonl"))
                           for l in f.read_text().splitlines()])
-        if decisions.keys() != evidence.keys() or raw_decisions.keys() & decisions.keys():
+        if decisions.keys() != evidence.keys() or (w != "e" and raw_decisions.keys() & decisions.keys()):
             raise ValueError("missing or duplicate decision")
         raw_decisions.update(decisions)
         for host, d in decisions.items():
