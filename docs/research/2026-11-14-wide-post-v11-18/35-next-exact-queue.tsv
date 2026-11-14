@@ -1,0 +1,10 @@
+priority	host	exact_url	primary_source	state
+1	active.domains	https://active.domains/contacts/	https://www.nic.kz/ru/registrars/list	Russian entity; not measured
+1	inconkz.com	https://inconkz.com/ru	https://procurement.gov.kz/ru/register/supplierreg/show/91233	KZ site; not measured
+1	rtlalliance.com	https://rtlalliance.com/o-nas/	https://fiata.org/directory/by/	BY host; new exact page, not measured
+1	yugmax.com	https://yugmax.com/	https://far-aerf.ru/chleny-associacii-2	Russian operator; not measured
+1	eskm.net	https://eskm.net/contacts/	https://far-aerf.ru/chleny-associacii-2	Russian operator site; not measured
+2	portal.inconkz.com	https://portal.inconkz.com/	https://inconkz.com/ru	Linked procurement portal; qualify public page and measure separately
+2	tech.rocketfirm.com	https://tech.rocketfirm.com/about/history/	https://tech.rocketfirm.com/about/contacts/	New exact path; current firm site; not measured
+2	tulparpay.com	https://tulparpay.com/rules	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	New exact path; prior alternate body empty in samples
+2	www.nevainter.com	https://www.nevainter.com/organizers/	https://www.morport.com/rus/about/members	Two paths had application error; only recheck with reason to expect recovery
