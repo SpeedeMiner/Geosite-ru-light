@@ -1,5 +1,6 @@
 host	scope	decision	exact_urls	measurement_ids	primary_source	reason
 active.domains	RU	queue			https://www.nic.kz/ru/registrars/list	No three-ASN observation in this window; verify current operator and exact URL first.
+avicenna.online	KZ	queue			https://avicenna.online/Privacy-Policy.html	No three-ASN observation in this window; verify current operator and exact URL first.
 bamp.org	BY	reject_identity			https://storage.yandexcloud.net/media.ite.group/transrussia.ru/files/TransRussia_SkladTech_2026_catalogue_light.pdf	The current site belongs to Bosnian American Medical Professionals, not the Belarusian association listed in an exhibition catalogue.
 barrusprojects.com	RU	hold_https	https://barrusprojects.com/ru/our-company/key-facts.php	2N9r72DUuvkkhPOuJ00021VJN	https://barrusprojects.com/ru/our-company/key-facts.php	No admitted observation matching the source-specific operator and body requirements.
 cont.eurosib.biz	RU	approved_candidate	https://cont.eurosib.biz/ru/contacts|https://cont.eurosib.biz/ru/regular-services	2tNUguFECVRCZcURh00021VJQ|2hBLe5txTx1BsrwVr00021VJR	https://cont.eurosib.biz/ru/contacts	Operator phone, mail and published logistics services observed; separate from existing exact eurosib.biz.
