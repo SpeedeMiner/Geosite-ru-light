@@ -1,0 +1,32 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+oxypay.kz	KZ	payments	https://oxypay.kz/	Oxy Pay	Oxy Pay|Oxypay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+tulparpay.com	KZ	payments	https://tulparpay.com/	Tulpar Payments	TulparPay|Tulpar Payments	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+greenleavespay.kz	KZ	payments	https://greenleavespay.kz/	Green Leaves Payments	Green Leaves	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+freedompay.kz	KZ	payments	https://freedompay.kz/kz	Freedom Pay	Freedom Pay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+paspay.kz	KZ	payments	https://paspay.kz/	Paspay	Paspay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+oson.com	KZ	payments	https://oson.com/int-ru	OSON Payments	OSON	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+marginplus.kz	KZ	payments	https://marginplus.kz/	Margin Plus	Margin	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+rocketpay.kz	KZ	payments	https://rocketpay.kz/	RocketPay	RocketPay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+www.moneypay.kz	KZ	payments	https://www.moneypay.kz/	MoneyPay	MoneyPay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+tiyn.io	KZ	payments	https://tiyn.io/	Система платежей TIYN	Tiyn	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+primewallet.kz	KZ	payments	https://primewallet.kz/	PrimePay	PrimeWallet	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+owallet.io	KZ	payments	https://owallet.io/	Open Trade	OWallet|Open Trade	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+cashbag.kz	KZ	payments	https://cashbag.kz/	Alem Pay	CashbaG|Alem Pay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+selby.kz	KZ	payments	https://selby.kz/	SELBY	Selby	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+payplus.kz	KZ	payments	https://payplus.kz/	PayPlus	PayPlus	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+kz.hillstarpay.com	KZ	payments	https://kz.hillstarpay.com/	Hillstar Payment Solutions	Hillstar	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana				no	new_uncovered
+www.nomapay.kz	KZ	payments	https://www.nomapay.kz/ru/	Nomapay	Nomapay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	domain:kz	domain:kz		no	covered_both
+dasend.kz	KZ	payments	https://dasend.kz/	DaSend	DaSend	https://dasend.kz/	domain:kz	domain:kz		no	covered_both
+exxus.kz	KZ	payments	https://exxus.kz/	EXXUS	EXXUS	https://exxus.kz/	domain:kz	domain:kz		no	covered_both
+primepay.kz	KZ	payments	https://primepay.kz/about	PrimePay	PrimePay	https://primepay.kz/about	domain:kz	domain:kz		no	covered_both
+xpay.by	BY	payments	https://xpay.by/	XPAY	XPAY	https://xpay.by/	domain:by	domain:by		no	covered_both
+payweb.by	BY	payments	https://payweb.by/ru	Payweb	Payweb	https://payweb.by/ru	domain:by	domain:by		no	covered_both
+salampay.com	RU	payments	https://salampay.com/legal/publichania-oferta	Салампэй	САЛАМПЭЙ|SalamPay	https://salampay.com/legal/publichania-oferta				no	new_uncovered
+compassplusonline.ru	RU	payments	https://compassplusonline.ru/processing-services/for-banks/payment-sistems	Компас Плюс Онлайн	Компас Плюс Онлайн	https://compassplusonline.ru/processing-services/for-banks/payment-sistems	domain:ru	domain:ru		no	covered_both
+help.atol.online	RU	payments	https://help.atol.online/article/12790	АТОЛ Онлайн	АТОЛ	https://www.atol.ru/solutions/e-commerce/	full:help.atol.online	full:help.atol.online		no	covered_both
+www.clockster.com	KZ	work	https://www.clockster.com/ru/contact	Clockster	Clockster	https://www.clockster.com/ru/contact				no	new_uncovered
+www.easytap.io	KZ	work	https://www.easytap.io/kz/ru/about	EasyTap	EasyTap	https://enbek.kz/ru/platform-work				no	new_uncovered
+apartx.co	KZ	work	https://apartx.co/	ApartX	ApartX	https://activat.vc/en/portfolio	full:apartx.co	full:apartx.co		yes	covered_both
+www.citix.me	KZ	industry	https://www.citix.me/	Citix	Citix	https://aaca.com.kz/members/citix				no	new_uncovered
+live03.edu.org.kz	KZ	education	https://live03.edu.org.kz/	Система дистанционного обучения	edu.org.kz	https://www.gov.kz/memleket/entities/edu/press/article/details/19664?directionId=3599&lang=ru	domain:kz	domain:kz		no	covered_both
+salemhr.kz	KZ	education	https://salemhr.kz/project-sirius/	Сириус	Сириус|Salem	https://www.gov.kz/memleket/entities/mangystau-edu/press/news/details/51872?lang=ru	domain:kz	domain:kz		no	covered_both
