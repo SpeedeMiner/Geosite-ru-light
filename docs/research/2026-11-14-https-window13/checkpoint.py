@@ -83,12 +83,16 @@ def assemble(waves, check):
         for r in checked:
             h, url, mid = r["host"], r["url"], r.get("id")
             rule = "full:" + h
-            W.require(url not in urls and rule not in rules
+            W.require(url not in urls
                       and (not mid or mid not in ids), f"repeated input: {h}")
             urls.add(url)
             if mid:
                 ids.add(mid)
-            verdict, reason = POLICY.decision(r, submitted.get(h), approvals.get(h))
+            if rule in rules:
+                W.require(h not in approvals, f"cannot approve an already covered rule: {h}")
+                verdict, reason = "already_in_candidate", f"control only; observed {r['state']}"
+            else:
+                verdict, reason = POLICY.decision(r, submitted.get(h), approvals.get(h))
             if verdict == "accept":
                 rules.add(rule)
             out.append(dict(host=h, decision=verdict, scope=r["scope"], url=url, id=mid or "",

@@ -1,0 +1,7 @@
+order	host	scope	url	primary	brand_marker	operator
+1	en.euro-stan.com	BY	https://en.euro-stan.com/contacts.html	https://belpromforum.by/spis/nov/evrostankom.html?ml=1	Euro-Stan|Evrostankom|Евростанком	Англоязычная страница отдельно от WWW, нужна видимая идентификация Минска
+2	www.etalontd.com	RU	https://www.etalontd.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377500?stand=11C092	Эталон|Etalon|Переславская	Домен указан российской фабрикой, проверяется собственная витрина
+3	www.doshirak.com	RU	https://www.doshirak.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377121?stand=7A010	Доширак|Doshirak	Отдельное точное имя, оператор не переносится на глобальный бренд
+4	www.cherkizovo.com	RU	https://www.cherkizovo.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377736?stand=9G020	Черкизово|Cherkizovo	WWW указан торговым домом, отдельно от покрытых национальных доменов
+5	alviilma.com	KZ	https://alviilma.com/catalog/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/378497?stand=7C204	АЛВИ ИЛМА|Alvi Ilma|FORJOY	Каталог продукции, не засчитывать название только в заголовке
+6	mzbn.com	BY	https://mzbn.com/en/news/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377206?stand=1B025	Минский завод|МЗБН|MZBN	Новости собственного предприятия, англоязычный список с материалами о заводе в Минске
