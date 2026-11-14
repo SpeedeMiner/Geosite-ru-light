@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+hold	candidate	inconkz.com	inconkz.com	https://inconkz.com/ru/glavnaya/kontakty	Integra Construction|Интегра	https://inconkz.com/ru
+hold	candidate	regtorg.com	regtorg.com	https://regtorg.com/info.html	Региональная торговая площадка	https://regtorg.com/info.html
+hold	candidate	akashi.cloud	akashi.cloud	https://akashi.cloud/ru/construction-progress/	Akashi Data Center	https://www.gov.kz/org/astana-uir/press/news/details/1299153?lang=ru
+suffix_sample	domain	get-ipv4.com	get-ipv4.com	https://get-ipv4.com/		https://get-ipv4.com/
+suffix_sample	domain	get-ipv6.com	get-ipv6.com	https://get-ipv6.com/		https://get-ipv6.com/
