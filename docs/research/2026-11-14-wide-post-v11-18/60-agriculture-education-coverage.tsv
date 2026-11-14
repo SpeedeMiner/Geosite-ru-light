@@ -1,0 +1,23 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+www.grainunion.kz	KZ	grain	https://www.grainunion.kz/ru/union-members	Зерновой союз Казахстана	Зерновой союз	https://www.grainunion.kz/ru/union-members	domain:kz	domain:kz		no	covered_both
+growers.kz	KZ	grain	https://growers.kz/pages/spisok-uchastnikov/	Союз зернопроизводителей Казахстана	Союз	https://growers.kz/pages/spisok-uchastnikov/	domain:kz	domain:kz		no	covered_both
+kaz-grain.kz	KZ	grain	https://kaz-grain.kz/	Ассоциация экспортёров KazGrain	KazGrain	https://kaz-grain.kz/	domain:kz	domain:kz		no	covered_both
+www.astyktrans.kz	KZ	grain	https://www.astyktrans.kz/	Астык Транс	Астык Транс	https://www.astyktrans.kz/	domain:kz	domain:kz		no	covered_both
+fcc.kz	KZ	grain	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	Продкорпорация	Продкорпорация	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	domain:kz	domain:kz		no	covered_both
+astyk-k.kz	KZ	grain	https://astyk-k.kz/	Астық қоймалары	Астық қоймалары	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	domain:kz	domain:kz		no	covered_both
+akbiday.com	KZ	grain	https://akbiday.com/	Ак Бидай-Терминал	Ак Бидай|Ak Biday	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/				no	new_uncovered
+p-grain-receipt.qoldau.kz	KZ	grain	https://p-grain-receipt.qoldau.kz/ru/gr-info/granaries	Сервис зерновых расписок	Зернохранилища	https://p-grain-receipt.qoldau.kz/ru/gr-info/granaries?flStatus=Active&p=7	domain:kz	domain:kz		no	covered_both
+agrobelarus.by	BY	dairy	https://agrobelarus.by/company/molochnaya_produktsiya_i_maslosyrodelie/	AgroBelarus	AgroBelarus	https://agrobelarus.by/company/molochnaya_produktsiya_i_maslosyrodelie/	domain:by	domain:by		no	covered_both
+savushkin.by	BY	dairy	https://savushkin.by/	Савушкин продукт	Савушкин	https://www.chefs.by/company/savushkin/	domain:by	domain:by		no	covered_both
+babushkina.by	BY	dairy	https://babushkina.by/	Бабушкина крынка	Бабушкина крынка	https://icatalog.expocentr.ru/ru/exhibitions/d3a90aa7-bdf4-11eb-80cc-a0d3c1fab97f/exhibitors/83296?stand=FD135	domain:by	domain:by		no	covered_both
+potato-russia.com	RU	agriculture	https://potato-russia.com/participants	Potato Russia	Potato Russia	https://potato-russia.com/participants				no	new_uncovered
+nsal.ru	RU	agriculture	https://nsal.ru/open	Национальный семенной альянс	Национальный семенной альянс	https://nsal.ru/open	domain:ru	domain:ru		no	covered_both
+anrsk-ssr.ru	RU	agriculture	https://anrsk-ssr.ru/	Ассоциация независимых российских семенных компаний	Ассоциация независимых	https://anrsk-ssr.ru/	domain:ru	domain:ru		no	covered_both
+my.edu.kz	KZ	education	https://my.edu.kz/	EDU.KZ	EDU.KZ	https://my.edu.kz/	domain:kz	domain:kz		no	covered_both
+ed.mail.kz	KZ	education	https://ed.mail.kz/public/ru	EDU.KZ	EDU.KZ	https://ed.mail.kz/public/ru	domain:kz	domain:kz		no	covered_both
+bilim.group	KZ	education	https://bilim.group/about/ru	Bilim Group	Bilim Group	https://bilim.group/about/ru	full:bilim.group	full:bilim.group		no	covered_both
+career.bilim.group	KZ	education	https://career.bilim.group/	Bilim Group	Bilim Group	https://bilim.group/about/ru				no	new_uncovered
+www.qazedu.kz	KZ	education	https://www.qazedu.kz/	Ассоциация руководителей учебных заведений	Ассоциация руководителей	https://www.qazedu.kz/	domain:kz	domain:kz		no	covered_both
+edumarket.digital	RU	education	https://edumarket.digital/	Исследование рынка онлайн-образования	Исследование российского рынка	https://edumarket.digital/				no	new_uncovered
+aedonline.ru	RU	education	https://aedonline.ru/	Ассоциация развития онлайн-образования	Ассоциация	https://aedonline.ru/	domain:ru	domain:ru		no	covered_both
+study.edtechs.ru	RU	education	https://study.edtechs.ru/	Smart Ranking	Smart Ranking	https://study.edtechs.ru/	domain:ru	domain:ru		no	covered_both
