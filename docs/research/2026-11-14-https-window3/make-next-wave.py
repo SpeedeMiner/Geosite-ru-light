@@ -10,8 +10,8 @@ HERE = Path(__file__).resolve().parent
 PREV = HERE.parent / "2026-11-14-https-window2"
 HALF = HERE.parent / "2026-11-14-halfhour"
 FIRST = 18
-FIRST_TIME_LIMIT = 56
-RETRY_LIMIT = 20
+FIRST_TIME_LIMIT = 58
+RETRY_LIMIT = 18
 RESERVE = 19
 
 def rows(path):
@@ -56,7 +56,7 @@ def main():
     assert set(ops) == set(before) and set(review) == set(held) - {"germesplit.com"}
     assert len(accepted) == 34 and len(ops) == 81 and len(review) == 44
     assert Counter(r["status"] for r in ops.values()) == {
-        "ready": 56, "hold_operator": 18, "hold_alias": 5, "hold_content": 2,
+        "ready": 58, "hold_operator": 17, "hold_alias": 4, "hold_content": 2,
     }
     assert Counter(r["status"] for r in review.values()) == {
         "alternate": 35, "hold_alias": 3, "hold_content": 5, "hold_transport": 1,
@@ -95,15 +95,15 @@ def main():
     assert len(rest_new) + n_first_new == FIRST_TIME_LIMIT and len(rest_retry) == 26
     assert 3 * (len(first) + len(rest_new) + (RETRY_LIMIT - n_first_retry)) + RESERVE == 250
     batches = (("08-wave-a.tsv", first),
-               ("08-wave-b.tsv", rest_new[:24]),
-               ("08-wave-c.tsv", rest_new[24:]),
+               ("08-wave-b.tsv", rest_new[:25]),
+               ("08-wave-c.tsv", rest_new[25:]),
                ("08-wave-d.tsv", rest_retry[:RETRY_LIMIT - n_first_retry]),
                ("08-wave-later.tsv", rest_retry[RETRY_LIMIT - n_first_retry:]))
     for file, records in batches:
         save(HERE / file, records)
     print("First quota:", [len(rs) for _, rs in batches[:-1]], "reserve", RESERVE, "tests")
     print("Future quota:", len(batches[-1][1]), "measured holds with another path")
-    assert len({r["host"] for _, rs in batches for r in rs}) == 92
+    assert len({r["host"] for _, rs in batches for r in rs}) == 94
 
 if __name__ == "__main__":
     main()
