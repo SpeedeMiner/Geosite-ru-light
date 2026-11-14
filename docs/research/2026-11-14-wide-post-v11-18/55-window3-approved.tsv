@@ -1,0 +1,10 @@
+host	proved_url	reason
+avicenna.online	https://avicenna.online/Privacy-Policy.html	Политика бренда на точном хосте называет Cushpen Group и Казахстан. Контент и идентичность сервиса подтверждены; корпоративный cushpengroup.com не включается по аналогии.
+baipm.com	https://baipm.com/15-aipm/about/205-contact	Публичные реквизиты белорусской ассоциации: название и адрес в Минске; три ответа с отраслевой навигацией.
+eskm.net	https://eskm.net/contacts/	Контактная страница именует российскую корпорацию ЭСКМ; контакты и навигация в трёх ответах.
+ru.geropharm.com	https://ru.geropharm.com/press/contacts	Русская версия ГЕРОФАРМ на отдельном хосте: бренд и продуктовая навигация в трёх ответах.
+solopharm.com	https://solopharm.com/about/contacts	Маркированные контакты российского производителя и навигация, без редиректа.
+tengizchevroil.com	https://tengizchevroil.com/company	Официальная страница казахстанского оператора на apex. На /company и /contact-us по три подтверждённых ответа; ранее включённый www остаётся без изменений.
+www.el-torg.com	https://www.el-torg.com/	Отдельный публичный WWW хост оператора «Электронные системы Поволжья» с валидным TLS и содержимым. Apex уже покрыт.
+www.fintechru.org	https://www.fintechru.org/about/	Публичная страница российской Ассоциации ФинТех; заголовок, бренд и содержательная навигация совпадают по трём сетям.
+www.valentapharm.com	https://www.valentapharm.com/contacts/	Публичные контакты российского фармпроизводителя, название и адрес офиса. Измерен WWW, не вся доменная зона.
