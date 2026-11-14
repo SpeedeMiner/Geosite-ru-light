@@ -1,0 +1,11 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+www.signal-pack.com	hold_content	RU	https://www.signal-pack.com/include/licenses_detail.php	2uKt4PEjA7T90ZyKb00021VGn	https://www.signal-pack.com/include/licenses_detail.php	Уральский машиностроительный завод Сигнал-Пак, соглашение и реквизиты	api_truncated, short_visible_body
+amyl.pro	hold_review	RU	https://amyl.pro/kontaktyi	20xEudw08pXu0Mur600021VGn	https://amyl.pro/	ООО Амил, страница контактов вместо шапки	https_candidate
+www.amyl.pro	hold_review	RU	https://www.amyl.pro/kontaktyi	2FjnCj9F5w7toTono00021VGn	https://amyl.pro/	ООО Амил, точный WWW отдельно	https_candidate
+avangard.global	hold_content	RU	https://avangard.global/about-us/	2hcSEJrAgyZuQpJ7200021VGn	https://avangard.global/contacts/	Производитель фасовочного оборудования, другой раздел сайта	api_truncated, short_visible_body
+altaimai.com	hold_content	KZ	https://altaimai.com/contact-ru	2LQxRssL4o6cCTPGX00021VGo	https://qic.kz/ru/novosti-i-insayty/a-full-cycle-oil-extraction-plant-with-a-capacity-of-500-tons-per-day-opened-in-ust-kamenogorsk/	ТОО ALTAI MAI, Восточный Казахстан, отдельная страница контактов	api_truncated, short_visible_body
+goprep.gg	hold_content	KZ	https://goprep.gg/en/refund	2XxalrJY8DcFEVxlv00021VGo	https://goprep.gg/ru/refund	Казахстанский оператор EdTech, без распространения на внешних обработчиков	api_truncated, short_visible_body
+qazexpopipe.com	hold_content	KZ	https://qazexpopipe.com/en/products/	2uJ7F2CegnjWzwAxU00021VGo	https://old.goszakup.gov.kz/ru/registry/show_supplier/287184	ТОО QazExpoCentre-Pipe, другая версия каталога	api_truncated, short_visible_body, brand_missing
+prodmashts.com	hold_content	RU	https://prodmashts.com/about/o-kompanii/	2UejkevqpZwxVl5fx00021VGo	https://prodmashts.com/kontakty/	Оператор ПродмашТехсервис, альтернативная страница	api_truncated, short_visible_body
+mzbn.com	hold_content	BY	https://mzbn.com/en/	2e2y2ii9sZh8xEZ1Y00021VGo	https://mzbn.com/information/	Минский завод безалкогольных напитков, наблюдаемая англоязычная цель редиректа	api_truncated, short_visible_body, brand_missing
+digitalbridge.ai	hold_content	KZ	https://digitalbridge.ai/ru/battle26/	2NT2mHN3NNWPCV7h200021VGo	https://www.gov.kz/org/maidd/press/news/details/1181123?lang=ru	Казахстанский форум и конкурс, точная русская страница	api_truncated, short_visible_body
