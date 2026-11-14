@@ -1,0 +1,20 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+greenplatformkazakhstan.kz	KZ	energy	https://greenplatformkazakhstan.kz/ru/about/chleny	Green Platform Kazakhstan	Green Platform	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+eedi.kz	KZ	energy	https://eedi.kz/	Национальный центр энергосбережения	энергосбережения	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+vao.kz	KZ	energy	https://vao.kz/	VAO group	VAO group	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+www.esgpartners.kz	KZ	energy	https://www.esgpartners.kz/	Global ESG Partnership	Global ESG Partnership	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+solarway.kz	KZ	energy	https://solarway.kz/	SolarWay-A	SolarWay	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+kazsolarenergy.kz	KZ	energy	https://kazsolarenergy.kz/	Алсана	Алсана	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+www.aka-group.com	scope_review	energy	https://www.aka-group.com/contact-info/	AKA Energy Systems	AKA Energy Systems	https://greenplatformkazakhstan.kz/ru/about/chleny				no	new_uncovered
+smart-e.kz	KZ	energy	https://smart-e.kz/	Smart Energy Systems	Smart Energy Systems	https://greenplatformkazakhstan.kz/ru/about/chleny	domain:kz	domain:kz		no	covered_both
+kazrenergy.com	KZ	energy	https://kazrenergy.com/members	АВЭК	АВЭК	https://kazrenergy.com/members				no	new_uncovered
+kazenergy.com	KZ	energy	https://kazenergy.com/association/chleny-assotsiatsii/	KAZENERGY	KAZENERGY	https://kazenergy.com/association/chleny-assotsiatsii/				no	new_uncovered
+kamlab.kz	KZ	laboratory	https://kamlab.kz/ru	Казахстанская Ассоциация Медицинских Лабораторий	Лабораторий	https://kamlab.kz/ru	domain:kz	domain:kz		no	covered_both
+qazaqgreen.com	KZ	energy	https://qazaqgreen.com/contacts/	Qazaq Green	Qazaq Green	https://qazaqgreen.com/contacts/				no	new_uncovered
+qazaqgreen.kz	KZ	energy	https://qazaqgreen.kz/ru/contacts	Qazaq Green	Qazaq Green	https://qazaqgreen.kz/ru/contacts	domain:kz	domain:kz		no	covered_both
+kus.kz	KZ	energy	https://kus.kz/kontakty/	Казахстанские коммунальные системы	Казахстанские коммунальные	https://kase.kz/ru/listing/issuers/KSYS	domain:kz	domain:kz		no	covered_both
+zhanataswpp.kz	KZ	energy	https://zhanataswpp.kz/o-kompanii	Жанатасская ВЭС	Жанатасская	https://kazrenergy.com/members	domain:kz	domain:kz		no	covered_both
+www.kcp.kz	KZ	energy	https://www.kcp.kz/?language=ru	Казахстанско-Китайский Трубопровод	Трубопровод	https://kazenergy.com/association/chleny-assotsiatsii/	domain:kz	domain:kz		no	covered_both
+energy-aven.org	BY	energy	https://energy-aven.org/about/439	Ассоциация Возобновляемая энергетика	Возобновляемая энергетика	https://energy-aven.org/about/439				no	new_uncovered
+raww.ru	RU	water	https://raww.ru/ob-assocziaczii/chlenyi-assocziaczii.html	РАВВ	РАВВ	https://raww.ru/ob-assocziaczii/chlenyi-assocziaczii.html	domain:ru	domain:ru		no	covered_both
+www.mosvodokanal.ru	RU	water	https://www.mosvodokanal.ru/press/smi/11906	Мосводоканал	Мосводоканал	https://www.mosvodokanal.ru/press/smi/11906	domain:ru	domain:ru		no	covered_both
