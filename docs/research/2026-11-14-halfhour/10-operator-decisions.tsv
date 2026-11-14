@@ -1,0 +1,5 @@
+host	decision	scope	reason	source
+korolab.pro	defer	RU	Есть ссылка организатора и российский контакт, но актуальный публичный ответ на точном имени не подтверждён.	https://korolab.pro/
+www.artamonovafilters.com	defer	RU	Ссылка из каталога не подтверждает текущую рабочую страницу точного www.	https://www.artamonovafilters.com/
+www.kareliansummer.com	defer	RU	Оператор в каталоге местный, но точная текущая витрина из рабочего окружения не подтверждена.	https://www.kareliansummer.com/
+www.pkfmayak.com	defer	RU	Каталог указывает российское предприятие, однако точный www в доступных источниках не открывается.	https://www.pkfmayak.com/
