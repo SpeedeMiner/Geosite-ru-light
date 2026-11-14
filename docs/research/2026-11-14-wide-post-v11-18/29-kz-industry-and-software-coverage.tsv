@@ -1,0 +1,21 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+karlskrona.kz	KZ	industry	https://karlskrona.kz/about/	KARLSKRONA	KARLSKRONA	https://kazservice.kz/union-members-by-industry	domain:kz	domain:kz		no	covered_both
+hydroserv.kz	KZ	industry	https://hydroserv.kz/	Hydroserv Central Asia	Hydroserv	https://petrocouncil.kz/ru/chlen-soveta/hydroserv-central-asia	domain:kz	domain:kz		no	covered_both
+texol.kz	KZ	industry	https://texol.kz/ru	TEXOL	TEXOL	https://petrocouncil.kz/ru/chlen-soveta/texol-group	domain:kz	domain:kz		no	covered_both
+texolgroup.com	KZ	industry	https://texolgroup.com/	TEXOL	TEXOL	https://texol.kz/ru				no	new_uncovered
+texol.co	KZ	industry	https://texol.co/	TEXOL	TEXOL	https://texol.kz/ru				no	new_uncovered
+www.kmtf.kz	KZ	industry	https://www.kmtf.kz/ru/kontakty	Казмортрансфлот	Казмортрансфлот	https://kazservice.kz/union-members-by-industry	domain:kz	domain:kz		no	covered_both
+tenizservice.kz	KZ	industry	https://tenizservice.kz/kontakty-2/	ТенизСервис	ТенизСервис	https://ipo.sk.kz/privatization/passport/?company=too-tenizservis	domain:kz	domain:kz		no	covered_both
+inconkz.com	KZ	industry	https://inconkz.com/ru	Integra Construction KZ	Integra Construction	https://inconkz.com/ru				no	new_uncovered
+portal.inconkz.com	KZ	industry	https://portal.inconkz.com/	Integra Construction KZ	Integra Construction	https://inconkz.com/ru				no	new_uncovered
+eserv.kz	KZ	industry	https://eserv.kz/	Engineering Services	Engineering Services	https://sskaz.kz/engineering-services/	domain:kz	domain:kz		no	covered_both
+eng-services.kz	KZ	industry	https://eng-services.kz/	Engineering Services	Engineering Services	https://satypalu.gov.kz/kz/registry/show_supplier/349699	domain:kz	domain:kz		no	covered_both
+www.ktze-khorgosgateway.kz	KZ	freight	https://www.ktze-khorgosgateway.kz/	Khorgos Gateway	Khorgos Gateway	https://www.ktze.kz/ru/services/terminal-network	domain:kz	domain:kz		no	covered_both
+ascon.ru	RU	software	https://ascon.ru/contacts/	АСКОН	АСКОН	https://arppsoft.ru/members/	domain:ru	domain:ru		no	covered_both
+support.ascon.ru	RU	software	https://support.ascon.ru/contacts/	АСКОН	АСКОН	https://ascon.ru/contacts/	domain:ru	domain:ru		no	covered_both
+kompas.ru	RU	software	https://kompas.ru/contacts/	Компас	Компас	https://ascon.ru/contacts/	domain:ru	domain:ru		no	covered_both
+galaktika.ru	RU	software	https://galaktika.ru/contacts	Галактика	Галактика	https://arppsoft.ru/members/	domain:ru	domain:ru		no	covered_both
+transinet.by	BY	software	https://transinet.by/	Трансинет	Transinet|Трансинет	https://transinet.by/	domain:by	domain:by		no	covered_both
+beltranssat.by	BY	software	https://beltranssat.by/	БелТрансСпутник	БелТрансСпутник	https://beltranssat.by/en/o-kompanii.html	domain:by	domain:by		no	covered_both
+www.geliossoft.com	BY	software	https://www.geliossoft.com/kontakty	GeliosSoft	GeliosSoft	https://www.geliossoft.com/kontakty				no	new_uncovered
+wialon.com	BY	software	https://wialon.com/ru/vehicle-tracking-system	Wialon	Wialon	https://wialon.com/en/wialon-integration-terms				no	new_uncovered
