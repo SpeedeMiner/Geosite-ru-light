@@ -1,0 +1,9 @@
+host	decision	scope	reason	source
+aromatherapy-institute.com	defer	unknown	Московская выставочная карточка конфликтует с индексированными условиями иностранной регистрации. Первичные юридические страницы местами 404. Не включать до восстановления актуальной оферты.	https://aromatherapy-institute.com/oferta
+ru.qnturbine.com	exclude	CN	Русская локализация отдельного поддомена не меняет оператора Shandong Qingneng Steam Turbine, указанного в контактах.	https://ru.qnturbine.com/CONTACT.html
+www.essaone.com	defer	mixed	Московское ООО названо филиалом, а общая витрина объединяет поставщиков из Китая. Нужна оферта, прямо связывающая оператора с точным сайтом.	https://www.essaone.com/help/contacts
+www.huaznru.com	defer	mixed	Русская витрина носит название DaHua Heavy Industry и использует корпоративную почту производителя. Нужно отличить локальный сайт юридического лица от маркетинговой локализации.	https://www.huaznru.com/
+www.silvershoecare.com	exclude	TR	Официальный сайт называет издателя Çığır Kimya и отдельно обозначает зарубежные компании-дистрибьюторы.	https://www.silvershoecare.com/tr-tr/hakkimizda-2
+www.tm-pharma.com	defer	mixed	Выставочная карточка российского представителя и глобальная витрина поставщика не дают достаточной связи точного имени с местным оператором.	https://www.tm-pharma.com/
+www.tofflon-food.com	exclude	CN	Точная международная витрина подразделения Tofflon Food Engineering указывает головной офис в Шанхае.	https://www.tofflon-food.com/en/contact
+www.tubex-tube.com	exclude	AT	Даже в русской версии контактная страница ведёт к Tubex Tubenfabrik Wolfsberg GmbH в Австрии.	https://www.tubex-tube.com/ru/contact/
