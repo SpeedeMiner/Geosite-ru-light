@@ -1,0 +1,15 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+platonus.kz	KZ	education	https://platonus.kz/	Platonus	Platonus	https://www.gov.kz/memleket/entities/edu/press/article/details/19664?directionId=3599&lang=ru	domain:kz	domain:kz		no	covered_both
+bilimland.kz	KZ	education	https://bilimland.kz/ru	BilimLand	BilimLand	https://www.gov.kz/memleket/entities/mfa-minsk/press/article/details/181996	domain:kz	domain:kz		no	covered_both
+itest.kz	KZ	education	https://itest.kz/	iTest	iTest	https://www.gov.kz/memleket/entities/mfa-minsk/press/article/details/181996	domain:kz	domain:kz		no	covered_both
+twig-bilim.kz	KZ	education	https://twig-bilim.kz/	Twig Bilim	Twig Bilim	https://www.gov.kz/memleket/entities/mfa-minsk/press/article/details/181996	domain:kz	domain:kz		no	covered_both
+imektep.kz	KZ	education	https://imektep.kz/	iMektep	iMektep	https://www.gov.kz/memleket/entities/mfa-minsk/press/article/details/181996	domain:kz	domain:kz		no	covered_both
+onlinemektep.org	KZ	education	https://onlinemektep.org/	Bilim Group	OnlineMektep|Online Mektep	https://www.gov.kz/memleket/entities/mfa-minsk/press/article/details/181996	full:onlinemektep.org	full:onlinemektep.org		no	covered_both
+bilim.group	KZ	education	https://bilim.group/onlinemektep/ru	Bilim Group	Bilim Group|OnlineMektep	https://bilim.group/onlinemektep/ru	full:bilim.group	full:bilim.group		no	covered_both
+daryn.online	KZ	education	https://daryn.online/ru/privacy-policy	Daryn Online	Daryn Online|DarynOnline|Дарын	https://www.gov.kz/memleket/entities/zk/press/news/details/572646?lang=ru	full:daryn.online	full:daryn.online		no	covered_both
+edu.daryn.online	KZ	education	https://edu.daryn.online/	Daryn Online	Daryn Online|DarynOnline|Дарын	https://edu.daryn.online/				no	new_uncovered
+kundelik.kz	KZ	education	https://kundelik.kz/	Kundelik	Kundelik	https://www.gov.kz/memleket/entities/zk/press/news/details/572646?lang=ru	domain:kz	domain:kz		no	covered_both
+mektep.edu.kz	KZ	education	https://mektep.edu.kz/	MektepEdu	MektepEdu|Mektep	https://www.gov.kz/memleket/entities/edu/press/article/details/19664?directionId=3599&lang=ru	domain:kz	domain:kz		no	covered_both
+somniumllp.com	KZ	education	https://somniumllp.com/project-sirius/	Somnium	Somnium|Сомниум|Сириус	https://www.gov.kz/memleket/entities/mangystau-edu/press/news/details/51872?lang=ru				no	new_uncovered
+cerebra.kz	KZ	industry	https://cerebra.kz/	Cerebra	Cerebra	https://astanahub.com/ru/article/ot-ai-do-agrotekha-bolee-390-kazakhstanskikh-startapov-predstavleny-na-dealroom-co	domain:kz	domain:kz		no	covered_both
+hellopay.online	RU	payments	https://hellopay.online/	Hello Payments	Hello Payments|Хелло	https://www.cbr.ru/vfs/finmarkets/files/supervision/list_ops.xlsx				no	new_uncovered
