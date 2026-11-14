@@ -2,6 +2,8 @@
 from copy import deepcopy
 import importlib.util
 from pathlib import Path
+import tempfile
+from unittest.mock import patch
 import unittest
 
 S = importlib.util.spec_from_file_location("wave_checkpoint", Path(__file__).with_name("wave-checkpoint.py"))
@@ -62,6 +64,44 @@ class CheckpointTests(unittest.TestCase):
         for evidence in [[], [self.r, self.r]]:
             with self.assertRaises(ValueError):
                 list(W.normalize_output([self.plan], evidence, [self.sub]))
+
+    def test_checkpoint_integration_requires_explicit_approval_and_is_read_only(self):
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            with patch.object(W, "HERE", t), patch.object(W, "load_base", return_value={"full:baseline.example"}), patch.object(
+                    W, "previous_plan", return_value=[self.plan]):
+                W.save_jsonl(t / "a-evidence-01.jsonl", [self.r])
+                W.save_jsonl(t / "a-submitted.jsonl", [self.sub])
+                W.save_tsv(t / "a-approvals.tsv", [], ("host", "id", "operator_url", "rationale"))
+                W.assemble(["a"])
+                self.assertIn("hold_review", (t / "a-decisions.tsv").read_text())
+                self.assertFalse((t / "candidate-2.txt").exists())
+                W.assemble(["a"], check=True)
+                (t / "a-approvals.tsv").unlink()
+                (t / "a-decisions.tsv").unlink()
+                approval = dict(host=self.host, id="known", operator_url=self.plan["primary"],
+                                rationale="Verified operator and three public branded responses")
+                W.save_tsv(t / "a-approvals.tsv", [approval], approval.keys())
+                W.assemble(["a"])
+                result = t / "candidate-2.txt"
+                self.assertEqual(result.read_text(), "full:baseline.example\nfull:www.example.com\n")
+                W.assemble(["a"], check=True)
+                result.write_text("domain:example.com\n")
+                with self.assertRaisesRegex(ValueError, "checkpoint differs"):
+                    W.assemble(["a"], check=True)
+
+    def test_checkpoint_rejects_operator_substitution(self):
+        with tempfile.TemporaryDirectory() as t:
+            t = Path(t)
+            with patch.object(W, "HERE", t), patch.object(W, "load_base", return_value=set()), patch.object(
+                    W, "previous_plan", return_value=[self.plan]):
+                W.save_jsonl(t / "a-evidence-01.jsonl", [self.r])
+                W.save_jsonl(t / "a-submitted.jsonl", [self.sub])
+                approval = dict(host=self.host, id="known", operator_url="https://elsewhere.example/",
+                                rationale="unrelated source")
+                W.save_tsv(t / "a-approvals.tsv", [approval], approval.keys())
+                with self.assertRaisesRegex(ValueError, "invalid operator approval"):
+                    W.assemble(["a"])
 
     def test_redact_query_credentials_and_non_http_redirects(self):
         self.assertEqual(W.sanitized("https://example.com/info?token=1#id"), "https://example.com/info")
