@@ -1,0 +1,7 @@
+host	decision	scope	reason	source
+dpx-express.com	exclude	CN	Точная публичная витрина китайского логистического оператора; локальная выставочная карточка не доказывает российский хост.	https://dpx-express.com/contact-us.html
+icctt.com	defer	mixed	Официальная страница секретариата прямо указывает швейцарский международный совет и российское представительство. У глобального хоста местный оператор не доказан.	https://icctt.com/about/secretary/
+krafttrans.com	defer	mixed	Англоязычная политика называет KRAFTTRANS Venus GmbH владельцем обработки на общем сайте, а группа имеет и региональные юрлица. Нужно отделить локальную витрину.	https://krafttrans.com/wp-content/themes/krafttrans/pdf/Privacy%20Policy.pdf
+novolinix.com	defer	unknown	Витрина совпадает с брендом, но текущего оператора точного домена нужно установить по документам, а не по направлению доставки.	https://novolinix.com/international-freight-forwarding
+www.ovpshipping.net	defer	unknown	В доступном HTML только оболочка приложения и бренд. Нет первичного подтверждения юрлица и содержимого публичного пути.	https://www.ovpshipping.net/
+www.troykatrans.com	exclude	TR	Собственная страница контактов называет центральный офис в Стамбуле.	https://www.troykatrans.com/en/iletisim/

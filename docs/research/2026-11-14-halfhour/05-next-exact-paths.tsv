@@ -1,0 +1,21 @@
+host	preliminary_scope	https_path	source	note
+aurora-line.com	RU	https://aurora-line.com/contacts	https://aurora-line.com/contacts	ООО «Аврора Лайн», офис Санкт-Петербург.
+avia-dostavka.com	RU	https://avia-dostavka.com/	https://avia-dostavka.com/	«Зелёные Авиа Возможности», московские контакты. Сверить реквизиты оператора и вид страницы.
+dars-solutions.com	RU	https://dars-solutions.com/o-kompanii/	https://dars-solutions.com/o-kompanii/	ООО «ДАРС Солюшнс», реквизиты и московский офис.
+deltavolga.com	RU	https://deltavolga.com/	https://deltavolga.com/	База «Замок», контакты в Астрахани.
+gsr.net	RU	https://gsr.net/	https://gsr.net/	«Возрождение Шёлкового пути», подтверждение оператора в работе.
+kam.travel	RU	https://kam.travel/	https://www.kam.travel/aboutus	Камчатское бюро путешествий, apex и www проверяются независимо.
+kapitanlogistics.com	BY	https://kapitanlogistics.com/kontakty-belarus.html	https://kapitanlogistics.com/kontakty-belarus.html	Группа KAPITAN, опубликованы юридические контакты в Беларуси. Точный региональный путь.
+logion.pw	RU	https://logion.pw/	https://logion.pw/	Сюрвейерский сайт ООО «Логион». Каталог связывает точный адрес с организацией.
+port.one	RU	https://port.one/user_agreement/	https://www.port.one/user_agreement/	АО «Первая Портовая Компания». Для apex проверить рабочий путь отдельно от www.
+promovefreight.com	RU	https://promovefreight.com/info/	https://promovefreight.com/info/	ООО «Про Движение», реквизиты на точном домене.
+rublevka34.com	RU	https://rublevka34.com/	https://rublevka34.com/	База отдыха в Волгоградской области. Проверить реквизиты и содержимое.
+tehauto.com	KZ/RU	https://tehauto.com/contacts/	https://tehauto.com/contacts/	Оператор международных перевозок, проверить местные юрлица в опубликованных контактах.
+valmo-logistic.com	RU	https://valmo-logistic.com/company	https://valmo-logistic.com/company	ООО «ВЭЛМО ЛОГИСТИК», Ижевск, первичная карточка реквизитов.
+vityaz.travel	RU	https://vityaz.travel/	https://vityaz.travel/oferta-ooo-vityaz.pdf	Оферта ООО «Витязь-Тревел». Проверить публичный контент, индексированная главная меняется.
+www.asi-log.com	RU	https://www.asi-log.com/	https://www.asi-log.com/	«Азиялинк Логистикс», сверить юрлицо по точному домену.
+www.i-volga.com	RU	https://www.i-volga.com/payment/contact/	https://www.i-volga.com/payment/contact/	ООО «Туристическая компания И-Волга», Волгоград.
+www.iconrus.pro	RU	https://www.iconrus.pro/	https://www.iconrus.pro/	Витрина ПО ICON для контейнерных терминалов. Не переносить результат на go.iconrus.pro.
+www.imex.llc	RU	https://www.imex.llc/about	https://www.imex.llc/about	Международный оператор с российской деятельностью. Выяснить юридического издателя сайта.
+www.keenmark.com	RU	https://www.keenmark.com/kontakty/	https://www.keenmark.com/kontakty/	Логистическая группа «Кин-Марк», контакты в Санкт-Петербурге.
+www.uniwagon.com	RU	https://www.uniwagon.com/about/dopolnitelnye-materiali/information_for_shareholders/requisites_for_investors/	https://www.uniwagon.com/about/dopolnitelnye-materiali/information_for_shareholders/requisites_for_investors/	ПАО «НПК ОВК», точная страница реквизитов.
