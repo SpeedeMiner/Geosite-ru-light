@@ -1,0 +1,9 @@
+host	decision	scope	reason	source
+kiddyy.com	exclude_changed	unknown	Текущий сайт продаёт детскую одежду и не подтверждает образовательный сервис из прежнего каталога.	https://kiddyy.com/
+luden.io	defer	unknown	Точный сайт показывает студию и продукты. Для DIRECT нужен документ об операторе, а не происхождение команды.	https://luden.io/
+palexgroup.com	defer	mixed	Контакты общего сайта содержат Palex Group Inc. в США. Отдельно проверить локальную витрину и фактического издателя.	https://palexgroup.com/contacts/
+profiscope.io	defer	RU	Сайт указывает переход на CodeScoring. Не переносить результат на цель без точной трёхсетевой проверки начального хоста и её статуса.	https://profiscope.io/
+simformer.com	defer	unknown	На точном сайте есть продукт и англоязычные условия, но принадлежность общего домена RU/BY/KZ не установлена.	https://simformer.com/about-us/terms-and-conditions/
+wikiworks.io	exclude_changed	unknown	Точная страница больше не показывает заявленный EdTech-сервис, только типовую страницу с информационными ссылками.	https://wikiworks.io/
+www.eduson.tv	defer	mixed	Российский eduson.academy уже проверен отдельно. Англоязычная LMS на www.eduson.tv требует своего подтверждения оператора и TLS.	https://www.eduson.tv/
+www.leta.vc	defer	unknown	Инвестиционная витрина и русская локализация не доказывают оператора точного домена. Сверить юрлицо в действующей политике.	https://www.leta.vc/privacy-policy

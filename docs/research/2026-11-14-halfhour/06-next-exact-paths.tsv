@@ -1,0 +1,18 @@
+host	preliminary_scope	https_path	source	note
+mirt.tech	RU	https://mirt.tech/	https://mirt.tech/	Точная витрина ООО «МИРТ», бренд Myrtle совпадает с реквизитами.
+nanosemantics.ai	RU	https://nanosemantics.ai/contacts	https://nanosemantics.ai/privacy	ООО «Лаборатория Наносемантика», российский оператор указан на точном домене.
+neiroseti.ai	RU	https://neiroseti.ai/contacts	https://neiroseti.ai/investors	АО «Нейросети», корпоративная витрина и московские контакты. Не расширять на внешние ИИ-сервисы.
+nikta.ai	RU	https://nikta.ai/documents/privacy/	https://nikta.ai/documents/privacy/	ООО «ЗВЕНО», политика точного apex. Не переносить тест на www.
+oncor.pro	RU	https://oncor.pro/company	https://oncor.pro/documents	Российская медицинская ИТ-платформа. Отдельно сверить юридического оператора сайта.
+opendev.com	RU	https://opendev.com/page68979223.html	https://opendev.com/page68979223.html	Политика называет точное имя сайта и адрес в Саратове.
+osinit.com	RU	https://osinit.com/index.html	https://osinit.com/index.html	ООО «Открытые решения», российский правообладатель ПО. Поддомены не включаются.
+outlines.tech	RU	https://outlines.tech/contacts	https://outlines.tech/contacts	Реквизиты ООО «Аутлайнс» на точном адресе.
+podkontrolem.online	RU	https://podkontrolem.online/about	https://podkontrolem.online/personal-data-policy	ООО «ПДК», политика называет точный хост.
+prideinbrains.com	RU	https://prideinbrains.com/	https://russoft.org/participant/pride-in-brains/	Публичная витрина указывает участие в РУССОФТ и российском ИНТЦ.
+prostorlab.com	RU	https://prostorlab.com/home/o-kompanii/	https://prostorlab.com/home/o-kompanii/	ООО «Лаборатория ПРОСТОР», точная российская витрина.
+talantikum.com	RU	https://talantikum.com/	https://talantikum.com/	Российская образовательная витрина, оператор подлежит юридической сверке.
+tokionline.com	RU	https://tokionline.com/publichnaya-oferta	https://tokionline.com/publichnaya-oferta	Оферта российского онлайн-обучения, доступность страницы оферты проверить отдельно.
+trikset.com	RU	https://trikset.com/contacts	https://trikset.com/contacts	Контактная страница и реквизиты ГК ТРИК.
+uchi.pro	RU	https://uchi.pro/requisites	https://uchi.pro/requisites	ООО «Учи.Про». Если путь недоступен, отдельно проверить оферту и главную.
+wakeup-s.com	RU	https://wakeup-s.com/	https://wakeup-s.com/	Российская публичная витрина WAKEUP. Подтвердить правообладателя по оферте.
+www.trainingspace.online	RU	https://www.trainingspace.online/agreement	https://www.trainingspace.online/agreement	ООО «Облако Груп» указано лицензиаром на точном хосте.
