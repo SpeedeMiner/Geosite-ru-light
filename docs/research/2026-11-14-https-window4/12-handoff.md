@@ -31,3 +31,5 @@ python3 finalize-remaining.py --check
 python3 make-next-plan.py --check
 python3 -m unittest discover -s . -p 'test_*.py'
 ```
+
+Последняя сверка после замеров установила привязку `kam.travel` к оператору точного apex. Это отдельное 40-е имя на следующий проход, в `13-next-first-supplement.tsv`. Итого подготовлено 10 первых замеров и 30 альтернативных путей, до 120 проб. Кандидат +357 не менялся.
