@@ -1,0 +1,127 @@
+{
+  "distinct_ids": 86,
+  "measurement_rows": 86,
+  "row_states": {
+    "baseline/get/4": {
+      "observed": 15
+    },
+    "candidate/get/4": {
+      "observed": 31
+    },
+    "control/get/4": {
+      "observed": 1
+    },
+    "hold/dns/4": {
+      "observed": 3
+    },
+    "hold/dns/6": {
+      "observed": 3
+    },
+    "hold/get/4": {
+      "observed": 19
+    },
+    "hold/get/6": {
+      "probe_coverage_incomplete": 3
+    },
+    "suffix_sample/dns/4": {
+      "observed": 2
+    },
+    "suffix_sample/dns/6": {
+      "observed": 2
+    },
+    "suffix_sample/get/4": {
+      "observed": 5
+    },
+    "suffix_sample/get/6": {
+      "probe_coverage_incomplete": 2
+    }
+  },
+  "verified_host_outcomes": {
+    "baseline/get/4": {
+      "body_unproven": 8,
+      "http_other": 1,
+      "identity_unproven": 2,
+      "redirect_observed": 1,
+      "visible_body_review": 3
+    },
+    "candidate/get/4": {
+      "body_marker_observed": 9,
+      "body_unproven": 2,
+      "identity_unproven": 14,
+      "visible_body_review": 6
+    },
+    "control/get/4": {
+      "identity_unproven": 1
+    },
+    "hold/dns/4": {
+      "dns_answer": 3
+    },
+    "hold/dns/6": {
+      "dns_no_answer": 3
+    },
+    "hold/get/4": {
+      "body_unproven": 13,
+      "encoding_loss": 1,
+      "redirect_observed": 1,
+      "tls_unproven": 2,
+      "visible_body_review": 2
+    },
+    "suffix_sample/dns/4": {
+      "dns_answer": 2
+    },
+    "suffix_sample/dns/6": {
+      "dns_answer": 1,
+      "dns_no_answer": 1
+    },
+    "suffix_sample/get/4": {
+      "body_unproven": 1,
+      "non_html_review": 2,
+      "redirect_observed": 1,
+      "transport_unproven": 1
+    }
+  },
+  "verified_probe_states": {
+    "baseline/get/4": {
+      "body_unproven": 24,
+      "http_other": 3,
+      "identity_unproven": 6,
+      "redirect_observed": 3,
+      "visible_body_review": 9
+    },
+    "candidate/get/4": {
+      "body_marker_observed": 27,
+      "body_unproven": 6,
+      "identity_unproven": 42,
+      "visible_body_review": 18
+    },
+    "control/get/4": {
+      "identity_unproven": 3
+    },
+    "hold/dns/4": {
+      "dns_answer": 9
+    },
+    "hold/dns/6": {
+      "dns_no_answer": 9
+    },
+    "hold/get/4": {
+      "body_unproven": 39,
+      "encoding_loss": 3,
+      "redirect_observed": 3,
+      "tls_unproven": 6,
+      "visible_body_review": 6
+    },
+    "suffix_sample/dns/4": {
+      "dns_answer": 6
+    },
+    "suffix_sample/dns/6": {
+      "dns_answer": 3,
+      "dns_no_answer": 3
+    },
+    "suffix_sample/get/4": {
+      "body_unproven": 3,
+      "non_html_review": 6,
+      "redirect_observed": 3,
+      "transport_unproven": 3
+    }
+  }
+}
