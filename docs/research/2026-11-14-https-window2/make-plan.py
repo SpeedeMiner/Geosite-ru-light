@@ -64,8 +64,12 @@ def record(order, marker, operator):
     url, primary = row["https_path"], row["source"]
     if order == 1:
         primary = "https://polpred.com/user-guide"
+    elif order == 10:
+        primary = "https://outlines.tech/"
     elif order == 19:
         url = primary = "https://elementum.group/contacts/"
+    elif order == 24:
+        url = "https://amatascl.com/en/contacts/"
     elif order == 26:
         primary = "https://aurora-line.com/"
     elif order == 42:
