@@ -1,0 +1,16 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+alageum.com	KZ	electrical	https://alageum.com/ru/kontakty	Alageum Electric	Alageum|Алагеум	https://old.goszakup.gov.kz/ru/registry/show_supplier/208121	full:alageum.com	full:alageum.com		no	covered_both
+ktz-alageum.com	KZ	electrical	https://ktz-alageum.com/	Кентауский трансформаторный завод	Alageum|Кентауский	https://alageum.com/ru/predpriyatiya				yes	prior_measured
+alageumsales.com	KZ	electrical	https://alageumsales.com/	Alageum Sales	Alageum	https://alageum.com/ru/predpriyatiya				no	new_uncovered
+asiatrafo.kz	KZ	electrical	https://asiatrafo.kz/	Asia Trafo	Asia Trafo	https://alageum.com/ru/predpriyatiya	domain:kz	domain:kz		no	covered_both
+kazkabel.kz	KZ	electrical	https://kazkabel.kz/contacts-ru	Казэнергокабель	Казэнергокабель	https://kazkabel.kz/contacts-ru	domain:kz	domain:kz		no	covered_both
+optikabel.kz	KZ	electrical	https://optikabel.kz/	ОптиКабель	ОптиКабель	https://optikabel.kz/	domain:kz	domain:kz		no	covered_both
+gomelcable.com	BY	electrical	https://gomelcable.com/	Гомелькабель	Гомелькабель|Гомель	https://gomelcable.com/	full:gomelcable.com	full:gomelcable.com		no	covered_both
+kabel-company.by	BY	electrical	https://kabel-company.by/	Кабельная компания	Кабельная компания	https://rkkabel.by/news/izgotoviteli-i-postavshchiki-kabelno-provodnikovoy-produkcii-v-respublike-belarus	domain:by	domain:by		no	covered_both
+rkkabel.by	BY	electrical	https://rkkabel.by/	Русский кабель	Русский кабель	https://rkkabel.by/	domain:by	domain:by		no	covered_both
+www.uncomtech.ru	RU	electrical	https://www.uncomtech.ru/company	УНКОМТЕХ	УНКОМТЕХ	https://www.elektrokabel.ru/members/	domain:ru	domain:ru		no	covered_both
+stan-company.ru	RU	machinery	https://stan-company.ru/	СТАН	СТАН	https://stan-company.ru/	domain:ru	domain:ru		no	covered_both
+sasta.ru	RU	machinery	https://sasta.ru/company/	Саста	Саста	https://stankoinstrument.ru/sasta	domain:ru	domain:ru		no	covered_both
+www.bpk-spb.ru	RU	machinery	https://www.bpk-spb.ru/	Балтийская промышленная компания	Балтийская промышленная компания	https://www.bpk-spb.ru/	domain:ru	domain:ru		no	covered_both
+fort-russia.com	RU	machinery	https://fort-russia.com/kontakty/	ФОРТ	FORT|ФОРТ	https://fort-russia.com/kontakty/				no	new_uncovered
+vistan.ru	BY	machinery	https://vistan.ru/	Вистан	Вистан|Vistan	https://vistan.ru/	domain:ru	domain:ru		no	covered_both
