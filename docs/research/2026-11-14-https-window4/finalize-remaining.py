@@ -86,16 +86,16 @@ def main():
                 available = ""
             measured.append(dict(host=host, order=old["order"], last_decision=outcome, last_url=url,
                                  id=mid, last_wave=result["wave"] if result else "window2",
-                                 later_exact_url=available))
+                                 later_exact_url=available or "-"))
     for group, file in ((unmeasured, "10-unmeasured.tsv"), (measured, "10-measured-holds.tsv")):
         W.save_tsv(HERE / file, group, group[0].keys(), a.check)
-    planned = {r["host"] for r in measured if r["later_exact_url"]}
+    planned = {r["host"] for r in measured if r["later_exact_url"] != "-"}
     W.require(new_fallbacks.keys() <= planned, "new fallback URL already tried or no longer eligible")
     W.require(len(accepted) == 49 and len(unmeasured) == 25 and len(measured) == 85, "wrong original partition")
     W.require(len(latest) == 78 and len(latest_measurement) == 73 and len(attempted_urls) == 82, "wrong wave totals")
     print("Original 159:", len(accepted), len(measured), len(unmeasured))
     print("No new measurement:", dict(Counter(r["status"] for r in unmeasured)))
-    print("Still unused fallback URLs:", sum(bool(r["later_exact_url"]) for r in measured))
+    print("Still unused fallback URLs:", sum(r["later_exact_url"] != "-" for r in measured))
 
 
 if __name__ == "__main__":
