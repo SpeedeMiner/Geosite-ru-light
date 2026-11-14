@@ -15,6 +15,8 @@ WAVES = ("first", "fallback-a", "fallback-b")
 RESERVE = 19
 FIELDS = ("host", "decision", "scope", "url", "id", "operator_url", "operator", "rationale")
 MEASURED = set(W.HOLDS)
+HISTORICAL = ("2026-11-14-wide-pass", "2026-11-14-halfhour",
+              "2026-11-14-https-window2", "2026-11-14-https-window4")
 BASE_SHA = "ba158ac7d7d032c749ef1f4084e2f4a30522efe4b77480e8d72b27c4484b22c6"
 
 
@@ -37,7 +39,22 @@ def plan():
     all_rows = sum(rows.values(), [])
     W.index(all_rows, "host")
     W.index(all_rows, "url")
+    urls, _ = historical()
+    W.require(not {r["url"] for r in all_rows} & urls, "queue would repeat a previous attempt")
     return rows
+
+
+def historical():
+    urls, ids = set(), set()
+    for name in HISTORICAL:
+        for f in (HERE.parent / name).glob("*evidence*.jsonl"):
+            for row in W.jsonl(f):
+                if row.get("url"):
+                    urls.add(row["url"])
+                mid = row.get("id") or row.get("measurement_id")
+                if isinstance(mid, str):
+                    ids.add(mid)
+    return urls, ids
 
 
 def quota(records, count):
@@ -93,14 +110,8 @@ def assemble(waves, check=False):
     W.require(sha256(base_file.read_bytes()).hexdigest() == BASE_SHA, "candidate baseline changed")
     base = set(base_file.read_text().splitlines())
     W.require(len(base) == 357 and all(x.startswith("full:") for x in base), "invalid base rules")
-    accepted, ids = set(), set()
-    previous_urls = set()
-    for directory in [PREV, PREV.parent / "2026-11-14-https-window2"]:
-        for file in directory.glob("*-evidence-*.jsonl"):
-            for r in W.jsonl(file):
-                previous_urls.add(r["url"])
-                if r.get("id"):
-                    ids.add(r["id"])
+    accepted = set()
+    previous_urls, ids = historical()
     old_unmeasured = W.index(W.tsv(PREV / "10-unmeasured.tsv"), "host")
     old_held = W.index(W.tsv(PREV / "10-measured-holds.tsv"), "host")
     new_measured = set()

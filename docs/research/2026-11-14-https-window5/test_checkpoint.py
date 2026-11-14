@@ -14,6 +14,12 @@ class CheckpointTest(unittest.TestCase):
         self.assertEqual(waves["first"][-1]["host"], "kam.travel")
         self.assertEqual(len({r["host"] for w in waves.values() for r in w}), 40)
 
+    def test_no_historical_url_repeat_even_without_id(self):
+        url = C.plan()["first"][0]["url"]
+        with patch.object(C, "historical", return_value=({url}, set())):
+            with self.assertRaisesRegex(ValueError, "repeat a previous attempt"):
+                C.plan()
+
     def test_reserve_cannot_be_spent(self):
         C.quota([dict(hosts=10, remaining=49, reset=50)], 10)
         for budget in (19, 48, 251):
