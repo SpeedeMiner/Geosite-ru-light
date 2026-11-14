@@ -75,7 +75,7 @@ def main():
     for name, field, count in (
         ("12-electronics-coverage.tsv", "candidate_372", 90),
         ("13-avti-coverage.tsv", "candidate_372", 139),
-        ("14-next-coverage.tsv", "coverage", 15),
+        ("14-next-coverage.tsv", "coverage", 16),
     ):
         with (HERE / name).open() as f:
             rows = list(csv.DictReader(f, delimiter="\t"))
