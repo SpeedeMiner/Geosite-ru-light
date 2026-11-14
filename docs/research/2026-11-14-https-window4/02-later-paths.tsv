@@ -1,0 +1,5 @@
+host	status	exact_url	primary	reason
+education.polpred.com	hold_alias		https://polpred.com/?showpage=contacts	Точный /subscript/ в справочной сети дал 403, содержимое www не подтверждает исходный хост.
+equiron.com	alternate	https://equiron.com/privacy	https://equiron.com/privacy	Точная публичная политика и футер называют ООО «Эквирон», лицензия продукта подтверждает ИНН 5835072290. Старый срез главной не принимать.
+izzz.io	hold_content		https://docs.izzz.io/Privacy_Policy_RU.pdf	Точный корень называет ООО «Изио», но отдельного компактного пути на apex пока нет. Политика docs не заменяет замер apex.
+packplace.me	hold_content		https://packplace.me/wp-content/themes/packplace/assets/files/oferta.pdf	Оферта подтверждает оператора, однако PDF не соответствует текущей проверке публичного HTML. Отдельного подходящего пути не найдено.
