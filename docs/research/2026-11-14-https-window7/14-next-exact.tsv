@@ -1,0 +1,16 @@
+order	host	scope	url	primary	brand_marker	operator
+1	studio.ncspeech.ai	KZ	https://studio.ncspeech.ai/requisites	https://studio.ncspeech.ai/offer	NCSpeech|Реквизиты и контакты	ТОО «NCSPEECH», Алматы, БИН 250340013230
+2	cyberpack.ai	KZ	https://cyberpack.ai/terms-of-use/ru	https://cyberpack.ai/terms-of-use/ru	CYBERPACK|Условия Использования	ТОО «CYBERPACK», Астана, БИН 240840000909
+3	ontid.com	BY	https://ontid.com/about-us/	https://ontid.com/	ONTIDSOFT|Онтид софт	ООО «Онтид софт», Минск, УНП 193476941
+4	yadro.com	RU	https://yadro.com/ru/contacts/	https://yadro.com/assets/shared/files/yadro_politics.pdf?_rsc=1p5xj	YADRO|КНС ГРУПП	ООО «КНС ГРУПП», Москва; точный оператор, не белорусское подразделение
+5	journals.eco-vector.com	RU	https://journals.eco-vector.com/index/legal/privacyPolicy	https://journals.eco-vector.com/index/legal/privacyPolicy	Eco-Vector|Эко-Вектор	ООО «Эко-Вектор», Санкт-Петербург, ИНН 7806423692
+6	eco-vector.com	RU	https://eco-vector.com/contact/	https://www.journals.eco-vector.com/User_agreement.php	Эко-Вектор|Eco-Vector	ООО «Эко-Вектор», Санкт-Петербург, соглашение называет точный apex
+7	ncspeech.ai	KZ	https://ncspeech.ai/	https://astanahub.com/account/company/22938/	NCSpeechAI|NCSpeech	ТОО «NCSpeech», профиль технопарка и отдельный публичный сайт с казахстанскими контактами
+8	med.elektrodetal.com	RU	https://med.elektrodetal.com/	https://galvanika.elektrodetal.com/policy/	Милосердие|Карачевский завод	МЦ «Милосердие» АО «Карачевский завод Электродеталь», отдельный хост в собственной политике
+9	galvanika.elektrodetal.com	RU	https://galvanika.elektrodetal.com/policy/	https://galvanika.elektrodetal.com/policy/	Гальваника|Карачевский завод	АО «Карачевский завод Электродеталь», политика перечисляет точный поддомен
+10	smartexpress.me	RU	https://smartexpress.me/company/	https://rus-elektronika.ru/ru-RU/Documents/er-putevoditel.aspx	Смарт-Экспресс|Smart Express	«Смарт-Экспресс», российский оператор; профиль, доменная почта и московские и петербургские контакты
+11	codiplay.com	KZ	https://codiplay.com/	https://codiplay.com/assets/CodiPlay%20Mobile%20Application%20User%20Agreement.pdf	CodiPlay	ТОО «CodiPlay», Алматы, БИН 210840025542; прежний /company.html удержан по содержимому
+12	alaqan.com	KZ	https://alaqan.com/about	https://alaqan.com/docs/user_consent	Alaqan|From Kazakhstan with Love	ТОО «Alaqan Technologies», Астана, БИН 220640036087; основной ресурс .kz, отдельная витрина .com
+13	solinstruments.com	BY	https://solinstruments.com/about/	https://www.cislaser.com/index.php/chleny-las/kollektivnye	SOL instruments|СОЛ инструментс	ООО «СОЛ инструментс», Минск; альтернативный публичный HTML, прежние контакты удержаны
+14	lab.solinstruments.com	BY	https://lab.solinstruments.com/faq/	https://lab.solinstruments.com/agreement/	СОЛ инструментс|Анализ волос	ООО «СОЛ инструментс», Минск; FAQ без обращения к форме, прежний договор удержан
+15	revi.life	RU	https://revi.life/about/	https://revi.life/agreement/	REVI|СамГМУ	ООО «Прототип», Самара, ИНН 6317080180; предыдущий корень не дал HTTP-ответ
