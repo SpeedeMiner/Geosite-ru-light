@@ -1,0 +1,4 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+hub-shipping.com	hold_content	RU	https://hub-shipping.com/about-us/	2UyOvdFNacFlWDHjr00021VGA	https://hub-shipping.com/privacy-policy/	Точное имя указано в политике российского ООО, альтернативный раздел о компании	api_truncated, short_visible_body
+www.polpharma-santo.com	hold_content	KZ	https://www.polpharma-santo.com/contact/	2RtVuyn6YXmvNAzoW00021VGA	https://www.polpharma-santo.com/wp-content/uploads/2025/12/Code-of-Conduct-ENG.pdf	Документ АО «Химфарм» прямо указывает точное WWW, проверка HTML контактов завода Шымкента	api_truncated, short_visible_body, brand_missing
+bellakt.com	hold_review	BY	https://bellakt.com/	24vvAP3OWApxe2qJF00021VGA	https://www.bellakt.ru/about/contacts/	Белорусское ОАО «Беллакт» подтверждено, но apex отдельно от уже покрытого WWW	https_candidate
