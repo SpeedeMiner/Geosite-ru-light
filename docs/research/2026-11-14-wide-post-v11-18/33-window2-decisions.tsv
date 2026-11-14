@@ -1,0 +1,58 @@
+host	scope	decision	exact_urls	measurement_ids	primary_source	reason
+active.domains	RU	queue			https://www.nic.kz/ru/registrars/list	No three-ASN observation in this window; verify current operator and exact URL first.
+barrusprojects.com	RU	hold_https	https://barrusprojects.com/ru/our-company/key-facts.php	2N9r72DUuvkkhPOuJ00021VJN	https://barrusprojects.com/ru/our-company/key-facts.php	No admitted observation matching the source-specific operator and body requirements.
+cont.eurosib.biz	RU	approved_candidate	https://cont.eurosib.biz/ru/contacts|https://cont.eurosib.biz/ru/regular-services	2tNUguFECVRCZcURh00021VJQ|2hBLe5txTx1BsrwVr00021VJR	https://cont.eurosib.biz/ru/contacts	Operator phone, mail and published logistics services observed; separate from existing exact eurosib.biz.
+eskm.net	RU	queue			https://far-aerf.ru/chleny-associacii-2	No three-ASN observation in this window; verify current operator and exact URL first.
+etorussia.pro	RU	hold_https	https://etorussia.pro/	2AK7weOe4QL9zZwwn00021VJQ	https://far-aerf.ru/chleny-associacii-2	No admitted observation matching the source-specific operator and body requirements.
+eurosib-logistics.com	RU	approved_candidate	https://eurosib-logistics.com/contacts/	2VfAKrbSP3qDzYYV600021VJQ	https://eurosib-logistics.com/contacts/	Operator page gives St Petersburg address and same company brand visible in scan.
+framproject.com	RU	hold_https	https://framproject.com/kontakty/	2HwagK3qVwYcbrKE600021VJQ	https://framproject.com/kontakty/	No admitted observation matching the source-specific operator and body requirements.
+g1sw.com	KZ	hold_scope	https://g1sw.com/	2JYdvc5uEC8lriMT400021VJR	https://www.itk.kz/ru/161	Kazakh entity cites it, but main site serves the international G1 group; exact local service endpoint not identified.
+ikinterkontakt.com	RU	hold_https	https://ikinterkontakt.com/ru/	21SOQ327gS7hXOq6i00021VJQ	https://far-aerf.ru/chleny-associacii-2	No admitted observation matching the source-specific operator and body requirements.
+inconkz.com	KZ	queue			https://inconkz.com/ru	No three-ASN observation in this window; verify current operator and exact URL first.
+khasanllc.pro	RU	queue			https://far-aerf.ru/chleny-associacii-2	No three-ASN observation in this window; verify current operator and exact URL first.
+krafttrans.com	BY	hold_scope			https://fiata.org/directory/by/	International group version lists Austrian contacts; Belarus branch has a covered site.
+kz.hillstarpay.com	KZ	approved_candidate	https://kz.hillstarpay.com/kz|https://kz.hillstarpay.com/public-offer	223359u3eOmIvpex900021VJN|2xiMlBYG48XB3AHOO00021VJR	https://kz.hillstarpay.com/rules	Kazakh local operator rules and named KZ front page, whose service navigation and TLS are reproducible across the three ASNs.
+noytech.com	RU	approved_candidate	https://noytech.com/contacts/?tab=office|https://noytech.com/services/project-logistics/|https://noytech.com/policy/	25TOVhQMIOkbEDy8S00021VJQ|2SIF3HIHsxSYdvuXA00021VJR|2eHZ1xk6bDLqJ2SgW00021VJT	https://noytech.com/policy/	Operator policy names OOO Noytech Logistics Rus and this domain. Project page and policy both return item-specific title/metadata with service navigation. Root contact route previously 403, so no claim of universal path availability.
+old.rocketfirm.com	KZ	hold_archive	https://old.rocketfirm.com/contacts/	2y4yyt8gQds72v2gb00021VJP	https://www.itk.kz/ru/160	Page identifies itself as old/archival, points to Rocket Tech as current site.
+portal.inconkz.com	KZ	queue			https://inconkz.com/ru	No three-ASN observation in this window; verify current operator and exact URL first.
+railcargo.com	RU	queue			https://far-aerf.ru/chleny-associacii-2	No three-ASN observation in this window; verify current operator and exact URL first.
+rocketfirm.com	KZ	hold_redirect	https://rocketfirm.com/	2IXctJpx1RqKeFYEM00021VJP	https://www.itk.kz/ru/участники-каитк	Redirects to tech.rocketfirm.com, which still lacks an adequate body in Russian samples.
+rostovport.com	RU	approved_candidate	https://rostovport.com/contacts/|https://rostovport.com/	2zOp1BCU9GmCUm5o900021VJP|28JygBw9o5J6E65gQ00021VJR	https://rostovport.com/contacts/	Operator contact and homepage name the Russian company; separate from another operator at the .ru site.
+rtlalliance.com	BY	prior_held			https://rtlalliance.com/	Prior measurement history retained; no new exact address was selected.
+rtlltd.com	RU	approved_candidate	https://rtlltd.com/contacts/|https://rtlltd.com/about/|https://rtlltd.com/	2iuX63H21CPxJ247q00021VJN|2wN1Dh0Zop2LgQqWv00021VJR|2RxLBY0hmAusbDSsI00021VJT	https://rtlltd.com/about/	Moscow company contact and consistent operator branding on independently measured root and about. WWW redirects but is not approved.
+rusatom-cargo.com	RU	hold_https	https://rusatom-cargo.com/contacts.html	2P5frxcOWEPqZOUIi00021VJN	https://rusatom-cargo.com/contacts.html	No admitted observation matching the source-specific operator and body requirements.
+seaarea.com	CN	reject_scope			https://www.nic.kz/ru/registrars/list	KazNIC lists a registrar from China.
+tech.rocketfirm.com	KZ	hold_https	https://tech.rocketfirm.com/en/about/contacts/|https://tech.rocketfirm.com/about/contacts/	2zkQOOFqFaoyctOwM00021VJP|20cObtgSklGLSt9II00021VJR	https://tech.rocketfirm.com/en/about/contacts/	No admitted observation matching the source-specific operator and body requirements.
+tero.biz	RU	hold_https	https://tero.biz/	2ctMHSpzWEgHpU1Mc00021VJQ	https://far-aerf.ru/chleny-associacii-2	No admitted observation matching the source-specific operator and body requirements.
+texol.co	KZ	hold_redirect			https://texol.kz/ru	Public lookup resolves to already covered texol.kz. No new Russian ASN observation.
+texolgroup.com	KZ	hold_redirect			https://texol.kz/ru	Public lookup resolves to already covered texol.kz. No new Russian ASN observation.
+tis-spb.com	RU	hold_redirect	https://tis-spb.com/	2ZJMBWuSK5oueqSKQ00021VJN	https://fiata.org/directory/ru/	Redirects to the already covered tis-spb.ru.
+tulparpay.com	KZ	hold_https	https://tulparpay.com/public-offer	2VvwTm9mMCcudvo8600021VJO	https://tulparpay.com/public-offer	No admitted observation matching the source-specific operator and body requirements.
+wialon.com	BY	reject_scope			https://wialon.com/en/wialon-integration-terms	Published service terms identify Gurtam UAB, Lithuania; historical Belarus origin is insufficient.
+www.ahost.uz	UZ	reject_scope			https://www.nic.kz/ru/registrars/list	KazNIC lists operator in Uzbekistan.
+www.atakdomain.com	TR	reject_scope			https://www.nic.kz/ru/registrars/list	KazNIC lists a registrar from Turkey.
+www.barrusprojectlogistics.com	RU	hold_https	https://www.barrusprojectlogistics.com/	2zowttDjhIx5089v800021VJN	https://fiata.org/directory/ru/	No admitted observation matching the source-specific operator and body requirements.
+www.barrusprojects.com	RU	hold_https	https://www.barrusprojects.com/ru/contact-us.php	2Mztu3uJC5eWH4x3d00021VJN	https://www.barrusprojects.com/ru/contact-us.php	No admitted observation matching the source-specific operator and body requirements.
+www.eurosib-logistics.com	RU	approved_candidate	https://www.eurosib-logistics.com/services/russia/	2R1tlX8AF6JY6BHnn00021VJR	https://www.eurosib-logistics.com/services/russia/	Brand and domestic freight services apparent in the captured company navigation. WWW tested separately.
+www.eurosib.biz	RU	hold_redirect	https://www.eurosib.biz/ru/kontakty/	297t7yF7Y0J75TN2Z00021VJQ	https://far-aerf.ru/chleny-associacii-2	Redirect target eurosib.biz already exact in both builds.
+www.farco.cjb.net	RU	hold_legacy_shared			https://fiata.org/directory/ru/	Old delegated hosting name; no verified current corporate endpoint.
+www.fesco.com	RU	hold_https	https://www.fesco.com/ru/contacts/	2GWiWA1TdE7l2uFOD00021VJQ	https://far-aerf.ru/chleny-associacii-2	No admitted observation matching the source-specific operator and body requirements.
+www.framproject.com	RU	hold_https	https://www.framproject.com/	2JoQgdkCPsKTTTc8H00021VJQ	https://far-aerf.ru/chleny-associacii-2	No admitted observation matching the source-specific operator and body requirements.
+www.g1sw.com	KZ	hold_redirect	https://www.g1sw.com/	2KJGgTvXdeqfuM4Sg00021VJP	https://www.itk.kz/ru/участники-каитк	Redirects to the unapproved international group host g1sw.com.
+www.geliossoft.com	BY	hold_scope			https://www.geliossoft.com/kontakty	Multi-country contact page; need establish region scope for this exact service host.
+www.globalinklogistics.com	KZ	prior_held			https://fiata.org/directory/kz/	Prior measurement history retained; no new exact address was selected.
+www.intertransavto.eu	BY	hold_https	https://www.intertransavto.eu/	2geXHKQ1ULos7jKk700021VJN	https://fiata.org/directory/by/	No admitted observation matching the source-specific operator and body requirements.
+www.krafttrans.com	BY	hold_scope	https://www.krafttrans.com/contacts/	2qJpDPepvQ7K2pg9k00021VJR	https://fiata.org/directory/by/	Redirects to group site; Minsk entity separately has a covered krafttrans.ru presence.
+www.morportpevek.com	RU	hold_legacy	https://www.morportpevek.com/	2tcacYePrwd5SYjpQ00021VJP	https://www.morport.com/rus/about/members	Current official host morport-pevek.ru is already covered. Old host did not independently pass.
+www.nevainter.com	RU	hold_application_error	https://www.nevainter.com/|https://www.nevainter.com/contacts/	2IcmdAFyyqs8mLZvT00021VJP|23QHv9mpBKVG3oVzv00021VJR	https://www.morport.com/rus/about/members	HTTP 200 on both paths serves a PHP fatal error, not service content.
+www.nmtp.info	RU	hold_https	https://www.nmtp.info/	20S0dusIU2lIbILeI00021VJP	https://www.morport.com/rus/about/members	No admitted observation matching the source-specific operator and body requirements.
+www.noytech.com	RU	approved_candidate	https://www.noytech.com/contacts/|https://www.noytech.com/policy/	2oMGWASmmGlrYSt0s00021VJQ|2wsqIy2brNFk9rSxG00021VJT	https://www.noytech.com/policy/	Separate WWW policy observation, branding and service navigation, with published Russian operator identity.
+www.oriexp.com	RU	hold_legacy	https://www.oriexp.com/	2tbib7cEzuptwr7gV00021VJN	https://fiata.org/directory/ru/	Current official oriexp.ru is already covered.
+www.panditrans.com	RU	queue			https://far-aerf.ru/chleny-associacii-2	No three-ASN observation in this window; verify current operator and exact URL first.
+www.rostovport.com	RU	hold_content	https://www.rostovport.com/contacts/|https://www.rostovport.com/services/	2uF0YtaE5UdWBeZ1m00021VJP|25nBvS0cHwHJj3HDe00021VJR	https://www.morport.com/rus/about/members	Both WWW paths with no sufficient visible body; apex passes independently.
+www.rtlalliance.com	BY	hold_https	https://www.rtlalliance.com/	2lAuJBMGNaPy4qAhw00021VJN	https://fiata.org/directory/by/	No admitted observation matching the source-specific operator and body requirements.
+www.rtlltd.com	RU	hold_redirect	https://www.rtlltd.com/	2ue4BcjjtUEuL5lUF00021VJN	https://far-aerf.ru/chleny-associacii-2	Redirects to separately reviewed rtlltd.com; no separate visible body.
+www.rusatom-cargo.com	RU	hold_https	https://www.rusatom-cargo.com/contacts.html	213txKYz6TaZNlnui00021VJN	https://fiata.org/directory/ru/	No admitted observation matching the source-specific operator and body requirements.
+www.ruscon.global	RU	hold_redirect	https://www.ruscon.global/	28WN6Z4HWACP5GYlL00021VJR	https://far-aerf.ru/chleny-associacii-2	Redirect target independently covered on .ru.
+www.telsglobal.com	BY	hold_redirect_transport	https://www.telsglobal.com/	2y8AAN6wdBYEXf5GZ00021VJR	https://fiata.org/directory/by/	Inconsistent response or downgrade target in ASN samples.
+yugmax.com	RU	queue			https://far-aerf.ru/chleny-associacii-2	No three-ASN observation in this window; verify current operator and exact URL first.
