@@ -29,3 +29,5 @@
 python3 verify-window.py 11-final-decisions.tsv candidate-341.txt 0[89]-*-evidence-*.jsonl 1[01]-*-evidence-*.jsonl --refined 11-offline-refined.jsonl
 python3 ../2026-11-14-wide-pass/release-replay.py light-v11.17.dat server-v11.17.dat candidate-341.txt /path/to/Geosite-ru-server replay-341
 ```
+
+Финальная сверка GitHub выявила независимую публикацию SRS в Light. Она не меняет DAT v11.17 или базу расчёта +341 / −0. Подробности в `13-parallel-release-check.md`. Исследовательская ветка не сливалась в эти refs.
