@@ -1,0 +1,14 @@
+host	decision	scope	reason	source
+andersenlab.com	exclude	PL	Политика точного сайта называет контроллером польскую Andersen sp. z o.o., Варшава. Карточка белорусского каталога не меняет владельца общего сайта.	https://andersenlab.com/privacy-policy
+leverx.com	defer	mixed	Общий домен обслуживает разных юридических операторов по стране, в том числе Казахстан и США. Нужно отделить конкретный локальный хост от глобального.	https://leverx.com/privacy-policy
+regulaforensics.com	defer	mixed	Общий ресурс глобальной компании. Есть подразделение в Латвии, но по контакту подразделения нельзя утверждать страну оператора всего домена.	https://regulaforensics.com/company/contacts/
+sam-solutions.com	exclude	LV	Головной офис в Риге по актуальному профилю самой компании. Белорусское подразделение не основание для всего общего домена.	https://sam-solutions.com/company/profile/
+www.bmt.cz	exclude	CZ	Официальные контакты центрального офиса BMT в Брно. Выставочная карточка не меняет оператора.	https://www.bmt.cz/kontakty
+www.bobst.com	exclude	CH	Глобальный ресурс швейцарской группы, региональное участие на выставке не означает отдельного местного хоста.	https://www.bobst.com/lam/en/about-us/companies-global-network
+www.cudy.com	exclude	CN	Даже политика страницы CIS называет оператором Shenzhen Cudy Technology Co., Ltd.	https://www.cudy.com/en-cis/policies/privacy-policy
+www.keruilabel.com	exclude	CN	Точный сайт указывает Guangdong Kerui Label Materials как владельца.	https://www.keruilabel.com/
+www.malaysia.travel	exclude	MY	Публичный ресурс Tourism Malaysia, указан малайзийским национальным туристическим ведомством.	https://www.tourism.gov.my/
+www.marsriva.com	exclude	CN	Собственная страница точного домена указывает головной офис в Шэньчжэне.	https://www.marsriva.com/Location.html
+www.stoelzle.com	exclude	AT	Юридический издатель Stoelzle Oberglas GmbH и головной офис в Австрии.	https://www.stoelzle.com/locations/
+www.tendacn.com	exclude	CN	Официальная документация на домене называет Shenzhen Tenda Technology Co., Ltd.	https://www.tendacn.com/prod/api/download/5727
+www.turri-srl.com	exclude	IT	Сайт и реквизиты итальянского производителя Turri F.lli, Costa di Rovigo.	https://www.turri-srl.com/azienda/
