@@ -1,0 +1,3 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+astrotech-kz.com	hold_content	KZ	https://astrotech-kz.com/ru/zavod/elektro-tehnicheskie-tovary	2LWBLvF28sSaoNrvB00021VGs	https://procurement.gov.kz/ru/registry/show_supplier/883998	ТОО ASTROTECH Electric, Шымкент, отдельная витрина холдинга и карточка госзакупок	api_truncated, short_visible_body, brand_missing
+www.astrotech-kz.com	hold_redirect	KZ	https://www.astrotech-kz.com/ru/zavod/elektro-tehnicheskie-tovary	2MoottmchB4DzGiqZ00021VGs	https://ast-electric.kz/contacts	Точное WWW проверяется отдельно, принадлежность поддомена не предполагается	redirect
