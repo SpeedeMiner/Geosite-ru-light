@@ -1,0 +1,9 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+darrail.com	KZ	freight	https://darrail.com/	DAR RAIL	DAR RAIL|ДАР Рейл	https://kffanek.kz/deystvitelnye	full:darrail.com	full:darrail.com		no	covered_both
+tengizchevroil.com	KZ	industry	https://tengizchevroil.com/contact-us	Тенгизшевройл	Tengizchevroil|Тенгизшевройл	https://kffanek.kz/deystvitelnye				no	new_uncovered
+www.tengizchevroil.com	KZ	industry	https://www.tengizchevroil.com/contact-us	Тенгизшевройл	Tengizchevroil|Тенгизшевройл	https://www.tengizchevroil.com/company	full:www.tengizchevroil.com	full:www.tengizchevroil.com		yes	covered_both
+www.utlc.com	RU	freight	https://www.utlc.com/faq/	ОТЛК ЕРА	UTLC|ОТЛК	https://www.utlc.com/faq/	full:www.utlc.com	full:www.utlc.com		no	covered_both
+1mc.kz	KZ	freight	https://1mc.kz/about	Первая Мультимодальная Компания	Первая Мультимодальная Компания	https://kffanek.kz/deystvitelnye	domain:kz	domain:kz		no	covered_both
+ptc-holding.kz	KZ	freight	https://ptc-holding.kz/contacts/	PTC Holding	PTC Holding	https://ptc-holding.kz/contacts/	domain:kz	domain:kz		no	covered_both
+ptc-operator.kz	KZ	freight	https://ptc-operator.kz/	PTC Operator	PTC Operator	https://ptc-operator.kz/our-companies/ptc-holding/	domain:kz	domain:kz		no	covered_both
+www.falconkz.com	KZ	freight	https://www.falconkz.com/	Falcon Logistic Group	Falcon	https://kffanek.kz/too-falcon-logistic-group				no	new_uncovered
