@@ -1,0 +1,3 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+nuraitechnology.com	hold_transport	KZ	https://nuraitechnology.com/	2bbK4wL2cE3lFilHO00021VHU	https://agriastana.kz/ru/list-of-exhibitors-2026.php	NurAI Technology, казахстанский оператор платформы учёта, стенд 897	tls_or_transport_unproven
+www.nuraitechnology.com	hold_transport	KZ	https://www.nuraitechnology.com/	2HXofaiU58MCsdrII00021VHU	https://nuraitechnology.com/	Точная WWW-витрина проверяется отдельно	tls_or_transport_unproven
