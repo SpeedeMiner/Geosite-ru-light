@@ -10,7 +10,6 @@ gazo-beton.org	https://gazo-beton.org/celi-i-zadachi	https://natamac.ru/members/
 rosizol.org	https://rosizol.org/about	https://natamac.ru/members/	Проверить ещё один новый точный публичный маршрут.
 kaskad.tv	https://kaskad.tv/novosti/64450-prazdnovanie-80-letiya-kaliningradskoj-oblasti-gde-posmotret-translyatsiyu-prazdnichnogo-kontserta	https://kaskad.tv/	Проверить публичную статью и точный хост Калининградской редакции.
 www.amurobl.tv	https://www.amurobl.tv/about/mediakit	https://www.amurobl.tv/about/mediakit	Сверить региональное СМИ и точный WWW.
-www.kdteatr.net	https://www.kdteatr.net/	https://reestr.stdrf.ru/reestr_list	Для WWW нужна проверка актуального контента и отсутствия редиректа. Apex отдельно не добавлять по данным WWW.
 teatrodicapua.com	https://teatrodicapua.com/pressa/	https://reestr.stdrf.ru/reestr_list	Новый точный публичный URL театра.
 miachkovo.com	https://miachkovo.com/kontakty/	https://miachkovo.com/kontakty/	Проверить точный apex с опубликованными контактами.
 qazaqgreen.com	https://qazaqgreen.com/contacts/	https://qazaqgreen.com/contacts/	Проверить точный .com, не выводить его автоматически из покрытия .kz.
@@ -18,3 +17,4 @@ energy-aven.org	https://energy-aven.org/about/439	https://energy-aven.org/about/
 kazenergy.com	https://kazenergy.com/association/chleny-assotsiatsii/	https://kazenergy.com/association/chleny-assotsiatsii/	Проверить точное имя отраслевой ассоциации отдельно от глобальных сайтов её членов.
 kazrenergy.com	https://kazrenergy.com/members	https://kazrenergy.com/members	Сверить оператора на точном apex, отдельно от WWW.
 ramsqz.com	https://ramsqz.com/ru/home	https://ramsqz.com/ru/support	Новый URL вместо страницы поддержки без тела.
+amurobl.tv	https://amurobl.tv/feedback	https://www.amurobl.tv/about/mediakit	Проверить отдельный apex, не переносить допуск с WWW.
