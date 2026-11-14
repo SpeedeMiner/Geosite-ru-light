@@ -25,6 +25,7 @@ HOLDS = {
 }
 DIGEST = re.compile("[0-9a-f]{64}")
 MID = re.compile("[A-Za-z0-9_-]+")
+LABEL = re.compile(r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?")
 
 
 def require(condition, reason):
@@ -129,6 +130,8 @@ def exact_proof(r, submission):
     u = urlsplit(r["url"])
     host = r["host"]
     path = (u.path or "/") + ("?" + u.query if u.query else "")
+    require(len(host) <= 253 and "." in host and all(LABEL.fullmatch(x) for x in host.split(".")),
+            f"invalid DNS name: {host}")
     require(u.scheme == "https" and u.hostname == host and not u.username and not u.password
             and u.port in {None, 443} and not u.fragment, f"invalid exact URL: {host}")
     require(r["state"] == "https_candidate" and r["observed_type"] == "http"
@@ -168,7 +171,6 @@ def load_base():
 
 def assemble(waves, check=False):
     base, accepted, seen, ids = load_base(), set(), set(), set()
-    cumulative = []
     for wave in waves:
         records, submit = read_wave(wave)
         approvals = index(tsv(HERE / f"{wave}-approvals.tsv"), "host")
@@ -202,7 +204,6 @@ def assemble(waves, check=False):
                                   id=mid or "", operator_url=r["primary"], operator=r["operator"],
                                   probes=probes, redirect=redirects, rationale=rationale))
         save_tsv(HERE / f"{wave}-decisions.tsv", decisions, decisions[0].keys(), check)
-        cumulative += decisions
         print(wave, dict(Counter(r["decision"] for r in decisions)))
     data = ("\n".join(sorted(base | accepted)) + "\n").encode()
     dest = HERE / f"candidate-{len(base | accepted)}.txt"

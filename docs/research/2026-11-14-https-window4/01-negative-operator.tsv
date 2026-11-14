@@ -1,0 +1,2 @@
+host	decision	operator	operator_source	reason
+www.eatech-nv.com	exclude_candidate	Wuhan Tongsheng Technology Co., Ltd., China	https://www.oei-analitika.ru/kurilka/order_info.php?order_id=748079	Описание типа связывает правообладателя и изготовителя с точным доменом и корпоративной почтой. Нет подтверждённого российского оператора сайта.
