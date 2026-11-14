@@ -12,10 +12,11 @@ spec = importlib.util.spec_from_file_location("previous", PREV / "checkpoint.py"
 C = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(C)
 W = C.W
-WAVES = ("first", "wide", "extra")
+WAVES = ("first", "wide", "extra", "logistics")
 PLANS = {"first": ("01-wave-inherited.tsv", "01-plan.sha256sum"),
          "wide": ("03-wave-wide.tsv", "03-plan.sha256sum"),
-         "extra": ("05-wave-extra.tsv", "05-plan.sha256sum")}
+         "extra": ("05-wave-extra.tsv", "05-plan.sha256sum"),
+         "logistics": ("07-wave-logistics.tsv", "07-plan.sha256sum")}
 BASE_SHA = "8723f789d9d838f68e4a2ace29d328e09237948cc660db1de19f0425e7d98e8a"
 
 
