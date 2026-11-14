@@ -1,0 +1,4 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+codiplay.com	hold_content	KZ	https://codiplay.com/company.html	2upWkSxDBie4jkmmE00021VF3	https://codiplay.com/assets/CodiPlay%20Mobile%20Application%20User%20Agreement.pdf	ТОО «CodiPlay», Алматы, БИН 210840025542, договор и госреестр закупок	short_visible_body, brand_missing
+alaqan.com	hold_content	KZ	https://alaqan.com/docs/user_consent	2uN8QPJO5bggrfIB600021VF3	https://alaqan.com/docs/user_consent	ТОО «Alaqan Technologies», Астана, БИН 220640036087, публичный раздел документов на точном имени	short_visible_body
+apartx.co	accept	KZ	https://apartx.co/	2406s0s3drcC7oMk700021VF3	https://apartx.co/docs/partnership-offer.pdf	ЧК «ApartX Ltd», Астана, договор на точном имени и публичный профиль издателя приложения	Три ответа содержат публичную витрину продукта ApartX. Договор на точном имени называет ЧК ApartX Ltd, издатель приложения и казахстанский адрес сверены отдельно.
