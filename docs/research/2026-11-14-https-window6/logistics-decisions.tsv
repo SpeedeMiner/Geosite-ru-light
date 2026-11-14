@@ -1,0 +1,2 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+rtlalliance.com	hold_content	BY	https://rtlalliance.com/contact/	27aOov4P2gf7dhVBQ00021VEu	https://fiata.org/directory/by/	ООО «РТЛ Альянс», точный apex с контактами из Минска	api_truncated, short_visible_body
