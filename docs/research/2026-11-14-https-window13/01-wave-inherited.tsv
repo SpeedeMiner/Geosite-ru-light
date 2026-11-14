@@ -1,0 +1,10 @@
+order	host	scope	url	primary	brand_marker	operator
+1	ab-machinery.com	KZ	https://ab-machinery.com/	https://ab-machinery.com/kz	AB Machinery|Almaty Brands Machinery	Казахстанское Almaty Brands Machinery, другой языковой раздел
+2	salini-srl.com	RU	https://salini-srl.com/	https://salini-srl.com/contacts/	SALINI|Салини	ООО ТД Салини, главная с продукцией отдельно от страницы контактов
+3	springsever.com	RU	https://springsever.com/category/nezavisimyy-pruzhinnyy-blok/	https://springsever.com/ru/	Spring Sever|Север	Русский производитель пружинных блоков, прямая категория
+4	rosla.com	RU	https://rosla.com/	https://rosla.com/contacts/	РОСЛА|ROSLA	Р.О.С.Л.А., главная с информацией о производстве
+5	skifltd.com	RU	https://skifltd.com/poleznaya-informacziya/chasto-zadavaemyie-voprosyi	https://skifltd.com/o-fabrike/o-nas	Фабрика СКИФ|SKIF	Российская фабрика СКИФ, отдельный раздел FAQ
+6	teks-o-park.com	RU	https://teks-o-park.com/shop/	https://teks-o-park.com/about/	Тексопарк|TEKS-O-PARK	Российский поставщик тканей, точный каталог
+7	www.xn--b1agaljik6adkl3isb.com	RU	https://www.xn--b1agaljik6adkl3isb.com/	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385740?stand=14F122	Венские стулья|Венскиестулья	Точное IDN имя из карточки, проверяется только если совпадут оператор и основное содержимое
+8	standart.pro	RU	https://standart.pro/	https://standart.pro/contacts	ТБ Стандарт|Стандарт	Российский поставщик, главная отдельно от усечённых контактов
+9	mf.plastigy.com	RU	https://mf.plastigy.com/catalog/mebelnaya-furnitura	https://mf.plastigy.com/proizvodstvo	Plastigy|Пластижи	Производитель мебельной фурнитуры, Калуга, раздел каталога
