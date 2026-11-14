@@ -1,0 +1,11 @@
+order	host	scope	url	primary	brand_marker	operator
+1	www.signal-pack.com	RU	https://www.signal-pack.com/include/licenses_detail.php	https://www.signal-pack.com/include/licenses_detail.php	Сигнал-Пак|Signal Pack	Уральский машиностроительный завод Сигнал-Пак, соглашение и реквизиты
+2	amyl.pro	RU	https://amyl.pro/kontaktyi	https://amyl.pro/	Амил|AMYL	ООО Амил, страница контактов вместо шапки
+3	www.amyl.pro	RU	https://www.amyl.pro/kontaktyi	https://amyl.pro/	Амил|AMYL	ООО Амил, точный WWW отдельно
+4	avangard.global	RU	https://avangard.global/about-us/	https://avangard.global/contacts/	Авангард|AVANGARD	Производитель фасовочного оборудования, другой раздел сайта
+5	altaimai.com	KZ	https://altaimai.com/contact-ru	https://qic.kz/ru/novosti-i-insayty/a-full-cycle-oil-extraction-plant-with-a-capacity-of-500-tons-per-day-opened-in-ust-kamenogorsk/	Altai Mai|ALTAI MAI	ТОО ALTAI MAI, Восточный Казахстан, отдельная страница контактов
+6	goprep.gg	KZ	https://goprep.gg/en/refund	https://goprep.gg/ru/refund	GoPrep|GOPREP	Казахстанский оператор EdTech, без распространения на внешних обработчиков
+7	qazexpopipe.com	KZ	https://qazexpopipe.com/en/products/	https://old.goszakup.gov.kz/ru/registry/show_supplier/287184	QazExpo|QAZEXPO	ТОО QazExpoCentre-Pipe, другая версия каталога
+8	prodmashts.com	RU	https://prodmashts.com/about/o-kompanii/	https://prodmashts.com/kontakty/	ПродмашТехсервис|Продмаштехсервис	Оператор ПродмашТехсервис, альтернативная страница
+9	mzbn.com	BY	https://mzbn.com/en/	https://mzbn.com/information/	МЗБН|Минский завод	Минский завод безалкогольных напитков, наблюдаемая англоязычная цель редиректа
+10	digitalbridge.ai	KZ	https://digitalbridge.ai/ru/battle26/	https://www.gov.kz/org/maidd/press/news/details/1181123?lang=ru	Digital Qazaqstan|Digital Bridge	Казахстанский форум и конкурс, точная русская страница
