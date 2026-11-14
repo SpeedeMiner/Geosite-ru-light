@@ -1,0 +1,7 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+acex.net	hold_content	RU	https://acex.net/ru/privacy-policy/cookie.php	2dUg8h65v1Sqs8Orj00021VG0	https://acex.net/ru/privacy-policy/cookie.php	ООО «КАРГО-ЭКСПРЕСС» указано в политике сайта ACEX	api_truncated, brand_missing
+www.acex.net	hold_redirect	RU	https://www.acex.net/ru/privacy-policy/cookie.php	2ZAxBRrSIUPpEp2MP00021VG0	https://acex.net/ru/privacy-policy/cookie.php	Тот же оператор прямо указывает www.acex.net, WWW проверяется отдельно	redirect
+negabaritika.com	hold_content	RU	https://negabaritika.com/contacts/	2hoRNzuWo01WrMmMr00021VG0	https://negabaritika.ru/contacts/	Группа Негабаритика, международный сайт связывает бренд и адрес почты основного российского сайта	api_truncated, short_visible_body
+globalinklogistics.com	hold_transport	KZ	https://globalinklogistics.com/ru/kazakhstan-ru/	29V28RxQU3RAXBE6f00021VG0	https://old.goszakup.gov.kz/ru/registry/show_supplier/112325	Госзакупки KZ указывают этот веб-сайт для ТОО «Глобалинк» Транспортэйшн энд Лоджистикс Ворлдвайд	tls_or_transport_unproven
+allglobus.com	hold_http	RU	https://allglobus.com/contacts/	20sg7xypp53V5mdt000021VG0	https://www.allglobus.ru/contacts/	Петербургская группа «Глобус», оба сайта указывают общий телефон +7 (812) 438-00-44, .com также в каталоге TransRussia	http_not_200
+www.allglobus.com	hold_http	RU	https://www.allglobus.com/	27rPd8OoKFnRckGRt00021VG0	https://www.allglobus.ru/contacts/	Витрина петербургской группы «Глобус», адрес из каталога TransRussia	http_not_200
