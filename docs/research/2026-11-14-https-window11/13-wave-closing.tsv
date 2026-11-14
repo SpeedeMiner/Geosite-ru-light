@@ -1,0 +1,9 @@
+order	host	scope	url	primary	brand_marker	operator
+1	medicine.minskexpo.com	BY	https://medicine.minskexpo.com/post-reliz-2026-10389	https://www.mgo-voi.ru/news/13231/	Медицина и здоровье|Минскэкспо	Пост-релиз 2026, точный путь из наблюдаемого меню сайта организатора, повторное измерение с другим URL
+2	globalinklogistics.com	KZ	https://globalinklogistics.com/kazakhstan/	https://kacb.kz/member/globalink	Globalink|Глобалинк	ТОО Глобалинк, головной офис в Алматы по отраслевой ассоциации; не распространять на внешние или зарубежные субдомены
+3	www.globalinklogistics.com	KZ	https://www.globalinklogistics.com/kazakhstan/	https://kacb.kz/member/globalink	Globalink|Глобалинк	Точный WWW группы Globalink, отдельная проверка
+4	ktz-alageum.com	KZ	https://ktz-alageum.com/	https://alageum.com/ru/predpriyatiya	Кентауский|ALAGEUM ELECTRIC	Витрина Кентауского трансформаторного завода, первичный источник группы для сверки
+5	www.ktz-alageum.com	KZ	https://www.ktz-alageum.com/	https://alageum.com/ru/predpriyatiya	Кентауский|ALAGEUM ELECTRIC	Точный WWW витрины отдельно, без переноса результатов apex
+6	qansat.com	KZ	https://qansat.com/service3	https://kioge.kz/en/exhibition/exhibitors-list/details?link=0x1d99dc12b333d943a4f93628277c5590&Code=000038222	QANSAT ENERGY|QANSAT	ТОО QANSAT ENERGY, Атырау, первичная карточка KIOGE и сайт
+7	www.minskexpo.com	BY	https://www.minskexpo.com/	https://cci.tj/upload/documents/e0df43d9-129b-4024-b677-eac8ac33ff51.pdf	Минскэкспо|MinskExpo	Выставочная организация Минскэкспо, Беларусь, WWW указан в календаре БелТПП
+8	minskexpo.com	BY	https://minskexpo.com/	https://cci.tj/upload/documents/e0df43d9-129b-4024-b677-eac8ac33ff51.pdf	Минскэкспо|MinskExpo	Вариант без WWW отдельно от сайта медицинской выставки
