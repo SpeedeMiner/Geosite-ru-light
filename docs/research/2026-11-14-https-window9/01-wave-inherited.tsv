@@ -1,0 +1,7 @@
+order	host	scope	url	primary	brand_marker	operator
+1	2023.transweek.digital	RU	https://2023.transweek.digital/ru/	https://www.mintrans.gov.ru/press-center/news/10961	Транспортная неделя	Минтранс РФ ссылается на точный архив и указывает организатора
+2	www.2022.transweek.digital	RU	https://www.2022.transweek.digital/ru/about/archive/	https://2022.transweek.digital/ru/about/organizer/	Транспортная неделя	Организатор указан отдельно, www проверяется самостоятельно
+3	2025.transweek.digital	RU	https://2025.transweek.digital/ru/media/opredeleny-daty-yubileynoy-transportnoy-nedeli-2026/	https://2025.transweek.digital/ru/media/opredeleny-daty-yubileynoy-transportnoy-nedeli-2026/	Транспортная неделя	Статья официального архива, не повтор ранее удержанного пути
+4	2024.transweek.digital	RU	https://2024.transweek.digital/ru/	https://www.mintrans.gov.ru/press-center/news/10961	Транспортная неделя	Корень ежегодного архива, отдельно сверить актуальные реквизиты оператора
+5	rusfishexpo.com	RU	https://rusfishexpo.com/	https://etu.fish.gov.ru/press/regionalnye-novosti/?ELEMENT_ID=4931	Рыба|Фиш	Отраслевое мероприятие, точный корень после удержания /about/
+6	belarus.biwexpo.com	RU	https://belarus.biwexpo.com/faq-press	https://belarus.biwexpo.com/page79601176.html	ИННОПРОМ|Формика Ивент	Российское ООО «Формика Ивент», альтернативная публичная страница
