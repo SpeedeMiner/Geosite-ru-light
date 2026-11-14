@@ -1,0 +1,7 @@
+order	host	scope	url	primary	brand_marker	operator
+1	www.motifs.store	RU	https://www.motifs.store/	https://motifs.store/	МОТИВЫ|MOTIFS	WWW из карточки, независимо от основного домена
+2	www.rosla.com	RU	https://www.rosla.com/contacts/	https://rosla.com/contacts/	РОСЛА|ROSLA	Точное WWW из карточки Р.О.С.Л.А.
+3	www.skifltd.com	RU	https://www.skifltd.com/kontaktyi	https://skifltd.com/kontaktyi	СКИФ|SKIF	Точное WWW из карточки СКИФ
+4	www.standart.pro	RU	https://www.standart.pro/contacts	https://standart.pro/contacts	Стандарт|Standart	Точное WWW из карточки ТБ Стандарт
+5	www.stanki.online	RU	https://www.stanki.online/contact-us/	https://stanki.online/contact-us/	Практик|stanki.online	Точное WWW из карточки ООО Практик
+6	www.teks-o-park.com	RU	https://www.teks-o-park.com/contacts/	https://teks-o-park.com/contacts/	Тексопарк|TEKS-O-PARK	Точное WWW из карточки Тексопарк
