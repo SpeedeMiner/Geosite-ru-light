@@ -1,0 +1,66 @@
+source	name	scope	card	source_sha256	website	host	state	coverage	previously_measured
+trans_kz	KUSTO LOGISTICS, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x824a56df42c85548a30f80285cfef5db&Code=000039469				not_retrieved	none	none
+trans_kz	LWS AGRO, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x74d1e86043855d4f834f331c486f02dd&Code=000040685	7af8cc76c8b4a93bf59cb0476350a793fcc01da65d91b10454bad666023ec84d			no_website	none	none
+trans_kz	MSC CENTRAL ASIA	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xfa8cc29def573241b7c2b3b88bf8af2d&Code=000039778	9bd5806584397becbafcd943a8e7f5f57d6eea175cc7cc17f33e37acaf3c58e9			no_website	none	none
+trans_kz	PTC HOLDING, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x8a6b2645dd8d364692a5e352624fad8e&Code=000039448	34735cb13eeb5d39ac8643e8ec4221cc10a2aa0cc7506cbf39f8659bacd197da			no_website	none	none
+trans_kz	SARENS KAZAKHSTAN	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xe9469946abf28e4d890646eaed42dda1&Code=000040190	314eeb179e4caf82dbac7090a533f430f18f2ceb9532bcfdc0da3cec5ff55d81			no_website	none	none
+trans_kz	SINOEUR INTERNATIONAL LOGISTICS LTD, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x7803758cee33a446af360a51b506c357&Code=000039479	d9160646e78f45633ef535de818898e2d7c9bdf0d6af5d1751a0bb75538142fb			no_website	none	none
+trans_kz	TES	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x4f851a66e630bf409f6c68fb1fbe02cc&Code=000040660	0af96224a0745054a16b71dd276a62162bd79f67f2feb18d78c2a0198bf8f22f			no_website	none	none
+trans_kz	TRANCO PL	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x7edc0b353cc8db409d34ee1fcba229fc&Code=000040207	a5d8ba397d5cd55feb9fa811b4fda4183cd41b596f881ccf84b662a4c7fa2b59			no_website	none	none
+trans_kz	USM LOGISTICS	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xb2bc4a0029edb9439f5d2c412ed092c6&Code=000039964				not_retrieved	none	none
+trans_kz	АКТАУСКИЙ МОРСКОЙ СЕВЕРНЫЙ ТЕРМИНАЛ ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xbbc4760fd56c1747a19a9049b3282cc8&Code=000039589				not_retrieved	none	none
+trans_kz	АЛФЕРТ, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x0ce7c159cd0f52479ef895754e3c2aa7&Code=000039997				not_retrieved	none	none
+trans_kz	АССОЦИАЦИЯ КАЗАХСТАНСКИХ ГРУЗОВЫХ ЖЕЛЕЗНОДОРОЖНЫХ ПЕРЕВОЗЧИКОВ, ОЮЛ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x55ea46b8463d7840905d49505cb9a96a&Code=000040260				not_retrieved	none	none
+trans_kz	ГЛОБАЛ БРИДЖ, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xafbb3e05a6fa48489e7faa137f2ac8b0&Code=000039599	afb7ffd34becee3abcc3755f9fda4aae144388785cf1c2ab404028ca908f5b29			no_website	none	none
+trans_kz	ИЛИОР ЛОГИСТИК, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x30fec2f141da91439bd50887e370f455&Code=000039529	ac4499d825bd52f9120cbf454c331ccab73a1847a419454c8312a6f585eb2040			no_website	none	none
+trans_kz	КАЗАФ МОТОР	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x4ec51de86389f541b0d010a012f6a126&Code=000040308	1028d72e0f3b839a6487788b308a0f372ed19f1267176eccf2f22fca7fe14efd			no_website	none	none
+trans_kz	КАЗМОРТРАНСФЛОТ НМСК, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x3a899e73fea6174eab7f027aef6a64a0&Code=000040679	f2bd5c7ec96a395dfdd7fae002ce6a86e92e125958f126143efdd3718973af3c			no_website	none	none
+trans_kz	ҚАМҚОР ЛОКОМОТИВ, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x95bb6e0085d23645b985e8a3debba932&Code=000040208				not_retrieved	none	none
+trans_kz	КТЖ - ГРУЗОВЫЕ ПЕРЕВОЗКИ, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x64a6712ed44a1b46b039b4625ec9844b&Code=000040171				not_retrieved	none	none
+trans_kz	ЛОГСОФТ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xbf9192d5afdf9640bbd50842f8cf46e4&Code=000040071				not_retrieved	none	none
+trans_kz	ПОРТ АКТАУ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x9c60f0d894ba7142b4c1605ce78cac8f&Code=000040186				not_retrieved	none	none
+trans_kz	СИНО РЕЙЛВЭЙ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x4a2a4b0d3b71d64ba7d00c9f6c916119&Code=000039502	8f7c7b19c9aa055b1adbdad0be820414db2e2288b882e6573199d98694664d58			no_website	none	none
+trans_kz	СТЕЛЛАЖИ.KZ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x119dcf04839e794c8e03e17b2688aec2&Code=000040307	6ec337d026b6c391394d5129d4291cf019d3ac9bbddc3f01f55f579e081700a7			no_website	none	none
+trans_kz	ТРАНСКОМ	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x840578d1ee1f9640b2cb2f3d6ef3535c&Code=000040127	d5a381424de1c9ee26c2be06747883c121be92788988ae885ee92adec4ae29b0			no_website	none	none
+trans_kz	ФРЕЙТКАР КОМПОНЕНТС, ТОО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0xc34df58322f8e94194ac71225c1290ca&Code=000039680	1f191dcd7aab1ed1aab242186f569cc410553b097d59d212552325584572a8a2			no_website	none	none
+trans_kz	КЕДЕНТРАНССЕРВИС, АО	KZ	https://reg.iteca.kz/list/exponent/detailsfull.aspx?link=0x832daee6d1a5854eab861c719652797f&Code=000039720				not_retrieved	none	none
+transweek	Государственная компания «Российские автомобильные дороги»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75238/		https://www.russianhighways.ru	www.russianhighways.ru	regional_explicit	RU	false
+transweek	АО «ГЛОНАСС»	RU	https://2026.transweek.digital/ru/expo/exhibitors/74380/		https://aoglonass.ru	aoglonass.ru	regional_explicit	RU	false
+transweek	Строительная Орбита	RU	https://2026.transweek.digital/ru/expo/exhibitors/75164/		https://stroyorbita.com	stroyorbita.com	regional_explicit	uncovered	false
+transweek	АГН Москва	RU	https://2026.transweek.digital/ru/expo/exhibitors/75073/		https://www.mskagency.ru	www.mskagency.ru	regional_explicit	RU	false
+transweek	ДЕПО	RU	https://2026.transweek.digital/ru/expo/exhibitors/75058/		https://depo-magazine.com	depo-magazine.com	regional_explicit	uncovered	false
+transweek	Логистика 360	RU	https://2026.transweek.digital/ru/expo/exhibitors/75035/		https://logistics360.ru	logistics360.ru	regional_explicit	RU	false
+transweek	АО «Атомдата-Интеграция»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75170/		https://atomdata-int.ru	atomdata-int.ru	regional_explicit	RU	false
+transweek	АО «Росатом Инфраструктурные решения»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75037/		https://rir.rosatom.ru	rir.rosatom.ru	regional_explicit	RU	false
+transweek	ФГУП «Морсвязьспутник»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75055/		https://www.marsat.ru	www.marsat.ru	regional_explicit	RU	false
+transweek	ФГБУ «Администрация морских портов Черного, Азовского и Каспийского морей»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75039/		https://www.bsamp.ru	www.bsamp.ru	regional_explicit	RU	false
+transweek	ГК ЮПХ	RU	https://2026.transweek.digital/ru/expo/exhibitors/75047/				not_in_excerpt	none	none
+transweek	Автомобильные дороги	RU	https://2026.transweek.digital/ru/expo/exhibitors/75149/				not_in_excerpt	none	none
+transweek	Урало-сибирская проектная компания	RU	https://2026.transweek.digital/ru/expo/exhibitors/75051/				not_in_excerpt	none	none
+transweek	Министерство транспорта и дорожного хозяйства Республики Татарстан	RU	https://2026.transweek.digital/ru/expo/exhibitors/75061/				not_in_excerpt	none	none
+transweek	ФГБОУ ВО «Ростовский государственный университет путей сообщения»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75210/				not_in_excerpt	none	none
+transweek	ФГБОУ ВО «Дальневосточный государственный университет путей сообщения» (ДВГУПС)	RU	https://2026.transweek.digital/ru/expo/exhibitors/75174/				not_in_excerpt	none	none
+transweek	ФГБОУ ВО «Сибирский государственный университет путей сообщения»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75100/				not_in_excerpt	none	none
+transweek	ВТБ Инфраструктурный Холдинг	RU	https://2026.transweek.digital/ru/expo/exhibitors/75078/				not_in_excerpt	none	none
+transweek	ООО «ЗНАК»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75094/				not_in_excerpt	none	none
+transweek	Российский морской регистр судоходства	RU	https://2026.transweek.digital/ru/expo/exhibitors/75109/				not_in_excerpt	none	none
+transweek	Медиапалуба	RU	https://2026.transweek.digital/ru/expo/exhibitors/75116/				not_in_excerpt	none	none
+transweek	Ассоциация «Цифровой транспорт и логистика»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75141/				not_in_excerpt	none	none
+transweek	ИТС России	RU	https://2026.transweek.digital/ru/expo/exhibitors/75129/				not_in_excerpt	none	none
+transweek	Интеллектуальные транспортные системы России	RU	https://2026.transweek.digital/ru/expo/exhibitors/75123/				not_in_excerpt	none	none
+transweek	ООО «Диагностика-М»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75132/				not_in_excerpt	none	none
+transweek	Гидротехника	RU	https://2026.transweek.digital/ru/expo/exhibitors/75236/		https://hydroteh.ru	hydroteh.ru	regional_explicit	RU	false
+transweek	Эксперты безопасности	RU	https://2026.transweek.digital/ru/expo/exhibitors/75231/		https://securityexp.ru	securityexp.ru	regional_explicit	RU	false
+transweek	Мир дорог	RU	https://2026.transweek.digital/ru/expo/exhibitors/75216/		https://mirpress.ru	mirpress.ru	regional_explicit	RU	false
+transweek	Дороги и транспорт	RU	https://2026.transweek.digital/ru/expo/exhibitors/75154/		https://dortransport.com	dortransport.com	regional_explicit	uncovered	false
+transweek	ПортНьюс	RU	https://2026.transweek.digital/ru/expo/exhibitors/75138/		https://portnews.ru	portnews.ru	regional_explicit	RU	false
+transweek	Транспортная безопасность и безопасность на транспорте	RU	https://2026.transweek.digital/ru/expo/exhibitors/75137/		https://www.rosbuslines.ru	www.rosbuslines.ru	regional_explicit	RU	false
+transweek	ТСР	RU	https://2026.transweek.digital/ru/expo/exhibitors/75130/		https://tsrmedia.ru	tsrmedia.ru	regional_explicit	RU	false
+transweek	Мостовые сооружения XXI век	RU	https://2026.transweek.digital/ru/expo/exhibitors/75112/		https://vk.ru/wall-25888646_869	vk.ru	regional_explicit	RU	false
+transweek	Агентство транспортной информации	RU	https://2026.transweek.digital/ru/expo/exhibitors/75111/		https://rosacademtrans.ru	rosacademtrans.ru	regional_explicit	RU	false
+transweek	Дороги. Инновации в строительстве	RU	https://2026.transweek.digital/ru/expo/exhibitors/75104/		https://techinform-press.ru/magazines/dorogi-innovatsii-v-stroitelstve	techinform-press.ru	regional_explicit	RU	false
+transweek	Городской транспорт	RU	https://2026.transweek.digital/ru/expo/exhibitors/75093/		https://urbantransport.ru	urbantransport.ru	regional_explicit	RU	false
+transweek	ROLLINGSTOCK Agency	RU	https://2026.transweek.digital/ru/expo/exhibitors/75088/		https://rollingstockworld.ru	rollingstockworld.ru	regional_explicit	RU	false
+transweek	RUБЕЖ	RU	https://2026.transweek.digital/ru/expo/exhibitors/75065/		https://ru-bezh.ru	ru-bezh.ru	regional_explicit	RU	false
+transweek	Безопасные и качественные дороги	RU	https://2026.transweek.digital/ru/expo/exhibitors/75057/				location_unconfirmed	none	none
+transweek	Российские Автобусные Линии. Проблемы и перспективы развития	RU	https://2026.transweek.digital/ru/expo/exhibitors/75043/				not_in_excerpt	none	none

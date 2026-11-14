@@ -1,0 +1,19 @@
+source	name	scope	card	source_sha256	website	host	state	coverage	previously_measured
+transweek	ФГБУ «АМП Западной Арктики»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75205/				not_in_excerpt	none	none
+transweek	Волжский Государственный университет водного транспорта	RU	https://2026.transweek.digital/ru/expo/exhibitors/75183/				not_in_excerpt	none	none
+transweek	ФГБОУ ВО «Государственный морской университет имени адмирала Ф.Ф. Ушакова»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75091/				not_in_excerpt	none	none
+transweek	Федеральное государственное бюджетное учреждение «Морская спасательная служба»	RU	https://2026.transweek.digital/ru/expo/exhibitors/75063/				not_in_excerpt	none	none
+belprom	ДЕЛОВЫЕ МЕДИА, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/delovye-media.html?ml=1		https://www.industrialleaders.by	www.industrialleaders.by	regional_explicit	RU	false
+belprom	ДЕЛОВЫЕ МЕДИА, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/delovye-media.html?ml=1		https://digitalleaders.by	digitalleaders.by	regional_explicit	RU	false
+belprom	ДЕЛОВЫЕ МЕДИА, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/delovye-media.html?ml=1		https://www.energokonkurs.by	www.energokonkurs.by	regional_explicit	RU	false
+belprom	ДЕЛОВЫЕ МЕДИА, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/delovye-media.html?ml=1		https://stroykonkurs.by	stroykonkurs.by	regional_explicit	RU	false
+belprom	ЕВРОСТАНКОМ, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/evrostankom.html?ml=1		https://www.euro-stan.com	www.euro-stan.com	regional_explicit	uncovered	false
+belprom	ИТТАС, общество с ограниченной ответственностью	BY	https://belpromforum.by/spis/nov/ittas.html?ml=1		https://ittas.by	ittas.by	regional_explicit	RU	false
+belprom	КАНПЛАСТ, производственное частное унитарное предприятие	BY	https://belpromforum.by/spis/nov/kanplast.html?ml=1		https://kanplast.by	kanplast.by	regional_explicit	RU	false
+belprom	КАРБОН-ЭКСПОРТ, общество с ограниченной ответственностью	RU	https://belpromforum.by/spis/nov/karbon-eksport.html?ml=1		https://www.carbon-black.ru	www.carbon-black.ru	regional_explicit	RU	false
+astanabuild_operator	ASTANA CERAMIC	KZ	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xccd776eeee2e8c4d9eb510302d12bc23&Code=000037610		https://astanaceramic.com/contacts	astanaceramic.com	operator_crosscheck	uncovered	false
+astanabuild_operator	ASTANA CERAMIC	KZ	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xccd776eeee2e8c4d9eb510302d12bc23&Code=000037610		https://www.astanaceramic.com/about	www.astanaceramic.com	operator_crosscheck	uncovered	false
+astanabuild_operator	AVCOM KAZAKHSTAN	KZ	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0x95b753c799dac84a8aa00344043b689c&Code=000037815		https://www.avcom.kz/	www.avcom.kz	operator_crosscheck	RU	false
+astanabuild_operator	GARANT TRANZIT PLUS	KZ	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xdc96a09873fb1746a7d5f96e12542bd9&Code=000037636		https://garantt.kz/	garantt.kz	operator_crosscheck	RU	false
+astanabuild_operator	ПОЛИМЕРМЕТАЛЛ-Т	KZ	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0x24e85521300f4d4f9516cb28e2c5e062&Code=000037543		https://pm-t.kz/kontakty	pm-t.kz	operator_crosscheck	RU	false
+astanabuild_operator	М-КОНСТРУКТОР	RU	https://astanabuild.kz/ru/vystavka/katalog-spisok-uchastnikov/details?link=0xc5c8e0bf58ef4f4196afba683115d817&Code=000037542		https://www.m-konstruktor.ru/o-kompanii	www.m-konstruktor.ru	operator_crosscheck	RU	false

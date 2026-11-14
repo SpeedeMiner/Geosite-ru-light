@@ -1,0 +1,164 @@
+{
+  "astanabuild": {
+    "rows": 52,
+    "cards": 52,
+    "states": {
+      "not_retrieved": 13,
+      "no_website": 39
+    },
+    "unique_hosts": 0,
+    "coverage": {}
+  },
+  "astanabuild_operator": {
+    "rows": 6,
+    "cards": 5,
+    "states": {
+      "operator_crosscheck": 6
+    },
+    "unique_hosts": 6,
+    "coverage": {
+      "uncovered": 2,
+      "RU": 4
+    }
+  },
+  "belagro": {
+    "rows": 21,
+    "cards": 21,
+    "states": {
+      "website": 8,
+      "no_website": 9,
+      "no_website_web_excerpt": 1,
+      "website_web_excerpt": 3
+    },
+    "unique_hosts": 11,
+    "coverage": {
+      "RU": 9,
+      "uncovered": 2
+    }
+  },
+  "belprom": {
+    "rows": 8,
+    "cards": 5,
+    "states": {
+      "regional_explicit": 8
+    },
+    "unique_hosts": 8,
+    "coverage": {
+      "RU": 7,
+      "uncovered": 1
+    }
+  },
+  "prodexpo": {
+    "rows": 279,
+    "cards": 279,
+    "states": {
+      "website": 189,
+      "no_website": 32,
+      "not_retrieved": 58
+    },
+    "unique_hosts": 189,
+    "coverage": {
+      "RU": 170,
+      "uncovered": 19
+    }
+  },
+  "trans_kz": {
+    "rows": 63,
+    "cards": 63,
+    "states": {
+      "not_retrieved": 28,
+      "no_website": 35
+    },
+    "unique_hosts": 0,
+    "coverage": {}
+  },
+  "transweek": {
+    "rows": 44,
+    "cards": 44,
+    "states": {
+      "regional_explicit": 23,
+      "not_in_excerpt": 20,
+      "location_unconfirmed": 1
+    },
+    "unique_hosts": 23,
+    "coverage": {
+      "RU": 20,
+      "uncovered": 3
+    }
+  },
+  "input": {
+    "coverage_sha256": "9688e3db4d6b11f48b49ec7812978cc233576ebc57166055901c1c6edb970add",
+    "historical_urls": 579,
+    "food_russia_planned_pages": [
+      1,
+      7,
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67,
+      73,
+      79,
+      85,
+      91,
+      97,
+      103,
+      109,
+      115,
+      121,
+      127,
+      133,
+      139,
+      144
+    ],
+    "food_russia_total_pages": 144,
+    "food_russia_retrieved_pages": 20,
+    "trans_kz_index_cards": 192,
+    "trans_kz_countries": {
+      "Россия": 20,
+      "Казахстан": 97,
+      "Азербайджан": 4,
+      "Литва": 6,
+      "Грузия": 2,
+      "Узбекистан": 3,
+      "Китай": 18,
+      "Германия": 3,
+      "Люксембург": 1,
+      "Румыния": 1,
+      "Турция": 6,
+      "": 6,
+      "Республика Беларусь": 10,
+      "Пакистан": 1,
+      "Нидерланды": 1,
+      "Латвия": 10,
+      "Объединенные Арабские Эмираты": 1,
+      "Туркменистан": 1,
+      "Эстония": 1
+    },
+    "astanabuild_index_cards": 97,
+    "astanabuild_countries": {
+      "Россия": 25,
+      "Узбекистан": 4,
+      "Китай": 33,
+      "Казахстан": 27,
+      "Сингапур": 1,
+      "Турция": 1,
+      "Корея": 1,
+      "": 4,
+      "Объединенные Арабские Эмираты": 1
+    },
+    "sha256": {
+      "astanabuild-iteca.html": "f76d755651a6c49203d0a8f223567360e7e09cff077dcb28cf66560a45671bd3",
+      "belagro-ru.html": "37001348df6162a58d54df30d7ece58fa40a86d8155e737833d3504f2098606e",
+      "prod-by.html": "7f1b55fd3ea3df60a4c4f05936ac81683353756ec7e77632ac3ca67086a3484a",
+      "prod-kz.html": "f5a640ac603008e5e94947d0f8d5e4e6a232c23cf3434fc461898c2900e98482",
+      "prod-russia.html": "44433f3df9fffae507b72a39e4f6f26d8e81f7974f1cd20fdba3fa232f46ce67",
+      "trans-kz-iteca.html": "085fbcde638d642f0dcbfa1e9c591035fcc669f07f5d62ee2e3eb86ddb170e42"
+    }
+  }
+}

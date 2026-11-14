@@ -65,7 +65,7 @@ def main():
         return dict(source=source,name=name,scope=scope,card=card,source_sha256=digest(fp) if fp else "",
                     website=site,host=host,state=state,
                     coverage=coverage(host) if host else "none",
-                    previously_measured=str(host in prevhosts).lower() if host else "")
+                    previously_measured=str(host in prevhosts).lower() if host else "none")
     records=[]
     food=j(d/"food-index.json")
     regional=j(d/"food-regional-index.json") if (d/"food-regional-index.json").is_file() else {}
@@ -115,6 +115,22 @@ def main():
                 site=next(iter(w[0].xpath(".//a/@href")),txt(w[0])).strip()
                 state="website" if site else "no_website"
         records.append(row("astanabuild",r["name"],scopes[r["country"]],r["detail"],state,site,fp if fp.is_file() else None))
+    trans=j(d/"trans-kz-index.json")
+    trans_sample=j(d/"trans-kz-detail-sample.json")
+    for key,r in trans_sample.items():
+        fp=d/f"trans-kz-card-{key}.html"
+        site=""
+        state="not_retrieved"
+        if fp.is_file():
+            t=doc(fp)
+            title=t.xpath('//*[@id="lbContractor"]')
+            city=t.xpath('//*[@id="lbCity"]')
+            w=t.xpath('//*[@id="lbWeb"]')
+            state="card_identity_not_verified"
+            if len(title)==len(city)==len(w)==1 and txt(title[0])==r["name"] and txt(city[0])==r["city"]:
+                site=next(iter(w[0].xpath(".//a/@href")),txt(w[0])).strip()
+                state="website" if site else "no_website"
+        records.append(row("trans_kz",r["name"],scopes[r["country"]],r["detail"],state,site,fp if fp.is_file() else None))
     for r in j(d/"web-cards.json")+j(d/"operator-cards.json"):
         records.append(row(r.get("source","belprom" if "belpromforum.by" in r["card"] else "transweek"),
                            r["name"],r["scope"],r["card"],r["state"],r["site"]))
@@ -128,9 +144,10 @@ def main():
     summary["input"]={"coverage_sha256":BASE_DAT,"historical_urls":len(prev),
         "food_russia_planned_pages":food["pages"],"food_russia_total_pages":food["page_total"],
         "food_russia_retrieved_pages":len(list(d.glob("prod-russia*.html"))),
+        "trans_kz_index_cards":len(trans),"trans_kz_countries":dict(Counter(r["country"] for r in trans.values())),
         "astanabuild_index_cards":len(astana),"astanabuild_countries":dict(Counter(r["country"] for r in astana.values())),
         "sha256":{p.name:digest(p) for p in sorted(d.glob("*.html"))
-                  if p.name in {"astanabuild-iteca.html","prod-by.html","prod-kz.html","prod-russia.html","belagro-ru.html","belprom.html","transweek.html"}}}
+                  if p.name in {"astanabuild-iteca.html","prod-by.html","prod-kz.html","prod-russia.html","belagro-ru.html","belprom.html","transweek.html","trans-kz-iteca.html"}}}
     (a.out/"06-catalogue-counts.json").write_text(json.dumps(summary,indent=2,ensure_ascii=False)+"\n")
 
 if __name__=="__main__":main()
