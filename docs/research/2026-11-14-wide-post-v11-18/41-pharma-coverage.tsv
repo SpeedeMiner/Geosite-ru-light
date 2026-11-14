@@ -1,0 +1,26 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+www.valentapharm.com	RU	pharma	https://www.valentapharm.com/contacts/	Валента Фармацевтика	Валента|Valenta	https://arfp.ru/chleny-arfp/				no	new_uncovered
+www.valentapharm.com	RU	pharma	https://www.valentapharm.com/about/	Валента Фармацевтика	Валента|Valenta	https://www.valentapharm.com/contacts/				no	new_uncovered
+ru.geropharm.com	RU	pharma	https://ru.geropharm.com/press/contacts	Герофарм	Герофарм|Geropharm	https://ru.geropharm.com/press/contacts				no	new_uncovered
+geropharm.ru	RU	pharma	https://geropharm.ru/press/contacts	Герофарм	Герофарм|Geropharm	https://geropharm.ru/press/contacts	domain:ru	domain:ru		no	covered_both
+www.generium.ru	RU	pharma	https://www.generium.ru/	Генериум	Генериум	https://www.generium.ru/	domain:ru	domain:ru		no	covered_both
+biocad.ru	RU	pharma	https://biocad.ru/production	BIOCAD	BIOCAD|Биокад	https://arfp.ru/chleny-arfp/	domain:ru	domain:ru		no	covered_both
+www.izvarino-pharma.ru	RU	pharma	https://www.izvarino-pharma.ru/	Изварино Фарма	Изварино Фарма	https://arfp.ru/chleny-arfp/	domain:ru	domain:ru		no	covered_both
+rusbiopharm.ru	RU	pharma	https://rusbiopharm.ru/contacts/	ПСК Фарма	ПСК Фарма	https://rusbiopharm.ru/contacts/	domain:ru	domain:ru		no	covered_both
+r-pharm.com	RU	pharma	https://r-pharm.com/	Р-Фарм	Р-Фарм|R-Pharm	https://arfp.ru/chleny-arfp/				no	new_uncovered
+pharmsynthez.com	RU	pharma	https://pharmsynthez.com/kontakty/	Фармсинтез	Фармсинтез	https://pharmsynthez.com/kontakty/				no	new_uncovered
+pharmasyntez.com	RU	pharma	https://pharmasyntez.com/contacts/	Фармасинтез	Фармасинтез	https://pharmasyntez.com/contacts/				no	new_uncovered
+solopharm.com	RU	pharma	https://solopharm.com/about/contacts	Solopharm	Solopharm|Гротекс	https://solopharm.com/about/contacts				no	new_uncovered
+ft.by	BY	pharma	https://ft.by/	Фармтехнология	Фармтехнология	https://ft.by/	domain:by	domain:by		no	covered_both
+lekpharm.by	BY	pharma	https://lekpharm.by/	Лекфарм	Лекфарм	https://lekpharm.by/	domain:by	domain:by		no	covered_both
+www.lekpharm.com	BY	pharma	https://www.lekpharm.com/kompaniya/o-kompanii/	Лекфарм	Лекфарм|Lekpharm	https://www.lekpharm.com/kompaniya/o-kompanii/	full:www.lekpharm.com	full:www.lekpharm.com		yes	covered_both
+medvax.by	BY	pharma	https://medvax.by/partners/	Медвакс	Медвакс	https://medvax.by/partners/	domain:by	domain:by		no	covered_both
+www.nobel.kz	KZ	pharma	https://www.nobel.kz/	Нобел АФФ	Nobel|Нобел	https://www.nobel.kz/	domain:kz	domain:kz		no	covered_both
+kphk.kz	KZ	pharma	https://kphk.kz/ru/about	Карагандинский фармацевтический комплекс	Карагандинский фармацевтический комплекс	https://procurement.gov.kz/ru/registry/show_supplier/303022	domain:kz	domain:kz		no	covered_both
+www.krgpharm.com	KZ	pharma	https://www.krgpharm.com/kontakty	Карагандинский фармацевтический завод	Карагандинский фармацевтический завод|КФЗ	https://www.krgpharm.com/kontakty				no	new_uncovered
+www.aigp.kz	KZ	pharma	https://www.aigp.kz/corporate/aigp	Абди Ибрахим Глобал Фарм	Abdi İbrahim|Абди Ибрахим	https://aema.kz/uchastniki/too-abdiibrahim-global-farm/	domain:kz	domain:kz		no	covered_both
+www.aigp.asia	KZ	pharma	https://www.aigp.asia/en/	Абди Ибрахим Глобал Фарм	Abdi Ibrahim|AIGP	https://www.aigp.asia/en/				yes	prior_measured
+dolcepharm.kz	KZ	pharma	https://dolcepharm.kz/	Dolce Pharm	Dolce	https://old2.sk-pharmacy.kz/rus/sotrudnichestvo/podderzhka_otech_proizvoditele/proizvoditeli/	domain:kz	domain:kz		no	covered_both
+muconex.kz	KZ	pharma	https://muconex.kz/o-kompanii/	Абди Ибрахим Глобал Фарм	Муконекс|Абди Ибрахим	https://muconex.kz/o-kompanii/	domain:kz	domain:kz		no	covered_both
+www.grammidin.kz	KZ	pharma	https://www.grammidin.kz/	Валента Фармацевтика	Граммидин	https://www.grammidin.kz/	domain:kz	domain:kz		no	covered_both
+www.ingavirin.kz	KZ	pharma	https://www.ingavirin.kz/	Валента Фармацевтика	Ингавирин	https://www.ingavirin.kz/	domain:kz	domain:kz		no	covered_both
