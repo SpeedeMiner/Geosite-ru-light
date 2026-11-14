@@ -38,7 +38,10 @@ def main():
         records = [dict(s.fields(d)) for k,d in parts if k == 2]
         cats[name] = [(r.get(1, 0), r[2].decode()) for r in records]
     w.require(len(cats) == 18 and len(cats["BLOCK"]) == 44, "unexpected candidate categories")
-    plans = w.index(w.tsv(HERE / "11-next-first.tsv") + w.tsv(HERE / "11-next-fallbacks.tsv"), "host")
+    rows = [r for f in ("11-next-first.tsv", "11-next-fallbacks.tsv", "13-next-first-supplement.tsv")
+            for r in w.tsv(HERE / f)]
+    plans = w.index(rows, "host")
+    w.require(len(plans) == 40, "wrong count of final queued names")
     for h in plans:
         hit = [name for name, rules in cats.items() if any(matcher.match(h, r) for r in rules)]
         w.require(not hit, f"already covered: {h}: {hit}")
