@@ -1,0 +1,7 @@
+order	host	scope	url	primary	brand_marker	operator
+1	acex.net	RU	https://acex.net/ru/privacy-policy/cookie.php	https://acex.net/ru/privacy-policy/cookie.php	КАРГО-ЭКСПРЕСС|ACEX	ООО «КАРГО-ЭКСПРЕСС» указано в политике сайта ACEX
+2	www.acex.net	RU	https://www.acex.net/ru/privacy-policy/cookie.php	https://acex.net/ru/privacy-policy/cookie.php	КАРГО-ЭКСПРЕСС|ACEX	Тот же оператор прямо указывает www.acex.net, WWW проверяется отдельно
+3	negabaritika.com	RU	https://negabaritika.com/contacts/	https://negabaritika.ru/contacts/	Negabaritika|Негабаритика	Группа Негабаритика, международный сайт связывает бренд и адрес почты основного российского сайта
+4	globalinklogistics.com	KZ	https://globalinklogistics.com/ru/kazakhstan-ru/	https://old.goszakup.gov.kz/ru/registry/show_supplier/112325	Globalink Logistics|Globalink|Глобалинк	Госзакупки KZ указывают этот веб-сайт для ТОО «Глобалинк» Транспортэйшн энд Лоджистикс Ворлдвайд
+5	allglobus.com	RU	https://allglobus.com/contacts/	https://www.allglobus.ru/contacts/	Globus Group|Глобус	Петербургская группа «Глобус», оба сайта указывают общий телефон +7 (812) 438-00-44, .com также в каталоге TransRussia
+6	www.allglobus.com	RU	https://www.allglobus.com/	https://www.allglobus.ru/contacts/	Globus Group|Глобус	Витрина петербургской группы «Глобус», адрес из каталога TransRussia
