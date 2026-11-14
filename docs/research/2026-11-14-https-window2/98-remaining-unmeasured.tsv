@@ -1,0 +1,82 @@
+order	tier	host	preliminary_scope	https_path	source	note	path_journal
+23	regular	alfa-transit.com	RU	https://alfa-transit.com/contact-us/	https://alfa-transit.com/contact-us/	Страница контактов «Альфа Транзит» вместо нестабильной главной.	08-next-exact-paths.tsv
+27	regular	avia-dostavka.com	RU	https://avia-dostavka.com/	https://www.moscow-cargo.com/ru/uslugi/avtomobilnaya-dostavka	ООО «Зеленые Авиа Возможности», подтверждено профильным партнёром и точной ссылкой в каталоге TransRussia 2026.	05-next-exact-paths.tsv
+29	regular	bigmachine.pro	RU	https://bigmachine.pro/help/public-offer	https://bigmachine.pro/help/public-offer	Оферта магазина ООО «БигМашин» на точном apex.	07-next-exact-paths.tsv
+32	regular	china-pp.pro	RU	https://china-pp.pro/aboutus	https://china-pp.pro/aboutus	Витрина поставщика с московскими контактами, отличать от китайских изготовителей.	09-next-exact-paths.tsv
+33	regular	cronaplast.com	RU	https://cronaplast.com/	https://cronaplast.com/	Витрина российского производителя отделочных материалов. Сверить юридические сведения.	10-next-exact-paths.tsv
+35	regular	deltavolga.com	RU	https://deltavolga.com/index.php	https://deltavolga.com/images/personal-zamok.pdf	Политика прямо связывает ООО «Каравелла», Астрахань, с точным доменом.	05-next-exact-paths.tsv
+37	regular	dveri-indoors.com	RU	https://dveri-indoors.com/	https://dveri-indoors.com/	Витрина производителя inDOORs. Нужна действующая страница реквизитов.	09-next-exact-paths.tsv
+38	regular	e-treid.com	RU	https://e-treid.com/	https://e-treid.com/	Витрина дверей E-Trade. Связь с российским юрлицом отдельно подтверждается.	09-next-exact-paths.tsv
+40	regular	eduterra.pro	RU	https://eduterra.pro/	https://eduterra.pro/	Витрина EduTerra. Проверить реквизиты отдельно от образовательного каталога.	02-next-exact-paths.tsv
+43	regular	elpi.pro	RU	https://elpi.pro/	https://elpi.pro/	Точная витрина группы ЭЛПИ. Сверить оператора конкретного домена.	09-next-exact-paths.tsv
+46	regular	forteholding.biz	RU	https://forteholding.biz/contacts	https://forteholding.biz/contacts	Опубликованы российские контакты группы. Оператор и конкретные иностранные производители различаются.	09-next-exact-paths.tsv
+47	regular	fsdecor.com	RU	https://fsdecor.com/contacts/	https://fsdecor.com/contacts/	На собственном сайте названо ООО ТД «Фабрика сладкого декора», Москва.	09-next-exact-paths.tsv
+49	regular	gip-vision.pro	RU	https://gip-vision.pro/personal-data-consent/	https://gip-vision.pro/personal-data-consent/	ООО «ВЗГЛЯД ГИПА» указано оператором на точном хосте.	10-next-exact-paths.tsv
+54	regular	gsr.net	RU	https://gsr.net/	https://gsr.net/	«Возрождение Шёлкового пути», подтверждение оператора в работе.	05-next-exact-paths.tsv
+60	regular	intech.team	RU	https://intech.team/	https://apkit.ru/about/members/	Интегратор «Интех», страница и карточка АПКИТ.	02-next-exact-paths.tsv
+67	regular	kam.travel	RU	https://kam.travel/	https://www.kam.travel/aboutus	Камчатское бюро путешествий, apex и www проверяются независимо.	05-next-exact-paths.tsv
+69	regular	kefir-grupp.com	RU	https://kefir-grupp.com/	https://kefir-grupp.com/	Точная витрина «Кефир Групп». Оператор и точный хост сверяются отдельно от почтового .ru.	10-next-exact-paths.tsv
+70	regular	konditer.net	RU	https://konditer.net/	https://konditer.net/	«Невский кондитер». Подтвердить юрлицо и публичное содержимое.	10-next-exact-paths.tsv
+72	regular	kotelok.net	RU	https://kotelok.net/dostavka-i-oplata/	https://kotelok.net/dostavka-i-oplata/	Точная витрина SITGROUPSTORE, российские доставка и расчёты. Сверить оператора.	11-next-exact-paths.tsv
+75	regular	leantech.ai	RU	https://leantech.ai/	https://russoft.org/participant/leantech/	Проверять только российский сервис, не включать внешних провайдеров ИИ.	02-next-exact-paths.tsv
+76	regular	leraru.com	RU	https://leraru.com/	https://leraru.com/	На точном домене витрина «Ле Ра Ру», реквизиты уточнить.	11-next-exact-paths.tsv
+77	regular	loftdom.com	RU	https://loftdom.com/4revit	https://loftdom.com/4revit	Российский производитель «ЛофтДом», отдельно указан продавец на витрине.	11-next-exact-paths.tsv
+79	regular	logion.pw	RU	https://logion.pw/	https://logion.pw/	Сюрвейерский сайт ООО «Логион». Каталог связывает точный адрес с организацией.	05-next-exact-paths.tsv
+80	regular	medialab.team	RU	https://medialab.team/	https://www.edu.medialab.team/	АНО «Лаборатория медиа» подтверждена на образовательной витрине. Apex может отдавать только JS-оболочку.	08-next-exact-paths.tsv
+82	regular	mylock.club	RU	https://mylock.club/kontakty	https://mylock.club/kontakty	Публичный ресурс MyLock с контактами в Казани.	11-next-exact-paths.tsv
+84	regular	odnovremenno.com	RU	https://odnovremenno.com/	https://reestr.stdrf.ru/reestr_list	На точном адресе дневник Евгения Гришковца. Подтвердить связь с записью проекта и сети.	04-next-exact-paths.tsv
+86	regular	omnidom.pro	RU	https://omnidom.pro/	https://omnidom.pro/	Российский интегратор. Партнёрство с Яндексом не заменяет проверку оператора.	09-next-exact-paths.tsv
+87	regular	oncor.pro	RU	https://oncor.pro/company	https://oncor.pro/documents	Российская медицинская ИТ-платформа. Отдельно сверить юридического оператора сайта.	06-next-exact-paths.tsv
+89	regular	optimelle.org	RU	https://optimelle.org/	https://optimelle.org/	Витрина Optimelle. Связь издателя с АО «СЦИТ» сверить по реквизитам, не только по карточке выставки.	08-next-exact-paths.tsv
+90	regular	orlovka.farm	RU	https://orlovka.farm/	https://orlovka.farm/	Точная витрина «Молоко из Орловки». Доказательство оператора уточняется.	10-next-exact-paths.tsv
+94	regular	pmclub.pro	RU	https://pmclub.pro/	https://pmclub.pro/contacts	Контакты российской школы. Оферта на другом хосте может относиться к платформе-хостеру, а не к школе.	02-next-exact-paths.tsv
+95	regular	port.one	RU	https://port.one/user_agreement/	https://www.port.one/user_agreement/	АО «Первая Портовая Компания». Для apex проверить рабочий путь отдельно от www.	05-next-exact-paths.tsv
+96	regular	potolkuem.pro	RU	https://potolkuem.pro/gastronomiya	https://potolkuem.pro/gastronomiya	Точная витрина игры, реквизиты издателя ещё сверить.	11-next-exact-paths.tsv
+100	regular	riello.info	RU	https://riello.info/	https://riello.info/	Витрина заявляет российское представительство. Проверить местное юрлицо точного домена.	07-next-exact-paths.tsv
+101	regular	rosholod.org	RU	https://rosholod.org/about	https://rosholod.org/about	Дилерский портал «Росхолод». Проверять публичный раздел, не логин.	09-next-exact-paths.tsv
+102	regular	rtlab.pro	RU	https://rtlab.pro/main	https://rtlab.pro/main	Публичная витрина российского поставщика. Реквизиты оператора ещё сверяются.	07-next-exact-paths.tsv
+103	regular	rublevka34.com	RU	https://rublevka34.com/	https://rublevka34.com/	База отдыха в Волгоградской области. Проверить реквизиты и содержимое.	05-next-exact-paths.tsv
+106	regular	simple-pro.com	RU	https://simple-pro.com/	https://simple-pro.com/	Публичная витрина Simple PRO/«СпецБалтМебель», сверить политику.	10-next-exact-paths.tsv
+107	regular	smartschool.pro	RU	https://smartschool.pro/smart-school-pro-teper-umnyj-sad-vash-cifrovoj-pomoshhnik/	https://smartsad.pro/offer-agreement/	Старый адрес отдельно от нового сайта «Умный Сад».	04-next-exact-paths.tsv
+108	regular	talantikum.com	RU	https://talantikum.com/	https://talantikum.com/	Российская образовательная витрина, оператор подлежит юридической сверке.	06-next-exact-paths.tsv
+110	regular	teplofor.pro	RU	https://teplofor.pro/	https://teplofor.pro/	Витрина российского завода отопительного оборудования. Нужны реквизиты.	09-next-exact-paths.tsv
+112	regular	theuralleader.com	RU	https://theuralleader.com/	https://theuralleader.com/	Витрина производителя, уточнить юридическое лицо, не выводить по языку.	11-next-exact-paths.tsv
+113	regular	tokionline.com	RU	https://tokionline.com/publichnaya-oferta	https://tokionline.com/publichnaya-oferta	Оферта российского онлайн-обучения, доступность страницы оферты проверить отдельно.	06-next-exact-paths.tsv
+114	regular	torgtech.com	RU	https://torgtech.com/kontakty/	https://torgtech.com/kontakty/	Точная публичная страница контактов «Тулаторгтехника».	11-next-exact-paths.tsv
+115	regular	travelcrimea.com	RU	https://travelcrimea.com/trend/o_nas/	https://travelcrimea.com/trend/o_nas/	Точная публичная страница о проекте и его издателе. Категория RU здесь означает маршрутизацию сервиса.	11-next-exact-paths.tsv
+119	regular	versta.pro	RU	https://versta.pro/contacts	https://versta.pro/contacts	Контакты производителя «Верста».	09-next-exact-paths.tsv
+120	regular	vilperus.com	RU	https://vilperus.com/seals	https://vilperus.com/seals	ООО «ВИЛПЕ Рус» на отдельной российской витрине. Не распространять на международный домен.	11-next-exact-paths.tsv
+122	regular	vitaaeternarps.com	RU	https://vitaaeternarps.com/	https://vitaaeternarps.com/	Публичный сайт центра «Вита Этерна». Не затрагивать дочерние приложения.	10-next-exact-paths.tsv
+123	regular	vityaz.travel	RU	https://vityaz.travel/	https://vityaz.travel/oferta-ooo-vityaz.pdf	Оферта ООО «Витязь-Тревел». Проверить публичный контент, индексированная главная меняется.	05-next-exact-paths.tsv
+124	regular	vse-okna.com	RU	https://vse-okna.com/rekvizity-organizaczii/	https://vse-okna.com/rekvizity-organizaczii/	Реквизиты организации на точном домене.	11-next-exact-paths.tsv
+125	regular	wakeup-s.com	RU	https://wakeup-s.com/	https://wakeup-s.com/	Российская публичная витрина WAKEUP. Подтвердить правообладателя по оферте.	06-next-exact-paths.tsv
+126	regular	www.asi-log.com	RU	https://www.asi-log.com/	https://www.asi-log.com/	«Азиялинк Логистикс», сверить юрлицо по точному домену.	05-next-exact-paths.tsv
+127	regular	www.benders.rs	RU	https://www.benders.rs/contacts/	https://benders.rs/contacts/	На apex опубликованы реквизиты ООО «Бэндерс РС», Подольск. .rs не доказывает страну компании. Точный www всё равно проверить отдельно.	07-next-exact-paths.tsv
+128	regular	www.cardboardia.info	RU	https://www.cardboardia.info/	https://madein.cardboardia.info/	Проект основан в Москве. Текущий точный www и местного оператора проверить отдельно от мастерской.	08-next-exact-paths.tsv
+130	regular	www.dephan.com	RU	https://www.dephan.com/about	https://www.dephan.com/about	Публичная страница российского оператора «Дефан».	11-next-exact-paths.tsv
+131	regular	www.domart.com	RU	https://www.domart.com/contacts	https://www.domart.com/contacts	Контакты ООО «ДОМАРТ».	11-next-exact-paths.tsv
+132	regular	www.eatech-nv.com	RU	https://www.eatech-nv.com/	https://www.eatech-nv.com/	Витрина EATECH совпадает с карточкой выставки. Найти юридическую страницу.	10-next-exact-paths.tsv
+133	regular	www.ekoniva-moloko.com	RU	https://www.ekoniva-moloko.com/contacts	https://ekoniva-apk.ru/press/news/2776-gk-ekoniva-preduprezhdaet-o-sluchayakh-moshennichestva	Группа прямо подтверждает точный www, Экспоцентр связывает его с ООО ТД «ЭкоНива Молочные Продукты».	07-next-exact-paths.tsv
+134	regular	www.elmak.tech	RU	https://www.elmak.tech/	https://www.elmak.tech/	Российская витрина «ЭЛМАК» и московские контакты.	11-next-exact-paths.tsv
+135	regular	www.eltis.com	RU	https://www.eltis.com/	https://www.eltis.com/download/zashita-pridonovyh-territoriy.pdf	Ресурс ЭЛТИС и документация с офисом в Санкт-Петербурге. Подтвердить публичное содержимое.	07-next-exact-paths.tsv
+136	regular	www.glassline.pro	RU	https://www.glassline.pro/	https://www.glassline.pro/	Точная витрина производителя, отдельно сверить юридического оператора.	11-next-exact-paths.tsv
+138	regular	www.iconrus.pro	RU	https://www.iconrus.pro/	https://www.iconrus.pro/	Витрина ПО ICON для контейнерных терминалов. Не переносить результат на go.iconrus.pro.	05-next-exact-paths.tsv
+139	regular	www.imex.llc	RU	https://www.imex.llc/about	https://www.imex.llc/about	Международный оператор с российской деятельностью. Выяснить юридического издателя сайта.	05-next-exact-paths.tsv
+140	regular	www.keenmark.com	RU	https://www.keenmark.com/kontakty/	https://www.keenmark.com/kontakty/	Логистическая группа «Кин-Марк», контакты в Санкт-Петербурге.	05-next-exact-paths.tsv
+141	regular	www.mossadistribution.com	RU	https://www.mossadistribution.com/	https://www.mossadistribution.com/	Точная витрина Mossa Distribution, реквизиты ещё проверяются.	10-next-exact-paths.tsv
+142	regular	www.nptpl.com	RU	https://www.nptpl.com/	https://nptpl.com/privacy-policy	Политика apex и контакты в Новороссийске. Точный www требует проверки своего TLS и страницы.	08-next-exact-paths.tsv
+144	regular	www.phortis.com	RU	https://www.phortis.com/	https://fiata.org/directory/ru/	Российский экспедитор «Фортис». Сверить контакты и ASN замеров.	04-next-exact-paths.tsv
+145	regular	www.polairgroup.com	RU	https://www.polairgroup.com/	https://www.polairgroup.com/	Точная витрина группы Полаир. Уточнить юридическую страницу и рабочий путь.	07-next-exact-paths.tsv
+146	regular	www.primecartonpak.com	RU	https://www.primecartonpak.com/contacts/	https://www.primecartonpak.com/company/	АО «ПраймКартонПак», первичная страница оператора.	10-next-exact-paths.tsv
+147	regular	www.progkids.com	RU	https://www.progkids.com/	https://www.progkids.com/	На сайте объявлено объединение с Rocket Tech School. Оферту действующего оператора сверить отдельно.	04-next-exact-paths.tsv
+148	regular	www.promed.one	RU	https://www.promed.one/	https://www.promed.one/	Публичная витрина «ПРОмед», Москва. Проверить текущее юрлицо.	08-next-exact-paths.tsv
+149	regular	www.scheltec.group	RU	https://www.scheltec.group/	https://scheltec.group/contact-us/	ООО «Шелтек» подтверждено на apex. Точный www проверить отдельно.	10-next-exact-paths.tsv
+150	regular	www.shcider.com	RU	https://www.shcider.com/	https://www.shcider.com/	Витрина Sh.cider совпадает с российской карточкой, реквизиты уточняются.	10-next-exact-paths.tsv
+151	regular	www.tdajax.com	RU	https://www.tdajax.com/	https://www.tdajax.com/	Витрина #TDA, актуальные реквизиты продавца ещё сверить.	11-next-exact-paths.tsv
+152	regular	www.tdquartz.com	RU	https://www.tdquartz.com/	https://tdquartz.com/contacts/	Витрина АО «ТД Кварц». Не переносить замер apex на www.	09-next-exact-paths.tsv
+153	regular	www.visit-crimea.com	RU	https://www.visit-crimea.com/publichnaja-oferta/	https://www.visit-crimea.com/publichnaja-oferta/	Оферта связывает точное имя с российским юридическим лицом.	09-next-exact-paths.tsv
+154	regular	www.vitavallis.com	RU	https://www.vitavallis.com/	https://www.vitavallis.com/	Публичный сайт бренда «Аквелит», требуется сверка юридической страницы.	08-next-exact-paths.tsv
+155	regular	www.zemlekop.pro	RU	https://www.zemlekop.pro/kontakty/	https://www.zemlekop.pro/privacy-policy/	Оператор ООО «Диггер-Про» указан в политике на том же www.	09-next-exact-paths.tsv
+156	regular	zavodnasos.com	RU	https://zavodnasos.com/	https://zavodnasos.com/	Точная публичная витрина завода ООО «Курс».	09-next-exact-paths.tsv
+158	regular	zdorovo-eda.com	RU	https://zdorovo-eda.com/	https://zdorovo-eda.com/	Публичный бренд «Здоровая Еда», сверить юридическое лицо с карточкой производителя.	10-next-exact-paths.tsv
+159	regular	zealandia.pro	RU	https://zealandia.pro/	https://zealandia.pro/	Витрина Zealandia Professional. Проверить местное ООО отдельно от иностранного бренда.	10-next-exact-paths.tsv

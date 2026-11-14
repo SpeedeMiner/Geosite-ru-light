@@ -32,6 +32,7 @@ def main():
     cli.add_argument("label")
     cli.add_argument("review", type=Path, help="TSV with columns host, id and rationale for explicit approvals")
     cli.add_argument("evidence", nargs="+", type=Path)
+    cli.add_argument("--refined", type=Path)
     args = cli.parse_args()
     if not args.label.replace("-", "").isalnum():
         cli.error("use a simple checkpoint label")
@@ -45,6 +46,13 @@ def main():
         for line in file.read_text().splitlines():
             r = json.loads(line)
             results[r["host"]].append(r)
+    if args.refined:
+        for line in args.refined.read_text().splitlines():
+            r = json.loads(line)
+            matching = [i for i, old in enumerate(results[r["host"]]) if old.get("id") == r["id"]]
+            if len(matching) != 1:
+                raise SystemExit(f"refinement not backed by a unique ID: {r['host']}")
+            results[r["host"]][matching[0]] = r
     if not approvals.keys() <= results.keys():
         raise SystemExit("approved hostname not in evidence")
     decisions = []

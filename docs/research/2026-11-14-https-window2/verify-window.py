@@ -47,7 +47,21 @@ def verify(args):
             assert original[host]["order"] == r["order"]
 
     observations = [json.loads(line) for f in args.evidence for line in f.read_text().splitlines()]
-    proofs = keyed([row for row in observations if row.get("id")], "id")
+    original_proofs = keyed([row for row in observations if row.get("id")], "id")
+    proofs = dict(original_proofs)
+    if args.refined:
+        refinements = [json.loads(line) for line in args.refined.read_text().splitlines()]
+        for mid, updated in keyed(refinements, "id").items():
+            old = original_proofs[mid]
+            assert old["state"] == "content_unproven" and updated["state"] == "https_candidate"
+            for name in ("host", "url", "started_at", "observed_target", "observed_type",
+                         "observed_method", "observed_path", "errors"):
+                assert old[name] == updated[name], name
+            for before, after in zip(old["probes"], updated["probes"], strict=True):
+                for name in ("asn", "country", "http", "trusted", "san_match", "body_chars",
+                             "visible_chars", "body_sha256", "location", "challenge", "status"):
+                    assert before[name] == after[name], name
+            proofs[mid] = updated
     assert all(row["host"] in original for row in observations)
     decisions = keyed(table(args.decisions), "host")
     attempted = {row["host"] for row in observations if row["state"] not in RETRYABLE}
@@ -73,7 +87,7 @@ def verify(args):
             assert p["country"] == "RU" and p["status"] == "finished" and p["http"] == 200
             assert p["trusted"] is True and p["san_match"] and p["matched_san"]
             assert p["body_chars"] >= 150 and p["visible_chars"] >= 25
-            assert p["markers"] and not p["challenge"] and p["location"] is None
+            assert (p["markers"] or p.get("identity_markers")) and not p["challenge"] and p["location"] is None
             assert len(p["body_sha256"]) == hashlib.sha256().digest_size * 2
         accepted.add("full:" + host)
 
@@ -91,6 +105,7 @@ def main():
     cli.add_argument("decisions", type=Path)
     cli.add_argument("candidate", type=Path)
     cli.add_argument("evidence", nargs="+", type=Path)
+    cli.add_argument("--refined", type=Path)
     verify(cli.parse_args())
 
 if __name__ == "__main__":

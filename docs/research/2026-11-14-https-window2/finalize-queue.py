@@ -14,6 +14,7 @@ def write(path,data,fields):
   w.writerows(data)
 
 dec={r['host']:r for r in rows(root/sys.argv[1])}
+label=sys.argv[2] if len(sys.argv)>2 else '99'
 original=rows(base/'2026-11-14-halfhour/12-next-https.tsv')
 new_plan={r['host']:r for n in ('01-priority-plan.tsv','02-second-plan.tsv','05-reserve-plan.tsv') for r in rows(root/n)}
 queued=[]
@@ -27,7 +28,7 @@ for r in original:
   queued.append(r)
  elif d['decision']!='accept':
   holds.append(d)
-write(root/'99-remaining-unmeasured.tsv',queued,original[0].keys())
+write(root/f'{label}-remaining-unmeasured.tsv',queued,original[0].keys())
 if holds:
- write(root/'99-measured-holds.tsv',holds,holds[0].keys())
+ write(root/f'{label}-measured-holds.tsv',holds,holds[0].keys())
 print('unmeasured',len(queued),'holds',len(holds),'accepted',sum(d['decision']=='accept' for d in dec.values()))

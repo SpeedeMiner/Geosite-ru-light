@@ -68,6 +68,23 @@ class ProbeChecks(unittest.TestCase):
             "<title>Example Brand</title>" + "<script>data='Example Brand'</script>" * 8 + "<div id='app'></div>")
         self.assertEqual(self.state(), "content_unproven")
 
+    def test_meta_identity_requires_visible_body(self):
+        result = self.response["results"][0]["result"]
+        result["rawBody"] = ('<head><meta name="description" content="Example Brand"></head>'
+                             '<body><h1>Публичный каталог товаров</h1>' +
+                             '<p>Доступные категории и контакты</p>' * 4 + '</body>')
+        proof = P.classify(self.row, "abc", self.response, self.now)
+        self.assertEqual(proof["state"], "https_candidate")
+        self.assertEqual(proof["probes"][0]["identity_markers"], ["Example Brand"])
+        result["rawBody"] = '<head><meta name="description" content="Example Brand">' + ' ' * 200
+        self.assertEqual(self.state(), "content_unproven")
+
+    def test_logo_alt_can_identify_a_visible_catalog(self):
+        self.response["results"][0]["result"]["rawBody"] = (
+            '<body><img src="/logo.svg" alt="Example Brand">'
+            '<p>Публичный каталог товаров и контактная информация компании</p>' * 4 + '</body>')
+        self.assertEqual(self.state(), "https_candidate")
+
     def test_truncated_html_head_is_not_public_content(self):
         self.response["results"][0]["result"]["rawBody"] = (
             "<head><title>Example Brand</title><script>" + "payload " * 1000)

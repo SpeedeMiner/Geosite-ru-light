@@ -26,6 +26,7 @@ CHALLENGE = re.compile(
 )
 TITLE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
 META = re.compile(r"<meta\b[^>]*(?:og:title|og:site_name)[^>]*>", re.I)
+IDENTITY_META = {"description", "og:description", "application-name", "apple-mobile-web-app-title"}
 
 def json_lines(value):
     return json.dumps(value, ensure_ascii=False, separators=(",", ":")) + "\n"
@@ -69,8 +70,16 @@ class VisibleText(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.blocks = []
         self.chunks = []
+        self.identity_meta = []
+        self.alt_text = []
 
     def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "meta" and (attrs.get("name") or attrs.get("property") or "").casefold() in IDENTITY_META:
+            if attrs.get("content"):
+                self.identity_meta.append(attrs["content"])
+        if tag == "img" and not self.blocks and attrs.get("alt"):
+            self.alt_text.append(attrs["alt"])
         if tag == "body" and self.blocks == ["head"]:
             self.blocks.clear()
         elif tag in self.hidden:
@@ -106,8 +115,13 @@ def compact(row, item):
     found = TITLE.search(body)
     title = scrub(found[1])[:180] if found else ""
     labels = [unescape(m)[:180] for m in META.findall(body)[:3]]
-    visible = visible_text(body)
+    parsed = VisibleText()
+    parsed.feed(body)
+    visible = " ".join(" ".join(parsed.chunks).split())
     key = marker_key(" ".join([title, *labels, visible]))
+    extra_key = marker_key(" ".join([*parsed.identity_meta, *parsed.alt_text]))
+    identity_markers = [m for m in row["brand_marker"].split("|")
+                        if marker_key(m) and marker_key(m) in extra_key]
     markers = [m for m in row["brand_marker"].split("|")
                if marker_key(m) and marker_key(m) in key]
     challenge = CHALLENGE.search(body[:6000])
@@ -118,7 +132,8 @@ def compact(row, item):
     return dict(asn=p.get("asn"), country=p.get("country"), http=r.get("statusCode"),
                 trusted=t.get("authorized"), san_match=bool(matched), matched_san=matched,
                 issuer=issuer.get("O") or issuer.get("CN"),
-                title=title, og=labels, markers=markers, body_chars=len(body), visible_chars=len(visible),
+                title=title, og=labels, markers=markers, identity_markers=identity_markers,
+                body_chars=len(body), visible_chars=len(visible),
                 body_sha256=sha256(body.encode()).hexdigest() if body else None,
                 location=urljoin(row["url"], loc) if isinstance(loc, str) else loc,
                 challenge=challenge[0] if challenge else None, status=r.get("status"))
@@ -150,7 +165,7 @@ def classify(row, mid, response, submitted_at):
         state = "redirect"
     elif any(p["http"] != 200 or p["location"] is not None for p in probes):
         state = "http_not_200"
-    elif any(p["body_chars"] < 150 or p["visible_chars"] < 25 or p["challenge"] or not p["markers"] for p in probes):
+    elif any(p["body_chars"] < 150 or p["visible_chars"] < 25 or p["challenge"] or not (p["markers"] or p["identity_markers"]) for p in probes):
         state = "content_unproven"
     else:
         state = "https_candidate"
