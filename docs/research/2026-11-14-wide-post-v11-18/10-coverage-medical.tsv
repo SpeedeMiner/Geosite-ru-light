@@ -1,0 +1,12 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+medelement.com	KZ	medical	https://medelement.com/page/kontakty	MedElement	MedElement|МедЭлемент	https://reestr.itk.kz/reestr/106	full:medelement.com	full:medelement.com		no	covered_both
+documedica.ai	KZ	medical	https://documedica.ai/ru/	3MIS	Documedica|3MIS	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	full:documedica.ai	full:documedica.ai		no	covered_both
+forusdata.com	KZ	medical	https://forusdata.com/	Forus Data	ForusData|Medea	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru				no	new_uncovered
+cushpengroup.com	KZ	medical	https://cushpengroup.com/	Cushpen Group	Cushpen|Авиценна	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru				no	new_uncovered
+www.med365.info	KZ	medical	https://www.med365.info/	Digital Med 365	MED365|Медосмотр	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru				no	new_uncovered
+e-clinic.kz	KZ	medical	https://e-clinic.kz/	МК Сункар	E-Clinic|Сункар	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
+averix.kz	KZ	medical	https://averix.kz/	Аверикс	Averix|Аверикс	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
+damumed.kz	KZ	medical	https://damumed.kz/	ДАМУ	Damumed|Даму	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
+macdent.kz	KZ	medical	https://macdent.kz/	MacDent	MacDent	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
+ru.emai.kz	KZ	medical	https://ru.emai.kz/	EmAI	EmAI	https://www.gov.kz/org/dsm/documents/details/196758?lang=ru	domain:kz	domain:kz		no	covered_both
+business.tiyn.io	KZ	payments	https://business.tiyn.io/about	Система платежей TIYN	Tiyn	https://business.tiyn.io/about				no	new_uncovered
