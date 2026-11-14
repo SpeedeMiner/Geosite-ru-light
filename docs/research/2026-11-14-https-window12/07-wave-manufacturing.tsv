@@ -1,0 +1,11 @@
+order	host	scope	url	primary	brand_marker	operator
+1	mf.plastigy.com	RU	https://mf.plastigy.com/proizvodstvo	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385421?stand=14B150	Plastigy|Пластижи	Российское производство пластиковой мебельной фурнитуры, Калуга
+2	www.mf.plastigy.com	RU	https://www.mf.plastigy.com/contacts	https://mf.plastigy.com/contacts	Plastigy|Пластижи	Точный WWW указан в карточке Экспоцентра, независимо от apex
+3	salini-srl.com	RU	https://salini-srl.com/contacts/	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385568?stand=15B096	SALINI|Салини	Российское ООО «ТД САЛИНИ», контакты, отличать от одноимённых зарубежных фирм
+4	www.salini-srl.com	RU	https://www.salini-srl.com/contacts/	https://salini-srl.com/contacts/	SALINI|Салини	Точное WWW указано организатором, отдельно проверить
+5	salnikova-art.com	RU	https://salnikova-art.com/contacts	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385791?stand=15C115	Salnikova|Сальникова	Российский мебельный дизайн, apex отдельно от уже покрытого WWW
+6	liutextile.com	RU	https://liutextile.com/contact	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385742?stand=15C090	Новый Восток|Восточный Шелк|Liu Textile	Контакты в Одинцово и связь «Нового Востока» с указанной карточкой перепроверить
+7	www.liutextile.com	RU	https://www.liutextile.com/contact	https://liutextile.com/contact	Новый Восток|Восточный Шелк|Liu Textile	WWW из карточки «Восточный Шелк», оператор и ответ отдельно
+8	komteh.net	RU	https://komteh.net/	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385800?stand=14C230	Комплект Технолоджи|КОМТЕХ	Российский поставщик материалов для мебельного производства
+9	www.komteh.net	RU	https://www.komteh.net/	https://komteh.net/	Комплект Технолоджи|КОМТЕХ	Точный WWW из карточки организатора
+10	mebelstan.com	RU	https://mebelstan.com/contacts/	https://icatalog.expocentr.ru/ru/exhibitions/f33d045c-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/385906?stand=15B140	Мебельстан|Mebelstan	Производитель мебели, указана точная витрина

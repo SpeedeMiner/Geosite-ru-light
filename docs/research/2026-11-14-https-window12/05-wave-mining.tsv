@@ -1,0 +1,7 @@
+order	host	scope	url	primary	brand_marker	operator
+1	igateway.ltd	KZ	https://igateway.ltd/contact.html	https://miningworld.kz/ru/vystavka/spisok-uchastnikov/details?link=0x81032e73ffa0137e11f0aa4ff774d369&Code=000036700	iGateway|IGATEWAY	ТОО iGateway Ltd, Атырау, точная контактная страница
+2	www.igateway.ltd	KZ	https://www.igateway.ltd/contact.html	https://igateway.ltd/contact.html	iGateway|IGATEWAY	Точное WWW проверяется отдельно
+3	ab-machinery.com	KZ	https://ab-machinery.com/kz	https://miningworld.kz/ru/vystavka/spisok-uchastnikov/details?link=0x6d623f3e5fe4074fa559492187dbdc02&Code=000039298	AB Machinery|AB MACHINERY	Казахстанский поставщик спецтехники, локальная страница
+4	www.ab-machinery.com	KZ	https://www.ab-machinery.com/kz	https://ab-machinery.com/kz	AB Machinery|AB MACHINERY	Точное WWW казахстанской витрины отдельно
+5	www.asiamechanics.com	KZ	https://www.asiamechanics.com/	https://miningworld.kz/ru/vystavka/spisok-uchastnikov/details?link=0x81062e73ffa0137e11f17b77a771d6b2&Code=000038984	Asia Mechanics|ASIA MECHANICS	ASIA MECHANICS, поставщик техники, каталог MMCA помечает Казахстаном, роль точной витрины проверить
+6	asiamechanics.com	KZ	https://asiamechanics.com/	https://www.asiamechanics.com/	Asia Mechanics|ASIA MECHANICS	Точный apex, роль местного оператора проверить независимо
