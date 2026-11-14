@@ -68,6 +68,15 @@ class ProbeChecks(unittest.TestCase):
             "<title>Example Brand</title>" + "<script>data='Example Brand'</script>" * 8 + "<div id='app'></div>")
         self.assertEqual(self.state(), "content_unproven")
 
+    def test_truncated_html_head_is_not_public_content(self):
+        self.response["results"][0]["result"]["rawBody"] = (
+            "<head><title>Example Brand</title><script>" + "payload " * 1000)
+        self.assertEqual(self.state(), "content_unproven")
+
+    def test_http_200_with_location_is_not_direct_success(self):
+        self.response["results"][0]["result"]["headers"] = {"location": "/somewhere"}
+        self.assertEqual(self.state(), "http_not_200")
+
     def test_redirect_does_not_accept(self):
         for p in self.response["results"]:
             p["result"].update(statusCode=301, headers={"location": "/new"})

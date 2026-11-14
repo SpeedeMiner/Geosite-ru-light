@@ -6,6 +6,7 @@ import csv
 from datetime import datetime, timezone
 from hashlib import sha256
 from html import unescape
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
@@ -23,7 +24,6 @@ CHALLENGE = re.compile(
     r"document\.cookie\s*=\s*['\"]realauth|доступ к информационному ресурсу ограничен|"
     r"enable javascript and cookies to continue", re.I,
 )
-SCRIPT_STYLE = re.compile(r"<(script|style)\b[^>]*>.*?</\1\s*>", re.I | re.S)
 TITLE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
 META = re.compile(r"<meta\b[^>]*(?:og:title|og:site_name)[^>]*>", re.I)
 
@@ -61,6 +61,34 @@ def url_path(host, url):
 def scrub(s):
     return " ".join(unescape(re.sub(r"<[^>]+>", " ", s)).split())
 
+class VisibleText(HTMLParser):
+    """Drop markup and hidden blocks, including a head truncated by the API."""
+    hidden = {"head", "title", "script", "style", "template", "svg", "noscript"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.blocks = []
+        self.chunks = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "body" and self.blocks == ["head"]:
+            self.blocks.clear()
+        elif tag in self.hidden:
+            self.blocks.append(tag)
+
+    def handle_endtag(self, tag):
+        if self.blocks and self.blocks[-1] == tag:
+            self.blocks.pop()
+
+    def handle_data(self, data):
+        if not self.blocks:
+            self.chunks.append(data)
+
+def visible_text(body):
+    parser = VisibleText()
+    parser.feed(body)
+    return " ".join(" ".join(parser.chunks).split())
+
 def marker_key(s):
     return re.sub(r"[^\w]+", "", s.casefold())
 
@@ -78,7 +106,7 @@ def compact(row, item):
     found = TITLE.search(body)
     title = scrub(found[1])[:180] if found else ""
     labels = [unescape(m)[:180] for m in META.findall(body)[:3]]
-    visible = scrub(TITLE.sub(" ", SCRIPT_STYLE.sub(" ", body)))
+    visible = visible_text(body)
     key = marker_key(" ".join([title, *labels, visible]))
     markers = [m for m in row["brand_marker"].split("|")
                if marker_key(m) and marker_key(m) in key]
@@ -120,7 +148,7 @@ def classify(row, mid, response, submitted_at):
         state = "tls_or_transport_unproven"
     elif all(p["http"] in (301, 302, 303, 307, 308) and p["location"] for p in probes):
         state = "redirect"
-    elif any(p["http"] != 200 for p in probes):
+    elif any(p["http"] != 200 or p["location"] is not None for p in probes):
         state = "http_not_200"
     elif any(p["body_chars"] < 150 or p["visible_chars"] < 25 or p["challenge"] or not p["markers"] for p in probes):
         state = "content_unproven"
