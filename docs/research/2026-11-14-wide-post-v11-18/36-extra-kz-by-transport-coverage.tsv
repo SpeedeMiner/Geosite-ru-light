@@ -1,0 +1,13 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+falconkz.com	KZ	freight	https://falconkz.com/o-nas/	Falcon Logistic Group	Falcon	https://kffanek.kz/kazapo				no	new_uncovered
+dlg.kz	KZ	freight	https://dlg.kz/about/	Damu Logistics	Damu Logistics	https://dlg.kz/about/	domain:kz	domain:kz		no	covered_both
+atasu.kz	KZ	freight	https://atasu.kz/ru/infopage	Atasu Group	Atasu	https://kazapo.kz/partners.php	domain:kz	domain:kz		no	covered_both
+bpl.by	BY	freight	https://bpl.by/	БелПольЛогистикс	БелПольЛогистикс	https://bpl.by/	domain:by	domain:by		no	covered_both
+www.belatekavto.by	BY	freight	https://www.belatekavto.by/	Белатэкавто	Белатэкавто	https://www.belatekavto.by/	domain:by	domain:by		no	covered_both
+www.adista.by	BY	freight	https://www.adista.by/	Adista	Adista	https://www.adista.by/	domain:by	domain:by		no	covered_both
+bugincom.by	BY	freight	https://bugincom.by/	Бугинком	Бугинком	https://eec.eaeunion.org/upload/medialibrary/ee7/An-dokl-Analiz-sostoyaniya-i-sovremennykh-tendentsiy-razvitiya-transportno_logisticheskikh-tsentrov-v-tselyakh-vyrabotki-rekomendatsiy.pdf	domain:by	domain:by		no	covered_both
+bamp.org	BY	freight	https://bamp.org/	БАМАП (напечатано в каталоге)	БАМАП	https://storage.yandexcloud.net/media.ite.group/transrussia.ru/files/TransRussia_SkladTech_2026_catalogue_light.pdf				no	new_uncovered
+www.bairc.org	BY	freight	https://www.bairc.org/	БАМАП (поле Website IRU)	БАМАП	https://www.iru.org/ru/novosti-i-spravochnye-materialy/spisok-chlenov-iru/bamap				no	new_uncovered
+qazaqenergycharge.kz	KZ	transport	https://qazaqenergycharge.kz/	Qazaq Energy Charge	Qazaq Energy Charge	https://www.doscar.kz/projects/qazaq-energy-charge	domain:kz	domain:kz		no	covered_both
+edrive.kz	KZ	transport	https://edrive.kz/	eDrive	eDrive	https://edrive.kz/	domain:kz	domain:kz		no	covered_both
+evrace.by	BY	transport	https://evrace.by/stations	EVRACE	EVRACE	https://evrace.by/stations	domain:by	domain:by		no	covered_both
