@@ -1,0 +1,63 @@
+cohort	host	url	archived_get	live_get_ipv4	live_get_ipv6	dns_A	dns_AAAA	measurement_ids
+baseline	12storeez.com	https://12storeez.com/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+baseline	aaq.aero	https://aaq.aero/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+baseline	account.documentolog.com	https://account.documentolog.com/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+baseline	adilet.net	https://adilet.net/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+baseline	bamap.org	https://bamap.org/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+baseline	market.dme.aero	https://market.dme.aero/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+candidate	akzholtravel.com	https://akzholtravel.com/ru/contacts/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2eZNBVm6dWjmurcFW00021VKI
+candidate	avicenna.online	https://avicenna.online/Privacy-Policy.html	"{""challenge_or_placeholder"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2PZTAiEf0oIdbGjQk00021VJr
+candidate	baipm.com	https://baipm.com/15-aipm/about/205-contact	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2H073r9dqQkQJbLez00021VJz
+candidate	belur.ooo	https://belur.ooo/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2R7k6acHIYDilYN2m00021VKC
+candidate	business.tiyn.io	https://business.tiyn.io/about	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2V1e4TUPl064HaI7N00021VJ1
+candidate	career.slk-cement.com	https://career.slk-cement.com/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2x7mlVOIMzAv0ImbY00021VKI
+candidate	cont.eurosib.biz	https://cont.eurosib.biz/ru/regular-services	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2hBLe5txTx1BsrwVr00021VJR
+candidate	eskm.net	https://eskm.net/contacts/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2ZXVVhUY70vUazJ6E00021VJq
+candidate	eurosib-logistics.com	https://eurosib-logistics.com/contacts/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2VfAKrbSP3qDzYYV600021VJQ
+candidate	hellopay.online	https://hellopay.online/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2WhnNSehK2bNilsX300021VIw
+candidate	kz.hillstarpay.com	https://kz.hillstarpay.com/kz	"{""body_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	223359u3eOmIvpex900021VJN
+candidate	machunit.com	https://machunit.com/contacts/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2iSh5Cshe4DNkB8yX00021VKC
+candidate	noytech.com	https://noytech.com/policy/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2eHZ1xk6bDLqJ2SgW00021VJT
+candidate	rostovport.com	https://rostovport.com/contacts/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2zOp1BCU9GmCUm5o900021VJP
+candidate	rtlltd.com	https://rtlltd.com/	"{""body_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2RxLBY0hmAusbDSsI00021VJT
+candidate	ru.geropharm.com	https://ru.geropharm.com/press/contacts	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2QnFsJkFM3KtdtS1J00021VJr
+candidate	salampay.com	https://salampay.com/legal/publichania-oferta	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2wAw4pUm6qf4thh4500021VIz
+candidate	sendy.land	https://sendy.land/contacts/	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2tuDy21TU6eBMYr7j00021VIv
+candidate	solopharm.com	https://solopharm.com/about/contacts	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	25tqhR0q5J5n2ONHA00021VJs
+candidate	tengizchevroil.com	https://tengizchevroil.com/contact-us	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2aoeFrdQWnVxxWONN00021VJr
+candidate	tiyn.io	https://tiyn.io/documents	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2kfZTchsnC87ZcAQd00021VJ0
+candidate	unitedbanks.org	https://unitedbanks.org/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2DT3PUDkYt7qoVEJT00021VIv
+candidate	www.akzholtravel.com	https://www.akzholtravel.com/en/news/item/271/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2ciaXWpcpcgSfuoDk00021VKI
+candidate	www.el-torg.com	https://www.el-torg.com/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2eauB9D93mKOSWTLL00021VJw
+candidate	www.eurosib-logistics.com	https://www.eurosib-logistics.com/services/russia/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2R1tlX8AF6JY6BHnn00021VJR
+candidate	www.fintechru.org	https://www.fintechru.org/about/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2A2aA60IICoIw2rpR00021VJz
+candidate	www.hellopay.online	https://www.hellopay.online/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2NZfIbwaGFWm7hHBV00021VIv
+candidate	www.noytech.com	https://www.noytech.com/policy/	"{""identity_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2wsqIy2brNFk9rSxG00021VJT
+candidate	www.sendy.land	https://www.sendy.land/o-nas/	"{""visible_body_review"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2FlzLVGmkMwh7CaVl00021VIv
+candidate	www.unitedbanks.org	https://www.unitedbanks.org/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	22DLFZ2bZ2GUU4dul00021VIv
+candidate	www.valentapharm.com	https://www.valentapharm.com/contacts/	"{""body_marker_observed"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2CE2Mg0uJDyM1WVFP00021VJr
+control	example.com	https://example.com/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	akashi.cloud	https://akashi.cloud/ru/construction-progress/	"{""body_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2MMrhFYoERGee2zTN00021VKE
+hold	akbiday.com	https://akbiday.com/	"{""tls_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2q26UgW7RQ6WaML4y00021VK5
+hold	amurobl.tv	https://amurobl.tv/feedback	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	energy-aven.org	https://energy-aven.org/about/439	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	gazo-beton.org	https://gazo-beton.org/celi-i-zadachi	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	inconkz.com	https://inconkz.com/ru/glavnaya/kontakty	"{""body_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2BBdVfFiLsU4dG84B00021VJz
+hold	kaskad.tv	https://kaskad.tv/kontakty	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	kazenergy.com	https://kazenergy.com/association/contacts/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	kazrenergy.com	https://kazrenergy.com/members	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	miachkovo.com	https://miachkovo.com/kontakty/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	qazaqgreen.com	https://qazaqgreen.com/contacts/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	ramsqz.com	https://ramsqz.com/ru/home	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	regtorg.com	https://regtorg.com/info.html	"{""encoding_loss"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2v3LZy4MyXzElXrP600021VJw
+hold	remz.cab	https://remz.cab/kontakty/	"{""body_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2iaXhhDxKI1BaORHd00021VKK
+hold	rosizol.org	https://rosizol.org/about	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	smlab.digital	https://smlab.digital/kontakty	"{""tls_unproven"":3}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	2O9deditMixcEVeKG00021VKB
+hold	teatrodicapua.com	https://teatrodicapua.com/pressa/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	www.amurobl.tv	https://www.amurobl.tv/about/mediakit	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+hold	www.ixcellerate.com	https://www.ixcellerate.com/faq/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+suffix_sample	beltelecom.by	https://beltelecom.by/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+suffix_sample	get-ipv4.com	https://get-ipv4.com/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+suffix_sample	get-ipv6.com	https://get-ipv6.com/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+suffix_sample	kaspi.kz	https://kaspi.kz/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
+suffix_sample	ya.ru	https://ya.ru/	"{""no_same_url_archive"":1}"	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	NOT_MEASURED	
