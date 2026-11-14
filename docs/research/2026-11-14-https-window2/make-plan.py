@@ -19,7 +19,7 @@ first = [
     ("Никта|Nikta|ООО «ЗВЕНО»", "ООО «ЗВЕНО»"),
     ("Аутлайнс|Outlines", "ООО «Аутлайнс»"),
     ("Под контролем|ПодКонтролем|ПДК", "ООО «ПДК»"),
-    ("TrainingSpace|Training Space|Облако Груп", "ООО «Облако Груп»"),
+    ("TrainingSpace|Training Space|ТренингСпэйс|Облако Груп", "ООО «Облако Груп»"),
     ("Регистр судоходства|Maritime Register of Shipping", "ФАУ «Российский морской регистр судоходства»"),
     ("Музей АТОМ|Музей «АТОМ»|атом.museum|atom.museum", "Официальная билетная витрина Музея АТОМ, ВДНХ"),
     ("Тенгизшевройл|Tengizchevroil|ТШО", "ТОО «Тенгизшевройл», Атырау"),
@@ -40,7 +40,7 @@ second = {
     41: "ЭГО Транслейтинг|EGO Translating", 42: "ЭЙДОС|EIDOS",
     44: "Эквирон|Equiron", 48: "Гермес|Germesplit", 50: "Git in Sky|Гит ин Скай",
     51: "Главпортал", 52: "Glazar|Глазар", 53: "Глювекс|Gluvex",
-    55: "вертолётного спорта|вертолетного спорта|Helisport",
+    55: "вертолётного спорта|вертолетного спорта|ФВС России|Helisport",
     57: "ИмпортМаш|Импорт Маш|Importmash",
     58: "Цифровая независимость|Digital Independence", 59: "INNOVA|Иннова Систем",
     61: "Интеркема|Interqema", 62: "Айсмарт|iSmart", 63: "Айтипелаг|ITPelag",
@@ -48,12 +48,12 @@ second = {
     68: "KAPITAN|Капитан", 71: "Королан|Korolan", 73: "Квантрон|Kvantron",
     74: "Лартех|ЛАРТЕХ|LAR TECH", 78: "LogicLike|ЛогикЛайк",
     81: "Медтехлинк|Medtechlink", 83: "Нейросети|neiroseti.ai", 85: "Омега Трейд|Omega Trade",
-    88: "OpenDev|Опен Дев", 91: "Открытые решения|osinit",
+    88: "OpenDev|Опен Дев", 91: "Открытые решения|Open Solutions|osinit",
     92: "Packplace|Пакплейс", 97: "Pride in Brains|PrideInBrains",
     98: "Про Движение|ProMove Freight|Promovefreight", 99: "Лаборатория ПРОСТОР|Prostorlab",
     104: "Руфом|Rufom", 105: "Всероссийская федерация лёгкой атлетики|легкой атлетики|ВФЛА",
     109: "ТехАвто|Тех Авто|Tehauto", 111: "Термолаб|Termolab",
-    116: "Триксет|Trikset|ГК ТРИК", 117: "Учи.Про|UCHI.PRO",
+    116: "Триксет|Trikset|ГК ТРИК|ТРИК|КиберТех", 117: "Учи.Про|UCHI.PRO",
     118: "ВЭЛМО|VALMO", 121: "ВизиоМедИИ|Visiomed",
     129: "Класс-Инжиниринг|Class Engineering", 137: "И-Волга|i-volga",
     143: "Фармментал|PHM Group", 157: "Завод Стройпром|Завод СтройПром",
@@ -66,6 +66,23 @@ def record(order, marker, operator):
         primary = "https://polpred.com/user-guide"
     elif order == 19:
         url = primary = "https://elementum.group/contacts/"
+    elif order == 26:
+        primary = "https://aurora-line.com/"
+    elif order == 42:
+        url = primary
+    elif order == 62:
+        primary = "https://ismart.org/"
+    elif order == 68:
+        url = "https://kapitanlogistics.com/kontakty/"
+        primary = "https://kapitanlogistics.com/politika-konfidenczialnosti/"
+    elif order == 78:
+        primary = "https://logiclike.com/en/docs/public"
+    elif order == 83:
+        url = primary = "https://neiroseti.ai/award"
+    elif order == 105:
+        url = "https://rusathletics.info/"
+    elif order == 117:
+        url = "https://uchi.pro/accreditation-information"
     return dict(order=order, host=row["host"], scope=row["preliminary_scope"],
                 url=url, primary=primary, brand_marker=marker, operator=operator)
 
