@@ -8,7 +8,10 @@ cd "$bundle"
 [[ "$GITHUB_REF" == refs/heads/main && "$GITHUB_EVENT_NAME" != pull_request ]]
 [[ "$CANDIDATE_SHA" =~ ^[0-9a-f]{64}$ && "$BUNDLE_SHA" =~ ^[0-9a-f]{64}$ && "$ROLLING_SHA" =~ ^[0-9a-f]{64}$ ]]
 [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
-files=(geosite_RU.dat geosite_RU.dat.sha256sum geosite_RU_categories.txt geosite_RU_hydra_appended_categories.txt geosite_RU_new_sources.txt)
+core_files=(geosite_RU.dat geosite_RU.dat.sha256sum geosite_RU_categories.txt geosite_RU_hydra_appended_categories.txt geosite_RU_new_sources.txt)
+srs_files="$(python3 "$root/tools/build_geosite_srs.py" verify-assets --dat geosite_RU.dat)"
+mapfile -t srs_assets <<< "$srs_files"
+files=("${core_files[@]}" "${srs_assets[@]}")
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
@@ -91,9 +94,34 @@ if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
       and any(.assets[]; .name == "geosite_RU.dat" and .digest == $digest)' \
     "$tmp/numbered.json" >/dev/null
   if [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
+    numbered_digest() {
+      jq -er --arg name "$1" '.assets[] | select(.name == $name) | .digest' "$tmp/numbered.json"
+    }
+    # Backfill derived assets only for this exact snapshot, preserving the
+    # pinned recovery files and any already published numbered SRS bytes.
+    for file in "${core_files[@]}"; do
+      want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
+      [[ "$(numbered_digest "$file")" == "$want" ]]
+    done
+    missing_srs=()
+    for file in "${srs_assets[@]}"; do
+      want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
+      if jq -e --arg name "$file" 'any(.assets[]; .name == $name)' "$tmp/numbered.json" >/dev/null; then
+        [[ "$(numbered_digest "$file")" == "$want" ]] || {
+          echo "numbered SRS asset differs: $file" >&2
+          exit 1
+        }
+      else
+        missing_srs+=("$file")
+      fi
+    done
+    if (( ${#missing_srs[@]} )); then
+      gh release upload "$NUMBERED_RELEASE" "${missing_srs[@]}" --repo "$GITHUB_REPOSITORY"
+      gh api "$api/releases/tags/$NUMBERED_RELEASE" > "$tmp/numbered.json"
+    fi
     for file in "${files[@]}"; do
       want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
-      [[ "$(jq -er --arg name "$file" '.assets[] | select(.name == $name) | .digest' "$tmp/numbered.json")" == "$want" ]]
+      [[ "$(numbered_digest "$file")" == "$want" ]]
     done
   fi
 fi
@@ -101,6 +129,17 @@ fi
 # The existing release branch is kept as a normal fast-forward history.
 gh auth setup-git --hostname github.com
 git clone --quiet --depth=1 --single-branch --branch release "$repo.git" "$tmp/raw"
+# Manage only names produced by the SRS exporter. Remove obsolete category
+# files if the reviewed DAT changes its set of categories.
+current_srs() {
+  grep -Fxq -- "$1" <<< "$srs_files"
+}
+git -C "$tmp/raw" ls-files -- 'geosite_*.srs' > "$tmp/raw-srs.txt"
+while IFS= read -r old; do
+  if [[ "$old" =~ ^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$ ]] && ! current_srs "$old"; then
+    git -C "$tmp/raw" rm -- "$old"
+  fi
+done < "$tmp/raw-srs.txt"
 cp -- "${files[@]}" "$tmp/raw/"
 git -C "$tmp/raw" add -- "${files[@]}"
 if ! git -C "$tmp/raw" diff --cached --quiet; then
@@ -110,9 +149,13 @@ if ! git -C "$tmp/raw" diff --cached --quiet; then
   git -C "$tmp/raw" push origin HEAD:refs/heads/release
 fi
 raw_commit="$(git -C "$tmp/raw" rev-parse HEAD)"
+[[ "$(git -C "$tmp/raw" ls-remote origin refs/heads/release | cut -f1)" == "$raw_commit" ]]
 curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
   "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_RU.dat" -o "$tmp/raw.dat"
 cmp geosite_RU.dat "$tmp/raw.dat"
+curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
+  "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_srs.sha256sum" -o "$tmp/raw-srs.sha"
+cmp geosite_srs.sha256sum "$tmp/raw-srs.sha"
 
 changed=()
 for file in "${files[@]}"; do
@@ -124,6 +167,18 @@ if (( ${#changed[@]} )); then
   gh release upload "$rolling" "${changed[@]}" --clobber --repo "$GITHUB_REPOSITORY"
 fi
 gh api "$api/releases/tags/$rolling" > "$tmp/release.json"
+jq -r '.assets[].name | select(test("^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$"))' \
+  "$tmp/release.json" > "$tmp/rolling-srs.txt"
+removed_srs=false
+while IFS= read -r old; do
+  if ! current_srs "$old"; then
+    gh release delete-asset "$rolling" "$old" --repo "$GITHUB_REPOSITORY" --yes
+    removed_srs=true
+  fi
+done < "$tmp/rolling-srs.txt"
+if [[ "$removed_srs" == true ]]; then
+  gh api "$api/releases/tags/$rolling" > "$tmp/release.json"
+fi
 for file in "${files[@]}"; do
   want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
   [[ "$(asset_digest "$file")" == "$want" ]]
@@ -149,6 +204,7 @@ rolling_title='Optimized RU GeoSite Light'
   else
     printf 'Current build: unnumbered rolling snapshot.\n\n'
   fi
+  printf 'For sing-box, download `geosite_RU.srs`, `geosite_BLOCK.srs` or individual categories below. Verify their digests with `geosite_srs.sha256sum`.\n\n'
   printf -- '- Source commit: [`%s`](%s/commit/%s)\n- DAT SHA-256: `%s`\n' \
     "$GITHUB_SHA" "$repo" "$GITHUB_SHA" "$CANDIDATE_SHA"
 } > "$tmp/rolling-notes.md"
