@@ -1,0 +1,91 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+stdrh.ru	RU	culture	https://stdrh.ru/	stdrh.ru	stdrh.ru	https://stdrf.ru/regioni/	domain:ru	domain:ru		no	covered_both
+stdarh.ru	RU	culture	https://stdarh.ru/	stdarh.ru	stdarh.ru	https://stdrf.ru/regioni/	domain:ru	domain:ru		no	covered_both
+stdbr.ru	RU	culture	https://stdbr.ru/	stdbr.ru	stdbr.ru	https://stdrf.ru/regioni/	domain:ru	domain:ru		no	covered_both
+rusmuseumvrm.ru	RU	culture	https://rusmuseumvrm.ru/	rusmuseumvrm.ru	rusmuseumvrm.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.rusmuseum.ru	RU	culture	https://www.rusmuseum.ru/	www.rusmuseum.ru	www.rusmuseum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.rusmuseumshop.com	scope_review	culture	https://www.rusmuseumshop.com/	www.rusmuseumshop.com	www.rusmuseumshop.com	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+rmgallery.ru	RU	culture	https://rmgallery.ru/	rmgallery.ru	rmgallery.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+rusmuseum.ru	RU	culture	https://rusmuseum.ru/	rusmuseum.ru	rusmuseum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.muzped.net	scope_review	culture	https://www.muzped.net/	www.muzped.net	www.muzped.net	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+www.artsstudio.com	scope_review	culture	https://www.artsstudio.com/	www.artsstudio.com	www.artsstudio.com	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+library.rusmuseum.ru	RU	culture	https://library.rusmuseum.ru/	library.rusmuseum.ru	library.rusmuseum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+igardens.ru	RU	culture	https://igardens.ru/	igardens.ru	igardens.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.museum.ru	RU	culture	https://www.museum.ru/	www.museum.ru	www.museum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.adit.ru	RU	culture	https://www.adit.ru/	www.adit.ru	www.adit.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.future.museum.ru	RU	culture	https://www.future.museum.ru/	www.future.museum.ru	www.future.museum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.culture.ru	RU	culture	https://www.culture.ru/	www.culture.ru	www.culture.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.wga.hu	HU	culture	https://www.wga.hu/	www.wga.hu	www.wga.hu	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+vm.kemsu.ru	RU	culture	https://vm.kemsu.ru/	vm.kemsu.ru	vm.kemsu.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.icon-art.info	scope_review	culture	https://www.icon-art.info/	www.icon-art.info	www.icon-art.info	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+www.printsmuseum.ru	RU	culture	https://www.printsmuseum.ru/	www.printsmuseum.ru	www.printsmuseum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.vsdn.ru	RU	culture	https://www.vsdn.ru/	www.vsdn.ru	www.vsdn.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.artrz.ru	RU	culture	https://www.artrz.ru/	www.artrz.ru	www.artrz.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.hermitagemuseum.org	scope_review	culture	https://www.hermitagemuseum.org/	www.hermitagemuseum.org	www.hermitagemuseum.org	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+www.cathedral.ru	RU	culture	https://www.cathedral.ru/	www.cathedral.ru	www.cathedral.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.gmgs.spb.ru	RU	culture	https://www.gmgs.spb.ru/	www.gmgs.spb.ru	www.gmgs.spb.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.manege.spb.ru	RU	culture	https://www.manege.spb.ru/	www.manege.spb.ru	www.manege.spb.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.roerich-museum.org	scope_review	culture	https://www.roerich-museum.org/	www.roerich-museum.org	www.roerich-museum.org	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki				no	new_uncovered
+www.tzar.ru	RU	culture	https://www.tzar.ru/	www.tzar.ru	www.tzar.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.pavlovskmuseum.ru	RU	culture	https://www.pavlovskmuseum.ru/	www.pavlovskmuseum.ru	www.pavlovskmuseum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.oblmuseums.spb.ru	RU	culture	https://www.oblmuseums.spb.ru/	www.oblmuseums.spb.ru	www.oblmuseums.spb.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.tretyakovgallery.ru	RU	culture	https://www.tretyakovgallery.ru/	www.tretyakovgallery.ru	www.tretyakovgallery.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.arts-museum.ru	RU	culture	https://www.arts-museum.ru/	www.arts-museum.ru	www.arts-museum.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.kreml.ru	RU	culture	https://www.kreml.ru/	www.kreml.ru	www.kreml.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.ncca.ru	RU	culture	https://www.ncca.ru/	www.ncca.ru	www.ncca.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.sidur.ru	RU	culture	https://www.sidur.ru/	www.sidur.ru	www.sidur.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.metro.ru	RU	culture	https://www.metro.ru/	www.metro.ru	www.metro.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.museum.vladimir.ru	RU	culture	https://www.museum.vladimir.ru/	www.museum.vladimir.ru	www.museum.vladimir.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.radmuseumart.ru	RU	culture	https://www.radmuseumart.ru/	www.radmuseumart.ru	www.radmuseumart.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+artmuseum.karelia.ru	RU	culture	https://artmuseum.karelia.ru/	artmuseum.karelia.ru	artmuseum.karelia.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.gallery.permonline.ru	RU	culture	https://www.gallery.permonline.ru/	www.gallery.permonline.ru	www.gallery.permonline.ru	https://virtualrm.spb.ru/ru/resources/poleznye_ssylki	domain:ru	domain:ru		no	covered_both
+www.circus-antique.ru	RU	culture	https://www.circus-antique.ru/	www.circus-antique.ru	www.circus-antique.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+theballettheatre.com	RU	culture	https://theballettheatre.com/	theballettheatre.com	theballettheatre.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+yellowkvadrat.ru	RU	culture	https://yellowkvadrat.ru/	yellowkvadrat.ru	yellowkvadrat.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+inclusioncenter.ru	RU	culture	https://inclusioncenter.ru/	inclusioncenter.ru	inclusioncenter.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.kdteatr.net	RU	culture	https://www.kdteatr.net/	www.kdteatr.net	www.kdteatr.net	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+carusel.tomsk.ru	RU	culture	https://carusel.tomsk.ru/	carusel.tomsk.ru	carusel.tomsk.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.kolyada-theatre.ru	RU	culture	https://www.kolyada-theatre.ru/	www.kolyada-theatre.ru	www.kolyada-theatre.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+kuklateatr.www.ru	RU	culture	https://kuklateatr.www.ru/	kuklateatr.www.ru	kuklateatr.www.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+plastrain.com	RU	culture	https://plastrain.com/	plastrain.com	plastrain.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.panorama-production.ru	RU	culture	https://www.panorama-production.ru/	www.panorama-production.ru	www.panorama-production.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.takoy-teatr.ru	RU	culture	https://www.takoy-teatr.ru/	www.takoy-teatr.ru	www.takoy-teatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.tk-teatr.ru	RU	culture	https://www.tk-teatr.ru/	www.tk-teatr.ru	www.tk-teatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.2ky.tomsk.ru	RU	culture	https://www.2ky.tomsk.ru/	www.2ky.tomsk.ru	www.2ky.tomsk.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+teatrodicapua.com	RU	culture	https://teatrodicapua.com/	teatrodicapua.com	teatrodicapua.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.vampuka.com	RU	culture	https://www.vampuka.com/	www.vampuka.com	www.vampuka.com	https://reestr.stdrf.ru/reestr_list	full:www.vampuka.com	full:www.vampuka.com		no	covered_both
+www.cdrrb.ru	RU	culture	https://www.cdrrb.ru/	www.cdrrb.ru	www.cdrrb.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+teatrdveo.tilda.ws	RU	culture	https://teatrdveo.tilda.ws/	teatrdveo.tilda.ws	teatrdveo.tilda.ws	https://reestr.stdrf.ru/reestr_list	domain:tilda.ws	domain:tilda.ws		no	covered_both
+sht.spb.ru	RU	culture	https://sht.spb.ru/	sht.spb.ru	sht.spb.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+aroninspace.ru	RU	culture	https://aroninspace.ru/	aroninspace.ru	aroninspace.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.funnybell.ru	RU	culture	https://www.funnybell.ru/	www.funnybell.ru	www.funnybell.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.melteatr.ru	RU	culture	https://www.melteatr.ru/	www.melteatr.ru	www.melteatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.teatron.pro	RU	culture	https://www.teatron.pro/	www.teatron.pro	www.teatron.pro	https://reestr.stdrf.ru/reestr_list	full:www.teatron.pro	full:www.teatron.pro		no	covered_both
+www.stanislavsky-centre.com	RU	culture	https://www.stanislavsky-centre.com/	www.stanislavsky-centre.com	www.stanislavsky-centre.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.mtheat.ru	RU	culture	https://www.mtheat.ru/	www.mtheat.ru	www.mtheat.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.enfant-terrible.ru	RU	culture	https://www.enfant-terrible.ru/	www.enfant-terrible.ru	www.enfant-terrible.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+uralcsd.ru	RU	culture	https://uralcsd.ru/	uralcsd.ru	uralcsd.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+goteatr.ru	RU	culture	https://goteatr.ru/	goteatr.ru	goteatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.eskizy.com	RU	culture	https://www.eskizy.com/	www.eskizy.com	www.eskizy.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+akteatr.ru	RU	culture	https://akteatr.ru/	akteatr.ru	akteatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+artluxe-spb.ru	RU	culture	https://artluxe-spb.ru/	artluxe-spb.ru	artluxe-spb.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+teatr-mirt.narod.ru	RU	culture	https://teatr-mirt.narod.ru/	teatr-mirt.narod.ru	teatr-mirt.narod.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+arctictheater.com	RU	culture	https://arctictheater.com/	arctictheater.com	arctictheater.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.arlekiniada.com	RU	culture	https://www.arlekiniada.com/	www.arlekiniada.com	www.arlekiniada.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.stantsia.com	RU	culture	https://www.stantsia.com/	www.stantsia.com	www.stantsia.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+lokoz.ru	RU	culture	https://lokoz.ru/	lokoz.ru	lokoz.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.artcenteromsk.ru	RU	culture	https://www.artcenteromsk.ru/	www.artcenteromsk.ru	www.artcenteromsk.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+balashiha-dramteatr.bitrix24.site	shared_review	culture	https://balashiha-dramteatr.bitrix24.site/	balashiha-dramteatr.bitrix24.site	balashiha-dramteatr.bitrix24.site	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+www.vdt-vrn.ru	RU	culture	https://www.vdt-vrn.ru/	www.vdt-vrn.ru	www.vdt-vrn.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.vsuduteatr.ru	RU	culture	https://www.vsuduteatr.ru/	www.vsuduteatr.ru	www.vsuduteatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.poleskazok.ru	RU	culture	https://www.poleskazok.ru/	www.poleskazok.ru	www.poleskazok.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+teatr-versia.tomsk.ru	RU	culture	https://teatr-versia.tomsk.ru/	teatr-versia.tomsk.ru	teatr-versia.tomsk.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+meyerhold.ru	RU	culture	https://meyerhold.ru/	meyerhold.ru	meyerhold.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+osobnjak.ru	RU	culture	https://osobnjak.ru/	osobnjak.ru	osobnjak.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.ostrov-teatr.ru	RU	culture	https://www.ostrov-teatr.ru/	www.ostrov-teatr.ru	www.ostrov-teatr.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+teatrpodmostki.ru	RU	culture	https://teatrpodmostki.ru/	teatrpodmostki.ru	teatrpodmostki.ru	https://reestr.stdrf.ru/reestr_list	domain:ru	domain:ru		no	covered_both
+www.gold-theatre.com	RU	culture	https://www.gold-theatre.com/	www.gold-theatre.com	www.gold-theatre.com	https://reestr.stdrf.ru/reestr_list				no	new_uncovered
+csmrk.kz	KZ	culture	https://csmrk.kz/	Национальный центральный музей	Национальный центральный музей	https://csmrk.kz/public/ru	domain:kz	domain:kz		no	covered_both
+e-museum.kz	KZ	culture	https://e-museum.kz/	Единый музейный портал	Единый музейный портал	https://e-museum.kz/	domain:kz	domain:kz		no	covered_both
+www.jewishmuseum.by	BY	culture	https://www.jewishmuseum.by/	Еврейский музей Минск	Еврейский музей Минск	https://www.jewishmuseum.by/	domain:by	domain:by		no	covered_both
+nmrk.kz	KZ	culture	https://nmrk.kz/	Национальный музей Республики Казахстан	Национальный музей Республики Казахстан	https://nmrk.kz/ru/about-museum/normative-legal-acts/	domain:kz	domain:kz		no	covered_both
