@@ -1,0 +1,26 @@
+host	decision	scope	reason	source
+best-dreams.com	defer	RU	Точное имя в карточке, но 503/недоступность вспомогательной проверки.	https://best-dreams.com/
+kolodkinatitukhina.com	defer	RU	Точный сайт дал 403 из вспомогательного источника. Нужен подходящий публичный путь из РФ.	https://kolodkinatitukhina.com/
+m-group.one	defer	RU	Публичная карточка есть, но индексированный HTML не показывает читаемой страницы.	https://m-group.one/
+okhotnoe-club.com	defer	RU	Каталог указывает базу отдыха, текущий публичный ответ не подтверждён.	https://okhotnoe-club.com/
+ow.nbpcmk.com	exclude	CN	На точном хосте указан китайский поставщик из Нинбо.	https://ow.nbpcmk.com/
+photocopier.us	exclude_changed	US	Точная витрина показывает американскую Vaka Enterprises, а не компанию из выставочной карточки.	https://photocopier.us/contact/
+rezina.tech	defer	RU	Источник обнаружения есть, но рабочий ответ точного домена не подтверждён.	https://rezina.tech/
+www.360eag.com	defer	unknown	Точная страница не даёт читаемого содержимого, оператор не подтверждён.	https://www.360eag.com/
+www.arah-co.com	defer	unknown	Точный хост показывает международную торговую витрину, нет доказательства локального оператора.	https://arah-co.com/contact/
+www.arcticstroy.org	defer	RU	Есть выставочная карточка, но не подтверждён рабочий ответ точного www.	https://www.arcticstroy.org/
+www.dakt.com	defer	RU	Есть карточка АО «ДАКТ-Инжиниринг», первичный публичный путь точного хоста не проверен.	https://www.dakt.com/
+www.diamond-technologies.com	defer	RU	Вспомогательный маршрут дал таймаут, а старый HTTP 200 не удостоверяет TLS.	https://www.diamond-technologies.com/
+www.karneev.com	defer	RU	Публичная витрина обнаружена, текущая проверка оператора и доступности не закончена.	https://www.karneev.com/
+www.kazan-wel.com	defer	RU	Карточка туроператора есть, точный хост не подтвердил текущий публичный путь.	https://www.kazan-wel.com/
+www.kazan360.com	defer	RU	Обнаружен домен туроператора, индексированный ответ без читаемых строк.	https://www.kazan360.com/
+www.labintek.tech	defer	RU	Обнаружена карточка выставки, нет подтверждённой текущей страницы.	https://www.labintek.tech/
+www.legioner.store	defer	RU	Точный магазин не подтвердил рабочий публичный ответ.	https://www.legioner.store/
+www.mgorod.com	defer	RU	Историческая ссылка на отраслевой журнал не заменяет проверку точного www.	https://www.mgorod.com/
+www.napoly.info	defer	RU	На точном сайте только краткая витрина, документ об операторе пока не сверён.	https://www.napoly.info/
+www.olimp.bz	defer	RU	Карточка ООО «Олимп» не подтверждает нынешнее содержимое www.	https://www.olimp.bz/
+www.plastexpert.pro	defer	RU	Каталог связывает домен с производителем, актуальный HTTPS ещё не подтверждён.	https://www.plastexpert.pro/
+www.profi.bio	defer	RU	Каталог даёт точный адрес, но публичный рабочий путь и текущий издатель не подтверждены.	https://www.profi.bio/
+www.stangroupco.com	exclude	IN	На точной корпоративной странице указан головной офис в Хайдарабаде и инженерный центр в Великобритании.	https://www.stangroupco.com/about-us
+www.tdrustorg.com	defer	RU	Ссылка из отраслевого каталога, текущий точный публичный ответ не подтверждён.	https://www.tdrustorg.com/
+xn--80ajklac4bdf.com	defer	RU	Точный IDNA-хост дал таймаут во вспомогательной проверке, назначения это не доказывает.	https://xn--80ajklac4bdf.com/
