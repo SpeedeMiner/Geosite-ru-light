@@ -1,0 +1,8 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+tengizchevroil.com	KZ	oil	https://tengizchevroil.com/company	Tengizchevroil	Tengizchevroil|Kazakhstan	https://tengizchevroil.com/company				no	new_uncovered
+inconkz.com	KZ	construction	https://inconkz.com/ru/glavnaya/kontakty	Integra Construction KZ	Integra Construction|Интегра	https://inconkz.com/ru/glavnaya/kontakty				no	new_uncovered
+el-torg.com	RU	trade	https://el-torg.com/bankrot/trade_list.php	Электронные системы Поволжья	ЭСП|Электронная площадка	https://www.el-torg.com/	full:el-torg.com	full:el-torg.com		no	covered_both
+baipm.com	BY	pharma	https://baipm.com/15-aipm/about/205-contact	Белорусская ассоциация международных фармацевтических производителей	Ассоциация международных|Фармацевтических	https://baipm.com/15-aipm/about/205-contact				no	new_uncovered
+medvax.by	BY	pharma	https://medvax.by/	Медвакс	Медвакс|Medvax	https://medvax.by/	domain:by	domain:by		no	covered_both
+aphmik.kz	KZ	pharma	https://aphmik.kz/members	Ассоциация фармацевтических и медицинских индустрий Казахстана	Ассоциация|Казахстан	https://aphmik.kz/members	domain:kz	domain:kz		no	covered_both
+apo.kz	KZ	payments	https://apo.kz/participants	Ассоциация платежных организаций	Ассоциация платежных|АсПО	https://apo.kz/participants	domain:kz	domain:kz		no	covered_both
