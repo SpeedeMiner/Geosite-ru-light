@@ -1,0 +1,21 @@
+{
+  "previous_unique": 9121,
+  "current_unique": 1121,
+  "overlap": 104,
+  "union": 10138,
+  "counts": {
+    "covered-both": 8869,
+    "uncovered": 1028,
+    "confirmed-current": 43,
+    "confirmed-prior": 197,
+    "other-category": 1
+  },
+  "uncovered_http": {
+    "no-paired-http": 561,
+    "redirect-x2": 153,
+    "http-200x2": 300,
+    "other-http": 14
+  },
+  "paired_report_files": 1042,
+  "malformed_old_reports": {}
+}
