@@ -1,0 +1,19 @@
+host	exact_url	basis	action
+bigmachine.pro	https://bigmachine.pro/help/public-offer	Дважды API no_probes_found, ID нет. Оферта содержит ООО «Бигмашин».	Повторить один раз после сброса. Не подменять региональным nsk или оптовым opt.
+gip-vision.pro	https://gip-vision.pro/personal-data-consent/	ООО «ВЗГЛЯД ГИПА» и точное имя в документе.	Первый точный замер.
+www.zemlekop.pro	https://www.zemlekop.pro/kontakty/	Политика точного www называет ООО «Диггер-Про».	Первый точный замер.
+vilperus.com	https://vilperus.com/seals	Отдельная российская витрина ООО «ВИЛПЕ Рус».	Первый точный замер.
+www.ekoniva-moloko.com	https://www.ekoniva-moloko.com/contacts	Группа подтверждает точное имя.	Первый точный замер.
+deltavolga.com	https://deltavolga.com/index.php	ООО «Каравелла» и точное имя в политике.	Первый точный замер.
+fsdecor.com	https://fsdecor.com/contacts/	ООО ТД «Фабрика сладкого декора» указано на apex.	Первый точный замер.
+avia-dostavka.com	https://avia-dostavka.com/	Партнёр и каталог TransRussia подтверждают российского оператора.	Первый точный замер.
+bitronicslab.com	https://bitronicslab.com/policy	Два 200 с правильным TLS/SAN, не хватило видимого HTML.	Измерить другой точный правовой путь.
+pcr.news	https://pcr.news/kontakty/	Оферта подтверждает российского издателя, её тело в замере обрезано.	Измерить точные контакты редакции.
+logiclike.com	https://logiclike.com/vacancies	Оферта подтверждает минское ООО. Главная и оферта оказались обрезаны.	Измерить иной брендированный публичный раздел.
+kapitanlogistics.com	https://kapitanlogistics.com/dokumenty.html	Контакты и политика не дали видимого текста в срезе. В документах назван белорусский оператор.	Измерить этот путь отдельно, если вернёт редирект — подтвердить цель.
+amatascl.com	https://amatascl.com/service-en/	Политика называет ООО «АМАТА СКЕЙЛ». Контактный путь обрезан.	Измерить публичную гарантийную страницу на том же хосте.
+neiroseti.ai	https://neiroseti.ai/team1	Документы подтверждают АО «Нейросети», /award обрезан.	Измерить брендированный публичный раздел команды.
+www.classeng.com	https://www.classeng.com/ru/company/	Реквизиты ООО «КЛАСС-ИНЖИНИРИНГ» подтверждены.	Измерить альтернативный раздел на том же www.
+www.i-volga.com	https://www.i-volga.com/agencies/	Первичная страница подтверждает российского туроператора.	Измерить общедоступный раздел для агентств, не формы оплаты.
+helpinver.com	https://helpinver.com/o-proekte/index.php	Путь контактов получил 404 из трёх точек. ООО «ХЕЛП ИНВЕСТОР» подтверждено отдельным документом.	Проверить другой точный публичный путь. Не переносить 404 на домен целиком.
+lab50.net	https://lab50.net/contacts/	Точное имя вне очереди 159, найден первичный документ ООО «Лаборатория 50».	Отдельно добавить в очередь замеров из отложенных.
