@@ -1,0 +1,9 @@
+order	host	scope	url	primary	brand_marker	operator
+1	gurmina.com	BY	https://gurmina.com/	https://finstore.by/upload/files/344e538e63e27c7522fd0ad6961dcc3a.pdf	Гурмина|Gurmina	Документ ООО «Гурмина-ПРО» называет точный apex, собственная витрина белорусского изготовителя
+2	www.gurmina.com	BY	https://www.gurmina.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377826?stand=7C050	Гурмина|Gurmina	WWW назван в карточке выставки, точное HTTPS наблюдение отдельно от apex
+3	www.abcfood.net	BY	https://www.abcfood.net/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/376883?stand=8C010	Фирма АВС|АВС|ABC	Гродненский производитель, www из каталога, apex уже покрыт
+4	www.malvina-group.com	BY	https://www.malvina-group.com/	https://malvina-group.com/kontakty/	Мальвина|Malvina	Белорусское ЗАО «Фирма Мальвина», WWW сверяется независимо
+5	mzbn.com	BY	https://mzbn.com/information/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377206?stand=1B025	МЗБН|Минский завод безалкогольных напитков	Минский завод безалкогольных напитков, собственная витрина
+6	www.mzbn.com	BY	https://www.mzbn.com/	https://mzbn.com/	МЗБН|Минский завод безалкогольных напитков	WWW в каталоге, точный ответ не наследуется от apex
+7	www.complimilk.com	BY	https://www.complimilk.com/	https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377211?stand=3D090	Комплимилк|Complimilk|Слуцкий	ОАО «Слуцкий сыродельный комбинат», точный WWW из карточки, требуется содержательная сверка
+8	ru.malvina-group.com	BY	https://ru.malvina-group.com/	https://malvina-group.com/contact/	Мальвина|Malvina	Самостоятельная русская витрина ЗАО «Фирма Мальвина», оператор по контактам

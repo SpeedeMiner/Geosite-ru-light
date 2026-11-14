@@ -1,0 +1,9 @@
+order	host	scope	url	primary	brand_marker	operator
+1	avangard.global	RU	https://avangard.global/contacts/	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/384187?stand=18C050	Авангард|AVANGARD	ООО «Группа Компаний Авангард», Москва, собственные контакты
+2	www.avangard.global	RU	https://www.avangard.global/	https://avangard.global/contacts/	Авангард|AVANGARD	WWW из карточки, отдельно проверить отсутствие редиректа и основной текст
+3	amyl.pro	RU	https://amyl.pro/produkcziya/	https://amyl.pro/kontaktyi	Амил|Amyl	ООО «Амил», Нижегородская область, собственный каталог продукции
+4	www.amyl.pro	RU	https://www.amyl.pro/	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/384185?stand=18C055	Амил|Amyl	WWW в карточке ООО «Амил», отдельно от apex
+5	rosholod.org	RU	https://rosholod.org/	https://www.rosholod.org/about	Росхолод|РОСХОЛОД	Российская сеть «Росхолод», в карточке также ООО «Интерколд», связь не переносится на другие хосты
+6	www.signal-pack.com	RU	https://www.signal-pack.com/company/	https://www.signal-pack.com/contacts/	СИГНАЛ-ПАК|Сигнал-Пак	ООО ВКП «Сигнал-Пак», российское производство, собственные контакты
+7	qazexpocentre.com	KZ	https://qazexpocentre.com/contacts	https://qazexpocentre.com/about	QazExpoCentre|QazExpo	ТОО QazExpoCentre, Астана, корпоративный сайт группы
+8	qazexpopipe.com	KZ	https://qazexpopipe.com/produktsiya/	https://old.goszakup.gov.kz/ru/registry/show_supplier/287184	QazExpoCentre-Pipe|QazExpo	ТОО QazExpoCentre-Pipe, Уральск, отдельный производственный сайт
