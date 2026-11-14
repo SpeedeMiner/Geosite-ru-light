@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Reconstruct the priority and continuation queues without probing anything."""
+import argparse
 from collections import Counter
 import csv
+import io
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -34,13 +36,24 @@ def path(host, url):
         raise ValueError(f"wrong URL for {host}: {url}")
     return url
 
-def save(file, records):
-    with file.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=records[0].keys(), delimiter="\t", lineterminator="\n")
-        w.writeheader()
-        w.writerows(records)
+def save(file, records, check):
+    f = io.StringIO(newline="")
+    w = csv.DictWriter(f, fieldnames=records[0].keys(), delimiter="\t", lineterminator="\n")
+    w.writeheader()
+    w.writerows(records)
+    expected = f.getvalue().encode("utf-8")
+    if check:
+        if file.read_bytes() != expected:
+            raise ValueError(f"stale generated queue: {file.name}")
+    else:
+        file.write_bytes(expected)
 
 def main():
+    if not __debug__:
+        raise RuntimeError('Run the verifier without Python optimization')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check', action='store_true', help='verify tracked output without writing')
+    args = parser.parse_args()
     all_names = by_host(rows(HALF / "12-next-https.tsv"))
     before = by_host(rows(PREV / "98-remaining-unmeasured.tsv"))
     held = by_host(rows(PREV / "98-measured-holds.tsv"))
@@ -100,7 +113,7 @@ def main():
                ("08-wave-d.tsv", rest_retry[:RETRY_LIMIT - n_first_retry]),
                ("08-wave-later.tsv", rest_retry[RETRY_LIMIT - n_first_retry:]))
     for file, records in batches:
-        save(HERE / file, records)
+        save(HERE / file, records, args.check)
     print("First quota:", [len(rs) for _, rs in batches[:-1]], "reserve", RESERVE, "tests")
     print("Future quota:", len(batches[-1][1]), "measured holds with another path")
     assert len({r["host"] for _, rs in batches for r in rs}) == 96
