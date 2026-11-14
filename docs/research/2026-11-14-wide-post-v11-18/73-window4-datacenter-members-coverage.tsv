@@ -1,0 +1,16 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+trustinfo.ru	RU	dc_members	https://trustinfo.ru/contacts/	ТрастИнфо	ТрастИнфо	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+trustinfo.net	RU	dc_members	https://trustinfo.net/contacts/	ТрастИнфо	ТрастИнфо|TrustInfo	https://dcunion.ru/chleny-i-uchastniki/				no	new_uncovered
+trastinfo.com	RU	dc_members	https://trastinfo.com/	ТрастИнфо	ТрастИнфо|TrustInfo	https://dcunion.ru/chleny-i-uchastniki/				no	new_uncovered
+tempesto.ru	RU	dc_members	https://tempesto.ru/contacts/ooo-tempesto-tsentr-/	Темпесто-Центр	Темпесто	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+www.iqdata.center	RU	dc_members	https://www.iqdata.center/contacts/	Имаклик	IQDATA|Имаклик	https://dcunion.ru/chleny-i-uchastniki/				no	new_uncovered
+iqdata.center	RU	dc_members	https://iqdata.center/requisites/	Имаклик	IQDATA|Имаклик	https://dcunion.ru/chleny-i-uchastniki/				no	new_uncovered
+d-ostrov.ru	RU	dc_members	https://d-ostrov.ru/contacts/	Цифровой Остров	Цифровой Остров	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+npoar.ru	RU	dc_members	https://npoar.ru/about	НПО АР-Технологии	АР-Технологии	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+datark.ru	RU	dc_members	https://datark.ru/	Датарк	Датарк|Datark	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+filanco.ru	RU	dc_members	https://filanco.ru/documents/	Филанко	Филанко	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+c3solutions.ru	RU	dc_members	https://c3solutions.ru/news/c3-group/	СиТри Солюшнз	C3 Solutions	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+alcondc.ru	RU	dc_members	https://alcondc.ru/blog/alcon-dc-nord-vse-idet-po-planu	Alcon DC Nord	Alcon	https://dcunion.ru/chleny-i-uchastniki/	domain:ru	domain:ru		no	covered_both
+www.ixcellerate.com	RU	dc_members	https://www.ixcellerate.com/contact-us/	IXcellerate	IXcellerate	https://www.ixcellerate.com/contact-us/				no	new_uncovered
+lzspb.com	RU	lifts	https://lzspb.com/about/	Санкт-Петербургский Лифтовый Завод	Лифтовый Завод	https://ela-lift.ru/members				no	new_uncovered
+akashi.cloud	KZ	dc	https://akashi.cloud/ru/construction-progress/	Akashi Data Center	Akashi Data Center	https://www.gov.kz/org/astana-uir/press/news/details/1299153?lang=ru				no	new_uncovered
