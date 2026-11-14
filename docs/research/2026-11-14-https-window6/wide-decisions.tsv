@@ -1,0 +1,7 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+3dlam.com	hold_content	RU	https://3dlam.com/contacts	2mc8zf4H1KMYlfK5p00021VEm	https://icatalog.expocentr.ru/ru/exhibitions/f33d045e-98f8-11ef-80ce-a0d3c1fab97f/exhibitors/382751?stand=1D050	3DLAM, производственная витрина в Петербурге, карточка Экспоцентра и профиль ЗАО «БИОГРАД» в ААТ	api_truncated, short_visible_body
+habilect.com	hold_content	RU	https://habilect.com/en/contacts_en/	2Xm1pYcdHZfVKYTCa00021VEm	https://habilect.com/en/contacts_en/	ООО «Хабилект», производственная документация на том же домене	api_truncated, short_visible_body
+sensorehab.com	hold_content	RU	https://sensorehab.com/company	2x5dBMjg0mA6jzVys00021VEm	https://sensorehab.com/company	ООО «СенсоМед», ИНН 2464141492	api_truncated, short_visible_body, brand_missing
+revi.life	hold_content	RU	https://revi.life/agreement/	23EBwb9JI2x18NY9p00021VEm	https://revi.life/agreement/	ООО «Прототип» как получатель данных на точном сайте, СамГМУ указан в футере	api_truncated, short_visible_body
+stepsreabil.com	submission_unknown	RU	https://stepsreabil.com/stepsreabil-2/		https://stepsreabil.com/stepsreabil-2/	ООО «СТЕПС РЕАБИЛ», официальная витрина группы и договор в материалах ФМБА	missing HTTP response and measurement ID
+korvit.org	submission_unknown	RU	https://korvit.org/		https://korvit.org/	ООО «ВИТ», ИНН 7804003861	missing HTTP response and measurement ID
