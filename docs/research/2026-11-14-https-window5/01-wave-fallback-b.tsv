@@ -1,0 +1,16 @@
+order	host	scope	url	primary	brand_marker	operator
+62	ismart.org	RU	https://ismart.org/legal-agreements/polzovatelskoe-soglashenie	https://ismart.org/	Айсмарт|iSmart	Точный apex прямо называет ООО «Айсмарт» и запись российского реестра ПО. Оферта с www сама по себе недостаточна для apex.
+64	itq-group.com	RU	https://itq-group.com/privacy	https://russoft.org/participant/itq-group/	ITQ Group|АйТиКью	Карточка «АйТиКью Груп» с точным URL.
+81	medtechlink.com	RU	https://medtechlink.com/	https://medtechlink.com/about/	Медтехлинк|Medtechlink	На точной странице ООО «Медтехлинк» и реквизиты.
+83	neiroseti.ai	RU	https://neiroseti.ai/contacts	https://neiroseti.ai/award	Нейросети|neiroseti.ai	Страница документов называет АО «Нейросети» и ИНН. Не добавлять внешние сервисы ИИ по связям.
+85	omega-trade.org	RU	https://omega-trade.org/o-nas	https://omega-trade.org/o-nas	Омега Трейд|Omega Trade	В разделе о компании ООО «Омега Трейд».
+88	opendev.com	RU	https://opendev.com/page68978813.html	https://opendev.com/page68979223.html	OpenDev|Опен Дев	Точное согласие с адресом оператора в Саратове и корпоративной почтой. www отдельно.
+99	prostorlab.com	RU	https://prostorlab.com/prostor-platforma/	https://prostorlab.com/home/o-kompanii/	Лаборатория ПРОСТОР|Prostorlab	Оператор ООО «Лаборатория ПРОСТОР» на точной витрине.
+101	rosholod.org	RU	https://rosholod.org/about	https://storage.mtender.gov.md/get/6dd85998-6419-432e-9958-94ccb4a21584-1754461321408	Росхолод|Дилерский портал	ООО «Росхолод-Импэкс», ОГРН 1151224001830
+116	trikset.com	RU	https://trikset.com/abouttrik	https://trikset.com/terms	Триксет|Trikset|ГК ТРИК|ТРИК|КиберТех	Политика точного сайта называет ООО «КиберТех» оператором.
+118	valmo-logistic.com	RU	https://valmo-logistic.com/	https://valmo-logistic.com/company	ВЭЛМО|VALMO	Реквизиты ООО «ВЭЛМО ЛОГИСТИК».
+120	vilperus.com	RU	https://vilperus.com/industrialconstruction	https://vilperus.com/seals	ВИЛПЕ|VILPE	ООО «ВИЛПЕ Рус»
+126	www.asi-log.com	RU	https://www.asi-log.com/	https://www.asi-log.com/index.php?id=3	Азиялинк Логистикс|Asialink	ООО «Азиялинк Логистикс»
+135	www.eltis.com	RU	https://www.eltis.com/en/	https://www.eltis.com/download/zashita-pridonovyh-territoriy.pdf	ELTIS|Элтис	Российский производитель ЭЛТИС
+143	www.phm.group	RU	https://www.phm.group/polzovatelskoe-soglashenie	https://www.phm.group/polzovatelskoe-soglashenie	Фармментал|PHM Group	Соглашение доступно на точном www, оператор ООО «Фармментал Групп». Названный в документе apex проверяется отдельно.
+146	www.primecartonpak.com	RU	https://www.primecartonpak.com/company/	https://www.primecartonpak.com/include/licenses_detail.php	ПраймКартонПак|PrimeCartonPak	АО «ПраймКартонПак»
