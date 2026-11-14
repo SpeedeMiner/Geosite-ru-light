@@ -1,0 +1,4 @@
+order	host	scope	url	primary	brand_marker	operator
+1	hub-shipping.com	RU	https://hub-shipping.com/about-us/	https://hub-shipping.com/privacy-policy/	Хаб Шиппинг|Hub Shipping	Точное имя указано в политике российского ООО, альтернативный раздел о компании
+2	www.polpharma-santo.com	KZ	https://www.polpharma-santo.com/contact/	https://www.polpharma-santo.com/wp-content/uploads/2025/12/Code-of-Conduct-ENG.pdf	SANTO|Химфарм	Документ АО «Химфарм» прямо указывает точное WWW, проверка HTML контактов завода Шымкента
+3	bellakt.com	BY	https://bellakt.com/	https://www.bellakt.ru/about/contacts/	Беллакт|Bellakt	Белорусское ОАО «Беллакт» подтверждено, но apex отдельно от уже покрытого WWW
