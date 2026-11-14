@@ -72,7 +72,7 @@ def main():
         "ready": 60, "hold_operator": 16, "hold_alias": 3, "hold_content": 2,
     }
     assert Counter(r["status"] for r in review.values()) == {
-        "alternate": 35, "hold_alias": 3, "hold_content": 5, "hold_transport": 1,
+        "alternate": 37, "hold_alias": 3, "hold_content": 3, "hold_transport": 1,
     }
     archived = {}
     for file in sorted(PREV.glob("1[01]-*-evidence-*.jsonl")) + sorted(PREV.glob("0[89]-*-evidence-*.jsonl")):
@@ -105,7 +105,7 @@ def main():
     n_first_new = sum(r["host"] in before for r in first)
     n_first_retry = sum(r["host"] in held for r in first)
     assert (len(first), n_first_new, n_first_retry) == (FIRST, 8, 9)
-    assert len(rest_new) + n_first_new == FIRST_TIME_LIMIT and len(rest_retry) == 26
+    assert len(rest_new) + n_first_new == FIRST_TIME_LIMIT and len(rest_retry) == 28
     assert 3 * (len(first) + len(rest_new) + (RETRY_LIMIT - n_first_retry)) + RESERVE == 250
     batches = (("08-wave-a.tsv", first),
                ("08-wave-b.tsv", rest_new[:26]),
@@ -116,7 +116,7 @@ def main():
         save(HERE / file, records, args.check)
     print("First quota:", [len(rs) for _, rs in batches[:-1]], "reserve", RESERVE, "tests")
     print("Future quota:", len(batches[-1][1]), "measured holds with another path")
-    assert len({r["host"] for _, rs in batches for r in rs}) == 96
+    assert len({r["host"] for _, rs in batches for r in rs}) == 98
 
 if __name__ == "__main__":
     main()

@@ -6,8 +6,8 @@ sf.education	https://sf.education/legalinfo	alternate	Страница рекв�
 potok.io	https://potok.io/media/	alternate	Главная и контакты оборвались в head. Публичный пресс-раздел на том же apex.
 nanosemantics.ai	https://nanosemantics.ai/privacy	alternate	Вместо контактов проверить правовую страницу точной витрины.
 podkontrolem.online	https://podkontrolem.online/personal-data-policy	alternate	Правовая страница точного сайта указывает ПДК.
-www.trainingspace.online		hold_content	Бренд только в заголовке и head, подтверждённого более компактного пути на том же www не найдено.
-www.unicraft.org		hold_content	Точный /page/contacts/ отдаёт head. Главная может вести на другую витрину. Нужен отдельный публичный путь.
+www.trainingspace.online	https://www.trainingspace.online/support	alternate	Точная публичная страница поддержки с названием сервиса. Соглашение ранее обрезано.
+www.unicraft.org	https://www.unicraft.org/blog/help/	alternate	На точном www найден отдельный публичный раздел справки. Страница реквизитов ранее обрезана.
 amatascl.com	https://amatascl.com/service-en/	alternate	Точная публичная страница гарантийного обслуживания.
 aurora-line.com	https://aurora-line.com/	alternate	В контактах обрезан head, на главной указан оператор ООО «Аврора Лайн».
 beepitron.com	https://beepitron.com/about	alternate	Публичный раздел о компании на том же домене.
