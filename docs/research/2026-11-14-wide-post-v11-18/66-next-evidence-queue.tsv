@@ -1,0 +1,9 @@
+host	candidate_public_url	owner_or_catalog	next_check
+inconkz.com	https://inconkz.com/ru/glavnaya/kontakty	https://inconkz.com/ru	Для двух усечённых ответов нужен полный текст существующей публичной страницы через RU AS; не повторять тот же короткий формат.
+regtorg.com	https://regtorg.com/info.html	https://regtorg.com/info.html	Нужен ответ с сохранёнными байтами Windows-1251; U+FFFD из API уже необратим.
+smlab.digital	https://smlab.digital/kontakty	https://apkit.ru/about/members/	Стандартная проверка цепочки на публичной странице после восстановления TLS, без отключения проверки.
+career.bilim.group	https://career.bilim.group/vacancy/ru	https://bilim.group/about/ru	Новая публичная страница вакансий; сначала проверить достаточность тела или независимо наблюдаемого отображения.
+potato-russia.com	https://potato-russia.com/about	https://potato-russia.com/about	Проверить страницу о выставке, фактического организатора и текущее состояние проекта.
+dfa.fintechru.org	https://dfa.fintechru.org/contacts/	https://www.fintechru.org/about/	Сначала найти другой короткий официальный публичный маршрут; на контактах не хватает тела.
+akbiday.com	https://akbiday.com/	https://fcc.kz/ru/o-korporaczii/korporativnoe-upravlenie/dochernie-organizaczii/	Проверить после изменения сертификата: сейчас одновременно не доверен и отсутствует совпадение SAN.
+isimplelab.com	https://isimplelab.com/licenses/	https://www.fintechru.org/about/	Сначала найти другую содержательную опубликованную страницу точного .com; .ru уже покрыт.
