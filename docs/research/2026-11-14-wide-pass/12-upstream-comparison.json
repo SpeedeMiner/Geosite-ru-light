@@ -1,0 +1,76 @@
+[
+  {
+    "repository": "lib4u/amnezia-tunneling-ru",
+    "commit": "2985e80292850f89cf684b52730f857dacd839e1",
+    "file": "amnezia.json",
+    "purpose": "flattened-positive",
+    "counts": {
+      "excluded-syntax-private-or-tld": 116,
+      "covered-both": 2137,
+      "block": 9,
+      "split-policy": 27
+    }
+  },
+  {
+    "repository": "daviddt369/ru-not-ru-domain",
+    "commit": "8a95ed995e89269fc177d428a424d74f92a2cd9b",
+    "file": "domains.txt",
+    "purpose": "candidate",
+    "counts": {
+      "covered-both": 265,
+      "uncovered": 5
+    }
+  },
+  {
+    "repository": "daviddt369/ru-not-ru-domain",
+    "commit": "8a95ed995e89269fc177d428a424d74f92a2cd9b",
+    "file": "extra-direct-ru.txt",
+    "purpose": "candidate",
+    "counts": {
+      "covered-both": 18,
+      "block": 2
+    }
+  },
+  {
+    "repository": "daviddt369/ru-not-ru-domain",
+    "commit": "8a95ed995e89269fc177d428a424d74f92a2cd9b",
+    "file": "roscomvpn-whitelist-nontld.txt",
+    "purpose": "candidate",
+    "counts": {
+      "covered-both": 190,
+      "excluded-syntax-private-or-tld": 2
+    }
+  },
+  {
+    "repository": "daviddt369/ru-not-ru-domain",
+    "commit": "8a95ed995e89269fc177d428a424d74f92a2cd9b",
+    "file": "gaming-direct.txt",
+    "purpose": "other-purpose",
+    "counts": {
+      "other-category": 57,
+      "covered-both": 1,
+      "uncovered": 2
+    }
+  },
+  {
+    "repository": "itdoginfo/allow-domains",
+    "commit": "932e11c43a9e000a24ba08129c15d99287c6e9a9",
+    "file": "Russia/outside-raw.lst",
+    "purpose": "mixed-purpose",
+    "counts": {
+      "covered-both": 39
+    }
+  },
+  {
+    "repository": "itdoginfo/allow-domains",
+    "commit": "932e11c43a9e000a24ba08129c15d99287c6e9a9",
+    "file": "Russia/inside-raw.lst",
+    "purpose": "negative-only",
+    "counts": {
+      "excluded-syntax-private-or-tld": 1,
+      "uncovered": 1121,
+      "covered-both": 43,
+      "other-category": 18
+    }
+  }
+]
