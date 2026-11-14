@@ -1,0 +1,9 @@
+order	host	scope	url	primary	brand_marker	operator
+1	hub-shipping.com	RU	https://hub-shipping.com/privacy-policy/	https://hub-shipping.com/privacy-policy/	ХАБ ШИППИНГ|Hub Shipping	Политика называет точный домен и ООО «ХАБ ШИППИНГ», российский оператор
+2	necoline.net	RU	https://necoline.net/about-company/	https://transrussia.ru/ru/media/news/2026/january/21/spisok-uchastnikov-transrussia-skladtech-2026/	НЭКО ЛАЙН|Necoline	Российская морская линия «НЭКО ЛАЙН», профиль компании и отраслевой каталог
+3	acex.net	RU	https://acex.net/ru/contact/	https://acex.net/en/contact/2327/	КАРГО-ЭКСПРЕСС|ACEX	Контакты и реквизиты ООО «КАРГО-ЭКСПРЕСС», ИНН 5047072962
+4	negabaritika.com	RU	https://negabaritika.com/transportation-of-oversized-loads/	https://negabaritika.ru/contacts/	Negabaritika|Негабаритика	Отраслевой раздел международной витрины, указан российский оператор
+5	www.medelement.com	KZ	https://www.medelement.com/page/kontakty	https://medelement.com/page/oferta-u-rk-me	MedElement|МедЭлемент	Отдельная проверка WWW платформы с казахстанским оператором услуг
+6	belarus.biwexpo.com	RU	https://belarus.biwexpo.com/opening-hours	https://belarus.biwexpo.com/page79601176.html	ИННОПРОМ|Формика Ивент	Режим работы выставки, ООО «Формика Ивент», отдельный публичный URL
+7	www.aigp.asia	KZ	https://www.aigp.asia/en/contact/report-on-side-effects/	https://www.aigp.asia/en/contact/our-contact-addresses/	Abdi Ibrahim|Global Pharm	Публичная информация локального ТОО, только GET без ввода данных
+8	exhibitors-itegroup.exhibitoronlinemanual.com	RU	https://exhibitors-itegroup.exhibitoronlinemanual.com/trans-russia-2026/ru/Exhibitor	https://transrussia.ru/ru/about/exhibitor-list/	TransRussia|SkladTech	Каталог ITE, общий внешний хост, исследование оператора отдельно
