@@ -1,0 +1,52 @@
+{
+  "baseline_assets": {
+    "geosite_RU.dat": {
+      "sha256": "75b79f1883e0ae7380621c41bdac89777dc1df660844d141ea98a400526728ec",
+      "size": 98564
+    },
+    "geosite_RU.dat.sha256sum": {
+      "sha256": "4cd10ef46d6a9397cc878040fa27bf6ff6c2210826461a16aa42238e3d9b7610",
+      "size": 81
+    },
+    "geosite_RU_categories.txt": {
+      "sha256": "c6589a2a72e0abe72a9ec71034450b37f39781e08d4f31c793f9f1398bc4026f",
+      "size": 2437
+    },
+    "geosite_RU_hydra_appended_categories.txt": {
+      "sha256": "a31f315d68998a5ff6d6bd57fec61947d0fde95f2a2301f97029fd1b5005afd5",
+      "size": 245
+    },
+    "geosite_RU_new_sources.txt": {
+      "sha256": "0b05435c9371dc7da6ca4bc13ef385fceb372fa9b23eeca76eee97affe54a36c",
+      "size": 3366
+    }
+  },
+  "baseline_commit": "5cff333359d96c55ee1b0672fb3b3344a0950d43",
+  "baseline_tag": "v11.17",
+  "candidate_assets": {
+    "geosite_RU.dat": {
+      "sha256": "b435cb76d6420092f5480b066d37c5586cf2868ea1a4d34b7537fc1cf70730bb",
+      "size": 106163
+    },
+    "geosite_RU.dat.sha256sum": {
+      "sha256": "a41d59ca03abaf04cfd688bbf606a249dd4b5cee7aa059788c43f29825e84e6a",
+      "size": 81
+    },
+    "geosite_RU_categories.txt": {
+      "sha256": "c6589a2a72e0abe72a9ec71034450b37f39781e08d4f31c793f9f1398bc4026f",
+      "size": 2437
+    },
+    "geosite_RU_hydra_appended_categories.txt": {
+      "sha256": "a31f315d68998a5ff6d6bd57fec61947d0fde95f2a2301f97029fd1b5005afd5",
+      "size": 245
+    },
+    "geosite_RU_new_sources.txt": {
+      "sha256": "0b05435c9371dc7da6ca4bc13ef385fceb372fa9b23eeca76eee97affe54a36c",
+      "size": 3366
+    }
+  },
+  "input_archive_sha256": "f11d6bfb442d0761d5347323ab3728b3ff500bfaa28f120bcec739eb248d06c9",
+  "inputs_lock_sha256": "09a5c6792901b10d5c2efdcd6a74767d5e08fc5722bd03762d3cfc4b7e33fd2b",
+  "schema": 1,
+  "tag": "v11.18"
+}
