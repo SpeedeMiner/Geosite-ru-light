@@ -1,0 +1,6 @@
+order	host	scope	url	primary	brand_marker	operator
+1	www.pmserv.com	RU	https://www.pmserv.com/catalog-our-products	https://blog.pmserv.com/our-contacts	Пищмашсервис|ПИЩМАШСЕРВИС	ООО ИТЦ «Пищмашсервис», каталог и собственные реквизиты
+2	pmserv.com	RU	https://pmserv.com/	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/383823?stand=13D190	Пищмашсервис|ПИЩМАШСЕРВИС	Российское ООО, apex из карточки отдельно от WWW
+3	prodmashts.com	RU	https://prodmashts.com/kontakty/	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/383685?stand=13B245	Продмаш|ПРОДМАШ	ООО «Продмаш Техсервис», оператор производственного сайта
+4	www.prodmashts.com	RU	https://www.prodmashts.com/kontakty/	https://prodmashts.com/kontakty/	Продмаш|ПРОДМАШ	Точный WWW из карточки, не наследует доступность apex
+5	www.rostzip.com	RU	https://www.rostzip.com/contacts/	https://icatalog.expocentr.ru/ru/exhibitions/a94ff0c2-5685-11f0-80d0-a0d3c1fab97f/exhibitors/384256?stand=13D192	РОСТЗИП|РостЗИП	WWW из карточки, проверяется самостоятельно
