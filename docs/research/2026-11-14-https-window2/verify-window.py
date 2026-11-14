@@ -98,7 +98,8 @@ def verify(args):
     print(f"PASS: {len(observations)} attempts, {len(attempted)} measured names, "
           f"{len(accepted)} new exact rules, {len(now)} total")
     print("Decisions:", dict(sorted(Counter(d["decision"] for d in decisions.values()).items())))
-    print("Remaining original queue:", len(original.keys() - decisions.keys()))
+    print("Original queue without an eligible measurement:", len(original.keys() - attempted))
+    print("Measured but not accepted:", len(attempted) - len(accepted))
 
 def main():
     cli = argparse.ArgumentParser(description=__doc__)
