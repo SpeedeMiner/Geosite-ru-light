@@ -1,0 +1,8 @@
+host	decision	scope	url	id	operator_url	operator	probes	redirect	rationale
+samson-rus.com	hold_content	RU	https://samson-rus.com/	2f9Tvn6ZSPFmjArgJ00021VDf	https://samson-rus.com/contact	САМСОН Групп	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body
+sf.education	hold_content	RU	https://sf.education/legalinfo	2EtB0ClbeJ4rdLm2y00021VDf	https://sf.education/legalinfo	ООО «Современные формы образования»	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body
+potok.io	hold_content	RU	https://potok.io/media/	24OTjrodN7aSmWZkd00021VDf	https://potok.io/contacts/	ООО «Поток»	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body, brand_missing
+nanosemantics.ai	hold_measurement	RU	https://nanosemantics.ai/privacy		https://nanosemantics.ai/privacy	ООО «Лаборатория Наносемантика»			not_submitted
+podkontrolem.online	hold_content	RU	https://podkontrolem.online/personal-data-policy	289fMmqCZAkZ6Di3h00021VDf	https://podkontrolem.online/personal-data-policy	ООО «ПДК»	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body, brand_missing
+www.trainingspace.online	hold_content	RU	https://www.trainingspace.online/support	2OtQhsx68AtYGkwYa00021VDf	https://www.trainingspace.online/agreement	ООО «Облако Груп»	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body
+www.unicraft.org	hold_content	RU	https://www.unicraft.org/blog/help/	2Hgx9qIPQZDHTlm2E00021VDf	https://www.unicraft.org/page/contacts/	ООО «Юникрафт»	AS3216=200/True/True AS12389=200/True/True AS207957=200/True/True		api_truncated, short_visible_body
