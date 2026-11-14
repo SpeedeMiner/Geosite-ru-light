@@ -1,0 +1,4 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+asma-batteries.com	hold_content	KZ	https://asma-batteries.com/info-4/	2ato4auUWtvKlE4fh00021VGv	https://satypalu.gov.kz/kz/registry/show_supplier/754722	Казахстанский производитель аккумуляторов, завод в Талдыкоргане, корпоративный сайт отдельно от asma.kz	api_truncated, short_visible_body
+www.asma-batteries.com	hold_redirect	KZ	https://www.asma-batteries.com/info-4/	2IxHyKCLGCsrrlGc400021VGv	https://asma-batteries.com/	Отдельная проверка WWW производителя ASMA	redirect
+aoresurs.com	hold_review	RU	https://aoresurs.com/	2AP0nMbK5edmLM6VR00021VGv	https://rus-elektronika.ru/ru-RU/Documents/er-putevoditel.aspx	АО Ресурс, Богородицк; apex отдельно, на WWW ошибка транспорта	https_candidate

@@ -1,0 +1,2 @@
+host	decision	scope	url	id	operator_url	operator	rationale
+medicine.minskexpo.com	hold_review	BY	https://medicine.minskexpo.com/	28cbFSY06K5NPnLuS00021VGv	https://ktovmedicine.ru/events/2025/3/medicinskiy-forum-belarusi-2026-zdorove-krasota-reabilitaciya.html	Отдельный сайт октябрьской выставки Минскэкспо, не путать с майским форумом belarusmedica.by	https_candidate
