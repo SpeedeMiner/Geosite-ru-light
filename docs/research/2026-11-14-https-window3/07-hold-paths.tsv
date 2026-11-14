@@ -1,0 +1,45 @@
+host	exact_url	status	note
+education.polpred.com		hold_alias	Индексируемый публичный каталог преимущественно на www. Не переносить результат на education.polpred.com. Исходный ответ apex имеет только head без явного бренда.
+samson-rus.com	https://samson-rus.com/	alternate	В предыдущем замере /contact видна только шапка. Точный корень отдельно от www, подбирать по видимому результату.
+bitronicslab.com	https://bitronicslab.com/policy	alternate	Точный правовой путь и оператор Битроникс. Главная и контакты были обрезаны.
+sf.education	https://sf.education/legalinfo	alternate	Страница реквизитов школы на точном хосте.
+potok.io	https://potok.io/media/	alternate	Главная и контакты оборвались в head. Публичный пресс-раздел на том же apex.
+nanosemantics.ai	https://nanosemantics.ai/privacy	alternate	Вместо контактов проверить правовую страницу точной витрины.
+podkontrolem.online	https://podkontrolem.online/personal-data-policy	alternate	Правовая страница точного сайта указывает ПДК.
+www.trainingspace.online		hold_content	Бренд только в заголовке и head, подтверждённого более компактного пути на том же www не найдено.
+www.unicraft.org		hold_content	Точный /page/contacts/ отдаёт head. Главная может вести на другую витрину. Нужен отдельный публичный путь.
+amatascl.com	https://amatascl.com/service-en/	alternate	Точная публичная страница гарантийного обслуживания.
+aurora-line.com	https://aurora-line.com/	alternate	В контактах обрезан head, на главной указан оператор ООО «Аврора Лайн».
+beepitron.com	https://beepitron.com/about	alternate	Публичный раздел о компании на том же домене.
+cenovik.pro	https://cenovik.pro/request-registration/	alternate	Публичная страница продукта. Только GET без заполнения формы.
+chempharmcontract.pro	https://chempharmcontract.pro/faq	alternate	Точный публичный FAQ вместо раздела партнёров.
+dars-solutions.com	https://dars-solutions.com/	alternate	Точная брендированная главная вместо /o-kompanii/.
+dgtl.market	https://dgtl.market/it-accreditation	alternate	В старом ответе единственный видимый текст — ссылка «Перейти к содержимому», а не контент. Новый путь публикует сведения об операторе.
+ecopackrussia.com	https://ecopackrussia.com/	alternate	Точный корень российской витрины, страница реквизитов слишком объёмная.
+equiron.com		hold_alias	В справочной выдаче содержимое преимущественно на www. Сохранить различие, не переносить на apex.
+escuela.pro	https://escuela.pro/about	alternate	На точном домене публичный брендированный раздел школы.
+gitinsky.com	https://gitinsky.com/about	alternate	Точный публичный раздел российской компании.
+glazarapp.com	https://glazarapp.com/consent.html	alternate	На том же apex компактная страница согласия и бренда.
+helpinver.com	https://helpinver.com/o-proekte/index.php	alternate	Точные контакты дали 404 во всех сетях, альтернативный публичный раздел о проекте.
+importmash.com	https://importmash.com/	alternate	Ранее измерены только контакты. Точная витрина оборудования с подтверждённым оператором.
+independence.digital		hold_content	Не найден другой точный путь с подтверждённым публичным содержимым.
+innovasystem.pro	https://innovasystem.pro/kontakty/	alternate	Публичные контакты на том же хосте вместо главной.
+ismart.org	https://ismart.org/legal-agreements/polzovatelskoe-soglashenie	alternate	Точное соглашение российского оператора на apex.
+itq-group.com	https://itq-group.com/privacy	alternate	Правовая страница того же домена.
+itsolutions.city		hold_content	Доказательство оператора PDF, пригодного более компактного публичного HTML-пути на том же хосте нет.
+izzz.io		hold_alias	Документация на docs.izzz.io не заменяет точный apex. Нужен публичный путь apex.
+kapitanlogistics.com	https://kapitanlogistics.com/dokumenty.html	alternate	Точный раздел документов белорусского оператора. Редирект не считать подтверждением сам по себе.
+logiclike.com	https://logiclike.com/vacancies	alternate	Точный брендированный публичный раздел вместо двух обрезанных страниц.
+medtechlink.com	https://medtechlink.com/	alternate	Публичная витрина производителя на том же имени.
+neiroseti.ai	https://neiroseti.ai/team1	alternate	Брендированный публичный раздел российского АО.
+omega-trade.org	https://omega-trade.org/o-nas	alternate	Точная собственная страница с юридическим оператором.
+opendev.com	https://opendev.com/page68978813.html	alternate	Точная политика вместо обрезанного согласия.
+packplace.me		hold_content	На точном домене есть PDF оферты и тяжёлая главная, компактной публичной HTML-страницы не установлено.
+pcr.news	https://pcr.news/kontakty/	alternate	Контактный раздел редакции вместо обрезанной оферты.
+prostorlab.com	https://prostorlab.com/prostor-platforma/	alternate	Точный публичный раздел продукта.
+rusathletics.info		hold_transport	Три UNABLE_TO_VERIFY_LEAF_SIGNATURE. Не менять URL для обхода проверки TLS. Нужна диагностика или перепроверка цепочки.
+trikset.com	https://trikset.com/abouttrik	alternate	Публичная страница аккредитации вместо обрезанных контактов.
+valmo-logistic.com	https://valmo-logistic.com/	alternate	Точная витрина грузоперевозчика вместо обрезанных реквизитов.
+www.classeng.com	https://www.classeng.com/ru/company/	alternate	Альтернативный точный раздел компании на www.
+www.i-volga.com	https://www.i-volga.com/agencies/	alternate	Публичный раздел для агентств, не форма оплаты.
+www.phm.group	https://www.phm.group/polzovatelskoe-soglashenie	alternate	Соглашение на том же точном www.
