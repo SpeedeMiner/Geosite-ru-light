@@ -1,0 +1,10 @@
+host	scope	sector	url	operator	brand_marker	primary	light_ru	server_ru	light_block	prior_measured	stage
+extrit.com	BY	technopark	https://extrit.com/	EXTRIT	EXTRIT	https://bntp.by/residents/				no	new_uncovered
+lacit.net	BY	tech	https://lacit.net/	ЛАЦИТ	ЛАЦИТ|LACIT	https://beltime.by/members/				no	new_uncovered
+it-city.tech	RU	tech	https://it-city.tech/	Ассоциация технологий умного города	Ассоциация по разработке технологий умного города|I-T-CITY	https://it-city.tech/				no	new_uncovered
+www.fort-russia.com	RU	machinery	https://www.fort-russia.com/kontakty/	ФОРТ	FORT|ФОРТ	https://www.bpk-spb.ru/				no	new_uncovered
+pharmsynthez.com	RU	pharma	https://pharmsynthez.com/about/	Фармсинтез	Фармсинтез	https://pharmsynthez.com/about/				no	new_uncovered
+active.domains	RU	registrars	https://active.domains/about/	Актив.Домэинс	Актив.Домэинс|Active Domains	https://www.nic.kz/ru/registrars/list				no	new_uncovered
+falconkz.com	KZ	freight	https://falconkz.com/contacts.html	Falcon Logistic Group	Falcon Logistic Group	https://kffanek.kz/too-falcon-logistic-group				no	new_uncovered
+portal.inconkz.com	KZ	industry	https://portal.inconkz.com/	Integra Construction	Integra Construction|Интегра	https://inconkz.com/ru				no	new_uncovered
+bamap.org	BY	freight	https://bamap.org/	БАМАП	БАМАП|BAMAP	https://www.iru.org/ru/novosti-i-spravochnye-materialy/spisok-chlenov-iru/bamap	full:bamap.org	full:bamap.org		no	covered_both
