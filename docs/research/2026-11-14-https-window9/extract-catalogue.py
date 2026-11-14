@@ -50,7 +50,7 @@ def main():
     rows = extract(args.html.read_text(encoding="utf-8-sig"), args.card_hostname)
     writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
     writer.writerow(("scope", "exhibitor", "organizer_card", "description_url_hints"))
-    writer.writerows((REGIONAL[c], n, u, h) for c, n, u, h in rows if c in REGIONAL)
+    writer.writerows((REGIONAL[c], n, u, h or "-") for c, n, u, h in rows if c in REGIONAL)
     counts = Counter(REGIONAL.get(c, "other" if c else "unlabelled") for c, *_ in rows)
     print(f"total={len(rows)} {dict(sorted(counts.items()))}", file=sys.stderr)
 
