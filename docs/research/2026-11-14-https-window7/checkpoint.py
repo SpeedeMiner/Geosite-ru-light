@@ -13,9 +13,9 @@ C = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(C)
 W = C.W
 POLICY = C.C
-WAVES = ("inherited", "sector", "regional", "extra")
+WAVES = ("inherited", "sector", "regional", "extra", "archive")
 PLANS = {wave: (f"{n:02d}-wave-{wave}.tsv", f"{n:02d}-plan.sha256sum")
-         for n, wave in zip((1, 3, 5, 7), WAVES, strict=True)}
+         for n, wave in zip((1, 3, 5, 7, 9), WAVES, strict=True)}
 BASE_SHA = "694528ba94022db10ddcbd36adbf092a7ef681c6acd0b79f9f4ea1998333e263"
 
 
