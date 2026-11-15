@@ -1,0 +1,30 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	habr.com	https://habr.com/ru/companies/mws/articles/	NA	domain:habr.com	domain:habr.com	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	mts-digital.ru	https://mts-digital.ru/compliance	Комплаенс и деловая этика	domain:ru	domain:ru	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	mws.ru	https://mws.ru/dev-tools/teamstream/	Для бизнеса	domain:ru	domain:ru	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	t.me	https://t.me/MTSWebServices	NA	NA	NA	NA	TELEGRAM
+МТС	mts_team_site	https://teamstream.mws.ru/	official-source	teamstream.mws.ru	https://teamstream.mws.ru/	MWS TeamStream	domain:ru	domain:ru	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	vc.ru	https://vc.ru/mws	NA	domain:ru	domain:ru	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	vk.com	https://vk.com/	NA	domain:vk.com	domain:vk.com	NA	NA
+МТС	mts_team_site	https://teamstream.mws.ru/	official-link	workspace.teamstream.mws.ru	https://workspace.teamstream.mws.ru/auth	Вход	domain:ru	domain:ru	NA	NA
+МТС	mts_team_legal	https://mws.ru/docs/docum/s55.html	official-source	mws.ru	https://mws.ru/docs/docum/s55.html	Специальные условия Облачного сервиса «MWS TeamStream» | MWS Docs	domain:ru	domain:ru	NA	NA
+МТС	mts_team_legal	https://mws.ru/docs/docum/s55.html	official-link	profile.mts.ru	https://profile.mts.ru/	https://profile.mts.ru/⁠	domain:ru	domain:ru	NA	NA
+МТС	mts_team_legal	https://mws.ru/docs/docum/s55.html	official-link	teamstream.mws.ru	https://teamstream.mws.ru/	https://teamstream.mws.ru⁠	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve	https://exolve.ru/docs/ru/api-reference/	official-source	exolve.ru	https://exolve.ru/docs/ru/api-reference/	API Reference | документация Exolve	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve	https://exolve.ru/docs/ru/api-reference/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+МТС	mts_exolve	https://exolve.ru/docs/ru/api-reference/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve	https://exolve.ru/docs/ru/api-reference/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM
+МТС	mts_exolve_dev	https://github.com/mtsexolve	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/119396563	@mtsexolve	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	community.exolve.ru	https://community.exolve.ru/	комьюнити разработчиков	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	docs.exolve.ru	https://docs.exolve.ru/	https://docs.exolve.ru/	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	exolve.ru	https://exolve.ru/	https://exolve.ru	domain:ru	domain:ru	NA	NA
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-source	github.com	https://github.com/mtsexolve	МТС Exolve · GitHub	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	t.me	https://t.me/mts_exolve	https://t.me/mts_exolve	NA	NA	NA	TELEGRAM
+МТС	mts_exolve_dev	https://github.com/mtsexolve	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB

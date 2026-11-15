@@ -1,0 +1,9 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+mts_support	https://support.mts.ru/business	https://support.mts.ru/business	403	0	0	300	88bb592a9f956d8805dc3d30337784d7d9b7a7cbc7babc09689cec5ed0aa68c2	text/html
+mts_team_docs	https://support.mts.ru/mws_teamstream	https://support.mts.ru/mws_teamstream	403	0	0	300	83743cd0a3c6537539c69b789e56bc0e726cfde12d26a267beb510c7971fe2de	text/html
+mts_team_site	https://teamstream.mws.ru/	https://teamstream.mws.ru/	200	0	0	793468	36e2936366fc1f63cc8a3a5652de14bd025522d1f2b95ba9dc96df30898f8849	text/html
+mts_team_legal	https://mws.ru/docs/docum/s55.html	https://mws.ru/docs/docum/s55.html	200	0	0	120925	d4945af8a3ce135ed47a0defa28be47059d9ed076fa1298284e25cd9e17b4ce9	text/html
+mts_vdome	https://support.mts.ru/mts_domofon_dlya_yuridicheskih_lits	https://support.mts.ru/mts_domofon_dlya_yuridicheskih_lits	403	0	0	300	a87f2541df253c3004046391d694d451aa844cc73e0f18a1d2dfbea680c3376c	text/html
+mts_iot	https://support.mts.ru/mts_iot_hub	https://support.mts.ru/mts_iot_hub	403	0	0	300	04e0a9aacc135ffe453ba8eb7a33f75e8dd19ed1a1565f9828a81f72127c6273	text/html
+mts_exolve	https://exolve.ru/docs/ru/api-reference/	https://exolve.ru/docs/ru/api-reference/	200	0	0	223453	1ae10ac721526deae918351a6615d8e0b99d6544e37ba547afbc90676d4aef64	text/html; charset=utf-8
+mts_exolve_dev	https://github.com/mtsexolve	https://github.com/mtsexolve	200	0	0	233087	9c89a2d394b5e2a3c65c38d4304f52b61c7a82ed5e4fa8902f3214602283bf41	text/html; charset=utf-8
