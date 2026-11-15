@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	tdata.tech	tdata.tech	https://tdata.tech/products	TData|Платформа управления данными	https://www.company.rt.ru/press/news/d470990/
+corporate	candidate	docs.tdata.tech	docs.tdata.tech	https://docs.tdata.tech/ru/index.html	Платформа данных|Документация|TData	https://tdata.tech/products
+corporate	candidate	perevod-korona.biz	perevod-korona.biz	https://perevod-korona.biz/	Корона|Korona	https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.info	perevod-korona.info	https://perevod-korona.info/	Корона|Korona	https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.org	perevod-korona.org	https://perevod-korona.org/	Корона|Korona	https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.pro	perevod-korona.pro	https://perevod-korona.pro/	Корона|Korona	https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	xn--80abkdqhcx2axc5i.net	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/	Кубань Кредит	https://www.cbr.ru/finorg/foinfo/?id=1315037837676
+corporate	control	kk.ru	kk.ru	https://kk.ru/requisites/	Кубань Кредит	https://kk.ru/requisites/
+corporate	control	koronapay.com	koronapay.com	https://koronapay.com/	Корона|Korona	https://www.cbr.ru/finorg/foinfo/?id=1315037837646
