@@ -1,0 +1,15 @@
+host	region	decision	light_ru	server_ru	light_block	notes	source
+ertelecom.cloud	RU	include_exact_preview	NA	NA	NA	official cloud landing; HTTPS 200 in three RU ASNs across two operators	https://ertelecom.ru/ru/contacts
+my.ertelecom.cloud	RU	include_exact_preview	NA	NA	NA	official ordering and customer portal; HTTPS 200 and login title in three RU ASNs across two operators	https://ertelecom.cloud/clouds/
+www.workspacevk.com	unverified	hold	NA	NA	NA	no first-party link from VK; do not infer ownership from brand string	https://biz.mail.ru/docs/saas/legal/license-agreement
+beget.api	unverified	hold	NA	NA	NA	NXDOMAIN for A and AAAA from Google and Cloudflare; no public rule	https://beget.com/en/control-panel
+api.kz-1.srvstorage.uz	KZ documented	exclude_nxdomain	NA	NA	NA	both DoH return NXDOMAIN; .kz alternative resolves in AS48988 and is covered	https://docs.servercore.com/api/urls/
+s3.kz-1.srvstorage.uz	KZ documented	exclude_nxdomain	NA	NA	NA	both DoH return NXDOMAIN; product documentation names covered .kz endpoint	https://docs.servercore.com/ru/s3/manage/domains/
+api.kz-1.srvstorage.kz	KZ	already_covered	domain:kz	domain:kz	NA	A in AS48988; unsigned GET / 404; application not tested	https://docs.servercore.com/api/urls/
+s3.kz-1.srvstorage.kz	KZ	already_covered	domain:kz	domain:kz	NA	first-party S3 documentation and A in AS48988; unsigned GET / 403	https://docs.servercore.com/ru/s3/manage/domains/
+swift.kz-1.srvstorage.kz	KZ	already_covered	domain:kz	domain:kz	NA	first-party Swift documentation and A in AS48988; unsigned GET / 404	https://docs.servercore.com/ru/s3/manage/domains/
+access.kz-1.srvstorage.kz	KZ	already_covered	domain:kz	domain:kz	NA	first-party CNAME documentation and A in AS48988; not a blanket customer suffix addition	https://docs.servercore.com/ru/s3/manage/domains/
+api.uz-2.srvstorage.uz	UZ	outside_scope	NA	NA	NA	documented Tashkent and A in AS43647; not a RU/BY/KZ gap	https://docs.servercore.com/api/urls/
+s3.uz-2.srvstorage.uz	UZ	outside_scope	NA	NA	NA	documented Tashkent and A in AS43647; not a RU/BY/KZ gap	https://docs.servercore.com/ru/s3/manage/domains/
+swift.uz-2.srvstorage.uz	UZ	outside_scope	NA	NA	NA	documented Tashkent and A in AS43647; not a RU/BY/KZ gap	https://docs.servercore.com/ru/s3/manage/domains/
+access.uz-2.storage.uz	UZ	outside_scope_nxdomain	NA	NA	NA	documented Tashkent; both public DoH return NXDOMAIN during sample	https://docs.servercore.com/ru/s3/manage/domains/

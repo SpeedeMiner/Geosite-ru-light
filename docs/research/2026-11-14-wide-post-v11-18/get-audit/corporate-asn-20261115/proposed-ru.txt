@@ -1,0 +1,3 @@
+# Не подключено к сборке. Точные правила для отдельного PR.
+full:ertelecom.cloud
+full:my.ertelecom.cloud

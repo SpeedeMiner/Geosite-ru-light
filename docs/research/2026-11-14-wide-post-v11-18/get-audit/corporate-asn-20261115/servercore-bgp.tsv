@@ -1,0 +1,8 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+access.kz-1.srvstorage.kz	213.148.0.24	cloudflare|google	213.148.0.0/24	AS48988
+api.kz-1.srvstorage.kz	213.148.0.24	cloudflare|google	213.148.0.0/24	AS48988
+api.uz-2.srvstorage.uz	213.148.18.17	cloudflare|google	213.148.18.0/24	AS43647
+s3.kz-1.srvstorage.kz	213.148.0.24	cloudflare|google	213.148.0.0/24	AS48988
+s3.uz-2.srvstorage.uz	213.148.18.17	cloudflare|google	213.148.18.0/24	AS43647
+swift.kz-1.srvstorage.kz	213.148.0.24	cloudflare|google	213.148.0.0/24	AS48988
+swift.uz-2.srvstorage.uz	213.148.18.17	cloudflare|google	213.148.18.0/24	AS43647
