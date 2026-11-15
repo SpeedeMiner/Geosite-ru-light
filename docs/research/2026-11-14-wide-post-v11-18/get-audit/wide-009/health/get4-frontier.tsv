@@ -1,0 +1,3 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_health"	"diagnostic"	"pharma.eaeunion.org"	"pharma.eaeunion.org"	"https://pharma.eaeunion.org/pharma/registers"	"Единый реестр|лекарственных средств"	"https://pharma.eaeunion.org/pharma"
+"frontier_health"	"diagnostic"	"med.eaeunion.org"	"med.eaeunion.org"	"https://med.eaeunion.org/med"	"Единый реестр|медицинских изделий"	"https://med.eaeunion.org/med"

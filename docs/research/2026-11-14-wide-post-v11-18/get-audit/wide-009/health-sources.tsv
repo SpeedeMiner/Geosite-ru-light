@@ -1,0 +1,36 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	medicine_registry	functional	https://pharma.eaeunion.org/pharma/registers	https://pharma.eaeunion.org/pharma	Единый реестр|лекарственных средств	Реестр общего рынка, только публичная страница
+EAEU	medicine_registry	review	https://pharma.eaeunion.org/	https://pharma.eaeunion.org/pharma/registers	Общий рынок лекарственных средств	Корень перенаправляет, учитывается отдельно от реестра
+EAEU	device_registry	functional	https://med.eaeunion.org/med	https://med.eaeunion.org/med	Единый реестр|медицинских изделий	Публичная оболочка не доказывает работу поиска
+KZ	medicine_registry	control	https://register.ndda.kz/	https://www.gov.kz/org/dsm/press/news/details/1297344?lang=ru	Государственный реестр|Реестр	Прямая опубликованная ссылка Минздрава
+KZ	medicine_registry	control	https://www.ndda.kz/	https://www.gov.kz/org/dsm/press/news/details/1297344?lang=ru	Национальный центр|NDDA	Домашняя страница регулятора, отдельно от реестра
+KZ	health_access	control	https://www.gov.kz/services/3177?lang=ru	https://www.gov.kz/services/3177?lang=ru	Запись на прием к врачу	Публичное описание, без записи
+KZ	health_access	control	https://damumed.kz/	https://rcphc.kz/4patients/faq/	Damumed	Открытая витрина, не проверка записи
+KZ	health_access	review	https://damumed.com/	https://damumed.kz/	Damumed	Прямого подтверждения совпадения операторов нет
+KZ	health_access	control	https://rcphc.kz/4patients/faq/	https://rcphc.kz/4patients/faq/	Часто задаваемые вопросы|Damumed	Справочные страницы организации
+KZ	insurance	control	https://msqory.kz/kk/eshche/kontakty/filialy/	https://www.gov.kz/org/minfin/about/structure/organization/leadership/35124/1	сақтандыру|Фонд	Опубликованный адрес филиалов, не авторизация
+KZ	insurance	review	https://fms.kz/	https://www.gov.kz/org/minfin/about/structure/organization/leadership/35124/1	Фонд социального медицинского страхования	Почтовый домен в документе сам по себе не подтверждает веб-функцию
+KZ	traceability	control	https://qazmarka.kz/ru/o-markirovke/	https://qazmarka.kz/ru/o-markirovke/	О маркировке|Qazmarka	Публичное описание маркировки, контроль повтора
+BY	medicine_registry	control	https://www.rceth.by/Refbank/	https://www.rceth.by/	Реестры|лекарственных средств	Национальные реестры, без запроса данных
+BY	medicine_registry	control	https://www.rceth.by/	https://www.rceth.by/Refbank/	Центр экспертиз и испытаний	Прямой сайт учреждения
+BY	medicine_registry	review	https://rceth.by/	https://www.rceth.by/	Центр экспертиз	Корень отдельно от WWW
+BY	health_access	control	https://talon.by/	https://talon.by/	Талон|Медучреждения	Публичная витрина, без записи
+BY	health_access	control	https://www.103.by/	https://www.103.by/	Онлайн-запись|103.by	Коммерческий медицинский каталог, не госреестр
+BY	health_access	review	https://auth-app.103.by/	https://www.103.by/	103.by	Ссылка авторизации зафиксирована, этот вход не включён в план новых GET
+BY	health_access	control	https://info.103.by/telemed	https://info.103.by/telemed	Онлайн консультации|103.by	Публичное описание телемедицины, без звонка
+BY	health_access	control	https://ehealth.by/	https://ehealth.by/	Медицинские информационные системы|Биоинформатика	Разработка мединформационных систем, не клиентский кабинет
+BY	health_access	review	https://minzdrav.gov.by/	https://minzdrav.gov.by/	Министерство здравоохранения	Публичный путь требует отдельного подтверждения
+BY	traceability	control	https://datamark.by/	https://datamark.by/	Электронный знак|маркировки	Сверка с зарезервированным, но не измеренным URL из 008
+RU	medicine_registry	control	https://minzdrav.gov.ru/opendata/7707778246-grls	https://minzdrav.gov.ru/opendata/7707778246-grls	Государственный реестр лекарственных средств	Открытая карточка данных Минздрава
+RU	medicine_registry	control	https://grls.rosminzdrav.ru/	https://minzdrav.gov.ru/poleznye-resursy/portal-po-vedeniyu-gosudarstvennogo-reestra-lekarstvennyh-sredstv	Государственный реестр|ГРЛС	Отдельный хост реестра
+RU	medicine_registry	review	https://grls.pharm-portal.ru/grls	https://grls.pharm-portal.ru/grls	Государственный реестр|ГРЛС	Частный справочник, не государственная точка входа
+RU	device_registry	control	https://www.roszdravnadzor.gov.ru/services/misearch	https://www.roszdravnadzor.gov.ru/services/misearch	медицинских изделий|Росздравнадзор	Публичный поиск по реестру, форму не заполнять
+RU	health_access	control	https://www.gosuslugi.ru/health	https://www.gosuslugi.ru/health	Здоровье|Госуслуги	Публичная оболочка, не авторизация и не запись
+RU	health_access	control	https://digitalms.ru/	https://digitalms.ru/	Цифромед|цифровые сервисы для медицины	Публичный сайт оператора
+RU	medicine_registry	review	https://rlpdev.digitalms.ru/	https://rlpdev.digitalms.ru/	Минздрав России	Имя dev вне списка на проверку, даже если есть в поиске
+RU	medicine_registry	control	https://www.vidal.ru/	https://www.vidal.ru/	Справочник лекарственных средств|Видаль	Коммерческий справочник, не госреестр
+RU	medicine_registry	review	https://rlsnet.ru/	https://rlsnet.ru/	Регистр лекарственных средств	Справочный ресурс, подтверждение пути отдельное
+RU	traceability	control	https://mdlp.crpt.ru/	https://markirovka.ru/knowledge/lekarstva/registraciya-avtorizaciya-mdlp/adresa-resursov-sistemy-markirovki-chestnyy-znak-dlya-lekarstvennykh-preparatov	Честный Знак|МДЛП	Промышленный адрес из документации, только публичный GET
+RU	traceability	review	https://ph.mdlp.crpt.ru/login	https://markirovka.ru/knowledge/lekarstva/registraciya-avtorizaciya-mdlp/adresa-resursov-sistemy-markirovki-chestnyy-znak-dlya-lekarstvennykh-preparatov	Фарма.Просто|МДЛП	Указанный вход не включается в новые GET
+RU	traceability	third_party	https://sb.mdlp.crpt.ru/	https://markirovka.ru/knowledge/lekarstva/registraciya-avtorizaciya-mdlp/adresa-resursov-sistemy-markirovki-chestnyy-znak-dlya-lekarstvennykh-preparatov		Тестовый контур учитывается только для исключения из плана
+RU	traceability	control	https://support.crpt.ru/	https://markirovka.ru/knowledge/lekarstva/registraciya-avtorizaciya-mdlp/adresa-resursov-sistemy-markirovki-chestnyy-znak-dlya-lekarstvennykh-preparatov	Поддержка|Честный Знак	Публичный вход в поддержку, без запроса

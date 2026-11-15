@@ -68,6 +68,7 @@ def main():
     p.add_argument('server',type=Path)
     p.add_argument('source',type=Path)
     p.add_argument('output',type=Path)
+    p.add_argument('--label',default='trade')
     a=p.parse_args()
     audit=Path(__file__).resolve().parent
     l=light_categories(a.light)
@@ -88,8 +89,8 @@ def main():
     for r in control:
         key = (r['zone'],r['sector'],r['url'] if r['disposition']=='functional' else '')
         representatives.setdefault(key,r)
-    p1=as_plan(ready,'frontier_trade')
-    p2=as_plan(list(representatives.values()),'control_trade')
+    p1=as_plan(ready,'frontier_'+a.label)
+    p2=as_plan(list(representatives.values()),'control_'+a.label)
     urls=[r['url'] for r in p1+p2]
     if len(urls)!=len(set(urls)) or set(urls)&live.keys():
         raise ValueError('plan overlaps recorded observations or contains duplicates')
