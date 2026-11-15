@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	tambov.zelenaya.net	tambov.zelenaya.net	https://tambov.zelenaya.net/contacts/	Зеленая точка	https://tambov.zelenaya.net/contacts/
+corporate	candidate	zelenaya.net	zelenaya.net	https://zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	tomsk.zelenaya.net	tomsk.zelenaya.net	https://tomsk.zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	lipetsk.zelenaya.net	lipetsk.zelenaya.net	https://lipetsk.zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	vladivostok.zelenaya.net	vladivostok.zelenaya.net	https://vladivostok.zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	belgorod.zelenaya.net	belgorod.zelenaya.net	https://belgorod.zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	ufa.zelenaya.net	ufa.zelenaya.net	https://ufa.zelenaya.net/		https://tambov.zelenaya.net/contacts/
+corporate	candidate	cabinet.zt68.net	cabinet.zt68.net	https://cabinet.zt68.net/		https://tambov.zelenaya.net/contacts/
+corporate	control	zelenaya-net.ru	zelenaya-net.ru	https://zelenaya-net.ru/news/zelenaya-tochka-teper-mts-home	Зелёная точка	https://zelenaya-net.ru/news/zelenaya-tochka-teper-mts-home
