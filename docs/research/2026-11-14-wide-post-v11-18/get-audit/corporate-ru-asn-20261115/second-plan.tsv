@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	datalens.tech	datalens.tech	https://datalens.tech/ru	DataLens	https://www.yandex.ru/company/news/01-26-09-2023
+corporate	candidate	generationx5.tech	generationx5.tech	https://generationx5.tech/	X5|стажиров|BIG IN	https://x5.tech/
+corporate	candidate	mts.investments	mts.investments	https://mts.investments/	МТС Инвестиции|Система Капитал	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/
+corporate	candidate	sistema-capital.com	sistema-capital.com	https://sistema-capital.com/contacts/	Система Капитал	https://mts.investments/company/
+corporate	control	x5.tech	x5.tech	https://x5.tech/	X5 Tech	https://x5.tech/
+corporate	control	status.timeweb.cloud	status.timeweb.cloud	https://status.timeweb.cloud/	TimeWeb Cloud|All Systems	https://timeweb.cloud/
+corporate	control	api.mwsapis.ru	api.mwsapis.ru	https://api.mwsapis.ru/endpoint	mwsapis.ru|mclickhouse	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html

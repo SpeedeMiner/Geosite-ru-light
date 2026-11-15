@@ -1,0 +1,282 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	dzen.ru	https://dzen.ru/vkteam		domain:ru	domain:ru	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/		domain:habr.com	domain:habr.com	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	max.ru	https://max.ru/inside_vk		domain:ru	domain:ru	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	ok.ru	https://ok.ru/insidevk		domain:ru	domain:ru	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	t.me	https://t.me/inside_vk		NA	NA	NA	TELEGRAM
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	vk.com	https://vk.com/insidevk		domain:vk.com	domain:vk.com	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	vk.company	https://vk.company/	VK	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-source	vk.company.ru	https://vk.company.ru/ru/press/releases/11938/	VK / VK запустила OpenVK для публикации ПО с открытым кодом	domain:ru	domain:ru	NA	NA
+VK	vk-oss	https://vk.company.ru/ru/press/releases/11938/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	aliexpress.ru	https://aliexpress.ru/	AliExpress РоссияПокупки со всего мира	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	auto.mail.ru	https://auto.mail.ru/	АвтоМатериалы и сервисы для автомобилистов и всех, кто живет в движении	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	calendar.mail.ru	https://calendar.mail.ru/	КалендарьПланирование дня и эффективное управление временем	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	calls.vk.com	https://calls.vk.com/	VK ЗвонкиПлатформа видеоконференций для любых задач: совещаний, вебинаров, бизнес-презентаций	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	capsula.mail.ru	https://capsula.mail.ru/	VK КапсулаУмная колонка от VK с голосовым помощником Марусей	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	cloud.mail.ru	https://cloud.mail.ru/	ОблакоСервис для хранения файлов и совместной работы с ними	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	connect.vk.com	https://connect.vk.com/promo	VK IDЕдиная учетная запись для всех проектов экосистемы VK	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	cups.mail.ru	https://cups.mail.ru/ru/	All CupsПлощадка для проведения ИТ-чемпионатов	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	dating.vk.com	https://dating.vk.com/	VK ЗнакомстваДейтинг-сервис: алгоритмы предлагают анкеты людей с совпадающими интересами	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	deti.mail.ru	https://deti.mail.ru/	ДетиМедиа о семье, беременности, родах и воспитании детей	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	dobro.vk.com	https://dobro.vk.com/	VK ДоброСервис для умной и честной благотворительности	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	dom.mail.ru	https://dom.mail.ru/	ДомВсе о недвижимости: от дизайна интерьера и нюансов строительства до выбора жилья	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	dzen.ru	https://dzen.ru/	ДзенПлатформа для создания и просмотра контента, где умные алгоритмы помогают всем найти свою аудито	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	e.mail.ru	https://e.mail.ru/inbox/	ПочтаЦентр управления делами: Облако, Календарь, Задачи, Звонки и Новости	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	finance.mail.ru	https://finance.mail.ru/	ФинансыРесурс об экономике, инвестициях, бизнесе и главных финансовых трендах.	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	gb.ru	https://gb.ru/	GeekBrainsПортал для обучения программированию, маркетингу, дизайну и управлению с нуля	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/		domain:habr.com	domain:habr.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	health.mail.ru	https://health.mail.ru/	ЗдоровьеРесурс о медицине и здоровом образе жизни с консультациями врачей и записью в клиники	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	hi-tech.mail.ru	https://hi-tech.mail.ru/	Hi-TechФлагман изданий о технологиях: новости, обзоры и видеоматериалы о технике	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	kino.mail.ru	https://kino.mail.ru/	КиноАгрегатор онлайн-кинотеатров, где можно смотреть фильмы и узнавать о новинках	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	lady.mail.ru	https://lady.mail.ru/	ЛедиСамый популярный женский сайт рунета: мода, стиль, красота и многое другое	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	marusia.mail.ru	https://marusia.mail.ru/	МарусяГолосовой помощник: включит музыку, ответит на вопросы, позвонит другу	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	marusia.vk.com	https://marusia.vk.com/capsula-neo	VK Капсула НеоУмная колонка с Марусей — и с яркими стикерами для кастомизации	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	max.ru	https://max.ru/	MAXЦифровая платформа для общения и решения повседневных задач	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	mcs.mail.ru	https://mcs.mail.ru/dobro/	Облако для фондовБесплатный доступ к сервисам VK Cloud	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	music.vk.com	https://music.vk.com/	VK МузыкаОгромная библиотека треков и плейлистов, умные рекомендации, аудиокниги, подкасты и радио	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	news.mail.ru	https://news.mail.ru/	НовостиАктуальная информация о событиях страны и мира в самых удобных форматах	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	notes.mail.ru	https://notes.mail.ru/	ЗаметкиСписки, таблицы, метки и цветные записи для личных и общих дел	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	ok.ru	https://ok.ru/	ОдноклассникиПервая соцсеть в России, развлекательная платформа с играми, видео и музыкой	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	otvet.mail.ru	https://otvet.mail.ru/	ОтветыОтветы Mail - cервис общения для обмена мнениями, знаниями и историями	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	pets.mail.ru	https://pets.mail.ru/	ПитомцыПроект для хозяев кошек и собак с консультациями ветеринаров и магазином с кормами	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	sferum.ru	https://sferum.ru/	СферумОнлайн-платформа для обучения и образовательных коммуникаций	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	skillbox.ru	https://skillbox.ru/	SkillboxВедущая платформа дополнительного профессионального онлайн-образования	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	skillfactory.ru	https://skillfactory.ru/	SkillfactoryОбучение цифровым профессиям: работа с данными, машинное обучение	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	sportmail.ru	https://sportmail.ru/	СпортВсе о главных спортивных событиях: новости, прогнозы, фото, видео, трансляции	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	t.me	https://t.me/inside_vk		NA	NA	NA	TELEGRAM
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	tetrika-school.ru	https://tetrika-school.ru/	ТетрикаПодготовка по школьным предметам и экзаменам ЕГЭ и ОГЭ	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	todo.mail.ru	https://todo.mail.ru/	ЗадачиИнструмент для планирования дел	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	trk.mail.ru	https://trk.mail.ru/c/c9wlq3	VK TutoriaБесплатная платформа для репетиторов, на которой удобно вести любые занятия онлайн	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	uchi.ru	https://uchi.ru/	Учи.руПлатформа для школьного и самостоятельного обучения	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	vk.com	https://vk.com/	ВКонтактеСамая популярная соцсеть и первое суперприложение в Роcсии	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	vk.company	https://vk.company/	VK	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-source	vk.company.ru	https://vk.company.ru/ru/projects/	VK / Проекты	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	vk.me	https://vk.me/	VK МессенджерБыстрый мессенджер с аудио- и видеозвонками без ограничений и расшифровкой голосовых со	domain:vk.me	domain:vk.me	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	vkclips.app	https://vkclips.app/	VK КлипыБесконечная лента коротких вертикальных роликов с шоу, трендами и челленджами	domain:vkclips.app	domain:vkclips.app	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	vkplay.ru	https://vkplay.ru/	VK PlayПлощадка, включающая в себя игры, стриминг и киберспорт	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+VK	vk-prj	https://vk.company.ru/ru/projects/	official-link	youla.ru	https://youla.ru/	ЮлаСервис объявлений на основе геолокации и интересов	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	adblogger.vk.com	https://adblogger.vk.com/	VK AdBloggerПлатформа для сотрудничества авторов и рекламодателей.	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	biz.mail.ru	https://biz.mail.ru/myteam/	Суперапп VK WorkSpaceЗащищенное приложение для совместной работы сотрудников с любого устройства	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	cxhub.ru	https://cxhub.ru/	VK Customer Experience HubПлатформа для работы с данными и автоматизации маркетинга	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	dzen.ru	https://dzen.ru/vkteam		domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/		domain:habr.com	domain:habr.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	hrtek.ru	https://hrtek.ru/	VK HR TekМодульная платформа с набором готовых кадровых сервисов	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	id.vk.com	https://id.vk.com/business	VK IDСервис авторизации для сайтов и приложений	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	koddobra.ru	https://koddobra.ru/business	Код добраСоздание эффективных и полезных для общества проектов вместе с партнерами	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	max.ru	https://max.ru/inside_vk		domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	mcs.mail.ru	https://mcs.mail.ru/	VK CloudПлатформа облачных сервисов для эффективной разработки и работы с данными	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	nonstandard.sales.vk.company	https://nonstandard.sales.vk.company/	Каталог нестандартной рекламыИнтерактивные, иммерсивные и технологичные решения для привлечения вним	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	ok.ru	https://ok.ru/group/53231905669248	ОК.БизнесПлатформа для продвижения малого и среднего бизнеса в Одноклассниках	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	t.me	https://t.me/inside_vk		NA	NA	NA	TELEGRAM
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	tech.mail.ru	https://tech.mail.ru/product/tax-compliance-platform	VK Tax ComplianceРешение для цифрового взаимодействия бизнеса и налоговой службы	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	tech.vk.com	https://tech.vk.com/product/vk-process-mining	VK Process MiningПроцессная аналитика для скрининга и улучшения бизнес-процессов	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	tracker.my.com	https://tracker.my.com/promo	MyTrackerМультиплатформенная система аналитики и атрибуции	domain:my.com	domain:my.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	vk.cc	https://vk.cc/cLSp1h	VK РекламаЕдиная платформа для продвижения бизнеса на проектах VK и в рекламной сети	domain:vk.cc	domain:vk.cc	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	vk.com	https://vk.com/business	Бизнес ВКонтактеСервисы VK для развития малого и среднего бизнеса ВКонтакте	domain:vk.com	domain:vk.com	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	vk.company	https://vk.company/ru/company/business/predict/	VK PredictСервисы аналитики и системы поддержки принятия решений на основе больших данных	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-source	vk.company.ru	https://vk.company.ru/ru/company/business/	VK / Для бизнеса	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+VK	vk-biz	https://vk.company.ru/ru/company/business/	official-link	www.tarantool.io	https://www.tarantool.io/ru/	TarantoolПродукт для создания высоконагруженных СУБД, разработанный на основе собственной open-sourc	domain:tarantool.io	domain:tarantool.io	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	dzen.ru	https://dzen.ru/vkteam		domain:ru	domain:ru	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/		domain:habr.com	domain:habr.com	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	max.ru	https://max.ru/inside_vk		domain:ru	domain:ru	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	ok.ru	https://ok.ru/insidevk		domain:ru	domain:ru	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	t.me	https://t.me/inside_vk		NA	NA	NA	TELEGRAM
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	vk.com	https://vk.com/insidevk		domain:vk.com	domain:vk.com	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	vk.company	https://vk.company/	VK	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-source	vk.company.ru	https://vk.company.ru/ru/press/releases/12490/	VK / VK Tech выпустил новую версию платформы корпоративного ИИ VK AI Space	domain:ru	domain:ru	NA	NA
+VK	vk-ai	https://vk.company.ru/ru/press/releases/12490/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	dzen.ru	https://dzen.ru/vkteam		domain:ru	domain:ru	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/		domain:habr.com	domain:habr.com	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	max.ru	https://max.ru/inside_vk		domain:ru	domain:ru	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	ok.ru	https://ok.ru/insidevk		domain:ru	domain:ru	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	staticmail.b-cdn.net	https://staticmail.b-cdn.net/sales/vk_inn_solutions.pdf	Скачать полную версию	NA	NA	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	t.me	https://t.me/inside_vk		NA	NA	NA	TELEGRAM
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	vk.com	https://vk.com/insidevk		domain:vk.com	domain:vk.com	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	vk.company	https://vk.company/	VK	domain:vk.company	domain:vk.company	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-source	vk.company.ru	https://vk.company.ru/ru/innovation/	VK / Инновационные решения	domain:ru	domain:ru	NA	NA
+VK	vk-inno	https://vk.company.ru/ru/innovation/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola	https://www.company.rt.ru/press/news/d472713/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola	https://www.company.rt.ru/press/news/d472713/	official-link	rtkitplus.ru	https://rtkitplus.ru/	«РТК ИТ Плюс»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola	https://www.company.rt.ru/press/news/d472713/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d472713/	«Ростелеком» переходит на no-code платформу «Акола» для создания внутрикорпоративных сервисов. Офици	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola	https://www.company.rt.ru/press/news/d472713/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola	https://www.company.rt.ru/press/news/d472713/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola2	https://www.company.rt.ru/press/news/d471806/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola2	https://www.company.rt.ru/press/news/d471806/	official-link	rtkitplus.ru	https://rtkitplus.ru/	«РТК ИТ ПЛЮС»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola2	https://www.company.rt.ru/press/news/d471806/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d471806/	Сайт своими руками: российская платформа «Акола» — удобный цифровой конструктор для создания портало	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola2	https://www.company.rt.ru/press/news/d471806/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-akola2	https://www.company.rt.ru/press/news/d471806/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-alkion	https://www.company.rt.ru/press/news/d477985/	official-link	lukit.ru	https://lukit.ru/	ИТ-экосистема «Лукоморье»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-alkion	https://www.company.rt.ru/press/news/d477985/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-alkion	https://www.company.rt.ru/press/news/d477985/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d477985/	ИТ-экосистема «Лукоморье» представила новый продукт «Алкион» — систему для оценки и развития сотрудн	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-alkion	https://www.company.rt.ru/press/news/d477985/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-alkion	https://www.company.rt.ru/press/news/d477985/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-luki2	https://www.company.rt.ru/press/news/d472886/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-luki2	https://www.company.rt.ru/press/news/d472886/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d472886/	«РТК ИТ Плюс» усилил ИТ-экосистему «Лукоморье» тремя новыми продуктами. Официальный информационный с	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-luki2	https://www.company.rt.ru/press/news/d472886/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-luki2	https://www.company.rt.ru/press/news/d472886/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-divo	https://www.company.rt.ru/press/news/d473493/	official-link	lukit.ru	https://lukit.ru/	Экосистема «Лукоморье»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-divo	https://www.company.rt.ru/press/news/d473493/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-divo	https://www.company.rt.ru/press/news/d473493/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d473493/	ИТ-экосистема «Лукоморье» представила новую систему автоматизации для сервисных команд малого и сред	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-divo	https://www.company.rt.ru/press/news/d473493/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-divo	https://www.company.rt.ru/press/news/d473493/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	adpass.ru	https://adpass.ru/konsensus-prognoz-adpass-v-2025-godu-rossijskaya-reklama-razmenyaet-pervyj-trillion-rublej/	Okkam	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-source	ar2025.mts.ru	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	Операционный обзор — Годовой отчет 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	awards.cnews.ru	https://awards.cnews.ru/2025/	Cnews Awards 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	best-for-kids.ru	https://best-for-kids.ru/	премия Best for Kids	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	cx-forum.ru	https://cx-forum.ru/cxclub/cxa/2025/winners	CX WORLD AWARDS	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	exolve.ru	https://exolve.ru/releases/reshenie-dlya-elektrosetevogo-kompleksa-s-primeneniem-neyrosetevogo-agenta-mts-exolve-otmecheno-otra/	премии «Хрустальная гарнитура — 2025»	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	frankrg.com	https://frankrg.com/news/frank-rg-obyavila-pobeditelej-frank-private-banking-award-2025	Frank Private banking Award 2025	NA	NA	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	kion.ru	https://kion.ru/	КИОН	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	live.mts.ru	https://live.mts.ru/moscow	МТС Live	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	moscowartprize.ru	https://moscowartprize.ru/6-map	VI Московской Арт Премии	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal/cookie	Политика обработки файлов cookie в ПАО «МТС»	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	mts-link.ru	https://mts-link.ru/blog/telecomdaily-opredelil-liderov-rynka-vks-po-integracii-ii/	TelecomDaily	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	mts.ai	https://mts.ai/	MWS AI	domain:mts.ai	domain:mts.ai	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	music.mts.ru	https://music.mts.ru/	КИОН Музыка	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	on-media.ru	https://on-media.ru/	ON Медиа	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	originalfestival.ru	https://originalfestival.ru/originaldoc2025	Фестивале документального контента стриминговых платформ Original+Doc	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	premiaruneta.ru	https://premiaruneta.ru/	премия Рунета	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	prioritet-cifra.ru	https://prioritet-cifra.ru/nominees-laureates/mts-ai/	национальную премию «Приоритет: Цифра-2025»	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	process-tech.ru	https://process-tech.ru/award/2025	ProcessTech: Проект года 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	ratingruneta.ru	https://ratingruneta.ru/	Рейтинг Рунета — 2025»	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	rfinance.ru	https://rfinance.ru/live/news/	Retail Finance Award 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	rusproducers.com	https://rusproducers.com/award/2025	Ассоциации продюсеров кино и телевидения	NA	NA	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	shop.mts.ru	https://shop.mts.ru/	shop.mts.ru	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	siffa.media	https://siffa.media/	Международном кинофестивале SIFFA	NA	NA	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	silvermercury.ru	https://silvermercury.ru/winners	премии «Серебряный Меркурий»	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	stroki.mts.ru	https://stroki.mts.ru/	КИОН Строки	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	support.mts.ru	https://support.mts.ru/	support.mts.ru	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	telecomdaily.ru	https://telecomdaily.ru/news/2025/04/17/iaa-telecomdaily-nazvalo-luchshie-koll-centry-po-kachestvu-servisa	ИАА TelecomDaily	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/telekom_api_2025/articles/cnewsmarket_opublikoval_rejting_provajderov	рейтинга провайдеров Telecom API 2025 по версии CNews	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	www.comnews-conferences.ru	https://www.comnews-conferences.ru/ru/conference/awards2025	ComNews Awards	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	www.comnews.ru	https://www.comnews.ru/content/242790/2025-12-08/2025-w50/1007/comnews-nagradil-luchshikh-itogam-2025-g	ComNews Awards 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	www.forbes.ru	https://www.forbes.ru/finansy/533049-100-nadeznyh-bankov-rejting-forbes-2025	Forbes	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	www.markswebb.ru	https://www.markswebb.ru/report/business-internet-banking-rank-2025/	Markswebb	domain:ru	domain:ru	NA	NA
+МТС	mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	official-link	xn--80adirknidg5i.xn--p1ai	https://xn--80adirknidg5i.xn--p1ai/	Фестиваль студенческих спектаклей «Первый план»	domain:xn--p1ai	domain:xn--p1ai	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-source	ar2025.mts.ru	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	Группа МТС в 2025 году — Годовой отчет 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	awards.cnews.ru	https://awards.cnews.ru/2025/	CNews AI Awards	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	business.mgts.ru	https://business.mgts.ru/about_mgts	МГТС	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	exolve.ru	https://exolve.ru/about/	МТС Exolve	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	frankrg.com	https://frankrg.com/news/frank-rg-obyavila-pobeditelej-frank-private-banking-award-2025	Frank Private banking Award 2025	NA	NA	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	globalcio.ru	https://globalcio.ru/projectoftheyear/list/	премией Global CIO	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	gulfstream.ru	https://gulfstream.ru/	Гольфстрим	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	insurance.mts.ru	https://insurance.mts.ru/	МТС Страхование	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	irteya.ru	https://irteya.ru/	«Иртея»	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	json.tv	https://json.tv/analytic/servisy-czifrovoj-bezopasnosti-operatorov-svyazi-i-ekosistem-rf-v-2025-godu-sravnitelnyj-analiz/	J’son & Partners Consulting	NA	NA	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	kion.ru	https://kion.ru/	КИОН	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal/cookie	Политика обработки файлов cookie в ПАО «МТС»	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	mts-link.ru	https://mts-link.ru/blog/telecomdaily-opredelil-liderov-rynka-vks-po-integracii-ii/	ИАА TelecomDaily	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	mts.investments	https://mts.investments/	МТС Инвестиции	NA	NA	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	mts.ru	https://mts.ru/	МТС	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	mtsdengi.ru	https://mtsdengi.ru/	МТС Деньги	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	mws.ru	https://mws.ru/	МТС Web Services	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	on-media.ru	https://on-media.ru/about/kion-music	КИОН Музыка	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	pay.mts.ru	https://pay.mts.ru/	МТС Pay	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	rfinance.ru	https://rfinance.ru/live/news/	Retail Finance Award 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	shop.mts.ru	https://shop.mts.ru/	shop.mts.ru	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	telecomdaily.ru	https://telecomdaily.ru/news/2025/12/11/iaa-telecomdaily-rossiyskiy-rynok-private-lte-v-2025-vyrastet-na-50	ИАА TelecomDaily	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	tmt-consulting.ru	https://tmt-consulting.ru/napravleniya/telekommunikacii/issledovanie-rossijskij-rynok-telekommunikacij-2025/	аналитического агентства «ТМТ Консалтинг»	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	www.banki.ru	https://www.banki.ru/banks/ratings/	Банки.ру	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	www.cnews.ru	https://www.cnews.ru/projects/2025/telecom_api_2025	Telecom API 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	www.forbes.ru	https://www.forbes.ru/finansy/533049-100-nadeznyh-bankov-rejting-forbes-2025	Forbes	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	www.kommersant.ru	https://www.kommersant.ru/doc/8096382	J’son & Partners Consulting.	domain:ru	domain:ru	NA	NA
+МТС	mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	www.mtsbank.ru	https://www.mtsbank.ru/o-banke/	МТС Банк	domain:ru	domain:ru	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	digital.gov.ru	https://digital.gov.ru/uploaded/files/d154547600_JMmhHWM.pdf	https://digital.gov.ru/uploaded/files/d154547600_JMmhHWM.pdf	domain:ru	domain:ru	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	generationx5.tech	https://generationx5.tech/	Стажировка	NA	NA	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	habr.com	https://habr.com/ru/companies/X5Tech/articles/930996/	Как мы делали персонализированные баннеры с помощью ИИ	domain:habr.com	domain:habr.com	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	kod.ru	https://kod.ru/author/x5		domain:ru	domain:ru	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	t.me	https://t.me/x5_tech		NA	NA	NA	TELEGRAM
+X5	x5-tech	https://x5.tech/	official-link	vk.com	https://vk.com/x5tech		domain:vk.com	domain:vk.com	NA	NA
+X5	x5-tech	https://x5.tech/	official-link	www.youtube.com	https://www.youtube.com/live/ZP2YGjikLcY	Запись трансляции из зала “Шале”	NA	NA	NA	YOUTUBE
+X5	x5-tech	https://x5.tech/	official-source	x5.tech	https://x5.tech/	Присоединяйся к команде X5 Tech	domain:x5.tech	domain:x5.tech	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	5ka.ru	https://5ka.ru/	Пятёрочка магазины «у дома»	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	chizhik.club	https://chizhik.club/	Чижик современные дискаунтеры	domain:chizhik.club	domain:chizhik.club	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	dialog.x5.ru	https://dialog.x5.ru/insights	Анализ покупательского поведения	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	esg.x5.ru	https://esg.x5.ru/ru/	Стратегия устойчивого развития	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	fivepost.ru	https://fivepost.ru/	5Post доставка посылок	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	food.ru	https://food.ru/	Food.ru медиаплатформа	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	hotline-compliance.x5.ru	https://hotline-compliance.x5.ru/external	Далее	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	importx5.com	https://importx5.com/	X5 Импорт поставки из-за рубежа	domain:importx5.com	domain:importx5.com	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	max.ru	https://max.ru/x5_max		domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	mediahub.x5.ru	https://mediahub.x5.ru/albums	Медиабанк	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	mnogolososya.ru	https://mnogolososya.ru/	Много лосося доставка роллов и пиццы	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	myapelsin.ru	https://myapelsin.ru/	Апельсин платёжный сервис	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	perekrestok.ru	https://perekrestok.ru/	Перекрёсток супермаркеты	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	rabota.x5.ru	https://rabota.x5.ru/	Карьера	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	t.me	https://t.me/x5_telega		NA	NA	NA	TELEGRAM
+X5	x5-main	https://www.x5.ru/ru/	official-link	vk.com	https://vk.com/x5group		domain:vk.com	domain:vk.com	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	www.vedomosti.ru	https://www.vedomosti.ru/retail/trends/articles/2026/10/01/1233550-reteil-uskoryaet-zapusk	Посмотреть	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-source	www.x5.ru	https://www.x5.ru/ru/	Главная - X5	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5.tech	https://x5.tech/	X5 Tech внедрение технологий	domain:x5.tech	domain:x5.tech	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5blogger.ru	https://x5blogger.ru/	X5 Блогер рекламные возможности	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5club.ru	https://x5club.ru/	Х5 Клуб программа лояльности	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5media.ru	https://x5media.ru/	Единое окно рекламных и аналитических возможностей	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5opt.ru	https://x5opt.ru/	X5 Import оптовым покупателям	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5paket.ru	https://x5paket.ru/	Пакет сервис подписки	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	x5transport.ru	https://x5transport.ru/	X5 Логистика	domain:ru	domain:ru	NA	NA
+X5	x5-main	https://www.x5.ru/ru/	official-link	xn--80adk2ars2a3a.xn--p1ai	https://xn--80adk2ars2a3a.xn--p1ai/	Фонд «Выручаем»	domain:xn--p1ai	domain:xn--p1ai	NA	NA
+X5	x5-id	https://id.x5.ru/	official-source	id.x5.ru	https://id.x5.ru/	X5ID - единая учетная запись для всех магазинов и сервисов X5 Group	domain:ru	domain:ru	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	datalens.yandex	https://datalens.yandex/nvkfwnekf9xy9	Столбчатая диаграмма	domain:yandex	domain:yandex	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/datalens/charts/editor/widgets/gravity-ui.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/datalens/charts/editor/widgets/gravity-ui.md		NA	NA	NA	GITHUB
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	gravity-ui.github.io	https://gravity-ui.github.io/charts/pages/overview.html	документации	NA	NA	NA	GITHUB
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-source	yandex.cloud	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	График (Gravity UI Charts) в Editor | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/ru/docs/	Посмотреть документацию​	domain:ru	domain:ru	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	context7.com	https://context7.com/diplodoc-platform/docs	Diplodoc в Context7​	NA	NA	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	diplodoc-platform.github.io	https://diplodoc-platform.github.io/transform/	Онлайн редактор	NA	NA	NA	GITHUB
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-source	diplodoc.com	https://diplodoc.com/	Diplodoc	NA	NA	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	github.com	https://github.com/diplodoc-platform/	Github	NA	NA	NA	GITHUB
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	gravity-ui.com	https://gravity-ui.com/	Создано на	NA	NA	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	marketplace.visualstudio.com	https://marketplace.visualstudio.com/items	Установить плагин​	NA	NA	NA	NA
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	t.me	https://t.me/diplodoc_ru	Тelegram	NA	NA	NA	TELEGRAM
+Яндекс	ya-diplodoc	https://diplodoc.com/	official-link	yandex.ru	https://yandex.ru/legal/confidential/ru/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA
+Яндекс	ya-userver	https://userver.tech/	official-link	forms.yandex.ru	https://forms.yandex.ru/u/667d482fe010db2f53e00edf/	Go to the feedback form >	domain:ru	domain:ru	NA	NA
+Яндекс	ya-userver	https://userver.tech/	official-link	t.me	https://t.me/userver_en	> Community	NA	NA	NA	TELEGRAM
+Яндекс	ya-userver	https://userver.tech/	official-source	userver.tech	https://userver.tech/	userver: userver	NA	NA	NA	NA
+Яндекс	ya-userver	https://userver.tech/	official-link	www.doxygen.org	https://www.doxygen.org/index.html	Doxygen	NA	NA	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	clickhouse.com	https://clickhouse.com/	https://clickhouse.com	NA	NA	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	datalens.tech	https://datalens.tech/ru	Попробовать	NA	NA	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	github.com	https://github.com/ytsaurus/ytsaurus	GitHub	NA	NA	NA	GITHUB
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	stackoverflow.com	https://stackoverflow.com/tags/ytsaurus	Stackoverflow	NA	NA	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	t.me	https://t.me/ytsaurus_ru	Telegram	NA	NA	NA	TELEGRAM
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	www.linkedin.com	https://www.linkedin.com/company/ytsaurus	LinkedIn	NA	NA	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	www.youtube.com	https://www.youtube.com/@ytsaurus	Youtube	NA	NA	NA	YOUTUBE
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA
+Яндекс	ya-ytsaurus	https://ytsaurus.tech/ru	official-source	ytsaurus.tech	https://ytsaurus.tech/ru	YTsaurus — платформа распределенного хранения и обработки больших данных	NA	NA	NA	NA
+Яндекс	ya-testplane	https://testplane.io/	official-link	github.com	https://github.com/gemini-testing/testplane	GitHub	NA	NA	NA	GITHUB
+Яндекс	ya-testplane	https://testplane.io/	official-link	sourcecraft.dev	https://sourcecraft.dev/testplane/testplane	SourceCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-testplane	https://testplane.io/	official-link	stackoverflow.com	https://stackoverflow.com/questions/tagged/testplane		NA	NA	NA	NA
+Яндекс	ya-testplane	https://testplane.io/	official-link	t.me	https://t.me/testplane		NA	NA	NA	TELEGRAM
+Яндекс	ya-testplane	https://testplane.io/	official-source	testplane.io	https://testplane.io/	Fast, scalable and robust end-to-end web testing solution | Testplane	NA	NA	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-source	corp.megafon.ru	https://corp.megafon.ru/press/	Прессе — Инвесторам и прессе — Официальный сайт ПАО «МегаФон» Московский регион	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	gov.megafon.ru	https://gov.megafon.ru/	Госзаказчикам	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	habrahabr.ru	https://habrahabr.ru/company/megafon		domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	job.megafon.ru	https://job.megafon.ru/	Работа в МегаФоне	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	lk.megafon.ru	https://lk.megafon.ru/download/apk	Android	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	ok.ru	https://ok.ru/megafon		domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	shop.megafon.ru	https://shop.megafon.ru/	Интернет‑магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	t.me	https://t.me/megafon_online		NA	NA	NA	TELEGRAM
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	trk.mail.ru	https://trk.mail.ru/c/sa6p65	iOS	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	vk.com	https://vk.com/megafon		domain:vk.com	domain:vk.com	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	www.megafon.ru	https://www.megafon.ru/	Частным лицам	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	www.shop.megafon.ru	https://www.shop.megafon.ru/	Интернет-магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-start	https://corp.megafon.ru/press/	official-link	www.youtube.com	https://www.youtube.com/user/MegaFonTV		NA	NA	NA	YOUTUBE

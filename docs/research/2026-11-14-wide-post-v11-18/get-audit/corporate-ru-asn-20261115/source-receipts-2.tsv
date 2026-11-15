@@ -1,0 +1,26 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+vk-oss	https://vk.company.ru/ru/press/releases/11938/	https://vk.company.ru/ru/press/releases/11938/	200	0	0	46331	c1b3247a01eea8ea68e64aa7629af40b9cabd97c0d6b3fd9dcf1191895be31e8	text/html; charset=utf-8
+vk-prj	https://vk.company.ru/ru/projects/	https://vk.company.ru/ru/projects/	200	0	0	89742	ee9439bf25f689946137e44de3c1b03b848cb829ea8197f2b720a14f95d3df0f	text/html; charset=utf-8
+vk-biz	https://vk.company.ru/ru/company/business/	https://vk.company.ru/ru/company/business/	200	0	0	55445	0c64ed24e8a25fd137428edf80405941ca8b15ca75a0e85ff947413c0cdf0769	text/html; charset=utf-8
+vk-ai	https://vk.company.ru/ru/press/releases/12490/	https://vk.company.ru/ru/press/releases/12490/	200	0	0	53826	2dacb52832adb8e32edb4e7b2a94cc515e3ce035bf45c50f638aace56446e5dd	text/html; charset=utf-8
+vk-inno	https://vk.company.ru/ru/innovation/	https://vk.company.ru/ru/innovation/	200	0	0	51420	a66cf14c9432d6e56eefd91a469d1a486c9817aa5f0df3d83eb878dcef565a87	text/html; charset=utf-8
+rt-akola	https://www.company.rt.ru/press/news/d472713/	https://www.company.rt.ru/press/news/d472713/	200	0	0	59800	b4ae00723901e887d466d014d07f3d5dddeb75983e6fba50627fb455596fa117	text/html; charset=UTF-8
+rt-akola2	https://www.company.rt.ru/press/news/d471806/	https://www.company.rt.ru/press/news/d471806/	200	0	0	59287	08376e18ddfd1f55f8af7c7104ff993218d8756a71fe38fa3dc1f7d111dc4ad7	text/html; charset=UTF-8
+rt-alkion	https://www.company.rt.ru/press/news/d477985/	https://www.company.rt.ru/press/news/d477985/	200	0	0	59914	3798010db0860bedcc90e1f805b7af0b986fbe3732a922b3559d0909261c0cf3	text/html; charset=UTF-8
+rt-luki2	https://www.company.rt.ru/press/news/d472886/	https://www.company.rt.ru/press/news/d472886/	200	0	0	61428	63acb9422f4344098a72550aab4864748a6cf197eec5acd6d17e600246a14306	text/html; charset=UTF-8
+rt-divo	https://www.company.rt.ru/press/news/d473493/	https://www.company.rt.ru/press/news/d473493/	200	0	0	60975	a0b013ab3adf530ebbedbac1cb87c6761fe47ffba15f6e965e1b3cbc8d32692f	text/html; charset=UTF-8
+mts-op	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	https://ar2025.mts.ru/mts-segodnya/operaczionnyj-obzor/	200	0	0	490452	9cfc791e30f41fd065ea9a51c961c13792c51bba359a5ae1b79ff3656affb203	text/html; charset=UTF-8
+mts-group	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	200	0	0	202301	1a376fe3875196dd8b8f8099ee083e861af7d17d9e0dcd48e5b51c81607d53b0	text/html; charset=UTF-8
+mts-b2bnew	https://moskva.mts.ru/about/media-centr/soobshheniya-kompanii/novosti-mts-v-rossii-i-mire/2026-10-15/mts-otkryvaet-nabor-tehnologicheskih-reshenij-dlya-zadach-biznesa	https://moskva.mts.ru/about/media-centr/soobshheniya-kompanii/novosti-mts-v-rossii-i-mire/2026-10-15/mts-otkryvaet-nabor-tehnologicheskih-reshenij-dlya-zadach-biznesa	403	0	0	300	738213571441e4a25f64be2c30a92849d6fde76e06fa6199a8d6676b7a6b4e0d	text/html
+mts-start	https://startup.mts.ru/	https://startup.mts.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+x5-tech	https://x5.tech/	https://x5.tech/	200	0	0	168256	4b8671c33e84bcd7f51e099af254a19fa392aaa84db75d969306720cb3322df8	text/html; charset=utf-8
+x5-main	https://www.x5.ru/ru/	https://www.x5.ru/ru/	200	0	0	243854	b302375ae7810ac4afe46406fe42a1ac23c61b3c9d40cf5f361529d703ddaa60	text/html; charset=UTF-8
+x5-id	https://id.x5.ru/	https://id.x5.ru/	200	0	0	7515	ff1082df25b1a6523c15cb8a69cdbda50de9cce7fcb6bee2d54fafe38921c1d3	text/html
+ya-gravity-doc	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	https://yandex.cloud/ru/docs/datalens/charts/editor/widgets/gravity-ui	200	0	0	730512	ca6e4b01447c9a1160063bee33cb67560e61bab6693d8089039bd42079535b0a	text/html; charset=utf-8
+ya-diplodoc	https://diplodoc.com/	https://diplodoc.com/	200	0	0	80011	bf7a0616327a9fb930c05f8e3c22631df1ac337d08ddbd59c3ea69af22a38733	text/html; charset=utf-8
+ya-userver	https://userver.tech/	https://userver.tech/	200	0	0	17706	7171360a19ce313d5f970133af32830dde819c3d73fe7a8eb9f28db71c3cca95	text/html; charset=utf-8
+ya-ytsaurus	https://ytsaurus.tech/ru	https://ytsaurus.tech/ru	200	0	0	61424	359426842d2d9fa00ca02071c6bea6c03f0d30e8a7ed75672462f05e812ed224	text/html; charset=utf-8
+ya-testplane	https://testplane.io/	https://testplane.io/	200	0	0	181900	03325174884b7d74b57ae65d857c87baf96e0385904b600e337e5344fbd347ff	text/html
+ya-pgshard	https://pg-sharding.tech/welcome	https://pg-sharding.tech/welcome	404	0	0	328	269be6ee764a48509383c9c9146ee722ed67cfe4324069f4d6fffc636a2bceea	text/html; charset=utf-8
+ya-yaff	https://yaff.tech/docs/en/	https://yaff.tech/docs/en/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+mf-start	https://corp.megafon.ru/press/	https://corp.megafon.ru/press/	200	0	0	111261	ff25082ed0809e380315f040973692725012df212b0a4e1459990c88d31ac7b4	text/html; charset=utf-8
