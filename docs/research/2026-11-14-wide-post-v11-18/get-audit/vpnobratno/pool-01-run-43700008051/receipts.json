@@ -1,0 +1,308 @@
+[
+  {
+    "artifact_id": 14156022781,
+    "artifact_zip_sha256": "1299b84ad8abe3a18f5c8bfcba34e0149b8b7beaccfeaac23ce63ff0ec877242",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "01",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 20,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156062460,
+    "artifact_zip_sha256": "6088f4f03cc6dd11d096016a3371d812dadefeced6556027a8936d76f1732123",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "02",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 19,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156296275,
+    "artifact_zip_sha256": "98f903f39e50b4363462577e118978320b8cd1d298bcb87056ea4e577358803d",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "03",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 20,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156107563,
+    "artifact_zip_sha256": "24d49902822e180a7a6564d8cd1e11e91a6c96c665e9a0558524c0417ed7fc0e",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "04",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 20,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156311454,
+    "artifact_zip_sha256": "40d8b966f5851974655195bb94b74de1666f6a85b9837bb1e0aeca82ef2df344",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "05",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 20,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156380540,
+    "artifact_zip_sha256": "c4df458f2cc8df02afb9a27bae8095be1ddbe012cf8959e30a097ec844609fe3",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "06",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 20,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14155868536,
+    "artifact_zip_sha256": "b5c748d0aae8bdd631c39ffdcd7b94648bffb95d92197c1c468898a83344a560",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "07",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 16,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14155828816,
+    "artifact_zip_sha256": "371f8515527f2a2ca83e5895c33e274e9f3871ed44959ccb8ae0f58e5c51b166",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "08",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 12,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156082994,
+    "artifact_zip_sha256": "de19218a18ec105bfafe73df668b846d2ad009e9241a7ae6aa33e7c910787598",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "09",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 17,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156251249,
+    "artifact_zip_sha256": "1e39c5f57f902fb12621b054dbf1ce89b7523ad0d41069ce864ffb694c9e448a",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "10",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 18,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156103196,
+    "artifact_zip_sha256": "faea6b68e0b7f381416e060317a42eefa3649f7674273005dfa137ae4dc21ce0",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "11",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 16,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156013584,
+    "artifact_zip_sha256": "6eeeb3b82ba80d4f3f858e487e0aca3a6f04c6ef4125667227810787b28fa1d0",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "12",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 16,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156186807,
+    "artifact_zip_sha256": "3ee305d21d256a36f7cee218324d87f1f6a169bfc236741019103e6d175d0cfd",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "13",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 16,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14155869070,
+    "artifact_zip_sha256": "fe51e920dfc2b8697037e0a01a7fca586b0fdeca2d5baa283f2bc3b3fd597bdd",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "14",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 18,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156083761,
+    "artifact_zip_sha256": "05f3777fccaeb8fc4ad6e8e370c9a54930c836414abc674da8a75a98bccab70e",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "15",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 9,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14155754919,
+    "artifact_zip_sha256": "a03f7ac5281a61751cec04e497628381080460e6da9f899f79fa7b8dc428c38e",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "16",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 12,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156790386,
+    "artifact_zip_sha256": "63c8cb9ae6b9002da33b31f236b430c065cd77c77024ae2b09a32d3f29fb2d2f",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "17",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 18,
+    "measurements": 20,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  },
+  {
+    "artifact_id": 14156148468,
+    "artifact_zip_sha256": "3d4ecf3f128640f8062707c260c3f20877161afa579b23fc863e76dcf9b7412c",
+    "asns": [
+      25513,
+      34533
+    ],
+    "batch": "18",
+    "connection_attempts": 2,
+    "execution_sha": "8e8757f93de9362adce534f95126524d0b27f4eb",
+    "globalping_requests": 0,
+    "http_responses": 5,
+    "measurements": 8,
+    "run_attempt": 1,
+    "run_id": 43700008051,
+    "upstream_state": "COMPLETE"
+  }
+]

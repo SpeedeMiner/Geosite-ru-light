@@ -1,0 +1,4 @@
+"url"	"host"	"type"	"batch"	"attempted_asns"	"verified_http_asns"	"verified_2xx_asns"	"asns"	"outcomes"	"comparison"
+"https://www.gosuslugi.ru/goskey"	"www.gosuslugi.ru"	"diagnostic"	"01"	"2"	"2"	"1"	"25513|34533"	"AS25513=302/vpn_redirect|AS34533=200/vpn_visible_review"	"different"
+"https://cyberpack.ai/"	"cyberpack.ai"	"full"	"03"	"2"	"2"	"1"	"25513|34533"	"AS25513=200/vpn_body_unproven|AS34533=402/vpn_http_other"	"different"
+"https://www.mos-gaz.ru/press-service/publications/2026/07/16/7855"	"www.mos-gaz.ru"	"diagnostic"	"11"	"2"	"2"	"2"	"25513|34533"	"AS25513=200/vpn_visible_review|AS34533=200/vpn_body_unproven"	"different"

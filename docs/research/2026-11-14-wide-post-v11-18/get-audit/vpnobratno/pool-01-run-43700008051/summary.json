@@ -1,0 +1,42 @@
+{
+  "asns": [
+    12389,
+    25513,
+    34533
+  ],
+  "attempts_by_url_asn": {
+    "2": 184
+  },
+  "batch_artifacts": 18,
+  "different_http_outcomes": 3,
+  "fresh_ru_credit": false,
+  "globalping_requests": 0,
+  "http_verified_observations": 312,
+  "missing_second_attempt": 0,
+  "needs_http_followup": 36,
+  "new_attempted_urls": 174,
+  "new_planned": 174,
+  "observation_states": {
+    "vpn_body_unproven": 108,
+    "vpn_dns_unproven": 2,
+    "vpn_http_other": 29,
+    "vpn_marker": 44,
+    "vpn_redirect": 28,
+    "vpn_tls_unproven": 25,
+    "vpn_transport_unproven": 29,
+    "vpn_visible_review": 103
+  },
+  "pool_urls": 184,
+  "prior_urls": 10,
+  "total_get_observations": 368,
+  "verified_2xx_by_url_asn": {
+    "0": 48,
+    "1": 17,
+    "2": 119
+  },
+  "verified_http_by_url_asn": {
+    "0": 20,
+    "1": 16,
+    "2": 148
+  }
+}
