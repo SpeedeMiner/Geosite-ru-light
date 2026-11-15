@@ -1,0 +1,58 @@
+{
+  "baseline_new": 43,
+  "baseline_pending": 1047,
+  "baseline_verified": 141,
+  "by_batch": {
+    "baseline006a": {
+      "observed": 30
+    },
+    "functional": {
+      "observed": 3
+    },
+    "regional": {
+      "observed": 20
+    },
+    "wide007": {
+      "observed": 25
+    }
+  },
+  "by_cohort": {
+    "baseline": {
+      "observed": 43
+    },
+    "diagnostic": {
+      "observed": 7
+    },
+    "frontier": {
+      "observed": 3
+    },
+    "regional_control": {
+      "observed": 6
+    },
+    "regional_frontier": {
+      "observed": 14
+    },
+    "suffix_sample": {
+      "observed": 5
+    }
+  },
+  "measurement_ids": 78,
+  "metadata_sectors_observed": 20,
+  "planned": 78,
+  "recorded": 78,
+  "redirect_rows": 11,
+  "states": {
+    "observed": 78
+  },
+  "triage": {
+    "needs_original_bytes": 2,
+    "needs_public_content_path": 44,
+    "review_http_status_on_functional_path": 6,
+    "review_redirect": 11,
+    "review_tls_name_or_chain": 1,
+    "review_transport_or_address": 2,
+    "review_visible_body": 12
+  },
+  "verified_gets": 78,
+  "verified_probe_records": 234
+}
