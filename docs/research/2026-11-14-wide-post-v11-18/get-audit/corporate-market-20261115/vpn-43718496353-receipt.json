@@ -1,0 +1,21 @@
+{
+  "run_id": 43718496353,
+  "attempt": 1,
+  "artifact_id": 14163257951,
+  "artifact_sha256": "6cfd56936839535da357f7436eda667ed57b36e496ea89c93e91707738707624",
+  "head_sha": "67cccf1f3e2872b003b266d18f6d0c84a7dd837d",
+  "upstream": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "plan_sha256": "90c0bb291e7a857295186e7c764822230426abf4adec139d06f99c501faf1308",
+  "ru_exit_asns": [
+    12389,
+    52043
+  ],
+  "attempted": 10,
+  "validated_http_responses": 9,
+  "globalping_requests": 0,
+  "verified_market_frontends": [
+    "avitoplato.tech",
+    "trisigma.io",
+    "docs.trisigma.io"
+  ]
+}
