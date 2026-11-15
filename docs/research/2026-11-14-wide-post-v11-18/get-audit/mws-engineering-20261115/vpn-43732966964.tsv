@@ -1,0 +1,13 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://banka-ui.dev/	33991	33991	82.202.190.7	403	0	0	text/plain	63	1533c967b9f9c48ed77ca18ec074dfdd4218d63f3f99960a0d8f3b147ba86825	NA	NA	NA	2026-11-15T16:01:33.770571+00:00
+https://banka-ui.dev/	44724	44724	82.202.190.7	403	0	0	text/plain	63	871a475a44f84d8c8b110622914c4f69cfad0c5cbb6229346360de1a64faeffc	NA	NA	NA	2026-11-15T16:02:14.415332+00:00
+https://divkit.tech/docs/ru/	33991	33991	87.250.254.64	200	0	0	text/html; charset=utf-8	10000	486242d9a3fbaee74f3f3e3547196f05b6cb483c7245674264efab637ab87d07	DivKit | DivKit	NA	NA	2026-11-15T16:01:21.569160+00:00
+https://divkit.tech/docs/ru/	44724	44724	87.250.254.64	200	0	0	text/html; charset=utf-8	10000	f825541efed2fd36d579ffe5dd10104dbc8d1659fb542a2cfedf7d7ac6f8f40e	DivKit | DivKit	NA	NA	2026-11-15T16:01:55.283958+00:00
+https://divkit.tech/en/	33991	33991	87.250.254.64	302	0	0	NA	0	NA	NA	divkit.tech	/showcaptcha	2026-11-15T16:01:23.743159+00:00
+https://divkit.tech/en/	44724	44724	87.250.254.64	302	0	0	NA	0	NA	NA	divkit.tech	/showcaptcha	2026-11-15T16:01:58.276065+00:00
+https://nexign.com/ru	33991	33991	91.210.7.9	200	0	0	text/html; charset=UTF-8	10000	001d96073a67d639109846711a8544716ffc3d7488ec7c260417e8a320a7d847	Nexign - Главная	NA	NA	2026-11-15T16:01:29.021826+00:00
+https://nexign.com/ru	44724	44724	91.210.7.9	200	0	0	text/html; charset=UTF-8	10000	001d96073a67d639109846711a8544716ffc3d7488ec7c260417e8a320a7d847	Nexign - Главная	NA	NA	2026-11-15T16:02:04.122989+00:00
+https://www.gazprombank.tech/	33991	33991	82.202.190.54	200	0	0	text/html; charset=utf-8	10000	8adab6345b736940441001b51414fa70aae018402f18ce4c3436c0156fb4d633	Главная	NA	NA	2026-11-15T16:01:32.098108+00:00
+https://www.gazprombank.tech/	44724	44724	82.202.190.54	200	0	0	text/html; charset=utf-8	10000	8adab6345b736940441001b51414fa70aae018402f18ce4c3436c0156fb4d633	Главная	NA	NA	2026-11-15T16:02:11.653276+00:00
+https://www.nexign.com/	33991	33991	91.210.7.9	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	301 Moved Permanently	nexign.com	/	2026-11-15T16:01:25.734161+00:00
+https://www.nexign.com/	44724	44724	91.210.7.9	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	301 Moved Permanently	nexign.com	/	2026-11-15T16:02:01.319145+00:00
