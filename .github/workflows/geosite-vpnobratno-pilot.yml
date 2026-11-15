@@ -85,7 +85,7 @@ jobs:
           "$RUNNER_TEMP/geosite-vpn-inventory" \
             .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
 
-      - name: Repeat the five GETs outside the first VPN exit ASN
+      - name: Measure the next five queued GeoSite URLs from two ASNs
         timeout-minutes: 8
         run: |
           set -euo pipefail
@@ -95,8 +95,8 @@ jobs:
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/vpn-pilot/first-get.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 1 --exclude-asn 34533 --attempts 6 --connect-timeout 12
+                "$AUDIT/vpn-pilot/get-batch-02.tsv" .vpn-pilot/inventory.tsv \
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
 
       - name: Upload observation and diagnostic reports
         if: always()

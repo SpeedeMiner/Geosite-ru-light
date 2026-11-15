@@ -1,0 +1,6 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"suffix_sample"	"diagnostic"	"developer.kontur.ru"	"developer.kontur.ru"	"https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html"	"Диадок"	"https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html"
+"diagnostic"	"diagnostic"	"docs.arenadata.io"	"docs.arenadata.io"	"https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html"	"Arenadata"	"https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html"
+"suffix_sample"	"diagnostic"	"aero.alrosa.ru"	"aero.alrosa.ru"	"https://aero.alrosa.ru/"	"АЛРОСА|ALROSA"	"https://www.alrosa.aero/"
+"baseline"	"full"	"ru.cloud.trassir.com"	"ru.cloud.trassir.com"	"https://ru.cloud.trassir.com/"	""	"https://trassir.com/software-updates/manual/setup-cloud40.html"
+"baseline"	"full"	"sigma.cloud.trassir.com"	"sigma.cloud.trassir.com"	"https://sigma.cloud.trassir.com/"	""	"https://trassir.com/software-updates/manual/setup-cloud40.html"
