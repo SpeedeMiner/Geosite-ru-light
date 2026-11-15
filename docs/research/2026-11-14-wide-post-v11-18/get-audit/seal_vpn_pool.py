@@ -3,7 +3,6 @@
 import argparse
 from collections import Counter, defaultdict
 import hashlib
-import io
 from ipaddress import ip_address
 import json
 from pathlib import Path
