@@ -1,0 +1,6 @@
+"host"	"url"	"source"	"light_ru"	"server_ru"	"light_block"	"state"	"note"
+"courteurasian.org"	"https://courteurasian.org/"	"https://courteurasian.org/"	"False"	"False"	"False"	"needs_fresh_get"	"Официальный действующий сайт суда, не поддомен court.eaeunion.org"
+"educ.eaeunion.org"	"https://educ.eaeunion.org/moodle/"	"https://educ.eaeunion.org/"	"False"	"False"	"False"	"needs_fresh_get"	"Открытая страница учебного портала, корень перенаправляет"
+"info.eaeunion.org"	"https://info.eaeunion.org/"	"https://eec.eaeunion.org/upload/iblock/422/K_1087.pdf"	"False"	"False"	"False"	"verify_current_url"	"Основной раздел по документации, актуальную работу публичного корня не подтвердили"
+"eomi.eaeunion.org"	"https://eomi.eaeunion.org/ru/"	"https://eec.eaeunion.org/upload/iblock/422/K_1087.pdf"	"False"	"False"	"False"	"verify_current_url"	"Модель данных, видимое содержимое и текущий путь требуют проверки"
+"barriers.eaeunion.org"	"https://barriers.eaeunion.org/barriers"	"https://barriers.eaeunion.org/"	"False"	"False"	"False"	"needs_fresh_get"	"Публичная оболочка портала внутренних рынков, без отправки обращения"
