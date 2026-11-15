@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	4.ipquail.com	4.ipquail.com	https://4.ipquail.com/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	6.ipquail.com	6.ipquail.com	https://6.ipquail.com/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	atlas.baebeca.de	atlas.baebeca.de	https://atlas.baebeca.de/		https://www.baebeca.de/hilfe/tools-und-formulare/eigene-ip-adresse/
+ip_echo	diagnostic	checkip.bagoly.se	checkip.bagoly.se	https://checkip.bagoly.se/?format=text		https://bagoly.se/checkip/
+ip_echo	diagnostic	dafuqismyip.com	dafuqismyip.com	https://dafuqismyip.com/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	i-p.show	i-p.show	https://i-p.show/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	ip.csis.dk	ip.csis.dk	https://ip.csis.dk/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	ipaddress.fi	ipaddress.fi	https://ipaddress.fi/api/v1/my-ip?format=text		https://ipaddress.fi/api-docs
+ip_echo	diagnostic	ipfastcheck.com	ipfastcheck.com	https://ipfastcheck.com/ip		https://ipfastcheck.com/api
+ip_echo	diagnostic	ipka.sk	ipka.sk	https://ipka.sk/		https://ipka.sk/

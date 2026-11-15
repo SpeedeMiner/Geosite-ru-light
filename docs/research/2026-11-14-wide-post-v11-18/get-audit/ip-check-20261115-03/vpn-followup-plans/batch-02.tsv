@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	ipquail.com	ipquail.com	https://ipquail.com/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	iprs.fly.dev	iprs.fly.dev	https://iprs.fly.dev/		https://engineered.at/articles/finding-out-your-public-ip-address-via-curl
+ip_echo	diagnostic	ipv4.pry.sh	ipv4.pry.sh	https://ipv4.pry.sh/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	ipv6.pry.sh	ipv6.pry.sh	https://ipv6.pry.sh/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	meine-ip.info	meine-ip.info	https://meine-ip.info/api/ip		https://meine-ip.info/api/docs
+ip_echo	diagnostic	myops.in	myops.in	https://myops.in/ip		https://myops.in/
+ip_echo	diagnostic	pry.sh	pry.sh	https://pry.sh/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	pub-ip.com	pub-ip.com	https://pub-ip.com/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	sjekkip.no	sjekkip.no	https://sjekkip.no/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	v4.i-p.show	v4.i-p.show	https://v4.i-p.show/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address

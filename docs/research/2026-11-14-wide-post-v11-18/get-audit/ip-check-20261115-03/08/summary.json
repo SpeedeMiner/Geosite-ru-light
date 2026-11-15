@@ -1,0 +1,34 @@
+{
+  "baselines": {
+    "light": "b6453f0c9a3bc06a1978fd77aed7b3e4149161e5c2172c4863012fe0aad57c85",
+    "server": "e9d343e6a83c848b0c280af351da956a9bb8275752424d6437244fd47eae7282"
+  },
+  "covered_hosts": 82,
+  "dispositions": {
+    "browser_checker_review": 2,
+    "new_confirmed_ip_echo": 17,
+    "not_confirmed": 25,
+    "redirect_review": 1,
+    "shared_host_review": 12
+  },
+  "get_attempts": 91,
+  "new_missing_hosts": 57,
+  "new_missing_urls": 62,
+  "previously_seen_hosts": 43,
+  "scope": "HTTPS GET from workspace with strict TLS, no redirect following; no verified RU ASN and no claim of IPv6 transport",
+  "scope_reviewed_hosts": [
+    "apps-vm8.srv.peterjin.org",
+    "corz.org",
+    "dnsskills.md",
+    "httpbin.dmuth.org",
+    "simplesniff.com",
+    "www.ipv4.balug.org",
+    "www.ipv6.balug.org"
+  ],
+  "sources_sha256": {
+    "rules-revision.txt": "5732cf6acd4ce44bd46785eb45b024de497220b16128d890c348ff865468ad4c",
+    "sources.txt": "397ec29da90ac2822ffaffdea836b603cc0aac82ba155ea4c1183ca13d4fe0c2"
+  },
+  "window_hosts": 140,
+  "window_urls": 150
+}

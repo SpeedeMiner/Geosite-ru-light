@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	v4.yinghualuo.cn	v4.yinghualuo.cn	https://v4.yinghualuo.cn/bejson		https://github.com/jeessy2/ddns-go/blob/b521e5e32e78a484631b7f3e9ce31f4e28c65380/web/writing.html
+ip_echo	diagnostic	v6.i-p.show	v6.i-p.show	https://v6.i-p.show/		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
+ip_echo	diagnostic	v6.yinghualuo.cn	v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson		https://github.com/jeessy2/ddns-go/blob/b521e5e32e78a484631b7f3e9ce31f4e28c65380/web/writing.html
+ip_echo	diagnostic	www.ipgoat.com	www.ipgoat.com	https://www.ipgoat.com/		https://ipgoat.com/
+ip_echo	diagnostic	www.ipka.sk	www.ipka.sk	https://www.ipka.sk/		https://www.ipka.sk/
+ip_echo	diagnostic	yourip.app	yourip.app	https://yourip.app/raw		https://www.balug.org/wiki/doku.php?id=system:what_is_my_ip_address
