@@ -1,0 +1,4 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_labor_mobility"	"diagnostic"	"enbek.kz"	"enbek.kz"	"https://enbek.kz/rbg-front/"	"Работа без границ|Enbek"	"https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru"
+"control_labor_mobility"	"diagnostic"	"www.gov.kz"	"www.gov.kz"	"https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru"	"Единая система поиска|Работа без границ"	"https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru"
+"control_labor_mobility"	"diagnostic"	"mfc-19.ru"	"mfc-19.ru"	"https://mfc-19.ru/press/news/text-27798.html"	"Работа в ЕАЭС|трудовой миграции"	"https://mfc-19.ru/press/news/text-27798.html"

@@ -1,0 +1,14 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	employment_mobility	functional	https://fci.eabr.org/projects/work_in_eaes/	https://www.eabr.org/about/	Работа в ЕАЭС|Фонд цифровых инициатив	Точный публичный проект ФЦИ, приоритетнее голого корня
+EAEU	employment_mobility	functional	https://jobineaeu.org/info/	https://fci.eabr.org/projects/work_in_eaes/	Работа в ЕАЭС|трудоустройства	Прямая публичная ссылка фонда, не открывать магазины
+EAEU	employment_mobility	review	https://jobineaeu.org/	https://jobineaeu.org/info/	Работа в ЕАЭС	Тот же hostname, не заменять подтвержденный путь
+EAEU	employment_mobility	review	https://jobineaeu.org/info/terms/	https://jobineaeu.org/info/	Пользовательское соглашение	Публичный запасной путь, без входа
+EAEU	employment_mobility	review	https://eabr.org/press/releases/mobilnoe-prilozhenie-rabota-v-eaes-stalo-udobnee-novye-servisy-i-uluchsheniya-dlya-polzovateley/	https://fci.eabr.org/projects/work_in_eaes/	Работа в ЕАЭС|Евразийский банк развития	Подтверждение от банка, на apex уже есть другой записанный GET
+EAEU	employment_mobility	third_party	https://play.google.com/store/apps/details?hl=ru&id=com.otcp.mk	https://jobineaeu.org/info/		Сторонний магазин, только фиксация зависимости, не кандидат DIRECT
+EAEU	cross_border_jobs	review	https://eec.eaeunion.org/special_project/eaeu/	https://eec.eaeunion.org/special_project/eaeu/	Работа без границ|ЕАЭС	Другой продукт, URL уже в плане 010
+KZ	cross_border_jobs	functional	https://enbek.kz/rbg-front/	https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru	Работа без границ|Enbek	Публичная национальная витрина, возможна JS-оболочка
+KZ	cross_border_jobs	control	https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru	https://www.gov.kz/org/enbek/press/news/details/223972?lang=ru	Единая система поиска|Работа без границ	Подтверждение назначения от министерства
+KZ	cross_border_jobs	control	https://www.gov.kz/article/64596?lang=ru	https://www.gov.kz/article/64596?lang=ru	Работа в Казахстане|Enbek	Публичная справка по трудоустройству
+RU	cross_border_jobs	review	https://web-mbl-dev01.k8s.trudvsem.ru/landing-rbg	https://eec.eaeunion.org/special_project/eaeu/		Индексируемый dev-хост исключён из плана. Только сверка существующего покрытия
+RU	employment_mobility	control	https://mfc-19.ru/press/news/text-27798.html	https://mfc-19.ru/press/news/text-27798.html	Работа в ЕАЭС|трудовой миграции	Государственный региональный информационный источник
+CIS	employment_mobility	review	https://ekeng.am/ru/work_in_eaeu	https://fci.eabr.org/projects/work_in_eaes/	Работа в ЕАЭС|QR-коды	Национальный партнёр за пределами рассматриваемого списка RU/BY/KZ

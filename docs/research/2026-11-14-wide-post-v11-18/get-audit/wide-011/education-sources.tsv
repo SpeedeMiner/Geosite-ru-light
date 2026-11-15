@@ -1,0 +1,18 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	forum	functional	https://forum.eaeunion.org/about-forum/	https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru	Евразийский экономический форум|О форуме	Публичная обзорная страница, поддомен отдельно от портала ЕАЭС
+EAEU	forum	review	https://forum.eaeunion.org/	https://eaeunion.org/	Евразийский экономический форум	Корень того же хоста, один приоритетный содержательный путь
+EAEU	forum	review	https://forum.eaeunion.org/en/news/results-of-the-v-eurasian-economic-forum/	https://forum.eaeunion.org/about-forum/	Eurasian Economic Forum|Results	Запасная страница совместного сайта
+EAEU	forum	review	https://forum.eaeunion.org/participants/	https://forum.eaeunion.org/about-forum/		Страница регистрации не является проверкой доступности публичных материалов
+KZ	forum	control	https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru	https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru	Евразийский экономический форум|Астане	Национальная карточка мероприятия
+KZ	forum	review	https://eaeunionforum.kz/	https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru	Евразийский экономический форум	Отдельная версия. Совпадение названия и зоны не доказывает каноникал
+EAEU	university	control	https://ecy.su/	https://ea-studies.ru/evraziyskiy-setevoy-universitet-magistry/	Евразийский сетевой университет	Публичный каталог, локальный таймаут не результат
+RU	university	control	https://www.rudn.ru/cooperation/setevye-universitetu	https://www.rudn.ru/cooperation/setevye-universitetu	Сетевые университеты|РУДН	Страница университета-участника
+KZ	university	control	https://enu.kz/ru/page/cooperation/academic-mobility/partners/international-organizations-consortia-and-associations	https://enu.kz/ru/page/cooperation/academic-mobility/partners/international-organizations-consortia-and-associations	Международные организации|Евразийский	Национальный контроль
+RU	libraries	control	https://www.prlib.ru/partners/international	https://www.prlib.ru/partners/international	Президентская библиотека|За рубежом	Официальные партнерские связи
+RU	libraries	control	https://rusneb.ru/how-to-search/	https://lib.unn.ru/elektronnye-resursy/rossijskie-elektronnye-resursy/neb/	Национальная электронная библиотека|НЭБ	Публичная справка поиска
+RU	libraries	control	https://lib.unn.ru/elektronnye-resursy/rossijskie-elektronnye-resursy/neb/	https://lib.unn.ru/elektronnye-resursy/rossijskie-elektronnye-resursy/neb/	Национальная электронная библиотека|НЭБ	Публичный указатель университета
+BY	libraries	control	https://nlb.by/	https://www.prlib.ru/partners/international	Национальная библиотека Беларуси	Точный apex подтверждён ссылкой партнера
+BY	libraries	review	https://www.nlb.by/	https://www.prlib.ru/partners/international	Национальная библиотека Беларуси	Отдельный WWW не отождествляется с apex
+KZ	libraries	control	https://kazneb.kz/ru	https://www.gov.kz/memleket/entities/aqmola-selinograd/press/news/details/981700?lang=ru	Национальная электронная библиотека|ҚазҰЭК	Публичная витрина национальной библиотеки
+KZ	libraries	control	https://www.prlib.ru/node/1903219	https://www.prlib.ru/partners/international	Национальная академическая библиотека|Казахстан	Страница подтверждения партнёрства
+CIS	water_knowledge	review	https://cawater-info.net/	https://cawater-info.net/	Портал знаний|Центральной Азии	Публичное тематическое издание, пока без независимой первичной атрибуции

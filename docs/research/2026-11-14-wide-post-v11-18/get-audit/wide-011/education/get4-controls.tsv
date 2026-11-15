@@ -1,0 +1,8 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_public_education"	"diagnostic"	"www.gov.kz"	"www.gov.kz"	"https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru"	"Евразийский экономический форум|Астане"	"https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru"
+"control_public_education"	"diagnostic"	"ecy.su"	"ecy.su"	"https://ecy.su/"	"Евразийский сетевой университет"	"https://ea-studies.ru/evraziyskiy-setevoy-universitet-magistry/"
+"control_public_education"	"diagnostic"	"www.rudn.ru"	"www.rudn.ru"	"https://www.rudn.ru/cooperation/setevye-universitetu"	"Сетевые университеты|РУДН"	"https://www.rudn.ru/cooperation/setevye-universitetu"
+"control_public_education"	"diagnostic"	"enu.kz"	"enu.kz"	"https://enu.kz/ru/page/cooperation/academic-mobility/partners/international-organizations-consortia-and-associations"	"Международные организации|Евразийский"	"https://enu.kz/ru/page/cooperation/academic-mobility/partners/international-organizations-consortia-and-associations"
+"control_public_education"	"diagnostic"	"www.prlib.ru"	"www.prlib.ru"	"https://www.prlib.ru/partners/international"	"Президентская библиотека|За рубежом"	"https://www.prlib.ru/partners/international"
+"control_public_education"	"diagnostic"	"nlb.by"	"nlb.by"	"https://nlb.by/"	"Национальная библиотека Беларуси"	"https://www.prlib.ru/partners/international"
+"control_public_education"	"diagnostic"	"kazneb.kz"	"kazneb.kz"	"https://kazneb.kz/ru"	"Национальная электронная библиотека|ҚазҰЭК"	"https://www.gov.kz/memleket/entities/aqmola-selinograd/press/news/details/981700?lang=ru"
