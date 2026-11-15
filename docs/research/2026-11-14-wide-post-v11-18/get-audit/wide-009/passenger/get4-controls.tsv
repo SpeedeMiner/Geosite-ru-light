@@ -1,0 +1,8 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_passenger"	"diagnostic"	"flyarystan.com"	"flyarystan.com"	"https://flyarystan.com/check-in"	"FlyArystan|Регистрация"	"https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij"
+"control_passenger"	"diagnostic"	"airastana.com"	"airastana.com"	"https://airastana.com/kaz-ru"	"Air Astana|Эйр Астана"	"https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij"
+"control_passenger"	"diagnostic"	"bilet.railways.kz"	"bilet.railways.kz"	"https://bilet.railways.kz/"	"Қазақстан теміржол билеттері|КТЖ"	"https://railways.kz/"
+"control_passenger"	"diagnostic"	"pass.rw.by"	"pass.rw.by"	"https://pass.rw.by/"	"Белорусская железная дорога|БЧ"	"https://www.rw.by/"
+"control_passenger"	"diagnostic"	"belpost.by"	"belpost.by"	"https://belpost.by/"	"Белпочта"	"https://belpost.by/"
+"control_passenger"	"diagnostic"	"post.kz"	"post.kz"	"https://post.kz/"	"QazPost|Қазпошта"	"https://post.kz/"
+"control_passenger"	"diagnostic"	"www.pochta.ru"	"www.pochta.ru"	"https://www.pochta.ru/tracking"	"Отслеживание|Почта России"	"https://www.pochta.ru/tracking"

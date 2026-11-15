@@ -1,0 +1,27 @@
+zone	sector	disposition	url	source	markers	note
+KZ	passenger_air	functional	https://flyarystan.com/check-in	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	FlyArystan|Регистрация	Покрытый apex, только публичная инструкция без брони
+KZ	passenger_air	functional	https://www.flyarystan.com/support/ticket-purchase/	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	FlyArystan|билетов	Точное WWW из подписи регулятора и публичная страница оператора
+KZ	passenger_air	review	https://www.flyarystan.com/	https://www.flyarystan.com/support/ticket-purchase/	FlyArystan	Отдельный корень, поисковый захват только iframe
+KZ	passenger_air	review	https://flyarystan.kz/	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	FlyArystan	Не отождествлять .kz с официальным .com
+KZ	passenger_air	review	https://booking.flyarystan.com/	https://flyarystan.com/check-in		Интерфейс авторизации, не отправлять запросы с данными
+KZ	passenger_air	control	https://airastana.com/kaz-ru	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	Air Astana|Эйр Астана	Новый публичный путь на известном apex
+KZ	passenger_air	review	https://www.airastana.com/	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	Air Astana	Тот же адрес из окна 008, новый запрос не нужен
+KZ	passenger_air	control	https://www.scat.kz/en/	https://caa.gov.kz/ru/deyatelnost/formalnostej/kontakty-aviakompanij	SCAT|Scat Airlines	Витрина авиакомпании, локализованный путь
+KZ	passenger_air	review	https://scat.kz/	https://www.scat.kz/en/	SCAT	Актуальность точной цепочки по ASN не доказана
+KZ	passenger_rail	control	https://bilet.railways.kz/	https://railways.kz/	Қазақстан теміржол билеттері|КТЖ	Публичный вход в продажу, не покупать и не выбирать поезд
+BY	passenger_rail	review	https://pass.rw.by/ru/people_with_disabilities	https://www.rw.by/	Белорусская железная дорога	Повтор идентичного URL из 008 исключён
+BY	passenger_rail	control	https://pass.rw.by/	https://www.rw.by/	Белорусская железная дорога|БЧ	Корень сайта не совпадает с проверенным справочным путём
+BY	passenger_air	review	https://belavia.by/	https://belavia.by/	Белавиа	Публичное содержимое корня остаётся неподтверждённым
+BY	passenger_air	review	https://www.belavia.by/	https://belavia.by/	Белавиа	Отдельный WWW, доказательство принадлежности ссылки требуется
+BY	passenger_air	review	https://booking.belavia.by/	https://belavia.by/	Белавиа	Не проверять покупку и не выводить работу из суффикса
+BY	post	control	https://belpost.by/	https://belpost.by/	Белпочта	Возможна оболочка JavaScript, без отправлений
+BY	post	review	https://belpost.by/Otsledit-otpravlenie	https://belpost.by/	Отследить отправление	Подтвердить текущий публичный путь, не подставлять трек-номер
+BY	post	review	https://track.belpost.by/	https://belpost.by/	Белпочта	Не выводить назначение из похожего поддомена
+BY	post	review	https://postbel.by/	https://belpost.by/	Белпочта	Статус и необходимость отличающегося имени не подтверждены
+KZ	post	control	https://post.kz/	https://post.kz/	QazPost|Қазпошта	Возможна оболочка JavaScript, контроль отдельно от qazpost.kz
+KZ	post	control	https://qazpost.kz/ru	https://qazpost.kz/ru	QazPost|Казпочта	Публичная точка национального почтового оператора
+KZ	post	control	https://open.post.kz/services/details/26	https://open.post.kz/services/details/26	QazPost Open API	Публичное описание API, не запрос с токеном
+RU	post	control	https://www.pochta.ru/tracking	https://www.pochta.ru/tracking	Отслеживание|Почта России	Публичная страница без номера отправления
+RU	post	control	https://info.pochta.ru/support/tracking/specification-batch	https://info.pochta.ru/support/tracking/specification-batch	Пакетный доступ|tracking.russianpost.ru	Первичная документация точного API
+RU	post	review	https://tracking.russianpost.ru/	https://info.pochta.ru/support/tracking/specification-batch		Документированный путь API отличается от корня, не посылать учётные данные
+RU	post	review	https://otpravka.pochta.ru/	https://otpravka.pochta.ru/	Бизнес-отправитель|Почта России	Публичная оболочка кабинета, не входить
