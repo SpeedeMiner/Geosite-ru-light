@@ -9,3 +9,13 @@
 | «Зелёная точка» | [Пресс-релиз МТС](https://moskva.mts.ru/about/media-centr/soobshheniya-kompanii/novosti-mts-v-rossii-i-mire/2023-05-02/mts-zavershila-pokupku-regionalnyh-operatorov-fiksirovannoj-svyazi-gk-zelyonaya-tochka), [старое меню Тамбова](https://tambov.zelenaya.net/contacts/), [официальный ребрендинг](https://zelenaya-net.ru/news/zelenaya-tochka-teper-mts-home). [План](greenpoint-plan.tsv). |
 
 Первые два подтверждённых точных имени — кабинет зрителя Ticketscloud и справка на явном пути. У корня справки отдельный переход на Read the Docs, который не подтвердился. Это не основание включать платформу, общий CDN или тестовую среду. [Очередь +74](stacked-seventy-four.txt) · [replay](full-build-replay-seventy-four.tsv).
+
+| Направление | Решение по итогам проверки |
+| --- | --- |
+| «Зелёная точка» | 16 точных имён, включая кабинет Тамбова. Два спорных города не добавлены. [Первый прогон](vpn-43736945426-greenpoint.tsv), [оставшиеся города](vpn-43737375054-green-cities.tsv). |
+| Seven Sky | 5 точных имён отдельного оператора. Вход, ТВ и домофон не тестировались после публичной страницы. Магазин исключён из-за повторяющегося 307. [Прогон](vpn-43737267639-seven-sky.tsv) и [оферта](https://tv.seven-sky.net/eula). |
+| Билайн | 1 точный адрес партнёрского продукта. В официальной оферте указан `beeline.suvvy.ai`. В обеих российских сетях получен TLS/200 с заголовком Beeline AI. Банк исходных правил не расширяется на платформу Suvvy. [Оферта](https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html) и [прогон](vpn-43737685006-operator-followup.tsv). |
+
+На DNS-срезе 43 пары хост/IP, из них 35 покрыты закреплённым GeoIP RU. Восемь строк за пределами GeoIP — по четыре адреса Cloudflare для `doc.ticketscloud.org` и `ticketscloud.readthedocs.io`, набор адресов у обоих совпадает. Это основание различать два имени на уровне GeoSite, не выводить новый подсетевой маршрут. RIS местами вернул NA, в таблицах сохранены исходные пропуски даже при наличии успешного ответа с тем же IP в другом временном срезе. [Сопоставление GeoIP](geoip-crosscheck.tsv).
+
+Волна добавляет 24 правила к предыдущим 72. [Очередь +96](stacked-ninety-six.txt) · [повторная сборка](full-build-replay-ninety-six.tsv). Все правки остаются в research-ветке.

@@ -1,0 +1,5 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+beeline.suvvy.ai	158.160.155.34	cloudflare|google	158.160.0.0/16	AS200350
+gryazi.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+store.seven-sky.net	176.57.72.156	cloudflare|google	176.57.72.0/21	AS199634
+ticketscloud.com	95.129.232.92	cloudflare|google	95.129.232.0/24	AS57724

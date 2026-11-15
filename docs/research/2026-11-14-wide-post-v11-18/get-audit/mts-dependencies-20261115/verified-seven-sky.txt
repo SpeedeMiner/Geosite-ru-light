@@ -1,0 +1,5 @@
+full:domofon.seven-sky.net
+full:lk.seven-sky.net
+full:seven-sky.net
+full:tv.seven-sky.net
+full:www.seven-sky.net

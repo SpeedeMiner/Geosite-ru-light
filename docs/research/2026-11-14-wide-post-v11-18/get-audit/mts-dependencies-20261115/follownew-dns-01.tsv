@@ -1,0 +1,17 @@
+host	resolver	rrtype	rcode	answer	cname
+beeline.suvvy.ai	google	A	0	158.160.155.34	NA
+beeline.suvvy.ai	google	AAAA	0	NA	NA
+beeline.suvvy.ai	cloudflare	A	0	158.160.155.34	NA
+beeline.suvvy.ai	cloudflare	AAAA	0	NA	NA
+gryazi.zelenaya.net	google	A	0	91.207.137.59	NA
+gryazi.zelenaya.net	google	AAAA	0	NA	NA
+gryazi.zelenaya.net	cloudflare	A	0	91.207.137.59	NA
+gryazi.zelenaya.net	cloudflare	AAAA	0	NA	NA
+store.seven-sky.net	google	A	0	176.57.72.156	sandover.farm.cpx2.ru.
+store.seven-sky.net	google	AAAA	0	NA	sandover.farm.cpx2.ru.
+store.seven-sky.net	cloudflare	A	0	176.57.72.156	sandover.farm.cpx2.ru.
+store.seven-sky.net	cloudflare	AAAA	0	NA	sandover.farm.cpx2.ru.
+ticketscloud.com	google	A	0	95.129.232.92	NA
+ticketscloud.com	google	AAAA	0	NA	NA
+ticketscloud.com	cloudflare	A	0	95.129.232.92	NA
+ticketscloud.com	cloudflare	AAAA	0	NA	NA
