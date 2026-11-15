@@ -1,0 +1,8 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_regional_org"	"diagnostic"	"www.eabr.org"	"www.eabr.org"	"https://www.eabr.org/about/"	"Евразийский банк развития|О банке"	"https://kase.kz/ru/listing/issuers/EABR"
+"frontier_regional_org"	"diagnostic"	"new.cisstat.org"	"new.cisstat.org"	"https://new.cisstat.org/ru/web/guest/main"	"Статкомитет СНГ|Межгосударственный статистический"	"https://new.cisstat.org/about-us"
+"frontier_regional_org"	"diagnostic"	"radiomir.fm"	"radiomir.fm"	"https://radiomir.fm/"	"Радио МИР|Радио Мир"	"https://e-cis.info/news/566/135980/"
+"frontier_labor_mobility"	"diagnostic"	"fci.eabr.org"	"fci.eabr.org"	"https://fci.eabr.org/projects/work_in_eaes/"	"Работа в ЕАЭС|Фонд цифровых инициатив"	"https://www.eabr.org/about/"
+"frontier_labor_mobility"	"diagnostic"	"jobineaeu.org"	"jobineaeu.org"	"https://jobineaeu.org/info/"	"Работа в ЕАЭС|трудоустройства"	"https://fci.eabr.org/projects/work_in_eaes/"
+"frontier_public_education"	"diagnostic"	"forum.eaeunion.org"	"forum.eaeunion.org"	"https://forum.eaeunion.org/about-forum/"	"Евразийский экономический форум|О форуме"	"https://www.gov.kz/org/mps/press/news/details/1228075?lang=ru"
+"frontier_union_state"	"diagnostic"	"www.postkomsg.com"	"www.postkomsg.com"	"https://www.postkomsg.com/"	"Постоянный Комитет|Союзного государства"	"https://www.postkomsg.com/"

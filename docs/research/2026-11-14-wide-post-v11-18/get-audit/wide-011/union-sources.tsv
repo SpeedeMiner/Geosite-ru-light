@@ -1,0 +1,11 @@
+zone	sector	disposition	url	source	markers	note
+CIS	union_state	functional	https://www.postkomsg.com/	https://www.postkomsg.com/	Постоянный Комитет|Союзного государства	Публичный официальный сайт, точный WWW
+CIS	union_state	review	https://postkomsg.com/	https://www.postkomsg.com/	Постоянный Комитет|Союзного государства	Точный apex не выводится из WWW
+CIS	union_state	functional	https://belrus.ru/content/links/	https://belrus.ru/content/links/	Парламентское Собрание|Союзного государства	Организация публикует ссылки на другие хосты
+CIS	union_state	functional	https://soyuz.by/	https://belrus.ru/content/links/	Информационно-аналитический портал|Союзного государства	Белорусский покрытый контроль, зафиксирован отдельно
+CIS	media	functional	https://www.souzveche.ru/	https://belrus.ru/content/links/	Союзное Вече|Парламентского Собрания	Газета по ссылке Парламентского собрания
+CIS	media	review	https://belros.tv/	https://belrus.ru/content/links/	БелРос|Союзного государства	502 индексатора и неполная связь, пока только ручная сверка
+CIS	union_state	review	https://cis.minsk.by/	https://belrus.ru/content/links/	Исполнительный Комитет|СНГ	Имеет прежний измеренный переход на eccis.org, без повторной пробы
+RU	transport_policy	control	https://mintrans.gov.ru/eye/press-center/news/12861	https://mintrans.gov.ru/eye/press-center/news/12861	второй этап|навигационных пломб	Публичное сообщение министерства, без обращения к системам отслеживания
+KZ	transport_policy	control	https://www.gov.kz/org/kgd/press/news/details/1264737?lang=ru	https://www.gov.kz/org/kgd/press/news/details/1264737?lang=ru	навигационных пломб|ЕАЭС	Публичное информационное сообщение госоргана
+BY	transport_policy	review	https://beltamozhservice.ru/ru/eseal-pay/	https://beltamozhservice.ru/ru/eseal-pay/		Платёжная точка только для проверки названия хоста, вне очереди

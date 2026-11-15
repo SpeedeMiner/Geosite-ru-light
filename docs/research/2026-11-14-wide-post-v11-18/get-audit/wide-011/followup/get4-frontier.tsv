@@ -1,0 +1,3 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_fresh_followup"	"diagnostic"	"www.aixkz.com"	"www.aixkz.com"	"https://www.aixkz.com/"	"AIX|Astana International Exchange"	"https://aix.kz/"
+"frontier_fresh_followup"	"diagnostic"	"publicreg.myafsa.com"	"publicreg.myafsa.com"	"https://publicreg.myafsa.com/"	"Public Register|AFSA"	"https://afsa.aifc.kz/"

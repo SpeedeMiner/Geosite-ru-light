@@ -1,0 +1,22 @@
+{
+  "baseline_next": 53,
+  "catalog_hosts": 87,
+  "catalog_urls": 109,
+  "catalogs": 7,
+  "covered_both": 45,
+  "covered_neither": 42,
+  "exclusions": {
+    "duplicate_url": 1
+  },
+  "new_controls": 32,
+  "new_frontier": 19,
+  "next_groups": {
+    "carry_010": 14,
+    "carry_011_first": 66
+  },
+  "next_probes": 240,
+  "next_reserved": 10,
+  "planned_later": 104,
+  "planned_next": 80,
+  "reserved_prior_live": 317
+}
