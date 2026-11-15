@@ -1,0 +1,22 @@
+host	disposition	origin_seen	evidence
+wiki.domru.biz	queue_full	AS31483	official ER-Telecom PBX documentation; four TLS/200 across AS12389 and AS44724
+planeta.tc	queue_full	AS12668	canonical retail site; expected TLS/200 across three independently attributed exits
+help.planeta.tc	queue_full	AS12668	official help; TLS/200 across three independently attributed exits
+job.planeta.tc	queue_full	AS12668	linked by parent careers catalogue; branded TLS/200 across three independently attributed exits
+wink.planeta.tc	queue_full	AS12668	provider's Wink integration page; branded TLS/200 across three independently attributed exits
+my.planeta.tc	queue_full	AS12668	documented HTTPS first-hop TLS/301 to planeta.tc/private across three independently attributed exits; no login
+old.planeta.tc	queue_full	AS12668	documented HTTPS first-hop TLS/301 to planeta.tc/documents across three independently attributed exits
+tv.planeta.tc	hold	AS12668	official link; one RU TLS connection error and no useful HTTP; workspace 503
+we.study	queue_full	AS13335	official MTS Link Courses name; TLS/301 on the first hop across two attributed exits; other published URL not proven in RU
+www.we.study	queue_full	AS13335	TLS/301 to identical official MTS Link Courses path across two attributed exits; no parent CDN/range
+comdi.com	queue_full	AS34545	TLS/301 to https://www.comdi.com/ across two attributed exits; legally designated service
+www.comdi.com	queue_full	AS34545	branded landing page TLS/200 across two attributed exits
+broadcast.comdi.com	queue_full	AS34545	official COMDI SaaS address; two 200 with identical full-body hash; same-origin Javascript hop to documented login path
+jespo.co	hold	AS34545	official Link Boards domain; two RU TLS failures with verify 1
+wsboard.jespo.co	hold	AS34545	official WSS hostname; two RU TLS failures with verify 10; no WebSocket handshake tested
+mtfree.net	hold	AS48287	possible alternate Maxima site; two RU TLS failures with verify 20; canonical .ru already covered
+storage.turbocloud.ru	covered	NA	designated S3 endpoint; domain:ru already covers it; no bucket was contacted
+help.ngenix.net	covered	NA	official NGENIX help; domain:ngenix.net already covers it
+megafonapi.github.io	keep_GITHUB	NA	existing GITHUB category; not widened to RU
+gitverse.site	shared_hosting	NA	official GitVerse Pages wildcard hosts include independently published user sites; no suffix add
+dmp.one	external_analytics	NA	RTComm embeds analytics; provider ownership does not transfer; no direct measurement

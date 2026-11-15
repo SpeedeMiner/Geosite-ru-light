@@ -1,0 +1,11 @@
+{
+  "url": "https://broadcast.comdi.com/",
+  "documented_path": "/admin-panel/",
+  "official_source": "https://www.comdi.com/legal/user-agreement.pdf",
+  "observed_type": "same_origin_js_hop",
+  "body_size": 337,
+  "body_sha256": "1e95aa73c9d7d689a55fbd8038f470b51fea7a70e186c924520516c909a21b9f",
+  "workspace_matches_russian_samples": true,
+  "linked_page_opened_by_this_verification": false,
+  "user_credentials_submitted": false
+}

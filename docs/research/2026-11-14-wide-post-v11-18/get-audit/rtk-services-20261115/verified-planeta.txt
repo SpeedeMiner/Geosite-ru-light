@@ -1,0 +1,6 @@
+full:help.planeta.tc
+full:job.planeta.tc
+full:my.planeta.tc
+full:old.planeta.tc
+full:planeta.tc
+full:wink.planeta.tc
