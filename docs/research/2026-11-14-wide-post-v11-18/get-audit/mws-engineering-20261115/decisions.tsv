@@ -1,0 +1,24 @@
+host	disposition	scope_or_reason
+divkit.tech	queue_full	official Yandex project / Russian docs TLS 200 four GET across AS33991 AS42610 AS44724
+kas.pr	queue_full	official Kaspersky first-hop TLS 301 / two engineering paths confirmed in AS12389 AS44724 / destination not contacted
+taiga-ui.dev	queue_full	Taiga UI public project and T-Bank technology catalog / root and About TLS 200 in AS33991 AS42610 / shared GitHub Pages AS54113
+rectools.readthedocs.io	hold	workspace expected title / four timeouts across two cohorts
+ambrosia.readthedocs.io	hold	workspace expected title / two RU timeouts
+onetl.readthedocs.io	hold	workspace expected title / four timeouts across two cohorts
+data-rentgen.readthedocs.io	hold	workspace expected title / two RU timeouts
+syncmaster.readthedocs.io	hold	workspace expected title / two RU timeouts
+etl-entities.readthedocs.io	workspace_only	project documentation but no RU requests in this cycle
+evacuator.readthedocs.io	workspace_only	project documentation but no RU requests in this cycle
+data-horizon.readthedocs.io	workspace_only	project documentation but no RU requests in this cycle
+horizon-hwm-store.readthedocs.io	workspace_only	project documentation but no RU requests in this cycle
+openautonlu.dev	hold	TLS 301 to one external RunPod tenant from two RU exits / external destination not contacted / workspace HTTP 503
+client.nexign.com	hold	official Nexign portal title in HTTP 403 from two RU exits / no login attempt
+www.nexign.com	hold	TLS 301 downgrade to already-covered canonical apex via HTTP
+ydb.tech	covered_control	RU coverage already / two 200 responses in fifth wave
+team.vk.company	covered_control	domain:vk.company already / two 200 responses for OpenVK
+www.gazprombank.tech	covered_control	bank-owned host already covered / two 200 responses
+banka-ui.dev	covered_control	bank-owned host already covered / two 403 responses
+taiga-family.github.io	keep_existing_GITHUB	linked by Taiga UI HTML / no classification change
+cdnjs.cloudflare.com	no_change	shared external asset provider seen in Taiga UI HTML / no reachability claim
+fonts.googleapis.com	no_change	shared external asset provider seen in Taiga UI HTML / no reachability claim
+fonts.gstatic.com	no_change	shared external asset provider seen in Taiga UI HTML / no reachability claim

@@ -1,0 +1,9 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://divkit.tech/docs/ru/	33991	33991	87.250.254.64	200	0	0	text/html; charset=utf-8	10000	5ab2eabe4fd20426c58f0bbe2adb0a588e06196203c609c113dc1bdc459ec73b	DivKit | DivKit	NA	NA	2026-11-15T16:08:33.918522+00:00
+https://divkit.tech/docs/ru/	42610	42610	87.250.254.64	200	0	0	text/html; charset=utf-8	10000	49d9cc74d645043805296fb2701b4683a4f21d3fbb7b5079c8e178ea09abebd7	DivKit | DivKit	NA	NA	2026-11-15T16:09:11.737516+00:00
+https://taiga-ui.dev/	33991	33991	185.199.108.153	200	0	0	text/html; charset=utf-8	10000	3cc68a63c534ca803b748574d6f0cb45d71d758de11bbc4c974bdf2d733648ec	Taiga UI	NA	NA	2026-11-15T16:08:26.781387+00:00
+https://taiga-ui.dev/	42610	42610	185.199.108.153	200	0	0	text/html; charset=utf-8	10000	3cc68a63c534ca803b748574d6f0cb45d71d758de11bbc4c974bdf2d733648ec	Taiga UI	NA	NA	2026-11-15T16:09:07.583752+00:00
+https://taiga-ui.dev/info/about/	33991	33991	185.199.108.153	200	0	0	text/html; charset=utf-8	10000	c6f902dad3bec36419bdf30c48798a074de1d2fc09ad84a3d81485d54410d917	Taiga UI: About	NA	NA	2026-11-15T16:08:22.919644+00:00
+https://taiga-ui.dev/info/about/	42610	42610	185.199.108.153	200	0	0	text/html; charset=utf-8	10000	c6f902dad3bec36419bdf30c48798a074de1d2fc09ad84a3d81485d54410d917	Taiga UI: About	NA	NA	2026-11-15T16:09:03.825618+00:00
+https://ydb.tech/docs/ru/	33991	33991	185.206.167.37	200	0	0	text/html; charset=utf-8	10000	6ab5fffbd7b46f165effe2329dc65ff313a671da841368eea3ae9f9b62e48980	Документация YDB	NA	NA	2026-11-15T16:08:42.839779+00:00
+https://ydb.tech/docs/ru/	42610	42610	185.206.167.37	200	0	0	text/html; charset=utf-8	10000	eb05b3e27147a92139fe8e8ce29cf43f13c2cca5695e5dce341259a8df33f59e	Документация YDB	NA	NA	2026-11-15T16:09:15.790359+00:00
