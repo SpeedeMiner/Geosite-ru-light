@@ -1290,3 +1290,7 @@ full:zavodstroyprom.com
 full:zigraf.net
 full:zon-ex-group.com
 full:zrmo.org
+
+# Public IP checkers explicitly requested for RU (exact host only).
+full:ip.nnev.de
+full:ip.oxylabs.io
