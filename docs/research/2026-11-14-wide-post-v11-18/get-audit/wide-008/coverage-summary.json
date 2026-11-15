@@ -1,0 +1,27 @@
+{
+  "actions": {
+    "manual_only": 28,
+    "new_get4": 26
+  },
+  "block_hosts": 0,
+  "hosts": 53,
+  "main_batches": {
+    "baseline006a": 30,
+    "functional": 3,
+    "regional": 20,
+    "wide007": 25
+  },
+  "no_ru_hosts": 20,
+  "quota_main": 234,
+  "regional_frontier": 14,
+  "scopes": {
+    "BY": 12,
+    "CIS": 4,
+    "EAEU": 12,
+    "KZ": 16,
+    "REGIONAL": 4,
+    "RU": 6
+  },
+  "sectors": 16,
+  "urls": 54
+}

@@ -1,0 +1,7 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"regional_control"	"diagnostic"	"e-pasluga.by"	"e-pasluga.by"	"https://e-pasluga.by/"	"электронных услуг|electronic services"	"https://e-pasluga.by/"
+"regional_control"	"diagnostic"	"raschet.by"	"raschet.by"	"https://raschet.by/"	"ЕРИП|Расчёт"	"https://raschet.by/"
+"regional_control"	"diagnostic"	"datamark.by"	"datamark.by"	"https://datamark.by/"	"Электронный знак|маркировки"	"https://datamark.by/"
+"regional_control"	"diagnostic"	"www.gosuslugi.ru"	"www.gosuslugi.ru"	"https://www.gosuslugi.ru/goskey"	"Госключ"	"https://adygeya.roskazna.gov.ru/otpravit-obrashchenie"
+"regional_control"	"diagnostic"	"pub.fsa.gov.ru"	"pub.fsa.gov.ru"	"https://pub.fsa.gov.ru/"	"Росаккредитация|реестры"	"https://pub.fsa.gov.ru/"
+"regional_control"	"diagnostic"	"gisp.gov.ru"	"gisp.gov.ru"	"https://gisp.gov.ru/mainpage/"	"ГИСП|промышленности"	"https://gisp.gov.ru/"

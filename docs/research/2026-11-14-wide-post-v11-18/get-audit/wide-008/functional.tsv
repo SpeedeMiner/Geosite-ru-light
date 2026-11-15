@@ -1,0 +1,4 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"diagnostic"	"full"	"arzamas.academy"	"arzamas.academy"	"https://arzamas.academy/license"	"Арзамас"	"https://arzamas.academy/license"
+"diagnostic"	"full"	"api.pachca.com"	"api.pachca.com"	"https://api.pachca.com/api/shared/v1/profile"	""	"https://dev.pachca.com/api/requests-responses"
+"diagnostic"	"full"	"arenadc.io"	"arenadc.io"	"https://arenadc.io/documentation"	"Arenadata"	"https://arenadc.io/documentation"

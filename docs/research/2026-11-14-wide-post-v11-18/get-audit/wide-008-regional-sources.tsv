@@ -1,0 +1,55 @@
+scope	sector	role	url	markers	source	note
+EAEU	trade	live	https://eaeunion.org/?lang=ru	Евразийский экономический союз|ЕАЭС	https://eaeunion.org/?lang=ru	Официальный межгосударственный портал
+EAEU	trade	review	https://www.eaeunion.org/	Евразийский экономический союз|ЕАЭС	https://eaeunion.org/?lang=ru	Вариант WWW не считается доказанным рабочим входом
+EAEU	trade	live	https://eec.eaeunion.org/	Евразийская экономическая комиссия|ЕЭК	https://eaeunion.org/?lang=ru	Официальный сайт комиссии, не весь суффикс
+EAEU	regulation	live	https://docs.eaeunion.org/	Правовой портал|Евразийского экономического союза	https://docs.eaeunion.org/	Правовой портал
+EAEU	trade	live	https://portal.eaeunion.org/	Евразийского экономического союза|ЕАЭС	https://eaeunion.org/?lang=ru	Не выводить содержимое из общего домена
+EAEU	interoperability	live	https://system.eaeunion.org/techportal	Технологический портал|ЕАЭС	https://system.eaeunion.org/	Технологический портал, публичная страница
+EAEU	regulation	live	https://pravo.eaeunion.org/	Право ЕАЭС|Гарант	https://eec.eaeunion.org/upload/iblock/a0c/K_989.pdf	Официально указанное имя, текущий ответ проверяется отдельно
+EAEU	opendata	live	https://opendata.eaeunion.org/opendata/ru/resourses	открытых данных|Евразийского	https://opendata.eaeunion.org/	Публичный каталог открытых данных
+EAEU	interoperability	live	https://rseds.eaeunion.org/ru/	Реестр структур|ЕАЭС	https://rseds.eaeunion.org/ru/	Реестр форматов электронных документов
+EAEU	procurement	live	https://goszakupki.eaeunion.org/erpt/ru/registers/products/	Евразийский реестр|промышленных товаров	https://goszakupki.eaeunion.org/erpt/ru	Открытый реестр продукции, не заявка на закупку
+EAEU	trade	review	https://eurasiancommission.org/	Евразийская экономическая комиссия	https://eec.eaeunion.org/upload/iblock/a0c/K_989.pdf	Исторический адрес, не переносить вывод с текущего сайта
+EAEU	trade	live	https://www.eurasiancommission.org/	Евразийская экономическая комиссия	https://eaeunion.org/?lang=ru	Ссылка с официального портала, определить фактический переход
+CIS	public_info	live	https://cis.minsk.by/	Содружества Независимых Государств	https://cis.minsk.by/	Точный покрытый вход для сравнения с новым хостом
+CIS	public_info	live	https://eccis.org/	Исполнительный комитет|Содружества Независимых Государств	https://e-cis.info/	Точный непокрытый домен Исполкома
+CIS	public_info	live	https://e-cis.info/	Интернет-портал СНГ|Содружества Независимых Государств	https://e-cis.info/	Публичный портал СНГ, отдельно от Исполкома
+CIS	geodata	review	https://cisgeo.info/	Геопортал СНГ	https://e-cis.info/	Ссылка присутствует в навигации, нужна ручная проверка назначения
+REGIONAL	development_finance	live	https://eabr.org/	Евразийский банк развития|ЕАБР	https://eabr.org/	Межгосударственный институт, публичная витрина
+REGIONAL	development_finance	review	https://www.eabr.org/	Евразийский банк развития|ЕАБР	https://www.eabr.org/	WWW фиксируется отдельно, в первой серии проверяется apex
+REGIONAL	development_finance	review	https://20.eabr.org/	Евразийский банк развития|ЕАБР	https://www.eabr.org/	Юбилейный сайт не равен рабочему входу банка
+REGIONAL	development_finance	live	https://efsd.org/	Eurasian Fund|Евразийский фонд	https://efsd.org/en	Проверить корень и объявленный переход, не финансовую операцию
+KZ	state_services	live	https://egov.kz/	eGov|Электронное правительство	https://www.gov.kz/situations/719/intro?lang=ru	Публичная точка входа
+KZ	state_services	review	https://elicense.kz/	Электронное лицензирование|eLicense	https://www.gov.kz/org/departament-kkbtu-almaty/activities/population?lang=ru	Публичная страница, без оформления лицензии
+KZ	state_services	live	https://eotinish.gov.kz/	eOtinish|e-Otinish	https://www.gov.kz/org/departament-kkbtu-almaty/activities/population?lang=ru	Текущий адрес из госинструкции, без входа
+KZ	state_services	review	https://eotinish.kz/	eOtinish|e-Otinish	https://eotinish.kz/	Отдельный адрес, не переносить вывод с gov.kz
+KZ	travel	live	https://eqonaq.kz/	eQonaq	https://www.gov.kz/org/mfa-kishinev/press/news/details/516557	Информация для пользователей, не подача уведомления
+KZ	travel	review	https://cabinet.eqonaq.kz/	eQonaq	https://www.gov.kz/org/tsm/press/news/details/1237250?lang=ru	Технический хост и открытые материалы, без входа
+KZ	employment	live	https://www.enbek.kz/ru/page/about	Электронная биржа труда|Е-Биржа	https://www.gov.kz/situations/18/95?lang=ru	Публичное описание биржи
+KZ	employment	review	https://enbek.kz/	Enbek|биржа труда	https://www.gov.kz/situations/18/95?lang=ru	Проверяется отдельно от WWW
+KZ	employment	review	https://skills.enbek.kz/	Skills Enbek	https://www.gov.kz/situations/680/1405?lang=ru	Витрина обучения
+KZ	employment	review	https://hr.enbek.kz/	HR Enbek	https://www.gov.kz/org/kostanai-naurzum-audany-akimat/press/news/details/694005?lang=ru	Система трудовых ресурсов, без авторизации
+KZ	employment	review	https://business.enbek.kz/	Business Enbek	https://www.gov.kz/org/kostanai-naurzum-audany-akimat/press/news/details/694005?lang=ru	Предпринимательские инициативы, без заявок
+KZ	employment	review	https://career.enbek.kz/ru/pages/support/1	Национальной системы квалификаций|Электронной биржи	https://career.enbek.kz/ru/pages/support/1	Публичная инструкция
+KZ	procurement	live	https://satypalu.gov.kz/kz/news/view/1561	сатып алу|HR Enbek	https://satypalu.gov.kz/kz/news/view/1561	Публичное объявление о взаимодействии платформ
+KZ	procurement	review	https://zakup.gov.kz/cabinet/	Единая платформа закупок|закупок	https://zakup.gov.kz/cabinet/	Общедоступная оболочка, без входа
+KZ	invoicing	review	https://esf.gov.kz/	ИС ЭСФ|счетов-фактур	https://www.kgd.gov.kz/ru/section/elektronnye-scheta-faktury	Точка входа, функциональность ЭСФ не проверяется
+KZ	marking	review	https://qazmarka.kz/ru/o-markirovke/	Qazmarka|маркировке	https://qazmarka.kz/ru/o-markirovke/	Первичное описание маркировки
+BY	state_services	live	https://e-pasluga.by/	электронных услуг|electronic services	https://e-pasluga.by/	Разделить HTTP-редирект и клиентский переход
+BY	state_services	review	https://e-pasluga.by/en_US/home.html	electronic services	https://e-pasluga.by/	Точная публичная страница после перехода
+BY	state_services	review	https://nces.by/	НЦЭУ|электронных услуг	https://e-pasluga.by/	Портал ссылается на НЦЭУ поставщика клиентских средств
+BY	state_services	review	https://account.gov.by/	Личный кабинет|учетной	https://e-pasluga.by/	Только публичный вход, не авторизация
+BY	payments	live	https://raschet.by/	ЕРИП|Расчёт	https://raschet.by/	Публичное описание системы, без платежей
+BY	payments	review	https://erip.raschet.by/	ЕРИП	https://raschet.by/	Публичная точка входа, не логин
+BY	payments	review	https://lkpu.raschet.by/	ЕРИП|Расчёт	https://raschet.by/	Бизнес-вход, только GET
+BY	payments	review	https://ioauth.raschet.by/	ЕРИП|идентификации	https://raschet.by/	Только публичный GET, не авторизация
+BY	marking	live	https://datamark.by/	Электронный знак|маркировки	https://datamark.by/	Официальная публичная страница системы
+BY	marking	review	https://www.datamark.by/	Электронный знак|маркировки	https://datamark.by/	WWW отдельно от apex
+BY	marking	review	https://marking.by/o-markirovke/elektronnyy-znak-nacionalnaya-sistema-markirovki-tovarov-v-belarusi	маркировки	https://marking.by/o-markirovke/elektronnyy-znak-nacionalnaya-sistema-markirovki-tovarov-v-belarusi	Объяснение системы, не её точка входа
+BY	industry	review	https://www.belarus-tractor.com/	Минский тракторный завод|МТЗ	https://belarus-tractor.com/	Вариант WWW требует независимого подтверждения, не переносить покрытие apex
+RU	state_services	live	https://www.gosuslugi.ru/goskey	Госключ	https://adygeya.roskazna.gov.ru/otpravit-obrashchenie	Публичное описание приложения, без авторизации
+RU	certification	live	https://pub.fsa.gov.ru/	Росаккредитация|реестры	https://pub.fsa.gov.ru/	Только открытый вход, без поиска персональных данных
+RU	procurement	review	https://zakupki.gov.ru/	Единая информационная система|закупок	https://zakupki.gov.ru/	Публичная точка входа
+RU	industry	live	https://gisp.gov.ru/mainpage/	ГИСП|промышленности	https://gisp.gov.ru/	Публичный вход, не защищённые кабинеты
+RU	marking	review	https://markirovka.crpt.ru/	маркировки|Честный ЗНАК	https://xn--80ajghhoc2aj1c8b.xn--p1ai/vopros-otvet/	Описание/вход, без регистрации и подписи
+RU	travel	review	https://russpass.ru/	RUSSPASS|туристический	https://russpass.ru/	Публичный туристический портал, без бронирования
