@@ -1,0 +1,12 @@
+{
+  "attempts": 0,
+  "fresh_ru_credit": false,
+  "globalping_requests": 0,
+  "planned": 5,
+  "reason": "ipwho.is: no verified HTTPS metadata (curl=7, HTTP=0)",
+  "state": "exit_unverified",
+  "target_address_family": "not_observed",
+  "target_dns": "delegated_to_socks5",
+  "transport": "vpn_socks5",
+  "updated_at": "2026-11-15T08:27:22.709213+00:00"
+}

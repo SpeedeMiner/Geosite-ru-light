@@ -1,0 +1,6 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"baseline"	"full"	"docs.arenadata.io"	"docs.arenadata.io"	"https://docs.arenadata.io/"	""	"https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html"
+"suffix_sample"	"diagnostic"	"www.woopkassa.kz"	"www.woopkassa.kz"	"https://www.woopkassa.kz/"	"Woopkassa"	"https://www.woopkassa.kz/"
+"baseline"	"full"	"www.alrosa.aero"	"www.alrosa.aero"	"https://www.alrosa.aero/"	""	"https://www.alrosa.aero/"
+"regional_control"	"diagnostic"	"raschet.by"	"raschet.by"	"https://raschet.by/"	"ЕРИП|Расчёт"	"https://raschet.by/"
+"frontier_spatial"	"diagnostic"	"cisgeo.info"	"cisgeo.info"	"https://cisgeo.info/"	"Геопортал|пространственных данных"	"https://e-cis.info/news/564/132446/"
