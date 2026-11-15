@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	akado.tv	akado.tv	https://akado.tv/	АКАДО	https://www.akado.ru/services/itv/
+corporate	candidate	akado.tv	akado.tv	https://akado.tv/eula	АКАДО	https://www.akado.ru/services/itv/
+corporate	candidate	www.megafon.tv	www.megafon.tv	https://www.megafon.tv/		https://ceph.megafon.ru/htdocs-pk-ceph/ai/tariff_attrs/ac3834e1-31c5-4ccf-8258-bcfb3eb64577/ed2e63b1-f585-4a7d-b66d-147d98fdeca1/pdf/tariff_1687_hakas_14850.pdf
+corporate	control	megafon.tv	megafon.tv	https://megafon.tv/		https://www.sostav.ru/publication/smotr-shka-62295.html
+corporate	control	smotreshka.tv	smotreshka.tv	https://smotreshka.tv/	Смотрёшка	https://www.sostav.ru/publication/smotr-shka-62295.html

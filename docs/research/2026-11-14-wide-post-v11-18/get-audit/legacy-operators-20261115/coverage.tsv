@@ -1,0 +1,21 @@
+host	source	v11_19_dat_match	queued_plus97	decision	reason
+www.megafon.tv	https://ceph.megafon.ru/htdocs-pk-ceph/ai/tariff_attrs/ac3834e1-31c5-4ccf-8258-bcfb3eb64577/ed2e63b1-f585-4a7d-b66d-147d98fdeca1/pdf/tariff_1687_hakas_14850.pdf	-	false	candidate	Исторический точный WWW указан в официальных условиях. Проверить текущий первый переход отдельно от apex.
+megafon.tv	https://www.sostav.ru/publication/smotr-shka-62295.html	-	true	queued	Точный apex уже в +97, повтор только в качестве контроля.
+smotreshka.tv	https://www.sostav.ru/publication/smotr-shka-62295.html	RU:domain_suffix:smotreshka.tv	false	covered	Контроль цели миграции.
+akado.tv	https://www.akado.ru/services/itv/	-	false	candidate	Действующий адрес в FAQ АКАДО, два публичных URL на одном хосте.
+www.akado.tv	https://www.akado.ru/services/itv/	-	false	hold	Первичный источник ссылается на apex. Отдельный WWW не подтверждён.
+www.akado.ru	https://www.akado.ru/services/itv/	RU:domain_suffix:ru	false	covered	Официальная витрина.
+www.akado-telecom.ru	https://akado.tv/eula	RU:domain_suffix:ru	false	covered	Сайт для юридических лиц в правилах оператора.
+www.wifire.ru	https://www.peeringdb.com/asn/12714	RU:domain_suffix:ru	false	covered	Актуальный сайт AS12714 по профилю оператора.
+my.wifire.ru	https://www.peeringdb.com/asn/12714	RU:domain_suffix:ru	false	covered	Кабинет, покрыт по .ru, не повторять GET.
+chebnet.ru	https://www.comnews.ru/content/86466/2014-07-16/net-bay-net-ster-sledy-treh-provayderov	RU:domain_suffix:ru	false	covered	Исторический бренд связан с NETBYNET; добавлять отдельное правило для адреса .ru избыточно.
+rtelekom.ru	https://www.comnews.ru/content/86466/2014-07-16/net-bay-net-ster-sledy-treh-provayderov	RU:domain_suffix:ru	false	covered	Исторический адрес Ратмир-Телеком по справочнику; .ru, не подтверждение активности.
+migsv.ru	https://www.peeringdb.com/asn/12714	RU:domain_suffix:ru	false	covered	Исторический адрес Теле МИГ по справочнику; .ru, не подтверждение активности.
+www.sumtel.net	https://www.sumtel.net/	-	false	hold	Самостоятельная витрина SUMTEL. Связь с целевыми группами/конкретным сценарием не подтверждена в этой волне.
+sumtel.net	https://www.sumtel.net/	-	false	hold	В источнике WWW; отдельный apex не подтверждён.
+hq.db.ertelecom.ru	https://hq.db.ertelecom.ru/	RU:domain_suffix:ru	false	covered	Старый адрес указывает на новый кабинет lk.domru.ru, оба в .ru.
+interzet.dom.ru	https://interzet.dom.ru/faq/operatsii-s-dogovorom/kak-voyti-v-lichnyy-kabinet	RU:domain_suffix:ru	false	covered	Текущее клиентское имя.
+interzet.net	https://interzet.dom.ru/faq/operatsii-s-dogovorom/kak-voyti-v-lichnyy-kabinet	-	false	hold	Отдельный .net не подтверждён начальной страницей оператора.
+2090000.ru	https://2090000.ru/about/	RU:domain_suffix:ru	false	covered	Текущая витрина Электронного города.
+lk.2090000.ru	https://2090000.ru/	RU:domain_suffix:ru	false	covered	В зоне .ru; отдельная доступность не проверялась.
+netbynet.info	https://www.peeringdb.com/asn/12714	-	false	reject	Агентская посадочная страница, не первый источник для AS12714.
