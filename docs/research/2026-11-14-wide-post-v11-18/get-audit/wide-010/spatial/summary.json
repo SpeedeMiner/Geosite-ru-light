@@ -1,17 +1,17 @@
 {
   "actions": {
     "block_overlap_manual": 1,
-    "candidate_get4": 1,
+    "candidate_get4": 2,
     "covered_control": 24,
-    "manual": 7
+    "manual": 6
   },
   "block_names": 1,
   "control_plan": 7,
   "covered_neither_names": 2,
-  "frontier_plan": 1,
+  "frontier_plan": 2,
   "light_ru_names": 24,
   "names": 26,
-  "probe_cost": 24,
+  "probe_cost": 27,
   "sectors": 5,
   "server_ru_names": 24,
   "urls": 33,

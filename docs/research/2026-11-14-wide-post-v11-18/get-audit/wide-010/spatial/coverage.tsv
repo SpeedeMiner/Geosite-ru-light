@@ -6,7 +6,7 @@
 "CIS"	"public_services"	"review"	"https://cisgeo.info/investor-service"	"https://cisgeo.info/map"	"Я — инвестор|Геопортал СНГ"	"Тот же хост, не новая дельта по имени"	"cisgeo.info"	""	"no"	"manual"	""
 "CIS"	"public_services"	"review"	"https://cisgeo.info/tourist-service"	"https://cisgeo.info/map"	"Я — турист|Геопортал СНГ"	"Анонимная справочная страница"	"cisgeo.info"	""	"no"	"manual"	""
 "CIS"	"public_services"	"review"	"https://cisgeo.info/worker-service"	"https://cisgeo.info/map"	"Я — работник|Геопортал СНГ"	"Не выполняется вход или поиск данных пользователя"	"cisgeo.info"	""	"no"	"manual"	""
-"CIS"	"geoportal"	"review"	"https://e-cis.info/news/564/132446/"	"https://e-cis.info/news/564/132446/"	"Геопортал|введен в эксплуатацию"	"Первичный источник, корень e-cis.info измерен отдельно"	"e-cis.info"	""	"no"	"manual"	""
+"CIS"	"geoportal"	"functional"	"https://e-cis.info/news/564/132446/"	"https://e-cis.info/news/564/132446/"	"Интернет-портал СНГ|введен в эксплуатацию"	"Содержательная статья, отдельный GET после неопознанного ответа корня окна 008"	"e-cis.info"	""	"no"	"candidate_get4"	""
 "CIS"	"analytics"	"third_party"	"https://mc.yandex.ru/"	"https://cisgeo.info/map"	""	"Внешняя аналитика в разметке, не считать зависимостью DIRECT"	"mc.yandex.ru"	"BLOCK|RU"	"yes"	"block_overlap_manual"	""
 "RU"	"cadastre"	"control"	"https://nspd.gov.ru/map"	"https://volbti.ru/publichnaya-kadastrovaya-karta/"	"НСПД|Кадастровая карта"	"НСПД вместо старого сайта публичной карты"	"nspd.gov.ru"	"RU"	"yes"	"covered_control"	""
 "RU"	"cadastre"	"review"	"https://nspd.rosreestr.gov.ru/"	"https://volbti.ru/publichnaya-kadastrovaya-karta/"	"НСПД"	"Наследуемый адрес, не добавлять отдельно"	"nspd.rosreestr.gov.ru"	"RU"	"yes"	"covered_control"	""

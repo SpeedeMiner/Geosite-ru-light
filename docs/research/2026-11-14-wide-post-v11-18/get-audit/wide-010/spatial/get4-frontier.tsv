@@ -1,2 +1,3 @@
 "cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
 "frontier_spatial"	"diagnostic"	"cisgeo.info"	"cisgeo.info"	"https://cisgeo.info/"	"Геопортал|пространственных данных"	"https://e-cis.info/news/564/132446/"
+"frontier_spatial"	"diagnostic"	"e-cis.info"	"e-cis.info"	"https://e-cis.info/news/564/132446/"	"Интернет-портал СНГ|введен в эксплуатацию"	"https://e-cis.info/news/564/132446/"

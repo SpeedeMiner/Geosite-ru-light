@@ -1,0 +1,42 @@
+{
+  "archive_rows": 150,
+  "archive_states": {
+    "archive_get_other_path": 45,
+    "archive_get_root": 102,
+    "required_asn_coverage_unproven": 3
+  },
+  "asymmetric": 0,
+  "block_hosts": 1,
+  "covered_both": 116,
+  "covered_neither": 19,
+  "deferred": 39,
+  "deferred_groups": {
+    "controls": 39
+  },
+  "exclusions": {
+    "reserved_in_window_010": 2
+  },
+  "first": 80,
+  "first_groups": {
+    "baseline": 48,
+    "controls": 23,
+    "frontier": 9
+  },
+  "first_probes": 240,
+  "frontier_hosts": [
+    "cisgeo.info",
+    "e-cis.info",
+    "mak-iac.org",
+    "coomet.info",
+    "www.eapo.org",
+    "www.eapatis.com",
+    "services.eapo.org",
+    "opendata.eaeunion.org",
+    "docs.eaeunion.org"
+  ],
+  "hosts": 135,
+  "reserved_existing_gets": 94,
+  "sources": 7,
+  "total_prior_live_get4": 237,
+  "urls": 172
+}
