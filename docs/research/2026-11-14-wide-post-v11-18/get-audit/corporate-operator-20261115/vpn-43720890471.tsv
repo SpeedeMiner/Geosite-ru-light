@@ -1,0 +1,9 @@
+host	url	asn	http	curl	tls	asn_ris	state	title	markers	redirect_host	observed_at
+corp.megafon.ru	https://corp.megafon.ru/	12389	200	0	0	12389	vpn_body_unproven	NA	NA	NA	2026-11-15T13:49:24.399155+00:00
+corp.megafon.ru	https://corp.megafon.ru/	208803	200	0	0	208803	vpn_body_unproven	NA	NA	NA	2026-11-15T13:49:55.258396+00:00
+job.nexign.com	https://job.nexign.com/	12389	200	0	0	12389	vpn_body_unproven	Карьера в Nexign	NA	NA	2026-11-15T13:49:18.189399+00:00
+job.nexign.com	https://job.nexign.com/	208803	200	0	0	208803	vpn_body_unproven	Карьера в Nexign	NA	NA	2026-11-15T13:49:48.790133+00:00
+neonhrm.nexign.com	https://neonhrm.nexign.com/ru	12389	200	0	0	12389	vpn_visible_review	Neon HRM – открытая к переменам HRM-система	NA	NA	2026-11-15T13:49:11.719700+00:00
+neonhrm.nexign.com	https://neonhrm.nexign.com/ru	208803	200	0	0	208803	vpn_visible_review	Neon HRM – открытая к переменам HRM-система	NA	NA	2026-11-15T13:49:46.770837+00:00
+nexign.com	https://nexign.com/ru	12389	200	0	0	12389	vpn_marker	Nexign - Главная	Nexign	NA	2026-11-15T13:49:21.569526+00:00
+nexign.com	https://nexign.com/ru	208803	200	0	0	208803	vpn_marker	Nexign - Главная	Nexign	NA	2026-11-15T13:49:51.130246+00:00

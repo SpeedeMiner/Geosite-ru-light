@@ -1,0 +1,22 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+neonhrm.nexign.com	https://neonhrm.nexign.com/ru	candidate	200	0	0	200	Neon HRM – открытая к переменам HRM-система	NA	ddb55f6e2a2718c7ab3d893a693034b1e39f6651801462412f61bda6ebe6b88c	2026-11-15T13:51:16.636890+00:00	workspace_unattributed
+job.nexign.com	https://job.nexign.com/	candidate	200	0	0	200	Карьера в Nexign	NA	94ac4dd85800c5deca61a8bd9ca693243d183a2019c78859e06d8b85bce07894	2026-11-15T13:51:15.715010+00:00	workspace_unattributed
+nexign.com	https://nexign.com/ru	control	200	0	0	200	Nexign - Главная	NA	7672a1211de5c4891cb40fd0182f64ced1cf4c4b17a3617c1c5e63412847f015	2026-11-15T13:51:23.548282+00:00	workspace_unattributed
+corp.megafon.ru	https://corp.megafon.ru/	control	200	0	0	200	Инвесторам и прессе — Официальный сайт ПАО «МегаФон»Инвесторам и прессе — Официальный сайт ПАО «МегаФон» Московский регион	NA	a463b0f67bb83401cec67d7af07375eff39778b6ad279dd59494278704af57ce	2026-11-15T13:51:20.129693+00:00	workspace_unattributed
+yadro.com	https://yadro.com/ru/documentation/	candidate	477	0	0	200	NA	NA	6a5d6a8ea50473c380363fce4a148bebda9e67a11c0c6a507e8ce6b22efdacde	2026-11-15T13:51:18.970917+00:00	workspace_unattributed
+service.yadro.com	https://service.yadro.com/	candidate	477	0	0	200	NA	NA	2ff4d1ee3f478fee722c9471d9396c7f8a56347ac6ad1c04a1de9552bed8e374	2026-11-15T13:51:18.752408+00:00	workspace_unattributed
+partners.yadro.com	https://partners.yadro.com/	candidate	477	0	0	200	NA	NA	3388011a2bd223345b993a0cbbe2edf7b49426524b0d52689369d30c0c5bdd89	2026-11-15T13:51:18.053126+00:00	workspace_unattributed
+support.kvadra.tech	https://support.kvadra.tech/business/download-center/	candidate	477	0	0	200	NA	NA	d82cb04d7fb1adf7a7dc426dce29b0ca4de529cbcce42eeb03488bab6fc95821	2026-11-15T13:51:18.008802+00:00	workspace_unattributed
+docs-b2c.kvadra.tech	https://docs-b2c.kvadra.tech/	candidate	477	0	0	200	NA	NA	95de1b287e2ee99a5e75eaaca06d39481b86e5a3e61c66fb8b741aa9fa0e4998	2026-11-15T13:51:18.561504+00:00	workspace_unattributed
+business.kvadra.tech	https://business.kvadra.tech/	candidate	477	0	0	200	NA	NA	85b138532db9e660e1d814e55690aa5bacfcd637fb58fbad17befef659dde42b	2026-11-15T13:51:18.573723+00:00	workspace_unattributed
+kvadra-service.yadro.com	https://kvadra-service.yadro.com/	candidate	477	0	0	200	NA	NA	a94897a6cac3cfde6b35e06bc33db3e6bd748cc4ebebffd2a5622a4513ab6771	2026-11-15T13:51:21.561498+00:00	workspace_unattributed
+x-holding.ru	https://x-holding.ru/companies/yadro/	control	477	0	0	200	NA	NA	2a76ef8b4219b32c8c48fcdcd953ae95cb81eb35379461bb37c612c604eb84a9	2026-11-15T13:51:21.518265+00:00	workspace_unattributed
+engineer.yadro.com	https://engineer.yadro.com/	related	477	0	0	200	NA	NA	3679f3ea2b0f7eabc3ee298261550e7afb78141e992da38f767bca97c914bc98	2026-11-15T13:51:22.434014+00:00	workspace_unattributed
+events.yadro.com	https://events.yadro.com/	related	200	0	0	200	Yadro Events	NA	d30cddff28d2a3871ea29edd42ca8dce5326d3add13615df7887db368dd0164b	2026-11-15T13:51:23.164177+00:00	workspace_unattributed
+careers.yadro.com	https://careers.yadro.com/	related	477	0	0	200	NA	NA	ed4800c71eb8b3a141edce700a48bfc8efb9e224e12e015886b86e700286a1b5	2026-11-15T13:51:23.075843+00:00	workspace_unattributed
+edu.yadro.com	https://edu.yadro.com/	related	477	0	0	200	NA	NA	c990abce9c074f5ddb19548a8d577a828fa648706302dc2644d5a13a2912f805	2026-11-15T13:51:23.289533+00:00	workspace_unattributed
+docs.yadro.com	https://docs.yadro.com/	related	477	0	0	200	NA	NA	a3495e933c0c14e86f3b14c6045b40e9349c496a248d9e7302316eaeba43eb98	2026-11-15T13:51:22.577883+00:00	workspace_unattributed
+meetups.yadro.com	https://meetups.yadro.com/	related	477	0	0	200	NA	NA	4025f1126fbfa38d944778498b06888eb22f72dcca23b9a485cd41772eb4c154	2026-11-15T13:51:24.222013+00:00	workspace_unattributed
+sp.yadro.com	https://sp.yadro.com/	related	301	0	0	200	NA	yadro.com	NA	2026-11-15T13:51:26.924828+00:00	workspace_unattributed
+www.yadro.com	https://www.yadro.com/	related	301	0	0	200	NA	yadro.com	NA	2026-11-15T13:51:26.815650+00:00	workspace_unattributed
+kvadra.tech	https://kvadra.tech/	related	301	0	0	200	NA	xn--80aaej1a3b.xn--p1ai	NA	2026-11-15T13:51:26.755708+00:00	workspace_unattributed

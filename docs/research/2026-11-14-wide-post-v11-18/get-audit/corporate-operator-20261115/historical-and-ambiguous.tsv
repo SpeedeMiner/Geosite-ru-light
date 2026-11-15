@@ -1,0 +1,10 @@
+host	decision	note	source	light_ru	server_ru	block	non_ru
+browser-sputnik.ru	explicit_policy_review	former browser update name; NCIRCC bulletin; no active endpoint contacted	https://cert.gov.ru/upload/iblock/f2e/xlwycdnz767zdihf0wz9skg3ax4uyni9/ALRT_20240802.1.pdf	domain:ru	domain:ru	NA	NA
+sputnik.ru	legacy_not_a_new_candidate	historical search engine discontinued	https://www.interfax.ru/russia/724987	domain:ru	domain:ru	NA	NA
+cnt.sputnik.ru	legacy_not_a_new_candidate	distinct analytics surface, no ownership or current necessity inferred	https://cnt.sputnik.ru/public/spsskc.ru	domain:ru	domain:ru	NA	NA
+www.sputnik8.com	unrelated_already_covered	different travel brand, not evidence for search or browser domains	https://www.sputnik8.com/	full:www.sputnik8.com	full:www.sputnik8.com	NA	NA
+www.orangesystem.ru	already_covered	official OS Group industrial NRI vendor; direct parent link	https://www.company.rt.ru/press/news/d470555/	domain:ru	domain:ru	NA	NA
+lukit.ru	already_covered	official public product index, no verified additional domain here	https://www.company.rt.ru/press/news/d479385/	domain:ru	domain:ru	NA	NA
+nexign.com	already_covered	official company; match is exact, not suffix	https://corp.megafon.ru/	full:nexign.com	full:nexign.com	NA	NA
+support.nexign.com	not_in_intake	guessed host, not present in reviewed official navigation; do not probe	https://nexign.com/ru/new-menu-ru	NA	NA	NA	NA
+gravity-ui.com	external_dependency_hold	public docs link from Yandex catalogue nav, not Beeline-owned product evidence	https://yandex.cloud/ru/partners/catalogue/beeline	NA	NA	NA	NA
