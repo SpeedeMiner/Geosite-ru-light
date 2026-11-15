@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (NSPK scoped trust-chain diagnostics)
+name: GeoSite IP checker GET through VPNObratno (Public Yandex Perforator documentation)
 
 on:
   push:
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   pilot:
-    name: Verify public NSPK HTTP with a pinned trust root
+    name: Verify public Perforator project documentation
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -86,16 +86,7 @@ jobs:
           "$RUNNER_TEMP/geosite-vpn-inventory" \
             .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
 
-      - name: Fetch and verify the isolated NSPK trust root
-        timeout-minutes: 2
-        run: |
-          set -euo pipefail
-          mkdir -p .vpn-pilot/nspk-ca
-          curl -q -fsS --proto '=https' --max-time 20 --max-filesize 65536 \
-            https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt -o .vpn-pilot/nspk-ca/root.pem
-          echo '936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504  .vpn-pilot/nspk-ca/root.pem' | sha256sum -c
-
-      - name: Measure exact public NSPK URLs
+      - name: Measure exact published Perforator documentation URLs
         timeout-minutes: 8
         run: |
           set -euo pipefail
@@ -105,14 +96,14 @@ jobs:
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/corporate-platforms-20261115/fourth-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 8369 --exclude-asn 42610
+                "$AUDIT/corporate-platforms-20261115/fifth-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 12389 --exclude-asn 25513
 
       - name: Upload observation and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-corporate-platforms-fourth-${{ github.run_attempt }}
+          name: geosite-corporate-platforms-fifth-${{ github.run_attempt }}
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl
