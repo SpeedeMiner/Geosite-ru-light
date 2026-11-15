@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	openautonlu.dev	openautonlu.dev	https://openautonlu.dev/	OpenAutoNLU	https://github.com/mts-ai/OpenAutoNLU
+corporate	candidate	client.nexign.com	client.nexign.com	https://client.nexign.com/en	Nexign|Customer portal	https://nexign.com/
+corporate	recheck	rectools.readthedocs.io	rectools.readthedocs.io	https://rectools.readthedocs.io/en/stable/	RecTools	https://github.com/MTSWebServices/RecTools
+corporate	recheck	onetl.readthedocs.io	onetl.readthedocs.io	https://onetl.readthedocs.io/en/stable/	onETL	https://github.com/MTSWebServices/onetl
+corporate	control	team.vk.company	team.vk.company	https://team.vk.company/openvk/	OpenVK	https://vk.company.ru/ru/press/releases/11938/
+corporate	control	opensource.tbank.ru	opensource.tbank.ru	https://opensource.tbank.ru/general	general|Т-Банк	https://ai.tbank.ru/opensource/

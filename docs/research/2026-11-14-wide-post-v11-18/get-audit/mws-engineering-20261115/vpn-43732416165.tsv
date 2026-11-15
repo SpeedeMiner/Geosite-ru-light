@@ -1,0 +1,13 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://ambrosia.readthedocs.io/en/latest/	33991	33991	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:55:08.608919+00:00
+https://ambrosia.readthedocs.io/en/latest/	42610	42610	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:56:10.926538+00:00
+https://data-rentgen.readthedocs.io/en/stable/	33991	33991	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:55:25.916309+00:00
+https://data-rentgen.readthedocs.io/en/stable/	42610	42610	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:56:27.775204+00:00
+https://mws.ru/docs/	33991	33991	178.248.237.192	200	0	0	text/html	10000	fb63bbdb3ebae33f3d68a5ede77518e9e7dc7ce50ed1b8bf4fbf4c4a823a4b97	Документация | MWS Docs	NA	NA	2026-11-15T15:55:36.490557+00:00
+https://mws.ru/docs/	42610	42610	178.248.237.192	200	0	0	text/html	10000	fb63bbdb3ebae33f3d68a5ede77518e9e7dc7ce50ed1b8bf4fbf4c4a823a4b97	Документация | MWS Docs	NA	NA	2026-11-15T15:56:37.747343+00:00
+https://onetl.readthedocs.io/en/stable/	33991	33991	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:55:17.175867+00:00
+https://onetl.readthedocs.io/en/stable/	42610	42610	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:56:19.352176+00:00
+https://rectools.readthedocs.io/en/stable/	33991	33991	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:54:58.032361+00:00
+https://rectools.readthedocs.io/en/stable/	42610	42610	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:56:02.493326+00:00
+https://syncmaster.readthedocs.io/en/stable/	33991	33991	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:55:34.489114+00:00
+https://syncmaster.readthedocs.io/en/stable/	42610	42610	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:56:36.209683+00:00
