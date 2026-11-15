@@ -1,0 +1,15 @@
+https://ifconfig.net/ https://ifconfig.net/ip
+https://ifconfig.tw/ https://ifconfig.tw/ip
+https://ipinfo.ge/ https://ipinfo.ge/ip
+https://ipconfig.co.uk/find-my-ip/ https://ipconfig.co.uk/ip
+https://ip4.anysrc.net/index.html https://ip.anysrc.net/json https://ip4.anysrc.net/json
+https://checkmyip.com/developers https://ipv4.checkmyip.com/ip https://ipv6.checkmyip.com/ip
+https://ipaddress.no/de/api-docs https://ipaddress.no/api/v1/my-ip?format=text
+https://ipaddress.ro/de/api-docs https://ipaddress.ro/api/v1/my-ip?format=text
+https://ipaddress.pt/de/api-docs https://ipaddress.pt/api/v1/my-ip?format=text
+https://dnswiz.app/tools/ip-lookup/ https://dnswiz.app/tools/ip-lookup/ https://api.dnswiz.app/v1/tools/ip
+https://docs.ipconfig.io/guides/what-is-my-ip-address https://ipconfig.io/ 
+https://ifconfig.io/ https://ifconfig.io/ip
+https://github.com/qdm12/ddns-updater https://checkip.spdyn.de/ https://icanhazip.com/ https://wtfismyip.com/text 
+https://www.elastic.co/guide/en/security/current/external-ip-address-discovery-via-curl.html https://ifcfg.me/ https://api.myip.com/ https://checkip.amazonaws.com/ https://freegeoip.net/json/ https://www.geoplugin.net/json.gp https://httpbin.org/ip
+https://gist.github.com/sigmdel/dbc88279a2b7a710203a16062dd3cc32 https://ipv4.whatismyip.akamai.com/

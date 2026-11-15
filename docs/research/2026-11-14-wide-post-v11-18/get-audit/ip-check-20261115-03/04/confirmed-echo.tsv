@@ -1,0 +1,2 @@
+"host"	"url"	"result"	"sources"
+"myip.dog"	"https://myip.dog/ip"	"ip_echo_plain_v6"	"https://myip.dog/api"

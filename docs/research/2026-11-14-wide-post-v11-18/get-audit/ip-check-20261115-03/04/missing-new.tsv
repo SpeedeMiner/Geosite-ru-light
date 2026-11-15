@@ -1,0 +1,2 @@
+"host"	"url"	"sources"	"block"	"other_light_categories"	"backend"	"http"	"curl_exit"	"tls_verify"	"content_type"	"result"	"redirect_host"	"observed_at"	"disposition"	"measured_attempts"
+"myip.dog"	"https://myip.dog/ip"	"https://myip.dog/api"	""	""	"workspace_curl_default"	"200"	"0"	"0"	"text/plain; charset=utf-8"	"ip_echo_plain_v6"	""	"2026-11-15T10:33:22+00:00"	"new_confirmed_ip_echo"	"1"

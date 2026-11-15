@@ -1,0 +1,3 @@
+"host"	"url"	"result"	"sources"
+"ip.chu.es"	"https://ip.chu.es/?format=json"	"ip_echo_json_v6"	"https://ip.chu.es/"
+"ip.mademoe.com"	"https://ip.mademoe.com/"	"ip_echo_plain_v6"	"https://ip.mademoe.com/"

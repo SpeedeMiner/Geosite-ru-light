@@ -1,0 +1,4 @@
+"host"	"url"	"result"	"sources"
+"ipaddress.no"	"https://ipaddress.no/api/v1/my-ip?format=text"	"ip_echo_plain_v6"	"https://ipaddress.no/de/api-docs"
+"ipaddress.pt"	"https://ipaddress.pt/api/v1/my-ip?format=text"	"ip_echo_plain_v6"	"https://ipaddress.pt/de/api-docs"
+"ipaddress.ro"	"https://ipaddress.ro/api/v1/my-ip?format=text"	"ip_echo_plain_v6"	"https://ipaddress.ro/de/api-docs"
