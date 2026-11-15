@@ -1,0 +1,35 @@
+operator	group	url	source_id	curl_exit	http	tls_verify	bytes	sha256	redirect
+T-Банк	bank	https://developer.tbank.ru/docs/products/TID/web/auth-tid	1	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+T-Банк	bank	https://developer.tbank.ru/docs/intro/integration-steps	2	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+T-Банк	bank	https://www.tbank.ru/apps/pwa/	3	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+T-Банк	bank	https://developer.tbank-online.com/	4	0	200	0	24442	956da85b0ab71cd366d1b8dbe7984bead187decf355095951c6d5e720ac9668d	-
+Альфа-Банк	bank	https://developers.alfabank.ru/faq	5	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+Альфа-Банк	bank	https://alfabank.ru/corporate/guide-alfaapi/	6	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+Сбербанк	bank	https://developers.sber.ru/docs/ru/gigachat/api/reference/rest/gigachat-api	7	0	200	0	240865	073a7ff5433dbb2c3791ef569085317e28b7577808c8adf5003eff14c2cc8dc0	-
+Сбербанк	bank	https://www.sberbank.ru/ru/person/dist_services/sberbank-online	8	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+ВТБ	bank	https://www.vtb.ru/crt/	9	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+ВТБ	bank	https://www.vtb.ru/samozanyatym/individual/	10	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+Газпромбанк	bank	https://www.gazprombank.ru/corporate/page/h2h/	11	0	403	0	63	89cdd6f7d0127166579d90a3610e965dd9dabb6d06b51341cd45b1d7798ab6c4	-
+Газпромбанк	bank	https://www.gazprombank.ru/personal/page/openapi/	12	0	403	0	63	05b74284f1971655e19a6ab529274c8fc8fb438e344514b143d7e33236fbb022	-
+Озон Банк	bank	https://finance.ozon.ru/	13	0	307	0	164	8f03491247cbfa8a2e60e0f7ec62d63b5070659f60383a1c81abeb2b20221be3	https://finance.ozon.ru/?attempt=1
+Яндекс Банк	bank	https://yabank.yandex.ru/	14	0	503	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	-
+Yandex Cloud	provider	https://yandex.cloud/ru/docs/api-design-guide/concepts/endpoints	15	0	200	0	642935	0e4d7a1848837b4f2c2a6f8d862c1851d55bcfa74c85596ed85dcdbbac6bd652	-
+Yandex Cloud	provider	https://yandex.cloud/ru-kz/docs/api-design-guide/concepts/endpoints	16	0	200	0	528252	d0e0e914a1fda0c620dd5f774b33b5c6a89fb1f31ffbf1fdd8afecdce7b86907	-
+Yandex Cloud	provider	https://yandex.cloud/en/docs/cli/concepts/endpoints	17	0	200	0	1329049	1ac9d0c7a9da245705c3ad055859cd682e74a0467f1edbd458a86e500d33fa08	-
+Selectel	provider	https://docs.selectel.ru/api/object-storage-s3/	18	0	200	0	74088	f12234e8195700a5f868f43fc70a536ee78ce845506212807b41bf8bd0d301da	-
+Selectel	provider	https://docs.selectel.ru/s3/manage/configure-storage-update/	19	0	200	0	95802	14a8429f5749192ed87f6a6a70ac38f58d690855a46779d1a59459c97884e2d7	-
+Selectel	provider	https://docs.selectel.ru/cdn/resources/domains/	20	0	200	0	36470	e98200dd4f27a345394b8f52c1996d72e686617b1dc988f7ad144610afcb224d	-
+VK Cloud	provider	https://land.vkcloud-static.ru/properties/	21	0	200	0	460450	841d1fecc734e09e8563e9351ba8c378d93e1837d6852f53ee02a9d65228f0eb	-
+VK Cloud	provider	https://raw.githubusercontent.com/vk-cs/docs-public/master/docs/ru/storage/s3/faq/faq.md	22	28	0	NA	0	NA	-
+VK Cloud	provider	https://cloud.vk.com/docs/	23	28	0	NA	0	NA	-
+Cloud.ru	provider	https://cloud.ru/docs/advanced/overview/az-and-endpoints	24	28	0	NA	0	NA	-
+Cloud.ru	provider	https://cloud.ru/docs/console_api/ug/topics/overview__reestr_api	25	28	0	NA	0	NA	-
+MWS / МТС	provider	https://mws.ru/docs/s3/util-awscli.html	26	28	0	NA	0	NA	-
+MWS / МТС	provider	https://mws.ru/docs/s3/util-rclone.html	27	28	0	NA	0	NA	-
+MWS / МТС	provider	https://mws.ru/docs/s3/daas.html	28	28	0	NA	0	NA	-
+Ozon	provider	https://docs.ozon.ru/global/api/intro/	29	28	0	NA	0	NA	-
+Ozon	provider	https://docs.ozon.ru/api/seller/	30	28	0	NA	0	NA	-
+Ростелеком	provider	https://rt.ru/cloud	31	28	0	NA	0	NA	-
+Ростелеком	provider	https://rt-dc.ru/	32	28	0	NA	0	NA	-
+РНКО Платежный Центр	regulator_gap	https://www.cbr.ru/finorg/foinfo/?id=1315037837646	33	28	0	NA	0	NA	-
+Кубань Кредит	regulator_gap	https://www.cbr.ru/finorg/foinfo/?id=1315037837676	34	28	0	NA	0	NA	-
