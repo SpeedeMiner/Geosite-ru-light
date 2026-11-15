@@ -1,0 +1,7 @@
+group	host	source	purpose	disposition
+СберТех	gitverse.site	https://gitverse.ru/docs/pages/faq/	общее размещение пользовательских сайтов GitVerse Pages	не добавлять суффикс по признаку принадлежности платформы
+СберТех	gitverse.ru	https://gitverse.ru/docs/artifactory/packages-uc/docker-packages-uc/	Docker и пакетная документация	действующее domain:ru
+МТС	support.mts.ru	https://support.mts.ru/business	официальный каталог МТС для бизнеса	следующая выборка
+Ростелеком	chats.itmh.ru	https://wink.planeta.tc/	скрипт чата в HTML страницы Планета + Wink	действующее domain:ru
+РТКомм	dmp.one	https://www.rtcomm.ru/	скрипт идентификации посетителей	внешняя аналитика не DIRECT
+МаксимаТелеком	gowifi.ru	https://maximatelecom.ru/support/faq/connection.html	документированный вход в публичную Wi-Fi сеть	действующее domain:ru
