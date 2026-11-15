@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (corporate window)
+name: GeoSite IP checker GET through VPNObratno (operator window)
 
 on:
   push:
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   pilot:
-    name: Corporate GET evidence from two RU networks
+    name: Operator GET evidence from two RU networks
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -96,14 +96,14 @@ jobs:
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/corporate-20261115/vpn-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$AUDIT/corporate-asn-20261115/vpn-plan.tsv" .vpn-pilot/inventory.tsv \
                 "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
 
       - name: Upload observation and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-corporate-window-${{ github.run_attempt }}
+          name: geosite-operator-window-${{ github.run_attempt }}
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl

@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ertelecom.cloud	ertelecom.cloud	https://ertelecom.cloud/clouds/	ЭР-Телеком|Облачные технологии|Хранилище	https://ertelecom.ru/ru/contacts
+corporate	candidate	my.ertelecom.cloud	my.ertelecom.cloud	https://my.ertelecom.cloud/	ЭР-Телеком|Личный кабинет|Вход	https://ertelecom.cloud/clouds/
+corporate	control	ertelecom.ru	ertelecom.ru	https://ertelecom.ru/ru/contacts	ЭР-Телеком|Контакты	https://ertelecom.ru/ru/contacts
+corporate	control	b2b.dom.ru	b2b.dom.ru	https://b2b.dom.ru/about	Дом.ру|ЭР-Телеком	https://b2b.dom.ru/about
