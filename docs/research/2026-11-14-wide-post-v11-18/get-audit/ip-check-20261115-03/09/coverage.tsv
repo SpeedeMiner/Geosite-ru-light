@@ -1,0 +1,4 @@
+"host"	"url"	"sources"	"light_ru"	"server_ru"	"block"	"other_light_categories"	"previously_seen"
+"ipfastcheck.com"	"https://ipfastcheck.com/ip"	"https://ipfastcheck.com/api"	""	""	""	""	"true"
+"meine-ip.info"	"https://meine-ip.info/api/ip"	"https://meine-ip.info/api/docs"	""	""	""	""	"true"
+"www.ipgoat.com"	"https://www.ipgoat.com/"	"https://ipgoat.com/"	""	""	""	""	"false"

@@ -1,0 +1,7 @@
+host	url	matching_asns	matched_in	outcomes
+6.ipquail.com	https://6.ipquail.com/	0		AS25513 dns_unproven | AS34168 dns_unproven
+ipv6.pry.sh	https://ipv6.pry.sh/	0		AS25513 dns_unproven | AS34168 dns_unproven
+v6.i-p.show	https://v6.i-p.show/	0		AS25513 dns_unproven | AS34168 dns_unproven
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	0		AS25513 dns_unproven | AS34168 dns_unproven
+www.ipgoat.com	https://www.ipgoat.com/	0		AS25513 unrecognized | AS34168 unrecognized
+yourip.app	https://yourip.app/raw	0		AS25513 transport_unproven | AS34168 transport_unproven

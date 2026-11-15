@@ -1,0 +1,27 @@
+host	url	matching_asns	matched_in	outcomes
+4.ipquail.com	https://4.ipquail.com/	2	AS25513|AS34168	AS25513 match | AS34168 match
+6.ipquail.com	https://6.ipquail.com/	0		AS25513 dns_unproven | AS34168 dns_unproven
+atlas.baebeca.de	https://atlas.baebeca.de/	2	AS25513|AS34168	AS25513 match | AS34168 match
+checkip.bagoly.se	https://checkip.bagoly.se/?format=text	2	AS25513|AS34168	AS25513 match | AS34168 match
+dafuqismyip.com	https://dafuqismyip.com/	2	AS25513|AS34168	AS25513 match | AS34168 match
+i-p.show	https://i-p.show/	2	AS25513|AS34168	AS25513 match | AS34168 match
+ip.csis.dk	https://ip.csis.dk/	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipaddress.fi	https://ipaddress.fi/api/v1/my-ip?format=text	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipfastcheck.com	https://ipfastcheck.com/ip	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipka.sk	https://ipka.sk/	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipquail.com	https://ipquail.com/	2	AS25513|AS34168	AS25513 match | AS34168 match
+iprs.fly.dev	https://iprs.fly.dev/	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipv4.pry.sh	https://ipv4.pry.sh/	2	AS25513|AS34168	AS25513 match | AS34168 match
+ipv6.pry.sh	https://ipv6.pry.sh/	0		AS25513 dns_unproven | AS34168 dns_unproven
+meine-ip.info	https://meine-ip.info/api/ip	2	AS25513|AS34168	AS25513 match | AS34168 match
+myops.in	https://myops.in/ip	2	AS25513|AS34168	AS25513 match | AS34168 match
+pry.sh	https://pry.sh/	2	AS25513|AS34168	AS25513 match | AS34168 match
+pub-ip.com	https://pub-ip.com/	2	AS25513|AS34168	AS25513 match | AS34168 match
+sjekkip.no	https://sjekkip.no/	2	AS25513|AS34168	AS25513 match | AS34168 match
+v4.i-p.show	https://v4.i-p.show/	2	AS25513|AS34168	AS25513 match | AS34168 match
+v4.yinghualuo.cn	https://v4.yinghualuo.cn/bejson	2	AS25513|AS34168	AS25513 match | AS34168 match
+v6.i-p.show	https://v6.i-p.show/	0		AS25513 dns_unproven | AS34168 dns_unproven
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	0		AS25513 dns_unproven | AS34168 dns_unproven
+www.ipgoat.com	https://www.ipgoat.com/	0		AS25513 unrecognized | AS34168 unrecognized
+www.ipka.sk	https://www.ipka.sk/	2	AS25513|AS34168	AS25513 match | AS34168 match
+yourip.app	https://yourip.app/raw	0		AS25513 transport_unproven | AS34168 transport_unproven

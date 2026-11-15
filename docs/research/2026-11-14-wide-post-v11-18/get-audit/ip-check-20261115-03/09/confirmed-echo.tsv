@@ -1,0 +1,3 @@
+"host"	"url"	"result"	"sources"
+"ipfastcheck.com"	"https://ipfastcheck.com/ip"	"ip_echo_plain_v4"	"https://ipfastcheck.com/api"
+"meine-ip.info"	"https://meine-ip.info/api/ip"	"ip_echo_json_v6"	"https://meine-ip.info/api/docs"

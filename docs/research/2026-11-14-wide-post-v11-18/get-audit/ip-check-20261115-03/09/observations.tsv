@@ -1,0 +1,5 @@
+"host"	"url"	"sources"	"block"	"other_light_categories"	"backend"	"http"	"curl_exit"	"tls_verify"	"content_type"	"result"	"redirect_host"	"observed_at"
+"ipfastcheck.com"	"https://ipfastcheck.com/ip"	"https://ipfastcheck.com/api"	""	""	"workspace_curl_default"	"200"	"0"	"0"	"text/plain; charset=utf-8"	"ip_echo_plain_v4"	""	"2026-11-15T11:04:14+00:00"
+"meine-ip.info"	"https://meine-ip.info/api/ip"	"https://meine-ip.info/api/docs"	""	""	"workspace_curl_default"	"200"	"0"	"0"	"application/json; charset=UTF-8"	"ip_echo_json_v6"	""	"2026-11-15T11:04:12+00:00"
+"www.ipgoat.com"	"https://www.ipgoat.com/"	"https://ipgoat.com/"	""	""	"workspace_curl_default"	"200"	"0"	"0"	"text/html; charset=UTF-8"	"html_other"	""	"2026-11-15T11:04:12+00:00"
+"www.ipgoat.com"	"https://www.ipgoat.com/"	"https://ipgoat.com/"	""	""	"workspace_curl_ipv4_option"	"200"	"0"	"0"	"text/html; charset=UTF-8"	"html_other"	""	"2026-11-15T11:04:19+00:00"

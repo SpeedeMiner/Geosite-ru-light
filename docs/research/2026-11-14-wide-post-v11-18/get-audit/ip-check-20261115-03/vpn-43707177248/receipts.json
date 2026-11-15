@@ -1,0 +1,50 @@
+[
+  {
+    "artifact_id": 14159100772,
+    "asns": [
+      25513,
+      34168
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "01",
+    "execution": "1dbaebea1f7254d1454cbf49da4129d6850a1482",
+    "globalping_requests": 0,
+    "http": 18,
+    "run": 43707177248,
+    "sha256": "a6328833a16c19403ea764f0b3c0f8ae653f8e3f38e563c371eaf3ae178c2f0c",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14158703080,
+    "asns": [
+      25513,
+      34168
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "02",
+    "execution": "1dbaebea1f7254d1454cbf49da4129d6850a1482",
+    "globalping_requests": 0,
+    "http": 18,
+    "run": 43707177248,
+    "sha256": "2fb7e28f03159afa77cf9d11ae8797973810a01401ecf90528ffa210eaebd33f",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14159131289,
+    "asns": [
+      25513,
+      34168
+    ],
+    "attempt": 1,
+    "attempts": 12,
+    "batch": "03",
+    "execution": "1dbaebea1f7254d1454cbf49da4129d6850a1482",
+    "globalping_requests": 0,
+    "http": 6,
+    "run": 43707177248,
+    "sha256": "e2b659c8a42b711eda763ebc8299c06f1bf398dd1167565d2af1659304548a5d",
+    "urls": 6
+  }
+]

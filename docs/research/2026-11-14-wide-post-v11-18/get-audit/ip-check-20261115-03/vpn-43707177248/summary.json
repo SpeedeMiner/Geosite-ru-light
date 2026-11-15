@@ -1,0 +1,23 @@
+{
+  "execution": "1dbaebea1f7254d1454cbf49da4129d6850a1482",
+  "exits": [
+    25513,
+    34168
+  ],
+  "globalping": 0,
+  "http_responses": 42,
+  "matches": 40,
+  "matches_per_url": {
+    "0": 6,
+    "2": 20
+  },
+  "measurements": 52,
+  "outcomes": {
+    "match": 40,
+    "unrecognized": 2,
+    "unverified": 10
+  },
+  "run": 43707177248,
+  "transport": "IPv4 via VPNObratno",
+  "urls": 26
+}

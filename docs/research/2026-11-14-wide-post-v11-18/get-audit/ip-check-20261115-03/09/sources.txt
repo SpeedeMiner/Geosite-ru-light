@@ -1,0 +1,3 @@
+https://ipfastcheck.com/api https://ipfastcheck.com/ip
+https://meine-ip.info/api/docs https://meine-ip.info/api/ip
+https://ipgoat.com/ https://www.ipgoat.com/
