@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.eurasiapeering.com	www.eurasiapeering.com	https://www.eurasiapeering.com/	Eurasia Peering	https://www.peeringdb.com/org/18724
+corporate	candidate	www.eurasiapeering.com	www.eurasiapeering.com	https://www.eurasiapeering.com/contact/	Eurasia Peering	https://www.eurasiapeering.com/
+corporate	candidate	www.ixcellerate.com	www.ixcellerate.com	https://www.ixcellerate.com/faq/	IXcellerate	https://www.ixcellerate.com/requisites/
+corporate	candidate	www.ixcellerate.com	www.ixcellerate.com	https://www.ixcellerate.com/requisites/	IXcellerate	https://www.ixcellerate.com/requisites/
+corporate	candidate	lg.gblnet.net	lg.gblnet.net	https://lg.gblnet.net/	GlobalNet	https://gblnet.ru/en/services/dataix
+corporate	candidate	lg.dataix.eu	lg.dataix.eu	https://lg.dataix.eu/	DataIX	https://dataix.ru/
+corporate	candidate	lg.dataix.eu	lg.dataix.eu	https://lg.dataix.eu/routeservers/rs2-central-v4	DataIX	https://dataix.ru/
+corporate	control	lg.dataix.ru	lg.dataix.ru	https://lg.dataix.ru/	DataIX	https://www.global-ix.ru/
