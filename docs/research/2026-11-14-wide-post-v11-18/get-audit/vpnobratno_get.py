@@ -28,6 +28,7 @@ UPSTREAM_FILES = {
     'vpn_netns_exec.sh': 'cec294da7375062b798e5beb23a8163045f27edd537c1455605e716514548cc4',
 }
 TRANSPORT = 'vpnobratno_openvpn'
+MAX_TARGETS = 10
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
@@ -40,8 +41,8 @@ def validate_upstream(directory):
 
 
 def catalogue(rows):
-    if not 1 <= len(rows) <= 5:
-        raise ValueError('the first VPNObratno pilot accepts 1–5 exact URLs')
+    if not 1 <= len(rows) <= MAX_TARGETS:
+        raise ValueError(f'expected 1–{MAX_TARGETS} exact public HTTPS URLs per batch')
     urls = set()
     targets = []
     for i, row in enumerate(rows, 1):
@@ -192,9 +193,12 @@ def attach(transport, rows, observations_path, exclude_asns=()):
         if not routed['tun']:
             raise transport.ProbeError('no verified OpenVPN interface')
         row = by_id[target['id']]
-        a, aaaa = transport.call_with_wall_clock_timeout(
-            lambda: transport.resolve_domain_families(target['domain'],max(2,timeout//2)),
-            max(3,timeout//2+1))
+        try:
+            a, aaaa = transport.call_with_wall_clock_timeout(
+                lambda: transport.resolve_domain_families(target['domain'],max(2,timeout//2)),
+                max(3,timeout//2+1))
+        except TimeoutError:
+            a = aaaa = ('DNS_TIMEOUT', [], '')
         ips = []
         for raw in a[1]:
             ip = ip_address(raw)

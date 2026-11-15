@@ -6,7 +6,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from vpnobratno_get import asn_arg, attach, catalogue, finish_code, get_from_tunnel, summarize, validate_upstream
+from vpnobratno_get import MAX_TARGETS, asn_arg, attach, catalogue, finish_code, get_from_tunnel, summarize, validate_upstream
 
 URL = 'https://service.example/public?q=one'
 ROW = dict(host='service.example',url=URL,markers='pilot')
@@ -35,6 +35,26 @@ class VpnObratnoGetTests(unittest.TestCase):
         for rows in ([ROW,ROW], [dict(ROW,host='different.example')], [dict(ROW,url='http://service.example/')]):
             with self.assertRaises(ValueError):
                 catalogue(rows)
+
+    def test_pool_catalogue_limit(self):
+        rows = [dict(ROW,url=f'https://service.example/{i}') for i in range(MAX_TARGETS+1)]
+        self.assertEqual(len(catalogue(rows[:-1])['targets']),MAX_TARGETS)
+        with self.assertRaises(ValueError):
+            catalogue(rows)
+
+    def test_dns_timeout_is_one_observation_not_a_batch_abort(self):
+        with TemporaryDirectory() as tmp:
+            path=pathlib.Path(tmp)/'obs.jsonl'
+            t=fake_transport()
+            attach(t,[ROW],path)
+            target=catalogue([ROW])['targets'][0]
+            t.wait_for_tunnel()
+            with patch.object(t,'call_with_wall_clock_timeout',side_effect=TimeoutError), \
+                 patch('vpnobratno_get.get_from_tunnel') as get:
+                out=t.test_target(target,EXIT,{},8)
+                get.assert_not_called()
+            self.assertEqual(out['DNS_A_RESULT'],'DNS_TIMEOUT')
+            self.assertEqual(json.loads(path.read_text())['state'],'vpn_dns_unproven')
 
     def test_curl_only_pinned_tunnel_without_proxy_or_redirects(self):
         call = SimpleNamespace(returncode=0,stdout=json.dumps(STATS))

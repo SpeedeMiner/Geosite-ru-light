@@ -1,0 +1,5 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_union_state"	"diagnostic"	"belrus.ru"	"belrus.ru"	"https://belrus.ru/content/links/"	"Парламентское Собрание|Союзного государства"	"https://belrus.ru/content/links/"
+"control_union_state"	"diagnostic"	"www.souzveche.ru"	"www.souzveche.ru"	"https://www.souzveche.ru/"	"Союзное Вече|Парламентского Собрания"	"https://belrus.ru/content/links/"
+"control_union_state"	"diagnostic"	"mintrans.gov.ru"	"mintrans.gov.ru"	"https://mintrans.gov.ru/eye/press-center/news/12861"	"второй этап|навигационных пломб"	"https://mintrans.gov.ru/eye/press-center/news/12861"
+"control_union_state"	"diagnostic"	"www.gov.kz"	"www.gov.kz"	"https://www.gov.kz/org/kgd/press/news/details/1264737?lang=ru"	"навигационных пломб|ЕАЭС"	"https://www.gov.kz/org/kgd/press/news/details/1264737?lang=ru"

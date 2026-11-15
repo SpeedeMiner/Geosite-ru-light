@@ -1,0 +1,32 @@
+{
+  "batches": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18"
+  ],
+  "pending": 174,
+  "pool_sha256": {
+    "vpnobratno/run-43696223787.tsv": "78eb5f3b5d35d865756fe31909eeabdba23757989a1aaded249693880ed480a3",
+    "vpnobratno/run-43697783542.tsv": "093ae6d5784fe3be233e59936110b18a1fdb2309398dde8011101c9700923190",
+    "vpnobratno/run-43699381303.tsv": "f29f4a80da5073b517859cbd56bc392ee2a7abb0924f7b11c089a13396a805d8",
+    "wide-011/next-quota/first.tsv": "e227239458dced9bcf8960d5be9372263bb4ccaa31dc3246ea657c64d0ff3158",
+    "wide-011/next-quota/later.tsv": "3d6aa714c12d79dc0c84dff939acb84200866897063110eac1e3e399cad81990"
+  },
+  "queued": 184,
+  "reused": 10
+}
