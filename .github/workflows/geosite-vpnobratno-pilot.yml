@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (IX and data centre public sites)
+name: GeoSite IP checker GET through VPNObratno (CDN public sites)
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-ix-core
+  group: geosite-vpnobratno-cdn-service
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [ix-core]
+        batch: [cdn-service]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:

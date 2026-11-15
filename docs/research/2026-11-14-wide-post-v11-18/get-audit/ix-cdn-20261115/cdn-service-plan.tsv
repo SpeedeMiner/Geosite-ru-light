@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	cdnnow.pro	cdnnow.pro	https://cdnnow.pro/about/	cdnnow|Cluster LLC	https://cdnnow.pro/about/
+corporate	candidate	cdnnow.pro	cdnnow.pro	https://cdnnow.pro/	cdnnow	https://cdnnow.ru/support/
+corporate	candidate	selfcare.cdnnow.pro	selfcare.cdnnow.pro	https://selfcare.cdnnow.pro/	cdnnow	https://cdnnow.pro/
+corporate	candidate	selfcare.cdnnow.pro	selfcare.cdnnow.pro	https://selfcare.cdnnow.pro/login	cdnnow	https://cdnnow.pro/
+corporate	candidate	curator.pro	curator.pro	https://curator.pro/library/faq/	CURATOR	https://curator.pro/library/faq/
+corporate	candidate	curator.pro	curator.pro	https://curator.pro/	CURATOR	https://docs.curator.pro/
+corporate	control	docs.curator.pro	docs.curator.pro	https://docs.curator.pro/	Curator	https://docs.curator.pro/
+corporate	control	cdnnow.ru	cdnnow.ru	https://cdnnow.ru/support/	cdnnow	https://cdnnow.ru/support/
