@@ -1,0 +1,35 @@
+{
+  "confirmed_echo_hosts": 27,
+  "confirmed_echo_hosts_across_two_windows": 41,
+  "covered_both_hosts": 55,
+  "dispositions": {
+    "api_key_required": 1,
+    "browser_checker_review": 25,
+    "category_overlap_review": 1,
+    "new_confirmed_ip_echo": 27,
+    "not_confirmed": 27,
+    "redirect_review": 3,
+    "shared_host_review": 9,
+    "third_party_frontend": 2
+  },
+  "echo_payload_families": {
+    "v4": 8,
+    "v6": 19
+  },
+  "get_attempts": 165,
+  "light_release_ref": "185b75e30508b388a616bc2c8cf9340520aff4ef",
+  "light_release_sha256": "b6453f0c9a3bc06a1978fd77aed7b3e4149161e5c2172c4863012fe0aad57c85",
+  "new_missing_both_hosts": 95,
+  "previously_seen_hosts": 15,
+  "probed_urls": 100,
+  "probes_scope": "Workspace egress; HTTPS GET and validated TLS; no redirect following, no verified Russian ASN. The IP family is detected from the response body and does not attest transport.",
+  "server_release_sha256": "e9d343e6a83c848b0c280af351da956a9bb8275752424d6437244fd47eae7282",
+  "sources_sha256": {
+    "ddclient.in": "90c2812154118afdc5bf0bccaef20a401d6415960c1745f1683e0f2184b51ddd",
+    "sources.txt": "9280680c74e05e8ded18941b123c2b26457e94f2ea7cdce421ed814050dae955",
+    "supplement/sources.txt": "5eac897685618bc199eccf4c3dcb2577dc5a67eddb03596500e5541961eac9a5"
+  },
+  "tested_host_union_across_two_windows": 317,
+  "window_hosts": 150,
+  "window_urls": 160
+}
