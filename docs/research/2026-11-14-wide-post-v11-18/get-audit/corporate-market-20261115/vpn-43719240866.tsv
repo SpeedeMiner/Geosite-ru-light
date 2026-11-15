@@ -1,0 +1,9 @@
+host	url	asn	http	curl	tls	asn_ris	state	title	markers	redirect_host	observed_at
+dm.bercut.com	https://dm.bercut.com/	12389	404	0	0	12389	vpn_http_other	Domain has been assigned.	NA	NA	2026-11-15T13:30:13.756508+00:00
+dm.bercut.com	https://dm.bercut.com/	52043	404	0	0	NA	vpn_http_other	Domain has been assigned	NA	NA	2026-11-15T13:30:47.474742+00:00
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	12389	200	0	0	12389	vpn_marker	BaseALT	Документация ALT Linux Team|Базальт СПО	NA	2026-11-15T13:30:17.336498+00:00
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	52043	200	0	0	NA	vpn_marker	BaseALT	Документация ALT Linux Team|Базальт СПО	NA	2026-11-15T13:30:51.323266+00:00
+hip.bercut.com	https://hip.bercut.com/esb	12389	200	0	0	12389	vpn_body_unproven	Bercut ESB	NA	NA	2026-11-15T13:30:12.723010+00:00
+hip.bercut.com	https://hip.bercut.com/esb	52043	200	0	0	NA	vpn_body_unproven	Bercut ESB	NA	NA	2026-11-15T13:30:46.261396+00:00
+www.altlinux.org	https://www.altlinux.org/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0	12389	200	0	0	12389	vpn_visible_review	ALT Linux Wiki	ALT Linux	NA	2026-11-15T13:30:15.499680+00:00
+www.altlinux.org	https://www.altlinux.org/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0	52043	200	0	0	NA	vpn_visible_review	ALT Linux Wiki	ALT Linux	NA	2026-11-15T13:30:49.370355+00:00

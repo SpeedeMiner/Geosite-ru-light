@@ -1,0 +1,6 @@
+group	host	service	url	source	role	evidence	disposition	light_ru	server_ru	block	non_ru	source_status	source_sha256
+Ростелеком/Лукоморье	lukit.ru	lukit	https://lukit.ru/	https://lukit.ru/	office_or_product_index	primary_page_or_link	review	domain:ru	domain:ru	NA	NA	200	a11f14615bb25e068e48acd1f542739dd136507de688157d1f26500b1e3a41b6
+Ростелеком/Лукоморье	rtkitplus.ru	rtkitplus	https://rtkitplus.ru/	https://rtkitplus.ru/	office_or_product_index	primary_page_or_link	review	domain:ru	domain:ru	NA	NA	200	15de7c581adcb852664fb058a95ca8ad37bb4caf414e48df7217d2afffa37e5c
+Ростелеком/Лукоморье	rtksoftlabs.ru	rtksoft	https://rtksoftlabs.ru/	https://rtksoftlabs.ru/	office_or_product_index	primary_page_or_link	review	domain:ru	domain:ru	NA	NA	200	d3deeb08f79c69a3b196ec8190b375068b84e320850a00bfb6459bfbb9d602e6
+Ростелеком/Лукоморье	lukit.ru	lukit_press	https://lukit.ru/	https://www.company.rt.ru/press/news/d479385/	office_or_product_index	primary_page_or_link	review	domain:ru	domain:ru	NA	NA	200	d2658458bcd63b44639cd350303c6d9fea7740f788d7a8c1b91d44072eb51f46
+Ростелеком/Лукоморье	www.company.rt.ru	lukit_press	https://www.company.rt.ru/	https://www.company.rt.ru/press/news/d479385/	office_or_product_index	primary_page_or_link	review	domain:ru	domain:ru	NA	NA	200	d2658458bcd63b44639cd350303c6d9fea7740f788d7a8c1b91d44072eb51f46

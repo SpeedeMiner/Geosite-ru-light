@@ -1,0 +1,12 @@
+full:avitoplato.tech
+full:docs-esb.bercut.com
+full:docs.tdata.tech
+full:docs.trisigma.io
+full:ertelecom.cloud
+full:esb.bercut.com
+full:getalt.org
+full:mirmon.altlinux.org
+full:my.ertelecom.cloud
+full:support.bercut.com
+full:tdata.tech
+full:trisigma.io

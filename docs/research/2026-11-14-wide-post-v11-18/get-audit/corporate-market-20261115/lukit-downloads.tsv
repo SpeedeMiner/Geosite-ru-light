@@ -1,0 +1,5 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+lukit	https://lukit.ru/	https://lukit.ru/	200	0	0	1007	a11f14615bb25e068e48acd1f542739dd136507de688157d1f26500b1e3a41b6	text/html
+rtkitplus	https://rtkitplus.ru/	https://rtkitplus.ru/	200	0	0	433	15de7c581adcb852664fb058a95ca8ad37bb4caf414e48df7217d2afffa37e5c	text/html
+rtksoft	https://rtksoftlabs.ru/	https://rtksoftlabs.ru/	200	0	0	118679	d3deeb08f79c69a3b196ec8190b375068b84e320850a00bfb6459bfbb9d602e6	text/html
+lukit_press	https://www.company.rt.ru/press/news/d479385/	https://www.company.rt.ru/press/news/d479385/	200	0	0	62168	d2658458bcd63b44639cd350303c6d9fea7740f788d7a8c1b91d44072eb51f46	text/html; charset=UTF-8
