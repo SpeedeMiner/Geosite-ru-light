@@ -1,0 +1,35 @@
+{
+  "artifact_id": 14154818802,
+  "artifact_zip_sha256": "72581a1478228373d57e394faa7066ee33e11b1a1655f1c8eb2bec96a9e5a592",
+  "attempted_urls": 5,
+  "compared_to_run_id": 43696223787,
+  "complete": true,
+  "connection_attempts": 2,
+  "distinct_exit_asns": 1,
+  "excluded_asns": [
+    34533
+  ],
+  "execution_sha": "f44dd1041f2d31d8f1e18c85d5e6af82ec74f2ab",
+  "exit_asn": 12389,
+  "exit_country": "RU",
+  "fresh_ru_credit": false,
+  "globalping_requests": 0,
+  "http_responses": 5,
+  "identical_http_classifications": 5,
+  "job_id": 132762044335,
+  "measurements": 5,
+  "profile_variant": "IP_UDP",
+  "profiles_discovered": 6,
+  "run_attempt": 1,
+  "run_id": 43697783542,
+  "skipped_asn_attempts": {
+    "34533": 1
+  },
+  "states": {
+    "vpn_body_unproven": 1,
+    "vpn_marker": 3,
+    "vpn_redirect": 1
+  },
+  "upstream_ref": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "upstream_state": "COMPLETE"
+}

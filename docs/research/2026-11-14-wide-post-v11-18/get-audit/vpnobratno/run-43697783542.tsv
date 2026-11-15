@@ -1,0 +1,6 @@
+url	http	state	tls	exit_asn	exit_country	redirect	marker	observed_at
+https://docs.arenadata.io/	301	vpn_redirect	verified	12389	RU	https://docs.arenadata.io/index.html		2026-11-15T09:09:48.881841+00:00
+https://www.woopkassa.kz/	200	vpn_marker	verified	12389	RU		Woopkassa	2026-11-15T09:09:52.053147+00:00
+https://www.alrosa.aero/	200	vpn_body_unproven	verified	12389	RU			2026-11-15T09:09:56.564572+00:00
+https://raschet.by/	200	vpn_marker	verified	12389	RU		ЕРИП	2026-11-15T09:10:00.820463+00:00
+https://cisgeo.info/	200	vpn_marker	verified	12389	RU		Геопортал	2026-11-15T09:10:04.397380+00:00

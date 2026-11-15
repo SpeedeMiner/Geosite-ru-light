@@ -1,0 +1,6 @@
+url	AS34533_http	AS12389_http	AS34533_state	AS12389_state	AS34533_tls	AS12389_tls	AS34533_redirect	AS12389_redirect	AS34533_marker	AS12389_marker	same
+https://docs.arenadata.io/	301	301	vpn_redirect	vpn_redirect	verified	verified	https://docs.arenadata.io/index.html	https://docs.arenadata.io/index.html			true
+https://www.woopkassa.kz/	200	200	vpn_marker	vpn_marker	verified	verified			Woopkassa	Woopkassa	true
+https://www.alrosa.aero/	200	200	vpn_body_unproven	vpn_body_unproven	verified	verified					true
+https://raschet.by/	200	200	vpn_marker	vpn_marker	verified	verified			ЕРИП	ЕРИП	true
+https://cisgeo.info/	200	200	vpn_marker	vpn_marker	verified	verified			Геопортал	Геопортал	true
