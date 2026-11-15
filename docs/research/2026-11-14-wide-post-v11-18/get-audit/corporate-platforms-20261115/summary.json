@@ -15,5 +15,8 @@
     "separate_category": 19
   },
   "new_full": 2,
-  "stacked_full": 56
+  "stacked_full": 56,
+  "vpn_requested": 38,
+  "vpn_http_responses": 32,
+  "globalping_requests": 0
 }

@@ -1,0 +1,7 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://nspk.com/	12389	12389	194.190.0.23	403	0	0	text/plain	63	0a61830f5b6a233bb633e31cda1faf452ffcd6b9e32a55efe4f82361ec0efade	NA	NA	NA	2026-11-15T15:43:28.337051+00:00
+https://nspk.com/	25513	25513	194.190.0.23	403	0	0	text/plain	63	6dd13aa3aa6850d21f83a0ce584b1dd268434ad8da5ce7af55b1ab81eaae7021	NA	NA	NA	2026-11-15T15:43:44.856262+00:00
+https://sbp.nspk.ru/	12389	12389	194.190.0.23	200	0	0	text/html;charset=utf-8	10000	2b29db9b1d6e6d1268aaf00be6984553ce7977fcc404156032002f58625a0213	СБП — Официальный сайт Системы быстрых платежей Банка России | Переводы и оплата	NA	NA	2026-11-15T15:43:36.005911+00:00
+https://sbp.nspk.ru/	25513	25513	194.190.0.23	200	0	0	text/html;charset=utf-8	10000	b4c5d42b80f2155ad1bceba849b3999377c877f561e6ca7c03c8743b83f35c4c	NA	NA	NA	2026-11-15T15:43:52.215512+00:00
+https://www.nspk.com/	12389	12389	194.190.0.23	403	0	0	text/plain	63	23f147d562021cf682536dc033e3a462baaa167199da6dea1fea5b9dc94cb6f9	NA	NA	NA	2026-11-15T15:43:31.869643+00:00
+https://www.nspk.com/	25513	25513	194.190.0.23	403	0	0	text/plain	63	ac53634be256230f82b41c509232915ea1e461f76b511d28d73e3e04c79d2cb9	NA	NA	NA	2026-11-15T15:43:48.580819+00:00

@@ -1,0 +1,4 @@
+url	trust_profile	ca_url	ca_pem_sha256	ca_x509_sha256	http_as12389	http_as25513	policy
+https://nspk.com/	isolated_root	https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt	936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504	d26d2d0231b7c39f92cc738512ba54103519e4405d68b5bd703e9788ca8ecf31	403	403	hold
+https://www.nspk.com/	isolated_root	https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt	936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504	d26d2d0231b7c39f92cc738512ba54103519e4405d68b5bd703e9788ca8ecf31	403	403	hold
+https://sbp.nspk.ru/	default	NA	NA	NA	200	200	already_covered
