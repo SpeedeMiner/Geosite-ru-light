@@ -1,0 +1,4 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	megafon.tv	megafon.tv	https://megafon.tv/		https://www.sostav.ru/publication/smotr-shka-62295.html
+corporate	control	smotreshka.tv	smotreshka.tv	https://smotreshka.tv/	Смотрёшка	https://megafon.tv/
+corporate	control	ticketscloud.com	ticketscloud.com	https://ticketscloud.com/	Ticketscloud	https://b2b-live.mts.ru/ticket-services
