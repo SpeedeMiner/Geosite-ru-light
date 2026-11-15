@@ -14,7 +14,8 @@ AUDIT = Path(__file__).resolve().parent
 class SealWindowTests(unittest.TestCase):
     def test_input_counts_and_pending_ids_are_distinct(self):
         dat=Path(os.environ['GEOSITE_TEST_DAT_DIR'])
-        a,b,c=records(AUDIT/'wide-009/next-get-window/first.tsv')[:3]
+        a,b,c=[dict(cohort='diagnostic',type='diagnostic',rule=f'{h}.example',host=f'{h}.example',
+                    url=f'https://{h}.example/',markers='',source='') for h in ('a','b','c')]
         plan={r['url']:('fixture',r) for r in (a,b,c)}
         first=dict(a,test='get',requested_family=4,state='observed',id='test-seal-01',
                    probe_states={'visible_body_review':3},
@@ -32,7 +33,8 @@ class SealWindowTests(unittest.TestCase):
 
     def test_wrong_cohort_and_duplicate_id_rejected(self):
         dat=Path(os.environ['GEOSITE_TEST_DAT_DIR'])
-        a,b=records(AUDIT/'wide-009/next-get-window/first.tsv')[:2]
+        a,b=[dict(cohort='diagnostic',type='diagnostic',rule=f'{h}.example',host=f'{h}.example',
+                 url=f'https://{h}.example/',markers='',source='') for h in ('a','b')]
         plan={r['url']:('fixture',r) for r in (a,b)}
         x=dict(test='get',requested_family=4,state='measurement_unfinished',id='test-seal-03')
         with TemporaryDirectory() as d:
