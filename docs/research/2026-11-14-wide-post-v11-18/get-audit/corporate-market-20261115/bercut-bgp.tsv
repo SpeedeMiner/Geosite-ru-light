@@ -1,0 +1,9 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+bercut.com	195.144.243.210	cloudflare|google	195.144.243.0/24	AS201016
+dm.bercut.com	176.57.67.251	cloudflare|google	176.57.67.0/24	AS57724
+docs-esb.bercut.com	195.144.243.208	cloudflare|google	195.144.243.0/24	AS201016
+esb.bercut.com	176.57.67.251	cloudflare|google	176.57.67.0/24	AS57724
+hip.bercut.com	176.57.67.251	cloudflare|google	176.57.67.0/24	AS57724
+rtkitplus.ru	2a00:f940:2:2:1:1:0:127	cloudflare|google	2a00:f940:2::/48	AS197695
+rtkitplus.ru	37.140.192.229	cloudflare|google	37.140.192.0/24	AS197695
+support.bercut.com	195.144.243.208	cloudflare|google	195.144.243.0/24	AS201016

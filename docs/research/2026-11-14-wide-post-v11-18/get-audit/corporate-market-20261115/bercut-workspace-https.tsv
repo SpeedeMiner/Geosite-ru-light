@@ -1,0 +1,8 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+esb.bercut.com	https://esb.bercut.com/	candidate	200	0	0	200	Bercut ESB	NA	04f494b5b0e964107a541ccd4c692043c850395f2a9b917ddfc9df97bc5cf235	2026-11-15T13:27:46.165836+00:00	workspace_unattributed
+docs-esb.bercut.com	https://docs-esb.bercut.com/docs-user_guide/navigation_main_page/	candidate	200	0	0	200	Навигация в пользовательском интерфейсе | Bercut ESB	NA	2d045134a2ddc33a1a45d9fb0b84de1247918182561c265cd8b70e36476c9b2a	2026-11-15T13:27:44.370500+00:00	workspace_unattributed
+support.bercut.com	https://support.bercut.com/	candidate	200	0	0	200	Bercut	NA	7264f327fe2f910289c0745301b2c3e25e510ec2f49ef182457a6200bf40b358	2026-11-15T13:27:47.986157+00:00	workspace_unattributed
+hip.bercut.com	https://hip.bercut.com/esb	candidate	200	0	0	200	Bercut ESB	NA	05678b836948b9da0768584457a124e15d4ad5bfa9c752b0e98a4b7eaefbd80d	2026-11-15T13:27:47.523984+00:00	workspace_unattributed
+dm.bercut.com	https://dm.bercut.com/	candidate	404	0	0	200	NA	NA	0027ca0c6097ea7596e9777de0d30adb376a887649ccfe4962538f1086482c3c	2026-11-15T13:27:46.766263+00:00	workspace_unattributed
+bercut.com	https://bercut.com/	control	403	0	0	200	NA	NA	a259ef7f10706dfea2020e414aa7bfa766efbacd8b6bc29128f6f7b8ef59c464	2026-11-15T13:27:45.888743+00:00	workspace_unattributed
+rtkitplus.ru	https://rtkitplus.ru/	control	200	0	0	200	РТК ИТ+	NA	15de7c581adcb852664fb058a95ca8ad37bb4caf414e48df7217d2afffa37e5c	2026-11-15T13:27:46.063070+00:00	workspace_unattributed

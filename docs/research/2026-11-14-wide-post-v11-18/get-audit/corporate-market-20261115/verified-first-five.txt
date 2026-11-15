@@ -1,0 +1,5 @@
+full:avitoplato.tech
+full:docs.trisigma.io
+full:getalt.org
+full:mirmon.altlinux.org
+full:trisigma.io
