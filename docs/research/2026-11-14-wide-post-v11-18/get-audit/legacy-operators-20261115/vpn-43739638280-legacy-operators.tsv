@@ -1,0 +1,11 @@
+url	asn	asn_ris	eligible	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_scheme	redirect_host	redirect_path	state	observed_at
+https://akado.tv/	12389	12389	yes	185.198.112.26	200	63	0	text/html; charset=utf-8	10000	3762c8231786331b8ed97a55367c6f08554135ae2ac8b6e6f6c29c9dc91cfd05	АКАДО ТВ	NA	NA	NA	vpn_marker	2026-11-15T17:11:43.633079+00:00
+https://akado.tv/eula	12389	12389	yes	185.198.112.26	200	0	0	application/pdf	10000	541ce4e68abb4ae2e96d1364844cb1ce20019286bdf941150ac1f8f454d3f655	NA	NA	NA	NA	vpn_body_unproven	2026-11-15T17:11:45.909774+00:00
+https://www.megafon.tv/	12389	12389	yes	83.149.14.228	NA	60	10	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T17:11:46.898349+00:00
+https://megafon.tv/	12389	12389	yes	185.198.112.61	301	0	0	text/plain; charset=utf-8	69	48feb6134ea33506a0388bd421a3040238c50bee859d6b1cc5063025d2ac4101	NA	https	smotreshka.tv	/	vpn_redirect	2026-11-15T17:11:48.249182+00:00
+https://smotreshka.tv/	12389	12389	yes	185.198.112.27	200	0	0	text/html; charset=utf-8	10000	00674cecd66d770627500c895cbbcaea5e2cb606527b9bda899421c7969f6fd0	NA	NA	NA	NA	vpn_visible_review	2026-11-15T17:11:50.241918+00:00
+https://akado.tv/	44724	44724	yes	185.198.112.26	200	63	0	text/html; charset=utf-8	10000	3762c8231786331b8ed97a55367c6f08554135ae2ac8b6e6f6c29c9dc91cfd05	АКАДО ТВ	NA	NA	NA	vpn_marker	2026-11-15T17:12:05.275312+00:00
+https://akado.tv/eula	44724	44724	yes	185.198.112.26	200	0	0	application/pdf	10000	541ce4e68abb4ae2e96d1364844cb1ce20019286bdf941150ac1f8f454d3f655	NA	NA	NA	NA	vpn_body_unproven	2026-11-15T17:12:11.185966+00:00
+https://www.megafon.tv/	44724	44724	yes	83.149.14.228	NA	60	10	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T17:12:12.645018+00:00
+https://megafon.tv/	44724	44724	yes	185.198.112.61	301	0	0	text/plain; charset=utf-8	69	48feb6134ea33506a0388bd421a3040238c50bee859d6b1cc5063025d2ac4101	NA	https	smotreshka.tv	/	vpn_redirect	2026-11-15T17:12:14.624778+00:00
+https://smotreshka.tv/	44724	44724	yes	185.198.112.27	200	0	0	text/html; charset=utf-8	10000	00674cecd66d770627500c895cbbcaea5e2cb606527b9bda899421c7969f6fd0	NA	NA	NA	NA	vpn_visible_review	2026-11-15T17:12:19.429569+00:00
