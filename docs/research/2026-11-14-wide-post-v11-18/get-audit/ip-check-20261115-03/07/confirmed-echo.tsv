@@ -1,0 +1,7 @@
+"host"	"url"	"result"	"sources"
+"atlas.baebeca.de"	"https://atlas.baebeca.de/"	"ip_echo_plain_v6"	"https://www.baebeca.de/hilfe/tools-und-formulare/eigene-ip-adresse/"
+"checkip.bagoly.se"	"https://checkip.bagoly.se/?format=text"	"ip_echo_plain_v6"	"https://bagoly.se/checkip/"
+"ipaddress.fi"	"https://ipaddress.fi/api/v1/my-ip?format=text"	"ip_echo_plain_v6"	"https://ipaddress.fi/api-docs"
+"myops.in"	"https://myops.in/ip"	"ip_echo_plain_v6"	"https://myops.in/"
+"v4.yinghualuo.cn"	"https://v4.yinghualuo.cn/bejson"	"ip_echo_json_v4"	"https://github.com/jeessy2/ddns-go/blob/b521e5e32e78a484631b7f3e9ce31f4e28c65380/web/writing.html"
+"v6.yinghualuo.cn"	"https://v6.yinghualuo.cn/bejson"	"ip_echo_json_v6"	"https://github.com/jeessy2/ddns-go/blob/b521e5e32e78a484631b7f3e9ce31f4e28c65380/web/writing.html"

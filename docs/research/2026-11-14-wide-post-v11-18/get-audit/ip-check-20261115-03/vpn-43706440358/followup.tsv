@@ -1,0 +1,14 @@
+host	url	matching_asns	matched_in	outcomes
+6.wsmdn.top	https://6.wsmdn.top/	0		AS25513 dns_unproven | AS34533 dns_unproven
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	0		AS25513 dns_unproven | AS34533 dns_unproven
+fwd.gr	https://fwd.gr/api/ip	0		AS25513 HTTP 403 | AS34533 HTTP 403
+geo.brdtest.com	https://geo.brdtest.com/mygeo.json	0		AS25513 HTTP 403 | AS34533 HTTP 403
+heresmyip.com	https://heresmyip.com/ip	1	AS25513	AS25513 match | AS34533 transport_unproven
+ip.nelchancho.com	https://ip.nelchancho.com/ip	1	AS34533	AS25513 transport_unproven | AS34533 match
+ip.tecnotip.com.br	https://ip.tecnotip.com.br/?plain	0		AS25513 transport_unproven | AS34533 transport_unproven
+ip6.hostux.net	https://ip6.hostux.net/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ip6.nnev.de	https://ip6.nnev.de/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ipv6.hostux.net	https://ipv6.hostux.net/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	0		AS25513 dns_unproven | AS34533 dns_unproven
+monip.lws.fr	https://monip.lws.fr/	0		AS25513 HTTP 403 | AS34533 HTTP 403
+myip.helpmek.com	https://myip.helpmek.com/ip	1	AS34533	AS25513 transport_unproven | AS34533 match

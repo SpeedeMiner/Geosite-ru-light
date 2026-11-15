@@ -1,0 +1,98 @@
+[
+  {
+    "artifact_id": 14159120094,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "01",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 16,
+    "run": 43706440358,
+    "sha256": "6022e8a7291822e253f5ca3f6e42e7a29d194d1a47c16536366f0a161b6707fa",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14157893744,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "02",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 19,
+    "run": 43706440358,
+    "sha256": "0e01708600c2aacb2de1336b53bc9b0425e8a0ad9066c76fc19c1410694d0c25",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14157699242,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "03",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 15,
+    "run": 43706440358,
+    "sha256": "95c58d25998f11f3fce8f5b0cb54bd6560f2474e93c1a0178392cb8fcbf55f47",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14158038612,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "04",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 18,
+    "run": 43706440358,
+    "sha256": "dda4a15fa7dff0807d93fdd86c24e10b7feb69e93fcfab8cd68bd6112e4493a8",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14157629627,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "05",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 15,
+    "run": 43706440358,
+    "sha256": "2ad0ff34e76226609467930ab62a7150b5506a989ab823c6b3d41d89e9e3b1fe",
+    "urls": 10
+  },
+  {
+    "artifact_id": 14157699379,
+    "asns": [
+      25513,
+      34533
+    ],
+    "attempt": 1,
+    "attempts": 20,
+    "batch": "06",
+    "execution": "18005af3b99f6cde31129939a33a9c491b4e68e6",
+    "globalping_requests": 0,
+    "http": 20,
+    "run": 43706440358,
+    "sha256": "2dec328975cdbaa2007cc38bf51a10297914308d64d825b4e144cbcf463a92b0",
+    "urls": 10
+  }
+]

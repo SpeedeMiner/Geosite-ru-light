@@ -1,0 +1,61 @@
+host	url	matching_asns	matched_in	outcomes
+4.wsmdn.top	https://4.wsmdn.top/	2	AS25513|AS34533	AS25513 match | AS34533 match
+6.wsmdn.top	https://6.wsmdn.top/	0		AS25513 dns_unproven | AS34533 dns_unproven
+api.arcproxy.cloud	https://api.arcproxy.cloud/api/v1/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+api.dnswiz.app	https://api.dnswiz.app/v1/tools/ip?format=text	2	AS25513|AS34533	AS25513 match | AS34533 match
+api.f12.biz	https://api.f12.biz/api/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+api.networktools.dev	https://api.networktools.dev/v1/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+checkip.dynu.com	https://checkip.dynu.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+checkip.ipcow.com	https://checkip.ipcow.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	0		AS25513 dns_unproven | AS34533 dns_unproven
+checkmyipnow.com	https://checkmyipnow.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+fwd.gr	https://fwd.gr/api/ip	0		AS25513 HTTP 403 | AS34533 HTTP 403
+gd.geobytes.com	https://gd.geobytes.com/GetCityDetails	2	AS25513|AS34533	AS25513 match | AS34533 match
+geo.brdtest.com	https://geo.brdtest.com/mygeo.json	0		AS25513 HTTP 403 | AS34533 HTTP 403
+globalip.me	https://globalip.me/	2	AS25513|AS34533	AS25513 match | AS34533 match
+globaliplookup.com	https://globaliplookup.com/api/network	2	AS25513|AS34533	AS25513 match | AS34533 match
+heresmyip.com	https://heresmyip.com/ip	1	AS25513	AS25513 match | AS34533 transport_unproven
+ifconfig.ovh	https://ifconfig.ovh/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.chu.es	https://ip.chu.es/?format=json	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.decodo.com	https://ip.decodo.com/json	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.hostux.net	https://ip.hostux.net/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.ls	https://ip.ls/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.mademoe.com	https://ip.mademoe.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.nelchancho.com	https://ip.nelchancho.com/ip	1	AS34533	AS25513 transport_unproven | AS34533 match
+ip.robtex.com	https://ip.robtex.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip.tecnotip.com.br	https://ip.tecnotip.com.br/?plain	0		AS25513 transport_unproven | AS34533 transport_unproven
+ip.zxinc.org	https://ip.zxinc.org/api.php?type=json	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip233.cn	https://ip233.cn/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip4.hostux.net	https://ip4.hostux.net/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip4.nnev.de	https://ip4.nnev.de/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ip6.hostux.net	https://ip6.hostux.net/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ip6.nnev.de	https://ip6.nnev.de/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ipaddress.no	https://ipaddress.no/api/v1/my-ip?format=text	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipaddress.pt	https://ipaddress.pt/api/v1/my-ip?format=text	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipaddress.ro	https://ipaddress.ro/api/v1/my-ip?format=text	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipadresimne.net	https://ipadresimne.net/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipconfig.co.uk	https://ipconfig.co.uk/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipdidi.com	https://ipdidi.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipgetter.com	https://ipgetter.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipkitten.com	https://ipkitten.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+iprapid.com	https://iprapid.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ips.is	https://ips.is/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipto.to	https://ipto.to/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipv4.hostux.net	https://ipv4.hostux.net/	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipv4.robtex.com	https://ipv4.robtex.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipv4.whatismyipnow.com	https://ipv4.whatismyipnow.com/json	2	AS25513|AS34533	AS25513 match | AS34533 match
+ipv6.hostux.net	https://ipv6.hostux.net/	0		AS25513 dns_unproven | AS34533 dns_unproven
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	0		AS25513 dns_unproven | AS34533 dns_unproven
+monip.lws.fr	https://monip.lws.fr/	0		AS25513 HTTP 403 | AS34533 HTTP 403
+myip.dog	https://myip.dog/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+myip.helpmek.com	https://myip.helpmek.com/ip	1	AS34533	AS25513 transport_unproven | AS34533 match
+myip.sharapov.biz	https://myip.sharapov.biz/api	2	AS25513|AS34533	AS25513 match | AS34533 match
+myiphere.com	https://myiphere.com/api/v1/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+myipspot.com	https://myipspot.com/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+novanode.eu	https://novanode.eu/fr/outils/mon-ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+protooli.com	https://protooli.com/my-ip/raw	2	AS25513|AS34533	AS25513 match | AS34533 match
+test.wsmdn.top	https://test.wsmdn.top/	2	AS25513|AS34533	AS25513 match | AS34533 match
+webtracecheck.com	https://webtracecheck.com/api/v1/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+whatismyiper.com	https://whatismyiper.com/api/ip	2	AS25513|AS34533	AS25513 match | AS34533 match
+whatsmyconnection.com	https://whatsmyconnection.com/	2	AS25513|AS34533	AS25513 match | AS34533 match
+worldip.io	https://worldip.io/ja/	2	AS25513|AS34533	AS25513 match | AS34533 match
