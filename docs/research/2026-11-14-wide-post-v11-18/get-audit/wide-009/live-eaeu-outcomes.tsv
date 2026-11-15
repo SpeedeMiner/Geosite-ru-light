@@ -1,0 +1,6 @@
+"host"	"url"	"id"	"http_by_asn"	"states"	"valid_tls_and_san"	"marker_count"
+"barriers.eaeunion.org"	"https://barriers.eaeunion.org/barriers"	"27o1gql870MyZB6jL00021VVG"	"3216=200|12389=200|207957=200"	"3216=body_unproven|12389=body_unproven|207957=body_unproven"	"3"	"0"
+"courteurasian.org"	"https://courteurasian.org/"	"2AflymWlWh8aMfLKJ00021VVG"	"3216=403|12389=403|207957=403"	"3216=http_other|12389=http_other|207957=http_other"	"3"	"0"
+"educ.eaeunion.org"	"https://educ.eaeunion.org/moodle/"	"2U2zCjGZjwAZouZB400021VVG"	"3216=200|12389=200|207957=200"	"3216=body_unproven|12389=body_unproven|207957=body_unproven"	"3"	"0"
+"regulation.eaeunion.org"	"https://regulation.eaeunion.org/"	"2Ymbr6iKE3cxkf1cS00021VVG"	"3216=200|12389=200|207957=200"	"3216=body_marker_observed|12389=body_marker_observed|207957=body_marker_observed"	"3"	"3"
+"tech.eaeunion.org"	"https://tech.eaeunion.org/tech"	"21ouu53d8uVYmrofK00021VVG"	"3216=200|12389=200|207957=200"	"3216=body_unproven|12389=body_unproven|207957=body_unproven"	"3"	"0"
