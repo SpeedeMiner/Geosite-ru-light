@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	peers.tv	peers.tv	https://peers.tv/	Peers.TV	https://b2b.peers.tv/pl_agreement
+corporate	candidate	b2b.peers.tv	b2b.peers.tv	https://b2b.peers.tv/ott	Peers.TV	https://inetra.ru/products
+corporate	candidate	b2b.peers.tv	b2b.peers.tv	https://b2b.peers.tv/pl_agreement	Инетра	https://b2b.peers.tv/pl_agreement
+corporate	candidate	life-stream.tv	life-stream.tv	https://life-stream.tv/ru	LifeStream	https://life-stream.tv/ru
+corporate	control	akado.tv	akado.tv	https://akado.tv/	АКАДО	https://www.akado.ru/sub/faq/interaktivnoe-televidenie/
+corporate	control	tv.myttk.ru	tv.myttk.ru	https://tv.myttk.ru/	ТТК	https://tv.myttk.ru/

@@ -1,0 +1,36 @@
+group	host	source	v11_19_dat_match	queued_plus98	decision	reason
+АКАДО	www.akado.ru	https://www.akado.ru/sub/	RU:domain_suffix:ru	false	covered	Справка и техподдержка.
+АКАДО	office.akado.ru	https://www.akado.ru/sub/	RU:domain_suffix:ru	false	covered	Клиентский кабинет и оплата.
+АКАДО	tv.akado.ru	https://www.akado.ru/sub/	RU:domain_suffix:ru	false	covered	Телепрограмма.
+АКАДО	mail.akado.ru	https://www.akado.ru/sub/	RU:domain_suffix:ru	false	covered	Ссылка на почту.
+АКАДО	www.akado-telecom.ru	https://www.akado.ru/sub/	RU:domain_suffix:ru	false	covered	B2B-сайт.
+АКАДО	akado.tv	https://www.akado.ru/sub/faq/interaktivnoe-televidenie/	-	true	queued	В очереди +98.
+АКАДО	www.akado.tv	https://www.akado.ru/sub/faq/interaktivnoe-televidenie/	-	false	hold	WWW в актуальной пользовательской ссылке отсутствует.
+АКАДО	movix.ru	https://www.akado.ru/lp/movix/	RU:domain_suffix:ru	false	covered	Портал и публичные ссылки на приложения.
+АКАДО	movix-cdn.ertelecom.ru	https://movix-cdn.ertelecom.ru/docs/offer.pdf	RU:domain_suffix:ru	false	covered	Хост официального соглашения.
+АКАДО	mc.yandex.ru	https://www.akado.ru/lp/video-devices/	RU:domain_suffix:ru|BLOCK:domain_suffix:mc.yandex.ru	false	exclude	Счётчик, не добавлять из-за обнаружения на витрине.
+Электронный город / AS31200	2090000.ru	https://2090000.ru/about/	RU:domain_suffix:ru	false	covered	Витрина ООО Новотелеком.
+Электронный город / AS31200	my.2090000.ru	https://2090000.ru/about/	RU:domain_suffix:ru	false	covered	Личный кабинет.
+Электронный город / AS31200	billing.novotelecom.ru	https://2090000.ru/about/	RU:domain_suffix:ru	false	covered	Второй опубликованный адрес кабинета.
+Электронный город / AS31200	video.2090000.ru	https://2090000.ru/voprosy-i-otvety/kak-polzovatsya-prilozheniem-moy-dom-dlya-domofona/	RU:domain_suffix:ru	false	covered	Хост назван в официальной инструкции, проверку авторизации не проводим.
+Электронный город / AS31200	2090909.ru	https://2090000.ru/about/	RU:domain_suffix:ru	false	covered	Клиентские услуги для бизнеса.
+Электронный город / AS31200	play.google.com	https://2090000.ru/about/	GOOGLE-PLAY:domain_suffix:play.google.com	false	exclude	Внешний магазин, не провайдерский хост.
+Электронный город / AS31200	itunes.apple.com	https://2090000.ru/about/	-	false	exclude	Внешний магазин, не провайдерский хост.
+ЭР-Телеком	ertelecom.cloud	https://ertelecom.cloud/	-	true	queued	Витрина, точное имя уже в очереди.
+ЭР-Телеком	my.ertelecom.cloud	https://ertelecom.cloud/	-	true	queued	Кабинет, точное имя уже в очереди.
+ЭР-Телеком	www.ertelecom.cloud	https://ertelecom.cloud/	-	false	hold	WWW не подтверждён ссылкой в каталоге.
+ЭР-Телеком	ertracker.ru	https://ertracker.ru/	RU:domain_suffix:ru	false	covered	ER-трекер.
+ЭР-Телеком	dp.ertelecom.ru	https://dp.ertelecom.ru/assets/ERNet_Telecom_%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B5_%D0%B8_%D1%8D%D0%BA%D1%81%D0%BF%D0%BB%D1%83%D0%B0%D1%82%D0%B0%D1%86%D0%B8%D0%B8.pdf	RU:domain_suffix:ru	false	covered	Портал разработчика; связь подтверждает руководство на этом хосте.
+ЭР-Телеком	iot-ertelecom.ru	https://ertracker.ru/	RU:domain_suffix:ru	false	covered	Домен IoT в документации продукта.
+ТрансТелеКом / AS20485	myttk.ru	https://company.ttk.ru/ttk-group/ttks/	RU:domain_suffix:ru	false	covered	Абонентская витрина, прямая ссылка из корпоративного сайта.
+ТрансТелеКом / AS20485	tv.myttk.ru	https://tv.myttk.ru/	RU:domain_suffix:ru	false	covered	Потребительский ТВ-сервис.
+ТрансТелеКом / AS20485	cloud.ttk.ru	https://cloud.ttk.ru/about	RU:domain_suffix:ru	false	covered	Облачная витрина.
+ТрансТелеКом / AS20485	ttk.net	https://company.ttk.ru/ttk-group/ttks/	-	false	hold	На официальной карточке используется .ru, аналогия с .net не доказательство.
+ТрансТелеКом / AS20485	ttk.tv	https://tv.myttk.ru/	-	false	hold	Актуальный портал опубликован как tv.myttk.ru, .tv не подтверждён.
+Инетра	inetra.ru	https://inetra.ru/products	RU:domain_suffix:ru	false	covered	Официальный каталог разработчика.
+Инетра	peers.tv	https://b2b.peers.tv/pl_agreement	-	false	candidate	Российский пользовательский портал, прямо указан в соглашении.
+Инетра	b2b.peers.tv	https://inetra.ru/products	-	false	candidate	Официальный адрес технических материалов операторов, только exact.
+Инетра	www.peers.tv	https://b2b.peers.tv/pl_agreement	-	false	hold	Точный WWW не опубликован в указанном соглашении.
+ЛайфСтрим	life-stream.tv	https://life-stream.tv/ru	-	false	candidate	Публичный корпоративный сайт и путь /ru, отдельный от ТВ ТТК.
+ЛайфСтрим	smotreshka.tv	https://smotreshka.tv/user_agreement	RU:domain_suffix:smotreshka.tv	false	covered	Абонентский портал, точная проверка правил показала покрытие суффиксом.
+ЛайфСтрим	lfstrm.tv	https://docs.carbonsoft.ru/pages/viewpage.action?pageId=53674051	-	false	hold	В примере интеграции только условное клиентское имя. Суффикс и вымышленные хосты не тестировать.
