@@ -1,0 +1,6 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+divkit.tech	https://divkit.tech/docs/ru/	candidate	200	0	0	200	DivKit | DivKit	NA	a4ad7e1f78df6d78936a182e37db7d723c86e43362c7ad08250677423755e29c	2026-11-15T16:07:35.750262+00:00	workspace_unattributed
+kas.pr	https://kas.pr/8ze6	candidate	301	0	0	200	NA	github.com	501bbeb226dd3e2db5435effa01e494f1265604f300cf125ebccd693a0c25bda	2026-11-15T16:07:35.096932+00:00	workspace_unattributed
+taiga-ui.dev	https://taiga-ui.dev/info/about/	candidate	200	0	0	200	Taiga UI: About	NA	03e81dbb65824de38b7742f8ed24f8160ce9a59b93e2bcb6a42577e2df8c42ba	2026-11-15T16:07:35.001576+00:00	workspace_unattributed
+www.nexign.com	https://www.nexign.com/	candidate	301	0	0	200	NA	nexign.com	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	2026-11-15T16:07:36.036625+00:00	workspace_unattributed
+nexign.com	https://nexign.com/	control	200	0	0	200	Nexign Official	NA	03eaf69543035c4c13d8ef88d0cb4913592ab7b1bfa28e2ff4159c21f3e461f6	2026-11-15T16:07:38.010629+00:00	workspace_unattributed

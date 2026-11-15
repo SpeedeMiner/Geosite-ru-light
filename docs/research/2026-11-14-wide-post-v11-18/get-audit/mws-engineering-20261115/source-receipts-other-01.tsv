@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+tbank_oss	https://ai.tbank.ru/opensource/	https://ai.tbank.ru/opensource/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+tbank_dev	https://developer.tbank.ru/	https://developer.tbank.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+mts_tech	https://tech.mts.ru/true-tech/	https://tech.mts.ru/true-tech/	500	0	0	39115	240291b3445b40794e96359f302e6f504abb5ca7b32cb5f9438c6ac98c407ebd	text/html
+mts_hello	https://helloconf.mts.ru/	https://helloconf.mts.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+mts_stack	https://mts-digital.ru/technology/techradar/	https://mts-digital.ru/technology/techradar/	500	0	0	39129	0f5a0a93ce85e06024f6e3ad6364dc226087bc8cc7cb98011e4cfb40fc3078bc	text/html
+mts_analysis	https://a.mts.ru/support/flow-management/to-start-working-in-analytics/	https://a.mts.ru/support/flow-management/to-start-working-in-analytics/	200	0	0	75391	5a4f814e237abebfdde08472ee0db6c47c549e3f80663d19e96640c84a7bbb08	text/html; charset=utf-8
+rt_open	https://www.company.rt.ru/press/news/d467492/	https://www.company.rt.ru/press/news/d467492/	200	0	0	59887	43342ae8b836b9871e3b66485cc73f1ad897e4406ba0f402d96f2f90253cc215	text/html; charset=UTF-8
+rt_tdata	https://tdata.tech/	https://tdata.tech/	200	0	0	908256	fc02a02bb931075492384fdd92ff1c4a337d8c1bb8cb5ac8875af6972a0a0e41	text/html; charset=UTF-8
+rt_tdata_docs	https://docs.tdata.tech/ru/index.html	https://docs.tdata.tech/ru/index.html	200	0	0	13697	17de67d5d2d1d135a47b69a9095741e263fa980728b0f1dfe29f1dbf05860ccf	text/html
+mega_main	https://tech.megafon.ru/	https://tech.megafon.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+nexign	https://nexign.com/	https://nexign.com/	200	0	0	112060	e64181f2284068681fb57634c44b720c36c7df416cfb4422a9260cd0e23d0f4a	text/html; charset=UTF-8
+bee_cloud	https://docs.cloud.beeline.ru/	https://docs.cloud.beeline.ru/	403	0	0	14784	9c6283225f954d261cfcd4064ea71a7be5a285b9ce9c65f4f6def940421fc921	text/html

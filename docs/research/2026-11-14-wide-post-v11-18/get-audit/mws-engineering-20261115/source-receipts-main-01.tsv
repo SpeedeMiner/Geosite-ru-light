@@ -1,0 +1,17 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+mws_prod	https://mws.ru/docs/products.html	https://mws.ru/docs/	200	0	0	79960	22c63123f3f11f9aad021288f9d6dc898659088de52c9bff976cd850f0781d86	text/html
+mws_main	https://mws.ru/	https://mws.ru/	200	0	0	1428923	8c6c310230bd5a05abf9cbea0fb0ecdb9c126dc3c4947972641af99f390f00f0	text/html; charset=utf-8
+mws_ai	https://mts.ai/	https://mts.ai/	200	0	0	210307	9a74980380b3dfb9053bed00539411a84f790e3299232e333d3faf4bada765f1	text/html; charset=UTF-8
+mws_aprod	https://mts.ai/product/	https://mts.ai/product/	200	0	0	153520	3035ad46effb99a1d5b09d86e6c65511185d4cdcd1d7c0ede7c9f728a3419ac4	text/html; charset=UTF-8
+mws_cowork	https://mts.ai/product/mws-ai-cowork/	https://mts.ai/product/mws-ai-cowork/	200	0	0	179703	cd19620a00cdcc9ab354680ac3ad6fbd3eb3e84787afe341530bf332fcd2d5a9	text/html; charset=UTF-8
+mws_git	https://github.com/MTSWebServices	https://github.com/MTSWebServices	200	0	0	253329	656c1831a927a78cce850a4a6a18b9a1a9a17817a68a6c057790369f3fb3ccd9	text/html; charset=utf-8
+mts_ai_git	https://github.com/mts-ai	https://github.com/mts-ai	200	0	0	234831	94af80694e8376841451ef5a9ae5162766d6a906f81c01cf3810c28624fb3e59	text/html; charset=utf-8
+rectools	https://rectools.readthedocs.io/en/stable/	https://rectools.readthedocs.io/en/stable/	200	0	0	51819	150e4268f1c658b513579dcbb5ee680571117baa712ec5f95b85d9f4a33a71b0	text/html; charset=utf-8
+ambrosia	https://ambrosia.readthedocs.io/en/latest/	https://ambrosia.readthedocs.io/en/latest/	200	0	0	27868	f8fa4c7f7eb33db9adf1cd66e4986269cf2057b12581a333c18096f5e74051af	text/html; charset=utf-8
+onetl	https://onetl.readthedocs.io/en/stable/	https://onetl.readthedocs.io/en/stable/	200	0	0	120817	4d378f9eadf8e479ad100d9268152c6c7603218b158d434deb86f6d8eb25d029	text/html; charset=utf-8
+datarent	https://data-rentgen.readthedocs.io/en/stable/	https://data-rentgen.readthedocs.io/en/stable/	200	0	0	57399	925ffabcaae59b50671616518c99af80ec371051495026daaf90b99f7d0ff82a	text/html; charset=utf-8
+syncmaster	https://syncmaster.readthedocs.io/en/stable/	https://syncmaster.readthedocs.io/en/stable/	200	0	0	49487	87559c0801397c936013a4cf606e711053c1fd01d35ccc4a6ed1cbb0d002d1c7	text/html; charset=utf-8
+entities	https://etl-entities.readthedocs.io/en/stable/	https://etl-entities.readthedocs.io/en/stable/	200	0	0	25561	3528509719736a14e3652a6d67bbdcc3334c8f7452c3c24615d058ae1988874f	text/html; charset=utf-8
+evac	https://evacuator.readthedocs.io/en/stable/	https://evacuator.readthedocs.io/en/stable/	200	0	0	21325	5906162a3b03708bde610f14675d7ca9778883d517e78aa78db041e8741b0835	text/html; charset=utf-8
+horizon	https://data-horizon.readthedocs.io/en/stable/	https://data-horizon.readthedocs.io/en/stable/	200	0	0	40901	cdca00ce13296a0aaac401ace36fbbeaf01e66be31049d6d3d81aed08fea4719	text/html; charset=utf-8
+hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	https://horizon-hwm-store.readthedocs.io/en/stable/	200	0	0	19900	a5f032b87e7e368366b49681107d3ea2accdc8b107a28fba7f3ff440f2c3bf09	text/html; charset=utf-8

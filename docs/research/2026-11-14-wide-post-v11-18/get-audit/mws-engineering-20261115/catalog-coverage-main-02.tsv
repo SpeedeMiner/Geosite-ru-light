@@ -1,0 +1,51 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS	rectools	https://rectools.readthedocs.io/en/stable/	official-source	rectools.readthedocs.io	https://rectools.readthedocs.io/en/stable/	Welcome to RecTools’s documentation! — RecTools documentation	NA	NA	NA	NA
+MWS	rectools	https://rectools.readthedocs.io/en/stable/	official-link	www.sphinx-doc.org	https://www.sphinx-doc.org/	Sphinx	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-source	ambrosia.readthedocs.io	https://ambrosia.readthedocs.io/en/latest/	Ambrosia 0.5.3.post1 documentation	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	codecov.io	https://codecov.io/gh/MobileTeleSystems/Ambrosia	NA	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	github.com	https://github.com/MobileTeleSystems/Ambrosia	GitHub Repository	NA	NA	NA	GITHUB
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	public-image	img.shields.io	https://img.shields.io/pypi/v/ambrosia	PyPI	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	pradyunsg.me	https://pradyunsg.me/	@pradyunsg	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	pypi.org	https://pypi.org/project/ambrosia	PyPI	NA	NA	NA	NA
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	t.me	https://t.me/[private-invite-omitted]	Telegram Chat	NA	NA	NA	TELEGRAM
+MWS	ambrosia	https://ambrosia.readthedocs.io/en/latest/	official-link	www.sphinx-doc.org	https://www.sphinx-doc.org/	Sphinx	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	docs.vmware.com	https://docs.vmware.com/en/VMware-Greenplum-Connector-for-Apache-Spark/index.html	Greenplum Spark connector	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	flink.apache.org	https://flink.apache.org/	Apache Flink	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/onetl	NA	NA	NA	NA	GITHUB
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	hadoop.apache.org	https://hadoop.apache.org/docs/current3/hadoop-aws/tools/hadoop-aws/index.html	Hadoop AWS	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-source	onetl.readthedocs.io	https://onetl.readthedocs.io/en/stable/	onETL Docs	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/onetl/	NA	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MTSWebServices/onetl/develop	NA	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	spark.apache.org	https://spark.apache.org/	Apache Spark	NA	NA	NA	NA
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	squidfunk.github.io	https://squidfunk.github.io/mkdocs-material/	Material for MkDocs	NA	NA	NA	GITHUB
+MWS	onetl	https://onetl.readthedocs.io/en/stable/	official-link	www.mongodb.com	https://www.mongodb.com/docs/spark-connector/current	MongoDB Spark connector	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	badge.fury.io	https://badge.fury.io/py/data-rentgen	NA	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	codecov.io	https://codecov.io/github/MTSWebServices/data-rentgen	NA	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-source	data-rentgen.readthedocs.io	https://data-rentgen.readthedocs.io/en/stable/	Data.Rentgen Docs	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	datahubproject.io	https://datahubproject.io/	Datahub	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/data-rentgen	NA	NA	NA	NA	GITHUB
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	hub.docker.com	https://hub.docker.com/r/mtsrus/data-rentgen	NA	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	public-image	img.shields.io	https://img.shields.io/docker/v/mtsrus/data-rentgen	Docker image	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	marquezproject.ai	https://marquezproject.ai/	Marquez	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	open-metadata.org	https://open-metadata.org/	OpenMetadata	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	openlineage.io	https://openlineage.io/	OpenLineage	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/data-rentgen/	NA	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	public-image	readthedocs.org	https://readthedocs.org/projects/data-rentgen/badge/	Documentation	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MTSWebServices/data-rentgen/develop	NA	NA	NA	NA	NA
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	squidfunk.github.io	https://squidfunk.github.io/mkdocs-material/	Material for MkDocs	NA	NA	NA	GITHUB
+MWS	datarent	https://data-rentgen.readthedocs.io/en/stable/	official-link	www.repostatus.org	https://www.repostatus.org/	NA	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	badge.fury.io	https://badge.fury.io/py/data-syncmaster	NA	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/data-syncmaster	NA	NA	NA	NA	GITHUB
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	hub.docker.com	https://hub.docker.com/r/mtsrus/syncmaster-server	NA	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	public-image	img.shields.io	https://img.shields.io/docker/v/mtsrus/syncmaster-server	Docker image	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	onetl.readthedocs.io	https://onetl.readthedocs.io/	onETL	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/data-syncmaster/	NA	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	public-image	readthedocs.org	https://readthedocs.org/projects/syncmaster/badge/	Documentation	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MTSWebServices/syncmaster/develop	NA	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	spark.apache.org	https://spark.apache.org/	Apache Spark	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	squidfunk.github.io	https://squidfunk.github.io/mkdocs-material/	Material for MkDocs	NA	NA	NA	GITHUB
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-source	syncmaster.readthedocs.io	https://syncmaster.readthedocs.io/en/stable/	Data.SyncMaster Docs	NA	NA	NA	NA
+MWS	syncmaster	https://syncmaster.readthedocs.io/en/stable/	official-link	www.repostatus.org	https://www.repostatus.org/	NA	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-source	etl-entities.readthedocs.io	https://etl-entities.readthedocs.io/en/stable/	etl-entities 3.0.4 documentation	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/etl-entities	NA	NA	NA	NA	GITHUB
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	public-image	img.shields.io	https://img.shields.io/pypi/v/etl-entities	PyPI - Latest Release	NA	NA	NA	NA

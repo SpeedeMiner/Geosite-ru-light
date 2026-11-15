@@ -1,0 +1,15 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	public-image	camo.githubusercontent.com	https://camo.githubusercontent.com/[image-proxy-path-omitted]	arXiv	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-source	github.com	https://github.com/mts-ai/OpenAutoNLU	GitHub - mts-ai/OpenAutoNLU: An open-source pipeline for training natural language understanding mod	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	huggingface.co	https://huggingface.co/datasets/DeepPavlov/snips	SNIPS	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	openautonlu.dev	https://openautonlu.dev/	openautonlu.dev	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	pypi.org	https://pypi.org/project/open-autonlu/	NA	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	www.python.org	https://www.python.org/downloads/	NA	NA	NA	NA	NA

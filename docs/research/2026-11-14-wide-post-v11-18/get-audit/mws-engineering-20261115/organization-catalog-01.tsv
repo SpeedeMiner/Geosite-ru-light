@@ -1,0 +1,12 @@
+organization	api	rows	active_nonfork	scope	snapshot_sha256
+avito-tech	https://api.github.com/orgs/avito-tech/repos?type=public&per_page=100	100	54	first_page_only	b535c2924ab868a56a663afb8cff42e6ad718923847bbd25ec9c455da78039d1
+cloud-ru	https://api.github.com/orgs/cloud-ru/repos?type=public&per_page=100	34	34	short_page	379717c2fcf24d8cc3d13cee9743e2f48b268ae45c3afa5b90882b8c0e23d0c7
+KasperskyLab	https://api.github.com/orgs/KasperskyLab/repos?type=public&per_page=100	35	33	short_page	a07f239a9cdf0fc2effe82270fdd9c4e017fd17d9d1b71e29403df0a0649cad2
+mts-ai	https://api.github.com/orgs/mts-ai/repos?type=public&per_page=100	21	20	short_page	49d8f5c7cd1cdf185afd4c9d5345452e7847b10d7247993eca5987a9f5158e8b
+ozontech	https://api.github.com/orgs/ozontech/repos?type=public&per_page=100	29	27	short_page	3514ea797150288c9ad9bbd0eea0b144a247b0ef8f1ba955eea97b6bee27f4ac
+sberbank-ai	https://api.github.com/orgs/sberbank-ai/repos?type=public&per_page=100	11	11	short_page	d615e550cc8094eae7123803eaf8212b1545b74bd703d3044c2bf1651b965d09
+skbkontur	https://api.github.com/orgs/skbkontur/repos?type=public&per_page=100	100	27	first_page_only	c910936b9c10b7a21c4fa6c1b180ca0b306f6323ad0a7665ee18a265173a8629
+tech-beeline	https://api.github.com/orgs/tech-beeline/repos?type=public&per_page=100	27	27	short_page	68da62a497cdb14cbeba8028e74904c3a142a86b727fe8a2d96f1a68b6e7c16a
+vk-cs	https://api.github.com/orgs/vk-cs/repos?type=public&per_page=100	21	21	short_page	4e6803902c06d536cb1077fee5cfcad13aca4714fadd64daebcfa1ad135d5b80
+wildberries-tech	https://api.github.com/orgs/wildberries-tech/repos?type=public&per_page=100	31	19	short_page	1ac0aa9e7e7fb29217090c5a67c1a13130e74c677d1a722ab9fefefe59e1a70f
+MTSWebServices	https://api.github.com/orgs/MTSWebServices/repos?type=public&per_page=100	36	32	short_page	cc9acd8e17c798802cfbbd944fd50930e87b7889f8edc14e6f75f49955a4d342

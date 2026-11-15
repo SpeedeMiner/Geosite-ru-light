@@ -1,0 +1,21 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+МТС	mts_analysis	https://a.mts.ru/support/flow-management/to-start-working-in-analytics/	official-source	a.mts.ru	https://a.mts.ru/support/flow-management/to-start-working-in-analytics/	С чего начать | МТС Аналитика	domain:ru	domain:ru	NA	NA
+МТС	mts_analysis	https://a.mts.ru/support/flow-management/to-start-working-in-analytics/	official-link	id.mts.ru	https://id.mts.ru/	id.mts.ru	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_open	https://www.company.rt.ru/press/news/d467492/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_open	https://www.company.rt.ru/press/news/d467492/	official-link	rt-solar.ru	https://rt-solar.ru/	«РТК-Солар»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_open	https://www.company.rt.ru/press/news/d467492/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d467492/	«Ростелеком» создал безопасный репозиторий open-source библиотек. Официальный информационный сайт Ро	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_open	https://www.company.rt.ru/press/news/d467492/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_open	https://www.company.rt.ru/press/news/d467492/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	docs.tdata.tech	https://docs.tdata.tech/	Документация по продуктам	NA	NA	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	dzen.ru	https://dzen.ru/tdata	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	max.ru	https://max.ru/id9729334015_biz	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	reestr.digital.gov.ru	https://reestr.digital.gov.ru/promo/owner/308101/3462862/	Посмотреть номер	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	rutube.ru	https://rutube.ru/channel/36080529/	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_tdata	https://tdata.tech/	official-link	t.me	https://t.me/TDataPlatform	NA	NA	NA	NA	TELEGRAM
+Ростелеком	rt_tdata	https://tdata.tech/	official-source	tdata.tech	https://tdata.tech/	Платформа управления данными TData	NA	NA	NA	NA
+Ростелеком	rt_tdata_docs	https://docs.tdata.tech/ru/index.html	official-source	docs.tdata.tech	https://docs.tdata.tech/ru/index.html	Документация платформы данных	NA	NA	NA	NA
+Nexign	nexign	https://nexign.com/	official-link	client.nexign.com	https://client.nexign.com/en	NA	NA	NA	NA	NA
+Nexign	nexign	https://nexign.com/	official-link	neonhrm.nexign.com	https://neonhrm.nexign.com/en	Neon HRM	NA	NA	NA	NA
+Nexign	nexign	https://nexign.com/	official-source	nexign.com	https://nexign.com/	Nexign Official	full:nexign.com	full:nexign.com	NA	NA
+Nexign	nexign	https://nexign.com/	official-link	t.me	https://t.me/telecom_chromosome	NA	NA	NA	NA	TELEGRAM
+Nexign	nexign	https://nexign.com/	official-link	www.linkedin.com	https://www.linkedin.com/company/nexign/	NA	NA	NA	NA	NA

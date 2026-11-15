@@ -1,0 +1,36 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-link	pradyunsg.me	https://pradyunsg.me/	@pradyunsg	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/etl-entities/	NA	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	public-image	readthedocs.org	https://readthedocs.org/projects/etl-entities/badge/	Documentation - ReadTheDocs	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MTSWebServices/etl-entities/develop	NA	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	public-image	www.repostatus.org	https://www.repostatus.org/badges/latest/active.svg	Repo status - Active	NA	NA	NA	NA
+MWS	entities	https://etl-entities.readthedocs.io/en/stable/	official-link	www.sphinx-doc.org	https://www.sphinx-doc.org/	Sphinx	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	airflow.apache.org	https://airflow.apache.org/	Apache Airflow	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	badge.fury.io	https://badge.fury.io/py/evacuator	NA	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	codecov.io	https://codecov.io/gh/MobileTeleSystems/evacuator	NA	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-source	evacuator.readthedocs.io	https://evacuator.readthedocs.io/en/stable/	Evacuator 1.0.4 documentation	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MobileTeleSystems/evacuator/edit/29e9789a3164896a0bd6d46c67536cef018a719f/docs/index.rst	Edit this page	NA	NA	NA	GITHUB
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	public-image	img.shields.io	https://img.shields.io/pypi/l/evacuator.svg	PyPI License	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	pradyunsg.me	https://pradyunsg.me/	@pradyunsg	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	readthedocs.org	https://readthedocs.org/projects/evacuator	NA	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MobileTeleSystems/evacuator/develop	NA	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	public-image	www.repostatus.org	https://www.repostatus.org/badges/latest/active.svg	Repo Status	NA	NA	NA	NA
+MWS	evac	https://evacuator.readthedocs.io/en/stable/	official-link	www.sphinx-doc.org	https://www.sphinx-doc.org/	Sphinx	NA	NA	NA	NA
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-source	data-horizon.readthedocs.io	https://data-horizon.readthedocs.io/en/stable/	Data.Horizon Docs	NA	NA	NA	NA
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/horizon	NA	NA	NA	NA	GITHUB
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-link	hub.docker.com	https://hub.docker.com/r/mtsrus/horizon-backend	NA	NA	NA	NA	NA
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/data-horizon/	NA	NA	NA	NA	NA
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MobileTeleSystems/horizon/develop	NA	NA	NA	NA	NA
+MWS	horizon	https://data-horizon.readthedocs.io/en/stable/	official-link	squidfunk.github.io	https://squidfunk.github.io/mkdocs-material/	Material for MkDocs	NA	NA	NA	GITHUB
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	data-horizon.readthedocs.io	https://data-horizon.readthedocs.io/	Horizon	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	etl-entities.readthedocs.io	https://etl-entities.readthedocs.io/en/stable/hwm_store/base_hwm_store.html	etl-entities’ BaseHWMStore	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	github.com	https://github.com/MTSWebServices/horizon-hwm-store	NA	NA	NA	NA	GITHUB
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-source	horizon-hwm-store.readthedocs.io	https://horizon-hwm-store.readthedocs.io/en/stable/	Horizon HWM Store 1.2.0 documentation	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	public-image	img.shields.io	https://img.shields.io/pypi/v/horizon-hwm-store	PyPI - Latest Release	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	onetl.readthedocs.io	https://onetl.readthedocs.io/en/stable/hwm_store/index.html	onETL	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	pradyunsg.me	https://pradyunsg.me/	@pradyunsg	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	pypi.org	https://pypi.org/project/horizon-hwm-store/	NA	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	public-image	readthedocs.org	https://readthedocs.org/projects/horizon-hwm-store/badge/	Documentation - ReadTheDocs	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	results.pre-commit.ci	https://results.pre-commit.ci/latest/github/MTSWebServices/horizon-hwm-store/develop	NA	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	public-image	www.repostatus.org	https://www.repostatus.org/badges/latest/active.svg	Repo status - Active	NA	NA	NA	NA
+MWS	hwm	https://horizon-hwm-store.readthedocs.io/en/stable/	official-link	www.sphinx-doc.org	https://www.sphinx-doc.org/	Sphinx	NA	NA	NA	NA

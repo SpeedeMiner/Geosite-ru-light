@@ -1,0 +1,54 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS	mws_prod	https://mws.ru/docs/	official-source	mws.ru	https://mws.ru/docs/	Документация | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	console.mws.ru	https://console.mws.ru/	В консоль	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	habr.com	https://habr.com/ru/companies/mws/articles/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	job.mts.ru	https://job.mts.ru/vacancies	Все вакансии	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	mts-digital.ru	https://mts-digital.ru/career/tour/	3D-экскурсия по офису MWS	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	mts.ai	https://mts.ai/ru/career/	Работа в AI	domain:mts.ai	domain:mts.ai	NA	NA
+MWS	mws_main	https://mws.ru/	official-source	mws.ru	https://mws.ru/	МТС Web Services - облачные сервисы, решения и платформы для бизнеса	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	t.me	https://t.me/truetechcommunity	True Tech Community	NA	NA	NA	TELEGRAM
+MWS	mws_main	https://mws.ru/	official-link	vc.ru	https://vc.ru/mws	NA	domain:ru	domain:ru	NA	NA
+MWS	mws_main	https://mws.ru/	official-link	vk.com	https://vk.com/mtswebservices	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	mws_ai	https://mts.ai/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	mws_ai	https://mts.ai/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	mws_ai	https://mts.ai/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	mws_ai	https://mts.ai/	official-source	mts.ai	https://mts.ai/	Создаем AI-решения будущего	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	mws_ai	https://mts.ai/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	mws_ai	https://mts.ai/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	mws_aprod	https://mts.ai/product/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	mws_aprod	https://mts.ai/product/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	mws_aprod	https://mts.ai/product/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	mws_aprod	https://mts.ai/product/	official-source	mts.ai	https://mts.ai/product/	Продукты и технологии в сфере искусственного интеллекта от MWS AI	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	mws_aprod	https://mts.ai/product/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	mws_aprod	https://mts.ai/product/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-source	mts.ai	https://mts.ai/product/mws-ai-cowork/	MWS AI COWORK — корпоративное ИИ-пространство для бизнеса	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	mws_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS	mws_git	https://github.com/MTSWebServices	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/44975352	@MTSWebServices	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-source	github.com	https://github.com/MTSWebServices	MWS · GitHub	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	mws.ru	https://mws.ru/	https://mws.ru	domain:ru	domain:ru	NA	NA
+MWS	mws_git	https://github.com/MTSWebServices	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+MWS	mws_git	https://github.com/MTSWebServices	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/94846009	@mts-ai	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-source	github.com	https://github.com/mts-ai	MTS AI · GitHub	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	mts.ai	https://mts.ai/	https://mts.ai/	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+MWS AI	mts_ai_git	https://github.com/mts-ai	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+MWS	rectools	https://rectools.readthedocs.io/en/stable/	docs-code	files.grouplens.org	https://files.grouplens.org/datasets/movielens/ml-1m.zip	example or documented endpoint	NA	NA	NA	NA
+MWS	rectools	https://rectools.readthedocs.io/en/stable/	official-link	github.com	https://github.com/readthedocs/sphinx_rtd_theme	theme	NA	NA	NA	GITHUB
+MWS	rectools	https://rectools.readthedocs.io/en/stable/	official-link	readthedocs.org	https://readthedocs.org/	Read the Docs	NA	NA	NA	NA

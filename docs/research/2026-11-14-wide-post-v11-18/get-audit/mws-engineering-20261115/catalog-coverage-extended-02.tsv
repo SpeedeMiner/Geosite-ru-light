@@ -1,0 +1,42 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	rutube.ru	https://rutube.ru/play/embed/37610eb3b762a54e64092e9f8988c68d	Видео Александр Лифанов. Движение к продуктам с кибериммунитетом, или как учиться кибериммунной разр	domain:ru	domain:ru	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	stepik.org	https://stepik.org/course/73418/promo	Подробнее о курсе	domain:stepik.org	domain:stepik.org	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	t.me	https://t.me/kosdevs	Telegram	NA	NA	NA	TELEGRAM
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	vk.com	https://vk.com/kosdevs	ВКонтакте	domain:vk.com	domain:vk.com	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	vkvideo.ru	https://vkvideo.ru/video_ext.php	Видео Александр Лифанов. Я бы в кодеры пошел: где изучать разработку под KasperskyOS vkvideo.ru Смот	domain:ru	domain:ru	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	www.kaspersky.ru	https://www.kaspersky.ru/	Сайт «Лаборатории Касперского»	domain:ru	domain:ru	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	www.youtube.com	https://www.youtube.com/user/KasperskyChannelRU	NA	NA	NA	NA	YOUTUBE
+Kaspersky	kasp_org	https://github.com/kasperskylab	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/20599646	@KasperskyLab	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-source	github.com	https://github.com/kasperskylab	Kaspersky Lab · GitHub	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+Kaspersky	kasp_org	https://github.com/kasperskylab	official-link	www.kaspersky.com	https://www.kaspersky.com/	https://www.kaspersky.com	domain:kaspersky.com	domain:kaspersky.com	NA	NA
+Nexign	nex_ticket	https://job.nexign.com/ticket	official-source	job.nexign.com	https://job.nexign.com/ticket	От тикета до продакшна	NA	NA	NA	NA
+Nexign	nex_ticket	https://job.nexign.com/ticket	official-link	t.me	https://t.me/ITMeeting	ITMeeting	NA	NA	NA	TELEGRAM
+Газпромбанк	gpb_tech	https://www.gazprombank.tech/	official-link	vk.com	https://vk.com/gpbofficial	NA	domain:vk.com	domain:vk.com	NA	NA
+Газпромбанк	gpb_tech	https://www.gazprombank.tech/	official-link	www.gazprombank.ru	https://www.gazprombank.ru/download/6415335/	Политика обработки и защиты персональных данных	domain:ru	domain:ru	NA	NA
+Газпромбанк	gpb_tech	https://www.gazprombank.tech/	official-source	www.gazprombank.tech	https://www.gazprombank.tech/	Главная	domain:gazprombank.tech	domain:gazprombank.tech	NA	NA
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	public-image	cdn-app.sberdevices.ru	https://cdn-app.sberdevices.ru/misc/0.0.0/assets/bsm-docs/0420c0fb_Avatar.svg	giga-search	domain:ru	domain:ru	NA	NA
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	official-source	developers.sber.ru	https://developers.sber.ru/docs/ru/gigachain/overview	GigaChain | Документация для разработчиков	domain:ru	domain:ru	NA	NA
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	official-link	giga.chat	https://giga.chat/	giga.chat	domain:giga.chat	domain:giga.chat	NA	NA
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	official-link	github.com	https://github.com/ai-forever/gigachain/	Репозиторий на GitHubНовые решения и примеры работы с нимиGitHub	NA	NA	NA	GITHUB
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	official-link	t.me	https://t.me/[private-invite-omitted]	Новостной Telegram-канал	NA	NA	NA	TELEGRAM
+Сбер	sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	official-link	www.sberbank.ru	https://www.sberbank.ru/	www.sberbank.ru	domain:ru	domain:ru	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	divkit.tech	https://divkit.tech/en/	DivKitФреймворк для server‑driven интерфейсов	NA	NA	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	gravity-ui.com	https://gravity-ui.com/	GravityUIБиблиотеки для создания интерфейсов	NA	NA	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-source	opensource.yandex	https://opensource.yandex/	Yandex Open Source	domain:yandex	domain:yandex	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	sourcecraft.dev	https://sourcecraft.dev/	А ну-ка	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/yandex-opensource/yos-logo.svg	Иконка лого	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	userver.tech	https://userver.tech/	userverФреймворк для создания высоконагруженных приложений	NA	NA	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	ydb.tech	https://ydb.tech/	YDBОтказоустойчивая распределённая SQL база данных	domain:ydb.tech	domain:ydb.tech	NA	NA
+Яндекс	ya_base	https://opensource.yandex/	official-link	ytsaurus.tech	https://ytsaurus.tech/	YTsaurusПлатформа для хранения и обработки больших данных	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	aclanthology.org	https://aclanthology.org/2020.emnlp-main.746.pdf	Dataset Cartography	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	official-link	arxiv.org	https://arxiv.org/abs/2603.01824	NA	NA	NA	NA	NA
+MWS AI	open_nlu	https://github.com/mts-ai/OpenAutoNLU	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/94846009	mts-ai	NA	NA	NA	GITHUB

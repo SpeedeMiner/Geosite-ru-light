@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+cloud_org	https://github.com/cloud-ru	https://github.com/cloud-ru	200	0	0	250871	c56d8448dfe1bf64d79e7a003e1128c032c0fecdd4253f557e18558b00973e9a	text/html; charset=utf-8
+rwb_org	https://github.com/wildberries-tech/	https://github.com/wildberries-tech/	200	0	0	231032	2b317dc32504c6a2a341dd9680f1e68dd4609a0faa19dfec6a9f8cd97377474b	text/html; charset=utf-8
+rt_org	https://github.com/Rostelecom-IT	https://github.com/Rostelecom-IT	200	0	0	148661	3d1d84ea2cd2a75e16d5d1a069ddb11730a20a5b81356a80118e4d6abeeff063	text/html; charset=utf-8
+kasp_os	https://os.kaspersky.ru/development/	https://os.kaspersky.ru/development/	200	0	0	214526	fbe1941a5a205c75e6a379fb66f987f5855eacbf447ecedd97c787489cba8d08	text/html; charset=UTF-8
+kasp_org	https://github.com/kasperskylab	https://github.com/kasperskylab	200	0	0	248633	34d5d2b1810d58ae31721dead465728b5669e5a2a22a02869e7cfdaa7ff9e762	text/html; charset=utf-8
+oz_tech	https://ozon.tech/	https://ozon.tech/	307	47	0	0	NA	text/html
+nex_ticket	https://job.nexign.com/ticket	https://job.nexign.com/ticket	200	0	0	76258	0ae92db2267af8c90690d52c8b959e6c85b43ecbff261eed0922b81d5ec31504	text/html; charset=utf-8
+gpb_tech	https://www.gazprombank.tech/	https://www.gazprombank.tech/	200	0	0	267988	e24e08babf60713936d41d2761b765c53c2b41acad87ae936d3f0c2fce3a44a4	text/html; charset=utf-8
+sber_chain	https://developers.sber.ru/docs/ru/gigachain/overview	https://developers.sber.ru/docs/ru/gigachain/overview	200	0	0	203963	4fb2d75ec456d60231a641d1589bedfcdf51a4f27cb69c4c5326f2cf68df10db	text/html
+ya_base	https://opensource.yandex/	https://opensource.yandex/	200	0	0	82715	8db3cee9b026f0b0e6e82e545d2c45b851ae6daf6ade49c150a90c8d6162bff2	text/html; charset=utf-8
+open_nlu	https://github.com/mts-ai/OpenAutoNLU	https://github.com/mts-ai/OpenAutoNLU	200	0	0	352592	82e7b7a45bf799b5d6fd70944d993efa5802518c6ea3ff835dfc77d97a1a4741	text/html; charset=utf-8
+openvk	https://team.vk.company/openvk/	https://team.vk.company/openvk/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html

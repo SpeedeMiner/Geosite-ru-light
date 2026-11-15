@@ -1,0 +1,19 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+VK	vk_org	https://github.com/vk-cs	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-source	github.com	https://github.com/vk-cs	VK Cloud · GitHub	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/31508278	@sberbank-ai	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-source	github.com	https://github.com/sberbank-ai	Sber AI · GitHub	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Сбер	sber_git	https://github.com/sberbank-ai	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB

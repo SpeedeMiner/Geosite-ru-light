@@ -1,0 +1,44 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Cloud.ru	cloud_org	https://github.com/cloud-ru	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/133103820	@cloud-ru	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-source	github.com	https://github.com/cloud-ru	Сloud.ru · GitHub	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	t.me	https://t.me/cloudruprovider	https://t.me/cloudruprovider	NA	NA	NA	TELEGRAM
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	www.cloud.ru	https://www.cloud.ru/	https://www.cloud.ru	domain:ru	domain:ru	NA	NA
+Cloud.ru	cloud_org	https://github.com/cloud-ru	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/108092417	@wildberries-tech	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-source	github.com	https://github.com/wildberries-tech/	Wildberries · GitHub	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+RWB	rwb_org	https://github.com/wildberries-tech/	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/50957044	NA	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-source	github.com	https://github.com/Rostelecom-IT	Rostelecom-IT · GitHub	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	rt.ru	https://rt.ru/	https://rt.ru	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Ростелеком	rt_org	https://github.com/Rostelecom-IT	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	appicenter.kaspersky.com	https://appicenter.kaspersky.com/	Kaspersky AppicenterПлатформа для разработки, публикации и поддержки приложений, совместимых с Kaspe	domain:kaspersky.com	domain:kaspersky.com	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	click.kaspersky.com	https://click.kaspersky.com/	Читать документацию	domain:kaspersky.com	domain:kaspersky.com	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	forum.kaspersky.com	https://forum.kaspersky.com/forum/kasperskyos-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-32/	Форум технической поддержки Напишите экспертам форума, если у вас есть вопросы по разработке c Kaspe	domain:kaspersky.com	domain:kaspersky.com	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	kas.pr	https://kas.pr/s4xt)	новой статье	NA	NA	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	kaspersky.ru	https://kaspersky.ru/	Сайт «Лаборатории Касперского»	domain:ru	domain:ru	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	os.kaspersky.com	https://os.kaspersky.com/development/	English	domain:kaspersky.com	domain:kaspersky.com	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	os.kaspersky.es	https://os.kaspersky.es/technologies/	Español	domain:kaspersky.es	domain:kaspersky.es	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	os.kaspersky.it	https://os.kaspersky.it/technologies/	Italiano	domain:kaspersky.it	domain:kaspersky.it	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-source	os.kaspersky.ru	https://os.kaspersky.ru/development/	Разработка с KasperskyOS | KasperskyOS	domain:ru	domain:ru	NA	NA
+Kaspersky	kasp_os	https://os.kaspersky.ru/development/	official-link	partners.kaspersky.com	https://partners.kaspersky.com/login/	Продавать решения на базе KasperskyOSПрисоединяйтесь к партнерской программе «Лаборатории Касперског	domain:kaspersky.com	domain:kaspersky.com	NA	NA

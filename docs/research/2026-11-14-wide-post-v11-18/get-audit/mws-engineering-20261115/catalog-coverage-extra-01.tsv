@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Nexign	nex_help	https://nexign.com/	official-link	client.nexign.com	https://client.nexign.com/en	NA	NA	NA	NA	NA
+Nexign	nex_help	https://nexign.com/	official-link	neonhrm.nexign.com	https://neonhrm.nexign.com/en	Neon HRM	NA	NA	NA	NA
+Nexign	nex_help	https://nexign.com/	official-source	nexign.com	https://nexign.com/	Nexign Official	full:nexign.com	full:nexign.com	NA	NA
+Nexign	nex_help	https://nexign.com/	official-link	t.me	https://t.me/telecom_chromosome	NA	NA	NA	NA	TELEGRAM
+Nexign	nex_help	https://nexign.com/	official-link	www.linkedin.com	https://www.linkedin.com/company/nexign/	NA	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/203628423	tech-beeline	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	c4model.com	https://c4model.com/	C4 model	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	public-image	camo.githubusercontent.com	https://camo.githubusercontent.com/[image-proxy-path-omitted]	License	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	docs.structurizr.com	https://docs.structurizr.com/dsl/cookbook/	Structurizr DSL	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-source	github.com	https://github.com/tech-beeline/varp	GitHub - tech-beeline/varp: VSCode extension for working with Architecture As A Code in the C4 model	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	hermes-agent.nousresearch.com	https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp	docs	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	langium.org	https://langium.org/	Langium	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	marketplace.visualstudio.com	https://marketplace.visualstudio.com/items	NA	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	nodejs.org	https://nodejs.org/	Node.js	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	open-vsx.org	https://open-vsx.org/extension/vimpelcom/c4-varp	NA	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	opencode.ai	https://opencode.ai/docs/mcp-servers/	docs	NA	NA	NA	NA
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Билайн	beeline_git	https://github.com/tech-beeline/varp	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/203628423	@tech-beeline	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-source	github.com	https://github.com/tech-beeline	tech-beeline · GitHub	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Билайн	beeline_org	https://github.com/tech-beeline	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	dzen.ru	https://dzen.ru/vkteam	NA	domain:ru	domain:ru	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	habr.com	https://habr.com/ru/companies/vk/articles/	NA	domain:habr.com	domain:habr.com	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	internship.vk.company	https://internship.vk.company/internship/	Стажировка	domain:vk.company	domain:vk.company	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	max.ru	https://max.ru/inside_vk	NA	domain:ru	domain:ru	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	ok.ru	https://ok.ru/insidevk	NA	domain:ru	domain:ru	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	t.me	https://t.me/inside_vk	NA	NA	NA	NA	TELEGRAM
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	team.vk.company	https://team.vk.company/	Карьера	domain:vk.company	domain:vk.company	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	vk.com	https://vk.com/insidevk	NA	domain:vk.com	domain:vk.com	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	vk.company	https://vk.company/	VK	domain:vk.company	domain:vk.company	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-source	vk.company.ru	https://vk.company.ru/ru/press/releases/11938/	VK / VK запустила OpenVK для публикации ПО с открытым кодом	domain:ru	domain:ru	NA	NA
+VK	vk_open	https://vk.company.ru/ru/press/releases/11938/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Раскрытие информации	domain:ru	domain:ru	NA	NA
+VK	vk_org	https://github.com/vk-cs	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/94167509	@vk-cs	NA	NA	NA	GITHUB
+VK	vk_org	https://github.com/vk-cs	official-link	cloud.vk.com	https://cloud.vk.com/	https://cloud.vk.com/	domain:vk.com	domain:vk.com	NA	NA
+VK	vk_org	https://github.com/vk-cs	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB

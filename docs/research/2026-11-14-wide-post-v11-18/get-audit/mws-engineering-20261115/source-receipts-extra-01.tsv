@@ -1,0 +1,11 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+nex_client	https://client.nexign.com/en	https://client.nexign.com/en	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+nex_help	https://nexign.com/en/	https://nexign.com/	200	0	0	112061	913662bb7c345ccd5c1adc617b0e6276f8091c87b01b7915822daa65ee18dfe6	text/html; charset=UTF-8
+beeline_git	https://github.com/tech-beeline/varp	https://github.com/tech-beeline/varp	200	0	0	344974	6b68c7c8cf1b8498a413ca75ba38db0695a65b7a3aad808650414c59ef20d974	text/html; charset=utf-8
+beeline_org	https://github.com/tech-beeline	https://github.com/tech-beeline	200	0	0	240609	bf9d4905d4a67b47a0f1a3dfabb5ece3f469ca5c373d06a5c64253e2a4869827	text/html; charset=utf-8
+tbank_general	https://opensource.tbank.ru/general	https://opensource.tbank.ru/general	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+tbank_public	https://opensource.tbank.ru/	https://opensource.tbank.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+tbank_ai	https://opensource.tbank.ru/ai	https://opensource.tbank.ru/ai	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+vk_open	https://vk.company.ru/ru/press/releases/11938/	https://vk.company.ru/ru/press/releases/11938/	200	0	0	46331	5878c0949bd16e151f81de9cf32233b29d041d1d7d0ef41b0a4328d80fd29ea0	text/html; charset=utf-8
+vk_org	https://github.com/vk-cs	https://github.com/vk-cs	200	0	0	239595	8cd5b9373b54d9d8dbc58cc4a5d3641b2f220567f318226f8a2af8be5d00ee6b	text/html; charset=utf-8
+sber_git	https://github.com/sberbank-ai	https://github.com/sberbank-ai	200	0	0	232065	e80556b4c267159ec522c20fb721f98bb8f8b6cab04fbe45bfc94b39e8f6da64	text/html; charset=utf-8
