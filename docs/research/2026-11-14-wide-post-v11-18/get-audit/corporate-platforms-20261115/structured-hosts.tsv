@@ -1,0 +1,35 @@
+group	source	host	role	port	light_ru	server_ru	block	non_ru
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	books.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	chat.wb.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	max.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	mp.world	published catalogue link	443	domain:mp.world	domain:mp.world	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	ok.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	rutube.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	security.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	seller.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	service.wb.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	sreda.rwb.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	t.me	published catalogue link	443	NA	NA	NA	TELEGRAM
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	tech.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	track.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	travel.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	university.rwb.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	vk.com	published catalogue link	443	domain:vk.com	domain:vk.com	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	vk.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	wibes.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	www.wildberries.ru	published catalogue link	443	domain:ru	domain:ru	NA	NA
+RWB	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	www.youtube.com	published catalogue link	443	NA	NA	NA	YOUTUBE
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/intro/onboarding/contact_support/contact_support.md	support.mcs.mail.ru	published support link	443	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	hb.ru-msk.vkcloud-storage.ru	documented API/catalog; no call	443	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	443	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	8004	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	8774	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	9292	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	9511	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	infra.mail.ru	documented API/catalog; no call	9696	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	mcs.mail.ru	documented API/catalog; no call	443	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	msk.cloud.vk.ru	documented API/catalog; no call	443	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	public.infra.mail.ru	documented API/catalog; no call	8776	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	public.infra.mail.ru	documented API/catalog; no call	8786	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	public.infra.mail.ru	documented API/catalog; no call	9311	domain:ru	domain:ru	NA	NA
+VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md	public.infra.mail.ru	documented API/catalog; no call	9876	domain:ru	domain:ru	NA	NA

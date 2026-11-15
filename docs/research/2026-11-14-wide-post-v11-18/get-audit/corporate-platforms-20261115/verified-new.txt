@@ -1,0 +1,2 @@
+full:cdn-viewer.diplodoc.com
+full:img.solarspace.pro
