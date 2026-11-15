@@ -1,0 +1,17 @@
+host	shape	service	endpoint	source	light_ru	server_ru	block	non_ru
+compute.api.cloud.ru	literal	Справочник API сервиса «Виртуальные машины»	https://compute.api.cloud.ru	https://cloud.ru/docs/virtual-machines/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+dns.api.cloud.ru	literal	Справочник API сервиса Evolution DNS	https://dns.api.cloud.ru	https://cloud.ru/docs/evolution-dns/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+mk8s.api.cloud.ru	literal	Справочник API сервиса Managed Kubernetes	https://mk8s.api.cloud.ru	https://cloud.ru/docs/kubernetes-evolution/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+ar.api.cloud.ru	literal	Справочник API сервиса Artifact Registry	https://ar.api.cloud.ru	https://cloud.ru/docs/artifact-registry-evolution/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+foundation-models.api.cloud.ru	literal	Справочник API сервиса Foundation Models	https://foundation-models.api.cloud.ru/v1/	https://cloud.ru/docs/foundation-models/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+secretmanager.api.cloud.ru	literal	Справочник API сервиса Secret Management	https://secretmanager.api.cloud.ru	https://cloud.ru/docs/scsm/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+monitoring.api.cloud.ru	literal	Справочник API	https://monitoring.api.cloud.ru	https://cloud.ru/docs/service-monitoring/ug/topics/api-ref?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+logging.api.cloud.ru	literal	Справочник API сервиса «Сервис Клиентского логирования»	https://logging.api.cloud.ru	https://cloud.ru/docs/client-log/ug/topics/api?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+audit.api.cloud.ru	literal	Справочник API сервиса «Аудит-логирование»	https://audit.api.cloud.ru	https://cloud.ru/docs/audit-logging/ug/topics/api?source-platform=Evolution	domain:ru	domain:ru	NA	NA
+iam.api.cloud.ru	literal	IAM	https://iam.api.cloud.ru	https://cloud.ru/docs/administration/ug/topics/guides__directory-api	domain:ru	domain:ru	NA	NA
+organization.api.cloud.ru	literal	Organization	https://organization.api.cloud.ru	https://cloud.ru/docs/administration/ug/topics/guides__directory-api	domain:ru	domain:ru	NA	NA
+s3.cloud.ru	literal	Evolution S3	https://s3.cloud.ru	https://cloud.ru/docs/s3e/ug/topics/concepts__storage-access-styles	domain:ru	domain:ru	NA	NA
+global.s3.cloud.ru	literal	Global S3	https://global.s3.cloud.ru	https://cloud.ru/docs/s3e/ug/topics/concepts__storage-access-styles	domain:ru	domain:ru	NA	NA
+s3.cloud.ru	documented_tenant_boundary	S3 tenant bucket boundary	https://s3.cloud.ru	https://cloud.ru/docs/s3e/ug/topics/concepts__storage-access-styles	domain:ru	domain:ru	NA	NA
+s3-website.cloud.ru	documented_tenant_boundary	S3 website tenant boundary	https://s3-website.cloud.ru	https://cloud.ru/docs/s3e/ug/topics/concepts__storage-access-styles	domain:ru	domain:ru	NA	NA
+obs.ru-moscow-1.hc.sbercloud.ru	documented_tenant_boundary	Advanced OBS	https://obs.ru-moscow-1.hc.sbercloud.ru	https://cloud.ru/docs/en-ru/usermanual/obs/concepts__access-style	domain:ru	domain:ru	NA	NA

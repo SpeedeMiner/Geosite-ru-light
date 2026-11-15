@@ -1,0 +1,26 @@
+{
+  "basis": "unmerged PR 39 v11.20, head 129d04dd7d5df045db32cf8db968ae9ec75f3372",
+  "publication": false,
+  "added_full": [
+    "docs.tdata.tech",
+    "ertelecom.cloud",
+    "my.ertelecom.cloud",
+    "tdata.tech"
+  ],
+  "removed": [],
+  "light_ru": [
+    4339,
+    4343
+  ],
+  "server_ru": [
+    4227,
+    4231
+  ],
+  "srs_verified": 18,
+  "non_ru_srs_identical": 17,
+  "light_baseline": "8ec938671dc54546583decf09d1e0ed97064b647b0ef4d9b9f69320d53bf4421",
+  "server_baseline": "e3fd05415c078a5e98ef7ca5d7e582fa4ef7957f02da324fa875aa6e2c7f2b16",
+  "light_preview": "a5e70f78cdc8045f7b58589cdd552be0c50af0c83f768370026cf72898e5c9c8",
+  "server_preview": "199a1e1637f28eb5c6e568e2b21fa894978d02103ef51c756058ed0b9718ee4d",
+  "light_ru_srs": "6437991b07a3bbc141b5ea3210fbcc0283ccadb5ce7a1dfbc77b16f4076a10bd"
+}
