@@ -1,0 +1,41 @@
+host	url	resolver	rrtype	status	answer_count
+6.ipquail.com	https://6.ipquail.com/	google	A	NOERROR	0
+6.ipquail.com	https://6.ipquail.com/	google	AAAA	NOERROR	1
+6.ipquail.com	https://6.ipquail.com/	cloudflare	A	NOERROR	0
+6.ipquail.com	https://6.ipquail.com/	cloudflare	AAAA	NOERROR	1
+6.wsmdn.top	https://6.wsmdn.top/	google	A	NOERROR	0
+6.wsmdn.top	https://6.wsmdn.top/	google	AAAA	NOERROR	4
+6.wsmdn.top	https://6.wsmdn.top/	cloudflare	A	NOERROR	0
+6.wsmdn.top	https://6.wsmdn.top/	cloudflare	AAAA	NOERROR	4
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	google	A	NOERROR	0
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	google	AAAA	NOERROR	1
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	cloudflare	A	NOERROR	0
+checkipv6.dedyn.io	https://checkipv6.dedyn.io/	cloudflare	AAAA	NOERROR	1
+ip6.hostux.net	https://ip6.hostux.net/	google	A	NOERROR	0
+ip6.hostux.net	https://ip6.hostux.net/	google	AAAA	NOERROR	1
+ip6.hostux.net	https://ip6.hostux.net/	cloudflare	A	query_unproven	
+ip6.hostux.net	https://ip6.hostux.net/	cloudflare	AAAA	query_unproven	
+ip6.nnev.de	https://ip6.nnev.de/	google	A	NOERROR	0
+ip6.nnev.de	https://ip6.nnev.de/	google	AAAA	NOERROR	1
+ip6.nnev.de	https://ip6.nnev.de/	cloudflare	A	query_unproven	
+ip6.nnev.de	https://ip6.nnev.de/	cloudflare	AAAA	query_unproven	
+ipv6.hostux.net	https://ipv6.hostux.net/	google	A	NOERROR	0
+ipv6.hostux.net	https://ipv6.hostux.net/	google	AAAA	NOERROR	1
+ipv6.hostux.net	https://ipv6.hostux.net/	cloudflare	A	NOERROR	0
+ipv6.hostux.net	https://ipv6.hostux.net/	cloudflare	AAAA	NOERROR	1
+ipv6.pry.sh	https://ipv6.pry.sh/	google	A	NOERROR	0
+ipv6.pry.sh	https://ipv6.pry.sh/	google	AAAA	NOERROR	1
+ipv6.pry.sh	https://ipv6.pry.sh/	cloudflare	A	NOERROR	0
+ipv6.pry.sh	https://ipv6.pry.sh/	cloudflare	AAAA	NOERROR	1
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	google	A	NOERROR	0
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	google	AAAA	NOERROR	8
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	A	query_unproven	
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	AAAA	query_unproven	
+v6.i-p.show	https://v6.i-p.show/	google	A	NOERROR	0
+v6.i-p.show	https://v6.i-p.show/	google	AAAA	NOERROR	8
+v6.i-p.show	https://v6.i-p.show/	cloudflare	A	NOERROR	0
+v6.i-p.show	https://v6.i-p.show/	cloudflare	AAAA	NOERROR	8
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	google	A	NOERROR	0
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	google	AAAA	NOERROR	1
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	cloudflare	A	NOERROR	0
+v6.yinghualuo.cn	https://v6.yinghualuo.cn/bejson	cloudflare	AAAA	NOERROR	1

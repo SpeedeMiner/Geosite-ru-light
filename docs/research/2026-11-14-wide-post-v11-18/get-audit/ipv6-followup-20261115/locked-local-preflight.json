@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-11-15T12:04:12.031608+00:00",
+  "asn": 207957,
+  "family": 6,
+  "scope": "native_ru_ipv6",
+  "method": "GET",
+  "redirects_followed": false,
+  "observations": [],
+  "state": "preflight_unverified"
+}
