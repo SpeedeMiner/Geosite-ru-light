@@ -1,0 +1,14 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+b2b-live.mts.ru	176.57.64.180	cloudflare|google	176.57.64.0/23	AS57724
+customer.ticketscloud.com	95.129.232.92	cloudflare|google	95.129.232.0/24	AS57724
+doc.ticketscloud.org	104.16.253.120	cloudflare|google	104.16.240.0/20	AS13335
+doc.ticketscloud.org	104.16.254.120	cloudflare|google	104.16.240.0/20	AS13335
+doc.ticketscloud.org	2606:4700::6810:fd78	cloudflare|google	2606:4700::/44	AS13335
+doc.ticketscloud.org	2606:4700::6810:fe78	cloudflare|google	2606:4700::/44	AS13335
+support.ticketscloud.org	77.238.96.15	cloudflare|google	77.238.96.0/24	AS199599
+ticketscloud.com	95.129.232.92	cloudflare|google	95.129.232.0/24	AS57724
+ticketscloud.org	77.238.96.15	cloudflare|google	77.238.96.0/24	AS199599
+ticketscloud.readthedocs.io	104.16.253.120	cloudflare|google	104.16.240.0/20	AS13335
+ticketscloud.readthedocs.io	104.16.254.120	cloudflare|google	104.16.240.0/20	AS13335
+ticketscloud.readthedocs.io	2606:4700::6810:fd78	cloudflare|google	2606:4700::/44	AS13335
+ticketscloud.readthedocs.io	2606:4700::6810:fe78	cloudflare|google	2606:4700::/44	AS13335

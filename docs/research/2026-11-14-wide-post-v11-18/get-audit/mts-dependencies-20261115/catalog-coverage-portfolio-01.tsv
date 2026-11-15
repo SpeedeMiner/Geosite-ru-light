@@ -1,0 +1,55 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS AI	ai_root	https://mts.ai/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	ai_root	https://mts.ai/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	ai_root	https://mts.ai/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	ai_root	https://mts.ai/	official-source	mts.ai	https://mts.ai/	Создаем AI-решения будущего	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	ai_root	https://mts.ai/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	ai_root	https://mts.ai/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	ai_portfolio	https://mts.ai/product/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	ai_portfolio	https://mts.ai/product/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	ai_portfolio	https://mts.ai/product/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	ai_portfolio	https://mts.ai/product/	official-source	mts.ai	https://mts.ai/product/	Продукты и технологии в сфере искусственного интеллекта от MWS AI	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	ai_portfolio	https://mts.ai/product/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	ai_portfolio	https://mts.ai/product/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	aclanthology.org	https://aclanthology.org/2022.lrec-1.610/	Подробнее	NA	NA	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	arxiv.org	https://arxiv.org/abs/2206.09676	Подробнее	NA	NA	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	cinimex.ru	https://cinimex.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	infomatika.ru	https://infomatika.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	itfbgroup.ru	https://itfbgroup.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	itmo.ru	https://itmo.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	k2.tech	https://k2.tech/	NA	full:k2.tech	full:k2.tech	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-source	mts.ai	https://mts.ai/o-nas/	MWS AI: ценности, миссия, основные направления работы и активы	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	neural-university.ru	https://neural-university.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	new.skoltech.ru	https://new.skoltech.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	primo-rpa.ru	https://primo-rpa.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	softline.ru	https://softline.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	www.dialog-21.ru	https://www.dialog-21.ru/media/5755/dementievadplusetal105.pdf	Подробнее	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	www.hse.ru	https://www.hse.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	www.kneron.com	https://www.kneron.com/	NA	NA	NA	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	www.nsu.ru	https://www.nsu.ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_about	https://mts.ai/o-nas/	official-link	www.visionlabs.ru	https://www.visionlabs.ru/ru/	NA	domain:ru	domain:ru	NA	NA
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-source	mts.ai	https://mts.ai/product/mws-ai-cowork/	MWS AI COWORK — корпоративное ИИ-пространство для бизнеса	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	ai_cowork	https://mts.ai/product/mws-ai-cowork/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-link	github.com	https://github.com/mts-ai	NA	NA	NA	NA	GITHUB
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-link	habr.com	https://habr.com/ru/companies/mts_ai/profile/	NA	domain:habr.com	domain:habr.com	NA	NA
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	domain:ru	domain:ru	NA	NA
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-source	mts.ai	https://mts.ai/user-agreement-mts-ai/	Пользовательское соглашение - MTS AI	domain:mts.ai	domain:mts.ai	NA	NA
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-link	telegram.me	https://telegram.me/mtsai	NA	NA	NA	NA	TELEGRAM
+MWS AI	ai_legal	https://mts.ai/user-agreement-mts-ai/	official-link	vk.com	https://vk.com/mtsai	NA	domain:vk.com	domain:vk.com	NA	NA
+VisionLabs	vision_ru	https://visionlabs.ru/	official-link	back.visionlabs.ru	https://back.visionlabs.ru/upload/IT-accreditation.pdf	ИТ-аккредитация	domain:ru	domain:ru	NA	NA
+VisionLabs	vision_ru	https://visionlabs.ru/	official-source	visionlabs.ru	https://visionlabs.ru/	VisionLabs — технологии распознавания лиц и объектов на базе компьютерного зрения	domain:ru	domain:ru	NA	NA
+VisionLabs	vision_docs	https://docs.visionlabs.ru/	official-source	docs.visionlabs.ru	https://docs.visionlabs.ru/	Документация VisionLabs	domain:ru	domain:ru	NA	NA
+VisionLabs (международный)	vision_ai	https://visionlabs.ai/	public-image	back.visionlabs.ai	https://back.visionlabs.ai/upload/iblock/d47/fxufqjng942u0huvfudh2axoxd4vg47a.svg	NA	NA	NA	NA	NA
+VisionLabs (международный)	vision_ai	https://visionlabs.ai/	official-source	visionlabs.ai	https://visionlabs.ai/	VisionLabs: Human and Object Recognition Technologies	NA	NA	NA	NA
+Intema (международный)	intema	https://intema.ai/	official-link	aistetic.com	https://aistetic.com/	NA	NA	NA	NA	NA
+Intema (международный)	intema	https://intema.ai/	official-link	alphaar.io	https://alphaar.io/	NA	NA	NA	NA	NA
+Intema (международный)	intema	https://intema.ai/	official-link	fero.ai	https://fero.ai/	NA	NA	NA	NA	NA

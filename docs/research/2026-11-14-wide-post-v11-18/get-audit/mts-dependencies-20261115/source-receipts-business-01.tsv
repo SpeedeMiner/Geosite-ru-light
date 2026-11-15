@@ -1,0 +1,18 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+ts_root	https://teamstream.mws.ru/	https://teamstream.mws.ru/	200	0	0	793468	36e2936366fc1f63cc8a3a5652de14bd025522d1f2b95ba9dc96df30898f8849	text/html
+ts_business	https://teamstream.mws.ru/business	https://teamstream.mws.ru/business	200	0	0	472410	896f1ecfdf72222f5e9ade5e2b5181f39c3b2afaba32571ae178033d55252afb	text/html
+ts_legal	https://mws.ru/docs/docum/s55.html	https://mws.ru/docs/docum/s55.html	200	0	0	120925	d4945af8a3ce135ed47a0defa28be47059d9ed076fa1298284e25cd9e17b4ce9	text/html
+ts_help	https://support.mts.ru/mws_teamstream	https://support.mts.ru/mws_teamstream	403	0	0	300	de9194ff5def20d9c5d067c5575dc76796693188015ffd11d885bd475a70e0a3	text/html
+ts_desktop	https://support.mts.ru/mws_teamstream/obschaya-informatsiya/kak-ustanovit-prilozhenie-teamstream-na-kompyuter	https://support.mts.ru/mws_teamstream/obschaya-informatsiya/kak-ustanovit-prilozhenie-teamstream-na-kompyuter	403	0	0	300	ec6d8fc4833a0deb5f9b8c48dc8f8f32a8b4bebe9784733db420ee1093624b5e	text/html
+vd_eula	https://domofon.mts.ru/eula.html	https://domofon.mts.ru/eula.html	200	0	0	61638	63de27f04817456d9cbce5a8d1cd56e095d96d62e08241d4ea7b65b8b751503f	text/html
+vd_pp	https://domofon.mts.ru/policy.html	https://domofon.mts.ru/policy.html	200	0	0	22288	e3a68cf6d40f63e2c0541409de1e41749fabb7baccd8903454907f3579367827	text/html
+vd_help	https://support.mts.ru/mts_domofon_dlya_yuridicheskih_lits	https://support.mts.ru/mts_domofon_dlya_yuridicheskih_lits	403	0	0	300	41bf8244b918b074e416251023a1a94f936fa33be432390458c4381ab5d2fc4b	text/html
+vd_customer	https://support.mts.ru/mpvdome	https://support.mts.ru/mpvdome	403	0	0	300	07efa5c6026490d0be754c6fae8448ae07d6eb2761809c34c0229d7c82e4bccb	text/html
+ex_root	https://exolve.ru/	https://exolve.ru/	200	0	0	403870	e85fe308294952967041ac574f2b5c3a005dfc54e869895da25ca8304ae74237	text/html; charset=utf-8
+ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	200	0	0	524244	77fb49a3b63c4b00e64957bbf53c637fd0a6aac3cc92d8ef34ab1eed63b0f776	text/html; charset=utf-8
+ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	https://exolve.ru/docs/ru/api-reference/sip-api/	200	0	0	362677	69114ebd01eb6ebe7559eb87d0d2e58b37afa40824b8fa7712cf34a46c6ebbb5	text/html; charset=utf-8
+ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	https://partners.exolve.ru/solutions/mobile-sdk/	200	0	0	300935	41dc2655994e8fa2a1e09dd4e86983014459f0a5b910c7fbe3fdd12f617da912	text/html; charset=utf-8
+ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	200	0	0	334512	e916184504b71ddd7289f7743aec33bba63e18e7ba7950d8e13ec74e02c4ccab	text/html; charset=utf-8
+mts_business	https://support.mts.ru/business	https://support.mts.ru/business	403	0	0	300	b0af7caa52de09585f3f27ed01f1f5024d8f54b38d4d8b722cf4aada7a6039b6	text/html
+mts_orp	https://support.mts.ru/omni_retail_product/o-servise/chto-takoe-omni-retail-product	https://support.mts.ru/omni_retail_product/o-servise/chto-takoe-omni-retail-product	403	0	0	300	91c7dd3863ac6d855d249c259b2e4e18a0ef2ac5dab2962e3992cdcffefe7018	text/html
+mws_cdn	https://mws.ru/docs/cdn/mdsrvc_diag.html	https://mws.ru/docs/cdn/mdsrvc_diag.html	404	0	0	31670	b67b01c7c0b2bf11a93b0639d2d03e88fdd1db60500107f39cac8e8ac9211178	text/html

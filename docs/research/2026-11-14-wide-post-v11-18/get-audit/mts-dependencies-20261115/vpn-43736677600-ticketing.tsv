@@ -1,0 +1,17 @@
+url	asn	asn_ris	eligible	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_scheme	redirect_host	redirect_path	state	observed_at
+https://b2b-live.mts.ru/ticket-services	12389	12389	yes	176.57.64.180	200	0	0	text/html; charset=UTF-8	10000	252a2d267731acf0d568221d678b3795e814c9720ffee236f2aa9bbf53072461	Билетные сервисы	NA	NA	NA	vpn_body_unproven	2026-11-15T16:40:38.381382+00:00
+https://b2b-live.mts.ru/ticket-services	44724	44724	yes	176.57.64.180	200	0	0	text/html; charset=UTF-8	10000	252a2d267731acf0d568221d678b3795e814c9720ffee236f2aa9bbf53072461	Билетные сервисы	NA	NA	NA	vpn_body_unproven	2026-11-15T16:41:10.236330+00:00
+https://customer.ticketscloud.com/	12389	12389	yes	95.129.232.92	200	0	0	text/html	4105	94ecca65b2a44bd136a502224d3ef640ebc0cc15e46dd4a497057dee65bc44d7	Ticketscloud | Customer	NA	NA	NA	vpn_body_unproven	2026-11-15T16:40:24.720888+00:00
+https://customer.ticketscloud.com/	44724	44724	yes	95.129.232.92	200	0	0	text/html	4105	94ecca65b2a44bd136a502224d3ef640ebc0cc15e46dd4a497057dee65bc44d7	Ticketscloud | Customer	NA	NA	NA	vpn_body_unproven	2026-11-15T16:40:54.795825+00:00
+https://doc.ticketscloud.org/	12389	12389	yes	104.16.253.120	302	0	0	text/html; charset=utf-8	0	NA	NA	https	ticketscloud.readthedocs.io	/ru/latest/	vpn_redirect	2026-11-15T16:40:22.093350+00:00
+https://doc.ticketscloud.org/	44724	44724	yes	104.16.253.120	302	0	0	text/html; charset=utf-8	0	NA	NA	https	ticketscloud.readthedocs.io	/ru/latest/	vpn_redirect	2026-11-15T16:40:50.577872+00:00
+https://doc.ticketscloud.org/ru/latest/index.html	12389	12389	yes	104.16.253.120	200	0	0	text/html; charset=utf-8	10000	f7b865fde726cc6e167de191a21366eac29bcfb06b233c72a4417c2d0f261ba0	Документация Ticketscloud v2 API — Документация ticketscloud v2	NA	NA	NA	vpn_marker	2026-11-15T16:40:23.406326+00:00
+https://doc.ticketscloud.org/ru/latest/index.html	44724	44724	yes	104.16.253.120	200	0	0	text/html; charset=utf-8	10000	f7b865fde726cc6e167de191a21366eac29bcfb06b233c72a4417c2d0f261ba0	Документация Ticketscloud v2 API — Документация ticketscloud v2	NA	NA	NA	vpn_marker	2026-11-15T16:40:53.072773+00:00
+https://support.ticketscloud.org/	12389	12389	yes	77.238.96.15	NA	60	1	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T16:40:25.610936+00:00
+https://support.ticketscloud.org/	44724	44724	yes	77.238.96.15	NA	60	1	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T16:40:56.165233+00:00
+https://ticketscloud.com/	12389	12389	yes	95.129.232.92	200	0	0	text/html	10000	2821d7c427e2098a91e25b54bb7238f72a1971b961e9d896a5f5a480cbc5a401	Ticketscloud | Главная	NA	NA	NA	vpn_marker	2026-11-15T16:40:35.944599+00:00
+https://ticketscloud.com/	44724	44724	yes	95.129.232.92	200	0	0	text/html	10000	2821d7c427e2098a91e25b54bb7238f72a1971b961e9d896a5f5a480cbc5a401	Ticketscloud | Главная	NA	NA	NA	vpn_marker	2026-11-15T16:41:07.555295+00:00
+https://ticketscloud.org/	12389	12389	yes	77.238.96.15	NA	60	1	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T16:40:20.805167+00:00
+https://ticketscloud.org/	44724	44724	yes	77.238.96.15	NA	60	1	NA	0	NA	NA	NA	NA	NA	vpn_tls_unproven	2026-11-15T16:40:48.412937+00:00
+https://ticketscloud.readthedocs.io/ru/latest/	12389	12389	yes	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T16:40:34.017365+00:00
+https://ticketscloud.readthedocs.io/ru/latest/	44724	44724	yes	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T16:41:04.753143+00:00

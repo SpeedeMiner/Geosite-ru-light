@@ -1,0 +1,10 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+tambov.zelenaya.net	https://tambov.zelenaya.net/contacts/	candidate	200	0	0	200	Контакты и офисы - Зеленая точка Тамбов	NA	65a0e1be68c262ac26c2bf89f8c331e8650637ab447d08e06c16b3b705156172	2026-11-15T16:42:26.525061+00:00	workspace_unattributed
+zelenaya.net	https://zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:25.558327+00:00	workspace_unattributed
+tomsk.zelenaya.net	https://tomsk.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:27.956607+00:00	workspace_unattributed
+lipetsk.zelenaya.net	https://lipetsk.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:29.016548+00:00	workspace_unattributed
+vladivostok.zelenaya.net	https://vladivostok.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:29.040621+00:00	workspace_unattributed
+belgorod.zelenaya.net	https://belgorod.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:27.966664+00:00	workspace_unattributed
+ufa.zelenaya.net	https://ufa.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:29.040799+00:00	workspace_unattributed
+cabinet.zt68.net	https://cabinet.zt68.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:42:29.630010+00:00	workspace_unattributed
+zelenaya-net.ru	https://zelenaya-net.ru/news/zelenaya-tochka-teper-mts-home	control	200	0	0	200	Новости провайдера Зеленая точка - «Зелёная точка» теперь «МТС Home» - город Ставрополь	NA	0a1b29ff66abc58c8e7406df30ca2e398df9a5c5e7283f2dee624ea1c7c9e328	2026-11-15T16:42:27.196814+00:00	workspace_unattributed

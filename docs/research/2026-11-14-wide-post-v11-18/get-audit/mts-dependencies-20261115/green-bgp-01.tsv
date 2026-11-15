@@ -1,0 +1,10 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+belgorod.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+cabinet.zt68.net	195.242.145.227	cloudflare|google	195.242.144.0/23	AS41929
+lipetsk.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+tambov.zelenaya.net	195.8.38.8	cloudflare|google	195.8.38.0/23	AS41929
+tomsk.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+ufa.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+vladivostok.zelenaya.net	91.207.137.59	cloudflare|google	91.207.136.0/23	AS48176
+zelenaya-net.ru	5.183.190.68	cloudflare|google	5.183.190.0/24	AS200487
+zelenaya.net	91.207.136.78	cloudflare|google	91.207.136.0/23	AS48176

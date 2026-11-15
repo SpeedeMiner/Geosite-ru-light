@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+tic_parent	https://b2b-live.mts.ru/ticket-services	https://b2b-live.mts.ru/ticket-services	200	0	0	85238	9f2f00a573c75e2c44685d34c36f1d9d0a1bc71512725cac065ff1eaa99735e4	text/html; charset=UTF-8
+tic_root	https://ticketscloud.com/	https://ticketscloud.com/	200	0	0	174045	163c697770145552778857694c82ba2aac79c109979b15c3ef6e1143acfdf77a	text/html
+tic_widget	https://ticketscloud.com/products/widget	https://ticketscloud.com/products/widget	200	0	0	51968	8d443ba57359c2dbfe0f2b4c66a66e29fc6187f74c67c9571a5685f807340926	text/html
+tic_docs	https://doc.ticketscloud.org/ru/latest/index.html	https://doc.ticketscloud.org/ru/latest/index.html	200	0	0	17010	b3f2ffb85c53498c44d030c6c75dabd962af6cb53f849c48f4e3b810dee7e038	text/html; charset=utf-8
+tic_api	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	200	0	0	12595	71e19a079ac34b1f4b8f006f133a5937fa781e2e037eefc6af241ce06ed3e512	text/html; charset=utf-8
+tic_customer	https://customer.ticketscloud.com/	https://customer.ticketscloud.com/	200	0	0	4105	94ecca65b2a44bd136a502224d3ef640ebc0cc15e46dd4a497057dee65bc44d7	text/html
+tic_rtd	https://ticketscloud.readthedocs.io/ru/latest/	https://ticketscloud.readthedocs.io/ru/latest/	200	0	0	17000	8bf0cace5f1ee3ec5279d5cf252f0fd46b2a2fdb35935113be1b2e98e29aded0	text/html; charset=utf-8
+ts_embed	https://support.mts.ru/mws_teamstream/kod-vstavki-videopleera/kak-razmestit-kod-vstavki	https://support.mts.ru/mws_teamstream/kod-vstavki-videopleera/kak-razmestit-kod-vstavki	403	0	0	300	67ae8a6e3ea7e4fe9146a2e7d2deaaa3bb7b1dd39711592ca6df20a1ac0a8fc8	text/html
+mws_endpoints	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	200	0	0	95108	8c65e6e1a87f7567f26d66dc756c23cafe4b9949103f8afb1cbcbd197690f297	text/html
+mws_storage	https://mws.ru/docs/s3/about.html	https://mws.ru/docs/s3/about.html	404	0	0	31670	b67b01c7c0b2bf11a93b0639d2d03e88fdd1db60500107f39cac8e8ac9211178	text/html
+mws_object	https://mws.ru/docs/cloud-platform/storage/general/object-overview.html	https://mws.ru/docs/cloud-platform/storage/general/object-overview.html	200	0	0	63929	6a25819d78a1b38c1c5b12afd1eeaf15e6d6020db8cb9aac99f851b78801c6c2	text/html
+mts_segmento	https://support.mts.ru/segmento/o-platforme-segmento/chto-takoe-segmento	https://support.mts.ru/segmento/o-platforme-segmento/chto-takoe-segmento	403	0	0	300	9b3f3700e21ebd734cfbf1d9c9eceeade27849e4e0db3369d1ab29a8d2d6ae42	text/html

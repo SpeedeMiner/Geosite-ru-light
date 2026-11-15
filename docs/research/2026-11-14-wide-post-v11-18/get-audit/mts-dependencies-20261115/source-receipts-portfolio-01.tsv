@@ -1,0 +1,18 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+ai_root	https://mts.ai/	https://mts.ai/	200	0	0	210307	67582e5792e12bc80f420f91d19a57db5b1ff1f1c4f7fa2decb2a8f4b906962e	text/html; charset=UTF-8
+ai_portfolio	https://mts.ai/product/	https://mts.ai/product/	200	0	0	153520	8aaddcd13fa6a60a22a4ef649f0066a9b88678ff6dd28f1adec46784a76c1b34	text/html; charset=UTF-8
+ai_about	https://mts.ai/o-nas/	https://mts.ai/o-nas/	200	0	0	233166	c896aa052bb8717e2e26794ae341c86e6fd701f64bf921e32f31c3ea6d65984e	text/html; charset=UTF-8
+ai_cowork	https://mts.ai/product/mws-ai-cowork/	https://mts.ai/product/mws-ai-cowork/	200	0	0	179703	d2472ef1b4444cc40b02b760f0168bdb2826a79ca120db53ae1f8a82b6c7e5d6	text/html; charset=UTF-8
+ai_legal	https://mts.ai/user-agreement-mts-ai/	https://mts.ai/user-agreement-mts-ai/	200	0	0	150988	66083c9524aa4e3c28ed9a6cffd6b577e0925e042732bd761535972442b05773	text/html; charset=UTF-8
+vision_ru	https://visionlabs.ru/	https://visionlabs.ru/	200	0	0	274133	96316ac829721ac34dbc47d2739c9962c6c7afcd850a5d5c48d4ee1960e2e673	text/html; charset=utf-8
+vision_docs	https://docs.visionlabs.ru/	https://docs.visionlabs.ru/	200	0	0	39636	2b67823f70bef793ef1452ac4d4ae1a610e96a625ec6baa74d7a4af1476e9066	text/html
+vision_ai	https://visionlabs.ai/	https://visionlabs.ai/	200	0	0	250230	e83e34af7b0a910097a4a88f978cfd8a718b5214f1a91c743e59761c280c7800	text/html; charset=utf-8
+intema	https://intema.ai/	https://intema.ai/	200	0	0	272885	9868d7c38ffb3b82533482b9e42bebfb72c791a0d9ab0205e451ca1966442b92	text/html; charset=UTF-8
+onmedia	https://on-media.ru/about	https://on-media.ru/about	200	0	0	210432	fbd55f7659baf21d6291831b2510af8a386c86c2d7ddd227225ea8e076545851	text/html; charset=utf-8
+urent	https://urent.ru/docs/accession.html	https://urent.ru/docs/accession.html	200	0	0	109452	3847030a8aab2dacdcf4d70776a1e4a8d303b1ca56b9bda49c05a953ed68b584	text/html
+kion_music	https://music.mts.ru/agreement	https://music.mts.ru/tmgrdfrend/showcaptcha	200	0	0	11848	3def2c9446ee84e3f202be3190609556b357b765108d7f8b8808f272e7b438b5	text/html
+mts_id	https://support.mts.ru/mts_id/obschaya-informatsiya-o-mts-id/chto-takoe-mts-id-i-dlya-chego-on-nuzhen	https://support.mts.ru/mts_id/obschaya-informatsiya-o-mts-id/chto-takoe-mts-id-i-dlya-chego-on-nuzhen	403	0	0	300	f6d66b93e06ced37bc6d65b1194032d830c8932fdaf784d241c90c999ee474fd	text/html
+pay_sdk	https://pay.mts.ru/docs/415684930	https://pay.mts.ru/docs/415684930	200	0	0	212842	c99dd13e16d8f02a7231afa6918816a02be0f9c6beaa7695826ffff9af70ed69	text/html; charset=utf-8
+pay_hosts	https://pay.mts.ru/docs/1828048426	https://pay.mts.ru/docs/1828048426	200	0	0	189268	a930509dc1c55ee013181dd340e01fd24fa007e8ffe89230a6980d51452c4150	text/html; charset=utf-8
+exi_deal	https://www.mtsbank.ru/o-banke/novosti/detail/1151304/	https://www.mtsbank.ru/o-banke/novosti/detail/1151304/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+exi_faq	https://www.mtsbank.ru/investors-and-shareholders/faq/	https://www.mtsbank.ru/investors-and-shareholders/faq/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain

@@ -1,0 +1,12 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM
+Exolve	ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	official-link	exolve.ru	https://exolve.ru/products/api/	API	domain:ru	domain:ru	NA	NA
+Exolve	ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+Exolve	ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+Exolve	ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	official-source	partners.exolve.ru	https://partners.exolve.ru/solutions/mobile-sdk/	Mobile SDK для звонков в приложении | МТС Exolve	domain:ru	domain:ru	NA	NA
+Exolve	ex_sdk	https://partners.exolve.ru/solutions/mobile-sdk/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM
+Exolve	ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	official-link	docs.exolve.ru	https://docs.exolve.ru/docs/ru/api-reference/numbering-api/buying-number/	Buy	domain:ru	domain:ru	NA	NA
+Exolve	ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	official-source	exolve.ru	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	Как начать работу с API в МТС Exolve | МТС Exolve	domain:ru	domain:ru	NA	NA
+Exolve	ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+Exolve	ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+Exolve	ex_faq	https://exolve.ru/faq/kak-nachat-rabotu-s-api-mts-exolve/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM

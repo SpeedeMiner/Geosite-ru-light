@@ -1,0 +1,47 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	habr.com	https://habr.com/ru/companies/mws/articles/	NA	domain:habr.com	domain:habr.com	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	mts-digital.ru	https://mts-digital.ru/compliance	Комплаенс и деловая этика	domain:ru	domain:ru	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	mws.ru	https://mws.ru/dev-tools/teamstream/	Для бизнеса	domain:ru	domain:ru	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	t.me	https://t.me/MTSWebServices	NA	NA	NA	NA	TELEGRAM
+TeamStream	ts_root	https://teamstream.mws.ru/	official-source	teamstream.mws.ru	https://teamstream.mws.ru/	MWS TeamStream	domain:ru	domain:ru	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	vc.ru	https://vc.ru/mws	NA	domain:ru	domain:ru	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	vk.com	https://vk.com/	NA	domain:vk.com	domain:vk.com	NA	NA
+TeamStream	ts_root	https://teamstream.mws.ru/	official-link	workspace.teamstream.mws.ru	https://workspace.teamstream.mws.ru/auth	Вход	domain:ru	domain:ru	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	habr.com	https://habr.com/ru/companies/mws/articles/	NA	domain:habr.com	domain:habr.com	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	mts-digital.ru	https://mts-digital.ru/compliance	Комплаенс и деловая этика	domain:ru	domain:ru	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	mws.ru	https://mws.ru/dev-tools/teamstream/	Для бизнеса	domain:ru	domain:ru	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	t.me	https://t.me/MTSWebServices	NA	NA	NA	NA	TELEGRAM
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-source	teamstream.mws.ru	https://teamstream.mws.ru/business	Для бизнеса	domain:ru	domain:ru	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	vc.ru	https://vc.ru/mws	NA	domain:ru	domain:ru	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	vk.com	https://vk.com/	NA	domain:vk.com	domain:vk.com	NA	NA
+TeamStream	ts_business	https://teamstream.mws.ru/business	official-link	workspace.teamstream.mws.ru	https://workspace.teamstream.mws.ru/auth	Вход	domain:ru	domain:ru	NA	NA
+TeamStream	ts_legal	https://mws.ru/docs/docum/s55.html	official-source	mws.ru	https://mws.ru/docs/docum/s55.html	Специальные условия Облачного сервиса «MWS TeamStream» | MWS Docs	domain:ru	domain:ru	NA	NA
+TeamStream	ts_legal	https://mws.ru/docs/docum/s55.html	official-link	profile.mts.ru	https://profile.mts.ru/	https://profile.mts.ru/⁠	domain:ru	domain:ru	NA	NA
+TeamStream	ts_legal	https://mws.ru/docs/docum/s55.html	official-link	teamstream.mws.ru	https://teamstream.mws.ru/	https://teamstream.mws.ru⁠	domain:ru	domain:ru	NA	NA
+VDome	vd_eula	https://domofon.mts.ru/eula.html	official-link	apps.apple.com	https://apps.apple.com/ru/app/vdome/id1491163759	NA	NA	NA	NA	NA
+VDome	vd_eula	https://domofon.mts.ru/eula.html	official-source	domofon.mts.ru	https://domofon.mts.ru/eula.html	VDome	domain:ru	domain:ru	NA	NA
+VDome	vd_eula	https://domofon.mts.ru/eula.html	official-link	moskva.mts.ru	https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/dokumenti-pao-mts/politika-obrabotka-personalnih-dannih-v-pao-mts	(https://moskva.mts.ru/about/investoram-i-akcioneram/korporativnoe-upravlenie/dokumenti-pao-mts/poli	domain:ru	domain:ru	NA	NA
+VDome	vd_eula	https://domofon.mts.ru/eula.html	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+VDome	vd_pp	https://domofon.mts.ru/policy.html	official-link	apps.apple.com	https://apps.apple.com/ru/app/vdome/id1491163759	NA	NA	NA	NA	NA
+VDome	vd_pp	https://domofon.mts.ru/policy.html	official-source	domofon.mts.ru	https://domofon.mts.ru/policy.html	VDome	domain:ru	domain:ru	NA	NA
+VDome	vd_pp	https://domofon.mts.ru/policy.html	official-link	moskva.mts.ru	https://moskva.mts.ru/personal/cookie	«Политикой обработки файлов cookies»	domain:ru	domain:ru	NA	NA
+VDome	vd_pp	https://domofon.mts.ru/policy.html	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+Exolve	ex_root	https://exolve.ru/	official-source	exolve.ru	https://exolve.ru/	МТС Exolve - коммуникационная платформа для разработчиков и бизнеса	domain:ru	domain:ru	NA	NA
+Exolve	ex_root	https://exolve.ru/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+Exolve	ex_root	https://exolve.ru/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+Exolve	ex_root	https://exolve.ru/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	docs-code	api.exolve.ru	https://api.exolve.ru/messaging/v1/SendSMS	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	community.exolve.ru	https://community.exolve.ru/faq/chto-takoe-sms-templates-categories/	шаблонные рассылки	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	datatracker.ietf.org	https://datatracker.ietf.org/doc/html/rfc3339	RFC-3339 / ISO-8601	NA	NA	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-source	docs.exolve.ru	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	SMS API для разработчиков | документация SMS API от МТС Exolve	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	exolve.ru	https://exolve.ru/	Бизнесу	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	sso.exolve.ru	https://sso.exolve.ru/realms/Exolve/protocol/openid-connect/auth	Попробовать бесплатно	domain:ru	domain:ru	NA	NA
+Exolve	ex_docs	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	official-link	t.me	https://t.me/mts_exolve	NA	NA	NA	NA	TELEGRAM
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	docs-code	api.exolve.ru	https://api.exolve.ru/sip/v1/Create	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-link	datatracker.ietf.org	https://datatracker.ietf.org/doc/html/rfc3339	RFC-3339 / ISO-8601	NA	NA	NA	NA
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-source	exolve.ru	https://exolve.ru/docs/ru/api-reference/sip-api/	SIP API | документация Exolve	domain:ru	domain:ru	NA	NA
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-link	habr.com	https://habr.com/ru/companies/exolve/	NA	domain:habr.com	domain:habr.com	NA	NA
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-link	hh.ru	https://hh.ru/employer/12034	NA	domain:ru	domain:ru	NA	NA
+Exolve	ex_voice	https://exolve.ru/docs/ru/api-reference/sip-api/	official-link	sso.exolve.ru	https://sso.exolve.ru/realms/Exolve/protocol/openid-connect/auth	Попробовать бесплатно	domain:ru	domain:ru	NA	NA

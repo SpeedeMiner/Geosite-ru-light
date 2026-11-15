@@ -1,0 +1,9 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+ticketscloud.org	https://ticketscloud.org/	candidate	503	0	0	200	NA	NA	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	2026-11-15T16:39:20.726172+00:00	workspace_unattributed
+doc.ticketscloud.org	https://doc.ticketscloud.org/	candidate	302	0	0	200	NA	ticketscloud.readthedocs.io	NA	2026-11-15T16:39:20.236804+00:00	workspace_unattributed
+doc.ticketscloud.org	https://doc.ticketscloud.org/ru/latest/index.html	candidate	200	0	0	200	Документация Ticketscloud v2 API — Документация ticketscloud v2	NA	b3f2ffb85c53498c44d030c6c75dabd962af6cb53f849c48f4e3b810dee7e038	2026-11-15T16:39:20.365241+00:00	workspace_unattributed
+customer.ticketscloud.com	https://customer.ticketscloud.com/	candidate	200	0	0	200	Ticketscloud | Customer	NA	94ecca65b2a44bd136a502224d3ef640ebc0cc15e46dd4a497057dee65bc44d7	2026-11-15T16:39:20.164558+00:00	workspace_unattributed
+support.ticketscloud.org	https://support.ticketscloud.org/	candidate	503	0	0	200	NA	NA	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	2026-11-15T16:39:20.127651+00:00	workspace_unattributed
+ticketscloud.readthedocs.io	https://ticketscloud.readthedocs.io/ru/latest/	candidate	200	0	0	200	Документация Ticketscloud v2 API — Документация ticketscloud v2	NA	8bf0cace5f1ee3ec5279d5cf252f0fd46b2a2fdb35935113be1b2e98e29aded0	2026-11-15T16:39:19.975075+00:00	workspace_unattributed
+ticketscloud.com	https://ticketscloud.com/	control	200	0	0	200	Ticketscloud | Главная	NA	163c697770145552778857694c82ba2aac79c109979b15c3ef6e1143acfdf77a	2026-11-15T16:39:24.746191+00:00	workspace_unattributed
+b2b-live.mts.ru	https://b2b-live.mts.ru/ticket-services	control	200	0	0	200	Билетные сервисы	NA	9f2f00a573c75e2c44685d34c36f1d9d0a1bc71512725cac065ff1eaa99735e4	2026-11-15T16:39:24.937013+00:00	workspace_unattributed

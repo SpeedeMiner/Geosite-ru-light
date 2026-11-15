@@ -1,0 +1,37 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-source	b2b-live.mts.ru	https://b2b-live.mts.ru/ticket-services	Билетные сервисы	domain:ru	domain:ru	NA	NA
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-link	live.mts.ru	https://live.mts.ru/	МТС Live	domain:ru	domain:ru	NA	NA
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-link	t.me	https://t.me/mts_live	NA	NA	NA	NA	TELEGRAM
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-link	ticketland.ru	https://ticketland.ru/	Ticketland.ru	domain:ru	domain:ru	NA	NA
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-link	vk.com	https://vk.com/mts_live	NA	domain:vk.com	domain:vk.com	NA	NA
+МТС Live	tic_parent	https://b2b-live.mts.ru/ticket-services	official-link	www.ticketland.ru	https://www.ticketland.ru/	Ticketland	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	allstarsnn.com	https://allstarsnn.com/	allstarsnn.com	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	app70476.carrotquest.help	https://app70476.carrotquest.help/	База знаний	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	doc.ticketscloud.org	https://doc.ticketscloud.org/	Документация API	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	hh.ru	https://hh.ru/employer/1633588	Стать частью команды	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	incrussia.ru	https://incrussia.ru/news/ticketscloud-zapustit-interesam/	Ticketscloud запустили в приложении раздел для знакомств по общим интересам «Знакомства» в Vibeapp i	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	journal.tinkoff.ru	https://journal.tinkoff.ru/news/mts-buys-ticketscloud	МТС купила Ticketscloud Что нужно знать акционерам journal.tinkoff.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	mintmusic.ru	https://mintmusic.ru/	mintmusic.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	musicaeterna.org	https://musicaeterna.org/	musicaeterna.org	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	rb.ru	https://rb.ru/news/music-dating/	В России запустили приложение для знакомства по музыкальным интересам Как найти друзей в Vibeapp rb.	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	ria.ru	https://ria.ru/20220304/professii-1776484918	На кого пойти учиться Самые востребованные профессии в 2022 ria.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	secretmag.ru	https://secretmag.ru/practice/pryzhki-cherez-golovu-pochemu-sotrudniki-narushayut-subordinaciyu-i-kak-eto-ispravit.htm	Прыжки через голову Почему сотрудники нарушают субординацию и как это исправить secretmag.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	signal.live	https://signal.live/	signal.live	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	sk.ru	https://sk.ru/	NA	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	socialbites.ca	https://socialbites.ca/fashion-entertainment/62468	Russians have lost interest in online education and master classes The highest growth in ticket sale	NA	NA	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	t.me	https://t.me/ticketscloud	NA	NA	NA	NA	TELEGRAM
+Ticketscloud	tic_root	https://ticketscloud.com/	official-source	ticketscloud.com	https://ticketscloud.com/	Ticketscloud | Главная	full:ticketscloud.com	full:ticketscloud.com	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	trends.rbc.ru	https://trends.rbc.ru/trends/innovation/62a764c79a79477624644517	Российский МСБ О том, как мотивировать сотрудников в кризис trends.rbc.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	trk.mail.ru	https://trk.mail.ru/c/pvwrq5	Vibeapp it	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	vc.ru	https://vc.ru/it-agency/217041-keys-ticketscloud-pro-otdel-prodazh-obedinili-dannye-iz-dvuh-crm-i-sobrali-prozrachnuyu-otchetnost	Кейс Ticketscloud про отдел продаж Объединили данные из двух CRM и собрали прозрачную отчётность vc.	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	vibeapp.ru	https://vibeapp.ru/	NA	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	vk.com	https://vk.com/ticketscloud	NA	domain:vk.com	domain:vk.com	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.forbes.ru	https://www.forbes.ru/tehnologii/341185-na-balet-cherez-brauzer-glavnye-trendy-na-rynke-prodazh-biletov-v-runete	На балет через браузер Главные тренды на рынке продаж билетов в Рунете forbes.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.gazeta.ru	https://www.gazeta.ru/style/news/2022/07/19/18157478.shtml	Россияне утратили интерес к онлайн-тренингам и мастер-классам Спрос на концерты вырос на 78 % gazeta	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.kommersant.ru	https://www.kommersant.ru/doc/5490296	Музыка их связала В приложении для смарт-билетов Vibeapp появился раздел «Знакомства» kommersant.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.rbc.ru	https://www.rbc.ru/technology_and_media/04/09/2023/64ac04229a79471702101d28	МТС Live x Ticketscloud Компания «МТС Энтертейнмент» купила сервис по продаже билетов rbc.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.sravni.ru	https://www.sravni.ru/q/mozhno-li-pokupat-bilety-s-ruk-i-kak-ne-narvatsja-na-poddelku-43784/	Можно ли покупать билеты с рук? Старайтесь покупать билеты у официальных продавцов! sravni.ru	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_root	https://ticketscloud.com/	official-link	www.techinsider.ru	https://www.techinsider.ru/technologies/1545925-api-konsolidaciya-i-bilety-na-blokcheyne-kak-ustroen-rossiyskiy-rynok-biletnyh-platform/	API, консолидация и билеты на блокчейне Как устроен российский рынок билетных платформ techinsider.r	domain:ru	domain:ru	NA	NA
+Ticketscloud	tic_widget	https://ticketscloud.com/products/widget	official-link	app70476.carrotquest.help	https://app70476.carrotquest.help/	База знаний	NA	NA	NA	NA
+Ticketscloud	tic_widget	https://ticketscloud.com/products/widget	official-link	doc.ticketscloud.org	https://doc.ticketscloud.org/	Документация API	NA	NA	NA	NA
+Ticketscloud	tic_widget	https://ticketscloud.com/products/widget	official-link	sk.ru	https://sk.ru/	NA	domain:ru	domain:ru	NA	NA
