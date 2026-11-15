@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	img.solarspace.pro	img.solarspace.pro	https://img.solarspace.pro/docs/start-authorization-page.jpg		https://docs.solarspace.pro/faq/authorization
+corporate	control	docs.solarspace.pro	docs.solarspace.pro	https://docs.solarspace.pro/	Solar Space	https://docs.solarspace.pro/faq/authorization
+corporate	control	yandex.cloud	yandex.cloud	https://yandex.cloud/ru/docs/stackland/	Yandex Cloud Stackland	https://yandex.cloud/ru/docs/overview/concepts/interfaces
+corporate	control	api.curator.pro	api.curator.pro	https://api.curator.pro/	Qrator API	https://docs.curator.pro/api-reference/usage.html

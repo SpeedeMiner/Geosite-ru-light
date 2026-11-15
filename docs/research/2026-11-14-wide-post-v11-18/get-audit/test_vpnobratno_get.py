@@ -97,11 +97,13 @@ class VpnObratnoGetTests(unittest.TestCase):
         self.assertNotIn('HTTPS_PROXY',subprocess.call_args.kwargs['env'])
         self.assertEqual(args[-1],URL)
 
-    def test_range_is_limited_to_specific_public_html_manuals(self):
+    def test_range_is_limited_to_specific_public_documentation_urls(self):
         for url, cohort, expected in [
             ('https://api.curator.pro/', 'corporate', True),
             ('https://docs.solarspace.pro/', 'corporate', True),
             ('https://docs.solarspace.pro/other', 'corporate', False),
+            ('https://img.solarspace.pro/docs/start-authorization-page.jpg', 'corporate', True),
+            ('https://img.solarspace.pro/docs/other.jpg', 'corporate', False),
             ('https://api.curator.pro/', 'ip_echo', False),
             ('https://api.curator.pro/another', 'corporate', False),
             (URL, 'corporate', False),
@@ -114,7 +116,7 @@ class VpnObratnoGetTests(unittest.TestCase):
                 args = run.call_args.args[0]
                 self.assertEqual('--range' in args, expected)
                 if expected:
-                    self.assertEqual(args[args.index('--range')+1], '0-65535')
+                    self.assertEqual(args[args.index('--range')+1], '0-4095' if host == 'img.solarspace.pro' else '0-65535')
                 self.assertEqual(args[args.index('--max-filesize')+1], '524288')
 
     def test_fail_closed_on_private_destination_and_incorrect_remote(self):

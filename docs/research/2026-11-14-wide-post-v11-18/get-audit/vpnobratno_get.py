@@ -29,10 +29,11 @@ UPSTREAM_FILES = {
 }
 TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
-# These two public HTML manuals exceed the ordinary download cap.
+# Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
     'https://api.curator.pro/': '0-65535',
     'https://docs.solarspace.pro/': '0-65535',
+    'https://img.solarspace.pro/docs/start-authorization-page.jpg': '0-4095',
 }
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
