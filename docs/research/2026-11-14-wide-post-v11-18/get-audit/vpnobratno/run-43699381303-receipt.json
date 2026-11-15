@@ -1,0 +1,63 @@
+{
+  "artifact_id": 14156021443,
+  "artifact_zip_sha256": "85c5adddb349c3a65f4cf3e90ce99da14ff27346400857f29c4594dfcc02eb35",
+  "attempted_urls": 5,
+  "comparison_differences": [],
+  "connection_attempts": 2,
+  "distinct_exit_asns": 2,
+  "execution_sha": "23d6f5c33f62f093f4307d77bf75642ba67cc7c0",
+  "exits": [
+    {
+      "asn": 25513,
+      "attempted_urls": 5,
+      "country": "RU",
+      "network_evidence": {
+        "allocation": "109.252.0.0/17",
+        "announced_prefix": "109.252.0.0/16",
+        "line_evidence": "PPPoE network; NAT-labelled PTR; retail contract unverified",
+        "operator": "МГТС",
+        "registry_reference": "https://whois.ipip.net/AS25513/109.252.0.0/16",
+        "reverse_dns_pattern": "*.nat.spd-mgts.ru",
+        "ripe_netname": "MGTS-PPPOE"
+      },
+      "profile_variant": "IP_UDP",
+      "verified_http": 5
+    },
+    {
+      "asn": 12389,
+      "attempted_urls": 5,
+      "country": "RU",
+      "network_evidence": {
+        "allocation": "77.35.100.0/22",
+        "announced_prefix": "77.35.100.0/22",
+        "line_evidence": "Dynamic Broadband Clients; retail contract unverified",
+        "operator": "Ростелеком",
+        "registry_reference": "https://ipregistry.co/AS12389",
+        "reverse_dns_pattern": null,
+        "ripe_netname": "POL-PPPOE-NET-UNL"
+      },
+      "profile_variant": "IP_UDP",
+      "verified_http": 5
+    }
+  ],
+  "fresh_ru_credit": false,
+  "full_url_matrix": true,
+  "globalping_requests": 0,
+  "http_responses": 10,
+  "job_id": 132766930277,
+  "measurements": 10,
+  "profiles_discovered": 6,
+  "requested_asns": 2,
+  "requested_urls": 5,
+  "run_attempt": 1,
+  "run_id": 43699381303,
+  "skipped_asn_attempts": {},
+  "states": {
+    "vpn_body_unproven": 2,
+    "vpn_http_other": 2,
+    "vpn_marker": 2,
+    "vpn_redirect": 4
+  },
+  "upstream_ref": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "upstream_state": "COMPLETE"
+}

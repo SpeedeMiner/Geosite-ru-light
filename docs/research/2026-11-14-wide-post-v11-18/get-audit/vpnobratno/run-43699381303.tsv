@@ -1,0 +1,11 @@
+url	http	state	tls	redirect	marker	exit_asn	exit_country	observed_at
+https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html	200	vpn_marker	verified		Диадок	25513	RU	2026-11-15T09:28:59.845974+00:00
+https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	200	vpn_body_unproven	verified			25513	RU	2026-11-15T09:29:01.076873+00:00
+https://aero.alrosa.ru/	403	vpn_http_other	verified			25513	RU	2026-11-15T09:29:02.554835+00:00
+https://ru.cloud.trassir.com/	307	vpn_redirect	verified	https://ru.cloud.trassir.com/user-login		25513	RU	2026-11-15T09:29:03.602069+00:00
+https://sigma.cloud.trassir.com/	307	vpn_redirect	verified	https://sigma.cloud.trassir.com/user-login		25513	RU	2026-11-15T09:29:04.705809+00:00
+https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html	200	vpn_marker	verified		Диадок	12389	RU	2026-11-15T09:29:15.589160+00:00
+https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	200	vpn_body_unproven	verified			12389	RU	2026-11-15T09:29:18.249997+00:00
+https://aero.alrosa.ru/	403	vpn_http_other	verified			12389	RU	2026-11-15T09:29:20.009140+00:00
+https://ru.cloud.trassir.com/	307	vpn_redirect	verified	https://ru.cloud.trassir.com/user-login		12389	RU	2026-11-15T09:29:21.115414+00:00
+https://sigma.cloud.trassir.com/	307	vpn_redirect	verified	https://sigma.cloud.trassir.com/user-login		12389	RU	2026-11-15T09:29:22.432340+00:00

@@ -1,0 +1,6 @@
+url	AS25513_http	AS25513_state	AS25513_tls	AS25513_redirect	AS25513_marker	AS12389_http	AS12389_state	AS12389_tls	AS12389_redirect	AS12389_marker	same
+https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html	200	vpn_marker	verified		Диадок	200	vpn_marker	verified		Диадок	true
+https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	200	vpn_body_unproven	verified			200	vpn_body_unproven	verified			true
+https://aero.alrosa.ru/	403	vpn_http_other	verified			403	vpn_http_other	verified			true
+https://ru.cloud.trassir.com/	307	vpn_redirect	verified	https://ru.cloud.trassir.com/user-login		307	vpn_redirect	verified	https://ru.cloud.trassir.com/user-login		true
+https://sigma.cloud.trassir.com/	307	vpn_redirect	verified	https://sigma.cloud.trassir.com/user-login		307	vpn_redirect	verified	https://sigma.cloud.trassir.com/user-login		true
