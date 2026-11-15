@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	kas.pr	kas.pr	https://kas.pr/8ze6		https://os.kaspersky.ru/development/
+corporate	candidate	kas.pr	kas.pr	https://kas.pr/2vcn		https://os.kaspersky.ru/development/
+corporate	candidate	kas.pr	kas.pr	https://kas.pr/kids		https://www.kaspersky.ru/safe-kids
+corporate	control	www.kaspersky.ru	www.kaspersky.ru	https://www.kaspersky.ru/safe-kids	Kaspersky Safe Kids	https://www.kaspersky.ru/safe-kids
+corporate	control	os.kaspersky.ru	os.kaspersky.ru	https://os.kaspersky.ru/development/	KasperskyOS	https://os.kaspersky.ru/development/
