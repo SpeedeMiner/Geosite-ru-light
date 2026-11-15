@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+wb_docs_api	https://dev.wildberries.ru/docs/openapi/api-information	https://dev.wildberries.ru/docs/openapi/api-information	498	0	0	1134	786d311aca8294df1ab75e26600b225f8eff83c54cbe2eb91bf137e6381c1bbd	text/html
+wb_docs_main	https://dev.wildberries.ru/docs/openapi	https://dev.wildberries.ru/docs/openapi	498	0	0	1134	7b62b6a87feb1bc5f9c4fca2125d9f7cf026cd3e319608e744c0fefa5e269974	text/html
+wb_docs_items	https://dev.wildberries.ru/docs/openapi/items	https://dev.wildberries.ru/docs/openapi/items	498	0	0	1134	75940f65c3770008e8ac99c8b14e83b541635ad08310297ead876de8c4ee1120	text/html
+wb_github_org	https://api.github.com/orgs/wb-api/repos?per_page=50	https://api.github.com/orgs/wb-api/repos?per_page=50	200	0	0	5	2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d	application/json; charset=utf-8
+wb_spec_fallback	https://api.github.com/repos/dev-ik/seller-sdk/git/trees/main?recursive=1	https://api.github.com/repos/dev-ik/seller-sdk/git/trees/main?recursive=1	200	0	0	1945722	8ad4e76f1e43236ee014a3b9483a3c45073a1c4d7e8d53402ed6faec440b6252	application/json; charset=utf-8
+av_spec_fallback	https://api.github.com/repos/MissiaL/avito-api/git/trees/main?recursive=1	https://api.github.com/repos/MissiaL/avito-api/git/trees/main?recursive=1	200	0	0	12197	0bfa90d3b850540b91954a2a6f083545100dfed36215783ded5376d444ae0144	application/json; charset=utf-8
+av_ad_company	https://www.avito.ru/avito-ads	https://www.avito.ru/avito-ads	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+wb_rekv	https://www.wildberries.ru/services/rekvizity	https://www.wildberries.ru/services/rekvizity	498	0	0	1160	136572b357689941b0fa7578ce1dc10251b967e586b2a33b23ae5153fb76c15f	text/html
+av_tech_dom	https://avito.tech/company	https://avito.tech/company	404	0	0	95724	e2789577e6ed2778dedd5be9d3787cc5a6ce38d41e6552a5fd63b6c5953ba796	text/html; charset=UTF-8
+wb_tech	https://wbtech.ru/	https://wbtech.ru/	200	0	0	226046	f7b82d2ca133fe698460e968c5a38df12e9f6e51a15b412115cdc83665598b05	text/html; charset=UTF-8
+wb_rwb_no_www	https://rwb.ru/	https://rwb.ru/	200	0	0	237870	46ebe1095957a47383ebf6acc8903fbf8d9e08553025bc09d9d548f940fd6cf7	text/html; charset=utf-8
+av_ads	https://ads.avito.com/	https://ads.avito.com/	200	0	0	256388	9681f4ebab21c1768d7f027fbf1a57a1a565da367bdb64175b390234727f3c36	text/html; charset=UTF-8
