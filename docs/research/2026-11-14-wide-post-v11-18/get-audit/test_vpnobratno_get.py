@@ -97,6 +97,24 @@ class VpnObratnoGetTests(unittest.TestCase):
         self.assertNotIn('HTTPS_PROXY',subprocess.call_args.kwargs['env'])
         self.assertEqual(args[-1],URL)
 
+    def test_range_is_limited_to_public_curator_html_manual(self):
+        for url, cohort, expected in [
+            ('https://api.curator.pro/', 'corporate', True),
+            ('https://api.curator.pro/', 'ip_echo', False),
+            ('https://api.curator.pro/another', 'corporate', False),
+            (URL, 'corporate', False),
+        ]:
+            host = url.split('/')[2]
+            row = dict(ROW, url=url, host=host, cohort=cohort)
+            call = SimpleNamespace(returncode=0, stdout=json.dumps(STATS))
+            with self.subTest(url=url, cohort=cohort), patch('vpnobratno_get.subprocess.run', return_value=call) as run:
+                get_from_tunnel(row, '8.8.8.8', 'tun0', 5)
+                args = run.call_args.args[0]
+                self.assertEqual('--range' in args, expected)
+                if expected:
+                    self.assertEqual(args[args.index('--range')+1], '0-65535')
+                self.assertEqual(args[args.index('--max-filesize')+1], '524288')
+
     def test_fail_closed_on_private_destination_and_incorrect_remote(self):
         for addr in ('127.0.0.1','10.0.0.1','224.0.0.1','::1'):
             with self.assertRaises(ValueError):

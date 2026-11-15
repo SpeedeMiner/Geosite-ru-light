@@ -29,6 +29,8 @@ UPSTREAM_FILES = {
 }
 TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
+# The public Curator HTML manual exceeds the ordinary download cap.
+PUBLIC_DOC_RANGE = {'https://api.curator.pro/': '0-65535'}
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
@@ -97,7 +99,10 @@ def get_from_tunnel(row, address, interface, timeout):
                 '--interface',f'if!{interface}','--resolve',f'{host}:443:{target}',
                 '--request','GET','--proto','=https','--connect-timeout',str(timeout),
                 '--max-time',str(timeout),'--max-filesize','524288','--output',str(body_file),
-                '--write-out','%{json}','--',row['url']]
+                '--write-out','%{json}']
+        if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
+            argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
+        argv.extend(('--', row['url']))
         allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
         try:
             run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=timeout+2)

@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	api.curator.pro	api.curator.pro	https://api.curator.pro/	Qrator API	https://docs.curator.pro/api-reference/usage.html
+corporate	candidate	docs.solarspace.pro	docs.solarspace.pro	https://docs.solarspace.pro/	Solar Space	https://my.rt-solar.ru/legal/oferta.pdf
+corporate	candidate	my.solarspace.pro	my.solarspace.pro	https://my.solarspace.pro/auth/sign-in	Solar Space	https://my.solarspace.pro/legal/oferta.pdf
+corporate	candidate	hexway.io	hexway.io	https://hexway.io/	Hexway	https://hexway.ru/
+corporate	candidate	datalens.tech	datalens.tech	https://datalens.tech/ru	DataLens	https://www.yandex.ru/company/news/01-26-09-2023
+corporate	control	datalens.ru	datalens.ru	https://datalens.ru/promo	DataLens	https://datalens.tech/ru
+corporate	control	tdata.tech	tdata.tech	https://tdata.tech/products/warehouse	RT.Warehouse	https://www.company.rt.ru/press/news/d477419/
+corporate	control	docs.cloud.beeline.ru	docs.cloud.beeline.ru	https://docs.cloud.beeline.ru/docs/platform/lk/about/	Личный кабинет	https://docs.cloud.beeline.ru/docs/platform/platform/about/
+corporate	control	turbocloud.ru	turbocloud.ru	https://turbocloud.ru/services	Турбо Облако	https://www.company.rt.ru/press/news/d477419/
