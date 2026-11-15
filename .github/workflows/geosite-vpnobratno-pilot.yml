@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (IX public response evidence)
+name: GeoSite IP checker GET through VPNObratno (CDN official company evidence)
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-ix-evidence
+  group: geosite-vpnobratno-cdn-proof
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [ix-evidence]
+        batch: [cdn-proof]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
