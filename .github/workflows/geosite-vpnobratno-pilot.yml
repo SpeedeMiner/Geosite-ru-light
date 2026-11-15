@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-mts-green-cities
+  group: geosite-vpnobratno-operator-followup
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [green-cities]
+        batch: [operator-followup]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:

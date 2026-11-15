@@ -1,0 +1,26 @@
+{
+  "run_id": 43737267639,
+  "artifact_id": 14170594190,
+  "artifact_sha256": "02110c51670d55efff63d1a63cf29d559b6f8156f52def38d620dc0d9799be24",
+  "head_sha": "ed6934310cc61f3ab49f8fff200069d2addbe641",
+  "plan_sha256": "81932e85c6972f6043302fc1fb8701e585190033a7ae3c563cb120c00e95f2b7",
+  "upstream": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "requested_urls": 7,
+  "observed_exit_asns": [
+    12389,
+    44724
+  ],
+  "independently_corroborated_exit_asns": [
+    12389,
+    44724
+  ],
+  "eligible_strict_tls_http_by_exit": {
+    "12389": 7,
+    "44724": 7
+  },
+  "attempted": 14,
+  "http_responses": 14,
+  "globalping_requests": 0,
+  "fresh_ru_credit": false,
+  "transport_scan": "COMPLETE"
+}

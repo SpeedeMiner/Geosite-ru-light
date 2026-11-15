@@ -1,0 +1,8 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+www.seven-sky.net	https://www.seven-sky.net/	candidate	200	0	0	200	Captcha	NA	de077eca9cb080daf926c9009771eef5624b57874dd76fc1781b8de2163f5ed7	2026-11-15T16:45:42.061151+00:00	workspace_unattributed
+seven-sky.net	https://seven-sky.net/	candidate	308	0	0	200	NA	www.seven-sky.net	11b97463f952c3d350430eaad209e38d88b0b470d38ca5dabbd27ca4da63e732	2026-11-15T16:45:44.562678+00:00	workspace_unattributed
+tv.seven-sky.net	https://tv.seven-sky.net/faq	candidate	200	0	0	200	NA	NA	5874fb35272311d649b4cc72d672dd954d4a74acd02597e8c778337d51472a2c	2026-11-15T16:45:43.403594+00:00	workspace_unattributed
+lk.seven-sky.net	https://lk.seven-sky.net/index.jsp	candidate	302	0	0	200	NA	lk.seven-sky.net	NA	2026-11-15T16:45:46.285282+00:00	workspace_unattributed
+store.seven-sky.net	https://store.seven-sky.net/	candidate	307	0	0	200	NA	store.seven-sky.net	a2cb686df9361d638cdb5e02082adc221e17c8c6bb5cfc56d1c3d1ba55b735b7	2026-11-15T16:45:44.417228+00:00	workspace_unattributed
+domofon.seven-sky.net	https://domofon.seven-sky.net/	candidate	200	0	0	200	Умный домофон - Seven Sky	NA	fc11b3a45650d577f3a80db8ac3b61e5aa82b91834ed4b6a78c15fcbe37ce9cc	2026-11-15T16:45:44.205949+00:00	workspace_unattributed
+ticketscloud.com	https://ticketscloud.com/	control	200	0	0	200	Ticketscloud | Главная	NA	163c697770145552778857694c82ba2aac79c109979b15c3ef6e1143acfdf77a	2026-11-15T16:45:46.360072+00:00	workspace_unattributed

@@ -1,0 +1,11 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+beloretsk.zelenaya.net	https://beloretsk.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:59.230889+00:00	workspace_unattributed
+gryazi.zelenaya.net	https://gryazi.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:59.251243+00:00	workspace_unattributed
+elets.zelenaya.net	https://elets.zelenaya.net/	candidate	200	63	0	200	Зеленая точка. Интернет и цифровое ТВ в Елец	NA	b7d94d3f25f95ae2ee18885b62c8557ac6c129bc96d849a160932d6b5e1a2564	2026-11-15T16:46:54.734845+00:00	workspace_unattributed
+efremov.zelenaya.net	https://efremov.zelenaya.net/	candidate	200	63	0	200	Зеленая точка. Интернет и цифровое ТВ в Ефремов	NA	45ab43b201e392a664adc73524925a5b6275b1dbe1c879fe98d415110538b50b	2026-11-15T16:46:56.843821+00:00	workspace_unattributed
+kochubeevka.zelenaya.net	https://kochubeevka.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:58.917900+00:00	workspace_unattributed
+stavropol.zelenaya.net	https://stavropol.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:58.956179+00:00	workspace_unattributed
+naltel.zelenaya.net	https://naltel.zelenaya.net/contacts.html	candidate	503	0	0	200	NA	NA	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	2026-11-15T16:46:54.538447+00:00	workspace_unattributed
+nevinka.zelenaya.net	https://nevinka.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:58.941142+00:00	workspace_unattributed
+neftekamsk.zelenaya.net	https://neftekamsk.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:46:59.244009+00:00	workspace_unattributed
+elista.zelenaya.net	https://elista.zelenaya.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:47:01.189043+00:00	workspace_unattributed

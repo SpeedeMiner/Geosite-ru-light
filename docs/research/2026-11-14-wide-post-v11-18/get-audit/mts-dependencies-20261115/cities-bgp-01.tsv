@@ -1,0 +1,11 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+beloretsk.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+efremov.zelenaya.net	176.107.250.28	cloudflare|google	176.107.250.0/24	AS57798
+elets.zelenaya.net	176.107.250.28	cloudflare|google	176.107.250.0/24	AS57798
+elista.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+gryazi.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+kochubeevka.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+naltel.zelenaya.net	194.28.72.41	cloudflare|google	NA	NA
+neftekamsk.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+nevinka.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA
+stavropol.zelenaya.net	91.207.137.59	cloudflare|google	NA	NA

@@ -1,0 +1,8 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+domofon.seven-sky.net	81.200.1.5	cloudflare|google	81.200.1.0/24	AS29124
+lk.seven-sky.net	185.71.64.141	cloudflare|google	185.71.64.0/24	AS43298
+seven-sky.net	185.71.64.141	cloudflare|google	185.71.64.0/24	AS43298
+store.seven-sky.net	176.57.72.156	cloudflare|google	176.57.72.0/21	AS199634
+ticketscloud.com	95.129.232.92	cloudflare|google	95.129.232.0/24	AS57724
+tv.seven-sky.net	185.198.112.26	cloudflare|google	185.198.112.0/24	AS200976
+www.seven-sky.net	185.71.64.141	cloudflare|google	185.71.64.0/24	AS43298

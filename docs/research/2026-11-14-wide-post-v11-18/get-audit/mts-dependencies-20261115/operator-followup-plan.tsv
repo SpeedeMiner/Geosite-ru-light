@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	beeline.suvvy.ai	beeline.suvvy.ai	https://beeline.suvvy.ai/	Suvvy	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html
+corporate	dependency	store.seven-sky.net	store.seven-sky.net	https://store.seven-sky.net/ru	Seven	https://www.seven-sky.net/
+corporate	dependency	gryazi.zelenaya.net	gryazi.zelenaya.net	https://gryazi.zelenaya.net/contacts/	Грязи	https://gryazi.zelenaya.net/
+corporate	control	ticketscloud.com	ticketscloud.com	https://ticketscloud.com/	Ticketscloud	https://b2b-live.mts.ru/ticket-services
