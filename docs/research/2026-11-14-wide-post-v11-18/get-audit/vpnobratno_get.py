@@ -116,8 +116,70 @@ def get_from_tunnel(row, address, interface, timeout):
             return -1,{},b''
 
 
+def echo_matches_exit(body, expected):
+    """Compare the response's client-address field to the corroborated VPN exit."""
+    public = ip_address(expected)
+    try:
+        source = body.decode('utf-8').strip()
+    except UnicodeDecodeError:
+        return 'unrecognized'
+
+    def address(value):
+        if isinstance(value, str) and '%' not in value:
+            try:
+                return ip_address(value.strip())
+            except ValueError:
+                pass
+        return None
+
+    direct = address(source)
+    if direct is not None:
+        return 'match' if direct == public else 'different_address'
+
+    try:
+        payload = json.loads(source)
+    except (ValueError, RecursionError):
+        payload = None
+    keys = {'ip', 'ipv4', 'ipv6', 'ipaddress', 'address', 'clientip', 'publicip',
+            'myip', 'origin', 'query', 'remoteaddr', 'remoteip', 'geobytesremoteip'}
+    boxes = {'data', 'connection', 'result', 'network', 'client', 'request', 'proxy', 'geo'}
+
+    def from_object(obj, depth=0):
+        if not isinstance(obj, dict) or depth > 3:
+            return
+        for key, value in obj.items():
+            key = re.sub('[^a-z0-9]', '', key.lower())
+            if key in keys:
+                parsed = address(value)
+                if parsed is not None:
+                    yield parsed
+            if key in boxes:
+                yield from from_object(value, depth + 1)
+
+    values = set(from_object(payload))
+    if isinstance(payload, str) and address(payload) is not None:
+        values.add(address(payload))
+    if payload is None:
+        labelled = re.findall(r'^ip=([^\s]+)\s*$', source, re.MULTILINE)
+        if not labelled:
+            # Dyn-compatible providers return one explicitly labelled address in HTML.
+            labelled = re.findall(r'Current IP Address:\s*([0-9A-Fa-f:.]+)(?=\s|<|$)', source, re.I)
+        values.update(ip for item in labelled if (ip := address(item)) is not None)
+    if not values:
+        return 'unrecognized'
+    if len(values) != 1:
+        return 'ambiguous'
+    return 'match' if public in values else 'different_address'
+
+
 def observation(row, rc, stats, body, exit_info, address):
     x = result(row,rc,stats,body)
+    if row.get('cohort') == 'ip_echo':
+        complete = stats.get('size_download') == len(body)
+        if rc == 0 and stats.get('response_code') == 200 and stats.get('ssl_verify_result') == 0 and complete:
+            x['echo_exit'] = echo_matches_exit(body, exit_info['ip'])
+        else:
+            x['echo_exit'] = 'unverified'
     x.pop('proxy_connect',None)
     state = x.pop('state').replace('workspace_', 'vpn_', 1)
     if rc in (51,60,77,83,90,91):

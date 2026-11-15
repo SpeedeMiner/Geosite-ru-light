@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	ip.ls	ip.ls	https://ip.ls/		https://ip.ls/
+ip_echo	diagnostic	ip.mademoe.com	ip.mademoe.com	https://ip.mademoe.com/		https://ip.mademoe.com/
+ip_echo	diagnostic	ip.nelchancho.com	ip.nelchancho.com	https://ip.nelchancho.com/ip		https://ip.nelchancho.com/
+ip_echo	diagnostic	ip.robtex.com	ip.robtex.com	https://ip.robtex.com/ip		https://ip.robtex.com/
+ip_echo	diagnostic	ip.tecnotip.com.br	ip.tecnotip.com.br	https://ip.tecnotip.com.br/?plain		https://ip.tecnotip.com.br/
+ip_echo	diagnostic	ip.zxinc.org	ip.zxinc.org	https://ip.zxinc.org/api.php?type=json		https://ip.zxinc.org/
+ip_echo	diagnostic	ip233.cn	ip233.cn	https://ip233.cn/		https://www.nodeseek.com/post-299299-1
+ip_echo	diagnostic	ip4.hostux.net	ip4.hostux.net	https://ip4.hostux.net/		https://hostux.net/ja/ip/
+ip_echo	diagnostic	ip4.nnev.de	ip4.nnev.de	https://ip4.nnev.de/		https://qdm12.github.io/ddns-updater/
+ip_echo	diagnostic	ip6.hostux.net	ip6.hostux.net	https://ip6.hostux.net/		https://hostux.net/ja/ip/

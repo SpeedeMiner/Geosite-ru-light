@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	ip6.nnev.de	ip6.nnev.de	https://ip6.nnev.de/		https://qdm12.github.io/ddns-updater/
+ip_echo	diagnostic	ipaddress.no	ipaddress.no	https://ipaddress.no/api/v1/my-ip?format=text		https://ipaddress.no/de/api-docs
+ip_echo	diagnostic	ipaddress.pt	ipaddress.pt	https://ipaddress.pt/api/v1/my-ip?format=text		https://ipaddress.pt/de/api-docs
+ip_echo	diagnostic	ipaddress.ro	ipaddress.ro	https://ipaddress.ro/api/v1/my-ip?format=text		https://ipaddress.ro/de/api-docs
+ip_echo	diagnostic	ipadresimne.net	ipadresimne.net	https://ipadresimne.net/		https://ipadresimne.net/en/ip-api
+ip_echo	diagnostic	ipconfig.co.uk	ipconfig.co.uk	https://ipconfig.co.uk/ip		https://ipconfig.co.uk/find-my-ip/
+ip_echo	diagnostic	ipdidi.com	ipdidi.com	https://ipdidi.com/ip		https://ipdidi.com/ru/
+ip_echo	diagnostic	ipgetter.com	ipgetter.com	https://ipgetter.com/ip		https://ipgetter.com/
+ip_echo	diagnostic	ipkitten.com	ipkitten.com	https://ipkitten.com/		https://irosyadi.github.io/hacking/my-IP-address-check.html
+ip_echo	diagnostic	iprapid.com	iprapid.com	https://iprapid.com/		https://iprapid.com/de/docs

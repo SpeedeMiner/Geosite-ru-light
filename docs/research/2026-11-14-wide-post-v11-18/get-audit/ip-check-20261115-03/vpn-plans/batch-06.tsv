@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	myip.sharapov.biz	myip.sharapov.biz	https://myip.sharapov.biz/api		https://github.com/sharapov-outsource/myip
+ip_echo	diagnostic	myiphere.com	myiphere.com	https://myiphere.com/api/v1/ip		https://myiphere.com/free-ip-api/
+ip_echo	diagnostic	myipspot.com	myipspot.com	https://myipspot.com/ip		https://myipspot.com/api/
+ip_echo	diagnostic	novanode.eu	novanode.eu	https://novanode.eu/fr/outils/mon-ip		https://novanode.eu/fr/outils/mon-ip
+ip_echo	diagnostic	protooli.com	protooli.com	https://protooli.com/my-ip/raw		https://protooli.com/my-ip/
+ip_echo	diagnostic	test.wsmdn.top	test.wsmdn.top	https://test.wsmdn.top/		https://nipw.cn/
+ip_echo	diagnostic	webtracecheck.com	webtracecheck.com	https://webtracecheck.com/api/v1/ip		https://webtracecheck.com/zh/ip-api
+ip_echo	diagnostic	whatismyiper.com	whatismyiper.com	https://whatismyiper.com/api/ip		https://whatismyiper.com/api
+ip_echo	diagnostic	whatsmyconnection.com	whatsmyconnection.com	https://whatsmyconnection.com/		https://whatsmyconnection.com/guides/how-to-find-your-ip
+ip_echo	diagnostic	worldip.io	worldip.io	https://worldip.io/ja/		https://worldip.io/ja/

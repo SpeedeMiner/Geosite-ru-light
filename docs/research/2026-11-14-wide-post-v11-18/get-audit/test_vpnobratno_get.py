@@ -6,7 +6,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from vpnobratno_get import MAX_TARGETS, asn_arg, attach, catalogue, finish_code, get_from_tunnel, summarize, validate_upstream
+from vpnobratno_get import MAX_TARGETS, asn_arg, attach, catalogue, echo_matches_exit, finish_code, observation, get_from_tunnel, summarize, validate_upstream
 
 URL = 'https://service.example/public?q=one'
 ROW = dict(host='service.example',url=URL,markers='pilot')
@@ -28,6 +28,32 @@ def fake_transport(a=('8.8.8.8',)):
 
 
 class VpnObratnoGetTests(unittest.TestCase):
+    def test_echo_recognizes_exact_client_fields(self):
+        samples = [
+            (b'8.8.8.8\n', 'match'),
+            (b'{"proxy":{"ip":"8.8.8.8"}}', 'match'),
+            (b'ip=8.8.8.8\nloc=US', 'match'),
+            (b'{"ip":"1.1.1.1"}', 'different_address'),
+            (b'{"ip":"8.8.8.8","client_ip":"1.1.1.1"}', 'ambiguous'),
+            (b'<html>example 8.8.8.8</html>', 'unrecognized'),
+            (b'{"example":{"ip":"8.8.8.8"}}', 'unrecognized'),
+        ]
+        for body, expected in samples:
+            with self.subTest(body=body):
+                self.assertEqual(echo_matches_exit(body, '8.8.8.8'), expected)
+
+    def test_echo_requires_complete_verified_response(self):
+        row = dict(ROW, cohort='ip_echo')
+        body = EXIT['ip'].encode()
+        for rc, code, tls, size, expected in [
+            (0, 200, 0, len(body), 'match'), (0, 302, 0, len(body), 'unverified'),
+            (60, 200, 60, len(body), 'unverified'), (0, 200, 0, 999, 'unverified'),
+            (63, 200, 0, len(body), 'unverified'),
+        ]:
+            with self.subTest(rc=rc, code=code, tls=tls, size=size):
+                meta = dict(STATS, response_code=code, ssl_verify_result=tls, size_download=size)
+                self.assertEqual(observation(row, rc, meta, body, EXIT, STATS['remote_ip'])['echo_exit'], expected)
+
     def test_catalogue_preserves_path_and_query(self):
         item = catalogue([ROW])['targets'][0]
         self.assertEqual((item['domain'],item['path'],item['country_scope']),

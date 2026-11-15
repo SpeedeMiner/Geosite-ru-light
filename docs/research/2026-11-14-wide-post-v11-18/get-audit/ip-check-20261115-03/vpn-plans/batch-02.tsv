@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	fwd.gr	fwd.gr	https://fwd.gr/api/ip		https://fwd.gr/tools/ip-api
+ip_echo	diagnostic	gd.geobytes.com	gd.geobytes.com	https://gd.geobytes.com/GetCityDetails		https://github.com/chubin/awesome-console-services#ip-address
+ip_echo	diagnostic	geo.brdtest.com	geo.brdtest.com	https://geo.brdtest.com/mygeo.json		https://github.com/luminati-io/luminati-proxy/blob/master/README.md
+ip_echo	diagnostic	globalip.me	globalip.me	https://globalip.me/		https://neos21.net/blog/2019/08/14-02.html
+ip_echo	diagnostic	globaliplookup.com	globaliplookup.com	https://globaliplookup.com/api/network		https://globaliplookup.com/public-ip-api
+ip_echo	diagnostic	heresmyip.com	heresmyip.com	https://heresmyip.com/ip		https://heresmyip.com/es/curl-direccion-ip
+ip_echo	diagnostic	ifconfig.ovh	ifconfig.ovh	https://ifconfig.ovh/		https://docs.ovhcloud.com/en/guides/network/network-tools
+ip_echo	diagnostic	ip.chu.es	ip.chu.es	https://ip.chu.es/?format=json		https://ip.chu.es/
+ip_echo	diagnostic	ip.decodo.com	ip.decodo.com	https://ip.decodo.com/json		https://decodo.com/faq/getting-started/what-are-backconnect-proxies
+ip_echo	diagnostic	ip.hostux.net	ip.hostux.net	https://ip.hostux.net/		https://hostux.net/ja/ip/

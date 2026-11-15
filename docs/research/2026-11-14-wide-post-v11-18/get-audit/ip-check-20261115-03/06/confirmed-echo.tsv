@@ -1,0 +1,4 @@
+"host"	"url"	"result"	"sources"
+"heresmyip.com"	"https://heresmyip.com/ip"	"ip_echo_plain_v6"	"https://heresmyip.com/es/curl-direccion-ip"
+"ip.decodo.com"	"https://ip.decodo.com/json"	"ip_echo_json_v6"	"https://decodo.com/faq/getting-started/what-are-backconnect-proxies"
+"myip.sharapov.biz"	"https://myip.sharapov.biz/api"	"ip_echo_json_v4"	"https://github.com/sharapov-outsource/myip"

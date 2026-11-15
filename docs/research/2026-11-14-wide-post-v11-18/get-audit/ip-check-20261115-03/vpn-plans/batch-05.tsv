@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	ips.is	ips.is	https://ips.is/		https://ips.is/
+ip_echo	diagnostic	ipto.to	ipto.to	https://ipto.to/		https://ipto.to/
+ip_echo	diagnostic	ipv4.hostux.net	ipv4.hostux.net	https://ipv4.hostux.net/		https://hostux.net/ja/ip/
+ip_echo	diagnostic	ipv4.robtex.com	ipv4.robtex.com	https://ipv4.robtex.com/ip		https://ip.robtex.com/
+ip_echo	diagnostic	ipv4.whatismyipnow.com	ipv4.whatismyipnow.com	https://ipv4.whatismyipnow.com/json		https://whatismyipnow.com/
+ip_echo	diagnostic	ipv6.hostux.net	ipv6.hostux.net	https://ipv6.hostux.net/		https://hostux.net/ja/ip/
+ip_echo	diagnostic	ipv6.whatismyipnow.com	ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json		https://whatismyipnow.com/
+ip_echo	diagnostic	monip.lws.fr	monip.lws.fr	https://monip.lws.fr/		https://tutoriels.lws.fr/intelligence-artificielle/monip-lws-fr-v2-api-mcp-interface-multilingue
+ip_echo	diagnostic	myip.dog	myip.dog	https://myip.dog/ip		https://myip.dog/api
+ip_echo	diagnostic	myip.helpmek.com	myip.helpmek.com	https://myip.helpmek.com/ip		https://myip.helpmek.com/api

@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	4.wsmdn.top	4.wsmdn.top	https://4.wsmdn.top/		https://nipw.cn/
+ip_echo	diagnostic	6.wsmdn.top	6.wsmdn.top	https://6.wsmdn.top/		https://nipw.cn/
+ip_echo	diagnostic	api.arcproxy.cloud	api.arcproxy.cloud	https://api.arcproxy.cloud/api/v1/ip		https://arcproxy.cloud/tools/my-ip/
+ip_echo	diagnostic	api.dnswiz.app	api.dnswiz.app	https://api.dnswiz.app/v1/tools/ip?format=text		https://dnswiz.app/tools/ip-lookup/
+ip_echo	diagnostic	api.f12.biz	api.f12.biz	https://api.f12.biz/api/ip		https://www.f12.biz/tools/my-ip/
+ip_echo	diagnostic	api.networktools.dev	api.networktools.dev	https://api.networktools.dev/v1/ip		https://networktools.dev/api/
+ip_echo	diagnostic	checkip.dynu.com	checkip.dynu.com	https://checkip.dynu.com/		https://github.com/ddclient/ddclient/blob/main/ddclient.in|https://www.dynu.com/en-US/NetworkTools
+ip_echo	diagnostic	checkip.ipcow.com	checkip.ipcow.com	https://checkip.ipcow.com/		https://ipcow.com/tools
+ip_echo	diagnostic	checkipv6.dedyn.io	checkipv6.dedyn.io	https://checkipv6.dedyn.io/		https://github.com/ddclient/ddclient/blob/main/ddclient.in
+ip_echo	diagnostic	checkmyipnow.com	checkmyipnow.com	https://checkmyipnow.com/ip		https://checkmyipnow.com/developers/

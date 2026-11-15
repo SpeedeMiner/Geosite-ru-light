@@ -1,0 +1,24 @@
+{
+  "baselines": {
+    "light": "b6453f0c9a3bc06a1978fd77aed7b3e4149161e5c2172c4863012fe0aad57c85",
+    "server": "e9d343e6a83c848b0c280af351da956a9bb8275752424d6437244fd47eae7282"
+  },
+  "covered_hosts": 19,
+  "dispositions": {
+    "browser_checker_review": 1,
+    "new_confirmed_ip_echo": 3,
+    "not_confirmed": 3,
+    "shared_host_review": 2
+  },
+  "get_attempts": 13,
+  "new_missing_hosts": 9,
+  "new_missing_urls": 9,
+  "previously_seen_hosts": 9,
+  "scope": "HTTPS GET from workspace with strict TLS, no redirect following; no verified RU ASN and no claim of IPv6 transport",
+  "sources_sha256": {
+    "rules-revision.txt": "5732cf6acd4ce44bd46785eb45b024de497220b16128d890c348ff865468ad4c",
+    "sources.txt": "7c78ba5e6a67f5c13e3c57dea6ae3efdb108fc9fcd8804b4d0dbfcd8836d659f"
+  },
+  "window_hosts": 29,
+  "window_urls": 29
+}
