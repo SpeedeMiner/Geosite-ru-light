@@ -1,0 +1,62 @@
+host	url	source	purpose	prior_ip_audit	light_ru	server_ru	light_block	other_light_categories	decision	curl	http	proxy_connect	tls	content_type	redirect	body_size	shape
+checkmyip.com	https://checkmyip.com/raw	https://checkmyip.com/developers	dedicated	true	suffix:checkmyip.com	suffix:checkmyip.com	absent		already_reviewed_or_covered								
+ipv4.checkmyip.com	https://ipv4.checkmyip.com/ip	https://checkmyip.com/developers	dedicated	true	suffix:checkmyip.com	suffix:checkmyip.com	absent		already_reviewed_or_covered								
+ipv6.checkmyip.com	https://ipv6.checkmyip.com/ip	https://checkmyip.com/developers	dedicated	true	suffix:checkmyip.com	suffix:checkmyip.com	absent		already_reviewed_or_covered								
+ipinfo.ge	https://ipinfo.ge/json	https://ipinfo.ge/	dedicated	true	suffix:ipinfo.ge	suffix:ipinfo.ge	absent		already_reviewed_or_covered								
+v4.ipinfo.ge	https://v4.ipinfo.ge/json	https://ipinfo.ge/	dedicated	true	suffix:ipinfo.ge	suffix:ipinfo.ge	absent		already_reviewed_or_covered								
+v6.ipinfo.ge	https://v6.ipinfo.ge/json	https://ipinfo.ge/	dedicated	true	suffix:ipinfo.ge	suffix:ipinfo.ge	absent		already_reviewed_or_covered								
+api.tgip.eu	https://api.tgip.eu/?format=json	https://tgip.eu/	dedicated	false	absent	absent	absent		public_ip_field_unmatched	0	200	200	0	application/json		61	json_public_ip_field
+whatsmyip.me	https://whatsmyip.me/?format=json	https://whatsmyip.me/	dedicated	true	suffix:whatsmyip.me	suffix:whatsmyip.me	absent		already_reviewed_or_covered								
+thisismyip.com	https://thisismyip.com/ip	https://thisismyip.com/api-docs.php	dedicated	true	suffix:thisismyip.com	suffix:thisismyip.com	absent		already_reviewed_or_covered								
+ip.anysrc.net	https://ip.anysrc.net/plain/clientip	https://ip4.anysrc.net/index.html	dedicated	true	suffix:ip.anysrc.net	suffix:ip.anysrc.net	absent		already_reviewed_or_covered								
+ip4.anysrc.net	https://ip4.anysrc.net/plain/clientip	https://ip4.anysrc.net/index.html	dedicated	true	suffix:ip4.anysrc.net	suffix:ip4.anysrc.net	absent		already_reviewed_or_covered								
+ip6.anysrc.net	https://ip6.anysrc.net/plain/clientip	https://ip4.anysrc.net/index.html	dedicated	false	suffix:ip6.anysrc.net	suffix:ip6.anysrc.net	absent		already_reviewed_or_covered								
+ip-api.dev	https://ip-api.dev/api	https://www.ip-api.dev/tools/my-ip	mixed-ip-platform	false	suffix:ip-api.dev	suffix:ip-api.dev	absent		already_reviewed_or_covered								
+ipconf.me	https://ipconf.me/	https://ipconf.me/tutorials/curl-public-ip/	dedicated	true	absent	absent	absent		already_reviewed_or_covered								
+ip99.com	https://ip99.com/v1/ip	https://ip99.com/en/what-is-my-ip	mixed-ip-platform	true	suffix:ip99.com	suffix:ip99.com	absent		already_reviewed_or_covered								
+hackmyip.com	https://hackmyip.com/json	https://hackmyip.com/sheets/curl-what-is-my-ip	mixed-ip-platform	true	suffix:hackmyip.com	suffix:hackmyip.com	absent		already_reviewed_or_covered								
+botwhatismyipaddress.com	https://botwhatismyipaddress.com/?bot	https://github.com/sonirico/botip	dedicated	true	absent	absent	absent		already_reviewed_or_covered								
+whatismyip.technology	https://whatismyip.technology/api	https://whatismyip.codes/examples/curl/	mixed-ip-platform	true	absent	absent	absent		already_reviewed_or_covered								
+2ip.my	https://2ip.my/	https://2ip.my/	browser	true	suffix:2ip.my	suffix:2ip.my	absent		already_reviewed_or_covered								
+checkip.spdyn.de	https://checkip.spdyn.de/	https://github.com/qdm12/ddns-updater	dedicated	true	suffix:checkip.spdyn.de	suffix:checkip.spdyn.de	absent		already_reviewed_or_covered								
+tnedi.me	https://tnedi.me/	https://api.ident.me/	dedicated	true	suffix:tnedi.me	suffix:tnedi.me	absent		already_reviewed_or_covered								
+ds.checkmyip.com	https://ds.checkmyip.com/ip	https://checkmyip.com/developers	dedicated	true	suffix:checkmyip.com	suffix:checkmyip.com	absent		already_reviewed_or_covered								
+bot.whatismyipaddress.com	https://bot.whatismyipaddress.com/	https://github.com/sonirico/botip	retired-source	true	suffix:whatismyipaddress.com	suffix:whatismyipaddress.com	absent		already_reviewed_or_covered								
+ipv4.icanhazip.com	https://ipv4.icanhazip.com/	https://hackmyip.com/sheets/curl-what-is-my-ip	dedicated	true	suffix:icanhazip.com	suffix:icanhazip.com	absent		already_reviewed_or_covered								
+ipv6.icanhazip.com	https://ipv6.icanhazip.com/	https://hackmyip.com/sheets/curl-what-is-my-ip	dedicated	true	suffix:icanhazip.com	suffix:icanhazip.com	absent		already_reviewed_or_covered								
+ipconfig.io	https://ipconfig.io/	https://docs.ipconfig.io/guides/what-is-my-ip-address	dedicated	true	suffix:ipconfig.io	suffix:ipconfig.io	absent		already_reviewed_or_covered								
+dyn2.q.robtex.com	https://dyn2.q.robtex.com/ip	https://dyn2.q.robtex.com/html	shared-dynamic-dns	true	absent	absent	absent		already_reviewed_or_covered								
+checkip.dyndns.org	https://checkip.dyndns.org/	https://hackmyip.com/sheets/curl-what-is-my-ip	dedicated	true	suffix:checkip.dyndns.org	suffix:checkip.dyndns.org	absent		already_reviewed_or_covered								
+api.ip.pe.kr	https://api.ip.pe.kr/	https://ip.pe.kr/api/	dedicated	false	suffix:ip.pe.kr	suffix:ip.pe.kr	absent		already_reviewed_or_covered								
+ip.pe.kr	https://ip.pe.kr/	https://ip.pe.kr/api/	browser	false	suffix:ip.pe.kr	suffix:ip.pe.kr	absent		already_reviewed_or_covered								
+checkip.tools	https://checkip.tools/ip	https://checkip.tools/ja/	dedicated	true	suffix:checkip.tools	suffix:checkip.tools	absent		already_reviewed_or_covered								
+ipadd.cn	https://ipadd.cn/json	https://www.ipadd.cn/	mixed-ip-platform	false	absent	absent	absent		public_ip_field_unmatched	0	200	200	0	application/json		301	json_public_ip_field
+www.ipadd.cn	https://www.ipadd.cn/	https://www.ipadd.cn/	browser	false	absent	absent	absent		no_confirmed_echo	0	200	200	0	text/html; charset=UTF-8		13015	html_or_text
+ipyou.net	https://ipyou.net/	https://ipyou.net/zh/tools	mixed-ip-platform	true	suffix:ipyou.net	suffix:ipyou.net	absent		already_reviewed_or_covered								
+myip.dk	https://myip.dk/api/raw-ip	https://myip.dk/da/api	dedicated	true	suffix:myip.dk	suffix:myip.dk	absent		already_reviewed_or_covered								
+api.jinshaxinxi.cn	https://api.jinshaxinxi.cn/api/myip/get.php	https://api.jinshaxinxi.cn/doc/17	shared-api	false	absent	absent	absent		public_ip_field_unmatched	0	200	200	0	application/json; charset=utf-8		100	json_public_ip_field
+whatsmyip.now	https://whatsmyip.now/api/v1/my-ip	https://whatsmyip.now/api	dedicated	true	suffix:whatsmyip.now	suffix:whatsmyip.now	absent		already_reviewed_or_covered								
+api.tion.kr	https://api.tion.kr/	https://api.tion.kr/	dedicated	false	absent	absent	absent		transport_unproven	28	0	0				0	
+api.myip.la	https://api.myip.la/	https://gist.github.com/Arnie97/a27b0789f6d2791d9859243834876720	dedicated	true	suffix:myip.la	suffix:myip.la	absent		already_reviewed_or_covered								
+ipinfo.now	https://ipinfo.now/json	https://gist.github.com/Arnie97/a27b0789f6d2791d9859243834876720	dedicated	false	absent	absent	absent		no_confirmed_echo	0	200	200	0	application/json		268	json_other
+ipv4.whatismyip.akamai.com	https://ipv4.whatismyip.akamai.com/	https://gist.github.com/Arnie97/a27b0789f6d2791d9859243834876720	dedicated	true	suffix:whatismyip.akamai.com	suffix:whatismyip.akamai.com	absent		already_reviewed_or_covered								
+api.myip.com	https://api.myip.com/	https://github.com/sunlei/awesome-tools	dedicated	true	suffix:myip.com	suffix:myip.com	absent		already_reviewed_or_covered								
+www.jsonip.com	https://www.jsonip.com/	https://github.com/sunlei/awesome-tools	dedicated	false	suffix:jsonip.com	suffix:jsonip.com	absent		already_reviewed_or_covered								
+api.ip125.com	https://api.ip125.com/myip	https://ip125.com/api-docs/	mixed-ip-platform	false	suffix:ip125.com	suffix:ip125.com	absent		already_reviewed_or_covered								
+ip125.com	https://ip125.com/api/myip	https://ip125.com/api-docs/	mixed-ip-platform	true	suffix:ip125.com	suffix:ip125.com	absent		already_reviewed_or_covered								
+my.ip.cn	https://my.ip.cn/	https://www.ipadd.cn/	dedicated	false	suffix:ip.cn	suffix:ip.cn	absent		already_reviewed_or_covered								
+myip.la	https://myip.la/	https://www.ipadd.cn/	dedicated	true	suffix:myip.la	suffix:myip.la	absent		already_reviewed_or_covered								
+ippubblico.org	https://ippubblico.org/?text=1	https://ippubblico.org/?lang=fr	dedicated	true	absent	absent	absent		already_reviewed_or_covered								
+ipv4.ippubblico.org	https://ipv4.ippubblico.org/	https://ippubblico.org/?lang=fr	dedicated	false	absent	absent	absent		public_ip_field_unmatched	0	200	200	0	text/plain; charset=utf-8		14	plain_public_ip
+ipv6.ippubblico.org	https://ipv6.ippubblico.org/	https://ippubblico.org/?lang=fr	dedicated	false	absent	absent	absent		no_confirmed_echo	0	200	200	0	text/plain; charset=utf-8		5	html_or_text
+ip.network	https://ip.network/	https://www.ip.network/ru/	dedicated	true	suffix:ip.network	suffix:ip.network	absent		already_reviewed_or_covered								
+www.ip.network	https://www.ip.network/	https://www.ip.network/ru/	dedicated	true	suffix:ip.network	suffix:ip.network	absent		already_reviewed_or_covered								
+meuip.dev	https://meuip.dev/json	https://meuip.dev/pt	dedicated	false	suffix:meuip.dev	suffix:meuip.dev	absent		already_reviewed_or_covered								
+www.mojaip.sk	https://www.mojaip.sk/api	https://www.mojaip.sk/api	browser	false	absent	absent	absent		no_confirmed_echo	0	200	200	0	text/html		4423	html_or_text
+arcproxy.cloud	https://arcproxy.cloud/tools/my-ip/	https://arcproxy.cloud/tools/my-ip/	mixed-ip-platform	false	absent	absent	absent		http_other	63	200	200	0	text/html		131072	
+www.moje-ip-adresa.cz	https://www.moje-ip-adresa.cz/	https://www.moje-ip-adresa.cz/	browser	true	suffix:moje-ip-adresa.cz	suffix:moje-ip-adresa.cz	absent		already_reviewed_or_covered								
+moje-ip-adresa.cz	https://moje-ip-adresa.cz/plain	https://www.moje-ip-adresa.cz/	dedicated	true	suffix:moje-ip-adresa.cz	suffix:moje-ip-adresa.cz	absent		already_reviewed_or_covered								
+ip.chost.cz	https://ip.chost.cz/json	https://ip.chost.cz/press/	dedicated	true	absent	absent	absent		already_reviewed_or_covered								
+www.f12.biz	https://www.f12.biz/tools/my-ip/	https://www.f12.biz/tools/my-ip/	mixed-ip-platform	true	absent	absent	absent		already_reviewed_or_covered								
+api.f12.biz	https://api.f12.biz/api/ip	https://www.f12.biz/tools/my-ip/	mixed-ip-platform	true	exact	exact	absent		already_reviewed_or_covered								
+api.ipgeo.ru	https://api.ipgeo.ru/	https://ipgeo.ru/	dedicated	true	suffix:ru	suffix:ru	absent		already_reviewed_or_covered								

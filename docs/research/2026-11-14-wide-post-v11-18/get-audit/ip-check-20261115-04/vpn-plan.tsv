@@ -1,0 +1,3 @@
+cohort	type	rule	host	url	markers	source
+ip_echo	diagnostic	api.tgip.eu	api.tgip.eu	https://api.tgip.eu/?format=json		https://tgip.eu/
+ip_echo	diagnostic	ipv4.ippubblico.org	ipv4.ippubblico.org	https://ipv4.ippubblico.org/		https://ippubblico.org/?lang=fr
