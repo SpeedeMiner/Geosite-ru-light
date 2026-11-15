@@ -1,0 +1,13 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://client.nexign.com/en	12389	12389	91.210.7.9	403	0	0	text/html; charset=utf-8	10000	190fb2a62a6e4b0a7572e5073b48d912cbfc33c036ccd6e2a7b9846dc38452ca	Customer portal | Nexign	NA	NA	2026-11-15T15:59:53.683594+00:00
+https://client.nexign.com/en	44724	44724	91.210.7.9	403	0	0	text/html; charset=utf-8	10000	2830e8ca7822520e38a64d29307887d00c4d6cb24e60571bfb96051d85dd59eb	Customer portal | Nexign	NA	NA	2026-11-15T15:59:04.700649+00:00
+https://onetl.readthedocs.io/en/stable/	12389	12389	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T16:00:10.563726+00:00
+https://onetl.readthedocs.io/en/stable/	44724	44724	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:59:24.723452+00:00
+https://openautonlu.dev/	12389	12389	207.207.210.23	301	0	0	text/html	166	87a9323ac85ce28867d5d7ce590c8f29b8d1a999961fca71bb33adef48683691	301 Moved Permanently	mkbksoz1xkgtw8-8501.proxy.runpod.net	/	2026-11-15T15:59:52.186448+00:00
+https://openautonlu.dev/	44724	44724	207.207.210.23	301	0	0	text/html	166	87a9323ac85ce28867d5d7ce590c8f29b8d1a999961fca71bb33adef48683691	301 Moved Permanently	mkbksoz1xkgtw8-8501.proxy.runpod.net	/	2026-11-15T15:59:00.910519+00:00
+https://opensource.tbank.ru/general	12389	12389	158.160.167.155	NA	60	20	NA	0	NA	NA	NA	NA	2026-11-15T16:00:12.668831+00:00
+https://opensource.tbank.ru/general	44724	44724	158.160.167.155	NA	60	20	NA	0	NA	NA	NA	NA	2026-11-15T15:59:33.078817+00:00
+https://rectools.readthedocs.io/en/stable/	12389	12389	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T16:00:02.130071+00:00
+https://rectools.readthedocs.io/en/stable/	44724	44724	104.16.253.120	NA	28	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:59:14.711890+00:00
+https://team.vk.company/openvk/	12389	12389	89.221.239.148	200	0	0	text/html; charset=utf-8	10000	def0ff6b002e0a8a195c765e430b5e544cfc30fc772287baf5221936b430b92b	OpenVK	NA	NA	2026-11-15T16:00:11.816149+00:00
+https://team.vk.company/openvk/	44724	44724	89.221.239.148	200	0	0	text/html; charset=utf-8	10000	def0ff6b002e0a8a195c765e430b5e544cfc30fc772287baf5221936b430b92b	OpenVK	NA	NA	2026-11-15T15:59:28.383807+00:00
