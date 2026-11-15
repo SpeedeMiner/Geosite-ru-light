@@ -1,0 +1,10 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+gravity-ui.com	https://gravity-ui.com/ru	candidate	200	0	0	200	Gravity UI	NA	4d74e0fc5ce4dc4aabc635b6acf644792714910ed5343e6e38bb972da2fc0903	2026-11-15T14:32:25.647618+00:00	workspace_unattributed
+preview.gravity-ui.com	https://preview.gravity-ui.com/uikit/	candidate	200	0	0	200	storybook - Storybook	NA	db297e0e750005b47d255df31b739f67d7c0c2cfa4abe8ee0b7d7c3a825c59b8	2026-11-15T14:32:23.326496+00:00	workspace_unattributed
+diplodoc.com	https://diplodoc.com/	candidate	200	0	0	200	Diplodoc	NA	ca8da41053fbf89d3d37d5c02fd00d37c7e80a6aea7c8b926490e1e84a468c93	2026-11-15T14:32:23.761402+00:00	workspace_unattributed
+pg-sharding.tech	https://pg-sharding.tech/welcome	candidate	404	0	0	200	NA	NA	269be6ee764a48509383c9c9146ee722ed67cfe4324069f4d6fffc636a2bceea	2026-11-15T14:32:22.514279+00:00	workspace_unattributed
+testplane.io	https://testplane.io/	candidate	200	0	0	200	Fast, scalable and robust end-to-end web testing solution | Testplane	NA	03325174884b7d74b57ae65d857c87baf96e0385904b600e337e5344fbd347ff	2026-11-15T14:32:24.304115+00:00	workspace_unattributed
+userver.tech	https://userver.tech/	candidate	200	0	0	200	userver: userver	NA	7171360a19ce313d5f970133af32830dde819c3d73fe7a8eb9f28db71c3cca95	2026-11-15T14:32:22.824010+00:00	workspace_unattributed
+yaff.tech	https://yaff.tech/docs/en/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T14:32:31.687322+00:00	workspace_unattributed
+ytsaurus.tech	https://ytsaurus.tech/ru	candidate	200	0	0	200	YTsaurus — платформа распределенного хранения и обработки больших данных	NA	43aa5d568a3ec73c04433073e11a550557fff7f87140571ee0fc9f63f2938253	2026-11-15T14:32:26.731682+00:00	workspace_unattributed
+opensource.yandex	https://opensource.yandex/projects/	control	200	0	0	200	Yandex Open Source | Наши проекты	NA	b5509fb46d4104a3d84a2a7aa1ca56a888a97064a135b790d2d51723cafca25a	2026-11-15T14:32:27.637640+00:00	workspace_unattributed

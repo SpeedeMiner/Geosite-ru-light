@@ -1,0 +1,59 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	cdn.cloud.ru	https://cdn.cloud.ru/docs/legal/security/cybersecurity-pd/pd-processing-consent-site.pdf	согласие	domain:ru	domain:ru	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-source	cloud.ru	https://cloud.ru/products/anti-ddos-stormwall	Anti-DDoS от Stormwall в Cloud.ru	domain:ru	domain:ru	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	console.cloud.ru	https://console.cloud.ru/static-page/login-destination	Войти	domain:ru	domain:ru	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	habr.com	https://habr.com/ru/companies/cloud_ru/articles/		domain:habr.com	domain:habr.com	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	max.ru	https://max.ru/cloudru		domain:ru	domain:ru	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	t.me	https://t.me/cloudruprovider		NA	NA	NA	TELEGRAM
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	vk.com	https://vk.com/cloudru		domain:vk.com	domain:vk.com	NA	NA
+Cloud.ru	cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	official-link	www.youtube.com	https://www.youtube.com/@cloudru		NA	NA	NA	YOUTUBE
+Qrator	qrator-docru	https://docs.curator.pro/	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA
+Qrator	qrator-docru	https://docs.curator.pro/	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA
+Qrator	qrator-docru	https://docs.curator.pro/	official-source	docs.curator.pro	https://docs.curator.pro/	Curator Документация	NA	NA	NA	NA
+Qrator	qrator-doc	https://docs.qrator.net/	official-link	client.qrator.net	https://client.qrator.net/	Log In	domain:qrator.net	domain:qrator.net	NA	NA
+Qrator	qrator-doc	https://docs.qrator.net/	official-source	docs.qrator.net	https://docs.qrator.net/	Qrator Labs Documentation	domain:qrator.net	domain:qrator.net	NA	NA
+Qrator	qrator-doc	https://docs.qrator.net/	official-link	qrator.net	https://qrator.net/		domain:qrator.net	domain:qrator.net	NA	NA
+Qrator	qrator-radar	https://radar.qrator.net/legal	official-source	radar.qrator.net	https://radar.qrator.net/legal	Legal – Qrator.Radar	domain:qrator.net	domain:qrator.net	NA	NA
+StormWall	storm-home	https://stormwall.network/	official-link	portal.stormwall.network	https://portal.stormwall.network/	Sign in	NA	NA	NA	NA
+StormWall	storm-home	https://stormwall.network/	official-source	stormwall.network	https://stormwall.network/	StormWall | Reliable Protection from DDoS and Hacker Attacks	NA	NA	NA	NA
+StormWall	storm-home	https://stormwall.network/	official-link	twitter.com	https://twitter.com/stormwall_net		NA	NA	NA	NA
+StormWall	storm-home	https://stormwall.network/	official-link	www.facebook.com	https://www.facebook.com/stormwall.network		NA	NA	NA	NA
+StormWall	storm-home	https://stormwall.network/	official-link	www.linkedin.com	https://www.linkedin.com/company/stormwall		NA	NA	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	b2b.yandex.ru	https://b2b.yandex.ru/	Бизнесу	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	datalens.tech	https://datalens.tech/	https://datalens.tech/	NA	NA	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	education.yandex.ru	https://education.yandex.ru/	Образование	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	events.yandex.ru	https://events.yandex.ru/	Мероприятия	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	github.com	https://github.com/datalens-tech	о	NA	NA	NA	GITHUB
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	habr.com	https://habr.com/ru/companies/yandex/articles/762486/	Хабре	domain:habr.com	domain:habr.com	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	inclusion.yandex.ru	https://inclusion.yandex.ru/	Инклюзия	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	ir.yandex.ru	https://ir.yandex.ru/	Инвесторам	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	market.yandex.ru	https://market.yandex.ru/business--yandex/891400	Сувенирка	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	opensource.yandex	https://opensource.yandex/	Опенсорс	domain:yandex	domain:yandex	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	sustainability.yandex.ru	https://sustainability.yandex.ru/	Устойчивое развитие	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	t.me	https://t.me/yandex	telegram	NA	NA	NA	TELEGRAM
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	vk.com	https://vk.com/yandex	vkontakte	domain:vk.com	domain:vk.com	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-source	www.yandex.ru	https://www.yandex.ru/company/news/01-26-09-2023	Yandex Cloud открывает исходный код DataLens — своей системы для анализа и визуализации данных	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	www.youtube.com	https://www.youtube.com/@yandex	youtube	NA	NA	NA	YOUTUBE
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	ya.ru	https://ya.ru/	Яндекс	domain:ru	domain:ru	NA	NA
+Яндекс	ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	official-link	yandex.ru	https://yandex.ru/jobs	Вакансии	domain:ru	domain:ru	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	apps.apple.com	https://apps.apple.com/ru/app/%D0%BC%D1%82%D1%81-%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B8/id1294636411		NA	NA	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	blog.mts.investments	https://blog.mts.investments/	Блог	NA	NA	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	entrustment.ru	https://entrustment.ru/	https://entrustment.ru	domain:ru	domain:ru	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	lk.mts.investments	https://lk.mts.investments/auth	Личный кабинет	NA	NA	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-source	mts.investments	https://mts.investments/company/	МТС Инвестиции- о проекте и компании	NA	NA	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	play.google.com	https://play.google.com/store/apps/details		NA	NA	NA	GOOGLE-PLAY
+МТС	mts-invest	https://mts.investments/company/	official-link	sistema-capital.com	https://sistema-capital.com/upload/medialibrary/a7c/Soglasie-na-obrabotku-polzovatelskikh-dannykh.pdf	Согласие на обработку пользовательских данных	domain:sistema-capital.com	domain:sistema-capital.com	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	support.mts.ru	https://support.mts.ru/invetitsii	Поддержка	domain:ru	domain:ru	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	t.me	https://t.me/plusonomica		NA	NA	NA	TELEGRAM
+МТС	mts-invest	https://mts.investments/company/	official-link	vk.com	https://vk.com/mts.investments		domain:vk.com	domain:vk.com	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	www.mtsbank.ru	https://www.mtsbank.ru/o-banke/disclouser-issuer/	доступно	domain:ru	domain:ru	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	www.rustore.ru	https://www.rustore.ru/catalog/app/mtsit.com.finservice		domain:ru	domain:ru	NA	NA
+МТС	mts-invest	https://mts.investments/company/	official-link	yandex.ru	https://yandex.ru/legal/smartcaptcha_notice/	политикой обработки данных.	domain:ru	domain:ru	NA	NA
+МТС	mts-capital	https://sistema-capital.com/contacts/	official-link	blog.mts.investments	https://blog.mts.investments/	Блог	NA	NA	NA	NA
+МТС	mts-capital	https://sistema-capital.com/contacts/	official-link	entrustment.ru	https://entrustment.ru/upload/methodology/current_price_change_methodology.pdf	Методологией	domain:ru	domain:ru	NA	NA
+МТС	mts-capital	https://sistema-capital.com/contacts/	official-link	future-group.ru	https://future-group.ru/	Разработка айти-агентства Фьюче	domain:ru	domain:ru	NA	NA
+МТС	mts-capital	https://sistema-capital.com/contacts/	official-source	sistema-capital.com	https://sistema-capital.com/contacts/	Контакты УК «Система Капитал»	domain:sistema-capital.com	domain:sistema-capital.com	NA	NA
+МТС	mts-capital	https://sistema-capital.com/contacts/	official-link	t.me	https://t.me/plusonomica		NA	NA	NA	TELEGRAM
+X5	x5-intern	https://generationx5.tech/	official-source	generationx5.tech	https://generationx5.tech/	X5 Tech BIG IN	NA	NA	NA	NA
+X5	x5-intern	https://generationx5.tech/	official-link	habr.com	https://habr.com/ru/companies/X5Tech/articles/		domain:habr.com	domain:habr.com	NA	NA
+X5	x5-intern	https://generationx5.tech/	official-link	t.me	https://t.me/x5_tech		NA	NA	NA	TELEGRAM

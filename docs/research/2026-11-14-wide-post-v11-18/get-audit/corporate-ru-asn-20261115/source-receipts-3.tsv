@@ -1,0 +1,26 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+cloud-main	https://cloud.ru/products	https://cloud.ru/products	403	0	0	252	2fa3eba9e714c466e8e4b135ae65d12ff8ed065ff075d99ca1cf249488276b29	text/html
+cloud-legal	https://cloud.ru/documents	https://cloud.ru/documents	403	0	0	252	fc93b832a81368acbe86f5b2cdf402910ad2f9e48d7a81df6fde57943b0979f6	text/html
+cloud-qrator	https://cloud.ru/documents/contracts/terms-of-service/crs/qrator/description-qrator	https://cloud.ru/documents/contracts/terms-of-service/crs/qrator/description-qrator	403	0	0	252	13c4628300c764a06003757c99c934a8a09edc6f0620f2016c123c5931aa8e72	text/html
+cloud-storm	https://cloud.ru/products/anti-ddos-stormwall	https://cloud.ru/products/anti-ddos-stormwall	200	0	0	223881	2281cdf806eb23be5b8bcd9d9ef6ab7f84b22628813176669fcb7f3987d49c31	text/html; charset=utf-8
+qrator-ru	https://qrator.ru/	https://qrator.ru/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+qrator-docru	https://docs.qrator.ru/ru/dashboard/overview.html	https://docs.curator.pro/	200	0	0	38324	a2263b3a9e48665847c22c1d9876254c9f7bf6fcba52cb0634e6a45efec7ca6f	text/html
+qrator-int	https://qrator.net/company/	https://qrator.net/company/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+qrator-doc	https://docs.qrator.net/	https://docs.qrator.net/	200	0	0	38580	f37aa24359b28a0bcb1d00dcd47af5ce64ba7fdd8804e6813c585a96b1effaae	text/html
+qrator-radar	https://radar.qrator.net/legal	https://radar.qrator.net/legal	200	0	0	227845	b229996a8ecb150b69639ba1d873b0a315870427d529892d6e8ecd1188f68294	text/html; charset=utf-8
+storm-doc	https://stormwall.pro/resources/instructions	https://stormwall.pro/resources/instructions	403	0	0	252	087ec9e776f67237b6d357b574491162555a5a70ad50dea411d4011245c1785a	text/html
+storm-int	https://stormwall.network/resources/instructions/api/how-to-use-api	https://stormwall.network/resources/instructions/api/how-to-use-api	403	0	0	252	b5cc3587748a32e3ec126a04bdb0fb5c245446bebb80fdb932c71ae1d1bb17c4	text/html
+storm-home	https://stormwall.network/	https://stormwall.network/	200	0	0	135289	9c6bc360850c9a6baae2a1648882664cd9c266b0c588d0fb723f7afd899efd0c	text/html; charset=utf-8
+ddg	https://ddos-guard.net/ru	https://ddos-guard.net/ru	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+ddg-doc	https://ddos-guard.net/ru/help	https://ddos-guard.net/ru/help	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+oz-tech	https://ozon.tech/	https://ozon.tech/?__rr=4	307	47	0	0	NA	text/html
+oz-contacts	https://ozon.tech/contacts/	https://ozon.tech/contacts/?__rr=4	307	47	0	0	NA	text/html
+oz-legal	https://docs.ozon.ru/legal/terms-of-use/user-agreement/	https://docs.ozon.ru/legal/terms-of-use/user-agreement/?__rr=4	307	47	0	0	NA	text/html
+oz-route	https://route256.ozon.ru/	https://route256.ozon.ru/?__rr=4	307	47	0	0	NA	text/html
+wb-main	https://www.rwb.ru/	https://www.rwb.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+wb-tech	https://tech.wildberries.ru/	https://tech.wildberries.ru/	498	0	0	1134	1d4e9b8c2e9bfded32072b7b18f6d591ad390a06a0e36353af551a7a09d8788d	text/html
+wb-static	https://dev.wildberries.ru/openapi/api-information	https://dev.wildberries.ru/openapi/api-information	498	0	0	1134	03cab95c047afa1cce4660514eb37b6439edace760c1529f6316cb52e5095c7a	text/html
+ya-datalens	https://www.yandex.ru/company/news/01-26-09-2023	https://www.yandex.ru/company/news/01-26-09-2023	200	0	0	55372	2afb63f29b838a2520f2edc6c2beba4a20154afab9757e3efeff21ae45c34b4d	text/html; charset=utf-8
+mts-invest	https://mts.investments/company/	https://mts.investments/company/	200	0	0	157109	f55cb52805407e859a5c07aff84348f7f8514280fb572c2022903f6ccf4b2dbb	text/html; charset=utf-8
+mts-capital	https://sistema-capital.com/contacts/	https://sistema-capital.com/contacts/	200	0	0	49961	bb6681b55ac65193d9bb0561aed5172661c72939576ba2c1e4551947c8ad8ba8	text/html; charset=utf-8
+x5-intern	https://generationx5.tech/	https://generationx5.tech/	200	0	0	1444412	7ad0479aed3bbe987be13a9111fbcaa4203657c8e92819caf532a874de4dbb67	text/html; charset=UTF-8

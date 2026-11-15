@@ -1,0 +1,8 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+datalens.tech	https://datalens.tech/ru	candidate	301	0	0	200	NA	datalens.ru	NA	2026-11-15T14:33:27.596847+00:00	workspace_unattributed
+generationx5.tech	https://generationx5.tech/	candidate	200	63	0	200	X5 Tech BIG IN	NA	70badf756a2697dd68a57b7ec60a2e90e67248f04c7561ae9211f8713e607068	2026-11-15T14:33:27.653396+00:00	workspace_unattributed
+mts.investments	https://mts.investments/	candidate	200	0	0	200	NA	NA	NA	2026-11-15T14:33:26.330626+00:00	workspace_unattributed
+sistema-capital.com	https://sistema-capital.com/contacts/	candidate	200	0	0	200	Контакты УК «Система Капитал»	NA	bb6681b55ac65193d9bb0561aed5172661c72939576ba2c1e4551947c8ad8ba8	2026-11-15T14:33:26.585974+00:00	workspace_unattributed
+x5.tech	https://x5.tech/	control	200	0	0	200	Присоединяйся к команде X5 Tech	NA	4b8671c33e84bcd7f51e099af254a19fa392aaa84db75d969306720cb3322df8	2026-11-15T14:33:26.552286+00:00	workspace_unattributed
+status.timeweb.cloud	https://status.timeweb.cloud/	control	200	0	0	200	Site Unavailable	NA	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T14:33:25.141337+00:00	workspace_unattributed
+api.mwsapis.ru	https://api.mwsapis.ru/endpoint	control	200	0	0	200	NA	NA	76f5e6497935f25d48ff0f513ca81ca3a057567a3d24ab5b68f68d8b31f3ea4b	2026-11-15T14:33:25.088083+00:00	workspace_unattributed
