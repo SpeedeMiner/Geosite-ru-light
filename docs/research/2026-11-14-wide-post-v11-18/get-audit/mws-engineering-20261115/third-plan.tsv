@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	divkit.tech	divkit.tech	https://divkit.tech/docs/ru/	DivKit	https://opensource.yandex/
+corporate	control	divkit.tech	divkit.tech	https://divkit.tech/en/	DivKit	https://opensource.yandex/
+corporate	candidate	www.nexign.com	www.nexign.com	https://www.nexign.com/	Nexign	https://nexign.com/
+corporate	control	nexign.com	nexign.com	https://nexign.com/ru	Nexign	https://nexign.com/
+corporate	control	www.gazprombank.tech	www.gazprombank.tech	https://www.gazprombank.tech/	Газпромбанк	https://www.cbr.ru/finorg/foinfo/?id=1315037839064
+corporate	control	banka-ui.dev	banka-ui.dev	https://banka-ui.dev/	Banka	https://www.cbr.ru/finorg/foinfo/?id=1315037839064
