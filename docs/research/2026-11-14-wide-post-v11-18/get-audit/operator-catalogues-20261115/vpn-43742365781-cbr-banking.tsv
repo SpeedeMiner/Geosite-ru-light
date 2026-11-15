@@ -1,0 +1,21 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	visible_chars	sample_sha256	title	redirect_scheme	redirect_host	redirect_path	state	observed_at
+https://xn--80abkdqhcx2axc5i.net/	12389	12389	51.250.13.71	NA	7	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:41:03.846235+00:00
+https://kk.ru/	12389	12389	178.248.234.134	200	63	0	text/html; charset=UTF-8	0	0	NA	NA	NA	NA	NA	vpn_body_unproven	2026-11-15T17:41:09.572103+00:00
+https://kk.bank/	12389	12389	178.248.238.15	301	0	0	text/html	32	15	43a874412e8c4cb79b14966239d54adbdb73431603827ec654e0bef3aeecd13e	NA	https	kk.ru	/	vpn_redirect	2026-11-15T17:41:13.143395+00:00
+https://perevod-korona.biz/	12389	12389	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:41:15.407122+00:00
+https://perevod-korona.info/	12389	12389	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:41:18.226329+00:00
+https://perevod-korona.org/	12389	12389	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:41:20.344287+00:00
+https://perevod-korona.pro/	12389	12389	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:41:22.717806+00:00
+https://koronapay.com/	12389	12389	193.232.20.100	403	0	0	text/html	77	58	06b0558f0d165cf3c6dba6b88e82998a44f12a5c0dac307aec0bb551e71c6fa0	NA	NA	NA	NA	vpn_http_other	2026-11-15T17:41:26.361109+00:00
+https://www.ccb.cn/lng/russia/old/lng/index.shtml	12389	12389	111.205.169.25	NA	35	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:41:28.266335+00:00
+https://ru.ccb.com/lng/russia/old/lng/about_us/index.shtml	12389	12389	58.49.201.89	NA	35	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:41:32.173798+00:00
+https://xn--80abkdqhcx2axc5i.net/	50498	50498	51.250.13.71	NA	7	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:42:48.035886+00:00
+https://kk.ru/	50498	50498	178.248.234.134	200	63	0	text/html; charset=UTF-8	0	0	NA	NA	NA	NA	NA	vpn_body_unproven	2026-11-15T17:42:51.462904+00:00
+https://kk.bank/	50498	50498	178.248.238.15	301	0	0	text/html	32	15	43a874412e8c4cb79b14966239d54adbdb73431603827ec654e0bef3aeecd13e	NA	https	kk.ru	/	vpn_redirect	2026-11-15T17:42:52.705048+00:00
+https://perevod-korona.biz/	50498	50498	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:42:55.531852+00:00
+https://perevod-korona.info/	50498	50498	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:42:58.166998+00:00
+https://perevod-korona.org/	50498	50498	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:43:00.793154+00:00
+https://perevod-korona.pro/	50498	50498	NA	NA	-1	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T17:43:03.806326+00:00
+https://koronapay.com/	50498	50498	193.232.20.100	403	0	0	text/html	77	58	c30b31ad67ec7242aade11af0d454d962d3df29a2a1aa7b53b01f89fb2d2c260	NA	NA	NA	NA	vpn_http_other	2026-11-15T17:43:07.744552+00:00
+https://www.ccb.cn/lng/russia/old/lng/index.shtml	50498	50498	58.49.201.89	NA	35	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:43:11.847904+00:00
+https://ru.ccb.com/lng/russia/old/lng/about_us/index.shtml	50498	50498	58.49.201.85	NA	35	NA	NA	0	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T17:43:13.466010+00:00

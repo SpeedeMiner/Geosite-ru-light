@@ -31,6 +31,7 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://peers.tv/files/7172/': '0-65535',
     'https://api.curator.pro/': '0-65535',
     'https://docs.solarspace.pro/': '0-65535',
     'https://img.solarspace.pro/docs/start-authorization-page.jpg': '0-4095',

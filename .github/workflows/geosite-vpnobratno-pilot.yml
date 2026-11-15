@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (media documentation follow-up)
+name: GeoSite IP checker GET through VPNObratno (Peers.TV public documentation)
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-media-followup
+  group: geosite-vpnobratno-peers-doc
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [media-followup]
+        batch: [peers-doc]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
