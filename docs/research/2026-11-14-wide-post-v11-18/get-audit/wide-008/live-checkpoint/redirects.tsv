@@ -1,0 +1,5 @@
+"source_host"	"source_url"	"target_host"	"target_url"	"asns"	"light_categories"	"server_ru"	"measurement_id"
+"portal.eaeunion.org"	"https://portal.eaeunion.org/"	"opendata.eaeunion.org"	"https://opendata.eaeunion.org"	"3216|12389|207957"	"-"	"no"	"22sDmvaJK1xAVzU5I00021VVA"
+"pravo.eaeunion.org"	"https://pravo.eaeunion.org/"	"pravo.eaeunion.org"	"http://pravo.eaeunion.org/"	"3216|12389|207957"	"-"	"no"	"2uY3NBKQud1Z7lpGR00021VVA"
+"cis.minsk.by"	"https://cis.minsk.by/"	"eccis.org"	"https://eccis.org/"	"3216|12389|207957"	"-"	"no"	"2pXUlK0FVCD3xYsrR00021VVA"
+"egov.kz"	"https://egov.kz/"	"egov.kz"	"https://egov.kz/kk"	"3216|12389|207957"	"RU"	"yes"	"2YvPnGzDAUKIzQKWi00021VVA"

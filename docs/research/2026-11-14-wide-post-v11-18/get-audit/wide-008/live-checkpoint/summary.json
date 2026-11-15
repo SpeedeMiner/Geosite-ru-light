@@ -1,0 +1,60 @@
+{
+  "baseline_new": 0,
+  "baseline_pending": 1090,
+  "baseline_verified": 98,
+  "by_batch": {
+    "baseline006a": {
+      "no_result_received": 30
+    },
+    "functional": {
+      "no_result_received": 3
+    },
+    "regional": {
+      "no_result_received": 2,
+      "observed": 18
+    },
+    "wide007": {
+      "no_result_received": 25
+    }
+  },
+  "by_cohort": {
+    "baseline": {
+      "no_result_received": 43
+    },
+    "diagnostic": {
+      "no_result_received": 7
+    },
+    "frontier": {
+      "no_result_received": 3
+    },
+    "regional_control": {
+      "no_result_received": 2,
+      "observed": 4
+    },
+    "regional_frontier": {
+      "observed": 14
+    },
+    "suffix_sample": {
+      "no_result_received": 5
+    }
+  },
+  "measurement_ids": 18,
+  "metadata_sectors_observed": 9,
+  "planned": 78,
+  "recorded": 18,
+  "redirect_rows": 4,
+  "states": {
+    "no_result_received": 60,
+    "observed": 18
+  },
+  "triage": {
+    "needs_public_content_path": 9,
+    "not_verified": 60,
+    "review_http_status_on_functional_path": 1,
+    "review_redirect": 4,
+    "review_transport_or_address": 1,
+    "review_visible_body": 3
+  },
+  "verified_gets": 18,
+  "verified_probe_records": 54
+}
