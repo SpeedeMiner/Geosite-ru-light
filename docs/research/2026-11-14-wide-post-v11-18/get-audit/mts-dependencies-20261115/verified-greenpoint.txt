@@ -1,0 +1,8 @@
+full:belgorod.zelenaya.net
+full:cabinet.zt68.net
+full:lipetsk.zelenaya.net
+full:tambov.zelenaya.net
+full:tomsk.zelenaya.net
+full:ufa.zelenaya.net
+full:vladivostok.zelenaya.net
+full:zelenaya.net
