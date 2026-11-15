@@ -1,0 +1,12 @@
+key	group	operator_reference	url	curl	http	tls	redirect	bytes	sha256	observed_at
+y360ru	Яндекс	AS13238	https://yandex.ru/support/yandex-360/business/admin/ru/network-settings	0	200	0	NA	438807	24c1108bf3a7d418559b4bb251eecad9e423be53ae092a34e7542c79ff0fe368	2026-11-15T13:01:07.417398+00:00
+y360en	Яндекс	AS13238	https://yandex.com/support/yandex-360/business/admin/en/network-settings	0	200	0	NA	155682	0ede0aafc0b0da12ebe18558c1d355e82ee678d4418f9dfbe764f37b9a246c7e	2026-11-15T13:01:07.359948+00:00
+yc_ru	Yandex Cloud	AS200350	https://api.cloud.yandex.net/endpoints	0	200	0	NA	8567	2f2c4ad433ee2f7a05f5aa99d9a87c6832fec8932cc6a74f69b7c31a42a37068	2026-11-15T13:01:06.428977+00:00
+yc_kz	Yandex Cloud	AS208795	https://api.yandexcloud.kz/endpoints	0	200	0	NA	4191	ba290e1d87ec80d18f22fdb199251b30945efa288e37ad05a427c267c3cfaa4f	2026-11-15T13:01:06.711480+00:00
+mws_catalog	МТС MWS	AS8359	https://api.mwsapis.ru/endpoint	0	200	0	NA	1816	76f5e6497935f25d48ff0f513ca81ca3a057567a3d24ab5b68f68d8b31f3ea4b	2026-11-15T13:01:07.003647+00:00
+mws_reference	МТС MWS	AS8359	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	0	200	0	NA	95108	8c65e6e1a87f7567f26d66dc756c23cafe4b9949103f8afb1cbcbd197690f297	2026-11-15T13:01:12.058029+00:00
+sel_api	Selectel	AS49505	https://docs.selectel.ru/api/object-storage-s3/	0	200	0	NA	74088	f12234e8195700a5f868f43fc70a536ee78ce845506212807b41bf8bd0d301da	2026-11-15T13:01:11.388140+00:00
+sel_dns	Selectel	AS49505	https://docs.selectel.ru/dns/	0	301	0	https://docs.selectel.ru/infrastructure/dns/	169	a66015591201ccd7c675b3c0ab83ae753c11f2a931a2a6b32fec9c9ceba6423d	2026-11-15T13:01:11.057892+00:00
+time_s3	Timeweb	AS9123	https://timeweb.cloud/docs/s3-storage	0	200	0	NA	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T13:01:09.780819+00:00
+turbo_s3	Ростелеком	AS12389	https://turbocloud.ru/docs/s3/api/	0	200	0	NA	44914	e58b1e862027cd3105a1d0cca32fd7fbe4a00833bdcc6bac208e83ec6c6cd0c8	2026-11-15T13:01:12.180768+00:00
+beget_tech	Beget	AS198610	https://beget.tech/en/	0	200	0	NA	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T13:01:13.500905+00:00

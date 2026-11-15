@@ -1,0 +1,5 @@
+catalog	rows	distinct_hosts	covered_hosts	unproven_coverage_hosts	uncovered_hosts
+Yandex Cloud RU	119	87	87	0	NA
+Yandex Cloud KZ	62	41	41	0	NA
+МТС MWS	27	24	24	0	NA
+Яндекс 360 RU	178	149	149	0	NA

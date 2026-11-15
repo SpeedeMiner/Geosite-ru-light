@@ -1,0 +1,12 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+ertelecom.cloud	https://ertelecom.cloud/clouds/	candidate	200	0	0	200	NA	NA	f2dc416a2be85a70207cabfaf62375e97b59fda016d8548874cc2bd1e7a958b4	2026-11-15T13:00:37.722977+00:00	workspace_unattributed
+my.ertelecom.cloud	https://my.ertelecom.cloud/	candidate	200	0	0	200	Авторизация	NA	4052e739268a2c2d9e836eb22ecf678e9943a3665c20e561166e181446c2b0d8	2026-11-15T13:00:37.861221+00:00	workspace_unattributed
+ertelecom.ru	https://ertelecom.ru/ru/contacts	control	200	0	0	200	NA	NA	33d865c47e937c165043edf57ed6bb6855962b9571d0fba16a58f20330630fe3	2026-11-15T13:00:38.732298+00:00	workspace_unattributed
+b2b.dom.ru	https://b2b.dom.ru/about	control	403	0	0	200	NA	NA	70bac2e576d8b1a498e3e0305985fcb89ace975c560211f3cb33e7e2067f4c65	2026-11-15T13:00:37.850974+00:00	workspace_unattributed
+workspace.vk.ru	https://workspace.vk.ru/	control	200	0	0	200	Site Unavailable	NA	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T13:00:42.496772+00:00	workspace_unattributed
+beget.com	https://beget.com/en/control-panel	control	403	0	0	200	NA	NA	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	2026-11-15T13:00:41.541970+00:00	workspace_unattributed
+www.workspacevk.com	https://www.workspacevk.com/	unverified_brand	503	0	0	200	NA	NA	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	2026-11-15T13:00:42.625903+00:00	workspace_unattributed
+org.mws.ru	https://org.mws.ru/	documented_portal	302	0	0	200	NA	org.mws.ru	3a697cedcc37446e9b02876fe32afc60a63bd81ffb5bcc3de94506c1215f187f	2026-11-15T13:00:41.682436+00:00	workspace_unattributed
+console.mws.ru	https://console.mws.ru/	documented_portal	302	0	0	200	NA	console.mws.ru	3a697cedcc37446e9b02876fe32afc60a63bd81ffb5bcc3de94506c1215f187f	2026-11-15T13:00:42.177008+00:00	workspace_unattributed
+www.rtk-dc.ru	https://www.rtk-dc.ru/	documented_portal	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T13:00:47.101210+00:00	workspace_unattributed
+www.dtln.ru	https://www.dtln.ru/	documented_portal	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T13:00:45.749611+00:00	workspace_unattributed
