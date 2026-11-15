@@ -7,10 +7,10 @@ Avito.Tech	docs.trisigma.io	Документация Trisigma	https://docs.trisi
 Беркут	esb.bercut.com	Bercut ESB	https://esb.bercut.com/	https://www.company.rt.ru/press/news/d474415/	exact_domain	strict_two_asn_public_product	candidate	NA	NA	NA	NA	43719060748
 Беркут	docs-esb.bercut.com	Документация ESB	https://docs-esb.bercut.com/docs-user_guide/navigation_main_page/	https://hip.bercut.com/esb	exact_domain	strict_two_asn	candidate	NA	NA	NA	NA	43719060748
 Беркут	support.bercut.com	Поддержка	https://support.bercut.com/	https://bercut.com/	exact_domain	strict_two_asn_public_landing_only	candidate	NA	NA	NA	NA	43719060748
-Беркут	hip.bercut.com	HIP	https://hip.bercut.com/esb	https://esb.bercut.com/	exact_domain	pending_strict_second_asn	hold	NA	NA	NA	NA	43719240866
-Базальт СПО	www.altlinux.org	Вики	https://www.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	exact_domain	pending_strict_second_asn	hold	NA	NA	NA	NA	43718774304|43719240866
-Базальт СПО	altlinux.org	Редирект на вики	https://altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	exact_domain	wait_for_final_www_verification	hold	NA	NA	NA	NA	43718774304|43719240866
-Беркут	dm.bercut.com	Datamapper	https://dm.bercut.com/	https://hip.bercut.com/	exact_domain	assigned_domain_placeholder_404	hold	NA	NA	NA	NA	43719240866
+Беркут	hip.bercut.com	HIP	https://hip.bercut.com/esb	https://esb.bercut.com/	exact_domain	strict_two_asn_across_runs	candidate	NA	NA	NA	NA	43719240866|43719561609
+Базальт СПО	www.altlinux.org	Вики	https://www.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	exact_domain	strict_two_asn_across_runs	candidate	NA	NA	NA	NA	43718774304|43719240866|43719561609
+Базальт СПО	altlinux.org	Редирект на вики	https://altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	exact_domain	verified_same_owner_redirect_to_confirmed_www	candidate	NA	NA	NA	NA	43718774304|43719240866|43719561609
+Беркут	dm.bercut.com	Datamapper	https://dm.bercut.com/	https://hip.bercut.com/	exact_domain	assigned_domain_placeholder_404	hold	NA	NA	NA	NA	43719240866|43719561609
 МТС / VisionLabs	visionlabs.ai	Международный сайт	https://visionlabs.ai/	https://visionlabs.ai/about-us	exact_domain	domestic_site_and_docs_already_covered	exclude_global_site	NA	NA	NA	NA	NA
 Google	fonts.googleapis.com	Сторонняя статическая зависимость	https://fonts.googleapis.com/	https://avito.tech/	exact_domain	first_party_link_is_not_ownership	exclude_shared_dependency	NA	NA	NA	NA	NA
 Google	fonts.gstatic.com	Сторонняя статическая зависимость	https://fonts.gstatic.com/	https://avito.tech/	exact_domain	first_party_link_is_not_ownership	exclude_shared_dependency	NA	NA	NA	NA	NA
