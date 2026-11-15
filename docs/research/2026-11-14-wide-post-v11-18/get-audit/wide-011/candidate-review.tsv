@@ -1,0 +1,10 @@
+host	decision	url	primary_source	measurement_id	basis
+orderly.myafsa.com	preview_exact	https://orderly.myafsa.com/	https://afsa.aifc.kz/	2BgeKbAV6Ukm4roWa00021VW8	Прямая ссылка Legal Framework от регулятора, 200 и TLS/SAN во всех трех ASN, два маркера в основном тексте
+www.aixkz.com	preview_exact	https://www.aixkz.com/en	https://aifc.kz/aifc-bodies-contacts/	2WW5GJ4PHstzJd0Kd00021VW8	200 и TLS/SAN в трех ASN, видимый AIX и ручное чтение официальной страницы, независимый 301 с aix.kz на тот же точный хост, путь редиректа отличается
+www.flyarystan.com	preview_exact	https://www.flyarystan.com/support/ticket-purchase/	https://www.flyarystan.com/support/ticket-purchase/	2tkrfeKCO85DF7fpm00021VW9	200 и TLS/SAN в трех ASN, видимый FlyArystan и подтвержденный публичный раздел покупки, WWW подтверждает сама авиакомпания, у apex уже есть RU
+market.aixkz.com	hold	https://market.aixkz.com/official-list	https://www.aixkz.com/en	22RTwLASFTR6Y27cT00021VW8	Ссылка с сайта AIX есть, три 200 недостаточно для подтверждения работы листинга
+publicreg.myafsa.com	hold	https://publicreg.myafsa.com/dasp/	https://afsa.aifc.kz/	28VicrCdYDuILhhKt00021VW8	Официальный публичный реестр есть в навигации, три 200 без достаточного тела, нужен отдельный содержательный путь
+iacchambers.com	hold	https://iacchambers.com/	https://aifc.kz/aifc-bodies-contacts/	2jXGv18BDBIOx4W9Z00021VW8	Три 200 и подтвержден TLS, но в захвате не доказано содержимое
+trainingcentre.iacchambers.com	hold	https://trainingcentre.iacchambers.com/	https://iacchambers.com/	25L99omHg2hwGHoWZ00021VW8	Три 200 без содержимого не доказывают учебную витрину
+middlecorridor.com	hold	https://middlecorridor.com/ru/kontakty	https://middlecorridor.com/en/	2uJKghiovkeCccsdH00021VW9	Три 200, но анализатор не нашел ожидаемого маркера. Проверить полный путь из измерения перед повтором
+www.qaztradeacademy.com	hold	https://www.qaztradeacademy.com/?lang=ru	https://www.qaztradeacademy.com/	2qkosMj61RWuHNJAn00021VW9	Три 404, это ответ сервера, а не блокировка. Сверить ссылку организатора и URL из измерения

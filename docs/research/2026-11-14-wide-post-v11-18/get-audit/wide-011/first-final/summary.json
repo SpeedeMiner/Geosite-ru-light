@@ -1,0 +1,47 @@
+{
+  "baseline_new": 25,
+  "baseline_pending": 1022,
+  "baseline_prior": 141,
+  "baseline_total": 1188,
+  "baseline_verified": 166,
+  "by_cohort": {
+    "baseline": {
+      "observed": 25
+    },
+    "control_health": {
+      "observed": 11
+    },
+    "control_passenger": {
+      "observed": 7
+    },
+    "control_trade": {
+      "observed": 19
+    },
+    "diagnostic": {
+      "observed": 2
+    },
+    "frontier_health": {
+      "observed": 2
+    },
+    "frontier_passenger": {
+      "observed": 1
+    },
+    "frontier_trade": {
+      "observed": 12
+    },
+    "suffix_sample": {
+      "observed": 1
+    }
+  },
+  "measurement_ids": 80,
+  "not_started": 0,
+  "planned": 80,
+  "recorded": 80,
+  "redirect_rows": 9,
+  "started_pending": 0,
+  "states": {
+    "observed": 80
+  },
+  "verified_get4": 80,
+  "verified_probes": 240
+}
