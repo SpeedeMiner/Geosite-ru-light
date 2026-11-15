@@ -1,0 +1,41 @@
+{
+  "by_state": {
+    "archive_get_other_path": {
+      "rows": 45,
+      "status_vectors": {
+        "200/200/200": 45
+      },
+      "tls_vectors": {
+        "yes/yes/yes": 45
+      }
+    },
+    "archive_get_root": {
+      "rows": 102,
+      "status_vectors": {
+        "200/200/200": 92,
+        "301/301/301": 8,
+        "302/302/302": 1,
+        "403/403/403": 1
+      },
+      "tls_vectors": {
+        "yes/yes/yes": 102
+      }
+    },
+    "required_asn_coverage_unproven": {
+      "rows": 3,
+      "status_vectors": {
+        "unproven": 3
+      },
+      "tls_vectors": {
+        "unproven": 3
+      }
+    }
+  },
+  "fresh_credit": 0,
+  "probe_order": [
+    3216,
+    12389,
+    207957
+  ],
+  "total": 150
+}

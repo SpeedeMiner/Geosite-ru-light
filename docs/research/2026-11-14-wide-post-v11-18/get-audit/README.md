@@ -16,3 +16,35 @@ python3 audit.py dns-dual-stack.tsv results-dns.jsonl --test a --test aaaa --tes
 python3 audit.py baseline-batch-001.tsv results-baseline-001.jsonl
 python3 batches.py baseline-exact.tsv remaining --exclude pilot.tsv --exclude baseline-batch-001.tsv
 ```
+
+## Очередь после окна 010
+
+Обе очереди сверены с 237 уже записанными верифицированными GET IPv4.
+Файлы планов не являются журналом сетевых запусков.
+
+1. Сначала [план 010](wide-009/next-get-window/summary.json),
+   [первая партия 80 URL](wide-009/next-get-window/first.tsv) и
+   [вторая партия 14 URL](wide-009/next-get-window/next.tsv).
+2. Затем [дополнительный план 011](wide-010/supplement-011/summary.json),
+   [первая партия 80 URL](wide-010/supplement-011/first.tsv) и
+   [39 отложенных контролей](wide-010/supplement-011/deferred.tsv).
+   В первой партии сначала девять непокрытых диагностик,
+   затем 48 корней из готового RU с пробелом в архивных данных,
+   затем 23 контрольных адреса.
+3. Только после восстановления квоты команду из примера ниже можно
+   запустить отдельно на первой партии 010. Файл результата должен быть
+   новым. Если получено частичное наблюдение, сначала зафиксируйте
+   завершённые записи и проверьте, что осталось. Повтор полного списка
+   после частичной остановки тратит квоту и создаёт дубли.
+   Незавершённые строки не становятся подтверждёнными по наличию ID.
+
+```sh
+python3 -B audit.py wide-009/next-get-window/first.tsv live-window-010-first.jsonl --test get4 --reserve 10
+```
+
+За окном 010 остаются [каталоги](wide-010/supplement-011/hosts.tsv),
+[матрица цепочек](wide-010/routing-chains.md) и [архивная сводка](wide-010/archive-summary.json).
+В архивных GET сохранены отдельно HTTP, факт доверия TLS и число ASN.
+Архив не даёт свежего сетевого зачёта и сам по себе не даёт основания для
+правила `full:`. Для повтора составления очереди без сети укажите новый
+каталог результата командой `python3 -B supplement_011.py /tmp/geosite-011-replay`.
