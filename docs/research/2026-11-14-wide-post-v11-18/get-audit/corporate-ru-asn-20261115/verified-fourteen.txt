@@ -1,0 +1,14 @@
+full:blog.mts.investments
+full:client.curator.pro
+full:diplodoc.com
+full:docs.curator.pro
+full:docs.pg-sharding.tech
+full:generationx5.tech
+full:gravity-ui.com
+full:lk.mts.investments
+full:mts.investments
+full:pg-sharding.tech
+full:preview.gravity-ui.com
+full:testplane.io
+full:userver.tech
+full:ytsaurus.tech

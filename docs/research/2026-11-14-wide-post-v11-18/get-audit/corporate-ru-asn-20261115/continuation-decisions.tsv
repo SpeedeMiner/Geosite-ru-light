@@ -1,0 +1,15 @@
+host	decision	observed_https	ripe_ris_origin	scope
+docs.curator.pro	queue_exact	200/200, branded documentation title at /architecture.html	AS51115	Migrated public documentation; old redirect target path is not the successful path and is not credited
+client.curator.pro	queue_exact	200/200, Curator title on officially linked public login page	AS51115	Login screen only; no credentials or authenticated operation
+curator.pro	hold	401/401 on both the root and /company/about/	AS51115	No public product page demonstrated; 401 is not a blocking determination
+api.curator.pro	hold	200/200 with curl 63, without title or brand marker	AS51115	Official API link and origin do not establish content; keep for a documented public endpoint, if any
+docs.pg-sharding.tech	queue_exact	200/200, expected SPQR documentation title	AS16509	Shared hosting; no provider ranges accepted
+pg-sharding.tech	queue_exact	200/200, expected SPQR title and body marker	AS54113	Observed 185.199.108.153 in 185.199.108.0/24; exact host only
+mts.investments	queue_exact	200/200, expected MTS Investments company title on /company/	AS13174	Root from earlier run lacks a brand marker; this result is for /company/
+blog.mts.investments	queue_exact	200/200, expected Pliusonomika editorial title	AS60922|AS64432	Multiple observed BGP origins; service connection from MTS official links
+lk.mts.investments	queue_exact	200/200, branded public login title	AS13174	Login screen only; no credentials or financial operation
+datalens.ru	hold_no_new_rule	302/302 to same-host challenge on both /ru and /promo	AS200350	Covered by domain:ru; no bypass and no change
+datalens.tech	hold	Earlier two 301 to datalens.ru/promo; final path requires challenge	not_rechecked	Do not promote source redirect based solely on expected destination hostname
+docs.qrator.ru	control	308/308 to docs.curator.pro/ru/dashboard/overview.html	AS51115	Already covered; separate workspace GET of this exact destination gave 303 to docs.curator.pro/; no RU 200 claimed for either redirect leg
+stormwall.pro	control	200/200, expected public StormWall title	not_rechecked	Already covered
+timeweb.cloud	control	200/200, expected public Timeweb Cloud title	not_rechecked	Already covered
