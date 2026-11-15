@@ -4,10 +4,10 @@ docs.solarspace.pro	queue_exact	206 twice with expected docs title; full workspa
 my.solarspace.pro	hold	301 on two pairs of RU exits; canonical destination returned maintenance 403	AS214653	No canonical application login confirmed
 datalens.tech	hold	301 to datalens.ru/promo; target returns challenge again	AS13238|AS208398	Organic GET only; no challenge bypass
 hexway.io	hold	Root returned 404 twice; the vendor links a specific PDF	AS49505	No indicative public HTML at root; no PDF fetched
-nspk.com	hold_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	see DNS snapshot	Official English domain; no HTTP response proved
-www.nspk.com	hold_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	see DNS snapshot	WWW variant, not automatically equivalent to apex
-pay.mironline.ru	control_tls	TLS failed to validate; curl 60 plus OpenSSL certificate expiration code 10 in both exits	see DNS snapshot	Already covered; observation limited to this validated TLS setup
-bilet.nspk.ru	control_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	see DNS snapshot	Already covered; no attribution of blocking
+nspk.com	hold_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	AS201706	Official English domain; no HTTP response proved
+www.nspk.com	hold_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	AS201706	WWW variant, not automatically equivalent to apex
+pay.mironline.ru	control_tls	TLS failed to validate; curl 60 plus OpenSSL certificate expiration code 10 in both exits	AS41185	Already covered; observation limited to this validated TLS setup
+bilet.nspk.ru	control_tls	TLS failed to validate; curl 60 plus OpenSSL issuer code 20 in both exits	AS41185	Already covered; no attribution of blocking
 cloud.ttk.ru	control	HTTPS 200 branded documentation from two RU exits	AS57724	Both DAT covered through domain:ru; site ownership and network origin are distinct
 docs.cloud.beeline.ru	control	HTTPS 200 official Beeline Cloud account documentation from two RU exits	AS3216	Both DAT covered through domain:ru
 tdata.tech	prior_queue	HTTPS 200 RT.Warehouse title from two RU exits	AS12389	Previously confirmed, zero queue delta

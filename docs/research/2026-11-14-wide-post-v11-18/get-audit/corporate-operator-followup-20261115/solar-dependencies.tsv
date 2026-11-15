@@ -1,0 +1,5 @@
+host	source	referenced_url	role	light_ru	server_ru	workspace_http	tls	sample_bytes	sha256	next_action
+img.solarspace.pro	https://docs.solarspace.pro/faq/authorization	https://img.solarspace.pro/docs/start-authorization-page.jpg	direct public documentation img	NA	NA	206	0	4096	be6f63e4cdd740df2ecda27b0391ed4fd8e7d3e291e251ff2cb28edc555232c2	Check exact documented public asset from two RU exits, still hold
+iam.solarspace.pro	https://docs.solarspace.pro/faq/authorization	NA	string in page payload, not a documented check target	NA	NA	NA	NA	0	NA	Keep uncredited, do not query authentication endpoints
+docs.solarspace.turb0.ru	https://docs.solarspace.pro/faq/authorization	NA	string in page payload	domain:ru	domain:ru	NA	NA	0	NA	Already covered, do not infer public reachability
+docs.websecurity.t2.ru	https://docs.solarspace.pro/faq/authorization	NA	string in page payload	domain:ru	domain:ru	NA	NA	0	NA	Already covered, do not infer public reachability

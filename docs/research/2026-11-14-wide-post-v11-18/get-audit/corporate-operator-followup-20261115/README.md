@@ -31,7 +31,8 @@ API, авторизованные кабинеты, платежи или пол
 - [DNS](dns.tsv), [BGP origin](bgp.tsv), [HTTPS из рабочей среды](workspace-https.tsv),
   [GeoIP read-only](geoip-crosscheck.tsv), [МТС Линк IP](mts-link-geoip-crosscheck.tsv).
   Сетевой origin и корпоративная принадлежность не приравниваются.
-- [НСПК — покрытие официального перечня](nspk-source-coverage.tsv).
+- НСПК: [покрытие официального перечня](nspk-source-coverage.tsv),
+  [DNS](nspk-dns.tsv), [BGP](nspk-bgp.tsv), [рабочие HTTPS-наблюдения](nspk-workspace-https.tsv).
 - Три Actions-прогона
   [43727261023](vpn-43727261023.tsv) ([квитанция](vpn-43727261023-receipt.json)),
   [43727609413](vpn-43727609413.tsv) ([квитанция](vpn-43727609413-receipt.json)),
@@ -41,3 +42,5 @@ API, авторизованные кабинеты, платежи или пол
 - [Полный replay +2](full-build-replay-two.tsv),
   [полный replay +54](full-build-replay-fiftyfour.tsv) поверх обоих базовых DAT.
   Не является выпуском или слиянием PR №39.
+
+Следующая цель: [отдельный хост иллюстраций Solar Space](solar-dependencies.tsv). Он не входит в +54.

@@ -1,0 +1,7 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+bilet.nspk.ru	185.170.3.61	cloudflare|google	185.170.3.0/24	AS41185
+cloud.ttk.ru	185.215.4.29	cloudflare|google	185.215.4.0/24	AS57724
+nspk.com	194.190.0.23	cloudflare|google	194.190.0.0/24	AS201706
+pay.mironline.ru	185.170.2.18	cloudflare|google	185.170.2.0/24	AS41185
+sbp.nspk.ru	194.190.0.23	cloudflare|google	194.190.0.0/24	AS201706
+www.nspk.com	194.190.0.23	cloudflare|google	194.190.0.0/24	AS201706
