@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	getalt.org	getalt.org	https://getalt.org/ru/	Загрузка Альт|Базальт СПО|Альт Сервер	https://www.basealt.ru/about/news/archive/view/novaja-versija-os-alt-server-virtualizacii-91-sovre
+corporate	candidate	www.altlinux.org	www.altlinux.org	https://www.altlinux.org/	ALT Linux|Альт	https://docs.altlinux.org/ru-RU/index.html
+corporate	candidate	mirmon.altlinux.org	mirmon.altlinux.org	https://mirmon.altlinux.org/p11.html	ALT Platform 11|status|mirrors	https://mirmon.altlinux.org/
+corporate	control	docs.altlinux.org	docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	Документация ALT Linux Team|Базальт СПО	https://docs.altlinux.org/ru-RU/index.html
+corporate	control	altlinux.org	altlinux.org	https://altlinux.org/	ALT Linux|Альт	https://docs.altlinux.org/ru-RU/index.html

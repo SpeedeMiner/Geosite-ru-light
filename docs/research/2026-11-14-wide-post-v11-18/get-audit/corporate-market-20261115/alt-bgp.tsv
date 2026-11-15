@@ -1,0 +1,13 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+altlinux.org	194.107.17.137	cloudflare|google	194.107.17.0/24	AS43307
+docs.altlinux.org	194.107.17.80	cloudflare|google	194.107.17.0/24	AS43307
+download.basealt.ru	176.12.98.77	cloudflare|google	176.12.96.0/21	AS8636
+forum.altlinux.org	194.107.17.249	cloudflare|google	194.107.17.0/24	AS43307
+forum.altlinux.org	2a0c:88c0:0:400::249	cloudflare|google	2a0c:88c0::/48	AS202344
+getalt.org	194.107.17.85	cloudflare|google	194.107.17.0/24	AS43307
+mirmon.altlinux.org	194.107.17.249	cloudflare|google	194.107.17.0/24	AS43307
+mirmon.altlinux.org	2a0c:88c0:0:400::249	cloudflare|google	2a0c:88c0::/48	AS202344
+www.altlinux.org	194.107.17.249	cloudflare|google	194.107.17.0/24	AS43307
+www.altlinux.org	2a0c:88c0:0:400::249	cloudflare|google	2a0c:88c0::/48	AS202344
+www.basealt.ru	194.107.17.249	cloudflare|google	194.107.17.0/24	AS43307
+www.basealt.ru	2a0c:88c0:0:400::249	cloudflare|google	2a0c:88c0::/48	AS202344

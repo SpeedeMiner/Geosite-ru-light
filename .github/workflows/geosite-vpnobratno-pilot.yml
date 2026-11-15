@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (marketplace products)
+name: GeoSite IP checker GET through VPNObratno (BaseALT services)
 
 on:
   push:
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   pilot:
-    name: Marketplace product GET evidence from two RU ASNs
+    name: BaseALT GET evidence from two RU ASNs
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -86,7 +86,7 @@ jobs:
           "$RUNNER_TEMP/geosite-vpn-inventory" \
             .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
 
-      - name: Measure fixed public product and documentation URLs
+      - name: Measure official downloads and project documentation
         timeout-minutes: 8
         run: |
           set -euo pipefail
@@ -96,14 +96,14 @@ jobs:
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/corporate-market-20261115/vpn-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$AUDIT/corporate-market-20261115/alt-vpn-plan.tsv" .vpn-pilot/inventory.tsv \
                 "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 42610
 
       - name: Upload observation and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-corporate-market-${{ github.run_attempt }}
+          name: geosite-corporate-alt-${{ github.run_attempt }}
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl

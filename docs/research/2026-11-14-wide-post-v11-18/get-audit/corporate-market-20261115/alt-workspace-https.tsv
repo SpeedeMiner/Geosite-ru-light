@@ -1,0 +1,9 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+getalt.org	https://getalt.org/ru/	candidate	200	0	0	200	ALT	NA	294d6d2750ff0b67c0d0c67254c504e6e0654404627fd9958976d5b2b2f73841	2026-11-15T13:22:30.187509+00:00	workspace_unattributed
+www.altlinux.org	https://www.altlinux.org/	candidate	301	0	0	200	NA	www.altlinux.org	NA	2026-11-15T13:22:31.052811+00:00	workspace_unattributed
+forum.altlinux.org	https://forum.altlinux.org/	candidate	200	0	0	200	Форум сообщества ALT Linux - Главная страница	NA	ad37e0a89b12aa79cd7067a97f043d3653751e36048bf521924ea87f894a9064	2026-11-15T13:22:30.591737+00:00	workspace_unattributed
+mirmon.altlinux.org	https://mirmon.altlinux.org/	candidate	200	0	0	200	status of altlinux.org mirrors	NA	edf11e820672bac4e081467c3baf562e221e17782fdd0f3380c5ebb183cc45f6	2026-11-15T13:22:31.288608+00:00	workspace_unattributed
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	control	200	0	0	200	BaseALT	NA	50ad6f197a4ca998666f2df3b594d8c200201255274973b0b86a0a108b619d3b	2026-11-15T13:22:32.488734+00:00	workspace_unattributed
+www.basealt.ru	https://www.basealt.ru/	control	200	0	0	200	Российские операционные системы Альт - ALT Linux | BaseALT	NA	b251ecfbc11856629a8d1ce8cdcee736f720f9f8d8a96ebfc3fc42d25d13320c	2026-11-15T13:22:31.765495+00:00	workspace_unattributed
+download.basealt.ru	https://download.basealt.ru/	control	200	0	0	200	Index of /	NA	9ec28cef67a7476ce3505c8797d9810f541929ca8ddf98798a8549204422f079	2026-11-15T13:22:36.349889+00:00	workspace_unattributed
+altlinux.org	https://altlinux.org/	root_redirect_only	301	0	0	200	NA	www.altlinux.org	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	2026-11-15T13:22:35.537234+00:00	workspace_unattributed
