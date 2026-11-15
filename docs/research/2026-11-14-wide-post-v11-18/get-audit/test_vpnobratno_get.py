@@ -103,6 +103,7 @@ class VpnObratnoGetTests(unittest.TestCase):
             ('https://docs.solarspace.pro/', 'corporate', True),
             ('https://docs.solarspace.pro/other', 'corporate', False),
             ('https://img.solarspace.pro/docs/start-authorization-page.jpg', 'corporate', True),
+            ('https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png', 'corporate', True),
             ('https://img.solarspace.pro/docs/other.jpg', 'corporate', False),
             ('https://api.curator.pro/', 'ip_echo', False),
             ('https://api.curator.pro/another', 'corporate', False),
@@ -116,7 +117,7 @@ class VpnObratnoGetTests(unittest.TestCase):
                 args = run.call_args.args[0]
                 self.assertEqual('--range' in args, expected)
                 if expected:
-                    self.assertEqual(args[args.index('--range')+1], '0-4095' if host == 'img.solarspace.pro' else '0-65535')
+                    self.assertEqual(args[args.index('--range')+1], '0-4095' if host in {'img.solarspace.pro', 'cdn-viewer.diplodoc.com'} else '0-65535')
                 self.assertEqual(args[args.index('--max-filesize')+1], '524288')
 
     def test_fail_closed_on_private_destination_and_incorrect_remote(self):

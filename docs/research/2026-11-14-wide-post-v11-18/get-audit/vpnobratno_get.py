@@ -34,6 +34,7 @@ PUBLIC_DOC_RANGE = {
     'https://api.curator.pro/': '0-65535',
     'https://docs.solarspace.pro/': '0-65535',
     'https://img.solarspace.pro/docs/start-authorization-page.jpg': '0-4095',
+    'https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png': '0-4095',
 }
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')

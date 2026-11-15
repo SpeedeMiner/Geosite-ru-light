@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	cdn-viewer.diplodoc.com	cdn-viewer.diplodoc.com	https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png		https://yandex.ru/support/yandex-360/business/admin/ru/
+corporate	candidate	cdn-viewer.diplodoc.com	cdn-viewer.diplodoc.com	https://cdn-viewer.diplodoc.com/docs-assets/alice/rev/r22105055/ru/assistant/_assets/beta.svg		https://alice.yandex.ru/support/ru/assistant/chat/agent-booking
+corporate	control	diplodoc.com	diplodoc.com	https://diplodoc.com/	Diplodoc	https://yandex.ru/support/yandex-360/business/admin/ru/
+corporate	control	yandex.cloud	yandex.cloud	https://yandex.cloud/ru/docs/stackland/index	Stackland	https://yandex.cloud/ru/docs/stackland/
+corporate	control	msk.cloud.vk.ru	msk.cloud.vk.ru	https://msk.cloud.vk.ru/app/	VK Cloud	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/api/rest-api/endpoints/endpoints.md
+corporate	control	gitverse.ru	gitverse.ru	https://gitverse.ru/home/	GitVerse	https://gitverse.ru/docs/developers/
