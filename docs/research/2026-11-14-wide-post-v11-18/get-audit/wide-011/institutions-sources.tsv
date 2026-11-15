@@ -1,0 +1,34 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	development_bank	functional	https://eabr.org/	https://kase.kz/ru/listing/issuers/EABR	Евразийский банк развития|ЕАБР	Публичная витрина отдельно от WWW
+EAEU	development_bank	functional	https://www.eabr.org/about/	https://kase.kz/ru/listing/issuers/EABR	Евразийский банк развития|О банке	Содержательная страница банка по документированному WWW
+EAEU	development_bank	review	https://fci.eabr.org/	https://www.eabr.org/about/	Фонд цифровых инициатив	Отдельный хост по навигации ЕАБР, ожидает проверки назначения
+EAEU	education	functional	https://academy.eabr.org/	https://www.eabr.org/about/	Академия|ЕАБР	Публичная справочная витрина, без авторизации или записи
+EAEU	development_bank	review	https://20.eabr.org/	https://www.eabr.org/about/	20 лет ЕАБР	Временный юбилейный сайт не в приоритете DIRECT
+KZ	development_bank	control	https://kase.kz/ru/listing/issuers/EABR	https://kase.kz/ru/listing/issuers/EABR	Евразийский банк развития|EABR	Публичная карточка эмитента на бирже
+EAEU	stabilization_fund	functional	https://efsd.org/en	https://efsd.org/	Eurasian Fund|Stabilization and Development	Публичная англоязычная цель перехода с корня, индексатор следует внутри apex
+EAEU	stabilization_fund	review	https://efsd.org/	https://efsd.org/en	Eurasian Fund|ЕФСР	Корень того же имени оставлен раздельно
+EAEU	stabilization_fund	functional	https://www.efsd.org/projects/	https://www.efsd.org/about/documents/incorporation_documents/	Проекты ЕФСР|Стабилизации	Отдельный WWW по публикациям фонда, веб-таймаут не диагноз
+EAEU	stabilization_fund	review	https://www.efsd.org/about/documents/incorporation_documents/	https://www.efsd.org/projects/	Учредительные документы|ЕФСР	Запасной путь на том же имени
+EAEU	stabilization_fund	review	https://back.efsd.org/	https://efsd.org/		Хост картинок в документации сайта. Голый корень ресурса не тестируется
+CIS	statistics	functional	https://new.cisstat.org/ru/web/guest/main	https://new.cisstat.org/about-us	Статкомитет СНГ|Межгосударственный статистический	Публичный официальный статистический портал, точный хост new
+CIS	statistics	review	https://new.cisstat.org/about-us	https://new.cisstat.org/ru/web/guest/main	Статкомитет СНГ|О нас	Содержательное описание на том же хосте
+CIS	statistics	review	https://cisstat.info/0base/index.htm	https://new.cisstat.org/about-us	Statistics of the CIS|Статистика СНГ	Архивный домен с историческим содержимым, нужна отдельная работа с навигацией
+CIS	statistics	review	https://cisstat.org/	https://new.cisstat.org/about-us	Статкомитет СНГ	Атрибуция нового поддомена не доказывает apex
+CIS	statistics	review	https://e-cis.info/cooperation/3344/79016/	https://e-cis.info/cooperation/3344/79016/	статистических служб|СНГ	Справка портала СНГ
+RU	statistics	control	https://rosstat.gov.ru/folder/12878	https://rosstat.gov.ru/folder/12878	Содружество Независимых Государств|Росстат	Российский официальный профиль сотрудничества
+CIS	humanities	functional	https://www.mfgs-sng.org/	https://e-cis.info/news/566/135980/	МФГС|гуманитарного сотрудничества	Точный WWW указан в публикации СНГ, 502 индексатора не считать блокировкой
+CIS	humanities	review	https://mfgs-sng.org/	https://e-cis.info/news/566/135980/	МФГС|гуманитарного сотрудничества	Несмотря на текст ссылки источник ведёт на WWW, apex отдельно
+CIS	humanities	review	https://e-cis.info/news/566/135980/	https://e-cis.info/news/566/135980/	фонду гуманитарного сотрудничества|МФГС	Первичная карточка, приоритетный URL e-cis.info уже назначен в плане 011
+CIS	broadcasting	functional	https://mir24.tv/about/about_us	https://e-cis.info/news/566/135980/	Межгосударственная телерадиокомпания|MIR24.TV	Публичная страница издателя, не проверка трансляций
+KZ	broadcasting	functional	https://kz.mir24.tv/about/about_us	https://kz.mir24.tv/about/about_us	Межгосударственная телерадиокомпания|Казахстан	Национальное зеркало публичной справки
+BY	broadcasting	functional	https://by.mir24.tv/about/history	https://by.mir24.tv/about/history	Межгосударственной телерадиокомпании|История	Отдельное региональное зеркало
+CIS	broadcasting	review	https://images.mir24.tv/	https://mir24.tv/about/about_us		Хранилище изображений по навигации издателя, корневой URL вне очереди
+CIS	broadcasting	functional	https://radiomir.fm/	https://e-cis.info/news/566/135980/	Радио МИР|Радио Мир	Публичный сайт, поток не открывается
+CIS	public_financial_monitoring	functional	https://eurasiangroup.org/ru/about-eag	https://www.fedsfm.ru/special/fm/eag	О ЕАГ|Евразийская группа	Только справочная страница о международной организации
+CIS	public_financial_monitoring	review	https://www.eurasiangroup.org/ru	https://eurasiangroup.org/ru/about-eag	Евразийская группа|ЕАГ	Отдельное WWW, проверить каноникал после основного хоста
+CIS	public_financial_monitoring	review	https://eurasiangroup.org/ru/open-sources-register	https://eurasiangroup.org/ru/about-eag	Реестр открытых баз данных	Публичный каталог того же хоста, не обращаемся к записям
+RU	public_financial_monitoring	control	https://www.fedsfm.ru/special/fm/eag	https://www.fedsfm.ru/special/fm/eag	Росфинмониторинг|ЕАГ	Государственный справочный источник, индексатор иногда не отвечает
+RU	public_financial_monitoring	control	https://iacis.ru/deyatelnost/sotrudnichestvo_i_partnerstvo/partnerskie_organizatcii/evrazijskaya_gruppa_po_protivodejstviyu_legalizatcii_prestupnih_dohodov_i_finansirovaniyu_terrorizma_eag	https://iacis.ru/deyatelnost/sotrudnichestvo_i_partnerstvo/partnerskie_organizatcii/evrazijskaya_gruppa_po_protivodejstviyu_legalizatcii_prestupnih_dohodov_i_finansirovaniyu_terrorizma_eag	Евразийская группа|ЕАГ	Публичная карточка партнёра
+CIS	statistics	functional	https://eias.cisstat.org/biportal/contourbi.jsp?project=%2Feias%2Fprices&report=report47&toolbar=off	https://new.cisstat.org/ru/web/guest/main	Статкомитет СНГ|BI Portal	Отдельное точное имя публичного отчёта, подтверждено прямой официальной ссылкой
+CIS	statistics	review	https://eias.cisstat.org/	https://new.cisstat.org/ru/web/guest/main	Статкомитет СНГ	Публичная ссылка ведёт к отчёту, не на корень
+CIS	humanities	control	https://bae.rsl.ru/	https://bae.rsl.ru/	Библиотечная Ассамблея Евразии|БАЕ	Публичный библиотечный сайт под покрытым доменом РГБ

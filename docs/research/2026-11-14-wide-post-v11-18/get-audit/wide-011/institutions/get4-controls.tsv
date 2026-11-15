@@ -1,0 +1,7 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_regional_org"	"diagnostic"	"kase.kz"	"kase.kz"	"https://kase.kz/ru/listing/issuers/EABR"	"Евразийский банк развития|EABR"	"https://kase.kz/ru/listing/issuers/EABR"
+"control_regional_org"	"diagnostic"	"rosstat.gov.ru"	"rosstat.gov.ru"	"https://rosstat.gov.ru/folder/12878"	"Содружество Независимых Государств|Росстат"	"https://rosstat.gov.ru/folder/12878"
+"control_regional_org"	"diagnostic"	"kz.mir24.tv"	"kz.mir24.tv"	"https://kz.mir24.tv/about/about_us"	"Межгосударственная телерадиокомпания|Казахстан"	"https://kz.mir24.tv/about/about_us"
+"control_regional_org"	"diagnostic"	"by.mir24.tv"	"by.mir24.tv"	"https://by.mir24.tv/about/history"	"Межгосударственной телерадиокомпании|История"	"https://by.mir24.tv/about/history"
+"control_regional_org"	"diagnostic"	"www.fedsfm.ru"	"www.fedsfm.ru"	"https://www.fedsfm.ru/special/fm/eag"	"Росфинмониторинг|ЕАГ"	"https://www.fedsfm.ru/special/fm/eag"
+"control_regional_org"	"diagnostic"	"bae.rsl.ru"	"bae.rsl.ru"	"https://bae.rsl.ru/"	"Библиотечная Ассамблея Евразии|БАЕ"	"https://bae.rsl.ru/"
