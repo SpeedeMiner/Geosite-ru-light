@@ -44,6 +44,17 @@ TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
 
+EXTENDED_PUBLIC_HTML_SAMPLE = frozenset((
+    'https://www.ixcellerate.com/faq/',
+    'https://www.eurasiapeering.com/contact/',
+    'https://lg.gblnet.net/',
+    'https://cdnnow.pro/about/',
+))
+
+def body_sample_limit(row):
+    return 65536 if row.get("cohort") == "corporate" and row["url"] in EXTENDED_PUBLIC_HTML_SAMPLE else BODY_LIMIT
+
+
 def validate_upstream(directory):
     for name, digest in UPSTREAM_FILES.items():
         p = directory / name
@@ -129,7 +140,7 @@ def get_from_tunnel(row, address, interface, timeout):
                 raise ValueError('curl did not use the pinned destination')
             if body_file.exists():
                 with body_file.open('rb') as f:
-                    sample = f.read(BODY_LIMIT)
+                    sample = f.read(body_sample_limit(row))
             else:
                 sample = b''
             return run.returncode,stats,sample

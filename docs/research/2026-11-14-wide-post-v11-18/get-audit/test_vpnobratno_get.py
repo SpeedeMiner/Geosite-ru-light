@@ -6,12 +6,20 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from vpnobratno_get import MAX_TARGETS, asn_arg, attach, catalogue, echo_matches_exit, finish_code, observation, get_from_tunnel, summarize, validate_upstream
+from vpnobratno_get import body_sample_limit, BODY_LIMIT, MAX_TARGETS, asn_arg, attach, catalogue, echo_matches_exit, finish_code, observation, get_from_tunnel, summarize, validate_upstream
 
 URL = 'https://service.example/public?q=one'
 ROW = dict(host='service.example',url=URL,markers='pilot')
 EXIT = dict(country='RU',ip='93.184.216.34',asn=64496,asn_conflict=False,verified_by_sources=2)
 STATS = dict(response_code=200,ssl_verify_result=0,remote_ip='8.8.8.8',content_type='text/html')
+
+
+class ScopedHTMLLimitTests(unittest.TestCase):
+    def test_extended_sample_is_only_for_exact_public_corporate_page(self):
+        url = "https://www.ixcellerate.com/faq/"
+        self.assertEqual(body_sample_limit({"cohort": "corporate", "url": url}), 65536)
+        self.assertEqual(body_sample_limit({"cohort": "control", "url": url}), BODY_LIMIT)
+        self.assertEqual(body_sample_limit({"cohort": "corporate", "url": url + "?x"}), BODY_LIMIT)
 
 
 class ProbeError(RuntimeError):
