@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	yaff.tech	yaff.tech	https://yaff.tech/docs/	YaFF	https://github.com/yandex/yaff
+corporate	candidate	yaff.tech	yaff.tech	https://yaff.tech/docs/en/	YaFF	https://opensource.yandex/projects/
+corporate	control	support.kontur.ru	support.kontur.ru	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	Контур	https://kontur.ru/
+corporate	control	rutube.ru	rutube.ru	https://rutube.ru/info/trouble/	RUTUBE	https://rutube.ru/
+corporate	control	docs.inkey.rt.ru	docs.inkey.rt.ru	https://docs.inkey.rt.ru/getting-started/sign-in/	Ростелеком Мастер Ключ	https://docs.inkey.rt.ru/users/inhabitants/
+corporate	control	gitverse.ru	gitverse.ru	https://gitverse.ru/docs/developers/	Разработчикам	https://sbertech.ru/products/gitverse
