@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	taiga-ui.dev	taiga-ui.dev	https://taiga-ui.dev/info/about/	Taiga UI: About	https://github.com/taiga-family/taiga-ui
+corporate	candidate	taiga-ui.dev	taiga-ui.dev	https://taiga-ui.dev/	Taiga UI	https://www.tbank.ru/career/technologies/taiga-ui/
+corporate	control	divkit.tech	divkit.tech	https://divkit.tech/docs/ru/	DivKit	https://opensource.yandex/
+corporate	control	ydb.tech	ydb.tech	https://ydb.tech/docs/ru/	YDB	https://opensource.yandex/
