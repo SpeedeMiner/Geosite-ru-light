@@ -1,0 +1,335 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+MWS	mws-end	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	official-link	api.mwsapis.ru	https://api.mwsapis.ru/endpoint	https://api.mwsapis.ru/endpoint⁠	domain:ru	domain:ru	NA	NA
+MWS	mws-end	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	docs-code	compute.mwsapis.ru	https://compute.mwsapis.ru/	example or documented endpoint	domain:ru	domain:ru	NA	NA
+MWS	mws-end	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	official-source	mws.ru	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	Эндпоинты и структура URL | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws-status	https://mws.ru/docs/cloud-platform/about/general/service-status.html	official-link	console.mws.ru	https://console.mws.ru/status/	Страница статуса сервисов	domain:ru	domain:ru	NA	NA
+MWS	mws-status	https://mws.ru/docs/cloud-platform/about/general/service-status.html	official-source	mws.ru	https://mws.ru/docs/cloud-platform/about/general/service-status.html	Статус работы сервисов MWS Cloud Platform | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws-auth	https://mws.ru/docs/cloud-platform/api/general/api-auth.html	official-source	mws.ru	https://mws.ru/docs/cloud-platform/api/general/api-auth.html	Авторизация | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws-support	https://mws.ru/docs/support/help.html	official-link	console.mws.ru	https://console.mws.ru/	веб-консоли MWS Cloud Platform⁠	domain:ru	domain:ru	NA	NA
+MWS	mws-support	https://mws.ru/docs/support/help.html	official-link	itsm.mts.ru	https://itsm.mts.ru/	портале Service Desk	domain:ru	domain:ru	NA	NA
+MWS	mws-support	https://mws.ru/docs/support/help.html	official-source	mws.ru	https://mws.ru/docs/support/help.html	О портале Service Desk | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws-support	https://mws.ru/docs/support/help.html	official-link	status.mws.ru	https://status.mws.ru/	статус компонентов MWS⁠	domain:ru	domain:ru	NA	NA
+MWS	mws-tf	https://mws.ru/docs/cloud-platform/terraform/provider.html	official-link	api.mwsapis.ru	https://api.mwsapis.ru/	https://api.mwsapis.ru⁠	domain:ru	domain:ru	NA	NA
+MWS	mws-tf	https://mws.ru/docs/cloud-platform/terraform/provider.html	official-source	mws.ru	https://mws.ru/docs/cloud-platform/terraform/provider.html	MWS Cloud Platform Provider | MWS Docs	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	official-source	api.mwsapis.ru	https://api.mwsapis.ru/endpoint	JSON	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	audit.mwsapis.ru	https://audit.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	billing.mwsapis.ru	https://billing.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	cdn.mwsapis.ru	https://cdn.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	certmanager.mwsapis.ru	https://certmanager.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	compute.mwsapis.ru	https://compute.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	gpt.mwsapis.ru	https://gpt.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	iam.mwsapis.ru	https://iam.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	kms.mwsapis.ru	https://kms.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mclickhouse.mwsapis.ru	https://mclickhouse.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	metastore.mwsapis.ru	https://metastore.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mk8s.mwsapis.ru	https://mk8s.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mkafka.mwsapis.ru	https://mkafka.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mmysql.mwsapis.ru	https://mmysql.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	monitoring.mwsapis.ru	https://monitoring.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mpostgres.mwsapis.ru	https://mpostgres.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	mvalkey.mwsapis.ru	https://mvalkey.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	queue-api.mwsapis.ru	https://queue-api.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	registry.mwsapis.ru	https://registry.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	secretmanager.mwsapis.ru	https://secretmanager.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	spostgres.mwsapis.ru	https://spostgres.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	storage.mwsapis.ru	https://storage.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	support.mwsapis.ru	https://support.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	vi.mwsapis.ru	https://vi.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+MWS	mws-open	https://api.mwsapis.ru/endpoint	json-registry	vpc.mwsapis.ru	https://vpc.mwsapis.ru/	published API endpoint address	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-link	metrika.yandex.ru	https://metrika.yandex.ru/stat/		domain:ru	domain:ru	NA	NA
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-link	servicedesk.rtcloud.ru	https://servicedesk.rtcloud.ru/	Техническая поддержка	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-link	t.me	https://t.me/rtcloud_ru	Мы в Telegram	NA	NA	NA	TELEGRAM
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-link	top.mail.ru	https://top.mail.ru/jump		domain:ru	domain:ru	NA	NA
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-link	top100.rambler.ru	https://top100.rambler.ru/navi/2940592/		domain:ru	domain:ru	NA	NA
+Ростелеком	rt-main	https://www.rtcloud.ru/	official-source	www.rtcloud.ru	https://www.rtcloud.ru/	Национальная облачная платформа - Облачный провайдер для бизнеса | RTCloud	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-catalog	https://www.rt.ru/b2b	official-source	www.rt.ru	https://www.rt.ru/b2b		domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rossijskie_platformy_virtualizatsii/review_table/5fabc8157c0a50ab4727be7f8a137cc6610068aa	российских платформ виртуализации	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d472805/	«Ростелеком» перевел инфраструктуру на российскую платформу Basis Dynamix. Официальный информационны	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-link	www.tadviser.ru	https://www.tadviser.ru/a/815077	рейтинг крупнейших разработчиков платформ виртуализации серверов	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-infra	https://www.company.rt.ru/press/news/d472805/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-link	rt-solar.ru	https://rt-solar.ru/	Группа компаний «Солар»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-link	rt.ru	https://rt.ru/safe	единый сервис	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d474125/	На страже безопасности: «Ростелеком» и «Солар» запустили единый инструмент для цифровой защиты клиен	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-solar	https://www.company.rt.ru/press/news/d474125/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-source	corp.megafon.ru	https://corp.megafon.ru/	Инвесторам и прессе — Официальный сайт ПАО «МегаФон»Инвесторам и прессе — Официальный сайт ПАО «Мега	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	gov.megafon.ru	https://gov.megafon.ru/	Госзаказчикам	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	habrahabr.ru	https://habrahabr.ru/company/megafon		domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	job.megafon.ru	https://job.megafon.ru/	Работа в МегаФоне	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	lk.megafon.ru	https://lk.megafon.ru/download/apk	Android	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	moscow.shop.megafon.ru	https://moscow.shop.megafon.ru/	интернет-магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	nexign.com	https://nexign.com/ru/success-stories/nexign-microservices-framework-success-story-megafon	конвергентные	full:nexign.com	full:nexign.com	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	ok.ru	https://ok.ru/megafon		domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	shop.megafon.ru	https://shop.megafon.ru/	Интернет‑магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	t.me	https://t.me/megafon_online		NA	NA	NA	TELEGRAM
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	tech.megafon.ru	https://tech.megafon.ru/information/all/technology/internet-veshhei	интернет вещей	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	trk.mail.ru	https://trk.mail.ru/c/sa6p65	iOS	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	vk.com	https://vk.com/megafon		domain:vk.com	domain:vk.com	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	www.megafon.ru	https://www.megafon.ru/	Частным лицам	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	www.shop.megafon.ru	https://www.shop.megafon.ru/	Интернет-магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-group	https://corp.megafon.ru/	official-link	www.youtube.com	https://www.youtube.com/user/MegaFonTV		NA	NA	NA	YOUTUBE
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	corp.megafon.ru	https://corp.megafon.ru/	О компании	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	gov.megafon.ru	https://gov.megafon.ru/articles/registraciya_sim	Активация SIM	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	job.megafon.ru	https://job.megafon.ru/	Работа в МегаФоне	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	lk.megafon.ru	https://lk.megafon.ru/download/apk	Android	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	max.ru	https://max.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-source	moscow.megafon.ru	https://moscow.megafon.ru/corporate	Услуги для корпоративных клиентов — цифровые услуги для малого и среднего бизнеса от МегаФон, Москов	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	ordering.megafon.ru	https://ordering.megafon.ru/universal-order	Заказать решение	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	t.me	https://t.me/megafon_probusiness		NA	NA	NA	TELEGRAM
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	tech.megafon.ru	https://tech.megafon.ru/	Технологии ПроБизнесПространство, где мы обсуждаем применение цифровых технологий в реальном бизнесе	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	tenchat.ru	https://tenchat.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	trk.mail.ru	https://trk.mail.ru/c/sa6p65	IOS	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	vk.com	https://vk.com/megafon_probusiness		domain:vk.com	domain:vk.com	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	www.megafon.ru	https://www.megafon.ru/corporate		domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	www.shop.megafon.ru	https://www.shop.megafon.ru/	Интернет-магазин	domain:ru	domain:ru	NA	NA
+МегаФон	mf-sol	https://moscow.megafon.ru/corporate	official-link	www.youtube.com	https://www.youtube.com/@megafon_probusiness		NA	NA	NA	YOUTUBE
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-source	b2b.ttk.ru	https://b2b.ttk.ru/	АО «Компания ТрансТелеКом»	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	company.ttk.ru	https://company.ttk.ru/	О компании	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899		domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	lkb2b.ttk.ru	https://lkb2b.ttk.ru/	Войти	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	max.ru	https://max.ru/ttk		domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	moskva.myttk.ru	https://moskva.myttk.ru/upload/doc/Politika_opd_ttk.pdf	политикой обработки персональных данных	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	ok.ru	https://ok.ru/ttk		domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	t.me	https://t.me/ttkrus		NA	NA	NA	TELEGRAM
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	ttk.ru	https://ttk.ru/upload/doc/Politika_opd_ttk.pdf	Политика конфиденциальности	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA
+ТТК	ttk-b2b	https://b2b.ttk.ru/	official-link	vk.com	https://vk.com/ttk		domain:vk.com	domain:vk.com	NA	NA
+Яндекс	ya-status	https://status.yandex.cloud/ru/dashboard	official-source	status.yandex.cloud	https://status.yandex.cloud/ru/dashboard	Статус компонентов платформы Yandex Cloud - Сервисы	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	forms.yandex.ru	https://forms.yandex.ru/surveys/13470354.903873120b6d533aa2c9fdcd221118db47188b81/	Участие в исследованиях	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	github.com	https://github.com/yandex-cloud		NA	NA	NA	GITHUB
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/963912747546876214		domain:yandex.com	domain:yandex.com	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	status.yandex.cloud	https://status.yandex.cloud/dashboard	Статус работы сервисов	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	t.me	https://t.me/yandexcloudnews		NA	NA	NA	TELEGRAM
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	vk.com	https://vk.com/yandexcloudofficial		domain:vk.com	domain:vk.com	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	www.youtube.com	https://www.youtube.com/channel/UCjWOzgG0oTFHy4N4BeDmBhg		NA	NA	NA	YOUTUBE
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-source	yandex.cloud	https://yandex.cloud/ru/docs	Документация | Yandex Cloud	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cloud	https://yandex.cloud/ru/docs	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политики конфиденциальности	domain:ru	domain:ru	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	docs-code	dns.api.cloud.yandex.net	https://dns.api.cloud.yandex.net/	example or documented endpoint	domain:yandex.net	domain:yandex.net	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/dns/api-ref/index.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	github.com	https://github.com/yandex-cloud/cloudapi/tree/master/yandex/cloud/dns/v1	GitHub	NA	NA	NA	GITHUB
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-source	yandex.cloud	https://yandex.cloud/ru/docs/dns/api-ref/index	Cloud DNS API: REST reference | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/index	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/iam/concepts/authorization/index.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/iam/concepts/authorization/index.md		NA	NA	NA	GITHUB
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	ru.wikipedia.org	https://ru.wikipedia.org/wiki/OpenID	OIDC	NA	NA	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-source	yandex.cloud	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	Как выбрать правильный способ аутентификации в Yandex Cloud | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	curl.se	https://curl.se/	curl	NA	NA	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	docs.aws.amazon.com	https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html	Authenticating Requests (AWS Signature Version 4)	NA	NA	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/storage/s3/index.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/storage/s3/index.md		NA	NA	NA	GITHUB
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	docs-code	storage.yandexcloud.net	https://storage.yandexcloud.net/	example or documented endpoint	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-source	yandex.cloud	https://yandex.cloud/ru/docs/storage/s3/index	Как пользоваться S3 API. Object Storage | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-s3	https://yandex.cloud/ru/docs/storage/s3/index	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	api.cloud.yandex.net	https://api.cloud.yandex.net/endpoints	ссылке	domain:yandex.net	domain:yandex.net	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	datatracker.ietf.org	https://datatracker.ietf.org/doc/rfc6996	RFC 6996	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	docs.db.ripe.net	https://docs.db.ripe.net/RPSL-Object-Types/Descriptions-of-Primary-Objects	Route Object	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/interconnect/concepts/pub-con.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	en.wikipedia.org	https://en.wikipedia.org/wiki/Bidirectional_Forwarding_Detection	протокол BFD	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/interconnect/concepts/pub-con.md		NA	NA	NA	GITHUB
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	ru.wikipedia.org	https://ru.wikipedia.org/wiki/NAT	NAT	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	www.ripe.net	https://www.ripe.net/manage-ips-and-asns/resource-management/rpki/resource-certification-roa-management/	Route Origin Authorization	NA	NA	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-source	yandex.cloud	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	Публичное соединение | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/container-registry/operations/docker-image/docker-image-push.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/container-registry/operations/docker-image/docker-image-push.md		NA	NA	NA	GITHUB
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-source	yandex.cloud	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	Загрузить Docker-образ в реестр Container Registry | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/cdn/concepts/resource.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/cdn/concepts/resource.md		NA	NA	NA	GITHUB
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	monitoring.yandex.cloud	https://monitoring.yandex.cloud/	интерфейсе Monitoring	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	ru.wikipedia.org	https://ru.wikipedia.org/wiki/URI	URI	NA	NA	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	www.ietf.org	https://www.ietf.org/rfc/rfc1035.html	RFC-1035	NA	NA	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	www.rfc-editor.org	https://www.rfc-editor.org/rfc/rfc1912	ограничениях	NA	NA	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-source	yandex.cloud	https://yandex.cloud/ru/docs/cdn/concepts/resource	CDN-ресурс | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/iam/operations/iam-token/create.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/iam/operations/iam-token/create.md		NA	NA	NA	GITHUB
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	docs-code	resource-manager.api.cloud.yandex.net	https://resource-manager.api.cloud.yandex.net/resource-manager/v1/clouds	example or documented endpoint	domain:yandex.net	domain:yandex.net	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-source	yandex.cloud	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	Как получить IAM-токен для аккаунта | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA
+Яндекс	ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	annetutil.github.io	https://annetutil.github.io/annet/main/	Сайт	NA	NA	NA	GITHUB
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	diplodoc.com	https://diplodoc.com/	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	github.com	https://github.com/ydb-platform	GitHub	NA	NA	NA	GITHUB
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	gravity-ui.com	https://gravity-ui.com/	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	habr.com	https://habr.com/ru/companies/yandex/articles/875070/	Подробнее	domain:habr.com	domain:habr.com	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-source	opensource.yandex	https://opensource.yandex/projects/	Yandex Open Source | Наши проекты	domain:yandex	domain:yandex	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	pg-sharding.tech	https://pg-sharding.tech/welcome	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	testplane.io	https://testplane.io/	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	userver.tech	https://userver.tech/	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	yaff.tech	https://yaff.tech/docs/en/	Сайт	NA	NA	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	ydb.tech	https://ydb.tech/ru	Сайт	domain:ydb.tech	domain:ydb.tech	NA	NA
+Яндекс	ya-oss	https://opensource.yandex/projects/	official-link	ytsaurus.tech	https://ytsaurus.tech/ru	Сайт	NA	NA	NA	NA
+Gravity UI	gravity-home	https://gravity-ui.com/ru	official-link	github.com	https://github.com/gravity-ui		NA	NA	NA	GITHUB
+Gravity UI	gravity-home	https://gravity-ui.com/ru	official-source	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA
+Gravity UI	gravity-home	https://gravity-ui.com/ru	official-link	t.me	https://t.me/gravity_ui		NA	NA	NA	TELEGRAM
+Gravity UI	gravity-home	https://gravity-ui.com/ru	official-link	www.figma.com	https://www.figma.com/community/file/1271150067798118027/Gravity-UI-Design-System-(Beta)		NA	NA	NA	NA
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	diplodoc.com	https://diplodoc.com/	Diplodoc	NA	NA	NA	NA
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	github.com	https://github.com/gravity-ui		NA	NA	NA	GITHUB
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-source	gravity-ui.com	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	Gravity UI	NA	NA	NA	NA
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	preview.gravity-ui.com	https://preview.gravity-ui.com/uikit/	storybook	NA	NA	NA	NA
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	t.me	https://t.me/gravity_ui		NA	NA	NA	TELEGRAM
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	www.figma.com	https://www.figma.com/community/file/1271150067798118027/Gravity-UI-Design-System-(Beta)		NA	NA	NA	NA
+Gravity UI	gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	official-link	www.npmjs.com	https://www.npmjs.com/package/eslint-plugin-jsx-a11y	eslint	NA	NA	NA	NA
+Selectel	selectel-doc	https://docs.selectel.ru/	official-source	docs.selectel.ru	https://docs.selectel.ru/	Документация Selectel	domain:ru	domain:ru	NA	NA
+Selectel	selectel-doc	https://docs.selectel.ru/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA
+Selectel	selectel-api	https://docs.selectel.ru/api/	official-source	docs.selectel.ru	https://docs.selectel.ru/api/	Документация API	domain:ru	domain:ru	NA	NA
+Selectel	selectel-api	https://docs.selectel.ru/api/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA
+Selectel	selectel-cdn	https://docs.selectel.ru/cdn/resources/domains/	official-source	docs.selectel.ru	https://docs.selectel.ru/cdn/resources/domains/	Домены CDN-ресурса | Документация Selectel	domain:ru	domain:ru	NA	NA
+Selectel	selectel-cdn	https://docs.selectel.ru/cdn/resources/domains/	official-link	my.selectel.ru	https://my.selectel.ru/cdn-v3	панели управления	domain:ru	domain:ru	NA	NA
+Selectel	selectel-cdn	https://docs.selectel.ru/cdn/resources/domains/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA
+Selectel	selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	docs-code	cloud.api.selcloud.ru	https://cloud.api.selcloud.ru/identity/v3	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Selectel	selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	official-link	docs.aws.amazon.com	https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketPolicy.html	документацией AWS S3	NA	NA	NA	NA
+Selectel	selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	official-source	docs.selectel.ru	https://docs.selectel.ru/s3/manage/configure-storage-update/	Настроить S3 после обновления | Документация Selectel	domain:ru	domain:ru	NA	NA
+Selectel	selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	official-link	my.selectel.ru	https://my.selectel.ru/storage/	панели управления	domain:ru	domain:ru	NA	NA
+Selectel	selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	docs.selectel.ru	https://docs.selectel.ru/	Документация	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	email.selectel.ru	https://email.selectel.ru/subscription_topics	Подписаться	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	files.selectel.ru	https://files.selectel.ru/docs/ru/consent-to-personal-data-processing.pdf	Соглашаюсь	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	habr.com	https://habr.com/ru/company/selectel/		domain:habr.com	domain:habr.com	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	my.selectel.ru	https://my.selectel.ru/login	В панель	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-source	selectel.ru	https://selectel.ru/blog/new-storage-s3/	Новая функциональность объектного хранилища - Академия Selectel	domain:ru	domain:ru	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	slc.tl	https://slc.tl/jjva2	Token Factory: Qwen, DeepSeek и GLM в дата-центрах Selectel в РФ с оплатой за токены Подробнее	domain:slc.tl	domain:slc.tl	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	t.me	https://t.me/Selectel		NA	NA	NA	TELEGRAM
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	vk.com	https://vk.com/selectelcareers	Selectel Team	domain:vk.com	domain:vk.com	NA	NA
+Selectel	selectel-academy	https://selectel.ru/blog/new-storage-s3/	official-link	www.youtube.com	https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng		NA	NA	NA	YOUTUBE
+Selectel	selectel-main	https://selectel.ru/	official-link	brand.selectel.ru	https://brand.selectel.ru/	Брендбук	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	docs.selectel.ru	https://docs.selectel.ru/	Документация	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	files.selectel.ru	https://files.selectel.ru/docs/ru/terms-of-use-for-services.pdf	Правила пользования сервисами и услугами	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	habr.com	https://habr.com/ru/companies/selectel/articles/	Habr	domain:habr.com	domain:habr.com	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	investors.selectel.ru	https://investors.selectel.ru/	Инвесторам	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	my.selectel.ru	https://my.selectel.ru/login	Вход	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	promo.selectel.ru	https://promo.selectel.ru/ai-router	ИИ-РоутерNew	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	selectel.live	https://selectel.live/	Все сервисы доступны	domain:selectel.live	domain:selectel.live	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-source	selectel.ru	https://selectel.ru/	IT-инфраструктура для бизнеса от облачного провайдера Selectel, аренда IaaS и PaaS	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	t.me	https://t.me/selectel	Telegram	NA	NA	NA	TELEGRAM
+Selectel	selectel-main	https://selectel.ru/	official-link	vk.com	https://vk.com/selectel	VK	domain:vk.com	domain:vk.com	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Страница эмитента на сайте аккредитованного агентства	domain:ru	domain:ru	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	www.linkedin.com	https://www.linkedin.com/company/selectel/		NA	NA	NA	NA
+Selectel	selectel-main	https://selectel.ru/	official-link	www.youtube.com	https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng	YouTube	NA	NA	NA	YOUTUBE
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	dzen.ru	https://dzen.ru/id/68a492216e07c51e02a217b7		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	hosting.timeweb.ru	https://hosting.timeweb.ru/	панели управления	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	max.ru	https://max.ru/id7810353960_biz		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	myreviews.ru	https://myreviews.ru/	Виджет отзывов для сайта	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	rkn.gov.ru	https://rkn.gov.ru/activity/connection/register/license/	N142739	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	rutube.ru	https://rutube.ru/channel/80921320/		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	t.me	https://t.me/twhosting		NA	NA	NA	TELEGRAM
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-source	timeweb.com	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	Публичный API | Справочный центр Timeweb	domain:timeweb.com	domain:timeweb.com	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	vc.ru	https://vc.ru/id664680		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	vk.ru	https://vk.ru/hosting_timeweb 		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	official-link	www.youtube.com	https://www.youtube.com/@timewebvh		NA	NA	NA	YOUTUBE
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	docs-code	api.timeweb.ru	https://api.timeweb.ru/	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	dzen.ru	https://dzen.ru/id/68a492216e07c51e02a217b7		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	hosting.timeweb.ru	https://hosting.timeweb.ru/	панели управления	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	max.ru	https://max.ru/id7810353960_biz		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	myreviews.ru	https://myreviews.ru/	Виджет отзывов для сайта	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	rkn.gov.ru	https://rkn.gov.ru/activity/connection/register/license/	N142739	domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	rutube.ru	https://rutube.ru/channel/80921320/		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	t.me	https://t.me/twhosting		NA	NA	NA	TELEGRAM
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-source	timeweb.com	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	API для виртуального хостинга: сайты, домены и услуги | Справочный центр Timeweb	domain:timeweb.com	domain:timeweb.com	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	vc.ru	https://vc.ru/id664680		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	vk.ru	https://vk.ru/hosting_timeweb 		domain:ru	domain:ru	NA	NA
+Timeweb	tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	official-link	www.youtube.com	https://www.youtube.com/@timewebvh		NA	NA	NA	YOUTUBE
+МТС	mts-ar	https://ar2025.mts.ru/mts-segodnya/biznes-model-mts/	official-source	ar2025.mts.ru	https://ar2025.mts.ru/mts-segodnya/biznes-model-mts/	Бизнес-модель МТС — Годовой отчет 2025	domain:ru	domain:ru	NA	NA
+МТС	mts-ar	https://ar2025.mts.ru/mts-segodnya/biznes-model-mts/	official-link	moskva.mts.ru	https://moskva.mts.ru/personal/cookie	Политика обработки файлов cookie в ПАО «МТС»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-rtx	https://www.company.rt.ru/press/news_b2b/d480378/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-rtx	https://www.company.rt.ru/press/news_b2b/d480378/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news_b2b/d480378/	«Ростелеком» и «ДОМ.РФ Технологии» будут сотрудничать в сфере развития цифровой инфраструктуры для б	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-rtx	https://www.company.rt.ru/press/news_b2b/d480378/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-rtx	https://www.company.rt.ru/press/news_b2b/d480378/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-nop	https://www.company.rt.ru/projects/nop/	official-link	moscow.rt.ru	https://moscow.rt.ru/b2b/service_cloudy/virtual_dc	«Виртуальный ЦОД»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-nop	https://www.company.rt.ru/projects/nop/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-nop	https://www.company.rt.ru/projects/nop/	official-source	www.company.rt.ru	https://www.company.rt.ru/projects/nop/	Национальная облачная платформа. Официальный информационный сайт Ростелеком.	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-nop	https://www.company.rt.ru/projects/nop/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-nop	https://www.company.rt.ru/projects/nop/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	data.rt.ru	https://data.rt.ru/	«Платформы управления данных»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	survey.iksconsulting.ru	https://survey.iksconsulting.ru/page44202947.html	iKS Consulting 2023	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	tdata.tech	https://tdata.tech/	TData	NA	NA	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rynok_tsod_2022	CNews 2022	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d470990/	«РТК ЦОД» расширяет облачную платформу продуктами для управления данными от TData. Официальный инфор	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.rtk-dc.ru	https://www.rtk-dc.ru/	«РТК-ЦОД»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt-tdata	https://www.company.rt.ru/press/news/d470990/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	b2b.ttk.ru	https://b2b.ttk.ru/	Для бизнеса	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	career.ttk.ru	https://career.ttk.ru/	Вакансии	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-source	company.ttk.ru	https://company.ttk.ru/page3016200.html	Приложение ТТК ТВ: телевизор там, где захочешь	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899		domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	myttk.ru	https://myttk.ru/	Для дома	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	nsk.ttk.ru	https://nsk.ttk.ru/home-inet/	Интернет	domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	ok.ru	https://ok.ru/ttk		domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	t.me	https://t.me/ttkrus		NA	NA	NA	TELEGRAM
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	vc.ru	https://vc.ru/u/3121587-transtelekom		domain:ru	domain:ru	NA	NA
+ТТК	ttk-tv	https://company.ttk.ru/page3016200.html	official-link	vk.com	https://vk.com/ttk		domain:vk.com	domain:vk.com	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	docs.tracker.my.com	https://docs.tracker.my.com/ru/	Документация	domain:my.com	domain:my.com	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	help.mail.ru	https://help.mail.ru/legal/terms/top/LA	https://help.mail.ru/legal/terms/top/LA	domain:ru	domain:ru	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	id.vk.com	https://id.vk.com/terms	https://id.vk.com/terms	domain:vk.com	domain:vk.com	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	t.me	https://t.me/ru_mytracker	Канал в Telegram	NA	NA	NA	TELEGRAM
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	top.mail.ru	https://top.mail.ru/	https://top.mail.ru/	domain:ru	domain:ru	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-source	tracker.my.com	https://tracker.my.com/ru/legal/agreement	Лицензионное соглашение | MyTracker – Мультиплатформенная система Аналитики и Атрибуции	domain:my.com	domain:my.com	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	vk.com	https://vk.com/ru_mytracker	Группа ВКонтакте	domain:vk.com	domain:vk.com	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	www.linkedin.com	https://www.linkedin.com/company/mytracker/		NA	NA	NA	NA
+VK	tracker-vk	https://tracker.my.com/ru/legal/agreement	official-link	www.youtube.com	https://www.youtube.com/@mytracker9161		NA	NA	NA	YOUTUBE
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	app.tracker.my.com	https://app.tracker.my.com/support/	службой поддержки	domain:my.com	domain:my.com	NA	NA
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-source	docs.tracker.my.com	https://docs.tracker.my.com/ru/quick-start/migration	MyTracker – Мультиплатформенная система Аналитики и Атрибуции	domain:my.com	domain:my.com	NA	NA
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	t.me	https://t.me/ru_mytracker		NA	NA	NA	TELEGRAM
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	tracker.my.com	https://tracker.my.com/ru/		domain:my.com	domain:my.com	NA	NA
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	vk.com	https://vk.com/ru_mytracker		domain:vk.com	domain:vk.com	NA	NA
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	www.linkedin.com	https://www.linkedin.com/company/mytracker/		NA	NA	NA	NA
+VK	tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	official-link	www.youtube.com	https://www.youtube.com/@mytracker9161		NA	NA	NA	YOUTUBE

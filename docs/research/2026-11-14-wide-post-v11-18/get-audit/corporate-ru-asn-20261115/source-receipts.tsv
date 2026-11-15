@@ -1,0 +1,78 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+mws-end	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	https://mws.ru/docs/cloud-platform/api/general/api-endpoints-and-url.html	200	0	0	95108	8c65e6e1a87f7567f26d66dc756c23cafe4b9949103f8afb1cbcbd197690f297	text/html
+mws-status	https://mws.ru/docs/cloud-platform/about/general/service-status.html	https://mws.ru/docs/cloud-platform/about/general/service-status.html	200	0	0	44675	cf69a09252d13d6801203bad9cbea1c6a94e1d7f2985543c06e88ea28a4ccc31	text/html
+mws-auth	https://mws.ru/docs/cloud-platform/api/general/api-auth.html	https://mws.ru/docs/cloud-platform/api/general/api-auth.html	200	0	0	89560	669e2eaf3f59cd1b82d56718a91d179b8cd53457589ba25743172f913edfd9b9	text/html
+mws-support	https://mws.ru/docs/support/help.html	https://mws.ru/docs/support/help.html	200	0	0	40602	a36b5375bea29262e8c652397632330f80af7e1959f699b7cac20fa28f858a79	text/html
+mws-s3	https://mws.ru/docs/s3/about.html	https://mws.ru/docs/s3/about.html	404	0	0	31670	b67b01c7c0b2bf11a93b0639d2d03e88fdd1db60500107f39cac8e8ac9211178	text/html
+mws-tf	https://mws.ru/docs/cloud-platform/terraform/provider.html	https://mws.ru/docs/cloud-platform/terraform/provider.html	200	0	0	61549	4d8c725a4ff72d209f8188bded1043271a3e3d41e1d355358c39a964a125beb6	text/html
+mws-open	https://api.mwsapis.ru/endpoint	https://api.mwsapis.ru/endpoint	200	0	0	1816	76f5e6497935f25d48ff0f513ca81ca3a057567a3d24ab5b68f68d8b31f3ea4b	application/json
+mws-reg	https://mws.ru/docs/cloud-platform/artifact-registry/about.html	https://mws.ru/docs/cloud-platform/artifact-registry/about.html	404	0	0	31670	b67b01c7c0b2bf11a93b0639d2d03e88fdd1db60500107f39cac8e8ac9211178	text/html
+mws-dev	https://tech.mts.ru/software	https://tech.mts.ru/software	500	0	0	39113	0edbcaa2dffa160f26eaf3627f1ad04b6c33c058a2eb060b0cc7195c457df853	text/html
+bee-about	https://cloud.beeline.ru/about-company/	https://cloud.beeline.ru/about-company/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+bee-service	https://docs.cloud.beeline.ru/	https://docs.cloud.beeline.ru/	403	0	0	14784	7c90e8c3d6dff3e8ccd9794723271f15ed703b07e8bc7143fbb1a90190519911	text/html
+bee-sec	https://docs.cloud.beeline.ru/security/Cloud-SA/platform-modules.html	https://docs.cloud.beeline.ru/security/Cloud-SA/platform-modules.html	403	0	0	14831	943322c406587e61fb9380a73a69073e63b15903998bc9e25f873e292c889edc	text/html
+bee-news	https://beeline.ru/business/	https://beeline.ru/business/	403	0	0	24095	64d99cf213ef2f7ea5a18c4f112f3b37f236ebd2b869dbd4668fe847cfe203d2	text/html
+rt-main	https://www.rtcloud.ru/	https://www.rtcloud.ru/	200	0	0	697060	b54c72db27faf216a0daf3d6f17f75a36094d96db9db16c836c548c8a906d6c5	text/html; charset=UTF-8
+rt-catalog	https://www.rt.ru/b2b	https://www.rt.ru/b2b	200	0	0	63283	ab173a47a8e9b9274388e94fbcd031c9f2888a07e929fdc4602b1204c3f9fddc	text/html
+rt-group	https://www.company.rt.ru/ir/strategy/	https://www.company.rt.ru/ir/strategy/	404	0	0	107514	964dfc4420aba2a2348ca1731266dbfbf771ea7f38ea7d4a6ea5c189f7d4dd3d	text/html; charset=UTF-8
+rt-dc	https://www.rtk-dc.ru/	https://www.rtk-dc.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+rt-infra	https://www.company.rt.ru/press/news/d472805/	https://www.company.rt.ru/press/news/d472805/	200	0	0	64316	9a5a36a0c4b2f4533ca4b4d7e44217b9cb1e8e09b98349d8621580367973e7db	text/html; charset=UTF-8
+rt-solar	https://www.company.rt.ru/press/news/d474125/	https://www.company.rt.ru/press/news/d474125/	200	0	0	64937	49be43759a640b1d09389eb874f71be766e6e801f458915fae2081870488efd3	text/html; charset=UTF-8
+rt-solar-terms	https://auths.rt-solar.ru/termsOfUse?client_id=lk	https://auths.rt-solar.ru/termsOfUse?client_id=lk	403	0	0	77	a0d6780405e6a9feab8d691dac1da9432ac36083fc9081c061f29462b96fcea5	text/html
+mf-group	https://corp.megafon.ru/	https://corp.megafon.ru/	200	0	0	139253	7b875cce7203c8e26ba1150b0d2ee685c7d3be2b483f510685ab07df92de3cd6	text/html; charset=utf-8
+mf-biz	https://business.megafon.ru/	https://business.megafon.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+mf-sol	https://moscow.megafon.ru/corporate/	https://moscow.megafon.ru/corporate	200	0	0	425338	2f4e883f3296549bb50f7026093231273ec252a7336768f5c63f9043c02c0163	text/html; charset=utf-8
+ttk-app	https://company.ttk.ru/page4634595.html	https://company.ttk.ru/page4634595.html	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+ttk-b2b	https://b2b.ttk.ru/	https://b2b.ttk.ru/	200	0	0	1604606	7ac4c57a30d864f32dc15eb5ba2af14733b0749865d47776b3d3572fd498be28	text/html; charset=UTF-8
+ya-status	https://status.yandex.cloud/	https://status.yandex.cloud/ru/dashboard	200	0	0	21937	55ec323c1fda317c65e77a2364c5e0a394b6505108cffde1c0eccf7c221e49e7	text/html; charset=utf-8
+ya-cloud	https://yandex.cloud/ru/docs/	https://yandex.cloud/ru/docs	200	0	0	779119	4186b112e9f2ef7649a971ffc1d4fb2205c9e58d3e25d727c86cf004c846272b	text/html; charset=utf-8
+ya-dns	https://yandex.cloud/ru/docs/dns/api-ref/	https://yandex.cloud/ru/docs/dns/api-ref/index	200	0	0	602069	8797fa3698183c204b23b64c958b30a72f7f40ff3bfd3a7bf75b5a3a26d0c333	text/html; charset=utf-8
+ya-iam	https://yandex.cloud/ru/docs/iam/concepts/authorization/	https://yandex.cloud/ru/docs/iam/concepts/authorization/index	200	0	0	655946	8eb0ef8851ce522976685db66c2305795ed8217c299f685264c251c614e9e351	text/html; charset=utf-8
+ya-s3	https://yandex.cloud/ru/docs/storage/s3/	https://yandex.cloud/ru/docs/storage/s3/index	200	0	0	694763	679d17354e3643805f1d5c6038b17c0a967154372cf4f2f6ece67113cb41d683	text/html; charset=utf-8
+ya-int	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	https://yandex.cloud/ru/docs/interconnect/concepts/pub-con	200	0	0	675701	995b806322fa5a0fa6a08634adcd449f445c9f09a940f4d0b4731ed9f5f92d2e	text/html; charset=utf-8
+ya-cr	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	https://yandex.cloud/ru/docs/container-registry/operations/docker-image/docker-image-push	200	0	0	644103	9c6e752130efb42aca09d650363b6ad1c99414b2cbc5e87a254881b93c95a6d5	text/html; charset=utf-8
+ya-cdn	https://yandex.cloud/ru/docs/cdn/concepts/resource	https://yandex.cloud/ru/docs/cdn/concepts/resource	200	0	0	658026	d97eb96f52915c94f915f0071d570e28ca3bdb4e4065f43687127521bbaba643	text/html; charset=utf-8
+ya-auth	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	https://yandex.cloud/ru/docs/iam/operations/iam-token/create	200	0	0	713365	f9d41d0914e43cd9b4a887d47de4dda9e862bb7e77c470c1e7dae9596f87752b	text/html; charset=utf-8
+ya-disk	https://yandex.ru/dev/disk/api/reference/	https://yandex.ru/dev/disk/api/reference/	404	0	0	11801	e0af82ab02aeb7c73930748086d21637be7381d6b4122a604d0d1669a8ea4971	text/html; charset=utf-8
+vk-cloud	https://cloud.vk.com/	https://cloud.vk.com/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-tech	https://tech.vk.com/	https://tech.vk.com/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-dox	https://cloud.vk.com/docs/	https://cloud.vk.com/docs/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-s3	https://cloud.vk.com/docs/storage/s3	https://cloud.vk.com/docs/storage/s3	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-work	https://workspace.vk.ru/	https://workspace.vk.ru/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-id	https://id.vk.com/about/business/go/docs/ru/vkid/latest/vk-id/connection/start-integration	https://id.vk.com/about/business/go/docs/ru/vkid/latest/vk-id/connection/start-integration	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+oz-dev	https://dev.ozon.ru/	https://dev.ozon.ru/?__rr=4	307	47	0	0	NA	text/html
+wb-dev	https://dev.wildberries.ru/	https://dev.wildberries.ru/	498	0	0	1134	43a6c30fc8fd93a6fd5e3b90efe10a49a34f4b731d0e6f018facfcf141043e32	text/html
+ya-oss	https://opensource.yandex/projects/	https://opensource.yandex/projects/	200	0	0	72761	da45d5d13e654eaf9ac1ee2f3e7569f1cbe1ebe947401a6d89947ddc41a4fb81	text/html; charset=utf-8
+gravity-home	https://gravity-ui.com/ru	https://gravity-ui.com/ru	200	0	0	149373	4d74e0fc5ce4dc4aabc635b6acf644792714910ed5343e6e38bb972da2fc0903	text/html; charset=utf-8
+gravity-blog	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui	200	0	0	123273	13cd601866d9dfb510678a30c25cf69b51c7c472937793088158a4762206ce9e	text/html; charset=utf-8
+selectel-doc	https://docs.selectel.ru/	https://docs.selectel.ru/	200	0	0	114808	525f52a411986df5c46a01f8bd262abc8703933c32c870edb1d50e0eb48ad9ca	text/html
+selectel-api	https://docs.selectel.ru/api/	https://docs.selectel.ru/api/	200	0	0	73008	81be878d201a025ad52f6a28d5ee8cc0eb26d3fb7a97881294c92f9efe61c78e	text/html
+selectel-cdn	https://docs.selectel.ru/cdn/resources/domains/	https://docs.selectel.ru/cdn/resources/domains/	200	0	0	36470	e98200dd4f27a345394b8f52c1996d72e686617b1dc988f7ad144610afcb224d	text/html
+selectel-s3	https://docs.selectel.ru/s3/manage/configure-storage-update/	https://docs.selectel.ru/s3/manage/configure-storage-update/	200	0	0	95802	14a8429f5749192ed87f6a6a70ac38f58d690855a46779d1a59459c97884e2d7	text/html
+selectel-academy	https://selectel.ru/blog/new-storage-s3/	https://selectel.ru/blog/new-storage-s3/	200	0	0	155077	f338a39f1576cea5d33977c5fbf1ddf67922239f1d3662a179b6ffe3b0ddcb1d	text/html; charset=UTF-8
+selectel-main	https://selectel.ru/	https://selectel.ru/	200	0	0	691461	a72869eab81caf9a79cd8ee0169092ef0b08e2d1f13dcc84cf205429d387eac7	text/html
+tw-cloud	https://timeweb.cloud/	https://timeweb.cloud/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+tw-doc	https://timeweb.cloud/docs	https://timeweb.cloud/docs	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+tw-cli	https://timeweb.cloud/docs/twc-cli/twc-cli-start	https://timeweb.cloud/docs/twc-cli/twc-cli-start	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+tw-status	https://status.timeweb.cloud/	https://status.timeweb.cloud/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+tw-blog	https://timeweb.cloud/blog/digest-2025	https://timeweb.cloud/blog/digest-2025	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+tw-api	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	https://timeweb.com/ru/docs/publichnyj-api-timeweb/	200	0	0	413773	91c5426837d2891bae37cd14e858f0be83b5fcbf3f239c4e39f617e61625fe42	text/html
+tw-api2	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	https://timeweb.com/ru/docs/publichnyj-api-timeweb/metody-api-dlya-virtualnogo-hostinga/	200	0	0	488507	920355e9c38a319dc1ea3194b1f9519ac0835b01d416f5b9fe12aba3bf606f11	text/html
+beget-t	https://beget.com/ru/kb/api/beget-api	https://beget.com/ru/kb/api/beget-api	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+beget-c	https://beget.com/ru/cloud/storage	https://beget.com/ru/cloud/storage	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+beget-cdn	https://beget.com/ru/kb/manual/cdn	https://beget.com/ru/kb/manual/cdn	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+beget-app	https://beget.com/ru/cloud/marketplace	https://beget.com/ru/cloud/marketplace	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+beget-legal	https://beget.com/ru/pravila-i-liczenzii	https://beget.com/ru/pravila-i-liczenzii	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+beget-dom	https://beget.com/ru/kb/manual/domeny-i-poddomeny	https://beget.com/ru/kb/manual/domeny-i-poddomeny	403	0	0	150	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81	text/html
+t2-mango	https://msk.t2.ru/about/news-list/2026/09/14/t2-i-mango-office-zapustili-sovmestnoe-reshenie-dlya-biznes-kommunikacij-fed	https://msk.t2.ru/about/news-list/2026/09/14/t2-i-mango-office-zapustili-sovmestnoe-reshenie-dlya-biznes-kommunikacij-fed	403	0	0	6327	943995f4ea2f5254e8707582a00b7c0b452dc9364ed0e89293061f0c54565805	text/html;charset=utf-8
+t2-biz	https://t2dealer.t2.ru/business/catalog-services	https://t2dealer.t2.ru/business/catalog-services	403	0	0	6327	cd3ff90229a3bb3117e0fd58c3328d7c3b162fdcb7ee0da55d254c43310745c4	text/html;charset=utf-8
+t2-wiki	https://ats2-wiki.t2.ru/	https://ats2-wiki.t2.ru/	406	0	0	156	7cd905d731bc5983f218aa91824747ef52e7b2cef4a2bf4aa2adba91dc3e61e6	text/html; charset=utf-8
+t2-ats	https://corp-ats.t2.ru/	https://corp-ats.t2.ru/	403	0	0	6327	13c78b5507a0ac268971278f7c3b43ea82a5312b86890987466f4694a7b66884	text/html;charset=utf-8
+mts-ar	https://ar2025.mts.ru/mts-segodnya/biznes-model-mts/	https://ar2025.mts.ru/mts-segodnya/biznes-model-mts/	200	0	0	143340	f9f484581d58fc62d4734a60c705951ea432f5097fa71fbcf2c5b1d573e70c95	text/html; charset=UTF-8
+mts-link	https://agents.mts.ru/about-products/mts-link	https://agents.mts.ru/about-products/mts-link	500	0	0	39130	43e33562a0e2e5c73b7c1e6aec223508d5b3c6ee2047dd73574bdbf9b2de9db7	text/html
+rt-rtx	https://www.company.rt.ru/press/news_b2b/d480378/	https://www.company.rt.ru/press/news_b2b/d480378/	200	0	0	59273	fc3211601ace531968ccea151e66e760e429d23c73208bbe435a39c8cec23488	text/html; charset=UTF-8
+rt-nop	https://www.company.rt.ru/projects/nop/	https://www.company.rt.ru/projects/nop/	200	0	0	88623	673215200625efd884c1ab6cc366c1b50560169bb954ba6b4bbf196059874293	text/html; charset=UTF-8
+rt-tdata	https://www.company.rt.ru/press/news/d470990/	https://www.company.rt.ru/press/news/d470990/	200	0	0	63227	d3ce66e4d3208184cc98c1864189defe34399ac6407fa1bb17c81476d64fccd7	text/html; charset=UTF-8
+ttk-tv	https://company.ttk.ru/page3016200.html	https://company.ttk.ru/page3016200.html	200	0	0	74266	c8ed1f12b75f68fec9928c6d7b74dd9c9ca7fcc36f02737d7407a1d665629711	text/html; charset=UTF-8
+tracker-vk	https://tracker.my.com/ru/legal/agreement	https://tracker.my.com/ru/legal/agreement	200	0	0	62682	c26f160f6775c922a965e57503d855c3498ed3038506581584f17a68fd8f0335	text/html; charset=UTF-8
+tracker-dox	https://docs.tracker.my.com/ru/quick-start/migration	https://docs.tracker.my.com/ru/quick-start/migration	200	0	0	97745	2a62f78e49b7996f0de9d0ebd7aa115c5b3c39c02adecacdaaa169eafda31c9d	text/html; charset=UTF-8

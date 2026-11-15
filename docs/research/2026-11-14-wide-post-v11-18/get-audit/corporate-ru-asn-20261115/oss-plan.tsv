@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	gravity-ui.com	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	https://opensource.yandex/projects/
+corporate	candidate	preview.gravity-ui.com	preview.gravity-ui.com	https://preview.gravity-ui.com/uikit/	Storybook|Gravity UI	https://gravity-ui.com/en/blog/yc-site-in-gravity-ui
+corporate	candidate	diplodoc.com	diplodoc.com	https://diplodoc.com/	Diplodoc	https://opensource.yandex/projects/
+corporate	candidate	pg-sharding.tech	pg-sharding.tech	https://pg-sharding.tech/welcome	Sharding|PostgreSQL	https://opensource.yandex/projects/
+corporate	candidate	testplane.io	testplane.io	https://testplane.io/	Testplane	https://opensource.yandex/projects/
+corporate	candidate	userver.tech	userver.tech	https://userver.tech/	userver	https://opensource.yandex/projects/
+corporate	candidate	yaff.tech	yaff.tech	https://yaff.tech/docs/en/	YaFF|feature flag	https://opensource.yandex/projects/
+corporate	candidate	ytsaurus.tech	ytsaurus.tech	https://ytsaurus.tech/ru	YTsaurus	https://opensource.yandex/projects/
+corporate	control	opensource.yandex	opensource.yandex	https://opensource.yandex/projects/	Yandex Open Source|Наши проекты	https://opensource.yandex/projects/
