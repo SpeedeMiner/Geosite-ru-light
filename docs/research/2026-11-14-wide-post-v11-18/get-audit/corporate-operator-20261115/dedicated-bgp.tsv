@@ -1,0 +1,5 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+1440.space	178.176.229.214	cloudflare|google	178.176.229.0/24	AS24866
+bootsman.tech	93.188.205.53	cloudflare|google	93.188.205.0/24	AS215589
+docs.bootsman.tech	93.188.205.53	cloudflare|google	93.188.205.0/24	AS215589
+download.workspad.com	93.188.205.241	cloudflare|google	93.188.205.0/24	AS215589

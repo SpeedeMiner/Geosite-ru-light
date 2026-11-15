@@ -1,0 +1,17 @@
+host	resolver	rrtype	rcode	answer	cname
+1440.space	google	A	0	178.176.229.214	NA
+1440.space	google	AAAA	0	NA	NA
+1440.space	cloudflare	A	0	178.176.229.214	NA
+1440.space	cloudflare	AAAA	0	NA	NA
+bootsman.tech	google	A	0	93.188.205.53	NA
+bootsman.tech	google	AAAA	0	NA	NA
+bootsman.tech	cloudflare	A	0	93.188.205.53	NA
+bootsman.tech	cloudflare	AAAA	0	NA	NA
+docs.bootsman.tech	google	A	0	93.188.205.53	NA
+docs.bootsman.tech	google	AAAA	0	NA	NA
+docs.bootsman.tech	cloudflare	A	0	93.188.205.53	NA
+docs.bootsman.tech	cloudflare	AAAA	0	NA	NA
+download.workspad.com	google	A	0	93.188.205.241	NA
+download.workspad.com	google	AAAA	0	NA	NA
+download.workspad.com	cloudflare	A	0	93.188.205.241	NA
+download.workspad.com	cloudflare	AAAA	0	NA	NA

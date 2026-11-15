@@ -1,0 +1,5 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+bootsman.tech	https://bootsman.tech/	documented	200	0	0	200	Российская платформа контейнеризации Боцман – гибридная облачная система контейнеризации для управления мультикластерами Kubernetes, приложениями, для задач виртуал	NA	17a049cbac881be27579d43232aed9869eea07c2a86c4aa2f179f71a3996ef8b	2026-11-15T13:58:06.585546+00:00	workspace_unattributed
+docs.bootsman.tech	https://docs.bootsman.tech/	documented	200	0	0	200	Вас приветствует Боцман! | Боцман	NA	ed8c2f3dcfa8acabf79ca8a1532d91e01b3a25322556ba86a344ce7d146b5d9c	2026-11-15T13:58:06.724419+00:00	workspace_unattributed
+download.workspad.com	https://download.workspad.com/external/link/adminguide63	documented	200	0	0	200	Сайт внешнего доступа - WorksPad	NA	b3417294102e7d74a8f043d0a6446d55595573ea64541ff13a45600ca62e4774	2026-11-15T13:58:06.549266+00:00	workspace_unattributed
+1440.space	https://1440.space/	documented	477	0	0	200	NA	NA	55e717ba140a79fb719a174457bd61e2dfac3c1b8c0eea74e5ae15bcc43ae6cd	2026-11-15T13:58:05.707967+00:00	workspace_unattributed

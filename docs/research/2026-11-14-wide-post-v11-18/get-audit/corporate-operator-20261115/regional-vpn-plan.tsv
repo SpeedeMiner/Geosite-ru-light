@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	bee.gg	bee.gg	https://bee.gg/	Beeline|Janymda	https://beeline.kz/ru/imei-page?category=1
+corporate	candidate	bee.gg	bee.gg	https://bee.gg/e/janymda_up	Beeline|Janymda	https://beeline.kz/ru/events/news/161026
+corporate	candidate	help.voka.tv	help.voka.tv	https://help.voka.tv/	VOKA|Помощь|Поддержка	https://voka.tv/ru-RU
+corporate	control	beeline.kz	beeline.kz	https://beeline.kz/ru	Beeline|Janymda	https://beeline.kz/ru
+corporate	control	voka.tv	voka.tv	https://voka.tv/ru-RU	VOKA|Фильмы	https://voka.tv/ru-RU

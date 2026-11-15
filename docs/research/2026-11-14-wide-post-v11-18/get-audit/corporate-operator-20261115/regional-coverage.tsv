@@ -1,0 +1,84 @@
+key	region	host	url	anchor	source	light_ru	server_ru	block	non_ru
+kz-telecom	KZ	activation.telecom.kz	https://activation.telecom.kz/kk/		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	aitubrowser.kz	https://aitubrowser.kz/		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	aitucloud.b2b.telecom.kz	https://aitucloud.b2b.telecom.kz/cabinet/login	Aitu Cloud	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	b2b.telecom.kz	https://b2b.telecom.kz/kk	Бизнеске	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	builder.telecom.kz	https://builder.telecom.kz/	Construction Portal	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	dev.2gis.ru	https://dev.2gis.ru/pro		https://b2b.telecom.kz/ru/	domain:ru	domain:ru	NA	NA
+kz-telecom	KZ	docs.telecom.kz	https://docs.telecom.kz/cabinet	Docs	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	ekdp.kz	https://ekdp.kz/ru		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	halykbank.kz	https://halykbank.kz/kz/business/payment/halyk-restorany	Қызмет туралы толығырақ	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	idhost.telecom.kz	https://idhost.telecom.kz/index.php	ID Host	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	link.telecom.kz	https://link.telecom.kz/		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	map.gov4c.kz	https://map.gov4c.kz/egkn/		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	oofd.kz	https://oofd.kz/		https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	org.oofd.kz	https://org.oofd.kz/	ФДО	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	tanba.telecom.kz	https://tanba.telecom.kz/kk	Таңбалау	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	tap.telecom.kz	https://tap.telecom.kz/	Tap	https://b2b.telecom.kz/ru/	domain:kz	domain:kz	NA	NA
+kz-telecom	KZ	www.facebook.com	https://www.facebook.com/telecomkz.business		https://b2b.telecom.kz/ru/	NA	NA	NA	NA
+kz-telecom	KZ	www.instagram.com	https://www.instagram.com/kazakhtelecom_business		https://b2b.telecom.kz/ru/	NA	NA	NA	NA
+kz-telecom	KZ	www.youtube.com	https://www.youtube.com/@KazakhtelecomBusiness		https://b2b.telecom.kz/ru/	NA	NA	NA	YOUTUBE
+kz-host	KZ	idhost.telecom.kz	https://idhost.telecom.kz/	English	https://idhost.telecom.kz/	domain:kz	domain:kz	NA	NA
+kz-host	KZ	mail.google.com	https://mail.google.com/mail/	Написать на почту	https://idhost.telecom.kz/	NA	NA	NA	NA
+kz-bee	KZ	25.beeline.kz	https://25.beeline.kz/	История Beeline Kazakhstan	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	appgallery5.huawei.com	https://appgallery5.huawei.com/		https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	bank.forte.kz	https://bank.forte.kz/ru/one/janymda	Подробнее	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	bee.gg	https://bee.gg/dashboard	Мобильная связь	https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	beeline.kz	https://beeline.kz/ru/		https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	beetv.kz	https://beetv.kz/ru-KZ	BeeTV	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	business.beeline.kz	https://business.beeline.kz/	Для бизнеса	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	clck.ru	https://clck.ru/wpCgK		https://beeline.kz/ru	domain:ru	domain:ru	NA	NA
+kz-bee	KZ	hitter.kz	https://hitter.kz/ru/	Подробнее	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	janymda.kz	https://janymda.kz/	Подробнее	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	media.beeline.kz	https://media.beeline.kz/ru/news/tpost/vu6hlhzov1-beeline-obyavlyaet-o-predstoyaschih-izme	Руководство	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	people.beeline.kz	https://people.beeline.kz/	Карьера в Beeline	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/461109586770816912	Подробнее	https://beeline.kz/ru	domain:yandex.com	domain:yandex.com	NA	NA
+kz-bee	KZ	shop.beeline.kz	https://shop.beeline.kz/ru/almaty	Смартфоны и роутеры	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee	KZ	t.me	https://t.me/BeelineDanaBot		https://beeline.kz/ru	NA	NA	NA	TELEGRAM
+kz-bee	KZ	vk.com	https://vk.com/beeline_kaz		https://beeline.kz/ru	domain:vk.com	domain:vk.com	NA	NA
+kz-bee	KZ	www.facebook.com	https://www.facebook.com/Beeline.Kazakhstan		https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	www.instagram.com	https://www.instagram.com/beeline_kz/		https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	www.simply.cards	https://www.simply.cards/	Подробнее	https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	www.youtube.com	https://www.youtube.com/user/BeelineKazakhstan		https://beeline.kz/ru	NA	NA	NA	YOUTUBE
+kz-bee	KZ	x.com	https://x.com/_Beeline_kz		https://beeline.kz/ru	NA	NA	NA	NA
+kz-bee	KZ	zhylyzhurek.kz	https://zhylyzhurek.kz/ru	Корпоративный фонд «Zhyly Zhurek Foundation»	https://beeline.kz/ru	domain:kz	domain:kz	NA	NA
+kz-bee-biz	KZ	beeline.kz	https://beeline.kz/binaries/content/assets/public_offer/privacy/privacy-ru	сбор, обработку и хранение персональных данных	https://business.beeline.kz/	domain:kz	domain:kz	NA	NA
+kz-bee-biz	KZ	business.beeline.kz	https://business.beeline.kz/		https://business.beeline.kz/	domain:kz	domain:kz	NA	NA
+kz-bee-cloud	KZ	beecloud.beeline.kz	https://beecloud.beeline.kz/	Правила	https://beecloud.beeline.kz/	domain:kz	domain:kz	NA	NA
+kz-bee-cloud	KZ	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/964944690832999405		https://beecloud.beeline.kz/	domain:yandex.com	domain:yandex.com	NA	NA
+kz-bee-cloud	KZ	sso.beecloud.beeline.kz	https://sso.beecloud.beeline.kz/	Войти	https://beecloud.beeline.kz/	domain:kz	domain:kz	NA	NA
+by-bel	BY	beltelecom.by	https://beltelecom.by/private	Для дома	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	evika.by	https://evika.by/	Зарядка аккумуляторных батарей электромобилей	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	forumpravo.by	https://forumpravo.by		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	mogilev-region.gov.by	https://mogilev-region.gov.by		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	mpt.gov.by	https://mpt.gov.by/	Вышестоящий государственный орган	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	mvd.gov.by	https://mvd.gov.by/ru/news/7021		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	ok.ru	https://ok.ru/beltelecomby		https://beltelecom.by/	domain:ru	domain:ru	NA	NA
+by-bel	BY	pravo.by	https://pravo.by/		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	president.gov.by	https://president.gov.by/ru/documents/ukaz-no-1-ot-1-anvara-2026-g		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	security.beltelecom.by	https://security.beltelecom.by/	"Портал информационной безопасности РУП ""Белтелеком"""	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	shop.beltelecom.by	https://shop.beltelecom.by	Купить товар	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	t.me	https://t.me/bybeltelecom		https://beltelecom.by/	NA	NA	NA	TELEGRAM
+by-bel	BY	twitter.com	https://twitter.com/BeltelecomBy		https://beltelecom.by/	NA	NA	NA	NA
+by-bel	BY	vc.beltelecom.by	https://vc.beltelecom.by/		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	vk.com	https://vk.com/bybeltelecom		https://beltelecom.by/	domain:vk.com	domain:vk.com	NA	NA
+by-bel	BY	www.beltelecom.by	https://www.beltelecom.by/apk	Мобильные приложения	https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	www.facebook.com	https://www.facebook.com/beltelecomby		https://beltelecom.by/	NA	NA	NA	NA
+by-bel	BY	www.instagram.com	https://www.instagram.com/beltelecomby		https://beltelecom.by/	NA	NA	NA	NA
+by-bel	BY	www.mpt.gov.by	https://www.mpt.gov.by/ru/biometricheskie-dokumenty-respubliki-belarus		https://beltelecom.by/	domain:by	domain:by	NA	NA
+by-bel	BY	www.tiktok.com	https://www.tiktok.com/@beltelecom.official		https://beltelecom.by/	NA	NA	NA	NA
+by-bel	BY	www.youtube.com	https://www.youtube.com/channel/UCNvH8TkNH6zxkZtt8IqNLQg		https://beltelecom.by/	NA	NA	NA	YOUTUBE
+by-voka	BY	a1skidki.by	https://a1skidki.by/		https://voka.tv/ru-RU	domain:by	domain:by	NA	NA
+by-voka	BY	appgallery7.huawei.com	https://appgallery7.huawei.com/		https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	help.voka.tv	https://help.voka.tv/	Помощь	https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	itunes.apple.com	https://itunes.apple.com/by/app/voka/id982271817		https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	ok.ru	https://ok.ru/vokatv		https://voka.tv/ru-RU	domain:ru	domain:ru	NA	NA
+by-voka	BY	play.google.com	https://play.google.com/store/apps/details		https://voka.tv/ru-RU	NA	NA	NA	GOOGLE-PLAY
+by-voka	BY	support.a1.by	https://support.a1.by/ofitsialnaya-informatsiya/dogovor/dogovor-ob-okazanii-uslugi-voka/	Договор об оказании услуги VOKA	https://voka.tv/ru-RU	domain:by	domain:by	NA	NA
+by-voka	BY	t.me	https://t.me/voka_movies_series		https://voka.tv/ru-RU	NA	NA	NA	TELEGRAM
+by-voka	BY	vk.com	https://vk.com/vokatv		https://voka.tv/ru-RU	domain:vk.com	domain:vk.com	NA	NA
+by-voka	BY	voka.tv	https://voka.tv/ru-RU		https://voka.tv/ru-RU	full:voka.tv	full:voka.tv	NA	NA
+by-voka	BY	www.facebook.com	https://www.facebook.com/vokatv/		https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	www.instagram.com	https://www.instagram.com/vokatv/		https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	www.tiktok.com	https://www.tiktok.com/@voka_voka		https://voka.tv/ru-RU	NA	NA	NA	NA
+by-voka	BY	www.youtube.com	https://www.youtube.com/channel/UCDcnUKCG_0DP7K3TPelXurw/featured		https://voka.tv/ru-RU	NA	NA	NA	YOUTUBE

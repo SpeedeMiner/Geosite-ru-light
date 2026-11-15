@@ -1,0 +1,9 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+kz-telecom	https://b2b.telecom.kz/ru/	https://b2b.telecom.kz/ru/	200	0	0	118017	d11821fff283ea8efd22600d1544f026d9835206387eaf271d131152844954d4	text/html; charset=utf-8
+kz-host	https://idhost.telecom.kz/	https://idhost.telecom.kz/	200	0	0	30188	5fcf52112f4b7a43f46071350b156ab8c2523f88b50642e7b030e97f178e115d	text/html; charset=utf-8
+kz-bee	https://beeline.kz/ru	https://beeline.kz/ru	200	0	0	158236	dd025488d9d8606eee45b198cf7ea2a01a5d5dc400de81581bf3c86957259104	text/html;charset=utf-8
+kz-bee-biz	https://business.beeline.kz/	https://business.beeline.kz/	200	0	0	184106	2a6fd4fbc493241cc1472d1167e2f9d1a0b4e2056facb38c7d216597c900b7ad	text/html;charset=utf-8
+kz-bee-cloud	https://beecloud.beeline.kz/	https://beecloud.beeline.kz/	200	0	0	16705	dfc8ea02244d318cc14b3eb32951274d8342d5670740259d877fa78cda6d20b3	text/html
+by-bel	https://beltelecom.by/	https://beltelecom.by/	200	0	0	145525	25f5ba0a02871d55aec94b998d97ce9fb1db23f4c7d721ed201a53be880ae69d	text/html; charset=UTF-8
+by-a1	https://www.a1.by/	https://www.a1.by/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+by-voka	https://voka.tv/	https://voka.tv/ru-RU	200	0	0	791390	feeb1f51415c68d5251d0ec3f4bdc955e73f5a503ca3e4ac87689f4896094a50	text/html; charset=utf-8
