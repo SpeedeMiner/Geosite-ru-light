@@ -1,0 +1,35 @@
+{
+  "already_both": 141,
+  "baseline": {
+    "light_sha256": "6f5fbc20e045a7314603d115931bff1bdd82a22788fd38ecc8f5578171b1329c",
+    "server_sha256": "e9d343e6a83c848b0c280af351da956a9bb8275752424d6437244fd47eae7282"
+  },
+  "current_ru_rules": [
+    "full:ip.nnev.de",
+    "full:ip.oxylabs.io"
+  ],
+  "hosts": 182,
+  "light_only": 0,
+  "missing_both_before": 41,
+  "missing_results": {
+    "browser_checker_candidate": 8,
+    "confirmed_echo_candidate": 14,
+    "documented_echo_not_measured": 2,
+    "not_confirmed": 12,
+    "parking": 1,
+    "published_explicit": 2,
+    "shared_host_do_not_import": 2
+  },
+  "probe_scope": "workspace HTTPS, configured egress, strict TLS, no redirect following, no confirmed Russian ASN",
+  "probed_urls": 41,
+  "published_light_sha256": "b6453f0c9a3bc06a1978fd77aed7b3e4149161e5c2172c4863012fe0aad57c85",
+  "server_only": 0,
+  "source_hashes": {
+    "asw.md": "7cf7e0da7499c4ecb868b2c990f30eb3bf1caa24ed3e6028ba92c1ab43be9369",
+    "chubin.md": "6d338630a23231ba37047e5d2f4295c07701135668288b3ea3e8d833c815f900",
+    "manual.tsv": "c8008fdf6509de5ca18558f320980fd34c3f4d47fdd325177681a3ebf4504a3d",
+    "movsb.md": "27af460506aca55f2c682d307c6a02f8b3bed45679484dc1d9dc08226aa885fa",
+    "qdm.md": "28f26ea133787056420c689d648b8a81878f345d89078060ae95f8c1bbfb4bf2"
+  },
+  "urls": 192
+}
