@@ -1,0 +1,10 @@
+{
+  "source": "https://www.cbr.ru/vfs/finmarkets/files/supervision/list_ops.xlsx",
+  "sha256": "604587b953f551492221c5139a0902c8e09adbf501f64accf7b0903e344c117a",
+  "active_operators": 30,
+  "operators_with_website": 30,
+  "distinct_hosts": 35,
+  "site_rows": 35,
+  "covered_both": 29,
+  "skipped_tokens": []
+}
