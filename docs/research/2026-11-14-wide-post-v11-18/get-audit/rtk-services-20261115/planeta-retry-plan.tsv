@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	planeta.tc	planeta.tc	https://planeta.tc/	Планета	https://www.company.rt.ru/press/REGIONALNEWS/d457612/
+corporate	candidate	help.planeta.tc	help.planeta.tc	https://help.planeta.tc/	Справочный	https://planeta.tc/
+corporate	candidate	wink.planeta.tc	wink.planeta.tc	https://wink.planeta.tc/	Планета	https://planeta.tc/
+corporate	candidate	job.planeta.tc	job.planeta.tc	https://job.planeta.tc/	Планета	https://job.rt.ru/dzo
+corporate	candidate	my.planeta.tc	my.planeta.tc	https://my.planeta.tc/		https://help.planeta.tc/
+corporate	candidate	old.planeta.tc	old.planeta.tc	https://old.planeta.tc/ekb/articles/customer/documents		https://help.planeta.tc/
+corporate	control	www.company.rt.ru	www.company.rt.ru	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	Ростелеком	https://www.company.rt.ru/press/REGIONALNEWS/d457612/

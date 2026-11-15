@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	we.study	we.study	https://we.study/		https://mts-link.ru/legal/privacy-policy-soft.pdf
+corporate	candidate	we.study	we.study	https://we.study/blog/partners_clients_education	Онлайн-обучение	https://mts-link.ru/legal/privacy-policy-soft.pdf
+corporate	candidate	www.we.study	www.we.study	https://www.we.study/		https://we.study/
+corporate	candidate	jespo.co	jespo.co	https://jespo.co/		https://help.mts-link.ru/article/19317
+corporate	candidate	wsboard.jespo.co	wsboard.jespo.co	https://wsboard.jespo.co/		https://help.mts-link.ru/article/19317
+corporate	candidate	www.comdi.com	www.comdi.com	https://www.comdi.com/	COMDI	https://mts-link.ru/
+corporate	candidate	comdi.com	comdi.com	https://comdi.com/		https://www.comdi.com/legal/user-agreement.pdf
+corporate	candidate	broadcast.comdi.com	broadcast.comdi.com	https://broadcast.comdi.com/		https://www.comdi.com/legal/user-agreement.pdf
+corporate	control	help.mts-link.ru	help.mts-link.ru	https://help.mts-link.ru/article/19317	Доски	https://help.mts-link.ru/article/19317

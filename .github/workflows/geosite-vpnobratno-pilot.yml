@@ -16,7 +16,11 @@ concurrency:
 
 jobs:
   pilot:
-    name: Verify Planeta and MTS Link public sites
+    name: Verify public sites (${{ matrix.batch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [planeta-retry, mts-link]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -96,14 +100,14 @@ jobs:
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/rtk-services-20261115/third-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$AUDIT/rtk-services-20261115/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
                 "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 49531 --exclude-asn 196949
 
       - name: Upload observation and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-rtk-services-third-${{ github.run_attempt }}
+          name: geosite-rtk-services-${{ matrix.batch }}-${{ github.run_attempt }}
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl
