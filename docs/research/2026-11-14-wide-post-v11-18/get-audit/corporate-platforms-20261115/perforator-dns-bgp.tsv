@@ -1,0 +1,3 @@
+host	rrtype	address	resolved_by	ris_prefix	ris_origins	dns_reply_sha256	ris_reply_sha256
+perforator.tech	A	87.250.254.137	cloudflare	87.250.224.0/19	AS13238|AS208398	53338313286eef37e20427cfe55b8dc34f6ac13f6be8764384b97e131cce1253	19355e6cecd088b462760d201753f6e893864bd00e1b53efbfc80816e9d4ead0
+perforator.tech	AAAA	2a02:6b8::620	cloudflare	2a02:6b8::/32	AS13238|AS208398	f3dd75c713badca324646af1d367dd6e0734b6142396d2e2ba2e394820f3df81	e6633d5fbe50c632f85cd5e25383bfd49c90c0041b95e35889198990eeac15f9

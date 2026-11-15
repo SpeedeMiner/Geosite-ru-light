@@ -861,3 +861,9 @@
 ### 20:46 UTC+05:00 — найден ещё один отдельный продуктовый хост Яндекса
 
 - Официальный репозиторий и публикация Яндекса подтверждают Perforator. `perforator.tech/docs/en/` из рабочей среды дал TLS/200 и ожидаемый заголовок, хост отсутствует в обоих DAT. Отправлен компактный прогон из двух RU ASN с YDB в роли контроля. До чтения результатов Perforator не входит в +56. [План](get-audit/corporate-platforms-20261115/fifth-plan.tsv).
+
+### 20:48 UTC+05:00 — Perforator подтверждён, контрольный итог +57
+
+- [Прогон 43731703539](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43731703539): `perforator.tech/docs/en/` дал 200, валидный TLS и ожидаемый заголовок из AS8369 и AS44724. YDB — один пригодный 200 и один запрос без HTTP. Документированные A/AAAA Perforator в RIPE RIS объявлялись AS13238/AS208398. Добавим только `full:perforator.tech` в исследовательский пакет, не применяя правило автоматически ко всему ASN. [Ответы](get-audit/corporate-platforms-20261115/vpn-43731703539.tsv) · [DNS/RIS](get-audit/corporate-platforms-20261115/perforator-dns-bgp.tsv).
+- В этой волне три новых точных правила, суммарно 57. Штатный replay +57 даёт Light `4337→4394` и Server `4225→4282` от v11.19, Light `4339→4396` и Server `4227→4284` от кандидата PR №39. Удалений нет, BLOCK и остальные 17 SRS совпали. По пилотным проверкам 42 HTTPS-попытки, 35 HTTP-ответов, 0 Globalping, зачёта в основной счётчик нет. [Пакет +57](get-audit/corporate-platforms-20261115/stacked-fifty-seven.txt) · [квитанция](get-audit/corporate-platforms-20261115/full-build-replay-fiftyseven.tsv).
+- jsDelivr `@release` совпал с v11.19, PR №39, `main`, `release`, теги и Server не менялись. Следующая точка — отдельно сверить публичные проекты [MWS](https://github.com/MTSWebServices) и зависимости инженерных справок крупных ASN, не переоткрывая YaFF или НСПК без нового независимого свидетельства.

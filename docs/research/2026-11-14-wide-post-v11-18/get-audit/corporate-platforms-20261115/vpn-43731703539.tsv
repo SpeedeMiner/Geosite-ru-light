@@ -1,0 +1,5 @@
+url	asn	asn_ris	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_host	redirect_path	observed_at
+https://perforator.tech/docs/en/	8369	8369	87.250.254.137	200	0	0	text/html; charset=utf-8	10000	de2c0fe77bd8ee01ad1bdce31f3e8cd30ee91344e87e8dbcd31a5c94a5ab2c2d	Perforator | Perforator	NA	NA	2026-11-15T15:47:05.337567+00:00
+https://perforator.tech/docs/en/	44724	44724	87.250.254.137	200	0	0	text/html; charset=utf-8	10000	7e4da1a7badd7961330b0fe2b25645b86f7751e7b1924a9c9b4003b5d36a56d4	Perforator | Perforator	NA	NA	2026-11-15T15:47:20.636063+00:00
+https://ydb.tech/docs/ru/	8369	8369	185.206.167.37	200	0	0	text/html; charset=utf-8	10000	b2d7371d3c59dbdb68aae87261f9a3287dbbb8bcda11b3fdae2b275440322311	Документация YDB	NA	NA	2026-11-15T15:47:07.523628+00:00
+https://ydb.tech/docs/ru/	44724	44724	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	2026-11-15T15:47:28.642780+00:00

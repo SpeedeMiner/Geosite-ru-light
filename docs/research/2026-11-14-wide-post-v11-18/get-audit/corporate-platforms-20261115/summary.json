@@ -14,9 +14,10 @@
     "other_link": 20,
     "separate_category": 19
   },
-  "new_full": 2,
-  "stacked_full": 56,
-  "vpn_requested": 38,
-  "vpn_http_responses": 32,
-  "globalping_requests": 0
+  "new_full": 3,
+  "stacked_full": 57,
+  "vpn_requested": 42,
+  "vpn_http_responses": 35,
+  "globalping_requests": 0,
+  "catalogue_scope_note": "162 hosts excludes the separately qualified Perforator follow-up"
 }
