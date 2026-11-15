@@ -706,3 +706,8 @@
 
 - Добавлены загрузки и сопоставление 15 страниц Astra, WorksPad, СберТеха, Postgres Pro, CedrusData и ИКС. Доступ к части исходных страниц из контейнера ограничен, включены только реально извлечённые ссылки, а отдельные ссылки на закрытые для контейнера страницы подтверждаются первичными опубликованными источниками. [Квитанции](get-audit/corporate-operator-20261115/vendor-downloads.tsv) · [сверка](get-audit/corporate-operator-20261115/vendor-coverage.tsv).
 - `AS24866` — сеть Cloud MegaFon, а не доказательство принадлежности YADRO МегаФону. Nexign относится к продуктовой экосистеме МегаФона по корпоративным источникам, тогда как YADRO/KVADRA — отдельная продуктовая группа со своими официальными ссылками. Для обоих сценариев в очереди только точные имена.
+
+### 18:58 UTC+05:00 — подтверждены документация «Боцман» и WorksPad
+
+- [Actions 43721507811](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43721507811): `bootsman.tech`, `docs.bootsman.tech` и конкретная публичная карточка `download.workspad.com` дали ожидаемые страницы из AS12389 и AS208803. Никаких программ, PDF или пакетов не скачивали, только HTML по выбранному URL. [Наблюдения](get-audit/corporate-operator-20261115/vpn-43721507811.tsv) · [квитанция](get-audit/corporate-operator-20261115/vpn-43721507811-receipt.json).
+- На обеих базах локальной сборки первые 12 правил дали ровно +12 в `RU`, без потерь, а `BLOCK` и 17 прочих SRS сохранились. Серверная проекция только `RU`. [Манифест](get-audit/corporate-operator-20261115/verified-twelve.txt) · [квитанция](get-audit/corporate-operator-20261115/local-preview-twelve.tsv).
