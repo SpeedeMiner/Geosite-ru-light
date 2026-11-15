@@ -1,0 +1,50 @@
+scope	sector	cohort	url	markers	source	intent
+RU	aviation	baseline	https://check-in.flysmartavia.com/		https://check-in.flysmartavia.com/check-in/	Штатный хост регистрации
+RU	aviation	diagnostic	https://check-in.flysmartavia.com/check-in/	Smartavia	https://check-in.flysmartavia.com/check-in/	Публичная страница регистрации без ввода данных
+RU	aviation	baseline	https://ticket.rusline.aero/		https://www.rusline.aero/read/check-in/	Точный хост покупки, указанный авиакомпанией
+RU	aviation	baseline	https://www.alrosa.aero/		https://www.alrosa.aero/	Отдельный WWW авиакомпании
+RU	aviation	suffix_sample	https://aero.alrosa.ru/	АЛРОСА|ALROSA	https://www.alrosa.aero/	Покупка и регистрация указаны на хосте .ru
+KZ	aviation	baseline	https://www.airastana.com/		https://airastana.com/	WWW проверяется отдельно от уже замеренного apex
+BY	transport	suffix_sample	https://pass.rw.by/ru/people_with_disabilities	Белорусская железная дорога	https://www.rw.by/	Справочная страница перевозчика без бронирования
+BY	transport	baseline	https://stalogistic.com/		https://stalogistic.com/	Публичный сайт логистики, не личный кабинет
+KZ	transport	suffix_sample	https://avtobys.kz/?lang=ru	Avtobys	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	Опубликованный регулятором адрес оплаты транспорта
+KZ	payments	baseline	https://wooppay.com/		https://wooppay.com/text/user_agreement	Точный apex кошелька
+KZ	payments	baseline	https://www.wooppay.com/		https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	Отдельный WWW кошелька
+KZ	payments	diagnostic	https://www.wooppay.com/services	Wooppay	https://nationalbank.kz/ru/news/sistemy-elektronnyh-deneg-kazahstana	Публичный путь из реестра, без входа/платежа
+KZ	payments	frontier	https://wooppay.group/	Wooppay	https://wooppay.group/	Отдельная корпоративная витрина, не доказательство необходимости оплаты
+KZ	payments	suffix_sample	https://www.woopkassa.kz/	Woopkassa	https://www.woopkassa.kz/	Публичная страница эквайринга, уже покрытый .kz
+RU	payments	baseline	https://payinrussia.com/		https://new.payinrussia.com/ru/install/	Корень опубликованного правила, без файлов и платежей
+RU	documents	baseline	https://docsvision.com/		https://docsvision.com/price/licensing-policy/	Корень оператора ЭДО
+RU	documents	baseline	https://www.docsvision.com/		https://docsvision.com/price/licensing-policy/	Проверить объявленную цель WWW отдельно
+RU	documents	baseline	https://sign.me/		https://sign.me/support/article/kak-zaregistrirovatsia-i-vypustit-unep-esia	Корень сервиса подписи без регистрации
+RU	documents	suffix_sample	https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html	Диадок	https://developer.kontur.ru/doc/diadoc-api/howtostart/integration.html	Документация указывает точную продуктивную точку входа
+RU	infrastructure	baseline	https://registry.deckhouse.io/		https://deckhouse.ru/products/kubernetes-platform/documentation/v1/requirements/	Корень реестра, без доступа к приватному образу
+RU	infrastructure	diagnostic	https://registry.deckhouse.io/v2/		https://deckhouse.ru/products/kubernetes-platform/documentation/v1/requirements/	Публичный read-only базовый путь OCI Registry, без входа
+RU	infrastructure	baseline	https://docs.arenadata.io/		https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	Проверить корень документации и объявленный переход
+RU	infrastructure	diagnostic	https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	Arenadata	https://docs.arenadata.io/ru/ADH/current/get-started/online_install/adh-install/config-cluster.html	Публичная инструкция вместо корневой страницы
+RU	infrastructure	baseline	https://ru.cloud.trassir.com/		https://trassir.com/software-updates/manual/setup-cloud40.html	Хост из цепочки облака, только корень
+RU	infrastructure	baseline	https://sigma.cloud.trassir.com/		https://trassir.com/software-updates/manual/setup-cloud40.html	Точный конечный хост из прежней цепочки, без входа
+RU	infrastructure	baseline	https://status.pachca.com/		https://pachca.com/help-center/administration/porty-i-adresa-dlya-korrektnoy-raboty-pachki	Публичный статус отдельно от API
+RU	education	baseline	https://innopolis.university/		https://innopolis.university/	Основной домен университета, отдельно от apply
+RU	education	baseline	https://www.2035.university/		https://www.2035.university/	Точный домен сервиса образования
+KZ	education	baseline	https://bilim.group/		https://bilim.group/ru	Штатная тройка не подтверждена в одном из архивных замеров
+BY	medicine	baseline	https://lekpharm.com/		https://lekpharm.com/kontakty/	Корень локального производителя
+BY	medicine	diagnostic	https://www.lekpharm.com/kontakty/	Лекфарм	https://www.lekpharm.com/kontakty/	Контакты на WWW, не переносить вывод на apex
+BY	medicine	baseline	https://www.lekpharm.com/		https://www.lekpharm.com/kontakty/	Корень WWW отдельно от контактов
+RU	medicine	baseline	https://telemedicine.medpoisk.com/		https://telemedicine.medpoisk.com/	Публичная страница, без взаимодействия с данными пациента
+KZ	energy	frontier	https://qazaqgreen.com/contacts/	QazaqGreen|Qazaq Green|зеленой энергетике	https://www.qazaqgreen.kz/ru/contacts	Ассоциация с .kz прямо ссылается на .com как на инфопортал
+KZ	energy	frontier	https://kazenergy.com/association/about-on/	KAZENERGY	https://kazenergy.com/	Альтернативная публичная страница вместо уже проверенной страницы контактов
+BY	energy	frontier	https://energy-aven.org/about/439	Возобновляемая энергетика	https://energy-aven.org/about/439	Сохранившийся неокончательный результат, повтор не планируется
+KZ	energy	suffix_sample	https://www.qazaqgreen.kz/ru/contacts	Qazaq	https://www.qazaqgreen.kz/ru/contacts	Уже покрытая .kz-версия как отдельная контрольная цель
+BY	industry	baseline	https://belarus-tractor.com/		https://belarus-tractor.com/contacts/	Уже покрытый заводской домен
+BY	industry	frontier	https://belarustractors.com/contacts/	Минский тракторный завод|МТЗ	https://belarus-tractor.com/	Завод с опубликованного сайта ссылается на этот хост для каталога
+RU	industry	candidate	https://belur.ooo/	Белур	https://rlolift.ru/list	Контроль точного правила из кандидата +31
+BY	industry	diagnostic	https://belarus-tractor.com/contacts/	Минский тракторный завод|МТЗ	https://belarus-tractor.com/contacts/	Проверить тот же публичный путь на покрытом заводском имени
+KZ	travel	baseline	https://kazakhstan.travel/		https://kazakhstan.travel/ru	Корень туристического портала
+KZ	travel	diagnostic	https://kazakhstan.travel/ru	Казахстан|Kazakhstan	https://kazakhstan.travel/ru	Точная локализованная страница
+KZ	travel	candidate	https://akzholtravel.com/ru/contacts/	Akzhol|Акжол	https://akzholtravel.com/ru/contacts/	Контроль кандидата +31 без расширения WWW
+KZ	media	baseline	https://qazaqstan.tv/		https://qazaqstan.tv/	Уже покрытый сайт национального вещателя
+RU	media	frontier	https://kaskad.tv/kontakty	Каскад	https://kaskad.tv/	Сохранённый результат отложенной редакции, не повторять тот же URL
+RU	state_services	suffix_sample	https://xn--80ajghhoc2aj1c8b.xn--p1ai/vopros-otvet/	Честный ЗНАК	https://zpp.rospotrebnadzor.ru/news/regional/335120	Публичная справка маркировки, не регистрация
+RU	state_services	suffix_sample	https://mos.ru/	Москва	https://mos.ru/	Контроль отдельного реального имени под .ru, а не зонд суффикса
+KZ	state_services	suffix_sample	https://www.gov.kz/	Казахстан|Қазақстан	https://www.gov.kz/	Контроль государственного портала под .kz

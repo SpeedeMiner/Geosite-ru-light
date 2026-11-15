@@ -1,0 +1,30 @@
+{
+  "archive_replay": {
+    "archive_get_replayed": 10,
+    "archive_not_exact_get": 9
+  },
+  "cohort_counts": {
+    "baseline": 25,
+    "candidate": 2,
+    "diagnostic": 7,
+    "frontier": 6,
+    "suffix_sample": 9
+  },
+  "disposition": {
+    "ready_get4": 42,
+    "recorded_complete_get4": 5,
+    "reserved_006": 2
+  },
+  "fresh_first": 25,
+  "fresh_first_probes": 75,
+  "fresh_next": 17,
+  "fresh_next_probes": 51,
+  "hosts": 42,
+  "scopes": {
+    "BY": 9,
+    "KZ": 16,
+    "RU": 24
+  },
+  "sectors": 12,
+  "urls": 49
+}
