@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	esb.bercut.com	esb.bercut.com	https://esb.bercut.com/	Bercut ESB|интеграционная платформа	https://www.company.rt.ru/press/news/d474415/
+corporate	candidate	docs-esb.bercut.com	docs-esb.bercut.com	https://docs-esb.bercut.com/docs-user_guide/navigation_main_page/	Bercut ESB|Навигация	https://docs-esb.bercut.com/docs-user_guide/navigation_main_page/
+corporate	candidate	support.bercut.com	support.bercut.com	https://support.bercut.com/	Bercut|Беркут|Войти	https://bercut.com/
+corporate	control	bercut.com	bercut.com	https://bercut.com/	Bercut|Беркут	https://www.company.rt.ru/press/news/d474415/
+corporate	control	rtkitplus.ru	rtkitplus.ru	https://rtkitplus.ru/	Ростелеком|РТК ИТ	https://www.company.rt.ru/press/news/d471043/

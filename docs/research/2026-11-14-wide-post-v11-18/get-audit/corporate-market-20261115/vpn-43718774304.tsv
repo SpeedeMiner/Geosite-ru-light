@@ -1,0 +1,11 @@
+host	url	asn	http	curl	tls	state	title	markers	redirect_host	observed_at
+altlinux.org	https://altlinux.org/	12389	301	0	0	vpn_redirect	301 Moved Permanently	NA	www.altlinux.org	2026-11-15T13:24:47.499955+00:00
+altlinux.org	https://altlinux.org/	52043	301	0	0	vpn_redirect	301 Moved Permanently	NA	www.altlinux.org	2026-11-15T13:25:02.024896+00:00
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	12389	200	0	0	vpn_marker	BaseALT	Документация ALT Linux Team|Базальт СПО	NA	2026-11-15T13:24:46.459169+00:00
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/index.html	52043	200	0	0	vpn_marker	BaseALT	Документация ALT Linux Team|Базальт СПО	NA	2026-11-15T13:25:00.951221+00:00
+getalt.org	https://getalt.org/ru/	12389	200	0	0	vpn_marker	ALT	Загрузка Альт|Альт Сервер	NA	2026-11-15T13:24:42.020426+00:00
+getalt.org	https://getalt.org/ru/	52043	200	0	0	vpn_marker	ALT	Загрузка Альт|Альт Сервер	NA	2026-11-15T13:24:56.214268+00:00
+mirmon.altlinux.org	https://mirmon.altlinux.org/p11.html	12389	200	0	0	vpn_marker	the status of ALT Platform 11 mirrors	ALT Platform 11|status|mirrors	NA	2026-11-15T13:24:44.474911+00:00
+mirmon.altlinux.org	https://mirmon.altlinux.org/p11.html	52043	200	0	0	vpn_marker	the status of ALT Platform 11 mirrors	ALT Platform 11|status|mirrors	NA	2026-11-15T13:24:58.886373+00:00
+www.altlinux.org	https://www.altlinux.org/	12389	301	0	0	vpn_redirect	NA	NA	www.altlinux.org	2026-11-15T13:24:43.210039+00:00
+www.altlinux.org	https://www.altlinux.org/	52043	301	0	0	vpn_redirect	NA	NA	www.altlinux.org	2026-11-15T13:24:57.454903+00:00
