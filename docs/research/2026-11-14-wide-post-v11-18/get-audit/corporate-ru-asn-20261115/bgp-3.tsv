@@ -1,0 +1,12 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+api.curator.pro	178.248.234.13	cloudflare|google	178.248.234.0/23	AS51115
+blog.mts.investments	185.165.123.206	cloudflare|google	185.165.123.0/24	AS60922|AS64432
+client.curator.pro	185.65.150.244	cloudflare|google	185.65.150.0/23	AS51115
+curator.pro	185.65.148.144	cloudflare|google	185.65.148.0/23	AS51115
+curator.pro	2a03:70c0:0:663b::b941:9490	cloudflare|google	2a03:70c0::/32	AS51115
+datalens.ru	185.206.167.50	cloudflare|google	185.206.164.0/22	AS200350
+datalens.ru	2a0d:d6c1:0:1b::152	cloudflare|google	2a0d:d6c1::/32	AS200350
+docs.curator.pro	178.248.238.99	cloudflare|google	178.248.238.0/23	AS51115
+docs.pg-sharding.tech	76.76.21.21	cloudflare|google	76.76.21.0/24	AS16509
+docs.qrator.ru	185.65.149.80	cloudflare|google	185.65.148.0/23	AS51115
+lk.mts.investments	213.87.46.147	cloudflare|google	213.87.44.0/22	AS13174

@@ -1,0 +1,35 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Curator	cu-arch	https://docs.curator.pro/architecture.html	official-link	api.curator.pro	https://api.curator.pro/	API	NA	NA	NA	NA
+Curator	cu-arch	https://docs.curator.pro/architecture.html	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA
+Curator	cu-arch	https://docs.curator.pro/architecture.html	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA
+Curator	cu-arch	https://docs.curator.pro/architecture.html	official-source	docs.curator.pro	https://docs.curator.pro/architecture.html	Архитектура сети Curator	NA	NA	NA	NA
+Curator	cu-docu	https://docs.curator.pro/dashboard/overview.html	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA
+Curator	cu-docu	https://docs.curator.pro/dashboard/overview.html	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA
+Curator	cu-docu	https://docs.curator.pro/dashboard/overview.html	official-source	docs.curator.pro	https://docs.curator.pro/dashboard/overview.html	Обзор интерфейса личного кабинета	NA	NA	NA	NA
+Curator	cu-api	https://docs.curator.pro/api-reference/usage.html	official-link	api.curator.pro	https://api.curator.pro/	api.curator.pro	NA	NA	NA	NA
+Curator	cu-api	https://docs.curator.pro/api-reference/usage.html	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA
+Curator	cu-api	https://docs.curator.pro/api-reference/usage.html	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA
+Curator	cu-api	https://docs.curator.pro/api-reference/usage.html	official-source	docs.curator.pro	https://docs.curator.pro/api-reference/usage.html	Использование API	NA	NA	NA	NA
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-link	cloud.yandex.com	https://cloud.yandex.com/en-ru/services	Data Platform team of Yandex.Cloud	domain:yandex.com	domain:yandex.com	NA	NA
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-source	docs.pg-sharding.tech	https://docs.pg-sharding.tech/welcome	Welcome to SPQR - SPQR	NA	NA	NA	NA
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-link	github.com	https://github.com/pg-sharding/spqr	pg-sharding/spqr	NA	NA	NA	GITHUB
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-link	pg-sharding.tech	https://pg-sharding.tech/	SPQR home page	NA	NA	NA	NA
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-link	t.me	https://t.me/+jMGhyjwicpI3ZWQy	Community	NA	NA	NA	TELEGRAM
+Яндекс	spqr-doc	https://docs.pg-sharding.tech/welcome	official-link	www.mintlify.com	https://www.mintlify.com/	Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform	NA	NA	NA	NA
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-source	github.com	https://github.com/pg-sharding/spqr/discussions/724	Brand new SPQR 1.5.0 · pg-sharding/spqr · Discussion #724 · GitHub	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	pg-sharding.tech	https://pg-sharding.tech/	https://pg-sharding.tech/	NA	NA	NA	NA
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+Яндекс	spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	apps.apple.com	https://apps.apple.com/ru/app/id1294636411	App Store	NA	NA	NA	NA
+МТС	mts-blog	https://blog.mts.investments/edition	official-source	blog.mts.investments	https://blog.mts.investments/edition	Редакция — Плюсономика	NA	NA	NA	NA
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	itunes.apple.com	https://itunes.apple.com/ru/app/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%BA%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BB/id1294636411		NA	NA	NA	NA
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	mts.investments	https://mts.investments/	Стать инвестором	NA	NA	NA	NA
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	play.google.com	https://play.google.com/store/apps/details		NA	NA	NA	GOOGLE-PLAY
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	t.me	https://t.me/plusonomica	Телеграм	NA	NA	NA	TELEGRAM
+МТС	mts-blog	https://blog.mts.investments/edition	official-link	www.mtsbank.ru	https://www.mtsbank.ru/o-banke/disclouser-issuer/	доступно	domain:ru	domain:ru	NA	NA

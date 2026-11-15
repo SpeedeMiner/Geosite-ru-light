@@ -1,0 +1,12 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+cu-about	https://curator.pro/company/about/	https://curator.pro/company/about/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+cu-home	https://curator.pro/	https://curator.pro/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+cu-arch	https://docs.curator.pro/architecture.html	https://docs.curator.pro/architecture.html	200	0	0	46383	45c4bf8dda10c2a1b3785684c617dab5c5b353e09e74740e0581c9de4e9f51b7	text/html
+cu-docu	https://docs.curator.pro/dashboard/overview.html	https://docs.curator.pro/dashboard/overview.html	200	0	0	56999	bccea456a5ff5a400f0c1bb7ae27109a595378ce6eb907e0d042e4d0f86f7838	text/html
+cu-api	https://docs.curator.pro/api-reference/usage.html	https://docs.curator.pro/api-reference/usage.html	200	0	0	36820	d68de8503534138201bbb896363bd92d9fa4ae2028e2b91d59d1e92c8101c154	text/html
+cu-mos	https://curator.pro/company/news/qrator-labs-rasshiriaet-vozmozhnosti-svoei-seti-i-zapuskaet-chetvertyi-tcentr-ochistki-trafika-v-moskve/	https://curator.pro/company/news/qrator-labs-rasshiriaet-vozmozhnosti-svoei-seti-i-zapuskaet-chetvertyi-tcentr-ochistki-trafika-v-moskve/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+sw-home	https://stormwall.pro/	https://stormwall.pro/	403	0	0	252	fc622c8f553cf8e4faf21f46604d460094ca7f55433ab03fb6ff03136c67af46	text/html
+sw-ru	https://stormwall.pro/privacy-policy	https://stormwall.pro/privacy-policy	403	0	0	252	3a8eed28594777e386891837bf3f42219fe95b320258ea87a5762edc70ae0952	text/html
+spqr-doc	https://docs.pg-sharding.tech/welcome	https://docs.pg-sharding.tech/welcome	200	0	0	109620	05ce4b3e7c339f9646f56a777b4ac57a2e23f6c2ffcebc9d956950f59fbc2b62	text/html; charset=utf-8
+spqr-gh	https://github.com/pg-sharding/spqr/discussions/724	https://github.com/pg-sharding/spqr/discussions/724	200	0	0	215045	c457616178b04572a02b8a10c8cd32d22184ad63decae538cc11f3c50ab177a7	text/html; charset=utf-8
+mts-blog	https://blog.mts.investments/edition	https://blog.mts.investments/edition	200	0	0	335302	2d7cd236923f4263d2dbfbd82ac6be6066d00f1cba6a2522d6b0b7184337a565	text/html; charset=UTF-8

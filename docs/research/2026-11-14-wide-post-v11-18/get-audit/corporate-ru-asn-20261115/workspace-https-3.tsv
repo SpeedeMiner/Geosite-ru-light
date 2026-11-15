@@ -1,0 +1,10 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+curator.pro	https://curator.pro/company/about/	candidate	401	0	0	200	NA	NA	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	2026-11-15T14:36:16.759384+00:00	workspace_unattributed
+docs.curator.pro	https://docs.curator.pro/architecture.html	candidate	200	0	0	200	Архитектура сети Curator	NA	45c4bf8dda10c2a1b3785684c617dab5c5b353e09e74740e0581c9de4e9f51b7	2026-11-15T14:36:17.178062+00:00	workspace_unattributed
+api.curator.pro	https://api.curator.pro/	candidate	200	63	0	200	NA	NA	NA	2026-11-15T14:36:17.397261+00:00	workspace_unattributed
+client.curator.pro	https://client.curator.pro/	candidate	200	0	0	200	Curator	NA	c820671b4e7d693c3caf3d8ec1833aab8726a17058d12ad51a4e65cc434ee066	2026-11-15T14:36:17.260920+00:00	workspace_unattributed
+docs.pg-sharding.tech	https://docs.pg-sharding.tech/welcome	candidate	200	0	0	200	Welcome to SPQR - SPQR	NA	05ce4b3e7c339f9646f56a777b4ac57a2e23f6c2ffcebc9d956950f59fbc2b62	2026-11-15T14:36:22.180762+00:00	workspace_unattributed
+blog.mts.investments	https://blog.mts.investments/edition	candidate	200	0	0	200	Редакция — Плюсономика	NA	2d7cd236923f4263d2dbfbd82ac6be6066d00f1cba6a2522d6b0b7184337a565	2026-11-15T14:36:21.345315+00:00	workspace_unattributed
+lk.mts.investments	https://lk.mts.investments/auth	candidate	200	0	0	200	Личный кабинет МТС Инвестиции	NA	ec75d9f18404199b7ccce8177842b199af0e08135ea4398e512bf7aa3faf3001	2026-11-15T14:36:21.526249+00:00	workspace_unattributed
+datalens.ru	https://datalens.ru/ru	control	302	0	0	200	NA	datalens.ru	NA	2026-11-15T14:36:21.583037+00:00	workspace_unattributed
+docs.qrator.ru	https://docs.qrator.ru/ru/dashboard/overview.html	control	308	0	0	200	NA	docs.curator.pro	c9ef5f3612d82ca68843ab1ca9e01c5b4e477f0855008eb1d851bf114d7f21cc	2026-11-15T14:36:22.418047+00:00	workspace_unattributed

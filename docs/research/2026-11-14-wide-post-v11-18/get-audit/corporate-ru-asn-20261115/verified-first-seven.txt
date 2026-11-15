@@ -1,0 +1,7 @@
+full:diplodoc.com
+full:generationx5.tech
+full:gravity-ui.com
+full:preview.gravity-ui.com
+full:testplane.io
+full:userver.tech
+full:ytsaurus.tech
