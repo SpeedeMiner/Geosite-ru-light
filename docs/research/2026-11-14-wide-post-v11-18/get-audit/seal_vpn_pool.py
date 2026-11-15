@@ -108,8 +108,8 @@ def seal(plans, archives, output):
                     observations[r['url']].append(dict(url=r['url'],http=r['http'] or '',
                         tls='verified' if r['http'] and rc_ok(r) else 'unproven',
                         state=r['state'],exit_asn=asn,exit_country='RU',redirect=r['redirect_location'] or '',
-                        marker='|'.join(r['markers_found']),observed_at=r['observed_at'],
-                        run=meta['run_id'],batch=batch))
+                        marker='|'.join(r['markers_found']),observed_at=r['observed_at'],curl_exit=r['curl_exit'],
+                        tls_verify_result=r['tls_verify_result'],run=meta['run_id'],batch=batch))
     require(set(pool)==set(assigned)|prior and len(assigned)==manifest['pending'], 'plan coverage mismatch')
     detail=[]
     coverage=[]
@@ -141,11 +141,12 @@ def seal(plans, archives, output):
                asns=sorted({int(r['exit_asn']) for r in detail}),different_http_outcomes=len(differences),
                missing_second_attempt=len(pending),needs_http_followup=len(unresolved),
                new_attempted_urls=sum(r['attempted_asns']>0 and r['batch']!='pilot' for r in coverage),
+               verified_2xx_by_url_asn=dict(sorted(Counter(r['verified_2xx_asns'] for r in coverage).items())),
                observation_states=dict(sorted(Counter(r['state'] for r in detail).items())),
                globalping_requests=0,fresh_ru_credit=False)
     output.mkdir(parents=True,exist_ok=False)
     write(output/'coverage.tsv',list(coverage[0]),coverage)
-    write(output/'observations.tsv',['url','http','state','tls','exit_asn','exit_country','redirect','marker','observed_at','run','batch'],detail)
+    write(output/'observations.tsv',['url','http','state','tls','exit_asn','exit_country','redirect','marker','observed_at','run','batch','curl_exit','tls_verify_result'],detail)
     write(output/'different.tsv',list(coverage[0]),differences)
     write(output/'needs-http-followup.tsv',list(coverage[0]),unresolved)
     write(output/'needs-second-attempt.tsv',list(coverage[0]),pending)
