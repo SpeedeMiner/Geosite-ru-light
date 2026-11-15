@@ -1,0 +1,12 @@
+{
+  "baseline_remaining": 1022,
+  "distinct_pending_urls": 184,
+  "later_urls": 104,
+  "network_verified_total": 317,
+  "new_vs_007_to_010": 96,
+  "next_urls": 80,
+  "workspace_gets": 16,
+  "workspace_states": {
+    "workspace_transport_unproven": 16
+  }
+}
