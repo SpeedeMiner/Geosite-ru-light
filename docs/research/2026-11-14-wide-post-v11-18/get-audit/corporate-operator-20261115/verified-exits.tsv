@@ -1,0 +1,23 @@
+host	decision	expected	ru_exits	actions	light_ru	server_ru	block	non_ru
+1440.space	exact_public_page	БЮРО 1440	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+bootsman.tech	exact_public_page	Боцман	12389|208803	43721507811|43721507811	NA	NA	NA	NA
+business.kvadra.tech	exact_public_page	KVADRA	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+careers.yadro.com	exact_public_page	YADRO	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+docs-b2c.kvadra.tech	exact_public_page	Техническая документация	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+docs.bootsman.tech	exact_public_page	Боцман	12389|208803	43721507811|43721507811	NA	NA	NA	NA
+docs.yadro.com	exact_public_page	Вход	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+download.workspad.com	exact_public_page	WorksPad	12389|208803	43721507811|43721507811	NA	NA	NA	NA
+edu.yadro.com	exact_public_page	YADRO	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+engineer.yadro.com	exact_public_page	Истовый инженер	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+events.yadro.com	exact_public_page	Yadro Events	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+job.nexign.com	exact_public_page	Карьера в Nexign	12389|208803	43720890471|43720890471	NA	NA	NA	NA
+kvadra-service.yadro.com	exact_public_entry_redirect	support.kvadra.tech	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+kvadra.tech	exact_public_entry_redirect	xn--80aaej1a3b.xn--p1ai	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+meetups.yadro.com	exact_public_entry_redirect	events.yadro.com	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+neonhrm.nexign.com	exact_public_page	Neon HRM	12389|208803	43720890471|43720890471	NA	NA	NA	NA
+partners.yadro.com	exact_public_page	Партнёрский портал YADRO	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+service.yadro.com	exact_public_page	Сервисный портал YADRO	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+sp.yadro.com	exact_public_entry_redirect	yadro.com	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+support.kvadra.tech	exact_public_page	KVADRA	12389|208803	43721090370|43721090370	NA	NA	NA	NA
+www.yadro.com	exact_public_entry_redirect	yadro.com	12389|208803	43721614370|43721614370	NA	NA	NA	NA
+yadro.com	exact_public_page	Техническая документация	12389|208803	43721090370|43721090370	NA	NA	NA	NA
