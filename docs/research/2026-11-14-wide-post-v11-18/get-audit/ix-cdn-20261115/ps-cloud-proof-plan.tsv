@@ -1,4 +1,4 @@
 cohort	type	rule	host	url	markers	source
 corporate	candidate	ps-vitrina.storage-object.pscloud.io	ps-vitrina.storage-object.pscloud.io	https://ps-vitrina.storage-object.pscloud.io/d7b97de53bb406e2d20a70258d062e16		https://www.ps.kz/ru/agreements/offer
-corporate	candidate	ps-vitrina.storage-object.pscloud.io	ps-vitrina.storage-object.pscloud.io	https://ps-vitrina.storage-object.pscloud.io/5bbaf546db4dafbe67a5f24c5f3da0be		https://www.ps.kz/ru/agreements/company-docs
+corporate	candidate	ps-vitrina.storage-object.pscloud.io	ps-vitrina.storage-object.pscloud.io	https://ps-vitrina.storage-object.pscloud.io/5bbaf546db4dafbe67a5f24c5f3da0be		https://www.ps.kz/ru/agreements/1c-vps-sla
 corporate	control	www.ps.kz	www.ps.kz	https://www.ps.kz/ru/agreements/offer	PS Cloud	https://docs.ps.kz/ru
