@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (banking public websites)
+name: GeoSite IP checker GET through VPNObratno (media documentation follow-up)
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-cbr-banking
+  group: geosite-vpnobratno-media-followup
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [cbr-banking]
+        batch: [media-followup]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:

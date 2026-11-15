@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	peers.tv	peers.tv	https://peers.tv/files/7172/		https://b2b.peers.tv/ott
+corporate	candidate	peers.tv	peers.tv	https://peers.tv/	Сервис онлайн-ТВ	https://b2b.peers.tv/pl_agreement
+corporate	candidate	life-stream.tv	life-stream.tv	https://life-stream.tv/contacts/	LifeStream	https://smotreshka.tv/privacy
+corporate	control	b2b.peers.tv	b2b.peers.tv	https://b2b.peers.tv/ott	OTT Peers.TV	https://inetra.ru/products
+corporate	control	smotreshka.tv	smotreshka.tv	https://smotreshka.tv/wf_help	Смотрёшка	https://smotreshka.tv/user_agreement
