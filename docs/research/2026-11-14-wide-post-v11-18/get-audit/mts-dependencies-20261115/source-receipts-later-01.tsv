@@ -1,0 +1,16 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	200	0	0	54402	e5ce0e31c66a898fca734d6ca5df9f92c154460dbc9bc367c5248fe8ba702fed	text/html
+beeline-cloud	https://docs.cloud.beeline.ru/docs/platform/platform/about/	https://docs.cloud.beeline.ru/docs/platform/platform/about/	403	0	0	14829	8f2b430432ca4d17145191cdb33007b1eda6b5f786b6f009eb60425220614697	text/html
+beeline-doc-cdn	https://docs.cloud.beeline.ru/docs/network/cdn/responsibility/	https://docs.cloud.beeline.ru/docs/network/cdn/responsibility/	403	0	0	14832	03714995c7e90a9d55c1c8b1a885424d6b95f7d7e5be849b86d42262f111d7e4	text/html
+cdnvideo-ru	https://www.cdnvideo.ru/	https://www.cdnvideo.ru/	200	0	0	844078	ada13d6074a866f92e25065f55a3b27d5cb26f141d96b47866f18f95ded2dbeb	text/html; charset=UTF-8
+cdnvideo-com	https://www.cdnvideo.com/	https://www.cdnvideo.com/	200	0	0	297546	e47300db3ba993a80259226c8a9cce214bcf2bbb388b9ee0ad1db1814ab7fd6d	text/html; charset=UTF-8
+cdnvideo-doc	https://doc.cdnvideo.ru/	https://doc.cdnvideo.ru/	200	0	0	37768	48df78b40a165eac7387e7e3cf06be88d1cbfd41eeb87388158ef35dad19b765	text/html
+t2-mixx-announce	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	403	0	0	6327	f67795558d89fad833842df9a42857cf5d8a131fc2ba6f2b457169c70b311973	text/html;charset=utf-8
+t2-mixx	https://tci.t2.ru/mixx-all	https://tci.t2.ru/mixx-all	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+t2-business	https://msk.t2.ru/business/partners/consenta-ts	https://msk.t2.ru/business/partners/consenta-ts	403	0	0	6327	2da36a3f208df314dc6bc9a393dbcc060c09c6f3c0bef96dafdddca30b0c15c0	text/html;charset=utf-8
+t2-adtech	https://ekt.t2.ru/business/ad-tools	https://ekt.t2.ru/business/ad-tools	403	0	0	6327	5a2feb912f4d63813dc2bfc32cad312355cd2bff0b682df7198617b6e02e4514	text/html;charset=utf-8
+t2-wink	https://kamchatka.t2.ru/business/option/b2b-wink-propto	https://kamchatka.t2.ru/business/option/b2b-wink-propto	403	0	0	6327	c157d3ebff86394aa31c9e4d9150473d7241e7e86a2ce6356701cc26cee268c3	text/html;charset=utf-8
+ntsu	https://www.nts.su/	https://www.nts.su/	200	0	0	90911	1090f01ad369e9d119eedd9234e87592a8583a1268d99215d89bf3e33cec2330	text/html; charset=UTF-8
+nts-domru	https://tomsk.dom.ru/news/nts-prisoedinyaetsya-k-dom-ru	https://tomsk.dom.ru/news/nts-prisoedinyaetsya-k-dom-ru	403	0	0	22998	b21705154db578054461f2eabea483df4344fe51c5cf41a39805476a66bf3034	text/html
+er-comcor	https://www.akado.ru/	https://www.akado.ru/	403	0	0	1295	c66a19f5d3d9e05b214dba8791612a665a5d921e7e244a1ad11ede50e1b53e1b	text/html
+mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	200	0	0	202301	1a376fe3875196dd8b8f8099ee083e861af7d17d9e0dcd48e5b51c81607d53b0	text/html; charset=UTF-8

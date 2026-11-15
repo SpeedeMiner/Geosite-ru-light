@@ -1,0 +1,47 @@
+host	disposition	rule	light_v1119	server_v1119	block	non_ru	vpn_runs	source	reason
+api.exolve.ru	covered	NA	domain:ru	domain:ru	NA	NA	NA	https://docs.exolve.ru/docs/ru/api-reference/sms-api/	Documented native API under .ru; no operation invoked
+app70476.carrotquest.help	hold_external_tenant	NA	NA	NA	NA	NA	NA	https://ticketscloud.com/	External help platform tenant; not reclassified
+b2b-live.mts.ru	covered_control	NA	domain:ru	domain:ru	NA	NA	43736677600	https://b2b-live.mts.ru/ticket-services	Official MTS Live catalogue already covered by .ru
+beeline.suvvy.ai	accept_exact	full:beeline.suvvy.ai	NA	NA	NA	NA	43737685006	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	Partner tenant named in operator terms; two branded TLS/200; AS200350 is hosting, not operator ownership
+belgorod.zelenaya.net	accept_exact	full:belgorod.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+beloretsk.zelenaya.net	accept_exact	full:beloretsk.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+cabinet.zt68.net	accept_exact	full:cabinet.zt68.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two same-host TLS/302 to /login; only public first hop confirmed
+cdnvideo.com	hold_global_marketing	NA	NA	NA	NA	NA	NA	https://www.cdnvideo.com/	Alias of global marketing site; no distinct restricted Russian customer flow shown
+customer.ticketscloud.com	accept_exact	full:customer.ticketscloud.com	NA	NA	NA	NA	43736677600	https://ticketscloud.com/static/docs/customer_rule.pdf	Two branded 200 viewer pages; known operator product; no account session exercised
+dashboard.cdnvideo.com	covered	NA	full:dashboard.cdnvideo.com	full:dashboard.cdnvideo.com	NA	NA	NA	https://doc.cdnvideo.ru/api_desc/oauth/	Existing exact control panel rule; no API invocation
+doc.cdnvideo.com	covered	NA	full:doc.cdnvideo.com	full:doc.cdnvideo.com	NA	NA	NA	https://www.cdnvideo.com/	Already covered exactly; global provider site is evaluated separately
+doc.ticketscloud.org	accept_exact	full:doc.ticketscloud.org	NA	NA	NA	NA	43736677600	https://ticketscloud.com/	Exact help host on two 200 explicit-document paths; root redirects to separately failed external host
+docs.suvvy.ai	hold_shared_vendor	NA	NA	NA	NA	NA	NA	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	Shared platform documentation; not the Beeline-specific tenant
+domofon.seven-sky.net	accept_exact	full:domofon.seven-sky.net	NA	NA	NA	NA	43737267639	https://www.seven-sky.net/	Two branded TLS/200 for the first-party intercom landing page
+efremov.zelenaya.net	accept_exact	full:efremov.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two branded TLS/200 with curl 63 bounded sample; complete body untested
+elets.zelenaya.net	accept_exact	full:elets.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two branded TLS/200 with curl 63 bounded sample; complete body untested
+elista.zelenaya.net	accept_exact	full:elista.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+gryazi.zelenaya.net	hold_wrong_city	NA	NA	NA	NA	NA	43737375054|43737685006	https://gryazi.zelenaya.net/|https://tambov.zelenaya.net/contacts/	Root 200 but title Lipetsk; published contacts path 500 with Lipetsk title twice
+kochubeevka.zelenaya.net	accept_exact	full:kochubeevka.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+lipetsk.zelenaya.net	accept_exact	full:lipetsk.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+lk.seven-sky.net	accept_exact	full:lk.seven-sky.net	NA	NA	NA	NA	43737267639	https://www.seven-sky.net/	Two TLS/200 login pages linked by operator; no credentials or forms submitted
+lk.vdome.mts.ru	covered	NA	domain:ru	domain:ru	NA	NA	NA	https://domofon.mts.ru/eula.html	Native VDome account domain under .ru; no login attempted
+naltel.zelenaya.net	hold_tls	NA	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two certificate verification failures on published contacts path
+neftekamsk.zelenaya.net	accept_exact	full:neftekamsk.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+nevinka.zelenaya.net	accept_exact	full:nevinka.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+redirect.appmetrica.yandex.com	hold_tracking_or_store_router	NA	domain:yandex.com	domain:yandex.com	NA	NA	NA	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	Shared distributor for multiple app stores; no MiXX-specific backend evidence
+seven-sky.net	accept_exact	full:seven-sky.net	NA	NA	NA	NA	43737267639	https://tv.seven-sky.net/eula	Two 308 redirects to separately confirmed operator www hostname
+stage.freetc.net	excluded_staging	NA	NA	NA	NA	NA	NA	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	Example staging host; not contacted
+stavropol.zelenaya.net	accept_exact	full:stavropol.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+store.seven-sky.net	hold_redirect_loop	NA	NA	NA	NA	NA	43737267639|43737685006	https://www.seven-sky.net/	Root to /ru; explicit /ru repeatedly redirects to itself for requests without a session
+support.ticketscloud.org	hold_tls	NA	NA	NA	NA	NA	43736677600	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	Two strict certificate verification failures
+tambov.zelenaya.net	accept_exact	full:tambov.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+ticketscloud.com	covered_control	NA	full:ticketscloud.com	full:ticketscloud.com	NA	NA	43736677600|43737267639|43737685006	https://b2b-live.mts.ru/ticket-services	Existing exact rule, two eligible 200 in each control batch
+ticketscloud.org	hold_tls	NA	NA	NA	NA	NA	43736677600	https://ticketscloud.com/static/docs/customer_rule.pdf	Two strict certificate verification failures
+ticketscloud.readthedocs.io	hold_external_timeout	NA	NA	NA	NA	NA	43736677600	https://doc.ticketscloud.org/	Two timeouts; never add readthedocs.io suffix
+tomsk.zelenaya.net	accept_exact	full:tomsk.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+tv.seven-sky.net	accept_exact	full:tv.seven-sky.net	NA	NA	NA	NA	43737267639	https://www.seven-sky.net/	Two TLS/200 FAQ; first-party TV terms establish identity; playback untested
+ufa.zelenaya.net	accept_exact	full:ufa.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+vladivostok.zelenaya.net	accept_exact	full:vladivostok.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
+workspace.teamstream.mws.ru	covered	NA	domain:ru	domain:ru	NA	NA	NA	https://support.mts.ru/mws_teamstream/kod-vstavki-videopleera/kak-razmestit-kod-vstavki	Published embed endpoint already has .ru coverage
+www.cdnvideo.com	hold_global_marketing	NA	NA	NA	NA	NA	NA	https://www.cdnvideo.com/	Global marketing across several regions; .ru corporate page and .com dashboard/docs already covered
+www.nts.su	covered	NA	domain:su	domain:su	NA	NA	NA	https://www.nts.su/	Covered .su; local landing may be operated by an agent
+www.seven-sky.net	accept_exact	full:www.seven-sky.net	NA	NA	NA	NA	43737267639	https://tv.seven-sky.net/eula	Two TLS/200; administrator website stated in the official service agreement
+www.wink.ru	covered	NA	domain:ru	domain:ru	NA	NA	NA	https://kamchatka.t2.ru/business/option/b2b-wink-propto	Published T2 Wink link covered by .ru
+zelenaya-net.ru	covered_control	NA	domain:ru	domain:ru	NA	NA	43736945426	https://zelenaya-net.ru/news/zelenaya-tochka-teper-mts-home	Current operator brand already covered by .ru
+zelenaya.net	accept_exact	full:zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs

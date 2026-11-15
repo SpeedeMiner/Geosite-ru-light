@@ -1,0 +1,9 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+on-home	https://on-media.ru/	https://on-media.ru/	200	0	0	290673	d35c90377ffdb746005a6678618fdfe33540f1c7815ed484d90f58ae1eb229a7	text/html; charset=utf-8
+on-about	https://on-media.ru/about	https://on-media.ru/about	200	0	0	210432	fbd55f7659baf21d6291831b2510af8a386c86c2d7ddd227225ea8e076545851	text/html; charset=utf-8
+on-music	https://on-media.ru/about/mts-music	https://on-media.ru/about/mts-music	200	0	0	111547	c84f54786d1a26d6189c492304855c3a48358f3eef9bfeebaa05d63d792739e5	text/html; charset=utf-8
+on-label	https://on-media.ru/about/on-label	https://on-media.ru/about/on-label	200	0	0	119912	fb6adbc6c284db095fc5b3aea41e47030181bca4902a63a7c9ae229821e4cacb	text/html; charset=utf-8
+on-cases	https://on-media.ru/cases	https://on-media.ru/cases	200	0	0	234268	d6f333f04bb909dc7feaa1f4e821c28c034716cad7d627b942c42dfa0b2a00e6	text/html; charset=utf-8
+on-kion	https://kion.ru/user-agreement	https://kion.ru/user-agreement	200	0	0	367232	4d2c39e5d5019186de9803305e2c4bfd29d1e2a3cfb49f3ca0015df03bfa6b0c	text/html;charset=UTF-8
+on-gamification	https://static.kion.ru/docs/kion-gamification-policy.html	https://static.kion.ru/docs/kion-gamification-policy.html	200	0	0	45706	ae7f16892e7ef4b6060efa4b17bc7f26d8ce9753d0914556f6f14506508d59e4	text/html
+on-rebrand	https://on-media.ru/news/mts-media-transformiruetsia-v-on-media	https://on-media.ru/news/mts-media-transformiruetsia-v-on-media	200	0	0	1886614	067acb7759a5138e0ff44b383de045b85345f665ff21783abfb6d6b8eaf5d6f7	text/html; charset=utf-8

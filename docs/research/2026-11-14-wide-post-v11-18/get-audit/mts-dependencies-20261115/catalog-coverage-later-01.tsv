@@ -1,0 +1,41 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	beeline.gptunnel.ru	https://beeline.gptunnel.ru/	https://beeline.gptunnel.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	beeline.ru	https://beeline.ru/	https://beeline.ru	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	beeline.suvvy.ai	https://beeline.suvvy.ai/	https://beeline.suvvy.ai	NA	NA	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	calculator.cloud.dfcloud.ru	https://calculator.cloud.dfcloud.ru/	https://calculator.cloud.dfcloud.ru	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	docs.suvvy.ai	https://docs.suvvy.ai/ru/legal/terms-of-service	Ссылка	NA	NA	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	leadgen.beeline.ru	https://leadgen.beeline.ru/	https://leadgen.beeline.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	lk.partners.beeline.ru	https://lk.partners.beeline.ru/asset//v1/public/files/BEELEGO_USER_AGREEMENT_V3	Ссылка	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	location.beeline.ru	https://location.beeline.ru/	https://location.beeline.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	marketing.beeline.ru	https://marketing.beeline.ru/	https://marketing.beeline.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	onebusiness.ru	https://onebusiness.ru/	https://onebusiness.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	partners.beeline.ru	https://partners.beeline.ru/	https://partners.beeline.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	pro.beeline.ru	https://pro.beeline.ru/	https://pro.beeline.ru/	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-source	static.beeline.ru	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	Оферта «билайн»	domain:ru	domain:ru	NA	NA
+Билайн	beeline-terms	https://static.beeline.ru/upload/images/Documents/17263-idp-argeement.html	official-link	www.gptunnel.ru	https://www.gptunnel.ru/ru/documents/contract	Ссылка	domain:ru	domain:ru	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	ai.cdnvideo.ru	https://ai.cdnvideo.ru/	Перейти	domain:ru	domain:ru	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	dashboard.cdnvideo.ru	https://dashboard.cdnvideo.ru/login	Войти	domain:ru	domain:ru	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	doc.cdnvideo.ru	https://doc.cdnvideo.ru/	Техническая документация	domain:ru	domain:ru	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	t.me	https://t.me/cdntechnologies	.cls-1 { fill: #909090; fill-rule: evenodd; }	NA	NA	NA	TELEGRAM
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	vk.com	https://vk.com/club213347710	.cls-1 { fill: #222; fill-rule: evenodd; }	domain:vk.com	domain:vk.com	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-link	www.cdnvideo.com	https://www.cdnvideo.com/	NA	NA	NA	NA	NA
+CDNvideo	cdnvideo-ru	https://www.cdnvideo.ru/	official-source	www.cdnvideo.ru	https://www.cdnvideo.ru/	CDNvideo - ведущий провайдер CDN в России и СНГ - www.cdnvideo.ru	domain:ru	domain:ru	NA	NA
+CDNvideo	cdnvideo-com	https://www.cdnvideo.com/	official-link	doc.cdnvideo.com	https://doc.cdnvideo.com/en/	Technical Documentation	full:doc.cdnvideo.com	full:doc.cdnvideo.com	NA	NA
+CDNvideo	cdnvideo-com	https://www.cdnvideo.com/	official-source	www.cdnvideo.com	https://www.cdnvideo.com/	A Global CDN for Live Streaming, VoD, Game and Web Acceleration - CDNvideo.com	NA	NA	NA	NA
+CDNvideo	cdnvideo-doc	https://doc.cdnvideo.ru/	official-source	doc.cdnvideo.ru	https://doc.cdnvideo.ru/	Общие сведения - База знаний CDNvideo	domain:ru	domain:ru	NA	NA
+НТС	ntsu	https://www.nts.su/	official-link	dom.ru	https://dom.ru/	dom.ru	domain:ru	domain:ru	NA	NA
+НТС	ntsu	https://www.nts.su/	official-link	nts.su	https://nts.su/my/	Простая форма входа	domain:su	domain:su	NA	NA
+НТС	ntsu	https://www.nts.su/	official-link	ok.ru	https://ok.ru/domru	NA	domain:ru	domain:ru	NA	NA
+НТС	ntsu	https://www.nts.su/	official-link	vk.me	https://vk.me/domru	NA	domain:vk.me	domain:vk.me	NA	NA
+НТС	ntsu	https://www.nts.su/	official-source	www.nts.su	https://www.nts.su/	Интернет-провайдеры в Томске и Северске | Домашний интернет и ТВ | Компания Новые Телесистемы	domain:su	domain:su	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-source	ar2025.mts.ru	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	Группа МТС в 2025 году — Годовой отчет 2025	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	awards.cnews.ru	https://awards.cnews.ru/2025/	CNews AI Awards	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	business.mgts.ru	https://business.mgts.ru/about_mgts	МГТС	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	exolve.ru	https://exolve.ru/about/	МТС Exolve	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	frankrg.com	https://frankrg.com/news/frank-rg-obyavila-pobeditelej-frank-private-banking-award-2025	Frank Private banking Award 2025	NA	NA	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	globalcio.ru	https://globalcio.ru/projectoftheyear/list/	премией Global CIO	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	gulfstream.ru	https://gulfstream.ru/	Гольфстрим	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	insurance.mts.ru	https://insurance.mts.ru/	МТС Страхование	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	irteya.ru	https://irteya.ru/	«Иртея»	domain:ru	domain:ru	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	json.tv	https://json.tv/analytic/servisy-czifrovoj-bezopasnosti-operatorov-svyazi-i-ekosistem-rf-v-2025-godu-sravnitelnyj-analiz/	J’son & Partners Consulting	NA	NA	NA	NA
+МТС	mts2025	https://ar2025.mts.ru/mts-segodnya/gruppa-mts-v-2025-godu/	official-link	kion.ru	https://kion.ru/	КИОН	domain:ru	domain:ru	NA	NA

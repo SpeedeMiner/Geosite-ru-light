@@ -1,0 +1,103 @@
+{
+  "date_utc_plus_05": "2026-11-15",
+  "starting_parent": "11f2849ca8dccc080fe681a1d6248eec29fe3347",
+  "previous_queue": 72,
+  "new_exact_rules": 24,
+  "new_groups": {
+    "ticketscloud": 2,
+    "greenpoint": 8,
+    "green-cities": 8,
+    "seven-sky": 5,
+    "beeline-partner": 1
+  },
+  "total_queue": 96,
+  "vpn_batches": [
+    {
+      "run_id": 43736677600,
+      "artifact_id": 14170308303,
+      "attempted": 16,
+      "http_responses": 10,
+      "eligible_strict_tls_http_by_exit": {
+        "12389": 5,
+        "44724": 5
+      }
+    },
+    {
+      "run_id": 43736945426,
+      "artifact_id": 14170836693,
+      "attempted": 18,
+      "http_responses": 18,
+      "eligible_strict_tls_http_by_exit": {
+        "12389": 9,
+        "44724": 9
+      }
+    },
+    {
+      "run_id": 43737267639,
+      "artifact_id": 14170594190,
+      "attempted": 14,
+      "http_responses": 14,
+      "eligible_strict_tls_http_by_exit": {
+        "12389": 7,
+        "44724": 7
+      }
+    },
+    {
+      "run_id": 43737375054,
+      "artifact_id": 14171021873,
+      "attempted": 20,
+      "http_responses": 18,
+      "eligible_strict_tls_http_by_exit": {
+        "12389": 9,
+        "44724": 9
+      }
+    },
+    {
+      "run_id": 43737685006,
+      "artifact_id": 14170309624,
+      "attempted": 8,
+      "http_responses": 7,
+      "eligible_strict_tls_http_by_exit": {
+        "12389": 3,
+        "44724": 4
+      }
+    }
+  ],
+  "vpn_public_get_attempts": 76,
+  "strict_tls_and_corroborated_http_responses": 67,
+  "vpn_exit_asns": [
+    12389,
+    44724
+  ],
+  "fresh_ru_credit": false,
+  "globalping_requests": 0,
+  "catalog_fetches": {
+    "attempted": 69,
+    "ssl_verified_http200_html": 47
+  },
+  "catalog_source_host_pairs": 303,
+  "geoip_pinned_dns_host_address_rows": 43,
+  "geoip_rows_covered": 35,
+  "replay": [
+    {
+      "base": "1119",
+      "light_before": 4337,
+      "light_after": 4433,
+      "server_before": 4225,
+      "server_after": 4321,
+      "removed": 0,
+      "srs_verified": 18,
+      "srs_non_ru_identical": 17
+    },
+    {
+      "base": "1120",
+      "light_before": 4339,
+      "light_after": 4435,
+      "server_before": 4227,
+      "server_after": 4323,
+      "removed": 0,
+      "srs_verified": 18,
+      "srs_non_ru_identical": 17
+    }
+  ]
+}
