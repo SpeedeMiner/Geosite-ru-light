@@ -1,0 +1,36 @@
+{
+  "snapshot_title": "Сведения об адресах информационных web-сайтов и страниц в социальных сетях кредитных организаций Российской Федерации по состоянию на 02.11.2026 Поиск по Наименованию КО \n           \n     \n     \n       Поиск по адресу Web сайта",
+  "source_sha256": {
+    "cbr-systemic": "7a28743fd940c4092b9d34c0cb7562636892cc200fb7ba1034fa63f9b10fea2d",
+    "cbr-payment": "510488ea56b91f110d1b88705d994c3dfa140bcc971a6f08ca5227718ec79e1e",
+    "cbr-websites": "6103f15d710be75f4ed5cf54e583d4832480cb75b4ce9b6f49c91a5aa7956c30"
+  },
+  "source_urls": {
+    "cbr-systemic": "https://www.cbr.ru/banking_sector/credit/SystemBanks.html",
+    "cbr-payment": "https://www.cbr.ru/registries/nps/reestr/",
+    "cbr-websites": "https://www.cbr.ru/banking_sector/credit/cowebsites/"
+  },
+  "dat_sha256": {
+    "light": "fea7efa5c855ead11d2e8dd867f41d3b395afddba10013d0613e0c592ea7ca9f",
+    "server": "a4e42e899853f7095b7a0c13f04115c6d9cc851733b4c2448671ee00a682ee25"
+  },
+  "bank_rows": 340,
+  "bank_host_pairs": 1474,
+  "distinct_hosts": 1221,
+  "errors_or_non_web_links": 1,
+  "systemic_list": 12,
+  "payment_list": 22,
+  "priority_with_website": 20,
+  "priority_pairs": 348,
+  "priority_distinct_hosts": 315,
+  "all_decisions": {
+    "category_conflict_review": 2,
+    "covered_both": 1184,
+    "regulator_gap_new": 5,
+    "shared_or_third_party": 283
+  },
+  "priority_decisions": {
+    "covered_both": 298,
+    "shared_or_third_party": 50
+  }
+}
