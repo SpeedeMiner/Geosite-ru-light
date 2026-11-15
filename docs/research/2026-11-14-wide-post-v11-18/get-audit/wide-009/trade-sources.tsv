@@ -1,0 +1,75 @@
+zone	sector	disposition	url	source	markers	note
+KZ	exchange	functional	https://aix.kz/	https://aifc.kz/aifc-bodies-contacts/	AIX|Astana International Exchange	Подтвердить редирект старого покрытого имени
+KZ	exchange	functional	https://www.aixkz.com/en	https://aix.kz/	AIX|Astana International Exchange	Новый публичный сайт биржи, точный WWW
+KZ	exchange	review	https://aixkz.com/	https://www.aixkz.com/en	AIX|Astana International Exchange	Apex не выводить автоматически из WWW, нет отдельной атрибуции
+KZ	exchange	functional	https://market.aixkz.com/official-list	https://www.aixkz.com/en	Market Watch|Official List|AIX	Отдельный публичный листинг, возможна JS-оболочка
+KZ	exchange	review	https://market.aixkz.com/	https://www.aixkz.com/en	AIX|Market Watch	Корень отдельно от официального листинга
+KZ	exchange	third_party	https://k4txdyb.onk2.com/	https://www.aixkz.com/en		Внешний SaaS из объявления биржи, не правило по зоне onk2.com
+KZ	exchange	control	https://www.kase.kz/	https://kase.kz/ru/	Казахстанская фондовая биржа|KASE	Веб-индексация видит переход на покрытый apex
+KZ	exchange	control	https://kase.kz/ru/	https://kase.kz/ru/	Казахстанская фондовая биржа|KASE	Национальная биржа для контроля отличий от AIX
+KZ	regulatory	control	https://aifc.kz/aifc-ecosystem/	https://aifc.kz/	AIFC	Публичная страница экосистемы
+KZ	regulatory	control	https://www.afsa.kz/	https://aifc.kz/aifc-bodies-contacts/	AFSA	Покрытый псевдоним, не заменяет отдельный реестр
+KZ	regulatory	functional	https://afsa.aifc.kz/	https://aifc.kz/aifc-ecosystem/	AFSA|Astana Financial Services Authority	Сайт регулятора, первичный источник ссылок
+KZ	regulatory	functional	https://publicreg.myafsa.com/dasp/	https://afsa.aifc.kz/ru/kak-investoru-zashhitit-sebya/	Public Register|FIRMS|AFSA	Точный открытый список, без поиска или входа
+KZ	regulatory	review	https://publicreg.myafsa.com/	https://afsa.aifc.kz/	Public Register|AFSA	Тот же hostname, другой публичный путь
+KZ	regulatory	functional	https://orderly.myafsa.com/	https://afsa.aifc.kz/	LEGAL FRAMEWORK|LEGISLATION|AIFC	Внешнее точное имя официальной правовой базы
+KZ	regulatory	review	https://myafsa.com/	https://afsa.aifc.kz/	AFSA	Не наследовать доказательства дочерних хостов
+KZ	justice	functional	https://court.aifc.kz/	https://aifc.kz/aifc-ecosystem/	AIFC COURT|AIFC Court	Публичное описание суда, не подача иска
+KZ	justice	functional	https://iac.aifc.kz/	https://court.aifc.kz/	International Arbitration Centre|IAC	Публичный арбитражный центр
+KZ	justice	functional	https://iacchambers.com/	https://court.aifc.kz/	IAC CHAMBERS|IAC Chambers	Подтверждённая внешняя площадка центра
+KZ	education	functional	https://trainingcentre.iacchambers.com/	https://iac.aifc.kz/	Training Centre|Training Programmes	Учебный сервис, отдельное точное имя
+KZ	regulatory	control	https://fintech.aifc.kz/	https://orderly.myafsa.com/	FinTech|Fintech	Отдельный покрытый хост из справочника AFSA
+KZ	export	control	https://export.gov.kz/	https://qaztrade.org.kz/rus/eksportnyj-portal-kazahstan/	Экспорт|ЭКСПОРТ	Национальный экспортный портал
+KZ	export	control	https://www.export.gov.kz/	https://tradeinfo.kz/?l=ru	Экспорт|ЭКСПОРТ	WWW указан как ресурс мер поддержки
+KZ	export	control	https://export.gov.kz/qaztrade	https://export.gov.kz/	QazTrade	Публичный вход в раздел, без подачи заявки
+KZ	export	control	https://qaztrade.org.kz/rus/eksportnyj-portal-kazahstan/	https://qaztrade.org.kz/rus/eksportnyj-portal-kazahstan/	Экспортный портал|QazTrade	Собственная справка оператора
+KZ	export	control	https://tradeinfo.kz/?l=ru	https://tradeinfo.kz/?l=ru	Торговый портал|QazTrade	Первичный каталог ресурсов таможни и экспорта
+KZ	export	control	https://tradeinfo.kz/Procedures?l=ru	https://tradeinfo.kz/?l=ru	Процедуры|Торговый портал	Открытые процедуры, без операций ВЭД
+KZ	export	control	https://kazakhexport.kz/	https://tradeinfo.kz/?l=ru	Экспортно-кредитное агентство|KazakhExport	Экспортное агентство, без оформления финансирования
+KZ	export	control	https://www.kazakhexport.kz/	https://www.kazakhexport.kz/	Экспортно-кредитное агентство|KazakhExport	WWW проверяется отдельно
+KZ	investment	control	https://invest.gov.kz/	https://invest.gov.kz/	Kazakh Invest|Investment Promotion	Публичный национальный портал
+KZ	education	functional	https://www.qaztradeacademy.com/?lang=ru	https://infotradecentralasia.org/	QazTrade Academy|экспортеров	На портал обучения ссылается отраслевой шлюз
+KZ	education	review	https://qaztradeacademy.com/	https://www.qaztradeacademy.com/	QazTrade	Рабочий apex не подтверждён
+KZ	customs	control	https://eokno.gov.kz/	https://tradeinfo.kz/?l=ru	Единое окно|Single Window	Отдельное имя из меню торгового портала
+KZ	customs	control	https://eokno.kgd.gov.kz/	https://eokno.kgd.gov.kz/	KEDEN|Единое окно	Старая система прямо сообщает о переносе функций
+KZ	customs	control	https://keden.kgd.gov.kz/	https://www.gov.kz/org/kgd/press/news/details/1186500?lang=ru	KEDEN|таможенного оформления	Рабочая система по информации КГД, без входа
+CENTRAL_ASIA	export	functional	https://infotradecentralasia.org/?lng=ru	https://tradeinfo.kz/?l=ru	Central Asia Gateway|Центральной Азии	Межстрановой справочник, не равен всем национальным порталам
+CENTRAL_ASIA	export	review	https://infotradecentralasia.org/	https://tradeinfo.kz/?l=ru	Central Asia Gateway	Корень отдельно от локализованной страницы
+KZ	rail	control	https://railways.kz/	https://railways.kz/	Қазақстан темір жолы|ҚТЖ	Сайт железнодорожного перевозчика
+KZ	rail	control	https://ktze.kz/	https://www.ktze.kz/ru	KTZ Express	Проверка перехода к точному WWW
+KZ	rail	control	https://www.ktze.kz/ru	https://www.ktze.kz/ru	KTZ Express|мультимодальная логистика	Публичная витрина грузовой логистики
+KZ	rail	control	https://commerce.ktze.kz/	https://www.ktze.kz/ru	KTZE Commerce	Публичный вход без авторизации
+KZ	rail	control	https://ektz.kz/	https://www.ktze.kz/ru	Единое цифровое окно|KTZ	Подтверждённая ссылка оператора, без подачи заявок
+KZ	rail	review	https://my.ktze.kz/	https://www.ktze.kz/ru	KTZ	Кабинет не проверять через логин
+KZ	rail	functional	https://middlecorridor.com/ru/kontakty	https://middlecorridor.com/	Транскаспийский|ТМТМ|Астана	Региональная ассоциация с контактами в Астане
+KZ	rail	review	https://middlecorridor.com/	https://middlecorridor.com/	Транскаспийский|ТМТМ	Корневой переход и контакты не одно измерение
+BY	chamber	control	https://www.cci.by/belorusskie-eksportery/	https://ivanovo.tpprf.ru/ru/news/546791/	Белорусские экспортеры|БелТПП	Публичный официальный каталог палаты
+BY	chamber	control	https://www.cci.by/o-chlenstve/reestr-dobrosovestnykh-partnerov/reestr/	https://ivanovo.tpprf.ru/ru/news/546791/	Реестр добросовестных партнеров|БелТПП	Открытый реестр, не отправлять формы
+BY	export	control	https://exportbelarus.by/o/oao-mtz	https://exportbelarus.by/o/oao-mtz	ОАО «МТЗ»|Минский тракторный завод	Каталог, не отождествлять с БелТПП
+BY	export	review	https://exportbelarus.info/about	https://exportbelarus.info/about	Экспорт Беларусь|Export-belarus	Редакция называет другой домен проекта, статус службы не подтверждён
+BY	export	review	https://export-belarus.com/	https://exportbelarus.info/about	Экспорт Беларусь|Export-belarus	Частный экспортный каталог, не госслужба
+BY	export	review	https://export.by/	https://export.by/	Экспорт|Belarus	Действующий публичный путь требует подтверждения
+BY	export	review	https://ncmps.by/	https://ncmps.by/	Национальный центр маркетинга	Точный адрес отдельно от экспортного каталога
+BY	investment	control	https://investinbelarus.by/	https://investinbelarus.by/	Национальное агентство инвестиций|НАИП	Публичный инвестиционный портал
+BY	customs	control	https://www.customs.gov.by/	https://www.customs.gov.by/	Таможенные органы Республики Беларусь	Текущая публичная витрина ГТК
+BY	customs	control	https://www.gtk.gov.by/	https://www.customs.gov.by/	Таможенные органы Республики Беларусь	Сравнение отдельно опубликованных входов
+BY	procurement	review	https://icetrade.by/	https://icetrade.by/	Закупки|торги	Публичный ответ проверяется отдельно
+BY	procurement	review	https://goszakupki.by/	https://goszakupki.by/	государственных закупок	Публичный ответ проверяется отдельно
+BY	procurement	review	https://butb.by/	https://butb.by/	Белорусская универсальная товарная биржа|БУТБ	Главный сайт не эквивалентен закупочному сервису
+RU	export	control	https://myexport.exportcenter.ru/	https://made-in-ural.ru/podderzhka-eksporterov/tsifrovaya-platforma-moy-eksport/tsifrovaya-platforma-moy-eksport/	Мой экспорт|Российский экспортный центр	Публичная оболочка, без входа
+RU	export	control	https://www.exportcenter.ru/	https://made-in-ural.ru/podderzhka-eksporterov/tsifrovaya-platforma-moy-eksport/tsifrovaya-platforma-moy-eksport/	Российский экспортный центр	Точный WWW, без авторизации
+RU	export	review	https://ved.gov.ru/	https://www.ved.tomsk.ru/podderzhka_eksporterov/poleznye_ssylki_dlja_eksportoorientirovannykh_subektov_msp/internetresursy_federalnogo_urovnja/	Внешнеэкономической информации	Публичный ответ требует подтверждения
+RU	customs	control	https://cpt.customs.gov.ru/	https://cpt.customs.gov.ru/	Центральная почтовая таможня	Национальный официальный хост
+RU	customs	review	https://edata.customs.ru/	https://domodedovo.customs.gov.ru/ved/ved/vnimaniyu-uchastnikov-ved	Личный кабинет участника ВЭД	Проверять только опубликованную оболочку; не делать вывод по неавторизованному доступу
+RU	rail	control	https://www.digitalrzd.ru/	https://www.digitalrzd.ru/	Цифровая логистика|ЭТП	Сайт оператора электронных площадок
+RU	rail	review	https://etpgp.rzd.ru/	https://www.digitalrzd.ru/	Грузовые перевозки|ЭТП	Публичный вход отдельно от портала оператора
+RU	rail	functional	https://www.fesco.ru/ru/	https://www.fesco.ru/ru/	FESCO|транспортно-логистических	Покрытый национальный вход для парного сравнения
+RU	rail	functional	https://www.fesco.com/ru/	https://www.fesco.com/ru/	FESCO|транспортно-логистических	То же назначение витрины, отдельная зона
+RU	rail	review	https://www.trcont.ru/ru/	https://www.trcont.ru/ru/	ТрансКонтейнер	Публичный рабочий путь требует подтверждения
+RU	procurement	control	https://www.roseltorg.ru/	https://tpp74.ru/nashi-usl0/informats6/elektronn21_old_del06.06.26/etp/perechen-elektronnykh-ploshchadok.php	Росэлторг|ЕЭТП	Публичная входная страница ЭТП
+RU	procurement	control	https://www.rts-tender.ru/	https://www.rts-tender.ru/	РТС-тендер	Публичная входная страница ЭТП
+RU	procurement	control	https://www.sberbank-ast.ru/	https://tpp74.ru/nashi-usl0/informats6/elektronn21_old_del06.06.26/etp/perechen-elektronnykh-ploshchadok.php	Сбербанк-АСТ|Сбер А	Публичная витрина, без заявок
+RU	procurement	control	https://portfolio.gisp.gov.ru/pp719v2/i/	https://portfolio.gisp.gov.ru/pp719v2/i/	Сервис ПП РФ-719|ГИСП	Публичная точка сервиса реестра продукции
+EAEU	customs	functional	https://eec.eaeunion.org/comission/department/dep_tamoj_zak/	https://eec.eaeunion.org/	Департамент таможенного законодательства|таможенного законодательства	Содержательная альтернативная страница после короткого корневого ответа
+EAEU	employment	functional	https://eec.eaeunion.org/special_project/eaeu/	https://eec.eaeunion.org/	Работа без границ|ЕАЭС	Официальное описание, отдельный путь того же хоста
+RU	employment	review	https://trudvsem.ru/	https://trudvsem.ru/	Работа России	Только текущий официальный публичный вход, тестовые имена не включены
