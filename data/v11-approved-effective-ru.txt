@@ -1379,3 +1379,7 @@ full:whatsmyconnection.com
 full:worldip.io
 full:www.ipka.sk
 full:yourip.app
+
+# Verified IP echoes, 2026-11-15
+full:api.tgip.eu
+full:ipv4.ippubblico.org
