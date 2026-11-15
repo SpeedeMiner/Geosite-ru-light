@@ -1,0 +1,4 @@
+host	observed_ipv4	ris_origin	ris_prefix	geoip_ru_match	geoip_sha256	ris_source
+peers.tv	195.189.238.97	AS41654	195.189.238.0/24	195.189.238.0/23	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	https://stat.ripe.net/data/network-info/data.json?resource=195.189.238.97
+b2b.peers.tv	185.215.4.20	AS57724	185.215.4.0/24	185.215.4.0/24	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	https://stat.ripe.net/data/network-info/data.json?resource=185.215.4.20
+life-stream.tv	5.152.194.146	AS20860	5.152.192.0/19	NA	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	https://stat.ripe.net/data/network-info/data.json?resource=5.152.194.146

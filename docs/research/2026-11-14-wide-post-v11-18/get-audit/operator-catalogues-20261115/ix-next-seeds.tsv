@@ -1,0 +1,9 @@
+host	source	dat_match
+my.ix.ru	https://kb.msk-ix.ru/ix/faq/	RU:domain_suffix:ru
+kb.msk-ix.ru	https://www.msk-ix.ru/medialogistika/	RU:domain_suffix:ru
+media.msk-ix.ru	https://www.msk-ix.ru/medialogistika/	RU:domain_suffix:ru
+www.msk-ix.ru	https://www.msk-ix.ru/news/731/	RU:domain_suffix:ru
+mskix.ru	https://mskix.ru/medialogistika/	RU:domain_suffix:ru
+peering-forum.ru	https://www.msk-ix.ru/news/731/	RU:domain_suffix:ru
+archive.peering-forum.ru	https://www.msk-ix.ru/news/731/	RU:domain_suffix:ru
+msk-ixday.ru	https://www.msk-ix.ru/news/731/	RU:domain_suffix:ru

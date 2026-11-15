@@ -1,0 +1,40 @@
+{
+  "runs": {
+    "operator-catalogues": [
+      43741927170,
+      12,
+      10
+    ],
+    "cbr-banking": [
+      43742365781,
+      20,
+      6
+    ],
+    "media-followup": [
+      43742538594,
+      10,
+      10
+    ],
+    "peers-doc": [
+      43742924013,
+      6,
+      6
+    ]
+  },
+  "total_attempts": 48,
+  "strict_tls_http_responses": 32,
+  "globalping_requests": 0,
+  "ru_exit_asns": [
+    12389,
+    50498
+  ],
+  "corporate_catalogue_distinct_hosts": 142,
+  "cbr_unique_hosts": 1221,
+  "accepted_exact": [
+    "b2b.peers.tv",
+    "life-stream.tv",
+    "peers.tv"
+  ],
+  "stacked_rules": 101,
+  "research_only": true
+}
