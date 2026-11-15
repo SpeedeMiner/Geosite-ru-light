@@ -120,6 +120,27 @@ class VpnObratnoGetTests(unittest.TestCase):
                     self.assertEqual(args[args.index('--range')+1], '0-4095' if host in {'img.solarspace.pro', 'cdn-viewer.diplodoc.com'} else '0-65535')
                 self.assertEqual(args[args.index('--max-filesize')+1], '524288')
 
+    def test_nspk_trust_is_pinned_and_host_scoped(self):
+        from hashlib import sha256
+        with TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp)/'root.pem'
+            root.write_bytes(b'fixture')
+            call = SimpleNamespace(returncode=0, stdout=json.dumps(STATS))
+            opts = dict(NSPK_TRUST_ROOT=root, NSPK_TRUST_SHA256=sha256(b'fixture').hexdigest())
+            with patch.multiple('vpnobratno_get', **opts), patch('vpnobratno_get.subprocess.run', return_value=call) as run:
+                target = dict(ROW, url='https://nspk.com/', host='nspk.com', cohort='nspk_trust')
+                get_from_tunnel(target, '8.8.8.8', 'tun0', 5)
+                args = run.call_args.args[0]
+                self.assertEqual(args[args.index('--cacert')+1], str(root))
+                self.assertNotIn('--insecure', args)
+                with self.assertRaises(ValueError):
+                    get_from_tunnel(dict(ROW, cohort='nspk_trust'), '8.8.8.8', 'tun0', 5)
+                root.write_bytes(b'changed')
+                with self.assertRaises(ValueError):
+                    get_from_tunnel(target, '8.8.8.8', 'tun0', 5)
+                get_from_tunnel(dict(target, cohort='corporate'), '8.8.8.8', 'tun0', 5)
+                self.assertNotIn('--cacert', run.call_args.args[0])
+
     def test_fail_closed_on_private_destination_and_incorrect_remote(self):
         for addr in ('127.0.0.1','10.0.0.1','224.0.0.1','::1'):
             with self.assertRaises(ValueError):

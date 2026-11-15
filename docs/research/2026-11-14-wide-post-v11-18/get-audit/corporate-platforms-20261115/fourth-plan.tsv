@@ -1,0 +1,4 @@
+cohort	type	rule	host	url	markers	source
+nspk_trust	candidate	nspk.com	nspk.com	https://nspk.com/	NSPK|National Payment Card System	https://www.nspk.ru/about/official_sites/
+nspk_trust	candidate	www.nspk.com	www.nspk.com	https://www.nspk.com/	NSPK|National Payment Card System	https://www.nspk.ru/about/official_sites/
+corporate	control	sbp.nspk.ru	sbp.nspk.ru	https://sbp.nspk.ru/	Система быстрых платежей	https://www.nspk.ru/about/official_sites/

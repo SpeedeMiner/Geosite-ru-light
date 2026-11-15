@@ -36,6 +36,9 @@ PUBLIC_DOC_RANGE = {
     'https://img.solarspace.pro/docs/start-authorization-page.jpg': '0-4095',
     'https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png': '0-4095',
 }
+NSPK_TRUST_ONLY = frozenset(('https://nspk.com/', 'https://www.nspk.com/'))
+NSPK_TRUST_ROOT = Path('.vpn-pilot/nspk-ca/root.pem')
+NSPK_TRUST_SHA256 = '936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504'
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
@@ -97,7 +100,8 @@ def get_from_tunnel(row, address, interface, timeout):
     host = check_url(row['url'])
     interface = tunnel_interface(interface)
     # Explicit bind + a pinned address resolved through the VPN kill-switch.
-    # Do not use HTTPS_PROXY, curlrc, redirects, or certificate overrides.
+    # No HTTPS_PROXY, curlrc, redirects, or disabling verification. The dedicated
+    # diagnostics use a pinned root only for the two public NSPK URLs.
     with TemporaryDirectory() as tmp:
         body_file = Path(tmp) / 'body'
         argv = ['curl','-q','-sS','-4','--proxy','','--noproxy','*',
@@ -107,6 +111,12 @@ def get_from_tunnel(row, address, interface, timeout):
                 '--write-out','%{json}']
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
             argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
+        if row.get('cohort') == 'nspk_trust':
+            if (row['url'] not in NSPK_TRUST_ONLY or NSPK_TRUST_ROOT.is_symlink()
+                    or not NSPK_TRUST_ROOT.is_file()
+                    or hashlib.sha256(NSPK_TRUST_ROOT.read_bytes()).hexdigest() != NSPK_TRUST_SHA256):
+                raise ValueError('invalid scoped NSPK trust diagnostic')
+            argv.extend(('--cacert', str(NSPK_TRUST_ROOT)))
         argv.extend(('--', row['url']))
         allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
         try:
