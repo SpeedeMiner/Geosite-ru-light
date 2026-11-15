@@ -12,6 +12,12 @@ core_files=(geosite_RU.dat geosite_RU.dat.sha256sum geosite_RU_categories.txt ge
 srs_files="$(python3 "$root/tools/build_geosite_srs.py" verify-assets --dat geosite_RU.dat)"
 mapfile -t srs_assets <<< "$srs_files"
 files=("${core_files[@]}" "${srs_assets[@]}")
+# The CDN branch exposes only runtime rule sets. Checksums and audit metadata
+# remain available in the numbered and rolling GitHub Releases.
+raw_files=(geosite_RU.dat)
+for file in "${srs_assets[@]}"; do
+  [[ "$file" == *.srs ]] && raw_files+=("$file")
+done
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
@@ -140,8 +146,20 @@ while IFS= read -r old; do
     git -C "$tmp/raw" rm -- "$old"
   fi
 done < "$tmp/raw-srs.txt"
-cp -- "${files[@]}" "$tmp/raw/"
-git -C "$tmp/raw" add -- "${files[@]}"
+for old in geosite_RU.dat.sha256sum geosite_RU_categories.txt \
+  geosite_RU_hydra_appended_categories.txt geosite_RU_new_sources.txt geosite_srs.sha256sum; do
+  if git -C "$tmp/raw" ls-files --error-unmatch -- "$old" >/dev/null 2>&1; then
+    git -C "$tmp/raw" rm -- "$old"
+  fi
+done
+cp -- "${raw_files[@]}" "$tmp/raw/"
+git -C "$tmp/raw" add -- "${raw_files[@]}"
+while IFS= read -r path; do
+  [[ "$path" == geosite_RU.dat || "$path" =~ ^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$ ]] || {
+    echo "unexpected file in CDN branch: $path" >&2
+    exit 1
+  }
+done < <(git -C "$tmp/raw" ls-files)
 if ! git -C "$tmp/raw" diff --cached --quiet; then
   git -C "$tmp/raw" -c user.name='github-actions[bot]' \
     -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
@@ -154,8 +172,8 @@ curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
   "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_RU.dat" -o "$tmp/raw.dat"
 cmp geosite_RU.dat "$tmp/raw.dat"
 curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
-  "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_srs.sha256sum" -o "$tmp/raw-srs.sha"
-cmp geosite_srs.sha256sum "$tmp/raw-srs.sha"
+  "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_RU.srs" -o "$tmp/raw.srs"
+cmp geosite_RU.srs "$tmp/raw.srs"
 
 changed=()
 for file in "${files[@]}"; do
@@ -226,20 +244,19 @@ jq -e --arg tag "$rolling" --arg title "$rolling_title" --rawfile notes "$tmp/ro
     exit 1
   }
 
-# The CDN is eventually consistent. Report actual DAT+checksum parity, never
-# infer it from the return code of a purge or from the checksum asset alone.
+# The CDN is eventually consistent. Compare runtime DAT and RU SRS bytes.
 cdn="https://cdn.jsdelivr.net/gh/$GITHUB_REPOSITORY@release"
 sync=false
 check_cdn() {
   curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/geosite_RU.dat" -o "$tmp/cdn.dat" &&
     cmp -s geosite_RU.dat "$tmp/cdn.dat" &&
-    curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/geosite_RU.dat.sha256sum" -o "$tmp/cdn.sha" &&
-    cmp -s geosite_RU.dat.sha256sum "$tmp/cdn.sha"
+    curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/geosite_RU.srs" -o "$tmp/cdn.srs" &&
+    cmp -s geosite_RU.srs "$tmp/cdn.srs"
 }
 if check_cdn; then
   sync=true
 else
-  for file in geosite_RU.dat geosite_RU.dat.sha256sum; do
+  for file in geosite_RU.dat geosite_RU.srs; do
     curl -fsS --connect-timeout 6 --max-time 15 \
       "https://purge.jsdelivr.net/gh/$GITHUB_REPOSITORY@release/$file" >/dev/null || true
   done
@@ -249,7 +266,7 @@ else
   done
 fi
 if [[ "$sync" == false ]]; then
-  echo "::warning::CDN DAT/checksum has not converged. Use the GitHub release or verified raw commit."
+  echo "::warning::CDN DAT/SRS has not converged. Use the GitHub release or verified raw commit."
 fi
-printf '### Verified GeoSite distribution\n\n- GitHub Release: %s/releases/tag/%s\n- Verified raw commit: `%s`\n- DAT SHA-256: `%s`\n- jsDelivr DAT + checksum match: %s\n' \
+printf '### Verified GeoSite distribution\n\n- GitHub Release: %s/releases/tag/%s\n- Verified raw commit: `%s`\n- DAT SHA-256: `%s`\n- jsDelivr DAT + RU SRS match: %s\n' \
   "$repo" "$rolling" "$raw_commit" "$CANDIDATE_SHA" "$sync" >> "$GITHUB_STEP_SUMMARY"
