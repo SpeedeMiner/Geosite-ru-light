@@ -1,0 +1,8 @@
+resource	value	state
+main	e3d787f41d2513c9ef2e95a6b19c5b7ca88f6f4b	unchanged
+release	b3e3c9cd8380854837dff1bbfff36c0dca87a27c	unchanged
+v11.19	ec6214b628162011ea1b4ebaf454cf0f6ae795d9	unchanged
+PR #39 open head	129d04dd7d5df045db32cf8db968ae9ec75f3372	unchanged
+rolling release	latest-optimized / v11.19	unchanged
+rolling geosite_RU.dat	sha256:fea7efa5c855ead11d2e8dd867f41d3b395afddba10013d0613e0c592ea7ca9f	unchanged
+rolling geosite_RU.srs	sha256:861c876bd52775c3dc360dc62c1ee7335e036bbf804696dc0b9583223a162c65	unchanged

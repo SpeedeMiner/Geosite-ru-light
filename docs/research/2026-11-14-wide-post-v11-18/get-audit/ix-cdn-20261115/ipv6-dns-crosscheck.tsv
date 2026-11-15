@@ -1,0 +1,9 @@
+host	doh_resolver	rcode	cname	aaaa	ris_origins	ris_prefix	ru_dat_match	pinned_dat_sha256	scope
+cdnnow.pro	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+lg.dataix.eu	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+lg.gblnet.net	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+ps-vitrina.storage-object.pscloud.io	dns.google	0	storage-object.pscloud.io.	2a00:5da0:1:1501::1	AS48716	2a00:5da0::/36	2a00:5da0::/29	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+selfcare.cdnnow.pro	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+www.eurasiapeering.com	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+www.ixcellerate.com	dns.google	0	-	-	-	-	-	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
+ps-vitrina.storage-object.pscloud.io	cloudflare-dns.com	0	storage-object.pscloud.io.	2a00:5da0:1:1501::1	AS48716	2a00:5da0::/36	2a00:5da0::/29	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d	dns_only_not_https
