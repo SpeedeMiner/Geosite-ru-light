@@ -1,0 +1,18 @@
+{
+  "run_id": 43717189876,
+  "attempt": 1,
+  "artifact_id": 14162193712,
+  "artifact_sha256": "2cc1f848ae1cbfc6b88c397076d2858d0b8c3756d8b99d0572dbf50deb23c850",
+  "head_sha": "353d0c1747e189ca8576be92b0061b6fd1d219ee",
+  "upstream": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "plan_sha256": "d7f805880357ddb3849a1c87c24adbe73f51a5afd2a8ef0a3e434139a97c8852",
+  "excluded_exit_asns": [
+    12389,
+    42610
+  ],
+  "ru_exit_asns": [
+    39785
+  ],
+  "https_responses": 4,
+  "globalping_requests": 0
+}

@@ -1,0 +1,13 @@
+group	host	url	source	role	light_ru	server_ru	light_block	non_ru
+Selectel	selectel.ru	https://selectel.ru/	https://selectel.ru/	public_frontend	domain:ru	domain:ru	NA	NA
+Selectel	docs.selectel.ru	https://docs.selectel.ru/api/urls/	https://docs.selectel.ru/api/urls/	official_api_docs	domain:ru	domain:ru	NA	NA
+Selectel	servers.ru	https://servers.ru/	https://selectel.ru/about/newsroom/news/selectel-soobshchaet-o-priobretenii-oblachnogo-provajdera-servers-ru/	affiliated_brand	domain:ru	domain:ru	NA	NA
+Selectel	exepto.ru	https://exepto.ru/	https://selectel.ru/about/newsroom/news/selectel-soobshchaet-o-priobretenii-oblachnogo-provajdera-servers-ru/	affiliated_brand	domain:ru	domain:ru	NA	NA
+Selectel	fozzy.ru	https://fozzy.ru/	https://selectel.ru/about/newsroom/news/selectel-soobshchaet-o-priobretenii-oblachnogo-provajdera-servers-ru/	affiliated_brand	domain:ru	domain:ru	NA	NA
+Selectel	vscale.io	https://vscale.io/	https://docs.vscale.io/migration/overview/	legacy_brand_migrated	domain:vscale.io	domain:vscale.io	NA	NA
+Selectel	docs.vscale.io	https://docs.vscale.io/migration/overview/	https://docs.vscale.io/migration/overview/	legacy_docs_migrated	domain:vscale.io	domain:vscale.io	NA	NA
+Timeweb	s3.twcstorage.ru	https://s3.twcstorage.ru/	https://timeweb.cloud/docs/s3-storage/manage-storage/link-domain	shared_customer_storage	domain:ru	domain:ru	NA	NA
+Ozon	dev.ozon.ru	https://dev.ozon.ru/news/482-Novyi-domen-Performance-API/	https://dev.ozon.ru/news/482-Novyi-domen-Performance-API/	public_api_docs	domain:ru	domain:ru	NA	NA
+Ozon	api-performance.ozon.ru	https://api-performance.ozon.ru/	https://dev.ozon.ru/news/501-Performance-API-perekhodim-na-novyi-domen/	current_performance_api	domain:ru	domain:ru	NA	NA
+Ozon	performance.ozon.ru	https://performance.ozon.ru/	https://dev.ozon.ru/news/501-Performance-API-perekhodim-na-novyi-domen/	legacy_performance_api_migrated	domain:ru	domain:ru	NA	NA
+ЭР-Телеком	ernet.ertelecom.ru	https://ernet.ertelecom.ru/	https://ernet.ertelecom.ru/	operator_service_portal	domain:ru	domain:ru	NA	NA
