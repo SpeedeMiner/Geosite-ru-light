@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	mtfree.net	mtfree.net	https://mtfree.net/	МаксимаТелеком	https://maximatelecom.ru/news.html
+corporate	candidate	wiki.domru.biz	wiki.domru.biz	https://wiki.domru.biz/mobile_app	Облачная АТС	https://b2b.dom.ru/moscow/oats
+corporate	candidate	wiki.domru.biz	wiki.domru.biz	https://wiki.domru.biz/	Облачная АТС	https://b2b.dom.ru/moscow/oats
+corporate	control	maximatelecom.ru	maximatelecom.ru	https://maximatelecom.ru/	МаксимаТелеком	https://maximatelecom.ru/news.html
+corporate	control	b2b.dom.ru	b2b.dom.ru	https://b2b.dom.ru/moscow/oats	Облачная АТС	https://b2b.dom.ru/moscow/oats
