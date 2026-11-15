@@ -1,0 +1,4 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_conformity"	"diagnostic"	"tech.eaeunion.org"	"tech.eaeunion.org"	"https://tech.eaeunion.org/tech/registers/35-1/ru/registryList"	"Единый реестр|сертификатов соответствия"	"https://tech.eaeunion.org/tech/registers/"
+"frontier_conformity"	"diagnostic"	"portal.eaeunion.org"	"portal.eaeunion.org"	"https://portal.eaeunion.org/sites/commonprocesses/ru-ru/Pages/ConformityAuthorityDetails.aspx"	"Техническое регулирование|оценке соответствия"	"https://www.nca.kz/servisy/"
+"frontier_conformity"	"diagnostic"	"nsi.eaeunion.org"	"nsi.eaeunion.org"	"https://nsi.eaeunion.org/portal/2048?date=2025-05-29"	"Подсистема НСИ|классификатор"	"https://eec.eaeunion.org/upload/iblock/a32/K_1157.pdf"

@@ -1,0 +1,16 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	conformity	functional	https://tech.eaeunion.org/tech/registers/35-1/ru/registryList	https://tech.eaeunion.org/tech/registers/	Единый реестр|сертификатов соответствия	Содержательный путь вместо измеренного корня, веб-индексатор не получил тело
+EAEU	conformity	review	https://tech.eaeunion.org/tech/registers/	https://tech.eaeunion.org/tech/registers/35-1/ru/registryList	Техническое регулирование|реестры	Отдельная оболочка того же хоста, пока не в очереди
+EAEU	conformity	review	https://tech.eaeunion.org/tech/ru/registers/36	https://www.nca.kz/servisy/	Единый реестр|оценке соответствия	Веб-навигация сообщала переход с legacy URL, не замена свежего теста
+EAEU	conformity	functional	https://portal.eaeunion.org/sites/commonprocesses/ru-ru/Pages/ConformityAuthorityDetails.aspx	https://www.nca.kz/servisy/	Техническое регулирование|оценке соответствия	Глубокая публичная цель, корень ранее измерен отдельно
+EAEU	data_catalogue	functional	https://nsi.eaeunion.org/portal/2048?date=2025-05-29	https://eec.eaeunion.org/upload/iblock/a32/K_1157.pdf	Подсистема НСИ|классификатор	Публичный идентификатор раздела, отделить SPA от нормального тела
+KZ	conformity	control	https://www.nca.kz/servisy/	https://www.nca.kz/servisy/	Национальный центр аккредитации|Сервисы	Официальная страница с перекрёстными ссылками на два национальных реестра
+KZ	conformity	review	https://eokno.gov.kz/public-register/register-ktrm.xhtml	https://www.nca.kz/servisy/	сертификатов соответствия|национальная часть	Источник содержит сессионный параметр, точка зафиксирована без него и не запускается
+KZ	conformity	functional	https://techreg.gov.kz/index/	https://www.nca.kz/servisy/	публичные реестры|технического регулирования	Национальный ресурс по прямой ссылке, не входить
+KZ	conformity	review	https://old.nca.kz/	https://www.nca.kz/servisy/		Заявочный хост, только покрытие имени
+KZ	conformity	third_party	https://docs.google.com/	https://www.nca.kz/servisy/		Общая платформа документов, не покрывать по ссылке
+BY	conformity	control	https://bsca.by/	https://bsca.by/	Belarusian State Centre for Accreditation|Белорусский государственный центр	Национальный центр аккредитации
+BY	conformity	functional	https://tsouz.belgiss.by/	https://tsouz.belgiss.by/	Реестры документов|оценке соответствия	Публичная витрина реестров, без поиска или ввода документа
+RU	conformity	control	https://pub.fsa.gov.ru/rss/certificate	https://pub.fsa.gov.ru/rss/certificate	Росаккредитация|сертификатов соответствия	Анонимный национальный реестр, чтение оболочки
+RU	conformity	control	https://rospatent.gov.ru/ru/activities/inter/eaeu	https://rospatent.gov.ru/ru/activities/inter/eaeu	интеллектуальной собственности|Евразийского	Официальная справка, не путать с реестром сертификатов
+RU	conformity	review	https://checkreestr.ru/reestr/sertifikatov/	https://checkreestr.ru/reestr/sertifikatov/		Сторонний поисковый посредник, не официальный реестр

@@ -1,0 +1,6 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_conformity"	"diagnostic"	"www.nca.kz"	"www.nca.kz"	"https://www.nca.kz/servisy/"	"Национальный центр аккредитации|Сервисы"	"https://www.nca.kz/servisy/"
+"control_conformity"	"diagnostic"	"techreg.gov.kz"	"techreg.gov.kz"	"https://techreg.gov.kz/index/"	"публичные реестры|технического регулирования"	"https://www.nca.kz/servisy/"
+"control_conformity"	"diagnostic"	"bsca.by"	"bsca.by"	"https://bsca.by/"	"Belarusian State Centre for Accreditation|Белорусский государственный центр"	"https://bsca.by/"
+"control_conformity"	"diagnostic"	"tsouz.belgiss.by"	"tsouz.belgiss.by"	"https://tsouz.belgiss.by/"	"Реестры документов|оценке соответствия"	"https://tsouz.belgiss.by/"
+"control_conformity"	"diagnostic"	"pub.fsa.gov.ru"	"pub.fsa.gov.ru"	"https://pub.fsa.gov.ru/rss/certificate"	"Росаккредитация|сертификатов соответствия"	"https://pub.fsa.gov.ru/rss/certificate"
