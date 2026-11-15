@@ -1,0 +1,11 @@
+group	host	service	url	source	role	evidence	disposition	light_ru	server_ru	block	non_ru
+Bercut	hip.bercut.com	HIP платформа	https://hip.bercut.com/esb	https://esb.bercut.com/	official_product	public_primary_documentation	review	NA	NA	NA	NA
+Bercut	dm.bercut.com	Datamapper	https://dm.bercut.com/	https://hip.bercut.com/	unconfirmed_public_content	public_primary_documentation	review	NA	NA	NA	NA
+Базальт СПО	altlinux.org	вход в wiki	https://altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	redirect_only	public_primary_documentation	review	NA	NA	NA	NA
+Базальт СПО	www.altlinux.org	конечная wiki	https://www.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	community_wiki	public_primary_documentation	review	NA	NA	NA	NA
+МТС / VisionLabs	visionlabs.ai	Международный сайт	https://visionlabs.ai/	https://visionlabs.ai/about-us	global_site_keep_separate	public_primary_documentation	review	NA	NA	NA	NA
+МТС / VisionLabs	visionlabs.ru	Российский сайт	https://visionlabs.ru/	https://ir.mts.ru/news_and_events/corporate_releases/details/742256	domestic_site	public_primary_documentation	review	domain:ru	domain:ru	NA	NA
+МТС / VisionLabs	docs.visionlabs.ru	Документация LUNA	https://docs.visionlabs.ru/	https://docs.visionlabs.ru/	domestic_documentation	public_primary_documentation	review	domain:ru	domain:ru	NA	NA
+RWB	rost.wb.ru	Платформа роста	https://rost.wb.ru/	https://rwb.ru/	official_brand_link	public_primary_documentation	review	domain:ru	domain:ru	NA	NA
+RWB	pro.wildberries.ru	Портал обучения	https://pro.wildberries.ru/	https://seller.wildberries.ru/instructions/ru/ru/material/wb-api	official_seller_help	public_primary_documentation	review	domain:ru	domain:ru	NA	NA
+RWB	seller-services.wildberries.ru	Портал сервисов	https://seller-services.wildberries.ru/	https://seller.wildberries.ru/instructions/ru/ru/material/wb-api	official_seller_help	public_primary_documentation	review	domain:ru	domain:ru	NA	NA

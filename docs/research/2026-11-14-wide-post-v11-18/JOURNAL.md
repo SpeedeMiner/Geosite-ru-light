@@ -638,3 +638,8 @@
 
 - [Actions 43719060748](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43719060748): все три имени дали по два HTTPS 200 с валидным TLS и ожидаемыми заголовками из AS12389/AS52043. Поддержка показала брендированный портал, вход не выполнялся. Контроль `bercut.com` дважды вернул 403 и уже покрыт как `full:`, его правило не менялось. [Наблюдения](get-audit/corporate-market-20261115/vpn-43719060748.tsv) · [квитанция](get-audit/corporate-market-20261115/vpn-43719060748-receipt.json).
 - Отдельный фиксированный [план](get-audit/corporate-market-20261115/final-vpn-plan.tsv) перепроверяет новый публичный HIP, отмеченный каталогом DM и конечную страницу вики «Альт», без следования редиректам или обхода защит.
+
+### 18:31 UTC+05:00 — восемь правил сборочно проверены, российский контур VisionLabs отделён
+
+- Совместная локальная сборка трёх Avito.Tech, двух «Альт» и трёх Bercut дала ровно восемь новых точных правил для Light и Server поверх v11.19 и PR №39. `BLOCK` и все 17 не-RU SRS не меняются, Server только `RU`. [Манифест](get-audit/corporate-market-20261115/verified-eight.txt) · [сборочный протокол](get-audit/corporate-market-20261115/local-preview-eight.tsv).
+- Проверена дополнительная выборка экосистемы МТС, в том числе Exolve, KION, Юрент, Строки, Live, второй набор продуктовых ссылок WB. Российские `visionlabs.ru` и `docs.visionlabs.ru` уже в `RU`; МТС официально называет VisionLabs частью ИТ-вертикали, но `visionlabs.ai` — отдельный англоязычный международный сайт, а не недостающий российский кабинет. Оставлен без изменения. [Выборка МТС](get-audit/corporate-market-20261115/mts-followup.tsv) · [точечные решения](get-audit/corporate-market-20261115/secondary-candidates.tsv).

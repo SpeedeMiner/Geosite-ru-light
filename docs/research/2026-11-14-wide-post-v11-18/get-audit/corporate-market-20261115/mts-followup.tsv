@@ -1,0 +1,13 @@
+group	host	service	url	source	role	evidence	disposition	light_ru	server_ru	block	non_ru	effective_host	http	page_title
+МТС	personal.mts.ru	mts_personal	https://personal.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	mts.ru	403	Access Blocked
+МТС	mts.ru	mts_ecosystem	https://mts.ru/personal/mobilnaya-svyaz/uslugi/razvlecheniya	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	mts.ru	403	Access Blocked
+МТС	exolve.ru	mts_exolve	https://exolve.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	exolve.ru	200	МТС Exolve - коммуникационная платформа для разработчиков и бизнеса
+МТС	docs.exolve.ru	mts_exolve_docs	https://docs.exolve.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	docs.exolve.ru	200	Документация по API и SDK МТС Exolve
+МТС	urent.ru	mts_urent	https://urent.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	urent.ru	200	Юрент — шеринг самокатов и велосипедов
+МТС	visionlabs.ai	mts_vision	https://visionlabs.ai/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	NA	NA	NA	NA	visionlabs.ai	200	VisionLabs: Human and Object Recognition Technologies
+МТС	music.mts.ru	mts_music	https://music.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	music.mts.ru	200	Вы не робот?
+МТС	kion.ru	mts_kion	https://kion.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	kion.ru	200	Онлайн-кинотеатр КИОН - фильмы, сериалы, ТВ и мультфильмы смотреть онлайн бесплатно в хорошем качестве
+МТС	stroki.mts.ru	mts_stroki	https://stroki.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	stroki.mts.ru	200	Электронная библиотека МТС - читайте и слушайте книги онлайн в Строках
+МТС	travel.mts.ru	mts_travel	https://travel.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	travel.mts.ru	503	NA
+МТС	live.mts.ru	mts_live	https://live.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	live.mts.ru	200	Афиша Москвы, билеты на мероприятия, куда сходить в Москве | МТС Live
+МТС	premium.mts.ru	mts_premium	https://premium.mts.ru/	https://personal.mts.ru/	discovery_control	product_page_or_source	review	domain:ru	domain:ru	NA	NA	premium.mts.ru	403	Access Blocked

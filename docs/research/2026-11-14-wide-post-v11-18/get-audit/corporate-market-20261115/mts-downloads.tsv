@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+mts_personal	https://personal.mts.ru/	https://mts.ru/	403	0	0	300	ccb419e42200891a97388119ad5f32d066dd824a185be58f924f9e46164a7edc	text/html
+mts_ecosystem	https://mts.ru/personal/mobilnaya-svyaz/uslugi/razvlecheniya	https://mts.ru/personal/mobilnaya-svyaz/uslugi/razvlecheniya	403	0	0	300	f1505b1adc51150ccbe778e47476141649f7bb7ab140dbc652a99bbe40d1e432	text/html
+mts_exolve	https://exolve.ru/	https://exolve.ru/	200	0	0	403870	4ccc05ec70f9f7a9b2aad2820ffb33882937ac473a98fc4b18a45b820aabd41e	text/html; charset=utf-8
+mts_exolve_docs	https://docs.exolve.ru/	https://docs.exolve.ru/docs/ru/	200	0	0	201261	6bc0153740b227ad1cde39f588f0c2b7a2fc6a2cdf309cd9f8ba2349c9d89add	text/html; charset=utf-8
+mts_urent	https://urent.ru/	https://urent.ru/	200	0	0	701147	62f2437a1d856996a3648cfdbeee3b072e813e3e4dd20bf6b0f9735bb28f6c0b	text/html
+mts_vision	https://visionlabs.ai/	https://visionlabs.ai/	200	0	0	250230	e83e34af7b0a910097a4a88f978cfd8a718b5214f1a91c743e59761c280c7800	text/html; charset=utf-8
+mts_music	https://music.mts.ru/	https://music.mts.ru/tmgrdfrend/showcaptcha?cc=1&form-fb-hint=3.150&mt=D913364956149B4E850A73782301A3560B646CE9DE3D1BC567348AED1A392936C78A7952AE54065FEBB820B5F98B64660987F8D1A12C63D47F9D3437BEAD5F1423644C4C0E119F913EE1A74E9C29A62290FC57AEDDC784BA7860BE35EC08986E54EFB8D5446215902B16AA488B456A4BBB088E98DA01FCEEB2F1FE15AB5914CC7FBF01AC53AB70EACBC2A49B8DF1D13BC96CFCDAB58B83347A4B91C3B41EA3B09B82F507B53D16EA425580C52B8B1BED9824FF9713498C0553DFE3677991A197C98E5AD9015DE10B9CF5DC88449BAD50C71DC8261146D7A6639AD8D36E173364708E75AAB9A8BB2D11D62EB87D9E33FF085BC86F46CB2E2317B7E73FAC15892A264F2EBD493D4A31&retpath=aHR0cHM6Ly9tdXNpYy5tdHMucnUv_acfd0d5c28b659495b01f96b5aee03ba&t=7%252F1794749381%252F8530b413871cc2e8f2e6e5a9566df019&u=9763127691961832221&s=bef6b8e2e175095bc2d4f7a9eaf82bed	200	0	0	11825	30325fdfeb64193bfcd1d140880c177cf9362ad0152184833a6e5436121547aa	text/html
+mts_kion	https://kion.ru/	https://kion.ru/	200	0	0	1053687	cb56cc8d3b9042d7393044a113d8b66ce5aad6a7394a9a6c89bd648935bbff99	text/html;charset=UTF-8
+mts_stroki	https://stroki.mts.ru/	https://stroki.mts.ru/	200	0	0	84651	b69e271c2dad97c4266f8e651253ec01e7b99913b5ed81a791c6aedf4d4351bb	text/html
+mts_travel	https://travel.mts.ru/	https://travel.mts.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+mts_live	https://live.mts.ru/	https://live.mts.ru/moscow	200	0	0	653407	733343254d37c34d8f091437228bb30bb0f185df215c377c0dafb58537ac6452	text/html; charset=utf-8
+mts_premium	https://premium.mts.ru/	https://premium.mts.ru/	403	0	0	300	af9c66d44c4419b98acc5b27784ea6d012c2a671d45328538ca663bc929fa9f5	text/html

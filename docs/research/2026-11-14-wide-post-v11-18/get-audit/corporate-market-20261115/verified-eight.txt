@@ -1,0 +1,8 @@
+full:avitoplato.tech
+full:docs-esb.bercut.com
+full:docs.trisigma.io
+full:esb.bercut.com
+full:getalt.org
+full:mirmon.altlinux.org
+full:support.bercut.com
+full:trisigma.io
