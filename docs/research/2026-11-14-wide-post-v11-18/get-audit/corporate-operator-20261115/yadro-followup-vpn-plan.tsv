@@ -1,0 +1,12 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	engineer.yadro.com	engineer.yadro.com	https://engineer.yadro.com/	Истовый инженер|YADRO	https://yadro.com/
+corporate	candidate	edu.yadro.com	edu.yadro.com	https://edu.yadro.com/	YADRO|Образование	https://yadro.com/
+corporate	candidate	careers.yadro.com	careers.yadro.com	https://careers.yadro.com/	YADRO|Карьера	https://yadro.com/
+corporate	candidate	events.yadro.com	events.yadro.com	https://events.yadro.com/	Yadro Events|YADRO	https://careers.yadro.com/
+corporate	candidate	meetups.yadro.com	meetups.yadro.com	https://meetups.yadro.com/	YADRO|Мероприятия	https://yadro.com/
+corporate	candidate	docs.yadro.com	docs.yadro.com	https://docs.yadro.com/login/?next=/	Техническая документация|YADRO	https://docs.yadro.com/login/?next=/
+corporate	candidate	sp.yadro.com	sp.yadro.com	https://sp.yadro.com/	YADRO|Сервис	https://edu.yadro.com/
+corporate	candidate	www.yadro.com	www.yadro.com	https://www.yadro.com/	YADRO	https://yadro.com/
+corporate	candidate	kvadra.tech	kvadra.tech	https://kvadra.tech/	KVADRA|Квадра	https://yadro.com/
+corporate	candidate	1440.space	1440.space	https://1440.space/	БЮРО 1440|BUREAU 1440	https://x-holding.ru/companies/byuro-1440/
+corporate	control	yadro.com	yadro.com	https://yadro.com/ru/service/	YADRO|Сервис	https://yadro.com/

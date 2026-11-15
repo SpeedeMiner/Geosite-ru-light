@@ -1,0 +1,17 @@
+host	url	asn	http	curl	tls	asn_ris	state	title	markers	redirect_host	observed_at
+business.kvadra.tech	https://business.kvadra.tech/	12389	200	0	0	12389	vpn_body_unproven	Главная - KVADRA	NA	NA	2026-11-15T13:51:35.433266+00:00
+business.kvadra.tech	https://business.kvadra.tech/	208803	200	0	0	208803	vpn_body_unproven	Главная - KVADRA	NA	NA	2026-11-15T13:52:07.730269+00:00
+docs-b2c.kvadra.tech	https://docs-b2c.kvadra.tech/	12389	200	0	0	12389	vpn_marker	Техническая документация	KVADRA|Техническая документация	NA	2026-11-15T13:51:32.557257+00:00
+docs-b2c.kvadra.tech	https://docs-b2c.kvadra.tech/	208803	200	0	0	208803	vpn_marker	Техническая документация	KVADRA|Техническая документация	NA	2026-11-15T13:52:06.057384+00:00
+kvadra-service.yadro.com	https://kvadra-service.yadro.com/	12389	301	0	0	12389	vpn_redirect	301 Moved Permanently	NA	support.kvadra.tech	2026-11-15T13:51:37.127649+00:00
+kvadra-service.yadro.com	https://kvadra-service.yadro.com/	208803	301	0	0	208803	vpn_redirect	301 Moved Permanently	NA	support.kvadra.tech	2026-11-15T13:52:08.836858+00:00
+partners.yadro.com	https://partners.yadro.com/	12389	200	0	0	12389	vpn_body_unproven	Партнёрский портал YADRO	NA	NA	2026-11-15T13:51:28.089738+00:00
+partners.yadro.com	https://partners.yadro.com/	208803	200	0	0	208803	vpn_body_unproven	Партнёрский портал YADRO	NA	NA	2026-11-15T13:52:03.448382+00:00
+service.yadro.com	https://service.yadro.com/	12389	200	0	0	12389	vpn_marker	Сервисный портал YADRO	YADRO	NA	2026-11-15T13:51:26.239140+00:00
+service.yadro.com	https://service.yadro.com/	208803	200	0	0	208803	vpn_marker	Сервисный портал YADRO	YADRO	NA	2026-11-15T13:52:02.324561+00:00
+support.kvadra.tech	https://support.kvadra.tech/business/download-center/	12389	200	0	0	12389	vpn_body_unproven	KVADRA	NA	NA	2026-11-15T13:51:30.319118+00:00
+support.kvadra.tech	https://support.kvadra.tech/business/download-center/	208803	200	0	0	208803	vpn_body_unproven	KVADRA	NA	NA	2026-11-15T13:52:04.677368+00:00
+x-holding.ru	https://x-holding.ru/companies/yadro/	12389	200	0	0	12389	vpn_marker	Компании Холдинга | YADRO	YADRO	NA	2026-11-15T13:51:39.364076+00:00
+x-holding.ru	https://x-holding.ru/companies/yadro/	208803	200	0	0	208803	vpn_marker	Компании Холдинга | YADRO	YADRO	NA	2026-11-15T13:52:10.208029+00:00
+yadro.com	https://yadro.com/ru/documentation/	12389	200	0	0	12389	vpn_body_unproven	Техническая документация | YADRO	NA	NA	2026-11-15T13:51:24.404844+00:00
+yadro.com	https://yadro.com/ru/documentation/	208803	200	0	0	208803	vpn_body_unproven	Техническая документация | YADRO	NA	NA	2026-11-15T13:52:01.201985+00:00
