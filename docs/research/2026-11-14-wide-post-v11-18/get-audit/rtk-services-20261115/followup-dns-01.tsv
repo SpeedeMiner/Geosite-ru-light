@@ -1,0 +1,17 @@
+host	resolver	rrtype	rcode	answer	cname
+b2b.dom.ru	google	A	0	185.169.155.60	NA
+b2b.dom.ru	google	AAAA	0	NA	NA
+b2b.dom.ru	cloudflare	A	0	185.169.155.60	NA
+b2b.dom.ru	cloudflare	AAAA	0	NA	NA
+maximatelecom.ru	google	A	0	89.108.98.87	NA
+maximatelecom.ru	google	AAAA	0	NA	NA
+maximatelecom.ru	cloudflare	A	0	89.108.98.87	NA
+maximatelecom.ru	cloudflare	AAAA	0	NA	NA
+mtfree.net	google	A	0	185.26.114.92	NA
+mtfree.net	google	AAAA	0	NA	NA
+mtfree.net	cloudflare	A	0	185.26.114.92	NA
+mtfree.net	cloudflare	AAAA	0	NA	NA
+wiki.domru.biz	google	A	0	188.186.156.154	NA
+wiki.domru.biz	google	AAAA	0	NA	NA
+wiki.domru.biz	cloudflare	A	0	188.186.156.154	NA
+wiki.domru.biz	cloudflare	AAAA	0	NA	NA

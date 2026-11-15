@@ -1,0 +1,17 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+planeta_root	https://planeta.tc/	https://planeta.tc/	200	0	0	168271	995ee7b0335df709ae855eed1a8773ff4f25e0c8d76a0ba7598c2038b91091fa	text/html; charset=utf-8
+planeta_help	https://help.planeta.tc/	https://help.planeta.tc/	503	0	0	100	4dc259c6b598cc194255ee5bd4566fa85fcce887296d64b64a7e549522cbc108	text/plain
+planeta_brand	https://wink.planeta.tc/	https://wink.planeta.tc/	200	0	0	14014	35c2d807ead53a83d2ac195726ab5e4dfd70a50f2a3239cf09567b60a033d9f9	text/html; charset=utf-8
+planeta_jobs	https://job.planeta.tc/	https://job.planeta.tc/	200	0	0	140067	0a853651a9474b10934a0824c3c74229da73cb29a70abdb9a658066360cec0a1	text/html; charset=UTF-8
+planeta_deal	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	200	0	0	59449	b8bbabbe715bd684df1c38cebe05ca5ba6714bfe367bbd6cf28a8d5bac093779	text/html; charset=UTF-8
+maxima_root	https://maximatelecom.ru/	https://maximatelecom.ru/	200	0	0	21205	5c5be25e3e5c1a6f24c381f347bf991e246f3e441807a93c847d30fa28dfd829	text/html; charset=utf-8
+maxima_mtfree	https://mtfree.net/	https://mtfree.net/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+maxima_support	https://maximatelecom.ru/support.html	https://maximatelecom.ru/support.html	200	0	0	28726	e461132dbf6322704f98453d22e4ae8549654c55280e077d66d802254c2a05ae	text/html; charset=utf-8
+domru_ats	https://wiki.domru.biz/	https://wiki.domru.biz/	200	0	0	25133	b7840afb5c80611e74dbee2ae0b0de309b3590b4908aee6b2f8a9fce6e297e15	text/html; charset=utf-8
+domru_support	https://wiki.domru.biz/support	https://wiki.domru.biz/support	200	0	0	23642	3e939f993449ed1d15b3c9c80fae1475155a2866d5fb66495bc2dc8d0fc9780c	text/html; charset=utf-8
+domru_oats	https://oats.b2b.dom.ru/	https://b2b.dom.ru/products/oats-new/	403	0	0	1295	fed1fe021686565f8badb5630d1e7fa1c1d15c4c59dede773d4c07211b6ddc36	text/html
+domru_b2bhelp	https://b2b.dom.ru/help	https://b2b.dom.ru/help	403	0	0	1295	89b4600750ff87c60f1d0be760c0cc0a25e1731341c2f003a2e81acc80b418e5	text/html
+synterra	https://www.synterramedia.ru/	https://www.synterramedia.ru/	200	0	0	899954	79bcd56dc9a56e25e26cfbd6ff118001d5b303607440b5d0538f946ed09b828d	text/html; charset=UTF-8
+netris	https://www.netris.ru/	https://www.netris.ru/	200	0	0	73676	aaa9cd67d6f48caa8a9ea549bde813e4de2c6d90d9bf290639214ec564dee204	text/html
+alliance	https://inetvl.ru/o-kompanii/	https://inetvl.ru/o-kompanii/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+mango	https://help.mango-office.ru/license/	https://help.mango-office.ru/license/	403	0	0	300	a43762cc68c4afed31ed37074a4a4458bce84a5a3e27951ca6aa315c0defc52b	text/html

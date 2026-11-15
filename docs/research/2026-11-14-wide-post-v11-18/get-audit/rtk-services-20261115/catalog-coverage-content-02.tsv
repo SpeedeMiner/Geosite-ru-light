@@ -1,0 +1,20 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	lk-agent.rtcomm.ru	https://lk-agent.rtcomm.ru/	Агент	domain:ru	domain:ru	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	lk.rtcomm.ru	https://lk.rtcomm.ru/login	Абонент	domain:ru	domain:ru	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	lk2.rtcomm.ru	https://lk2.rtcomm.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	rutube.ru	https://rutube.ru/channel/25384807/	NA	domain:ru	domain:ru	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	vk.com	https://vk.com/rtcomm.official	NA	domain:vk.com	domain:vk.com	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-source	www.sensat.ru	https://www.sensat.ru/about/	SenSat представляет технологию высокоскоростного спутникового интернета в Ka-диапазоне	domain:ru	domain:ru	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	github.com	https://github.com/rekryt/iplist	rekryt/iplist	NA	NA	NA	GITHUB
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-source	impdomain.com	https://impdomain.com/services/wink.ru	Wink: маршруты для Keenetic, IP-адреса и домены — impDomain	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	impio.space	https://impio.space/	ускоритель интернета от Imp	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	impmarket.com	https://impmarket.com/ru	impMarket — игры Steam, подписки, игровая валюта и eSIM, оплата рублями Реклама В магазин	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	imppay.global	https://imppay.global/	impPay — карта USD для подписок из-за рубежа выпуск было 7 500 2 990 ₽ −60 % 0 % комиссия impPay Рек	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	impsave.com	https://impsave.com/	ImpSave	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_1	https://impdomain.com/services/wink.ru	official-link	t.me	https://t.me/imp_DMBot	Бот и мини-приложение	NA	NA	NA	TELEGRAM
+Wink (сторонние подсказки)	wink_ref_2	https://www.netlist.pro/service/wink	official-link	github.com	https://github.com/Therealwh/NetList	Репозиторий данных ↗	NA	NA	NA	GITHUB
+Wink (сторонние подсказки)	wink_ref_2	https://www.netlist.pro/service/wink	official-link	wink.rt.ru	https://wink.rt.ru/	Открыть домен ↗	domain:ru	domain:ru	NA	NA
+Wink (сторонние подсказки)	wink_ref_2	https://www.netlist.pro/service/wink	official-link	wink.ru	https://wink.ru/	wink.ru	domain:ru	domain:ru	NA	NA
+Wink (сторонние подсказки)	wink_ref_2	https://www.netlist.pro/service/wink	official-source	www.netlist.pro	https://www.netlist.pro/service/wink	Wink — NetList	NA	NA	NA	NA
+Wink (сторонние подсказки)	wink_ref_2	https://www.netlist.pro/service/wink	official-link	zapretyoutubediscordpanel.top	https://zapretyoutubediscordpanel.top/	РЕКОМЕНДУЕМЫЙ ПРОЕКТВерните YouTube и Discord без VPNУдобная панель для zapret: автоматический подбо	NA	NA	NA	NA

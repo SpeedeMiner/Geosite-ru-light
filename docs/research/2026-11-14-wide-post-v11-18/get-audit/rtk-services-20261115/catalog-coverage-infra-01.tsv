@@ -1,0 +1,42 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Планета	planeta_root	https://planeta.tc/	official-link	help.planeta.tc	https://help.planeta.tc/	Справка и помощь	NA	NA	NA	NA
+Планета	planeta_root	https://planeta.tc/	official-link	job.planeta.tc	https://job.planeta.tc/	Вакансии	NA	NA	NA	NA
+Планета	planeta_root	https://planeta.tc/	official-source	planeta.tc	https://planeta.tc/	Планета – интернет и ТВ | Интернет-провайдер в Екатеринбурге и области	NA	NA	NA	NA
+Планета	planeta_root	https://planeta.tc/	official-link	wink.planeta.tc	https://wink.planeta.tc/	Wink	NA	NA	NA	NA
+Планета	planeta_brand	https://wink.planeta.tc/	official-link	planeta.tc	https://planeta.tc/private	Забыли пароль?	NA	NA	NA	NA
+Планета	planeta_brand	https://wink.planeta.tc/	official-source	wink.planeta.tc	https://wink.planeta.tc/	Планета + Wink	NA	NA	NA	NA
+Планета	planeta_jobs	https://job.planeta.tc/	official-source	job.planeta.tc	https://job.planeta.tc/	Работа в Планете	NA	NA	NA	NA
+Планета	planeta_jobs	https://job.planeta.tc/	official-link	planeta.tc	https://planeta.tc/	NA	NA	NA	NA	NA
+Ростелеком	planeta_deal	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	planeta_deal	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	«Ростелеком» приобрел ведущего интернет-провайдера Екатеринбурга и Свердловской области. Официальный	domain:ru	domain:ru	NA	NA
+Ростелеком	planeta_deal	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	planeta_deal	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	apps.apple.com	https://apps.apple.com/ru/app/wi-fi-free/id1477049988	NA	NA	NA	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-source	maximatelecom.ru	https://maximatelecom.ru/	Wi-Fi решения - готовые беспроводные сетевые решения | МаксимаТелеком	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	moskvichmag.ru	https://moskvichmag.ru/lyudi/eto-moj-gorod-generalnyj-direktor-maksimatelekom-boris-volpe/	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	nplus1.ru	https://nplus1.ru/material/2021/04/02/subway-greedy	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	ria.ru	https://ria.ru/20210604/sotrudnichestvo-1735649079.html	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	t.me	https://t.me/maximatelecom	NA	NA	NA	NA	TELEGRAM
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	tass.ru	https://tass.ru/ekonomika/13193515	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	vc.ru	https://vc.ru/office/305667-gorod-budushchego-novyy-ofis-maksimatelekom-glazami-graffiti-hudozhnikov	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	vk.com	https://vk.com/maximatelecom	NA	domain:vk.com	domain:vk.com	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/it_v_promyshlennosti_2021/interviews/sergej_irevli	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.interfax-russia.ru	https://www.interfax-russia.ru/far-east/news/maksimatelekom-i-veb-ventures-zaymutsya-cifrovizaciey-obshchestvennogo-transporta-i-promyshlennosti-v-krupnyh-gorodah-rf	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.kp.ru	https://www.kp.ru/daily/28374.5/4523948/	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.popmech.ru	https://www.popmech.ru/technologies/778423-kak-mosmetro-ispolzuet-mashinnoe-obuchenie-dlya-ocenki-zagruzhennosti-vagonov/	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.rbc.ru	https://www.rbc.ru/spb_sz/06/12/2017/5a27b64f9a79472d03cbb7b8	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.sostav.ru	https://www.sostav.ru/publication/maksimatelekom-nachnet-vyyavlyat-bezbiletnikov-v-moskovskikh-avtobusakh-40945.html	NA	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_root	https://maximatelecom.ru/	official-link	www.wired.co.uk	https://www.wired.co.uk/article/london-undeground-wi-fi	NA	NA	NA	NA	NA
+МаксимаТелеком	maxima_support	https://maximatelecom.ru/support.html	official-link	apps.apple.com	https://apps.apple.com/ru/app/wi-fi-free/id1477049988	NA	NA	NA	NA	NA
+МаксимаТелеком	maxima_support	https://maximatelecom.ru/support.html	official-source	maximatelecom.ru	https://maximatelecom.ru/support.html	Как подключиться к Wi-Fi в метро | Техподдержка MT_FREE | МаксимаТелеком	domain:ru	domain:ru	NA	NA
+МаксимаТелеком	maxima_support	https://maximatelecom.ru/support.html	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+МаксимаТелеком	maxima_support	https://maximatelecom.ru/support.html	official-link	t.me	https://t.me/maximatelecom	NA	NA	NA	NA	TELEGRAM
+МаксимаТелеком	maxima_support	https://maximatelecom.ru/support.html	official-link	vk.com	https://vk.com/maximatelecom	NA	domain:vk.com	domain:vk.com	NA	NA
+ЭР-Телеком	domru_ats	https://wiki.domru.biz/	official-source	wiki.domru.biz	https://wiki.domru.biz/	Облачная АТС 4.0	NA	NA	NA	NA
+ЭР-Телеком	domru_support	https://wiki.domru.biz/support	official-link	oats.b2b.dom.ru	https://oats.b2b.dom.ru/	На сайт услуги	domain:ru	domain:ru	NA	NA
+ЭР-Телеком	domru_support	https://wiki.domru.biz/support	official-source	wiki.domru.biz	https://wiki.domru.biz/support	Облачная АТС 4.0	NA	NA	NA	NA
+Синтерра Медиа	synterra	https://www.synterramedia.ru/	official-link	en.synterramedia.ru	https://en.synterramedia.ru/	En	domain:ru	domain:ru	NA	NA
+Синтерра Медиа	synterra	https://www.synterramedia.ru/	official-source	www.synterramedia.ru	https://www.synterramedia.ru/	Обработка и доставка медиаконтента	domain:ru	domain:ru	NA	NA
+Нетрис	netris	https://www.netris.ru/	official-link	fishlab.su	https://fishlab.su/	Fishlab	domain:su	domain:su	NA	NA
+Нетрис	netris	https://www.netris.ru/	official-source	www.netris.ru	https://www.netris.ru/	Главная | Нетрис	domain:ru	domain:ru	NA	NA

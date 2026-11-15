@@ -1,0 +1,6 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+mtfree.net	https://mtfree.net/	candidate	503	0	0	200	NA	NA	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	2026-11-15T16:22:02.733044+00:00	workspace_unattributed
+wiki.domru.biz	https://wiki.domru.biz/mobile_app	candidate	200	0	0	200	Облачная АТС 4.0	NA	276e1ae3c1c344702d97a6a92ab1cb4aaae55965c386452a62cb5f706968f4f0	2026-11-15T16:21:57.727185+00:00	workspace_unattributed
+wiki.domru.biz	https://wiki.domru.biz/	candidate	200	0	0	200	Облачная АТС 4.0	NA	ec1d617610cea1a8dc7ca5d75fbf7cf969c6202067ba34f70020746d165fee23	2026-11-15T16:21:57.545888+00:00	workspace_unattributed
+maximatelecom.ru	https://maximatelecom.ru/	control	200	0	0	200	Wi-Fi решения - готовые беспроводные сетевые решения | МаксимаТелеком	NA	5c5be25e3e5c1a6f24c381f347bf991e246f3e441807a93c847d30fa28dfd829	2026-11-15T16:21:57.074110+00:00	workspace_unattributed
+b2b.dom.ru	https://b2b.dom.ru/moscow/oats	control	403	0	0	200	NA	NA	dcf43a38a7fa445510615b4e9292701c512bbc54bdaa75788906d0ae701c8a3f	2026-11-15T16:21:57.422546+00:00	workspace_unattributed

@@ -1,0 +1,13 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+t2_mixx	https://msk.t2.ru/mixx-together	https://msk.t2.ru/mixx-together	403	0	0	6327	9ace149f8a7b22ff792ce99940ac5936f26c2fbb56dafa54b59d256369494379	text/html;charset=utf-8
+t2_mixx_all	https://tci.t2.ru/mixx-all	https://tci.t2.ru/mixx-all	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+t2_root	https://t2.ru/	https://t2.ru/	403	0	0	6327	5dececc6e3ac032ea7520aa16a36094c2fa8d7db64f2676371635abbb26e1ccc	text/html;charset=utf-8
+ttk	https://company.ttk.ru/mainpage	https://company.ttk.ru/mainpage	200	0	0	1057529	aedd0994d1a5e538f3f7320726744f1ed0354e7097c55d1e05d04abbd731dc48	text/html; charset=UTF-8
+ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	https://company.ttk.ru/ttk-group/ttkasia/	200	0	0	440379	9bbbc4b06f930fcc0327be5d8b1ebf7e48f6cc1a4f01378f02c5e10604f73cc3	text/html; charset=UTF-8
+ttk_req	https://company.ttk.ru/req/	https://company.ttk.ru/req/	200	0	0	377782	3e704da37c59ea05d037514d4e0eae54e0555e4c07fa86775c8b22e61991f5e2	text/html; charset=UTF-8
+sensat	https://sensat.ru/about/	https://www.sensat.ru/about/	200	0	0	78408	e5406d6273852e1e58740b2e8e7f7ee0273b992e90def5c58239793217063010	text/html; charset=UTF-8
+er_contacts	https://ertelecom.ru/ru/contacts	https://ertelecom.ru/ru/contacts	200	0	0	2175	a9ceb0cac2b924599778dc82ceeef921793cc7fac9d0b5a2acb9a1de1f3c8b4a	text/html
+er_b2b	https://b2b.dom.ru/about	https://b2b.dom.ru/about	403	0	0	1295	dd7782c07c8b8b3c2819a5ba24651e9f320ebe5b331291e2e44f48b87c7c7632	text/html
+er_msk_dom	https://msk.dom.ru/news/dom-ru-obedinyaet-svoi-kompanii-v-moskve	https://msk.dom.ru/news/dom-ru-obedinyaet-svoi-kompanii-v-moskve	403	0	0	22998	9336b6585bec965fd5fecb135cee86616a8e3040963597316765138df87c916e	text/html
+wink_ref_1	https://impdomain.com/services/wink.ru	https://impdomain.com/services/wink.ru	200	0	0	41360	7b3e444d791668de788ffab13ea030e15b78fcdad00402cbd181968c68493c96	text/html; charset=utf-8
+wink_ref_2	https://www.netlist.pro/service/wink	https://www.netlist.pro/service/wink	200	0	0	14231	4928ff6a2b7bc31f5ecbcbea30abc90c365baf29a3b0b6e7c4cf61ba4f4bbb3c	text/html; charset=UTF-8

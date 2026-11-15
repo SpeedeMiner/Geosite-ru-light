@@ -1,0 +1,9 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+planeta.tc	https://planeta.tc/	candidate	200	0	0	200	Планета – интернет и ТВ | Интернет-провайдер в Екатеринбурге и области	NA	2ab1212dd456f211cc2e33f283fdc77518abab20f55c6e6d15243ab474b38696	2026-11-15T16:20:05.058899+00:00	workspace_unattributed
+help.planeta.tc	https://help.planeta.tc/	candidate	200	0	0	200	Справочный портал Планеты	NA	252b7c2311f362a616543ad9cc4bff4ee6daf3c9fef1dcbcf0148981581d4b86	2026-11-15T16:20:05.840171+00:00	workspace_unattributed
+wink.planeta.tc	https://wink.planeta.tc/	candidate	200	0	0	200	Планета + Wink	NA	35c2d807ead53a83d2ac195726ab5e4dfd70a50f2a3239cf09567b60a033d9f9	2026-11-15T16:20:05.317138+00:00	workspace_unattributed
+job.planeta.tc	https://job.planeta.tc/	candidate	200	0	0	200	Работа в Планете	NA	fab318f522361f6fd57f24766e3be794dc269b4c2efe0df00c9c396809b495bc	2026-11-15T16:20:05.014026+00:00	workspace_unattributed
+tv.planeta.tc	https://tv.planeta.tc/	candidate	503	0	0	200	NA	NA	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	2026-11-15T16:20:07.417598+00:00	workspace_unattributed
+my.planeta.tc	https://my.planeta.tc/	candidate	301	0	0	200	NA	planeta.tc	NA	2026-11-15T16:20:08.113235+00:00	workspace_unattributed
+old.planeta.tc	https://old.planeta.tc/ekb/articles/customer/documents	candidate	301	0	0	200	NA	planeta.tc	NA	2026-11-15T16:20:07.166960+00:00	workspace_unattributed
+www.company.rt.ru	https://www.company.rt.ru/press/REGIONALNEWS/d457612/	control	200	0	0	200	«Ростелеком» приобрел ведущего интернет-провайдера Екатеринбурга и Свердловской области. Официальный информационный сайт Ростелеком.	NA	f2ad95013dbd3d24a660a1ac7afc6aa9f628301f4fb8989b62381d0113da923c	2026-11-15T16:20:08.900974+00:00	workspace_unattributed

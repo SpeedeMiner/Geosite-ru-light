@@ -1,0 +1,15 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+broadcast.comdi.com	37.130.193.12	cloudflare|google	37.130.193.0/24	AS34545
+comdi.com	37.130.193.75	cloudflare|google	37.130.193.0/24	AS34545
+help.mts-link.ru	95.213.181.4	cloudflare|google	95.213.181.0/24	AS49505
+jespo.co	37.130.193.5	cloudflare|google	37.130.193.0/24	AS34545
+we.study	104.21.86.203	cloudflare|google	104.21.80.0/20	AS13335
+we.study	172.67.136.204	cloudflare|google	172.67.128.0/20	AS13335
+we.study	2606:4700:3031::ac43:88cc	cloudflare|google	2606:4700:3031::/48	AS13335
+we.study	2606:4700:3036::6815:56cb	cloudflare|google	2606:4700:3036::/48	AS13335
+wsboard.jespo.co	37.130.194.82	cloudflare|google	37.130.194.0/24	AS34545
+www.comdi.com	37.130.193.75	cloudflare|google	37.130.193.0/24	AS34545
+www.we.study	104.21.86.203	cloudflare|google	104.21.80.0/20	AS13335
+www.we.study	172.67.136.204	cloudflare|google	172.67.128.0/20	AS13335
+www.we.study	2606:4700:3031::ac43:88cc	cloudflare|google	2606:4700:3031::/48	AS13335
+www.we.study	2606:4700:3036::6815:56cb	cloudflare|google	2606:4700:3036::/48	AS13335

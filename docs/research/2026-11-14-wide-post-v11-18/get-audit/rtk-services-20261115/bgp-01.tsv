@@ -1,0 +1,14 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+help.planeta.tc	212.49.103.18	cloudflare|google	212.49.96.0/19	AS12668
+help.planeta.tc	2a02:17d0:8009:2::2	cloudflare|google	2a02:17d0::/32	AS12668
+job.planeta.tc	2a02:17d0:8018:ff00::d	cloudflare|google	2a02:17d0::/32	AS12668
+job.planeta.tc	46.48.103.23	cloudflare|google	46.48.0.0/17	AS12668
+my.planeta.tc	2a02:17d0:8018:ff00::a	google	2a02:17d0::/32	AS12668
+my.planeta.tc	46.48.103.20	google	46.48.0.0/17	AS12668
+old.planeta.tc	46.48.103.12	google	46.48.0.0/17	AS12668
+planeta.tc	2a02:17d0:8018:ff00::16	cloudflare|google	2a02:17d0::/32	AS12668
+planeta.tc	46.48.103.235	cloudflare|google	46.48.0.0/17	AS12668
+tv.planeta.tc	46.48.102.248	cloudflare|google	46.48.0.0/17	AS12668
+wink.planeta.tc	2a02:17d0:8018:ff00::f	cloudflare|google	2a02:17d0::/32	AS12668
+wink.planeta.tc	46.48.103.28	cloudflare|google	46.48.0.0/17	AS12668
+www.company.rt.ru	213.59.197.65	cloudflare|google	213.59.197.0/24	AS12389

@@ -1,0 +1,5 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+b2b.dom.ru	185.169.155.60	cloudflare|google	185.169.155.0/24	AS201706
+maximatelecom.ru	89.108.98.87	cloudflare|google	89.108.98.0/24	AS197695
+mtfree.net	185.26.114.92	cloudflare|google	185.26.112.0/22	AS48287
+wiki.domru.biz	188.186.156.154	cloudflare|google	188.186.156.0/23	AS31483

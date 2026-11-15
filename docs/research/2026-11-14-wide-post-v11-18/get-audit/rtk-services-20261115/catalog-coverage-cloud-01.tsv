@@ -1,0 +1,39 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Турбо Облако	turbo_company	https://turbocloud.ru/company	official-link	max.ru	https://max.ru/turbocloudnews	NA	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_company	https://turbocloud.ru/company	official-link	t.me	https://t.me/turbocloudnews	NA	NA	NA	NA	TELEGRAM
+Турбо Облако	turbo_company	https://turbocloud.ru/company	official-source	turbocloud.ru	https://turbocloud.ru/company	О компании «Турбо Облако»	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_company	https://turbocloud.ru/company	official-link	vk.com	https://vk.com/turbocloudnews	NA	domain:vk.com	domain:vk.com	NA	NA
+Турбо Облако	turbo_root	https://turbocloud.ru/	official-link	max.ru	https://max.ru/turbocloudnews	NA	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_root	https://turbocloud.ru/	official-link	t.me	https://t.me/turbocloudnews	NA	NA	NA	NA	TELEGRAM
+Турбо Облако	turbo_root	https://turbocloud.ru/	official-source	turbocloud.ru	https://turbocloud.ru/	Облачная инфраструктура от «Турбо Облака»	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_root	https://turbocloud.ru/	official-link	vk.com	https://vk.com/turbocloudnews	NA	domain:vk.com	domain:vk.com	NA	NA
+Турбо Облако	turbo_s3	https://turbocloud.ru/docs/s3/api/	docs-code	my-bucket.s3.amazonaws.com	https://my-bucket.s3.amazonaws.com/example.txt	example or documented endpoint	NA	NA	NA	NA
+Турбо Облако	turbo_s3	https://turbocloud.ru/docs/s3/api/	docs-code	my-bucket.storage.turbocloud.ru	https://my-bucket.storage.turbocloud.ru/example.txt	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_s3	https://turbocloud.ru/docs/s3/api/	docs-code	storage.turbocloud.ru	https://storage.turbocloud.ru/	example or documented endpoint	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_s3	https://turbocloud.ru/docs/s3/api/	official-source	turbocloud.ru	https://turbocloud.ru/docs/s3/api/	Справочник API | Турбо Облако — Документация	domain:ru	domain:ru	NA	NA
+Турбо Облако	turbo_dns	https://turbocloud.ru/docs/legal/rules/cloud_services_dns/	official-source	turbocloud.ru	https://turbocloud.ru/docs/legal/rules/cloud_services_dns/	Правила оказания услуги «Управление DNS» | Турбо Облако — Документация	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-link	rt-solar.ru	https://rt-solar.ru/	Группа компаний «Солар»	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-link	turbocloud.ru	https://turbocloud.ru/services/solarspace	Solar Space в облаке	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d479203/	Компания «Турбо Облако» запустила сервис Solar Space для комплексной защиты сайтов и веб-приложений.	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_solar	https://www.company.rt.ru/press/news/d479203/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	tdata.tech	https://tdata.tech/	TData	NA	NA	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	turbocloud.ru	https://turbocloud.ru/	«Турбо Облако»	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d477419/	TData запустит новые продукты в «Турбо Облаке». Официальный информационный сайт Ростелеком.	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	turbo_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dc_cloud	https://www.cloud.rt.ru/showcase/main	official-source	www.cloud.rt.ru	https://www.cloud.rt.ru/showcase/main	Облако Ростелеком х Турбо Облако	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dc_dataline	https://www.dataline.ru/	official-link	apps.db.ripe.net	https://apps.db.ripe.net/db-web-ui/query	90.96.187.196	NA	NA	NA	NA
+РТК-ЦОД	rt_dc_dataline	https://www.dataline.ru/	official-link	forum.khn.ru	https://forum.khn.ru/	Наш форум	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dc_dataline	https://www.dataline.ru/	official-link	stat.dataline.ru	https://stat.dataline.ru/login.php	Личный кабинет	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dc_dataline	https://www.dataline.ru/	official-source	www.dataline.ru	https://www.dataline.ru/	Интернет - Дата-Лайн	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dc_dataline	https://www.dataline.ru/	official-link	www.ripe.net	https://www.ripe.net/membership/indices/data/ru.data-line-khb.html	NA	NA	NA	NA	NA
+РТК-ЦОД	rt_dc_support	https://support.rt-dc.ru/	official-source	support.rt-dc.ru	https://support.rt-dc.ru/	ESMP CP	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	auroraos.ru	https://auroraos.ru/documentation	Документация	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	developer.auroraos.ru	https://developer.auroraos.ru/	Аврора SDK	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	docs.auroraos.ru	https://docs.auroraos.ru/files/SDK/Instrukciya_po_ustanovke_Avrora_SDK_dlya_razrabotki_PO_pod_OS_Avrora.pdf	Инструкция по установке	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	hh.ru	https://hh.ru/employer/2300703	Вакансии	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	max.ru	https://max.ru/aurora_os	NA	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	nahabino.hh.ru	https://nahabino.hh.ru/employer/2300703	Вакансии	domain:ru	domain:ru	NA	NA

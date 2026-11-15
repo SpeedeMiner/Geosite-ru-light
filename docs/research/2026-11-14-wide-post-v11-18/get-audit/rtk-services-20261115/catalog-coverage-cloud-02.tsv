@@ -1,0 +1,36 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	reestr.digital.gov.ru	https://reestr.digital.gov.ru/reestr/2891993/	Аврора SDK включен в Единый реестр российских программ для ЭВМ и БД No	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	t.me	https://t.me/omp_ru	NA	NA	NA	NA	TELEGRAM
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-link	vk.ru	https://vk.ru/aurora_os	NA	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_sdk	https://www.omp.ru/sdk	official-source	www.omp.ru	https://www.omp.ru/sdk	Аврора SDK | Открытая мобильная платформа	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-source	auroraos.ru	https://auroraos.ru/documentation	Техническая документация	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	community.omprussia.ru	https://community.omprussia.ru/documentation/software_development.html	Техническая документация	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	cve.omprussia.ru	https://cve.omprussia.ru/	Уведомления	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	developer.auroraos.ru	https://developer.auroraos.ru/	Разработчику	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	docs.auroraos.ru	https://docs.auroraos.ru/files/5.7.0/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0%20%C2%AB%D0%90%D0%B2%D1%80%D0%BE%D1%80%D0%B0%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%C2%BB%205.7.0.pdf	Руководство администратора «Аврора Центр» 5.7.0	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	max.ru	https://max.ru/aurora_os	NA	domain:ru	domain:ru	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	t.me	https://t.me/omp_ru	NA	NA	NA	NA	TELEGRAM
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	vk.com	https://vk.com/aurora_os	NA	domain:vk.com	domain:vk.com	NA	NA
+Открытая мобильная платформа	aurora_docs	https://auroraos.ru/documentation	official-link	vk.ru	https://vk.ru/aurora_os	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	avtopoligon.hh.ru	https://avtopoligon.hh.ru/employer/105134	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	bft.ru	https://bft.ru/career/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	careers.t2.ru	https://careers.t2.ru/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	habr.com	https://habr.com/ru/company/rostelecom	NA	domain:habr.com	domain:habr.com	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	hh.ru	https://hh.ru/employer/852361	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	hi.rtksr.ru	https://hi.rtksr.ru/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	i-novus.ru	https://i-novus.ru/vacancies	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	inetvl.ru	https://inetvl.ru/vakansii/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	job.planeta.tc	https://job.planeta.tc/	Подробнее	NA	NA	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-source	job.rt.ru	https://job.rt.ru/dzo	Вакансии дочерних компаний	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	lukit.ru	https://lukit.ru/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	msk.rt.ru	https://msk.rt.ru/legal	Политикой конфиденциальности	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	rtk-inform.ru	https://rtk-inform.ru/career/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	saransk.hh.ru	https://saransk.hh.ru/employer/1275207	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	spb.hh.ru	https://spb.hh.ru/employer/11600	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	t.me	https://t.me/Rostelecom_career	NA	NA	NA	NA	TELEGRAM
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	team.rt-solar.ru	https://team.rt-solar.ru/vacancies/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	ufa.hh.ru	https://ufa.hh.ru/employer/112324	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	vk.com	https://vk.com/rostelecom_career	NA	domain:vk.com	domain:vk.com	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	www.company.rt.ru	https://www.company.rt.ru/	О компании	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	www.mango-office.ru	https://www.mango-office.ru/about/career/	Подробнее	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_dzo	https://job.rt.ru/dzo	official-link	www.rtcomm.ru	https://www.rtcomm.ru/company/vacancy/	Подробнее	domain:ru	domain:ru	NA	NA

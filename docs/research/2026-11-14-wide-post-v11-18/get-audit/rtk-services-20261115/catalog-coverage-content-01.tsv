@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	b2b.ttk.ru	https://b2b.ttk.ru/	Для бизнеса	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-source	company.ttk.ru	https://company.ttk.ru/mainpage	Официальный сайт АО «Компания ТрансТелеКом»	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	english.ttk.ru	https://english.ttk.ru/	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	max.ru	https://max.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	moskva.myttk.ru	https://moskva.myttk.ru/services/service-packs/	Интернет и ТВ	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	ok.ru	https://ok.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	t.me	https://t.me/ttkrus	NA	NA	NA	NA	TELEGRAM
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk	https://company.ttk.ru/mainpage	official-link	vk.com	https://vk.com/ttk	NA	domain:vk.com	domain:vk.com	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	b2b.ttk.ru	https://b2b.ttk.ru/	Для бизнеса	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-source	company.ttk.ru	https://company.ttk.ru/ttk-group/ttkasia/	Company TTK Asia Limited - АО «Компания ТрансТелеКом»	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	english.ttk.ru	https://english.ttk.ru/	english.ttk.ru	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	max.ru	https://max.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	moskva.myttk.ru	https://moskva.myttk.ru/services/service-packs/	Интернет и ТВ	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	ok.ru	https://ok.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	t.me	https://t.me/ttkrus	NA	NA	NA	NA	TELEGRAM
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_asia	https://company.ttk.ru/ttk-group/ttkasia/	official-link	vk.com	https://vk.com/ttk	NA	domain:vk.com	domain:vk.com	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	b2b.ttk.ru	https://b2b.ttk.ru/	Для бизнеса	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-source	company.ttk.ru	https://company.ttk.ru/req/	Реквизиты	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	english.ttk.ru	https://english.ttk.ru/	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	max.ru	https://max.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	moskva.myttk.ru	https://moskva.myttk.ru/services/service-packs/	Интернет и ТВ	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	ok.ru	https://ok.ru/ttk	NA	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	t.me	https://t.me/ttkrus	NA	NA	NA	NA	TELEGRAM
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA
+ТрансТелеКом	ttk_req	https://company.ttk.ru/req/	official-link	vk.com	https://vk.com/ttk	NA	domain:vk.com	domain:vk.com	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	apps.apple.com	https://apps.apple.com/ru/app/sensat/id1568651409	NA	NA	NA	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	backapi.rustore.ru	https://backapi.rustore.ru/applicationData/storeDownload/ru.rtcomm.lk	NA	domain:ru	domain:ru	NA	NA
+РТКомм	sensat	https://www.sensat.ru/about/	official-link	itunes.apple.com	https://itunes.apple.com/ru/app/eutelsat-satellite-finder/id628457142	NA	NA	NA	NA	NA
