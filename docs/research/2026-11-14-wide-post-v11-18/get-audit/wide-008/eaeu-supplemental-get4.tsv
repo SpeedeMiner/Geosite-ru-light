@@ -1,0 +1,6 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"regional_frontier"	"diagnostic"	"courteurasian.org"	"courteurasian.org"	"https://courteurasian.org/"	"Суд ЕАЭС|Суд Евразийского экономического союза"	"https://eaeunion.org/?lang=ru"
+"regional_frontier"	"diagnostic"	"regulation.eaeunion.org"	"regulation.eaeunion.org"	"https://regulation.eaeunion.org/"	"Оценка регулирующего воздействия|Общественное обсуждение"	"https://docs.eaeunion.org/"
+"regional_frontier"	"diagnostic"	"tech.eaeunion.org"	"tech.eaeunion.org"	"https://tech.eaeunion.org/tech"	"Техническое регулирование|ЕАЭС"	"https://eec.eaeunion.org/"
+"regional_frontier"	"diagnostic"	"educ.eaeunion.org"	"educ.eaeunion.org"	"https://educ.eaeunion.org/moodle/"	"Обучающий портал|Евразийского экономического союза"	"https://educ.eaeunion.org/"
+"regional_frontier"	"diagnostic"	"barriers.eaeunion.org"	"barriers.eaeunion.org"	"https://barriers.eaeunion.org/barriers"	"Функционирование внутренних рынков|ЕАЭС"	"https://barriers.eaeunion.org/"
