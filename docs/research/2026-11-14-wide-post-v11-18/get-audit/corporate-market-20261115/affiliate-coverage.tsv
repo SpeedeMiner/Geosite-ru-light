@@ -1,0 +1,13 @@
+group	host	service	url	source	role	evidence	disposition	light_ru	server_ru	block	non_ru
+Ростелеком/Базальт СПО	www.basealt.ru	официальный продукт	https://www.basealt.ru/	https://www.company.rt.ru/press/news_it/d479953/	corporate_product	official_reference_or_review	review	domain:ru	domain:ru	NA	NA
+Ростелеком/Базальт СПО	docs.altlinux.org	документация	https://docs.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	publisher_documentation	official_reference_or_review	review	full:docs.altlinux.org	full:docs.altlinux.org	NA	NA
+Ростелеком/Базальт СПО	www.altlinux.org	вики сообщества	https://www.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	community_surface	official_reference_or_review	review	NA	NA	NA	NA
+Ростелеком/Базальт СПО	packages.altlinux.org	метаданные пакетов	https://packages.altlinux.org/	https://docs.altlinux.org/ru-RU/alt-server/11.1/html/alt-server/install-packages-repo.html	package_directory	official_reference_or_review	review	full:packages.altlinux.org	full:packages.altlinux.org	NA	NA
+Ростелеком/Базальт СПО	ftp.altlinux.org	публичный репозиторий	https://ftp.altlinux.org/	https://docs.altlinux.org/ru-RU/alt-server/11.1/html/alt-server/install-packages-repo.html	package_mirror	official_reference_or_review	review	full:ftp.altlinux.org	full:ftp.altlinux.org	NA	NA
+Ростелеком/Базальт СПО	getalt.org	публикация сборок	https://getalt.org/ru/	https://www.basealt.ru/about/news/archive/view/novaja-versija-os-alt-server-virtualizacii-91-sovre	publisher_download_index	official_reference_or_review	review	NA	NA	NA	NA
+Ростелеком/Базальт СПО	forum.altlinux.org	форум сообщества	https://forum.altlinux.org/	https://docs.altlinux.org/ru-RU/index.html	community_surface	official_reference_or_review	review	full:forum.altlinux.org	full:forum.altlinux.org	NA	NA
+Ростелеком/Базальт СПО	mirmon.altlinux.org	мониторинг зеркал	https://mirmon.altlinux.org/	https://mirmon.altlinux.org/	mirror_status_review	official_reference_or_review	review	NA	NA	NA	NA
+Ростелеком/Базальт СПО	download.basealt.ru	прямые загрузки	https://download.basealt.ru/	https://mirmon.altlinux.org/p8.html	publisher_mirror	official_reference_or_review	review	domain:ru	domain:ru	NA	NA
+Avito.Tech	avitoplato.tech	Plato	https://avitoplato.tech/	https://avito.tech/	official_service_frontend	official_reference_or_review	review	NA	NA	NA	NA
+Avito.Tech	trisigma.io	Trisigma	https://trisigma.io/	https://avito.tech/	official_service_frontend	official_reference_or_review	review	NA	NA	NA	NA
+Avito.Tech	docs.trisigma.io	Документация Trisigma	https://docs.trisigma.io/	https://trisigma.io/	official_service_documentation	official_reference_or_review	review	NA	NA	NA	NA

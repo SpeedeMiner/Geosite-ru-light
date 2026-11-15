@@ -1,0 +1,13 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+avitoplato.tech	https://avitoplato.tech/	candidate	200	0	0	200	avito.tech Plato	NA	831c1dbf0f2c31e4897a2266f5fc9af8c4823464fcba5a7dd354c965027c14ad	2026-11-15T13:21:11.493666+00:00	workspace_unattributed
+trisigma.io	https://trisigma.io/	candidate	200	0	0	200	Trisigma – Платформа для A/B-тестирования	NA	22380fd7ace5288aea0c351f4030b07646fa523585dd106be886b841591f2dc1	2026-11-15T13:21:09.870347+00:00	workspace_unattributed
+docs.trisigma.io	https://docs.trisigma.io/	candidate	200	0	0	200	Trisigma help center	NA	24130510bd2b8921828993673bd22f6d936d44c58498cc600663e490866e43b2	2026-11-15T13:21:09.437868+00:00	workspace_unattributed
+avito.tech	https://avito.tech/	control	200	63	0	200	Avito.Tech	NA	e78787b1fadc39347716bde7703ec384697324588ca0e2f322692c81e3936f19	2026-11-15T13:21:13.482067+00:00	workspace_unattributed
+rwb.ru	https://rwb.ru/	control	200	0	0	200	RWB (Объединённая компания Wildberries & Russ)	NA	46ebe1095957a47383ebf6acc8903fbf8d9e08553025bc09d9d548f940fd6cf7	2026-11-15T13:21:14.691318+00:00	workspace_unattributed
+wb-bank.ru	https://wb-bank.ru/	documented_corporate	498	0	0	200	NA	NA	9cf3ea452ac43311a5fd19706e818b580e930d4b105efd60d6d6591bbd61a5bf	2026-11-15T13:21:13.344565+00:00	workspace_unattributed
+ads.avito.com	https://ads.avito.com/	documented_corporate	200	0	0	200	Разместить рекламу на Авито: баннеры, видео, спецпроекты	NA	9681f4ebab21c1768d7f027fbf1a57a1a565da367bdb64175b390234727f3c36	2026-11-15T13:21:14.332771+00:00	workspace_unattributed
+ads-help.avito.com	https://ads-help.avito.com/	documented_corporate	200	0	0	200	Справка Авито Рекламы	NA	4d9e03037c9f1fe3917ce7ed70dd3313a76571b572ae9466fada95e59e545336	2026-11-15T13:21:14.564219+00:00	workspace_unattributed
+static-basket-02.wbbasket.ru	https://static-basket-02.wbbasket.ru/	scope_control	404	0	0	200	NA	NA	NA	2026-11-15T13:21:13.843529+00:00	workspace_unattributed
+api.avito.ru	https://api.avito.ru/	routing_association_only	200	0	0	200	Site Unavailable	NA	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T13:21:14.714834+00:00	workspace_unattributed
+common-api.wildberries.ru	https://common-api.wildberries.ru/	routing_association_only	404	0	0	200	NA	NA	55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0	2026-11-15T13:21:16.899423+00:00	workspace_unattributed
+compute.api.cloud.ru	https://compute.api.cloud.ru/	routing_association_only	404	0	0	200	NA	NA	f5a436ec5a1ea47eb8eb85f94db76df7fb16caa2d347a56835f86c0307cedac2	2026-11-15T13:21:22.922541+00:00	workspace_unattributed
