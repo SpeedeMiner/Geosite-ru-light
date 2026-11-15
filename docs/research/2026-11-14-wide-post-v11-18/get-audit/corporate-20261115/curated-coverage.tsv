@@ -50,3 +50,16 @@ Ozon	provider	RU	api-seller.ozon.ru	https://api-seller.ozon.ru/	https://docs.ozo
 Альфа-Банк	bank	RU	anketa.alfabank.com	https://anketa.alfabank.com/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Точный хост регулятора, без отправки формы	first_party_service	domain:alfabank.com	domain:alfabank.com	-	-	no
 Россельхозбанк	bank	RU	developers.rshb.pro	https://developers.rshb.pro/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Точный хост из реестра	first_party_service	domain:rshb.pro	domain:rshb.pro	-	-	no
 Россельхозбанк	bank	RU	partner.rusagrobank.com	https://partner.rusagrobank.com/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Поддомен партнёров в реестре	first_party_service	domain:rusagrobank.com	domain:rusagrobank.com	-	-	no
+Ростелеком / Турбо Облако	provider	RU	turbocloud.ru	https://turbocloud.ru/	https://www.company.rt.ru/press/news/d474987/	Ростелеком называет официальный новый бренд	first_party_affiliate	domain:ru	domain:ru	-	-	no
+Ростелеком / TData	provider	RU	datatalks.rt.ru	https://datatalks.rt.ru/	https://tdata.tech/about	Официальное сообщество в домене Ростелекома	first_party_service	domain:ru	domain:ru	-	-	no
+Билайн	provider	RU	lk.cloud.beeline.ru	https://lk.cloud.beeline.ru/	https://docs.cloud.beeline.ru/docs/platform/lk/about/	Официальная консоль Beeline Cloud	first_party_service	domain:ru	domain:ru	-	-	no
+Билайн	provider	RU	docs.cloud.beeline.ru	https://docs.cloud.beeline.ru/docs/platform/platform/about/	https://cloud.beeline.ru/	Документация облака	first_party_service	domain:ru	domain:ru	-	-	no
+Билайн	provider	RU	datafort.ru	https://datafort.ru/	https://docs.cloud.beeline.ru/docs/platform/platform/about/	Указан почтовый адрес службы поддержки, сайт и роль отдельно	mail_domain_review	domain:ru	domain:ru	-	-	no
+VK	provider	RU	vk.company.ru	https://vk.company.ru/ru/	https://vk.company.ru/ru/press/releases/11922/	Корпоративный сайт VK	first_party_service	domain:ru	domain:ru	-	-	no
+VK	provider	RU	vkvideo.ru	https://vkvideo.ru/	https://vk.company.ru/ru/press/releases/11922/	Официальный отдельный домен VK Видео	first_party_service	domain:ru	domain:ru	-	-	no
+VK	provider	RU	corp.vkcdn.ru	https://corp.vkcdn.ru/media/files/VK_AR2024_Book.pdf	https://vk.company.ru/ru/	Именной корпоративный CDN, не весь CDN	first_party_static_bucket_review	domain:ru	domain:ru	-	-	no
+МТС / МТС Банк	bank	RU	pay.mts.ru	https://pay.mts.ru/docs	https://pay.mts.ru/docs	Документация публичного API, без платежей	first_party_api	domain:ru	domain:ru	-	-	no
+МТС / МТС Банк	bank	RU	payment.mts.ru	https://payment.mts.ru/	https://www.mtsbank.ru/upload/static/landings/2021-samozanyatim/docs/Doc-Oferta.pdf	Платёжный адрес из оферты	first_party_service	domain:ru	domain:ru	-	-	no
+Сбербанк	bank	RU	okko.tv	https://okko.tv/	https://digital.sber.ru/ru/ecosystem_sber	Сервис указан в каталоге, не банковский хост	brand_review	domain:okko.tv	domain:okko.tv	-	-	no
+Сбербанк	bank	RU	cdn-app.sberdevices.ru	https://cdn-app.sberdevices.ru/	https://developers.sber.ru/portal/categories	Именной CDN официального портала	first_party_static_bucket_review	domain:ru	domain:ru	-	-	no
+Сбербанк	bank	RU	partners.sbermarketing.ru	https://partners.sbermarketing.ru/	https://digital.sber.ru/ru/ecosystem_sber	Партнёрский сайт, отдельно от аутентификации	first_party_service	domain:ru	domain:ru	-	-	no

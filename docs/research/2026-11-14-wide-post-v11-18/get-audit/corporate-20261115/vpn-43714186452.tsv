@@ -1,0 +1,19 @@
+host	url	asn	http	curl	tls	classification	title	markers	redirect	observed_at
+docs.tdata.tech	https://docs.tdata.tech/ru/index.html	12389	200	0	0	vpn_body_unproven	Документация платформы данных	NA	NA	2026-11-15T12:31:39.829692+00:00
+docs.tdata.tech	https://docs.tdata.tech/ru/index.html	52043	200	0	0	vpn_body_unproven	Документация платформы данных	NA	NA	2026-11-15T12:32:15.682010+00:00
+kk.ru	https://kk.ru/requisites/	12389	200	0	0	vpn_visible_review	Реквизиты	NA	NA	2026-11-15T12:31:57.453832+00:00
+kk.ru	https://kk.ru/requisites/	52043	200	0	0	vpn_visible_review	Реквизиты	NA	NA	2026-11-15T12:32:36.083143+00:00
+koronapay.com	https://koronapay.com/	12389	403	0	0	vpn_http_other	NA	NA	NA	2026-11-15T12:32:01.001456+00:00
+koronapay.com	https://koronapay.com/	52043	403	0	0	vpn_http_other	NA	NA	NA	2026-11-15T12:32:37.736281+00:00
+perevod-korona.biz	https://perevod-korona.biz/	12389	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:31:41.910144+00:00
+perevod-korona.biz	https://perevod-korona.biz/	52043	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:32:18.545359+00:00
+perevod-korona.info	https://perevod-korona.info/	12389	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:31:44.403623+00:00
+perevod-korona.info	https://perevod-korona.info/	52043	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:32:22.438618+00:00
+perevod-korona.org	https://perevod-korona.org/	12389	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:31:46.254627+00:00
+perevod-korona.org	https://perevod-korona.org/	52043	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:32:24.688562+00:00
+perevod-korona.pro	https://perevod-korona.pro/	12389	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:31:48.784116+00:00
+perevod-korona.pro	https://perevod-korona.pro/	52043	NA	-1	NA	vpn_dns_unproven	NA	NA	NA	2026-11-15T12:32:27.484530+00:00
+tdata.tech	https://tdata.tech/products	12389	200	0	0	vpn_body_unproven	Продукты и услуги	NA	NA	2026-11-15T12:31:36.018138+00:00
+tdata.tech	https://tdata.tech/products	52043	200	0	0	vpn_body_unproven	Продукты и услуги	NA	NA	2026-11-15T12:32:11.865720+00:00
+xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/	12389	NA	7	NA	vpn_transport_unproven	NA	NA	NA	2026-11-15T12:31:52.942074+00:00
+xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/	52043	NA	7	NA	vpn_transport_unproven	NA	NA	NA	2026-11-15T12:32:31.663648+00:00

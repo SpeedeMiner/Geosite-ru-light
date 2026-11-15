@@ -1,0 +1,9 @@
+host	decision	reason
+tdata.tech	candidate_exact	Ростелеком подтвердил дочернюю компанию; одинаковый 200 TLS и заголовок каталога из двух RU ASN.
+docs.tdata.tech	candidate_exact	Документация того же оператора; одинаковый 200 TLS и заголовок документации из двух RU ASN.
+perevod-korona.biz	hold_no_address	Два DoH не вернули адрес A/AAAA, два RU VPN выхода не получили IPv4. Не считать блокировкой.
+perevod-korona.info	hold_no_address	Два DoH не вернули адрес A/AAAA, два RU VPN выхода не получили IPv4. Не считать блокировкой.
+perevod-korona.org	hold_no_address	Два DoH не вернули адрес A/AAAA, два RU VPN выхода не получили IPv4. Не считать блокировкой.
+perevod-korona.pro	hold_no_address	Два DoH не вернули адрес A/AAAA, два RU VPN выхода не получили IPv4. Не считать блокировкой.
+xn--80abkdqhcx2axc5i.net	hold_transport	IPv4 в shared AS200350, два RU выхода не установили HTTPS; основной kk.ru отвечает.
+www.tdata.tech	hold_not_measured	Совпадение IP не доказывает корректный сертификат или использование www, отдельного URL не было в плане.

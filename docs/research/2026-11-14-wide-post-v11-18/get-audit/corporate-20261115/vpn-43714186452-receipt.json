@@ -1,0 +1,17 @@
+{
+  "run_id": 43714186452,
+  "attempt": 1,
+  "artifact_id": 14161865891,
+  "artifact_sha256": "800a5418f99fe2b362bc8a34886ab9ad1e6052949492a36a1ec0b3a85fa980bb",
+  "commit": "53955860119898ad4841b9ea1af73b5a537bded6",
+  "upstream": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "plan_sha256": "6c2a3221da07c8ff98f0dcd38ccf76f9abe4965797b9f6de1178ac009e1a2a61",
+  "ru_asns": [
+    12389,
+    52043
+  ],
+  "measurements": 18,
+  "http_responses": 8,
+  "tls_verified_tdata_responses": 4,
+  "globalping_requests": 0
+}

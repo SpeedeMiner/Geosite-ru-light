@@ -1,0 +1,15 @@
+cohort	host	url	http	curl_exit	tls_verify	proxy_connect	redirect	content_type	bytes	body_sha256	observed_at	scope
+bank_alias	perevod-korona.biz	https://perevod-korona.biz/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.621143+00:00	workspace_not_ru_vantage
+bank_alias	perevod-korona.info	https://perevod-korona.info/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.620717+00:00	workspace_not_ru_vantage
+bank_alias	perevod-korona.org	https://perevod-korona.org/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.622573+00:00	workspace_not_ru_vantage
+bank_alias	perevod-korona.pro	https://perevod-korona.pro/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.623878+00:00	workspace_not_ru_vantage
+bank_alias	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.630860+00:00	workspace_not_ru_vantage
+current_bank_control	kk.ru	https://kk.ru/requisites/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.624320+00:00	workspace_not_ru_vantage
+current_bank_control	koronapay.com	https://koronapay.com/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:28:53.625388+00:00	workspace_not_ru_vantage
+current_bank_control	pb.vtb.ru	https://pb.vtb.ru/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.637927+00:00	workspace_not_ru_vantage
+current_bank_control	www.mcplat.ru	https://www.mcplat.ru/	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.638188+00:00	workspace_not_ru_vantage
+provider_control	tdata.tech	https://tdata.tech/products	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.641668+00:00	workspace_not_ru_vantage
+provider_control	docs.tdata.tech	https://docs.tdata.tech/ru/index.html	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.639684+00:00	workspace_not_ru_vantage
+provider_control	api.cloud.yandex.net	https://api.cloud.yandex.net/endpoints	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.641506+00:00	workspace_not_ru_vantage
+provider_control	api.yandexcloud.kz	https://api.yandexcloud.kz/endpoints	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.638529+00:00	workspace_not_ru_vantage
+provider_control	api.mwsapis.ru	https://api.mwsapis.ru/endpoint	0	28	NA	0	NA	NA	0	NA	2026-11-15T12:29:01.645729+00:00	workspace_not_ru_vantage
