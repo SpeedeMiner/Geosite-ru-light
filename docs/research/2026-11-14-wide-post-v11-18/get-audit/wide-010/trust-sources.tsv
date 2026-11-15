@@ -1,0 +1,28 @@
+zone	sector	disposition	url	source	markers	note
+EAEU	trust	functional	https://docs.eaeunion.org/documents/414/7596/	https://dts.gov.kz/ru/documents_ru/	доверенной третьей стороны|Евразийской	Публичная карточка акта, отдельный путь от уже наблюдавшегося корня
+KZ	trust	control	https://dts.gov.kz/ru/main_ru/	https://dts.gov.kz/ru/main_ru/	ДОВЕРЕННАЯ ТРЕТЬЯ СТОРОНА|КАЗАХСТАН	Официальный национальный портал
+KZ	trust	control	https://dts.gov.kz/ru/ttp_services_ru/	https://dts.gov.kz/ru/main_ru/	Сервисы ДТС|Казахстан	Справка о сервисах, не загрузка документа
+KZ	regulations	control	https://dts.gov.kz/ru/documents_ru/	https://dts.gov.kz/ru/main_ru/	Документация|ДТС	Публичная навигация со ссылками на ИПС Әділет
+KZ	certificates	control	https://dts.gov.kz/ru/certificates_ru/	https://dts.gov.kz/ru/main_ru/	Сертификаты|CRL	Публичная документация, не установка сертификатов
+KZ	regulations	control	https://adilet.zan.kz/rus/docs/H23EK00033R	https://dts.gov.kz/ru/documents_ru/	доверенной третьей стороны|интегрированной	Карточка документа, может зависеть от клиентского рендера
+KZ	signature	control	https://pki.gov.kz/ru/	https://pki.gov.kz/ru/ncalayer/	Национальный удостоверяющий центр|Казахстан	Публичная главная страница НУЦ
+KZ	signature	control	https://pki.gov.kz/ru/ncalayer/	https://pki.gov.kz/ru/ncalayer/	NCALayer|Национальный удостоверяющий центр	Не скачиваются и не запускаются установщики
+KZ	signature	review	https://ncl.pki.gov.kz/	https://pki.gov.kz/ru/ncalayer/		Дистрибутивы на отдельном имени, без проверки голого корня
+KZ	signature	review	https://nca.pki.gov.kz/	https://pki.gov.kz/ru/ncalayer/		Статус заявки требует данных, только сверка hostname
+KZ	certificates	control	https://pki.gov.kz/ru/developers/	https://pki.gov.kz/ru/developers/	Разработчикам|удостоверяющего центра	Справочная страница
+KZ	certificates	control	https://forum.pki.gov.kz/t/predostavlenie-adresov-dlya-dobavleniya-v-belyj-spisok-proksi/3741	https://forum.pki.gov.kz/t/predostavlenie-adresov-dlya-dobavleniya-v-belyj-spisok-proksi/3741	Предоставление адресов|прокси	Опубликованная справка форума, не URL сканирования
+BY	signature	control	https://nalog.gov.by/landing-ecp/	https://nalog.gov.by/landing-ecp/	Полный гид|сертификат ЭЦП	Белорусское МНС подтверждает адрес НЦЭУ
+BY	certificates	control	https://nces.by/pki/info/contacts/	https://nalog.gov.by/landing-ecp/	Адреса регистрационных центров|ГосСУОК	Справка, таймаут индексатора не сетевой диагноз
+BY	signature	review	https://portal.ssf.gov.by/	https://nalog.gov.by/landing-ecp/		Вход в корпоративный портал, не запускается
+BY	signature	control	https://avest.by/	https://avest.by/	АВЕСТ	Публичная витрина, не смешивать с ГосСУОК
+BY	signature	control	https://www.bfn.by/registraczionnyj-czentr-gossuok/	https://www.bfn.by/registraczionnyj-czentr-gossuok/	ГосСУОК|регистрационный центр	Справка организации, без записи
+BY	signature	review	https://test.bfn.by/registraczionnyj-czentr-gossuok/	https://www.bfn.by/registraczionnyj-czentr-gossuok/		Тестовая копия, не ставить в очередь
+RU	signature	control	https://www.nalog.gov.ru/rn77/related_activities/el_doc/use_electronic_sign/	https://www.nalog.gov.ru/rn77/related_activities/el_doc/use_electronic_sign/	Применение электронной подписи|ФНС России	Публичная справка
+RU	signature	control	https://e-trust.gosuslugi.ru/	https://cadastre.ru/article/15	Доверие|проверка электронной подписи	GET корня не выполняет проверку документа и не передаёт SPA-фрагмент
+RU	signature	control	https://www.gosuslugi.ru/pgu/eds	https://cadastre.ru/article/15	Госуслуги|электронной подписи	Исторический путь для сопоставления навигации
+RU	signature	control	https://cadastre.ru/article/15	https://cadastre.ru/article/15	Электронная подпись|Кадастр	Справочный маршрут со ссылками
+RU	signature	control	https://kartgeocentre.ru/vopros-otvet/kak-proverit-elektronnyy-dokument	https://kartgeocentre.ru/vopros-otvet/kak-proverit-elektronnyy-dokument	Как проверить электронный документ|КартГеоЦентр	Страница оператора без загрузки документов
+RU	certificates	control	https://dss.cryptopro.ru/	https://dss.cryptopro.ru/	Технология|КриптоПро	Справка коммерческого удостоверяющего провайдера
+RU	certificates	control	https://dssca.cryptopro.ru/	https://dssca.cryptopro.ru/	КРИПТО-ПРО|сертификатов	Публичная справка без выпуска сертификата
+RU	trust	review	https://dss.cryptopro.ru/verify/service.svc	https://cryptopro.ru/products/pki/verify/test		Интерфейс тестовой SOAP-службы, не запускается
+RU	trust	review	https://cryptopro.ru/products/pki/verify/test	https://cryptopro.ru/products/pki/verify/test		Описание тестового сервиса, не остаётся в очереди

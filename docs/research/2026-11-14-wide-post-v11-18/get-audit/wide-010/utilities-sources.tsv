@@ -1,0 +1,28 @@
+zone	sector	disposition	url	source	markers	note
+RU	housing	control	https://dom.gosuslugi.ru/	https://cdn.dom.gosuslugi.ru/webhelp/topics/about_gis/c_functions-gosuchet.html	ГИС ЖКХ|жилищно-коммунального	Анонимный портал ГИС ЖКХ
+RU	housing	control	https://cdn.dom.gosuslugi.ru/webhelp/topics/houses/och/t_view-och.html	https://cdn.dom.gosuslugi.ru/webhelp/topics/houses/och/t_view-och.html	Как посмотреть информацию о доме|реестр	Публичная справка, путь получает осмысленный текст
+RU	billing	control	https://bill.dom.gosuslugi.ru/bills/	https://bill.dom.gosuslugi.ru/bills/	Госуслуги Дом|квитанциях	Публичное описание сервиса, не платежная операция
+RU	dispatch	control	https://www.mos-gaz.ru/press-service/publications/2026/07/16/7855	https://www.mos-gaz.ru/press-service/publications/2026/07/16/7855	Вызов мастера|МОСГАЗ	Муниципальная инструкция о сервисе, без подачи заявки
+RU	dispatch	control	https://xn--b1aesfkbbawel.xn--p1ai/dispatching-service/	https://xn--b1aesfkbbawel.xn--p1ai/dispatching-service/	Диспетчерская служба|Мосводосток	Punycode существующего публичного имени
+RU	utility_help	control	https://www.moek.ru/potrebitelyam/zadat-vopros/	https://www.moek.ru/potrebitelyam/zadat-vopros/	МОЭК|Задать вопрос	Только публичная страница, без отправки формы
+BY	dispatch	functional	https://115.xn--90ais/	https://115.xn--90ais/portal/f?p=10901:1	Моя республика|115.бел	Punycode 115.бел, корневой URL отдельно от редиректа
+BY	dispatch	functional	https://115.xn--90ais/portal/f?p=10901:1	https://115.xn--90ais/	Моя республика|115.бел	Web-индексация наблюдает переход на опубликованный публичный путь
+BY	billing	control	https://raschet.by/	https://raschet.by/	ЕРИП|Расчёт	Сайт оператора, не платёж
+BY	billing	review	https://erip.raschet.by/	https://raschet.by/		Переход в личный кабинет, не запускается
+BY	billing	review	https://lkpu.raschet.by/	https://raschet.by/		Переход ЕРИП.Бизнес, не запускается
+BY	billing	review	https://ioauth.raschet.by/	https://raschet.by/		Аутентификация, только сверка имени
+BY	utility_help	review	https://otklucheniya.by/	https://otklucheniya.by/	Отключения|Беларуси	Не тождественно государственному диспетчеру 115
+KZ	billing	control	https://www.alseco.kz/ru/jkh-news	https://www.alseco.kz/ru/jkh-news	Алсеко|Новости ЖКХ	Новости оператора, таймаут индексатора отделён
+KZ	billing	control	https://alseco.kz/ru/erc-total	https://alseco.kz/ru/erc-total	Алсеко|Общая информация	Справочная страница ЕРЦ
+KZ	billing	review	https://bill.alseco.kz/	https://www.alseco.kz/ru/jkh-news		Личный кабинет по счёту, не запускается
+KZ	billing	review	https://smart.alseco.kz/	https://www.alseco.kz/ru/jkh-news		Отдельное приложение, покрытие имени без входа
+KZ	billing	review	https://bot.alseco.kz/	https://www.alseco.kz/ru/jkh-news		Бот на отдельном хосте, не запускается
+KZ	billing	control	https://www.aerc.kz/ru/o-kompanii/rekvizity/	https://www.aerc.kz/ru/o-kompanii/rekvizity/	Астана-ЕРЦ|Реквизиты	Контактная страница оператора
+KZ	third_party	third_party	https://ai-astana-erc.vercel.app/	https://www.aerc.kz/ru/o-kompanii/rekvizity/		Помощник на общей платформе Vercel, исключён из GET и правил
+KZ	third_party	third_party	https://api.whatsapp.com/	https://www.aerc.kz/ru/o-kompanii/rekvizity/		Внешний канал обратной связи не нужен для прямого маршрута
+KZ	dispatch	control	https://www.gov.kz/org/almaty/press/news/details/1193268?lang=ru	https://www.gov.kz/org/almaty/press/news/details/1193268?lang=ru	Open Almaty|109	Официальная публикация Алматы
+KZ	dispatch	review	https://almaty109.kz/	https://www.gov.kz/org/almaty/press/news/details/1193268?lang=ru	Алматы|109	Контроль предполагаемого варианта имени, таймаут веб-индексации
+KZ	dispatch	functional	https://cts.gov.kz/ru/press-center/monitoring/	https://cts.gov.kz/ru/press-center/monitoring/	iKOMEK|Городской центр	Официальная справка перевозчика со ссылкой на службу 109
+KZ	dispatch	functional	https://ikomekastana.kz/	https://cts.gov.kz/ru/press-center/monitoring/	iKOMEK|Астана	Точный связанный сайт, без отправки заявки
+KZ	third_party	third_party	https://onelink.to/xv7j9r	https://cts.gov.kz/ru/press-center/monitoring/		Сторонний редирект в магазин приложений, вне DIRECT-очереди
+KZ	third_party	third_party	https://t.me/ikomek109_astanabot	https://cts.gov.kz/ru/press-center/monitoring/		Отдельный общий мессенджер, не кандидат
