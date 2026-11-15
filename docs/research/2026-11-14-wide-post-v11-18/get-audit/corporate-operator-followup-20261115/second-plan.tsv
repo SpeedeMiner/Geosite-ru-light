@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	docs.solarspace.pro	docs.solarspace.pro	https://docs.solarspace.pro/	Solar Space	https://my.rt-solar.ru/legal/oferta.pdf
+corporate	candidate	my.rt-solar.ru	my.rt-solar.ru	https://my.rt-solar.ru/auth/sign-in	Солар|Solar Space	https://docs.solarspace.pro/faq/authorization
+corporate	control	my.solarspace.pro	my.solarspace.pro	https://my.solarspace.pro/auth/sign-in	Solar Space	https://my.solarspace.pro/legal/oferta.pdf
+corporate	control	b2b.ttk.ru	b2b.ttk.ru	https://b2b.ttk.ru/	ТрансТелеКом	https://company.ttk.ru/
+corporate	control	lukit.ru	lukit.ru	https://lukit.ru/	Лукоморье	https://www.company.rt.ru/press/news_fill/d479707/
+corporate	control	basis.ru	basis.ru	https://basis.ru/	Базис|Basis	https://habr.com/ru/companies/basis/profile/
+corporate	control	moscow.megafon.ru	moscow.megafon.ru	https://moscow.megafon.ru/corporate	МегаФон	https://moscow.megafon.ru/corporate/
+corporate	control	b2b.dom.ru	b2b.dom.ru	https://b2b.dom.ru/about	Дом.ру Бизнес	https://ertelecom.ru/ru/contacts

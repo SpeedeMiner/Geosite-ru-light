@@ -97,9 +97,11 @@ class VpnObratnoGetTests(unittest.TestCase):
         self.assertNotIn('HTTPS_PROXY',subprocess.call_args.kwargs['env'])
         self.assertEqual(args[-1],URL)
 
-    def test_range_is_limited_to_public_curator_html_manual(self):
+    def test_range_is_limited_to_specific_public_html_manuals(self):
         for url, cohort, expected in [
             ('https://api.curator.pro/', 'corporate', True),
+            ('https://docs.solarspace.pro/', 'corporate', True),
+            ('https://docs.solarspace.pro/other', 'corporate', False),
             ('https://api.curator.pro/', 'ip_echo', False),
             ('https://api.curator.pro/another', 'corporate', False),
             (URL, 'corporate', False),
