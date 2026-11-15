@@ -39,3 +39,4 @@ index_id	page	literal_hosts	status
 38	https://cloud.ru/docs/console_api/ug/topics/api-ref__directory?source-platform=Evolution	iam.api.cloud.ru	exact_example_or_endpoint
 39	https://cloud.ru/docs/administration/ug/topics/guides__directory-api?source-platform=Evolution	iam.api.cloud.ru|organization.api.cloud.ru	exact_example_or_endpoint
 40	https://cloud.ru/docs/billing/ug/topics/api-ref?source-platform=Evolution	NA	no_literal_endpoint_in_extracted_page
+41	https://cloud.ru/docs/overview/support/topics/api-ref?source-platform=Evolution	NA	no_literal_endpoint_in_extracted_page
