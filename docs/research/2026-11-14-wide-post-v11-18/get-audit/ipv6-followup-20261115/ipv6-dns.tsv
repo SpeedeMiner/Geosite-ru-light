@@ -13,12 +13,12 @@ checkipv6.dedyn.io	https://checkipv6.dedyn.io/	cloudflare	A	NOERROR	0
 checkipv6.dedyn.io	https://checkipv6.dedyn.io/	cloudflare	AAAA	NOERROR	1
 ip6.hostux.net	https://ip6.hostux.net/	google	A	NOERROR	0
 ip6.hostux.net	https://ip6.hostux.net/	google	AAAA	NOERROR	1
-ip6.hostux.net	https://ip6.hostux.net/	cloudflare	A	query_unproven	
-ip6.hostux.net	https://ip6.hostux.net/	cloudflare	AAAA	query_unproven	
+ip6.hostux.net	https://ip6.hostux.net/	cloudflare	A	query_unproven	NA
+ip6.hostux.net	https://ip6.hostux.net/	cloudflare	AAAA	query_unproven	NA
 ip6.nnev.de	https://ip6.nnev.de/	google	A	NOERROR	0
 ip6.nnev.de	https://ip6.nnev.de/	google	AAAA	NOERROR	1
-ip6.nnev.de	https://ip6.nnev.de/	cloudflare	A	query_unproven	
-ip6.nnev.de	https://ip6.nnev.de/	cloudflare	AAAA	query_unproven	
+ip6.nnev.de	https://ip6.nnev.de/	cloudflare	A	query_unproven	NA
+ip6.nnev.de	https://ip6.nnev.de/	cloudflare	AAAA	query_unproven	NA
 ipv6.hostux.net	https://ipv6.hostux.net/	google	A	NOERROR	0
 ipv6.hostux.net	https://ipv6.hostux.net/	google	AAAA	NOERROR	1
 ipv6.hostux.net	https://ipv6.hostux.net/	cloudflare	A	NOERROR	0
@@ -29,8 +29,8 @@ ipv6.pry.sh	https://ipv6.pry.sh/	cloudflare	A	NOERROR	0
 ipv6.pry.sh	https://ipv6.pry.sh/	cloudflare	AAAA	NOERROR	1
 ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	google	A	NOERROR	0
 ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	google	AAAA	NOERROR	8
-ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	A	query_unproven	
-ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	AAAA	query_unproven	
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	A	query_unproven	NA
+ipv6.whatismyipnow.com	https://ipv6.whatismyipnow.com/json	cloudflare	AAAA	query_unproven	NA
 v6.i-p.show	https://v6.i-p.show/	google	A	NOERROR	0
 v6.i-p.show	https://v6.i-p.show/	google	AAAA	NOERROR	8
 v6.i-p.show	https://v6.i-p.show/	cloudflare	A	NOERROR	0
