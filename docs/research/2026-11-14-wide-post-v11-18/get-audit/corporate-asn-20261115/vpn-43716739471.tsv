@@ -1,0 +1,9 @@
+host	url	asn	http	curl	tls	state	title	observed_at
+b2b.dom.ru	https://b2b.dom.ru/about	12389	403	0	0	vpn_http_other	NA	2026-11-15T13:01:37.904898+00:00
+b2b.dom.ru	https://b2b.dom.ru/about	42610	403	0	0	vpn_http_other	NA	2026-11-15T13:02:18.474312+00:00
+ertelecom.cloud	https://ertelecom.cloud/clouds/	12389	200	0	0	vpn_body_unproven	NA	2026-11-15T13:01:34.917721+00:00
+ertelecom.cloud	https://ertelecom.cloud/clouds/	42610	200	0	0	vpn_body_unproven	NA	2026-11-15T13:02:15.797731+00:00
+ertelecom.ru	https://ertelecom.ru/ru/contacts	12389	200	0	0	vpn_body_unproven	NA	2026-11-15T13:01:37.039447+00:00
+ertelecom.ru	https://ertelecom.ru/ru/contacts	42610	200	0	0	vpn_body_unproven	NA	2026-11-15T13:02:17.732137+00:00
+my.ertelecom.cloud	https://my.ertelecom.cloud/	12389	200	0	0	vpn_body_unproven	Авторизация	2026-11-15T13:01:36.174932+00:00
+my.ertelecom.cloud	https://my.ertelecom.cloud/	42610	200	0	0	vpn_body_unproven	Авторизация	2026-11-15T13:02:17.001810+00:00
