@@ -1,0 +1,269 @@
+#!/usr/bin/env python3
+"""Adapt pinned GeoIP #5 VPNObratno transport to a bounded GeoSite GET catalogue."""
+import argparse
+from collections import Counter
+import hashlib
+import importlib
+from ipaddress import ip_address
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import signal
+import subprocess
+import sys
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from urllib.parse import urlsplit
+
+from audit import BODY_LIMIT
+from prepare import records
+from workspace_get import check_url, result
+
+UPSTREAM_REF = '30e797f05ddb8e38ccc2c44938b64846b4fce2fb'
+UPSTREAM_FILES = {
+    'vpn_gate.py': '822339eb26925e8142256027a2124e4211b6acbca284275d4877830002bd1c66',
+    'runner.py': '05a5afefa3964f52da484305b374f0e939101134692374a1f83c5916ee9bd5d0',
+    'vpn_netns_exec.sh': 'cec294da7375062b798e5beb23a8163045f27edd537c1455605e716514548cc4',
+}
+TRANSPORT = 'vpnobratno_openvpn'
+TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
+NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
+
+
+def validate_upstream(directory):
+    for name, digest in UPSTREAM_FILES.items():
+        p = directory / name
+        if p.is_symlink() or hashlib.sha256(p.read_bytes()).hexdigest() != digest:
+            raise ValueError(f'{name} differs from locked upstream {UPSTREAM_REF}')
+
+
+def catalogue(rows):
+    if not 1 <= len(rows) <= 5:
+        raise ValueError('the first VPNObratno pilot accepts 1–5 exact URLs')
+    urls = set()
+    targets = []
+    for i, row in enumerate(rows, 1):
+        url = row['url']
+        domain = check_url(url)
+        if domain != row['host'] or url in urls or domain.endswith(('.local','.localhost','.internal')):
+            raise ValueError('duplicate URL or invalid public hostname')
+        urls.add(url)
+        p = urlsplit(url)
+        targets.append(dict(id=f'geosite-{i:02d}',domain=domain,port=443,
+                            path=(p.path or '/')+('?' + p.query if p.query else ''),
+                            role='service',country_scope=['RU']))
+    return dict(schema_version=1,countries=['RU','KZ','BY'],targets=targets)
+
+
+def require_namespace():
+    if os.geteuid() != 0:
+        raise ValueError('run the adapter inside the pinned vpn_netns_exec.sh')
+    try:
+        ip_tool = shutil.which('ip')
+        if not ip_tool:
+            raise ValueError('iproute2 is not installed')
+        identified = subprocess.check_output(
+            [ip_tool,'netns','identify',str(os.getpid())],text=True,timeout=5).strip().splitlines()
+        active = Path('/proc/self/ns/net').stat()
+        if len(identified) == 1 and NAMESPACE_RE.fullmatch(identified[0]):
+            named = Path('/run/netns',identified[0]).stat()
+            if (named.st_dev,named.st_ino) == (active.st_dev,active.st_ino):
+                return
+    except (OSError,subprocess.SubprocessError):
+        pass
+    raise ValueError('isolated GeoIP VPN network namespace is not active')
+
+
+def tunnel_interface(conn):
+    if not TUN_RE.fullmatch(conn):
+        raise ValueError('no verified OpenVPN tun interface')
+    return conn
+
+
+def get_from_tunnel(row, address, interface, timeout):
+    target = ip_address(address)
+    if target.version != 4 or not target.is_global or target.is_multicast:
+        raise ValueError('public IPv4 required inside the tunnel')
+    host = check_url(row['url'])
+    interface = tunnel_interface(interface)
+    # Explicit bind + a pinned address resolved through the VPN kill-switch.
+    # Do not use HTTPS_PROXY, curlrc, redirects, or certificate overrides.
+    with TemporaryDirectory() as tmp:
+        body_file = Path(tmp) / 'body'
+        argv = ['curl','-q','-sS','-4','--proxy','','--noproxy','*',
+                '--interface',f'if!{interface}','--resolve',f'{host}:443:{target}',
+                '--request','GET','--proto','=https','--connect-timeout',str(timeout),
+                '--max-time',str(timeout),'--max-filesize','524288','--output',str(body_file),
+                '--write-out','%{json}','--',row['url']]
+        allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
+        try:
+            run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=timeout+2)
+            stats = json.loads(run.stdout) if run.stdout else {}
+            if not isinstance(stats,dict):
+                raise ValueError('invalid curl metadata')
+            if stats.get('response_code') and stats.get('remote_ip') != str(target):
+                raise ValueError('curl did not use the pinned destination')
+            if body_file.exists():
+                with body_file.open('rb') as f:
+                    sample = f.read(BODY_LIMIT)
+            else:
+                sample = b''
+            return run.returncode,stats,sample
+        except (OSError,subprocess.TimeoutExpired,ValueError):
+            return -1,{},b''
+
+
+def observation(row, rc, stats, body, exit_info, address):
+    x = result(row,rc,stats,body)
+    x.pop('proxy_connect',None)
+    state = x.pop('state').replace('workspace_', 'vpn_', 1)
+    if rc in (51,60,77,83,90,91):
+        state = 'vpn_tls_unproven'
+        x['tls_verify_result'] = stats.get('ssl_verify_result')
+    elif stats.get('response_code') and stats.get('ssl_verify_result') != 0:
+        state = 'vpn_tls_unproven'
+    x.update(state=state,test='vpn_get',scope='vpnobratno_observed_egress',
+             transport=TRANSPORT,upstream_ref=UPSTREAM_REF,fresh_ru_credit=False,
+             vpn_asn=int(exit_info['asn']),vpn_country=exit_info['country'],
+             vpn_exit_ip=exit_info['ip'],target_ipv4=address,http_method='GET')
+    return x
+
+
+def attach(transport, rows, observations_path):
+    by_id = {target['id']:row for target,row in zip(catalogue(rows)['targets'],rows)}
+    routed = {'tun':''}
+    wait = transport.wait_for_tunnel
+
+    def capture(*args,**kwargs):
+        routed['tun'] = ''
+        routed['tun'] = tunnel_interface(wait(*args,**kwargs))
+        return routed['tun']
+
+    def test_target(target, exit_info, _networks, timeout):
+        if (exit_info.get('country') != 'RU' or exit_info.get('asn_conflict') is not False
+                or int(exit_info.get('asn') or 0) <= 0 or exit_info.get('verified_by_sources',0) < 2):
+            raise transport.ProbeError('GeoSite requires corroborated RU exit IP and non-conflicting ASN')
+        source = ip_address(exit_info['ip'])
+        if source.version != 4 or not source.is_global or source.is_multicast:
+            raise transport.ProbeError('GeoSite requires a public IPv4 VPN exit')
+        if not routed['tun']:
+            raise transport.ProbeError('no verified OpenVPN interface')
+        row = by_id[target['id']]
+        a, aaaa = transport.call_with_wall_clock_timeout(
+            lambda: transport.resolve_domain_families(target['domain'],max(2,timeout//2)),
+            max(3,timeout//2+1))
+        ips = []
+        for raw in a[1]:
+            ip = ip_address(raw)
+            if ip.version == 4 and ip.is_global and not ip.is_multicast:
+                ips.append(str(ip))
+        address = ips[0] if ips else None
+        if address:
+            rc, stats, body = get_from_tunnel(row,address,routed['tun'],timeout)
+            record = observation(row,rc,stats,body,exit_info,address)
+        else:
+            record = observation(row,-1,{},b'',exit_info,None)
+            record['state'] = 'vpn_dns_unproven'
+        record.update(asn_ip_metadata=exit_info.get('asn_ip_metadata'),
+                      asn_ripestat=exit_info.get('asn_ripestat'),
+                      asn_conflict=False,verified_by_sources=exit_info['verified_by_sources'])
+        with observations_path.open('a',encoding='utf-8') as f:
+            f.write(json.dumps(record,ensure_ascii=False,sort_keys=True)+'\n')
+        status = record['http']
+        return {
+            'SOURCE':'vpn_gate','OBSERVED_AT':transport.utc_now(),'TARGET_ID':target['id'],
+            'TARGET_DOMAIN':target['domain'],'DNS_A_RESULT':a[0],'DNS_A_ADDRESSES':'|'.join(ips),
+            'DNS_AAAA_RESULT':aaaa[0],'DNS_AAAA_ADDRESSES':'|'.join(aaaa[1]),
+            'HTTPS_RESULT':'HTTP_RESPONSE' if status and rc_ok(record) else 'INCONCLUSIVE',
+            'HTTP_STATUS':status if status is not None else '',
+            'EXIT_IP':exit_info['ip'],'EXIT_COUNTRY':exit_info['country'],
+            'EXIT_ASN':exit_info['asn'],'EXIT_ORG':exit_info.get('org',''),
+        }
+
+    transport.wait_for_tunnel = capture
+    transport.test_target = test_target
+
+
+def rc_ok(record):
+    return record['curl_exit'] in (0,63) and record.get('tls_verify_result') == 0
+
+
+def summarize(rows, source):
+    exits = {}
+    answered = Counter()
+    codes = Counter()
+    for row in rows:
+        key = row['vpn_asn'], row['vpn_exit_ip']
+        exits.setdefault(key,set()).add(row['url'])
+        answered[key] += bool(row['http']) and rc_ok(row)
+        codes[row['state']] += 1
+    return dict(transport=TRANSPORT,upstream_ref=UPSTREAM_REF,source='vpnobratno',
+                globalping_requests=0,measurements=len(rows),
+                attempted_urls=len({r['url'] for r in rows}),
+                verified_exits=[dict(asn=k[0],ip=k[1],urls=len(v),http_responses=answered[k]) for k,v in sorted(exits.items())],
+                distinct_exit_asns=len({k[0] for k in exits}),states=dict(codes),
+                upstream_state=source.get('target_scan_status'),
+                connection_attempts=source.get('connection_attempts',0),
+                profiles_discovered=source.get('usable_ru_openvpn_servers_discovered',0),
+                http_responses=sum(bool(r['http']) and rc_ok(r) for r in rows),
+                fresh_ru_credit=False)
+
+
+def finish_code(upstream_status, summary, requested_exits, requested_urls):
+    if upstream_status:
+        return upstream_status
+    successful_asns = {e['asn'] for e in summary['verified_exits']
+                       if e['urls'] == requested_urls and e['http_responses'] > 0}
+    return 0 if len(successful_asns) >= requested_exits else 2
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('plan',type=Path)
+    parser.add_argument('inventory',type=Path)
+    parser.add_argument('upstream',type=Path,help='directory containing the three locked PR #5 files')
+    parser.add_argument('output',type=Path)
+    parser.add_argument('--exits',type=int,choices=(1,2,3),default=1)
+    parser.add_argument('--attempts',type=int,choices=range(1,7),default=6)
+    parser.add_argument('--connect-timeout',type=int,choices=range(5,31),default=12)
+    args = parser.parse_args()
+    try:
+        require_namespace()
+        validate_upstream(args.upstream)
+        rows = records(args.plan)
+        targets = catalogue(rows)
+        if args.attempts < args.exits:
+            raise ValueError('attempts cannot be fewer than requested exits')
+        args.output.mkdir(parents=True,exist_ok=False)
+    except (ValueError,OSError) as exc:
+        parser.error(str(exc))
+    sys.path.insert(0,str(args.upstream.resolve()))
+    upstream = importlib.import_module('vpn_gate')
+    scoped = args.output / 'vpnobratno-observations.jsonl'
+    attach(upstream,rows,scoped)
+    for sig in (signal.SIGTERM,signal.SIGINT):
+        signal.signal(sig,upstream.handle_termination_signal)
+    with TemporaryDirectory() as tmp:
+        target_file = Path(tmp) / 'targets.json'
+        target_file.write_text(json.dumps(targets),encoding='utf-8')
+        config = SimpleNamespace(source='vpnobratno',inventory=str(args.inventory),
+            output_dir=str(args.output),targets=str(target_file),max_servers=args.exits,
+            max_attempts=args.attempts,connect_timeout=args.connect_timeout,request_timeout=8)
+        try:
+            code = upstream.run(config)
+        finally:
+            raw = args.output/'vpn_gate_summary.json'
+            source = json.loads(raw.read_text(encoding='utf-8')) if raw.exists() else {}
+            observations = [json.loads(l) for l in scoped.read_text(encoding='utf-8').splitlines()] if scoped.exists() else []
+            summary = summarize(observations,source)
+            summary['requested_exits'] = args.exits
+            summary['requested_urls'] = len(rows)
+            (args.output/'geosite-vpnobratno-summary.json').write_text(
+                json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+    return finish_code(code,summary,args.exits,len(rows))
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
