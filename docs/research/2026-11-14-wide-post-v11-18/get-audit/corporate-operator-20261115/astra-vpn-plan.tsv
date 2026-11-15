@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	bootsman.tech	bootsman.tech	https://bootsman.tech/	Боцман|Группу Астра|Kubernetes	https://astra.ru/ready-for-astra/companies-partners/50554/
+corporate	candidate	docs.bootsman.tech	docs.bootsman.tech	https://docs.bootsman.tech/	Боцман|документация	https://dev.astra.ru/products
+corporate	candidate	download.workspad.com	download.workspad.com	https://download.workspad.com/external/link/adminguide63	WorksPad|Сайт внешнего доступа	https://dev.astra.ru/products
+corporate	control	www.workspad.ru	www.workspad.ru	https://www.workspad.ru/	WorksPad|мобильност	https://astra.ru/support/support-docs/polozhenie-o-tekhnicheskoy-podderzhke-programmnogo-produkta-workspad/
+corporate	control	dev.astra.ru	dev.astra.ru	https://dev.astra.ru/products	Астра|Боцман	https://dev.astra.ru/products

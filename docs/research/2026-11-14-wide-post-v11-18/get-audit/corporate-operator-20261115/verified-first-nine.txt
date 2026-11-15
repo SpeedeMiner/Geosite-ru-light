@@ -1,0 +1,9 @@
+full:business.kvadra.tech
+full:docs-b2c.kvadra.tech
+full:job.nexign.com
+full:kvadra-service.yadro.com
+full:neonhrm.nexign.com
+full:partners.yadro.com
+full:service.yadro.com
+full:support.kvadra.tech
+full:yadro.com
