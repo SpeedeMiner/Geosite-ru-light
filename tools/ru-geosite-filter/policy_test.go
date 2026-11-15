@@ -355,10 +355,22 @@ func TestUpstreamRootCannotAbsorbAnyApprovedExactHost(t *testing.T) {
 }
 
 func TestSuppressionIsLabelBoundedAndRUOnly(t *testing.T) {
+	// Keep this report assertion independent of the growing production
+	// manifest and the suppression rows contributed by other tests.
+	previousIndex, previousSuppressed := approvedExactByAncestor, suppressedExactAncestors
+	t.Cleanup(func() {
+		approvedExactByAncestor, suppressedExactAncestors = previousIndex, previousSuppressed
+	})
+	approvedExactByAncestor = indexExactAncestors(map[string]bool{
+		"www.example.net": true,
+		"api.example.net": true,
+	})
+	suppressedExactAncestors = make(map[string][]string)
+
 	for _, input := range []struct{ category, host string }{
-		{"RU", "notaltlinux.org"},
-		{"RU", "foo.ftp.altlinux.org"},
-		{"BLOCK", "altlinux.org"},
+		{"RU", "notexample.net"},
+		{"RU", "foo.api.example.net"},
+		{"BLOCK", "example.net"},
 	} {
 		site := &router.GeoSite{CountryCode: input.category}
 		if !addRoot(site, make(map[string]bool), input.host) {
@@ -366,14 +378,15 @@ func TestSuppressionIsLabelBoundedAndRUOnly(t *testing.T) {
 		}
 	}
 	path := filepath.Join(t.TempDir(), "report.tsv")
-	if addRoot(&router.GeoSite{CountryCode: "RU"}, make(map[string]bool), "altlinux.org") {
+	if addRoot(&router.GeoSite{CountryCode: "RU"}, make(map[string]bool), "example.net") {
 		t.Fatal("unapproved parent was added")
 	}
 	if err := writeSuppressedExactAncestors(path); err != nil {
 		t.Fatal(err)
 	}
 	data, err := os.ReadFile(path)
-	if err != nil || !strings.Contains(string(data), "altlinux.org\tbugs.altlinux.org,bugzilla.altlinux.org,docs.altlinux.org,errata.altlinux.org,forum.altlinux.org,ftp.altlinux.org,git.altlinux.org,lists.altlinux.org,packages.altlinux.org\n") {
+	const expected = "suppressed_root\tprotected_exact_hosts\nexample.net\tapi.example.net,www.example.net\n"
+	if err != nil || string(data) != expected {
 		t.Fatalf("missing deterministic suppression evidence: %q (%v)", data, err)
 	}
 }
