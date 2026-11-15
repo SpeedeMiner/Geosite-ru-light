@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-link	squidfunk.github.io	https://squidfunk.github.io/mkdocs-material/	Material for MkDocs	NA	NA	NA	GITHUB	separate_category
+Авито	av_avito	https://avito.tech/	official-link	start.avito.ru	https://start.avito.ru/	NA	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_status	https://status.yandex.cloud/ru/dashboard	official-source	status.yandex.cloud	https://status.yandex.cloud/ru/dashboard	Статус компонентов платформы Yandex Cloud - Сервисы	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	status.yandex.cloud	https://status.yandex.cloud/ru/dashboard	Статус компонентов платформыYandex Cloud	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	dip_site	https://diplodoc.com/	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/diplodoc-www-assets/navigation/diplodoc-logo.svg	Иконка лого	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	dip_docs	https://diplodoc.com/docs/ru/	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/diplodoc-www-assets/pages/index-diplodoc/ddos-index-cover.png	NA	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/yandex-opensource/yos-logo.svg	Иконка лого	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/cloud-www-assets/constructor/main/RU/hero-img-desk.png	desktop-image	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/cloud-www-assets/main-icons/docs/yc_team.svg	NA	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/cloud-www-assets/main-icons/docs/yc_team.svg	NA	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/cloud-www-assets/main-icons/docs/yc_team.svg	NA	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	public-image	storage.yandexcloud.net	https://storage.yandexcloud.net/cloud-www-assets/main-icons/docs/yc_team.svg	NA	domain:yandexcloud.net	domain:yandexcloud.net	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB	separate_category
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	support.kaspersky.co.jp	https://support.kaspersky.co.jp/ProductSelector/Redirect	日本語	domain:kaspersky.co.jp	domain:kaspersky.co.jp	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	support.kaspersky.co.uk	https://support.kaspersky.co.uk/ProductSelector/Redirect	English (UK)	domain:kaspersky.co.uk	domain:kaspersky.co.uk	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	support.kaspersky.com	https://support.kaspersky.com/de/ProductSelector/Redirect	Deutsch	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-source	support.kaspersky.ru	https://support.kaspersky.ru/kescloud/208747	Сетевые порты, используемые Kaspersky Endpoint Security Cloud	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	t.me	https://t.me/avitotech	Telegram	NA	NA	NA	TELEGRAM	separate_category
+Сбер	sber_dev	https://developers.sber.ru/docs/	official-link	t.me	https://t.me/	Telegram channel link	NA	NA	NA	TELEGRAM	separate_category
+Яндекс	dip_site	https://diplodoc.com/	official-link	t.me	https://t.me/diplodoc_ru	Тelegram	NA	NA	NA	TELEGRAM	separate_category
+Яндекс	dip_docs	https://diplodoc.com/docs/ru/	official-link	t.me	https://t.me/diplodoc_ru	Telegram	NA	NA	NA	TELEGRAM	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	t.me	https://t.me/file_d_community	https://t.me/file_d_community	NA	NA	NA	TELEGRAM	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	t.me	https://t.me/file_d_community	https://t.me/file_d_community	NA	NA	NA	TELEGRAM	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	t.me	https://t.me/yaff_en	NA	NA	NA	NA	TELEGRAM	separate_category
+Сбер	sber_git	https://gitverse.ru/home/	official-link	t.me	https://t.me/gitversenews	NA	NA	NA	NA	TELEGRAM	separate_category
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	t.me	https://t.me/rutube	NA	NA	NA	NA	TELEGRAM	separate_category
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	t.me	https://t.me/yandexcloudnews	NA	NA	NA	NA	TELEGRAM	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	tech.ozon.ru	https://tech.ozon.ru/	Сайт Ozon Tech	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	telegram.me	https://telegram.me/kl_support	Telegram	NA	NA	NA	TELEGRAM	separate_category
+Яндекс	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	official-link	telemost.360.yandex.ru	https://telemost.360.yandex.ru/chat	Обратиться в службу поддержки	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	testplane.io	https://testplane.io/	Сайт	NA	NA	NA	NA	already_in_queue
+Авито	av_avito	https://avito.tech/	official-link	trisigma.io	https://trisigma.io/	NA	NA	NA	NA	NA	already_in_queue
+Авито	av_oss	https://github.com/avito-tech	official-link	twitter.com	https://twitter.com/avitotech	@avitotech	NA	NA	NA	NA	other_link
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	userver.tech	https://userver.tech/	Сайт	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	vibe.sourcecraft.dev	https://vibe.sourcecraft.dev/	VibeCraft	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both

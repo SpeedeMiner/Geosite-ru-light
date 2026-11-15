@@ -1,0 +1,48 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+Авито	av_avito	https://avito.tech/	official-link	vk.com	https://vk.com/avitotech	VK	domain:vk.com	domain:vk.com	NA	NA	covered_both
+Сбер	sber_git	https://gitverse.ru/home/	official-link	vk.com	https://vk.com/gitverse_community	NA	domain:vk.com	domain:vk.com	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	vk.com	https://vk.com/rutube	NA	domain:vk.com	domain:vk.com	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	vk.com	https://vk.com/kaspersky	NA	domain:vk.com	domain:vk.com	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	vk.com	https://vk.com/yandexcloudofficial	NA	domain:vk.com	domain:vk.com	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	whocalls.kaspersky.ru	https://whocalls.kaspersky.ru/	Кто звонил? Проверка номера телефона	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	www.avito.ru	https://www.avito.ru/	NA	domain:ru	domain:ru	NA	NA	covered_both
+Ростелеком	key_rt	https://key.rt.ru/	official-link	www.company.rt.ru	https://www.company.rt.ru/about/	О компании	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	www.jetbrains.com	https://www.jetbrains.com/ides/	IDE от JetBrains	NA	NA	NA	NA	other_link
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	www.kaspersky.com	https://www.kaspersky.com/anti-ransomware-tool	KART — защита от программ-вымогателей	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	www.kaspersky.ru	https://www.kaspersky.ru/small-to-medium-business-security/downloads	Скачать	domain:ru	domain:ru	NA	NA	covered_both
+Сбер	sber_dev	https://developers.sber.ru/docs/	official-link	www.sberbank.ru	https://www.sberbank.ru/	www.sberbank.ru	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	www.system-rescue.org	https://www.system-rescue.org/	SystemRescueCd	NA	NA	NA	NA	other_link
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	www.talos.dev	https://www.talos.dev/	Talos	NA	NA	NA	NA	other_link
+Авито	av_avito	https://avito.tech/	official-link	www.youtube.com	https://www.youtube.com/c/AvitoTech	YouTube	NA	NA	NA	YOUTUBE	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	www.youtube.com	https://www.youtube.com/channel/UCCqNFXg3NRbRA6qNKFRecdw	Канал на YouTube	NA	NA	NA	YOUTUBE	separate_category
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	www.youtube.com	https://www.youtube.com/channel/UCjWOzgG0oTFHy4N4BeDmBhg	NA	NA	NA	NA	YOUTUBE	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	yaff.tech	https://yaff.tech/docs/	Documentation	NA	NA	NA	NA	other_link
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	yaff.tech	https://yaff.tech/docs/en/	Сайт	NA	NA	NA	NA	other_link
+Яндекс	yc_main	https://yandex.cloud/ru	official-source	yandex.cloud	https://yandex.cloud/ru	Yandex Cloud — В ответе за Тех.	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-source	yandex.cloud	https://yandex.cloud/ru/docs/cli/quickstart	Начало работы с интерфейсом командной строки | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-source	yandex.cloud	https://yandex.cloud/ru/docs/overview/concepts/interfaces	Обзор интерфейсов для работы с сервисами | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-source	yandex.cloud	https://yandex.cloud/ru/docs/stackland/index	Yandex Cloud Stackland | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-source	yandex.cloud	https://yandex.cloud/ru/docs/stackland/quickstart	Руководство по установке | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-source	yandex.cloud	https://yandex.cloud/ru/docs/stackland/release-notes	Что нового в Stackland 26.3.1 | Yandex Cloud - Документация	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	ya_ydb	https://ydb.tech/docs/ru/	official-link	yandex.cloud	https://yandex.cloud/ru/training/ydb-admin	Курс для администраторов	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	official-link	yandex.ru	https://yandex.ru/legal/alice_chat/	Условия использования Сервиса Алиса AI	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	dip_site	https://diplodoc.com/	official-link	yandex.ru	https://yandex.ru/legal/confidential/ru/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политика конфиденциальности	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	yandex.ru	https://yandex.ru/legal/confidential/	Политики конфиденциальности	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	yandex.ru	https://yandex.ru/all	Проект Яндекса	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_whelp	https://yandex.ru/support/yandex-360/business/admin/ru/	official-source	yandex.ru	https://yandex.ru/support/yandex-360/business/admin/ru/	Яндекс 360 для бизнеса | Документация	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_whelp	https://yandex.ru/support/yandex-360/business/admin/ru/	public-image	yastatic.net	https://yastatic.net/s3/doc-binary/src/support/business/ru/files/image-card-migration.png	NA	domain:yastatic.net	domain:yastatic.net	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	ydb.tech	https://ydb.tech/ru	Сайт	domain:ydb.tech	domain:ydb.tech	NA	NA	covered_both
+Яндекс	ya_ydb	https://ydb.tech/docs/ru/	official-source	ydb.tech	https://ydb.tech/docs/ru/	Документация YDB	domain:ydb.tech	domain:ydb.tech	NA	NA	covered_both
+Яндекс	ya_ydb	https://ydb.tech/docs/ru/	official-link	ydb.yandex.ru	https://ydb.yandex.ru/training/ydb-developer	Курс для разработчиков	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	ytsaurus.tech	https://ytsaurus.tech/ru	Сайт	NA	NA	NA	NA	already_in_queue

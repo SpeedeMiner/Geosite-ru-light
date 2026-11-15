@@ -1,0 +1,13 @@
+group	source	host	light_ru	server_ru	block	non_ru
+VK Cloud region Moscow	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/account/concepts/regions/regions.md	cloud.vk.ru	domain:ru	domain:ru	NA	NA
+VK Cloud region Kazakhstan	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/account/concepts/regions/regions.md	vkcloud.kz	domain:kz	domain:kz	NA	NA
+VK Cloud region Kazakhstan	https://github.com/vk-cs/docs-public/blob/79212913336f19f9d2214136acdd3433e64d3ba9/docs/ru/tools-for-using-services/account/concepts/regions/regions.md	kz.cloud.vk.kz	domain:kz	domain:kz	NA	NA
+Kontur published namespaces	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	kontur.ru	domain:ru	domain:ru	NA	NA
+Kontur published namespaces	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	skbkontur.ru	domain:ru	domain:ru	NA	NA
+Kontur published namespaces	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	kontur-extern.ru	domain:ru	domain:ru	NA	NA
+Kontur published namespaces	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	kontur.host	domain:kontur.host	domain:kontur.host	NA	NA
+Kontur Logistics published namespaces	https://support.kontur.ru/logistika/48417-trebovaniya_k_rabochemu_mestu	diadoc.ru	domain:ru	domain:ru	NA	NA
+Kontur Logistics published namespaces	https://support.kontur.ru/logistika/48417-trebovaniya_k_rabochemu_mestu	logistic-bot.ru	domain:ru	domain:ru	NA	NA
+Rostelecom Master Key public documentation	https://docs.inkey.rt.ru/getting-started/sign-in/	docs.inkey.rt.ru	domain:ru	domain:ru	NA	NA
+Rostelecom Master Key public documentation	https://docs.inkey.rt.ru/getting-started/sign-in/	inkey.rt.ru	domain:ru	domain:ru	NA	NA
+Yandex project documentation	https://github.com/yandex/yaff	yaff.tech	NA	NA	NA	NA

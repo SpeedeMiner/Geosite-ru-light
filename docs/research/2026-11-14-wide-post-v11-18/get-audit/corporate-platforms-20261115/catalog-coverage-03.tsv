@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-source	github.com	https://github.com/yandex/yaff/releases	Releases · yandex/yaff · GitHub	NA	NA	NA	GITHUB	separate_category
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	github.com	https://github.com/ydb-platform	GitHub	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	github.com	https://github.com/yandex-cloud	NA	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/cli/quickstart.md	NA	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/overview/concepts/interfaces.md	NA	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/stackland/quickstart.md	NA	NA	NA	NA	GITHUB	separate_category
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	github.com	https://github.com/yandex-cloud/docs/tree/master/ru/stackland/release-notes.md	NA	NA	NA	NA	GITHUB	separate_category
+Авито	av_oss	https://github.com/avito-tech	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB	separate_category
+Авито	av_oss	https://github.com/avito-tech	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB	separate_category
+Сбер	gitverse_release	https://gitverse.ru/docs/	official-source	gitverse.ru	https://gitverse.ru/docs/	Документация по платформе GitVerse	domain:ru	domain:ru	NA	NA	covered_both
+Сбер	gitverse_docs	https://gitverse.ru/docs/developers/	official-source	gitverse.ru	https://gitverse.ru/docs/developers/	Разработчикам	domain:ru	domain:ru	NA	NA	covered_both
+Сбер	sber_git	https://gitverse.ru/home/	official-source	gitverse.ru	https://gitverse.ru/home/	GitVerse — Платформа для работы с исходным кодом, Git-репозиторий	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	goo.su	https://goo.su/PRZJ0Q	Курс по Javascript	domain:su	domain:su	NA	NA	covered_both
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	goreportcard.com	https://goreportcard.com/report/github.com/ozontech/file.d	NA	NA	NA	NA	NA	other_link
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	docs-code	grafana.sys	https://grafana.sys/	example or documented endpoint	NA	NA	NA	NA	local_example
+Яндекс	dip_site	https://diplodoc.com/	official-link	gravity-ui.com	https://gravity-ui.com/	Создано на	NA	NA	NA	NA	already_in_queue
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	gravity-ui.com	https://gravity-ui.com/	Сайт	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	gravity-ui.com	https://gravity-ui.com/ru	Gravity UI	NA	NA	NA	NA	already_in_queue
+Ozon	oz_open	https://github.com/ozontech	official-link	habr.com	https://habr.com/ru/company/ozontech/blog/	Хабр	domain:habr.com	domain:habr.com	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	habr.com	https://habr.com/ru/companies/yandex/articles/875070/	Подробнее	domain:habr.com	domain:habr.com	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	habrahabr.ru	https://habrahabr.ru/company/avito/	Habr	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB	separate_category
+Ростелеком	smarthome_rt	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-source	help.smarthome.rt.ru	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	Основные вопросы - Умный дом	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	hrmka.ru	https://hrmka.ru/	https://hrmka.ru/	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	id.yandex.ru	https://id.yandex.ru/personal	Яндексе	domain:ru	domain:ru	NA	NA	covered_both
+Солар	solar_docs	https://docs.solarspace.pro/faq/authorization	public-image	img.solarspace.pro	https://img.solarspace.pro/docs/start-authorization-page.jpg	Start authorization page	NA	NA	NA	NA	new_in_wave
+Ozon	oz_open	https://github.com/ozontech	official-link	job.ozon.ru	https://job.ozon.ru/it/	Вакансии	domain:ru	domain:ru	NA	NA	covered_both
+Ростелеком	key_rt	https://key.rt.ru/	official-link	key-offer.rt.ru	https://key-offer.rt.ru/signup	открыть инструкцию	domain:ru	domain:ru	NA	NA	covered_both

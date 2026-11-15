@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+Яндекс	dip_site	https://diplodoc.com/	official-link	context7.com	https://context7.com/diplodoc-platform/docs	Diplodoc в Context7​	NA	NA	NA	NA	other_link
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	docs-code	dashboard.sys	https://dashboard.sys/	example or documented endpoint	NA	NA	NA	NA	local_example
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	datalens.ru	https://datalens.ru/	DataLens	domain:ru	domain:ru	NA	NA	covered_both
+Сбер	sber_dev	https://developers.sber.ru/docs/	official-source	developers.sber.ru	https://developers.sber.ru/docs/	Документация для разработчиков | Подробно об инструментах, сервисах и технологиях Сбера	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	dip_site	https://diplodoc.com/	official-link	diplodoc-platform.github.io	https://diplodoc-platform.github.io/transform/	Онлайн редактор	NA	NA	NA	GITHUB	separate_category
+Яндекс	dip_docs	https://diplodoc.com/docs/ru/	official-link	diplodoc-platform.github.io	https://diplodoc-platform.github.io/playground/	Онлайн редактор	NA	NA	NA	GITHUB	separate_category
+Яндекс	dip_site	https://diplodoc.com/	official-source	diplodoc.com	https://diplodoc.com/	Diplodoc	NA	NA	NA	NA	already_in_queue
+Яндекс	dip_docs	https://diplodoc.com/docs/ru/	official-source	diplodoc.com	https://diplodoc.com/docs/ru/	Платформа Diplodoc | Diplodoc	NA	NA	NA	NA	already_in_queue
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	diplodoc.com	https://diplodoc.com/	Сайт	NA	NA	NA	NA	already_in_queue
+Яндекс	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	public-image	doc-static.yandex.net	https://doc-static.yandex.net/src/alice/alice-ai.svg	Перейти в чат	domain:yandex.net	domain:yandex.net	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	docs.aws.amazon.com	https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html	AWS CLI	NA	NA	NA	NA	other_link
+Авито	av_oss	https://github.com/avito-tech	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB	separate_category
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-source	docs.inkey.rt.ru	https://docs.inkey.rt.ru/users/inhabitants/	Жильцы - Справочный центр «Ростелеком Мастер Ключ»	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	docs.siderolabs.com	https://docs.siderolabs.com/talos/v1.11/deploy-and-manage-workloads/interactive-dashboard	Network Config (F3)	NA	NA	NA	NA	other_link
+Солар	solar_docs	https://docs.solarspace.pro/faq/authorization	official-source	docs.solarspace.pro	https://docs.solarspace.pro/faq/authorization	Авторизация на платформе Solar Space	NA	NA	NA	NA	already_in_queue
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/cli/quickstart.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/overview/concepts/interfaces.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/stackland/quickstart.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	docs.yandex.cloud	https://docs.yandex.cloud/ru/ru/stackland/release-notes.md	Открыть в Markdown	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	dzen.ru	https://dzen.ru/rutube	NA	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	dzen.ru	https://dzen.ru/kaspersky_ru	NA	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	flatbuffers.dev	https://flatbuffers.dev/	FlatBuffers	NA	NA	NA	NA	other_link
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	forms.yandex.ru	https://forms.yandex.ru/surveys/13470354.903873120b6d533aa2c9fdcd221118db47188b81/	Участие в исследованиях	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	forum.kasperskyclub.ru	https://forum.kasperskyclub.ru/	NA	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB	separate_category
+Авито	av_avito	https://avito.tech/	official-link	github.com	https://github.com/avito-tech	GitHub	NA	NA	NA	GITHUB	separate_category
+Яндекс	dip_site	https://diplodoc.com/	official-link	github.com	https://github.com/diplodoc-platform/	Github	NA	NA	NA	GITHUB	separate_category
+Яндекс	dip_docs	https://diplodoc.com/docs/ru/	official-link	github.com	https://github.com/diplodoc-platform/	GitHub	NA	NA	NA	GITHUB	separate_category
+Авито	av_oss	https://github.com/avito-tech	official-source	github.com	https://github.com/avito-tech	avito.tech · GitHub	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-source	github.com	https://github.com/ozontech	Ozon Tech · GitHub	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-source	github.com	https://github.com/ozontech/file.d	GitHub - ozontech/file.d: A blazing fast tool for building data pipelines: read, process and output 	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-source	github.com	https://github.com/vk-cs/docs-public	GitHub - vk-cs/docs-public: Документация VK Cloud · GitHub	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-source	github.com	https://github.com/yandex/yaff	GitHub - yandex/yaff: YaFF is a high-performance C++ serialization library that provides a zero-copy	NA	NA	NA	GITHUB	separate_category

@@ -1,0 +1,10 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+img.solarspace.pro	https://img.solarspace.pro/docs/start-authorization-page.jpg	candidate	200	0	0	200	NA	NA	b084eb587cd035b5fd6be06bf014e6587f2d192bb1157dcd1d40095f108da229	2026-11-15T15:35:06.291625+00:00	workspace_unattributed
+cdn-viewer.diplodoc.com	https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png	candidate	200	0	0	200	NA	NA	1b98860388ccf2dd52ffc068703d6e9045596568b88c954812a1cacdea1a5ea6	2026-11-15T15:35:04.178989+00:00	workspace_unattributed
+diplodoc.com	https://diplodoc.com/	control	200	0	0	200	Diplodoc	NA	4f907b82761da3bd078670c9d3052715af24c7e96b18e1400ac56bde4732e6f7	2026-11-15T15:35:02.692359+00:00	workspace_unattributed
+yandex.cloud	https://yandex.cloud/ru/docs/stackland/index	control	200	0	0	200	Yandex Cloud Stackland | Yandex Cloud - Документация	NA	d0ca29cd31b29d3ef95373a7ac3220a88764105cdca92c829f74e4374c327de1	2026-11-15T15:35:03.522192+00:00	workspace_unattributed
+msk.cloud.vk.ru	https://msk.cloud.vk.ru/app/	control	200	0	0	200	Site Unavailable	NA	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	2026-11-15T15:35:06.663725+00:00	workspace_unattributed
+gitverse.ru	https://gitverse.ru/home/	control	200	0	0	200	GitVerse — Платформа для работы с исходным кодом, Git-репозиторий	NA	acdf0bef015469d5ce6ee1120c8b075550d5567bac28ff863d4ba198f297da7a	2026-11-15T15:35:05.580552+00:00	workspace_unattributed
+wibes.ru	https://wibes.ru/	control	498	0	0	200	NA	NA	aef532695dfb7ed05d56f2e933515d165140898bf3b1c8416918af4f96d7707b	2026-11-15T15:35:04.638378+00:00	workspace_unattributed
+ozon.tech	https://ozon.tech/	control	307	0	0	200	NA	ozon.tech	8f03491247cbfa8a2e60e0f7ec62d63b5070659f60383a1c81abeb2b20221be3	2026-11-15T15:35:05.327261+00:00	workspace_unattributed
+mp.world	https://mp.world/	control	498	0	0	200	NA	NA	c40a8820c46f06a732703dc24f4a9cfb1ac26e96140e180a661ccfbd415000c8	2026-11-15T15:35:04.657314+00:00	workspace_unattributed

@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+Ростелеком	key_rt	https://key.rt.ru/	official-source	key.rt.ru	https://key.rt.ru/	Ростелеком Ключ для жителей	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	ksos.kaspersky.com	https://ksos.kaspersky.com/ru	Центр управления KSOS	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	learn.microsoft.com	https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies	документации Microsoft	NA	NA	NA	NA	other_link
+Яндекс	dip_site	https://diplodoc.com/	official-link	marketplace.visualstudio.com	https://marketplace.visualstudio.com/items	Установить плагин​	NA	NA	NA	NA	other_link
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	max.ru	https://max.ru/rutube_support_bot	Поддержка в MAX	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	max.ru	https://max.ru/kl_support	MAX	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	official-link	medium.com	https://medium.com/avitotech	https://medium.com/avitotech	NA	NA	NA	NA	other_link
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	monitoring.yandex.cloud	https://monitoring.yandex.cloud/	собственном интерфейсе сервиса	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Ростелеком	key_rt	https://key.rt.ru/	official-link	msk.rt.ru	https://msk.rt.ru/sale-office	Офисы продаж	domain:ru	domain:ru	NA	NA	covered_both
+Солар	solar_docs	https://docs.solarspace.pro/faq/authorization	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	covered_both
+Солар	solar_docs	https://docs.solarspace.pro/faq/authorization	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	other_link
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	myaccount.yandex.cloud	https://myaccount.yandex.cloud/	Мой аккаунт	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	myip.ru	https://myip.ru/	https://myip.ru	domain:ru	domain:ru	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	ok.ru	https://ok.ru/rutube	NA	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-source	opensource.yandex	https://opensource.yandex/projects/	Yandex Open Source | Наши проекты	domain:yandex	domain:yandex	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	opentip.kaspersky.com	https://opentip.kaspersky.com/	TI Portal — проверьте файл или ссылку на угрозы	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Ozon	oz_open	https://github.com/ozontech	official-link	ozon.dev	https://ozon.dev/internship	Стажировки	domain:ozon.dev	domain:ozon.dev	NA	NA	covered_both
+Ozon	oz_open	https://github.com/ozontech	official-link	ozon.tech	https://ozon.tech/	https://ozon.tech/	domain:ozon.tech	domain:ozon.tech	NA	NA	covered_both
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	ozontech.github.io	https://ozontech.github.io/file.d	ozontech.github.io/file.d	NA	NA	NA	GITHUB	separate_category
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	pg-sharding.tech	https://pg-sharding.tech/welcome	Сайт	NA	NA	NA	NA	already_in_queue
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	public-image	pic.rutubelist.ru	https://pic.rutubelist.ru/promoitem/6d/30/6d30d6d73ff9ed1d2cd12a3dad2f12fe.png	Сетевые неполадки: скачать инструкцию	domain:ru	domain:ru	NA	NA	covered_both
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-link	play.google.com	https://play.google.com/store/apps/details	страница приложения в Google Play	NA	NA	NA	GOOGLE-PLAY	separate_category
+Ростелеком	smarthome_rt	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-link	play.google.com	https://play.google.com/store/apps/details	Google Play	NA	NA	NA	GOOGLE-PLAY	separate_category
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	docs-code	prometheus.sys	https://prometheus.sys/	example or documented endpoint	NA	NA	NA	NA	local_example
+Яндекс	yaff_github	https://github.com/yandex/yaff	official-link	protobuf.dev	https://protobuf.dev/	Protobuf	NA	NA	NA	NA	other_link
+Сбер	sber_dev	https://developers.sber.ru/docs/	official-link	public.oprosso.sber.ru	https://public.oprosso.sber.ru/p/developers-doc-2026	Пройти короткий опрос	domain:ru	domain:ru	NA	NA	covered_both
+Ростелеком	key_rt	https://key.rt.ru/	official-link	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/27845428728868634	Скачать приложение	domain:yandex.com	domain:yandex.com	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/102092958928533372	Приложение	domain:yandex.com	domain:yandex.com	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/963912747546876214	NA	domain:yandex.com	domain:yandex.com	NA	NA	covered_both
+Ozon	oz_open	https://github.com/ozontech	official-link	route256.ozon.ru	https://route256.ozon.ru/	Route 256	domain:ru	domain:ru	NA	NA	covered_both
+Солар	solar_docs	https://docs.solarspace.pro/faq/authorization	official-link	rt-solar.ru	https://rt-solar.ru/about_company/information/pdib/ppopd.pdf	Политика обработки персональных данных	domain:ru	domain:ru	NA	NA	covered_both
+Ростелеком	key_rt	https://key.rt.ru/	official-link	rt.ru	https://rt.ru/help	Обратная связь	domain:ru	domain:ru	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-source	rutube.ru	https://rutube.ru/info/trouble/	Диагностика сетевых неполадок при работе с RUTUBE	domain:ru	domain:ru	NA	NA	covered_both
+RUTUBE	rutube_sport	https://rutube.sport/	official-link	rutube.ru	https://rutube.ru/live/video/3561880e10a74854449bb42930b10223	Киргизия (U-23)Россия (U-21)ФутболСкоро начнется	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	rutube.ru	https://rutube.ru/channel/27277458/	NA	domain:ru	domain:ru	NA	NA	covered_both
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	rutube.sport	https://rutube.sport/	RUTUBE Спорт	domain:rutube.sport	domain:rutube.sport	NA	NA	covered_both
+RUTUBE	rutube_sport	https://rutube.sport/	official-source	rutube.sport	https://rutube.sport/	RUTUBE Спорт — смотрите спортивные видео онлайн, бесплатно.	domain:rutube.sport	domain:rutube.sport	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	securelist.ru	https://securelist.ru/	SecureList: отчеты и аналитика	domain:ru	domain:ru	NA	NA	covered_both
+RWB	wb_projects	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	official-source	seller.wildberries.ru	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	Проекты и каналы коммуникации Wildberries	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	sourcecraft.dev	https://sourcecraft.dev/portal/code-assistant/	SourceCraft Code Assistant	domain:sourcecraft.dev	domain:sourcecraft.dev	NA	NA	covered_both

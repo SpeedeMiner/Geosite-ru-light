@@ -1,0 +1,37 @@
+batch	key	url	effective	code	curl	tls	bytes	sha256	mime	observation
+1	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	https://yandex.cloud/ru/docs/overview/concepts/interfaces	200	0	0	848596	d76a8f6f0222e37491054027bf78a631c5ba694693c8ac0fa39d9d165fddcff6	text/html; charset=utf-8	response
+1	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	https://yandex.cloud/ru/docs/stackland/quickstart	200	0	0	899166	c467a14ba00b4505ad598bc6b03a08b48b60d19ad6a14529485531c55ebda9ce	text/html; charset=utf-8	response
+1	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/	https://yandex.cloud/ru/docs/stackland/index	200	0	0	600685	cf6171b226478289c2f9f699980278675ad71325a3e68fec5f4c3802f6e0a0bf	text/html; charset=utf-8	response
+1	yc_status	https://status.yandex.cloud/	https://status.yandex.cloud/ru/dashboard	200	0	0	21937	559ce3df2d4024e3fe18b30b13add34fb2819c27c8795d76ba7c30b24dca871f	text/html; charset=utf-8	response
+1	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	https://yandex.cloud/ru/docs/cli/quickstart	200	0	0	1765600	a394a676bf45315c5883043972370047530eacca361dc71dc558775d16a0149c	text/html; charset=utf-8	response
+1	yc_main	https://yandex.cloud/ru/	https://yandex.cloud/ru	200	0	0	660997	fdab2cfcd7bedc272c3c5ade06245293f1c9320df3754899c7528d5a9deacdd2	text/html; charset=utf-8	response
+1	yc_workplace	https://360.yandex.ru/business/	https://360.yandex.ru/showcaptcha	200	0	0	14127	2f9c1e7f50ab43601513a647705f33dfcf386da959919904288f24d18ce4c260	text/html	challenge
+1	yc_whelp	https://yandex.ru/support/yandex-360/business/admin/ru/	https://yandex.ru/support/yandex-360/business/admin/ru/	200	0	0	168375	ef411680fca4d1fa07bd9fc921e3cde20061a2224eb77292a5769609c0902664	text/html;charset=utf-8	response
+1	vk_docs	https://cloud.vk.com/docs	https://cloud.vk.com/docs	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	vk_cloud	https://cloud.vk.com/	https://cloud.vk.com/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	vk_docs_gh	https://github.com/vk-cs/docs-public	https://github.com/vk-cs/docs-public	200	0	0	248951	0f77a8aaabf4fa52c6339943cd4d57940b1c09d35cc82e514595f98b6a55c247	text/html; charset=utf-8	response
+1	vk_team	https://biz.mail.ru/teams/	https://workspace.vk.ru/teams/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	vk_help	https://biz.mail.ru/docs/	https://workspace.vk.ru/docs/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	vk_space	https://workspace.vk.ru/	https://workspace.vk.ru/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	vk_corp	https://vk.company/ru/tech/	https://vk.company/ru/tech/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html	placeholder
+1	sber_tech	https://platformv.sbertech.ru/support	https://platformv.sbertech.ru/support	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html	response
+1	sber_platform	https://platformv.sbertech.ru/	https://platformv.sbertech.ru/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html	response
+1	sber_git	https://gitverse.ru/	https://gitverse.ru/home/	200	0	0	89544	acdf0bef015469d5ce6ee1120c8b075550d5567bac28ff863d4ba198f297da7a	text/html	response
+1	sber_dev	https://developers.sber.ru/docs/	https://developers.sber.ru/docs/	200	0	0	223160	f7000be744e43b0a04b785887955bf955ebf3362bcb55607b079c50ca4e14789	text/html	response
+1	oz_open	https://github.com/ozontech	https://github.com/ozontech	200	0	0	256433	f90ff9da5b46adf3d7be62b5f7f5538fa17c1e8ee2a252a106a23fda98a99ac9	text/html; charset=utf-8	response
+1	oz_tech	https://ozon.tech/	https://ozon.tech/	307	47	0	0	NA	text/html	response
+1	oz_seller	https://docs.ozon.ru/global/	https://docs.ozon.ru/global/	307	47	0	0	NA	text/html	response
+1	wb_projects	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	https://seller.wildberries.ru/instructions/ru/ru/material/projects-and-communication-channels	200	0	0	1180541	ee5c0ec8c2c28ac94d87c65059fad18dd4fd646b9d0fddae5dcf5a6445032ca4	text/html; charset=utf-8	response
+1	wb_dev	https://dev.wildberries.ru/	https://dev.wildberries.ru/	498	0	0	1134	903891afe9cd96409839befebe425f15af189994685fb5cca0981debae833b17	text/html	response
+1	wb_doc	https://dev.wildberries.ru/openapi/api-information	https://dev.wildberries.ru/openapi/api-information	498	0	0	1134	0ce363fe190a55fafcb4cea1cf12e0a5a3b4a055f21256d390e77dccc670c429	text/html	response
+1	solar_docs	https://docs.solarspace.pro/faq/authorization	https://docs.solarspace.pro/faq/authorization	200	0	0	833464	2ebc63a4689065483e685891c3eaab367176dfdf6ada61b94a732e6036529aeb	text/html	response
+2	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	200	0	0	219770	6c43bac2b41d15fc51d53f55677191ca1b8e3f7b1297dcbbd4ec08e72f5ba287	text/html; charset=utf-8	response
+2	dip_site	https://diplodoc.com/	https://diplodoc.com/	200	0	0	80011	31bebae460ac03f102f0073df4a2a02fac49df5bfc3a25293da77b94fa0778c5	text/html; charset=utf-8	response
+2	dip_docs	https://diplodoc.com/docs/ru/	https://diplodoc.com/docs/ru/	200	0	0	152642	dd33188c23299436623e1e3b39177793b6fdb513d9d4c2517a02f7c620deefd1	text/html; charset=utf-8	response
+2	dip_y360	https://yandex.ru/support/yandex-360/business/admin/ru/	https://yandex.ru/support/yandex-360/business/admin/ru/	200	0	0	168378	d468cb67e3353e10c41637acea18499f75e9723fcf13561b33db055bcb6df31c	text/html;charset=utf-8	response
+2	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	https://yandex.cloud/ru/docs/stackland/release-notes	200	0	0	968793	893a45ba2305d95c4d4117fcd3e500d7443ad8bb134338760a25ab05c8ead2f5	text/html; charset=utf-8	response
+2	sber_git_brand	https://sbertech.ru/products/gitverse	https://sbertech.ru/products/gitverse	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html	response
+2	gitverse_docs	https://gitverse.ru/docs/developers/	https://gitverse.ru/docs/developers/	200	0	0	42666	7f0b9223cc85088c9c2907d6186e7ad0927cbe3f0effbab7ecb666e833e3f70d	text/html	response
+2	gitverse_release	https://gitverse.ru/docs/	https://gitverse.ru/docs/	200	0	0	66146	f32e556968f8b713e654ab6a8b4ff8cffb30c4918392efa962d2439a23dd4366	text/html	response
+2	oz_filed	https://github.com/ozontech/file.d	https://github.com/ozontech/file.d	200	0	0	349506	a7af79e109e5bfe57d0cce54aff31d4377aa2faa832eeb29a6f29e44fc4dccaa	text/html; charset=utf-8	response
+2	oztech_site	https://ozon.tech/	https://ozon.tech/	307	47	0	0	NA	text/html	response

@@ -1,0 +1,29 @@
+batch	key	url	effective	code	curl	tls	bytes	sha256	mime	observation
+2	oz_events	https://ozon.tech/events	https://ozon.tech/events	307	47	0	0	NA	text/html	response
+2	wb_rwb	https://www.rwb.ru/	https://www.rwb.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain	response
+2	wb_tech	https://tech.wildberries.ru/	https://tech.wildberries.ru/	498	0	0	1134	3906ea387416afca435691736d21d0c010998d21498a9278e7453e25145454e3	text/html	response
+2	wb_wibes	https://wibes.ru/	https://wibes.ru/	498	0	0	1133	49a564c1c07513fe2d6cfea2143e79e08d0b7965d9f25f6299a9c6da255f5c17	text/html	response
+2	wb_mp	https://mp.world/	https://mp.world/	498	0	0	1134	b6c270ab7730b76c1443ffe334c8c0bac9bf7d094c0c6d8cbfe8b1ea89742149	text/html	response
+3	kt_dns	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	https://support.kontur.ru/kontur-pomoshh/56017-dns_i_ipadresa_serverov_kontura	403	0	0	13868	d7e396eded740ce275a131ef29e9485f0cb47521fa2a237a2fb4d6031b92f7c7	text/html	response
+3	kt_log	https://support.kontur.ru/logistika/48417-trebovaniya_k_rabochemu_mestu	https://support.kontur.ru/logistika/48417-trebovaniya_k_rabochemu_mestu	403	0	0	13868	85c73e4509cc9beae2e222e9f351b9bca5f862b5e686d3c26d564667645de171	text/html	response
+3	kt_products	https://kontur.ru/enter	https://kontur.ru/enter	403	0	0	13868	ff13971a1ea50afeb1dd0798ecc2bfcb18c5aadaa2345a84bbeb5f6d7197ffa5	text/html	response
+3	kt_talk	https://kontur.ru/talk	https://kontur.ru/talk	403	0	0	13868	2ca7514143f18dd9e61782cbe57fbfb9f469009396ab77df2b116fe33ec63dca	text/html	response
+3	sber_products	https://sbertech.ru/products	https://sbertech.ru/products	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html	response
+3	ya_oss	https://opensource.yandex/projects/	https://opensource.yandex/projects/	200	0	0	72761	e14ff1c7b1d9ce2038097bb761da86e43ae87c121e3f980836024637c5cdfee9	text/html; charset=utf-8	response
+3	ya_ydb	https://ydb.tech/docs/ru/	https://ydb.tech/docs/ru/	200	0	0	222488	f69562ddf23de9311eb26ef0fc6ddb65db679fe439f360dc2d6b9c0479319d69	text/html; charset=utf-8	response
+3	av_oss	https://github.com/avito-tech	https://github.com/avito-tech	200	0	0	264816	299fb45abb193ed0f8d550bca03c6b345589318bd54e77c4bb73addc1ff6d5ae	text/html; charset=utf-8	response
+3	av_avito	https://avito.tech/	https://avito.tech/	200	0	0	3243827	df7c0be317f5781ebb1d03cec7ac584b9dc4bed6a03756ee9d5f1ef1547c60b4	text/html; charset=UTF-8	response
+4	rutube_help	https://rutube.ru/info/trouble/	https://rutube.ru/info/trouble/	200	0	0	288794	4e95703b64b7e87c0fac37be7e0e9386e8d94bba6749723a2fbdba10077aef4f	text/html; charset=utf-8	response
+4	rutube_sport	https://rutube.sport/	https://rutube.sport/	200	0	0	548338	8f528c6046479dcdae01ddc2a866a5b9274c532da32bb6ca46a92cff5cb820bc	text/html; charset=utf-8	response
+4	rutube_portal	https://rutube.ru/info/	https://rutube.ru/info/	404	0	0	272934	b90e4c332e21f622606496314dbf2478a6f519a74a7efceda802fab8edeb416a	text/html; charset=utf-8	response
+4	oz_bank	https://finance.ozon.ru/business	https://finance.ozon.ru/business	403	0	0	146	32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864	text/html	response
+4	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	https://support.kaspersky.ru/kescloud/208747	200	0	0	188465	ed9f87d4eb2d2a0548a2c14211e771c6d47d67026dac425786fc88029729c0da	text/html; charset=utf-8	response
+4	kt_whitelist	https://kontur.ru/press/news/83386-servisy_kontura_voshli_v_belyy_spisok	https://kontur.ru/press/news/83386-servisy_kontura_voshli_v_belyy_spisok	403	0	0	13868	739d48f84085ff55ef3c71b76b33106dac6d06661eda8774b5f94dadfc412caa	text/html	response
+4	kt_root	https://kontur.ru/	https://kontur.ru/	403	0	0	13868	64ce2d13941236685b5bedb31fde87b84918806145af2824fa940fda936f880d	text/html	response
+4	yaff_docs	https://yaff.tech/docs/en/	https://yaff.tech/docs/en/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain	response
+4	yaff_root	https://yaff.tech/	https://yaff.tech/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain	response
+5	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	https://docs.inkey.rt.ru/users/inhabitants/	200	0	0	64090	2c0ae4c0664ff32ac914c572da8b2f31d9c16757b6e07af66aea520601523ada	text/html; charset=UTF-8	response
+5	key_rt	https://key.rt.ru/	https://key.rt.ru/	200	0	0	32303	d51828d0a7f1e26a4e8bbc4b07991375e9760f655cfc7258ddc2801912e86e9a	text/html	response
+5	smarthome_rt	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	200	0	0	45164	c3fc1cc93d6aac7a14bf5c32e2e945ad9b4b0d504aa87c569939c88b22408d16	text/html	response
+5	yaff_github	https://github.com/yandex/yaff	https://github.com/yandex/yaff	200	0	0	262944	97ea09acdd1cb9e27ed466e9191315ea36bae3203255b09e5c94a276e5f124ec	text/html; charset=utf-8	response
+5	yaff_releases	https://github.com/yandex/yaff/releases	https://github.com/yandex/yaff/releases	200	0	0	173997	2d8c1de5115979f797e84b400466f3afe51eda85210c2771c62aa96828d1c1df	text/html; charset=utf-8	response

@@ -1,0 +1,49 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	disposition
+RUTUBE	rutube_help	https://rutube.ru/info/trouble/	official-link	2ip.ru	https://2ip.ru/	https://2ip.ru	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_whelp	https://yandex.ru/support/yandex-360/business/admin/ru/	official-link	360.yandex.ru	https://360.yandex.ru/business/	NA	domain:ru	domain:ru	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	account.kaspersky.com	https://account.kaspersky.com/SignUp	Попробовать	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Яндекс	dip_site	https://diplodoc.com/	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/ru/docs/	Посмотреть документацию​	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	aistudio.yandex.ru	https://aistudio.yandex.ru/	Yandex AI Studio	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	docs-code	alertmanager.sys	https://alertmanager.sys/	example or documented endpoint	NA	NA	NA	NA	local_example
+Яндекс	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	official-source	alice.yandex.ru	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	Забронировать или записаться через Алису AI (бета) — Справка	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	ya_oss	https://opensource.yandex/projects/	official-link	annetutil.github.io	https://annetutil.github.io/annet/main/	Сайт	NA	NA	NA	GITHUB	separate_category
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-link	appgallery.huawei.com	https://appgallery.huawei.com/app/C102915983	страница приложения в AppGallery	NA	NA	NA	NA	other_link
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-link	apps.apple.com	https://apps.apple.com/ru/app/%D1%80%D0%BE%D1%81%D1%82%D0%B5%D0%BB%D0%B5%D0%BA%D0%BE%D0%BC-%D0%BA%D0%BB%D1%8E%D1%87/id1459504090	страница приложения в App Store	NA	NA	NA	NA	other_link
+Ростелеком	smarthome_rt	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-link	apps.apple.com	https://apps.apple.com/ru/app/%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC-%D1%80%D1%82/id1205946608	AppStore	NA	NA	NA	NA	other_link
+Ростелеком	master_key_rt	https://docs.inkey.rt.ru/users/inhabitants/	official-link	apps.rustore.ru	https://apps.rustore.ru/app/ru.rt.key	страница приложения в RuStore	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_oss	https://github.com/avito-tech	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/13049122	@avito-tech	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_open	https://github.com/ozontech	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/95622872	@ozontech	NA	NA	NA	GITHUB	separate_category
+Ozon	oz_filed	https://github.com/ozontech/file.d	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/95622872	ozontech	NA	NA	NA	GITHUB	separate_category
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/94167509	vk-cs	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/7409213	yandex	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_releases	https://github.com/yandex/yaff/releases	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/19743266	@GDVFox	NA	NA	NA	GITHUB	separate_category
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/15078499	NA	NA	NA	NA	GITHUB	separate_category
+Авито	av_avito	https://avito.tech/	official-link	avito-analytics-academy.ru	https://avito-analytics-academy.ru/	NA	domain:ru	domain:ru	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-source	avito.tech	https://avito.tech/	Avito.Tech	domain:avito.tech	domain:avito.tech	NA	NA	covered_both
+Авито	av_avito	https://avito.tech/	official-link	avitoplato.tech	https://avitoplato.tech/	NA	NA	NA	NA	NA	already_in_queue
+Ростелеком	key_rt	https://key.rt.ru/	official-link	azbukainterneta.ru	https://azbukainterneta.ru/	Азбука Интернета	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	brew.sh	https://brew.sh/	Homebrew	NA	NA	NA	NA	other_link
+Ozon	oz_filed	https://github.com/ozontech/file.d	public-image	camo.githubusercontent.com	https://camo.githubusercontent.com/	Maintenance	NA	NA	NA	GITHUB	separate_category
+Яндекс	yaff_github	https://github.com/yandex/yaff	public-image	camo.githubusercontent.com	https://camo.githubusercontent.com/	License	NA	NA	NA	GITHUB	separate_category
+Авито	av_avito	https://avito.tech/	official-link	career.avito.com	https://career.avito.com/vacancies/	вакансии	domain:avito.com	domain:avito.com	NA	NA	covered_both
+Яндекс	alice_guide	https://alice.yandex.ru/support/ru/assistant/chat/agent-booking	public-image	cdn-viewer.diplodoc.com	https://cdn-viewer.diplodoc.com/docs-assets/alice/rev/r22105055/ru/assistant/_assets/beta.svg	Значок Бета	NA	NA	NA	NA	new_in_wave
+Яндекс	yc_whelp	https://yandex.ru/support/yandex-360/business/admin/ru/	public-image	cdn-viewer.diplodoc.com	https://cdn-viewer.diplodoc.com/docs-assets/yandex360-business-admin-tld-ru/rev/r22082582/ru/_assets/icons/image-card-disk.png	NA	NA	NA	NA	NA	new_in_wave
+Сбер	sber_git	https://gitverse.ru/home/	official-link	cloud.ru	https://cloud.ru/offers/free-tier	Подробнее на Cloud.ru	domain:ru	domain:ru	NA	NA	covered_both
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	cloud.vk.com	https://cloud.vk.com/docs	cloud.vk.com/docs	domain:vk.com	domain:vk.com	NA	NA	covered_both
+VK	vk_docs_gh	https://github.com/vk-cs/docs-public	official-link	cloud.vk.ru	https://cloud.vk.ru/docs	публичная документация VK Cloud	domain:ru	domain:ru	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	code.visualstudio.com	https://code.visualstudio.com/	Visual Studio Code	NA	NA	NA	NA	other_link
+Ozon	oz_filed	https://github.com/ozontech/file.d	official-link	codecov.io	https://codecov.io/github/ozontech/file.d	NA	NA	NA	NA	NA	other_link
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	community.kaspersky.com	https://community.kaspersky.com/kaspersky-endpoint-security-cloud-156	Форум	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Kaspersky	kasp_cloud	https://support.kaspersky.ru/kescloud/208747	official-link	companyaccount.kaspersky.com	https://companyaccount.kaspersky.com/	Портал Kaspersky CompanyAccount	domain:kaspersky.com	domain:kaspersky.com	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	docs-code	console.sys	https://console.sys/	example or documented endpoint	NA	NA	NA	NA	local_example
+Яндекс	yc_main	https://yandex.cloud/ru	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_cli	https://yandex.cloud/ru/docs/cli/quickstart	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_index	https://yandex.cloud/ru/docs/overview/concepts/interfaces	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_stack_overview	https://yandex.cloud/ru/docs/stackland/index	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	yc_stackland	https://yandex.cloud/ru/docs/stackland/quickstart	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both
+Яндекс	y_cloud_doc	https://yandex.cloud/ru/docs/stackland/release-notes	official-link	console.yandex.cloud	https://console.yandex.cloud/	Попробовать бесплатно	domain:yandex.cloud	domain:yandex.cloud	NA	NA	covered_both

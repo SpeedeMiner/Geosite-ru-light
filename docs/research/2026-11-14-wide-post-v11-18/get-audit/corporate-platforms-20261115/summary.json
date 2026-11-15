@@ -1,0 +1,19 @@
+{
+  "source_attempts": 64,
+  "source_urls_distinct": 62,
+  "usable_http_200_urls": 32,
+  "catalogue_source_host_pairs": 287,
+  "structured_port_entries": 34,
+  "manual_source_entries": 12,
+  "distinct_hosts_all": 162,
+  "dispositions": {
+    "already_in_queue": 9,
+    "covered_both": 107,
+    "local_example": 5,
+    "new_in_wave": 2,
+    "other_link": 20,
+    "separate_category": 19
+  },
+  "new_full": 2,
+  "stacked_full": 56
+}
