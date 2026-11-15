@@ -1,0 +1,41 @@
+{
+  "artifact_id": 14172809393,
+  "artifact_sha256": "700017633979d65613b17e3dfa04461fef75c485f7f371d93217d19a654312e8",
+  "attempted_urls": 6,
+  "connection_attempts": 2,
+  "distinct_exit_asns": 2,
+  "excluded_asns": [
+    49531,
+    196949
+  ],
+  "fresh_ru_credit": false,
+  "globalping_requests": 0,
+  "http_responses": 12,
+  "measurements": 12,
+  "profiles_discovered": 6,
+  "requested_exits": 2,
+  "requested_urls": 6,
+  "run_id": 43744436731,
+  "skipped_asn_attempts": {},
+  "source": "vpnobratno",
+  "states": {
+    "vpn_body_unproven": 6,
+    "vpn_marker": 4,
+    "vpn_visible_review": 2
+  },
+  "transport": "vpnobratno_openvpn",
+  "upstream_ref": "30e797f05ddb8e38ccc2c44938b64846b4fce2fb",
+  "upstream_state": "COMPLETE",
+  "verified_exits": [
+    {
+      "asn": 12389,
+      "http_responses": 6,
+      "urls": 6
+    },
+    {
+      "asn": 34168,
+      "http_responses": 6,
+      "urls": 6
+    }
+  ]
+}
