@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	yadro.com	yadro.com	https://yadro.com/ru/documentation/	YADRO|Документация|Техническая документация	https://x-holding.ru/companies/yadro/
+corporate	candidate	service.yadro.com	service.yadro.com	https://service.yadro.com/	YADRO|Сервисный портал|Вход	https://yadro.com/ru/service/
+corporate	candidate	partners.yadro.com	partners.yadro.com	https://partners.yadro.com/	YADRO|Партнёрский портал|Вход	https://yadro.com/ru/partners/
+corporate	candidate	support.kvadra.tech	support.kvadra.tech	https://support.kvadra.tech/business/download-center/	KVADRA|Центр загрузок|Поддержка	https://yadro.com/
+corporate	candidate	docs-b2c.kvadra.tech	docs-b2c.kvadra.tech	https://docs-b2c.kvadra.tech/	KVADRA|Техническая документация	https://docs-b2c.kvadra.tech/
+corporate	candidate	business.kvadra.tech	business.kvadra.tech	https://business.kvadra.tech/	KVADRA|Квадра	https://business.kvadra.tech/
+corporate	candidate	kvadra-service.yadro.com	kvadra-service.yadro.com	https://kvadra-service.yadro.com/	KVADRA|YADRO|Поддержка	https://business.kvadra.tech/
+corporate	control	x-holding.ru	x-holding.ru	https://x-holding.ru/companies/yadro/	YADRO|ИКС Холдинг	https://x-holding.ru/companies/yadro/

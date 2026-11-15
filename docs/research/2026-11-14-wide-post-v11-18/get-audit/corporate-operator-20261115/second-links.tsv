@@ -1,0 +1,47 @@
+key	host	url	anchor	source	title
+nexign-ru	habr.com	https://habr.com/ru/users/Nexign/publications/articles/		https://nexign.com/ru	Nexign - Главная
+nexign-ru	job.nexign.com	https://job.nexign.com/	Вакансии	https://nexign.com/ru	Nexign - Главная
+nexign-ru	neonhrm.nexign.com	https://neonhrm.nexign.com/	Neon HRM	https://nexign.com/ru	Nexign - Главная
+nexign-ru	t.me	https://t.me/telecom_chromosome		https://nexign.com/ru	Nexign - Главная
+nexign-ru	www.linkedin.com	https://www.linkedin.com/company/nexign/		https://nexign.com/ru	Nexign - Главная
+nexign-menu	habr.com	https://habr.com/ru/users/Nexign/publications/articles/		https://nexign.com/ru/new-menu-ru	New menu ru
+nexign-menu	job.nexign.com	https://job.nexign.com/	Вакансии	https://nexign.com/ru/new-menu-ru	New menu ru
+nexign-menu	neonhrm.nexign.com	https://neonhrm.nexign.com/	Neon HRM	https://nexign.com/ru/new-menu-ru	New menu ru
+nexign-menu	t.me	https://t.me/telecom_chromosome		https://nexign.com/ru/new-menu-ru	New menu ru
+nexign-menu	www.linkedin.com	https://www.linkedin.com/company/nexign/		https://nexign.com/ru/new-menu-ru	New menu ru
+nexign-jobs	habr.com	https://habr.com/ru/companies/nexign/articles/		https://job.nexign.com/	Карьера в Nexign
+nexign-jobs	nexign.com	https://nexign.com/ru		https://job.nexign.com/	Карьера в Nexign
+nexign-jobs	t.me	https://t.me/nexignteam		https://job.nexign.com/	Карьера в Nexign
+nexign-jobs	vk.com	https://vk.com/nexignteam		https://job.nexign.com/	Карьера в Nexign
+nexign-jobs	www.youtube.com	https://www.youtube.com/NexignTeam		https://job.nexign.com/	Карьера в Nexign
+nexign-neon	nexign.com	https://nexign.com/ru	Nexign	https://neonhrm.nexign.com/ru	Neon HRM – открытая к переменам HRM-система
+nexign-neon	t.me	https://t.me/+enUv5cWl9UpiNDcy		https://neonhrm.nexign.com/ru	Neon HRM – открытая к переменам HRM-система
+nexign-cloud	habr.com	https://habr.com/ru/users/Nexign/publications/articles/		https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	В «МегаФон Облако» запустили сервис для управления талантами на базе Neon HRM
+nexign-cloud	job.nexign.com	https://job.nexign.com/	Вакансии	https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	В «МегаФон Облако» запустили сервис для управления талантами на базе Neon HRM
+nexign-cloud	neonhrm.nexign.com	https://neonhrm.nexign.com/	Neon HRM	https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	В «МегаФон Облако» запустили сервис для управления талантами на базе Neon HRM
+nexign-cloud	t.me	https://t.me/telecom_chromosome		https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	В «МегаФон Облако» запустили сервис для управления талантами на базе Neon HRM
+nexign-cloud	www.linkedin.com	https://www.linkedin.com/company/nexign/		https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	В «МегаФон Облако» запустили сервис для управления талантами на базе Neon HRM
+ttk-cloud-doc	company.ttk.ru	https://company.ttk.ru/corp-feedback/	Противодействие коррупции	https://cloud.ttk.ru/documentation	Документация
+ttk-cloud-doc	disk.ttkdc.ru	https://disk.ttkdc.ru/index.php/s/8zZZfgi4y8kH7q9	Л030-00114-77/00633824	https://cloud.ttk.ru/documentation	Документация
+ttk-cloud-doc	reestr.fstec.ru	https://reestr.fstec.ru/regview1	Л024-д00107-77/00660836	https://cloud.ttk.ru/documentation	Документация
+ttk-cloud-doc	rkn.gov.ru	https://rkn.gov.ru/activity/connection/register/p1578/	Реестр провайдеров хостинга	https://cloud.ttk.ru/documentation	Документация
+ttk-transvoc	b2b.ttk.ru	https://b2b.ttk.ru	Для бизнеса	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	career.ttk.ru	https://career.ttk.ru/	Карьера	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	english.ttk.ru	https://english.ttk.ru/		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	max.ru	https://max.ru/ttk		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	moskva.myttk.ru	https://moskva.myttk.ru/services/service-packs/	Интернет и ТВ	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	nsk.ttk.ru	https://nsk.ttk.ru	Для дома	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	ok.ru	https://ok.ru/ttk		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	t.me	https://t.me/ttkrus		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	transvoc.ru	https://transvoc.ru/	Производство кабелей	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc	vk.com	https://vk.com/ttk		https://company.ttk.ru/ttk-group/transvoc/	АО Трансвок - АО «Компания ТрансТелеКом»
+ttk-transvoc-service	company.ttk.ru	https://company.ttk.ru/corp-feedback-main	Противодействие коррупции	https://transvoc.ru/	Главная | АО ТРАНСВОК
+mws-ai	github.com	https://github.com/mts-ai		https://mts.ai/	Создаем AI-решения будущего
+mws-ai	habr.com	https://habr.com/ru/companies/mts_ai/profile/		https://mts.ai/	Создаем AI-решения будущего
+mws-ai	moskva.mts.ru	https://moskva.mts.ru/personal	Перейти на сайт МТС	https://mts.ai/	Создаем AI-решения будущего
+mws-ai	telegram.me	https://telegram.me/mtsai		https://mts.ai/	Создаем AI-решения будущего
+mws-ai	vk.com	https://vk.com/mtsai		https://mts.ai/	Создаем AI-решения будущего

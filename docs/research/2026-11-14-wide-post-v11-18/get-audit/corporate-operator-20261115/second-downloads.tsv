@@ -1,0 +1,19 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+nexign-ru	https://nexign.com/ru	https://nexign.com/ru	200	0	0	191724	50adca47138fd4218d5ac629a003b17ccb2c0be80b4279b90dcabfd2dd0d7e8e	text/html; charset=UTF-8
+nexign-menu	https://nexign.com/ru/new-menu-ru	https://nexign.com/ru/new-menu-ru	200	0	0	129877	27d06b32001c47a954a144fa8b2277e8746ae2d76989b6268fc3a4732d199c0c	text/html; charset=UTF-8
+nexign-jobs	https://job.nexign.com/	https://job.nexign.com/	200	0	0	251724	556f3102728edda01169b1619d4747131e6ade5e348bef26b37a9683ad554417	text/html; charset=utf-8
+nexign-neon	https://neonhrm.nexign.com/ru	https://neonhrm.nexign.com/ru	200	0	0	113623	41fe2139050b967e1bf4a2a2e279e2eea1697aa18252487e661a732a12d86330	text/html; charset=UTF-8
+nexign-cloud	https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	https://nexign.com/ru/newsroom/press-releases/v-megafon-oblako-poyavilsya-servis-dlya-upravleniya-talantami-na-baze	200	0	0	151990	833a01237f4ff01ef1359f46b79f9267a5cc9123f305730a42398b43da85fcb1	text/html; charset=UTF-8
+nexign-support-source	https://nexign.com/ru/support	https://nexign.com/ru/support	404	0	0	93340	c7ca2053a64a9e986706de13eac234ea1907bd8f701ea107962cddcb43d959cc	text/html; charset=UTF-8
+ttk-cloud-doc	https://cloud.ttk.ru/documentation	https://cloud.ttk.ru/documentation	200	0	0	388804	9fbaaba53734b1af181dfa92efea6098fd2637c296a06c63e82db4822c56cd3e	text/html; charset=UTF-8
+ttk-transvoc	https://company.ttk.ru/ttk-group/transvoc/	https://company.ttk.ru/ttk-group/transvoc/	200	0	0	439948	cd0ef65ee0b8a5405e47faa66e227792e8fb7a49ed54eaf1cc768eca5d2bc00e	text/html; charset=UTF-8
+ttk-transvoc-service	https://transvoc.ru/	https://transvoc.ru/	200	0	0	45699	c1e41bd24b3442d4a2389862e5b9babbc2c22a73eae712cdae0f951861cbeed9	text/html; charset=UTF-8
+vk-tech	https://tech.vk.com/	https://tech.vk.com/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-cloud-doc	https://cloud.vk.com/docs/	https://cloud.vk.com/docs/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+vk-workspace	https://workspace.vk.ru/	https://workspace.vk.ru/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+yadro-index	https://yadro.com/	https://yadro.com/	477	0	0	8419	e1e77ef51e13db7cec1f4df20e184ae364bab95b028c79192933cebc76fa1b91	text/html
+yadro-docs	https://docs.yadro.com/	https://docs.yadro.com/	477	0	0	8429	868865623c2d46cc0947e1e98b5f33e0bd0dfaf10110831c76fbdabfb467f022	text/html
+bee-annual	https://ar.beeline.ru/2024/beeline-today	https://ar.beeline.ru/2024/beeline-today	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+bee-doc-prod	https://docs.cloud.beeline.ru/docs/platform/platform/about/	https://docs.cloud.beeline.ru/docs/platform/platform/about/	403	0	0	14829	6886a150e8e8a9394c18bfafbd737d779c27db204eae6c265d3dd0bead2d4cdd	text/html
+mws-softora	https://mws.ru/dev-tools/softora/	https://mws.ru/dev-tools/softora/	404	0	0	430	e726c227378a855792fe00b3bfc9e894493678636beffb170e556e6d9714fd7d	application/json
+mws-ai	https://mts.ai/	https://mts.ai/	200	0	0	210307	b89ff86ecdfe23d04c89e58f3229c7e720a33e0e8ce76b8c946ef77c98208a55	text/html; charset=UTF-8
