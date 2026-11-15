@@ -1,0 +1,40 @@
+batch	key	url	effective	code	curl	tls	bytes	sha256	mime
+7	mega_iot	https://moscow.megafon.ru/corporate/services/iot	https://moscow.megafon.ru/corporate/services/iot	200	0	0	316844	3b2470bbd354c0b286f9f2d66c7c927e6137b42fefa1bd8b32f2bc003ec9b020	text/html; charset=utf-8
+7	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	200	0	0	126587	18aca9ebe4d454ea6bb149d64bdb0d857af27e5876d224674d920349f12c1566	text/html; charset=UTF-8
+7	ttk_b2b_find	https://b2b.ttk.ru/	https://b2b.ttk.ru/	200	0	0	1604606	7ac4c57a30d864f32dc15eb5ba2af14733b0749865d47776b3d3572fd498be28	text/html; charset=UTF-8
+7	rt_solar_auth	https://docs.solarspace.pro/start-working/registration	https://docs.solarspace.pro/start-working/registration	200	0	0	838118	3ad3c58658caad405e978e44de8da7ad90ff03309b33f4ef0dc3439b31dd7fce	text/html
+7	t2_msk_mixx	https://msk.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski	https://msk.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski	403	0	0	6327	3fafec444e17f83a2bed4cb39f344565bbe93824174819e1f89d6a15e5e1c27a	text/html;charset=utf-8
+8	sel_docs	https://docs.selectel.ru/	https://docs.selectel.ru/	200	0	0	114808	525f52a411986df5c46a01f8bd262abc8703933c32c870edb1d50e0eb48ad9ca	text/html
+8	sel_cloud	https://selectel.ru/	https://selectel.ru/	200	0	0	691461	a72869eab81caf9a79cd8ee0169092ef0b08e2d1f13dcc84cf205429d387eac7	text/html
+8	sel_s3	https://docs.selectel.ru/cloud/object-storage/	https://docs.selectel.ru/s3/	200	0	0	50734	dd5a1028216f9f13003b33aa6adde76313fad6d1734973aa72c032a05666282a	text/html
+8	tw_docs	https://timeweb.cloud/docs	https://timeweb.cloud/docs	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+8	tw_site	https://timeweb.cloud/	https://timeweb.cloud/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+8	tw_status	https://status.timeweb.cloud/	https://status.timeweb.cloud/	200	0	0	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	text/html
+8	reg_faq	https://help.reg.ru/support/oblachnye-servery	https://help.reg.ru/support/oblachnye-servery	404	0	0	116119	558a0fbf3565afa8f7d59ef616fdcae5f59ae04f7fdaefc40034ce7d5eaa35a2	text/html; charset=UTF-8
+8	reg_cloud	https://reg.cloud/	https://reg.cloud/	200	0	0	13602	d0db68a344d1ad23628a7baec8bdbdf58a763073717bd3cf01ebba3d3478e8ef	text/html; charset=utf-8
+9	nspk_official	https://www.nspk.ru/about/official_sites	https://www.nspk.ru/about/official_sites	0	28	0	0	NA	NA
+9	nspk_main	https://www.nspk.ru/	https://www.nspk.ru/	0	28	0	0	NA	NA
+9	sbp_main	https://sbp.nspk.ru/	https://sbp.nspk.ru/	200	0	0	212774	4de250543c20c8ef3a2a840a2b53eb5e33e7a4a4f15e9d9e8410eec4f576358b	text/html;charset=utf-8
+9	mir_main	https://mironline.ru/	https://mironline.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+9	tbank_api	https://developer.tbank.ru/	https://developer.tbank.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+9	sber_main	https://developers.sber.ru/	https://developers.sber.ru/	200	0	0	321768	1f3c892bc9d3ba18fbc1bf868d4860c2d7f7821a1c99e5b03af6b10b924766f8	text/html; charset=utf-8
+10	link_help	https://help.mts-link.ru/	https://help.mts-link.ru/	200	0	0	52219	728f406eb3dd59baba0d194ee90060945ec084f5edb47e61b29621210e51ed14	text/html; charset=utf-8
+10	link_site	https://mts-link.ru/	https://mts-link.ru/	200	0	0	274631	2fc3f39bbf3505130150bed7889403f6e6b86b93da3150cd96f432c7831ad61a	text/html; charset=utf-8
+10	mts_exolve	https://exolve.ru/	https://exolve.ru/	200	0	0	403870	c7e9ca70feb590c6031564f6bf6a362f22885a242bbc99b81a2864d2faa59142	text/html; charset=utf-8
+10	nspk_alt	https://nspk.ru/about/official_sites/	https://nspk.ru/about/official_sites/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+10	nspk_en	https://nspk.com/	https://nspk.com/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+10	nspk_en_www	https://www.nspk.com/	https://www.nspk.com/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+10	sbp_banks	https://sbp.nspk.ru/banks	https://sbp.nspk.ru/banks	403	0	0	63	83c25cde12d0284cd15c6017e30a2811a7abe59f883e5379d269f489f39c5ce7	text/plain
+10	mir_help	https://pay.mironline.ru/help/	https://pay.mironline.ru/help/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+10	sber_docs	https://developers.sber.ru/docs/	https://developers.sber.ru/docs/	200	0	0	223160	f7000be744e43b0a04b785887955bf955ebf3362bcb55607b079c50ca4e14789	text/html
+11	rt_smarthome	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	200	0	0	45164	c3fc1cc93d6aac7a14bf5c32e2e945ad9b4b0d504aa87c569939c88b22408d16	text/html
+11	rt_key	https://key.rt.ru/	https://key.rt.ru/	200	0	0	32303	d51828d0a7f1e26a4e8bbc4b07991375e9760f655cfc7258ddc2801912e86e9a	text/html
+11	rt_help	https://rt.ru/help	https://rt.ru/help	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+11	rt_wink	https://wink.ru/	https://block.wink.ru/index.html	200	0	0	4112	a321b152f289b0efdaba04ff127ebdcffdb0de57cc69a03ba17e937ee928a6e0	text/html
+11	wink_help	https://wink.ru/help	https://block.wink.ru/index.html	200	0	0	4112	a321b152f289b0efdaba04ff127ebdcffdb0de57cc69a03ba17e937ee928a6e0	text/html
+11	cur_support	https://docs.curator.pro/help-and-support/contact-support.html	https://docs.curator.pro/help-and-support/contact-support.html	200	0	0	36690	37836ef25b9b9e0ae728a055ed02ecce0e7868d553396b36aafaeaeda5a9d7ec	text/html
+11	cur_pricing	https://qrator.ru/pricing	https://qrator.ru/pricing	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+12	exolve_ref	https://exolve.ru/docs/ru/api-reference/	https://exolve.ru/docs/ru/api-reference/	200	0	0	223453	ccd3d54e052ce7a785416149d35902669653b67513e216dd6a7c01e1b5180e09	text/html; charset=utf-8
+12	mtslink_req	https://help.mts-link.ru/article/19829/	https://help.mts-link.ru/article/19829/	200	0	0	91530	5cf2229f07150051d1dae5c2289c693c5b9a6cace2ccdd819a3e19fde65a5725	text/html; charset=utf-8
+12	nspk_terms	https://www.nspk.ru/about/processing-of-personal-data/	https://www.nspk.ru/about/processing-of-personal-data/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+12	nspk_certs	https://www.nspk.ru/certificates	https://www.nspk.ru/certificates	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain

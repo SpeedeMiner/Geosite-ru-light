@@ -1,0 +1,13 @@
+host	url	asn	http	curl	tls	asn_ris	state	title	markers	redirect_host	redirect_path	sample_bytes	sample_sha256	observed_at
+bilet.nspk.ru	https://bilet.nspk.ru/faq	12389	NA	60	20	12389	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:36.684814+00:00
+bilet.nspk.ru	https://bilet.nspk.ru/faq	42610	NA	60	20	42610	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:06.630851+00:00
+cloud.ttk.ru	https://cloud.ttk.ru/documentation	12389	200	0	0	12389	vpn_body_unproven	Документация	NA	NA	NA	10000	376474565ebdf7345a5bf1f8979efc0f50428ad8c5b13bc078a0bfbc0a12dcc8	2026-11-15T15:08:40.113220+00:00
+cloud.ttk.ru	https://cloud.ttk.ru/documentation	42610	200	0	0	42610	vpn_body_unproven	Документация	NA	NA	NA	10000	376474565ebdf7345a5bf1f8979efc0f50428ad8c5b13bc078a0bfbc0a12dcc8	2026-11-15T15:08:08.353401+00:00
+nspk.com	https://nspk.com/	12389	NA	60	20	12389	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:30.212142+00:00
+nspk.com	https://nspk.com/	42610	NA	60	20	42610	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:01.384320+00:00
+pay.mironline.ru	https://pay.mironline.ru/help/	12389	NA	60	10	12389	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:35.468594+00:00
+pay.mironline.ru	https://pay.mironline.ru/help/	42610	NA	60	10	42610	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:05.950501+00:00
+sbp.nspk.ru	https://sbp.nspk.ru/	12389	200	0	0	12389	vpn_visible_review	NA	NA	NA	NA	10000	4c3deadb141171a8057e8a068e426e6a4b0950cc9704d2077e99cd6cfab8f3fe	2026-11-15T15:08:34.147231+00:00
+sbp.nspk.ru	https://sbp.nspk.ru/	42610	200	0	0	42610	vpn_visible_review	NA	NA	NA	NA	10000	b4c5d42b80f2155ad1bceba849b3999377c877f561e6ca7c03c8743b83f35c4c	2026-11-15T15:08:03.277274+00:00
+www.nspk.com	https://www.nspk.com/	12389	NA	60	20	12389	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:31.873711+00:00
+www.nspk.com	https://www.nspk.com/	42610	NA	60	20	42610	vpn_tls_unproven	NA	NA	NA	NA	0	NA	2026-11-15T15:08:02.088060+00:00

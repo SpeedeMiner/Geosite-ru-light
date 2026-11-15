@@ -1,0 +1,4 @@
+documented_range	source	ipv4_count	covered_ru	missing_ru_cidrs	pinned_geoip_sha256
+37.130.192.0/22	https://help.mts-link.ru/article/19829/	1024	1024	NA	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d
+185.45.80.0/22	https://help.mts-link.ru/article/19829/	1024	1024	NA	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d
+95.213.181.4/32	https://help.mts-link.ru/article/19829/	1	1	NA	5d7e9dd0eb66bd507eb5f695b83441493fb20b2307ef71125de16c8b3809fa7d

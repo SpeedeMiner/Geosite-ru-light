@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	account.habr.com	https://account.habr.com/info/agreement/	Соглашение	domain:habr.com	domain:habr.com	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	advert.cnews.ru	https://advert.cnews.ru/	Реклама	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	aeroidea.ru	https://aeroidea.ru/		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	ai.cnews.ru	https://ai.cnews.ru/	Искусственный интеллект	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	ametist.tech	https://ametist.tech/		NA	NA	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-source	api.curator.pro	https://api.curator.pro/	Qrator API v1.5.21	NA	NA	NA	NA	yes
+Curator	curator_docs	https://docs.curator.pro/api-reference/usage.html	official-link	api.curator.pro	https://api.curator.pro/	api.curator.pro	NA	NA	NA	NA	yes
+Curator	curator_api	https://api.curator.pro/	docs-code	api.qrator.net	https://api.qrator.net/	example or documented endpoint	domain:qrator.net	domain:qrator.net	NA	NA	no
+Ростелеком	rt_smarthome	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-link	apps.apple.com	https://apps.apple.com/ru/app/%D1%83%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC-%D1%80%D1%82/id1205946608	AppStore	NA	NA	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	astra.ru	https://astra.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	axenix.pro	https://axenix.pro/		full:axenix.pro	full:axenix.pro	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	axoftglobal.ru	https://axoftglobal.ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	azbukainterneta.ru	https://azbukainterneta.ru/	Азбука Интернета	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-source	b2b.ttk.ru	https://b2b.ttk.ru/	АО «Компания ТрансТелеКом»	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	b2b.ttk.ru	https://b2b.ttk.ru/	Для бизнеса	domain:ru	domain:ru	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	basis.ru	https://basis.ru/	basis.ru	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	basis.ru	https://basis.ru/	Базис	domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	bekon.luntry.ru	https://bekon.luntry.ru/	Конференция «БеКон»	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	bellintegrator.ru	https://bellintegrator.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	bft.ru	https://bft.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	bizmatika.org	https://bizmatika.org/		NA	NA	NA	NA	no
+Wink	rt_wink	https://block.wink.ru/index.html	official-source	block.wink.ru	https://block.wink.ru/index.html	Геоблокировка	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	brand.selectel.ru	https://brand.selectel.ru/	Брендбук	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	bt-it.ru	https://bt-it.ru/		domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	bugbounty.mts-link.ru	https://bugbounty.mts-link.ru/	Bug Bounty	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	career.ttk.ru	https://career.ttk.ru/	Карьера	domain:ru	domain:ru	NA	NA	no
+Curator	curator_docs	https://docs.curator.pro/api-reference/usage.html	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA	yes
+Curator	cur_support	https://docs.curator.pro/help-and-support/contact-support.html	official-link	client.curator.pro	https://client.curator.pro/	Войти	NA	NA	NA	NA	yes
+Curator	curator_api	https://api.curator.pro/	official-link	client.qrator.net	https://client.qrator.net/api-tokens	personal dashboard	domain:qrator.net	domain:qrator.net	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_cloud	https://cloud.ttk.ru/	official-source	cloud.ttk.ru	https://cloud.ttk.ru/	Аренда облачной инфраструктуры для бизнеса от ТТК.Облако	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_docs	https://cloud.ttk.ru/documentation	official-source	cloud.ttk.ru	https://cloud.ttk.ru/documentation	Документация	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	cloud.ttk.ru	https://cloud.ttk.ru/	Облачные решения	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	cnews.ru	https://cnews.ru/link/n683718	Короткая ссылка	domain:ru	domain:ru	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	company.habr.com	https://company.habr.com/ru/corporate-blogs/	Корпоративный блог	domain:habr.com	domain:habr.com	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	company.ttk.ru	https://company.ttk.ru/	О компании	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_cloud	https://cloud.ttk.ru/	official-link	company.ttk.ru	https://company.ttk.ru/corp-feedback/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_docs	https://cloud.ttk.ru/documentation	official-link	company.ttk.ru	https://company.ttk.ru/corp-feedback/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-source	company.ttk.ru	https://company.ttk.ru/	Официальный сайт АО «Компания ТрансТелеКом»	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	concept-software.ru	https://concept-software.ru/		domain:ru	domain:ru	NA	NA	no
+МТС	mws_support	https://mws.ru/docs/support/about.html	official-link	console.mws.ru	https://console.mws.ru/status/incidents	статус сервисов из веб-консоли MWS Cloud Platform⁠	domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	corp.megafon.ru	https://corp.megafon.ru/	О компании	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	corp.megafon.ru	https://corp.megafon.ru/	О компании	domain:ru	domain:ru	NA	NA	no
+Curator	curator_docs	https://docs.curator.pro/api-reference/usage.html	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA	no
+Curator	cur_support	https://docs.curator.pro/help-and-support/contact-support.html	official-link	curator.pro	https://curator.pro/		NA	NA	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	data-frame.ru	https://data-frame.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	data.korusconsulting.ru	https://data.korusconsulting.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	datafinder.ru	https://datafinder.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	dataru.ru	https://dataru.ru/consulting		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	denvic.tech	https://denvic.tech/		NA	NA	NA	NA	no
+Сбер	sber_main	https://developers.sber.ru/	official-source	developers.sber.ru	https://developers.sber.ru/	Цифровая витрина технологий Сбера	domain:ru	domain:ru	NA	NA	no
+Сбер	sber_docs	https://developers.sber.ru/docs/	official-source	developers.sber.ru	https://developers.sber.ru/docs/	Документация для разработчиков | Подробно об инструментах, сервисах и технологиях Сбера	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_docs	https://cloud.ttk.ru/documentation	official-link	disk.ttkdc.ru	https://disk.ttkdc.ru/index.php/s/8zZZfgi4y8kH7q9	Л030-00114-77/00633824	domain:ru	domain:ru	NA	NA	no
+Curator	curator_docs	https://docs.curator.pro/api-reference/usage.html	official-source	docs.curator.pro	https://docs.curator.pro/api-reference/usage.html	Использование API	NA	NA	NA	NA	yes

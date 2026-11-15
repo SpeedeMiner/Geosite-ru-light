@@ -1,0 +1,15 @@
+{
+  "source_attempts": 119,
+  "source_urls_distinct": 114,
+  "source_urls_http200_curl0_tls0": 64,
+  "source_host_pairs": 333,
+  "hosts_distinct": 170,
+  "hosts_covered_by_both_dats": 141,
+  "hosts_in_research_queue_in_catalog": 7,
+  "hosts_other_uncovered_links": 22,
+  "new_full": 2,
+  "stacked_full": 54,
+  "vpn_requests": 46,
+  "vpn_http_responses": 38,
+  "globalping_requests": 0
+}

@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	ntr.ai	https://ntr.ai/		NA	NA	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	ok.ru	https://ok.ru/ttk		domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	ok.ru	https://ok.ru/ttk		domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	old.luntry.ru	https://old.luntry.ru/wp-content/themes/luntry-theme/assets/files/Luntry_Desc.pdf	Описание системы	domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	ordering.megafon.ru	https://ordering.megafon.ru/universal-order	Заказать решение	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	ordering.megafon.ru	https://ordering.megafon.ru/universal-order	Заказать решение	domain:ru	domain:ru	NA	NA	no
+МТС	mws_support	https://mws.ru/docs/support/about.html	official-link	org.mws.ru	https://org.mws.ru/support-center	Центр поддержки	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	otr.ru	https://otr.ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_smarthome	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-link	play.google.com	https://play.google.com/store/apps/details	Google Play	NA	NA	NA	GOOGLE-PLAY	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	promo.selectel.ru	https://promo.selectel.ru/ai-router	ИИ-РоутерNew	domain:ru	domain:ru	NA	NA	no
+Сбер	sber_docs	https://developers.sber.ru/docs/	official-link	public.oprosso.sber.ru	https://public.oprosso.sber.ru/p/developers-doc-2026	Пройти короткий опрос	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	redirect.appmetrica.yandex.com	https://redirect.appmetrica.yandex.com/serve/27845428728868634	Скачать приложение	domain:yandex.com	domain:yandex.com	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	reestr.digital.gov.ru	https://reestr.digital.gov.ru/reestr/3181629/	включен в реестр	domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	reestr.digital.gov.ru	https://reestr.digital.gov.ru/reestr/1057835/	Luntry в реестре отечественного ПО	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_docs	https://cloud.ttk.ru/documentation	official-link	reestr.fstec.ru	https://reestr.fstec.ru/regview1	Л024-д00107-77/00660836	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_docs	https://cloud.ttk.ru/documentation	official-link	rkn.gov.ru	https://rkn.gov.ru/activity/connection/register/p1578/	Реестр провайдеров хостинга	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	rt-dc.ru	https://rt-dc.ru/	«РТК-ЦОД»	domain:ru	domain:ru	NA	NA	no
+Солар	solar_docs	https://docs.solarspace.pro/	official-link	rt-solar.ru	https://rt-solar.ru/about_company/information/pdib/ppopd.pdf	Политика обработки персональных данных	domain:ru	domain:ru	NA	NA	no
+Солар	solar_auth_help	https://docs.solarspace.pro/faq/authorization	official-link	rt-solar.ru	https://rt-solar.ru/about_company/information/pdib/ppopd.pdf	Политика обработки персональных данных	domain:ru	domain:ru	NA	NA	no
+Солар	solar_contacts	https://docs.solarspace.pro/interface/contacts	official-link	rt-solar.ru	https://rt-solar.ru/space	https://rt-solar.ru/space	domain:ru	domain:ru	NA	NA	no
+Солар	solar_quickstart	https://docs.solarspace.pro/quickstart	official-link	rt-solar.ru	https://rt-solar.ru/about_company/information/pdib/ppopd.pdf	Политика обработки персональных данных	domain:ru	domain:ru	NA	NA	no
+Солар	rt_solar_auth	https://docs.solarspace.pro/start-working/registration	official-link	rt-solar.ru	https://rt-solar.ru/about_company/information/pdib/ppopd.pdf	Политика обработки персональных данных	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-link	rt-solar.ru	https://rt-solar.ru/	Группа компаний «Солар»	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar	https://www.company.rt.ru/press/news/d479367/	official-link	rt-solar.ru	https://rt-solar.ru/	Группа компаний «Солар»	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	rt.ru	https://rt.ru/help	Обратная связь	domain:ru	domain:ru	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	rutube.ru	https://rutube.ru/video/4cb99a927ffc40d69982e367de5cd4e1/	Hexway ASOC - спикер на вебинаре 25 августа!	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	rutube.ru	https://rutube.ru/channel/42339046/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_products	https://tdata.tech/products	official-link	rutube.ru	https://rutube.ru/channel/36080529/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	rutube.ru	https://rutube.ru/channel/36080529/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	sapiens.solutions	https://sapiens.solutions/		NA	NA	NA	NA	no
+НСПК	sbp_main	https://sbp.nspk.ru/	official-source	sbp.nspk.ru	https://sbp.nspk.ru/	СБП — Официальный сайт Системы быстрых платежей Банка России | Переводы и оплата	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	selectel.live	https://selectel.live/	Все сервисы доступны	domain:selectel.live	domain:selectel.live	NA	NA	no
+Selectel	sel_s3	https://docs.selectel.ru/s3/	official-link	selectel.ru	https://selectel.ru/services/cloud/storage/	Раздел на сайте	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-source	selectel.ru	https://selectel.ru/	IT-инфраструктура для бизнеса от облачного провайдера Selectel, аренда IaaS и PaaS	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	softline.ru	https://softline.ru/		domain:ru	domain:ru	NA	NA	no
+Selectel	sel_docs	https://docs.selectel.ru/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_s3	https://docs.selectel.ru/s3/	official-link	stack.selectel.ru	https://stack.selectel.ru/	Курсы	domain:ru	domain:ru	NA	NA	no
+ТТК	tt_as	https://stat.ripe.net/resource/AS20485	official-source	stat.ripe.net	https://stat.ripe.net/resource/AS20485	RIPEstat · AS20485	NA	NA	NA	NA	no
+МТС	mws_support	https://mws.ru/docs/support/about.html	official-link	status.mws.ru	https://status.mws.ru/	статус других сервисов MWS⁠	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	stech.ru	https://stech.ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	survey.iksconsulting.ru	https://survey.iksconsulting.ru/page56426925.html	2024 год	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	survey.iksconsulting.ru	https://survey.iksconsulting.ru/page74041939.html	исследования	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	t.me	https://t.me/ttkrus		NA	NA	NA	TELEGRAM	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	t.me	https://t.me/ttkrus		NA	NA	NA	TELEGRAM	no
+Сбер	sber_main	https://developers.sber.ru/	official-link	t.me	https://t.me/	Telegram channel link	NA	NA	NA	TELEGRAM	no
+Сбер	sber_docs	https://developers.sber.ru/docs/	official-link	t.me	https://t.me/	Telegram channel link	NA	NA	NA	TELEGRAM	no
+МТС Exolve	mts_exolve	https://exolve.ru/	official-link	t.me	https://t.me/mts_exolve		NA	NA	NA	TELEGRAM	no
+МТС Exolve	exolve_ref	https://exolve.ru/docs/ru/api-reference/	official-link	t.me	https://t.me/mts_exolve		NA	NA	NA	TELEGRAM	no
+Солар	hexway	https://hexway.ru/	official-link	t.me	https://t.me/vampy_appsec		NA	NA	NA	TELEGRAM	no
+Солар	luntry	https://luntry.ru/faq	official-link	t.me	https://t.me/luntry_official		NA	NA	NA	TELEGRAM	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	t.me	https://t.me/megafon_probusiness		NA	NA	NA	TELEGRAM	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	t.me	https://t.me/megafon_probusiness		NA	NA	NA	TELEGRAM	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	t.me	https://t.me/mts_link		NA	NA	NA	TELEGRAM	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	t.me	https://t.me/selectel	Telegram	NA	NA	NA	TELEGRAM	no
+TData	tdata_products	https://tdata.tech/products	official-link	t.me	https://t.me/TDataPlatform		NA	NA	NA	TELEGRAM	no

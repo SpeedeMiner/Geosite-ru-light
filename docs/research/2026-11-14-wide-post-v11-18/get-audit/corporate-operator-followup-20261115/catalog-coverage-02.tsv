@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+Curator	cur_support	https://docs.curator.pro/help-and-support/contact-support.html	official-source	docs.curator.pro	https://docs.curator.pro/help-and-support/contact-support.html	Обратиться в поддержку	NA	NA	NA	NA	yes
+Солар	luntry	https://luntry.ru/faq	official-link	docs.luntry.ru	https://docs.luntry.ru/	Документация	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_docs	https://docs.selectel.ru/	official-source	docs.selectel.ru	https://docs.selectel.ru/	Документация Selectel	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_s3	https://docs.selectel.ru/s3/	official-source	docs.selectel.ru	https://docs.selectel.ru/s3/	S3 | Документация Selectel	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	docs.selectel.ru	https://docs.selectel.ru/	Документация	domain:ru	domain:ru	NA	NA	no
+Солар	solar_docs	https://docs.solarspace.pro/	official-source	docs.solarspace.pro	https://docs.solarspace.pro/	Документация — Solar Space	NA	NA	NA	NA	yes
+Солар	solar_auth_help	https://docs.solarspace.pro/faq/authorization	official-source	docs.solarspace.pro	https://docs.solarspace.pro/faq/authorization	Авторизация на платформе Solar Space	NA	NA	NA	NA	yes
+Солар	solar_contacts	https://docs.solarspace.pro/interface/contacts	official-source	docs.solarspace.pro	https://docs.solarspace.pro/interface/contacts	Контакты	NA	NA	NA	NA	yes
+Солар	solar_quickstart	https://docs.solarspace.pro/quickstart	official-source	docs.solarspace.pro	https://docs.solarspace.pro/quickstart	Быстрое подключение сайта к защите: домен, DNS, SSL.	NA	NA	NA	NA	yes
+Солар	rt_solar_auth	https://docs.solarspace.pro/start-working/registration	official-source	docs.solarspace.pro	https://docs.solarspace.pro/start-working/registration	Регистрация на платформе Solar Space	NA	NA	NA	NA	yes
+TData	tdata_docs	https://docs.tdata.tech/	official-source	docs.tdata.tech	https://docs.tdata.tech/	Redirect to ./ru/index.html	NA	NA	NA	NA	yes
+TData	tdata_packages	https://docs.tdata.tech/ru/common/common_docs/landing_download.html	official-source	docs.tdata.tech	https://docs.tdata.tech/ru/common/common_docs/landing_download.html	Страница загрузки плагинов | Документация платформы данных	NA	NA	NA	NA	yes
+TData	tdata_home	https://docs.tdata.tech/ru/index.html	official-source	docs.tdata.tech	https://docs.tdata.tech/ru/index.html	Документация платформы данных	NA	NA	NA	NA	yes
+TData	tdata_products	https://tdata.tech/products	official-link	docs.tdata.tech	https://docs.tdata.tech/	Документация и релизы	NA	NA	NA	NA	yes
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	docs.tdata.tech	https://docs.tdata.tech/ru/RT_WareHouse/RT_WareHouse_General_description.html	Смотреть документацию	NA	NA	NA	NA	yes
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899		domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	dzen.ru	https://dzen.ru/id/65e1933ba9bdc976e1df4899		domain:ru	domain:ru	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	dzen.ru	https://dzen.ru/habr	Яндекс Дзен	domain:ru	domain:ru	NA	NA	no
+TData	tdata_products	https://tdata.tech/products	official-link	dzen.ru	https://dzen.ru/tdata		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	dzen.ru	https://dzen.ru/tdata		domain:ru	domain:ru	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-link	en.wikipedia.org	https://en.wikipedia.org/wiki/JSON-RPC	JSON-RPC web service	NA	NA	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	english.ttk.ru	https://english.ttk.ru/		domain:ru	domain:ru	NA	NA	no
+ЭР-Телеком	er_cloud	https://ertelecom.cloud/	official-source	ertelecom.cloud	https://ertelecom.cloud/		NA	NA	NA	NA	yes
+ЭР-Телеком	er_sites	https://ertelecom.ru/ru/contacts	official-source	ertelecom.ru	https://ertelecom.ru/ru/contacts		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	events.cnews.ru	https://events.cnews.ru/	Конференции	domain:ru	domain:ru	NA	NA	no
+МТС Exolve	mts_exolve	https://exolve.ru/	official-source	exolve.ru	https://exolve.ru/	МТС Exolve - коммуникационная платформа для разработчиков и бизнеса	domain:ru	domain:ru	NA	NA	no
+МТС Exolve	exolve_ref	https://exolve.ru/docs/ru/api-reference/	official-source	exolve.ru	https://exolve.ru/docs/ru/api-reference/	API Reference | документация Exolve	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_s3	https://docs.selectel.ru/s3/	official-link	files.selectel.ru	https://files.selectel.ru/docs/ru/conditions-cloud-storage.pdf	Условия использованияЮридический документ с основными правилами использования продукта	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	files.selectel.ru	https://files.selectel.ru/docs/ru/terms-of-use-for-services.pdf	Правила пользования сервисами и услугами	domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	gov.megafon.ru	https://gov.megafon.ru/articles/registraciya_sim	Активация SIM	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	gov.megafon.ru	https://gov.megafon.ru/products/umnoe-zhkx	Умное ЖКХУчёт расхода воды, электричества, газа и тепла. Управление оборудованием для управляющих ко	domain:ru	domain:ru	NA	NA	no
+МТС Exolve	mts_exolve	https://exolve.ru/	official-link	habr.com	https://habr.com/ru/companies/exolve/		domain:habr.com	domain:habr.com	NA	NA	no
+МТС Exolve	exolve_ref	https://exolve.ru/docs/ru/api-reference/	official-link	habr.com	https://habr.com/ru/companies/exolve/		domain:habr.com	domain:habr.com	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-source	habr.com	https://habr.com/ru/companies/basis/profile/	О компании Базис / Хабр	domain:habr.com	domain:habr.com	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	habr.com	https://habr.com/ru/companies/selectel/articles/	Habr	domain:habr.com	domain:habr.com	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	help.hexway.ru	https://help.hexway.ru/asoc/	Hexway Vampy ASPM	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_help	https://help.mts-link.ru/	official-source	help.mts-link.ru	https://help.mts-link.ru/	База знаний	domain:ru	domain:ru	NA	NA	no
+МТС Линк	mtslink_req	https://help.mts-link.ru/article/19829/	official-source	help.mts-link.ru	https://help.mts-link.ru/article/19829/	Технические требования МТС Линк | База знаний	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	help.mts-link.ru	https://help.mts-link.ru/	База знаний	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_smarthome	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	official-source	help.smarthome.rt.ru	https://help.smarthome.rt.ru/RUKOVODSTVO_POLSOVATELIA/help/	Основные вопросы - Умный дом	domain:ru	domain:ru	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	hexway.io	https://hexway.io/wp-content/uploads/aspm-pdf-help/user-manual.pdf	Руководство пользователя	NA	NA	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-source	hexway.ru	https://hexway.ru/	Система управления безопасной разработкой Hexway ASPM	domain:ru	domain:ru	NA	NA	no
+МТС Exolve	mts_exolve	https://exolve.ru/	official-link	hh.ru	https://hh.ru/employer/12034		domain:ru	domain:ru	NA	NA	no
+МТС Exolve	exolve_ref	https://exolve.ru/docs/ru/api-reference/	official-link	hh.ru	https://hh.ru/employer/12034		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	ibs.ru	https://ibs.ru/		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	internet.cnews.ru	https://internet.cnews.ru/	Интернет	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	investors.selectel.ru	https://investors.selectel.ru/	Инвесторам	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	itlanit.ru	https://itlanit.ru/		domain:ru	domain:ru	NA	NA	no
+МТС	mws_support	https://mws.ru/docs/support/about.html	official-link	itsm.mts.ru	https://itsm.mts.ru/	портал Service Desk	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	jet.su	https://jet.su/		domain:su	domain:su	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	job.megafon.ru	https://job.megafon.ru/	Работа в МегаФоне	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	job.megafon.ru	https://job.megafon.ru/	Работа в МегаФоне	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	job.mts-link.ru	https://job.mts-link.ru/	Вакансии	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	key-offer.rt.ru	https://key-offer.rt.ru/signup	открыть инструкцию	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-source	key.rt.ru	https://key.rt.ru/	Ростелеком Ключ для жителей	domain:ru	domain:ru	NA	NA	no

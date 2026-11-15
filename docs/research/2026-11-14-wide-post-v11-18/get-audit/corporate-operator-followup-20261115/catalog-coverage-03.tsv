@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	lasmart.ru	https://lasmart.ru/		domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	learn.mts-link.ru	https://learn.mts-link.ru/	Обучающие материалы	domain:ru	domain:ru	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-link	letsencrypt.org	https://letsencrypt.org/	Let's Encrypt	NA	NA	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	lk.megafon.ru	https://lk.megafon.ru/download/apk	Android	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	lk.megafon.ru	https://lk.megafon.ru/download/apk	Android	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	lkb2b.ttk.ru	https://lkb2b.ttk.ru/	Войти	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	official-link	lukit.ru	https://lukit.ru/	«Лукоморье»	domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-source	luntry.ru	https://luntry.ru/faq	FAQ	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	market.cnews.ru	https://market.cnews.ru/	ИТ-маркетплейс	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	max.ru	https://max.ru/ttk		domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	max.ru	https://max.ru/ttk		domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	max.ru	https://max.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	max.ru	https://max.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA	no
+TData	tdata_products	https://tdata.tech/products	official-link	max.ru	https://max.ru/id9729334015_biz		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	max.ru	https://max.ru/id9729334015_biz		domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_site	https://turbocloud.ru/	official-link	max.ru	https://max.ru/turbocloudnews		domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_company	https://turbocloud.ru/company/contacts	official-link	max.ru	https://max.ru/turbocloudnews		domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_products	https://turbocloud.ru/services	official-link	max.ru	https://max.ru/turbocloudnews		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	merlion.com	https://merlion.com/		full:merlion.com	full:merlion.com	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-source	moscow.megafon.ru	https://moscow.megafon.ru/corporate	Услуги для корпоративных клиентов — цифровые услуги для малого и среднего бизнеса от МегаФон, Москов	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-source	moscow.megafon.ru	https://moscow.megafon.ru/corporate/services/iot	IoT решения от МегаФон. Корпоративные тарифы для интернета вещей NB-IoT, Московский регион	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	moskva.myttk.ru	https://moskva.myttk.ru/upload/doc/Politika_opd_ttk.pdf	политикой обработки персональных данных	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	moskva.myttk.ru	https://moskva.myttk.ru/services/service-packs/	Интернет и ТВ	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	msk.rt.ru	https://msk.rt.ru/sale-office	Офисы продаж	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_help	https://help.mts-link.ru/	official-link	mts-link.ru	https://mts-link.ru/	Перейти на сайт	domain:ru	domain:ru	NA	NA	no
+МТС Линк	mtslink_req	https://help.mts-link.ru/article/19829/	official-link	mts-link.ru	https://mts-link.ru/	Перейти на сайт	domain:ru	domain:ru	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-source	mts-link.ru	https://mts-link.ru/	МТС Линк — российская платформа для бизнес-коммуникаций и совместной работы	domain:ru	domain:ru	NA	NA	no
+МТС	mws_catalog	https://mws.ru/docs/	official-source	mws.ru	https://mws.ru/docs/	Документация | MWS Docs	domain:ru	domain:ru	NA	NA	no
+МТС	mws_support	https://mws.ru/docs/support/about.html	official-source	mws.ru	https://mws.ru/docs/support/about.html	Техническая поддержка | MWS Docs	domain:ru	domain:ru	NA	NA	no
+Солар	solar_docs	https://docs.solarspace.pro/	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	no
+Солар	solar_auth_help	https://docs.solarspace.pro/faq/authorization	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	no
+Солар	solar_contacts	https://docs.solarspace.pro/interface/contacts	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	no
+Солар	solar_quickstart	https://docs.solarspace.pro/quickstart	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	no
+Солар	rt_solar_auth	https://docs.solarspace.pro/start-working/registration	official-link	my.rt-solar.ru	https://my.rt-solar.ru/	Личный кабинет	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	my.selectel.ru	https://my.selectel.ru/login	Вход	domain:ru	domain:ru	NA	NA	no
+Солар	solar_docs	https://docs.solarspace.pro/	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	no
+Солар	solar_auth_help	https://docs.solarspace.pro/faq/authorization	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	no
+Солар	solar_contacts	https://docs.solarspace.pro/interface/contacts	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	no
+Солар	solar_quickstart	https://docs.solarspace.pro/quickstart	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	no
+Солар	rt_solar_auth	https://docs.solarspace.pro/start-working/registration	official-link	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	Согласие на обработку файлов Cookies	NA	NA	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	myttk.ru	https://myttk.ru/services/service-inet/	Интернет	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	navicons.com	https://navicons.com/		NA	NA	NA	NA	no
+Ростелеком	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_ict	https://www.company.rt.ru/press/news/d471043/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar	https://www.company.rt.ru/press/news/d479367/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_divo	https://www.company.rt.ru/press/news/d479761/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	nsk.ttk.ru	https://nsk.ttk.ru/	Для дома	domain:ru	domain:ru	NA	NA	no

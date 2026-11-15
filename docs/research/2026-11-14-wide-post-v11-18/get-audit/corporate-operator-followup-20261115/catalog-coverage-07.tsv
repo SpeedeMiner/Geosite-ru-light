@@ -1,0 +1,4 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+Ростелеком	rt_divo	https://www.company.rt.ru/press/news/d479761/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	zoom.cnews.ru	https://zoom.cnews.ru/	Техника	domain:ru	domain:ru	NA	NA	no

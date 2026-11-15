@@ -1,0 +1,41 @@
+batch	key	url	effective	code	curl	tls	bytes	sha256	mime
+2	tts	https://ttk.ru/	https://ttk.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+2	ttb2b	https://ttk.ru/business/	https://ttk.ru/business/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+2	ttcompany	https://company.ttk.ru/	https://company.ttk.ru/	200	0	0	1057529	aedd0994d1a5e538f3f7320726744f1ed0354e7097c55d1e05d04abbd731dc48	text/html; charset=UTF-8
+2	mf_business	https://moscow.megafon.ru/corporate/	https://moscow.megafon.ru/corporate	200	0	0	425338	2f4e883f3296549bb50f7026093231273ec252a7336768f5c63f9043c02c0163	text/html; charset=utf-8
+2	mf_cloud	https://cloud.megafon.ru/	https://cloud.megafon.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+2	mf_products	https://moscow.megafon.ru/corporate/products/	https://moscow.megafon.ru/corporate/products	404	0	0	160889	bd8175510c8be8f8adf839ff1eb8c2a8cfd55785d8e7874b1e4bb7179b603ad4	text/html; charset=utf-8
+3	rt_ict	https://www.company.rt.ru/press/news/d471043/	https://www.company.rt.ru/press/news/d471043/	200	0	0	58648	c19da417bf3d2d24b8da3dbc6179939b89f1b42ee4ac4bd99f8fe427fda71fa4	text/html; charset=UTF-8
+3	rt_basis	https://www.company.rt.ru/press/news/d472805/	https://www.company.rt.ru/press/news/d472805/	200	0	0	64316	d8bba410312013aad5b003b2ebe61e68fa5c1eed9e659b122dad2aeeac8d52c1	text/html; charset=UTF-8
+3	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	https://www.company.rt.ru/press/news/d477611/	200	0	0	62654	def9952cfc67f706184a65a4a2a3a202ecf7f5ee4dfc023b007c28c441bc7957	text/html; charset=UTF-8
+3	rt_divo	https://www.company.rt.ru/press/news/d479761/	https://www.company.rt.ru/press/news/d479761/	200	0	0	59071	c5d2ac53d53ba93026e0c33ef1adef7476dbc72a1f14d24605fd1116cf4678ce	text/html; charset=UTF-8
+3	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	https://www.company.rt.ru/press/news_fill/d479707/	200	0	0	58712	14f7f7eab1af8d1c5ce6238bd1bbb71dde62385bb9cc0c23bc2d3d1bf40ee756	text/html; charset=UTF-8
+3	basis_astra	https://astra.ru/ready-for-astra/companies-partners/38085/	https://astra.ru/ready-for-astra/companies-partners/38085/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+3	basis_habr	https://habr.com/ru/companies/basis/profile/	https://habr.com/ru/companies/basis/profile/	200	0	0	53079	739427284d812c70a5416212b0df3a5fc0bd930b6346e556431eff7ccf1823ca	text/html; charset=utf-8
+3	mixx_news	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	403	0	0	6327	dc209587e8625df448da5d85f8fa514a2074804d1667cc22da44071a2cd11e9d	text/html;charset=utf-8
+3	bee_ar	https://ar.beeline.ru/2024/beeline-today	https://ar.beeline.ru/2024/beeline-today	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+3	solar_docs	https://docs.solarspace.pro/	https://docs.solarspace.pro/	200	0	0	1027218	3f192c31622692d9c43cc02216a10ac024a9eea666688e77c1b12959b9985836	text/html
+3	solar_login	https://my.solarspace.pro/auth/sign-in	https://my.rt-solar.ru/auth/sign-in	403	0	0	23438	0ee01a5cbd8f6eea2b364ac6105f95bedbfd7e2c92611c4f79759ce6a508500b	text/html
+3	hex_io	https://hexway.io/	https://hexway.io/	404	0	0	153	7962387f4f97bff9f3891849cffc02380ac2585e5fde80d4c670b2fcda401a19	text/html
+4	luko_main	https://lukit.ru/	https://lukit.ru/	200	0	0	1007	a11f14615bb25e068e48acd1f542739dd136507de688157d1f26500b1e3a41b6	text/html
+4	basis_main	https://basis.ru/	https://basis.ru/	403	0	0	7696	24c9e6317ed07ba80f21107f86d07b0045bd0de21ae2ec7a6dbc18d89695c873	text/html;charset=utf-8
+4	tt_b2b	https://myttk.ru/	https://myttk.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+4	tt_help	https://myttk.ru/support/help/	https://myttk.ru/support/help/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+4	solar_quickstart	https://docs.solarspace.pro/quickstart	https://docs.solarspace.pro/quickstart	200	0	0	937277	6afb1f375fe37b35b6ba347bcc7a953578a8488f7d3ff51550162f12c8cfd32a	text/html
+4	solar_auth_help	https://docs.solarspace.pro/faq/authorization	https://docs.solarspace.pro/faq/authorization	200	0	0	833464	2ebc63a4689065483e685891c3eaab367176dfdf6ada61b94a732e6036529aeb	text/html
+4	solar_contacts	https://docs.solarspace.pro/interface/contacts	https://docs.solarspace.pro/interface/contacts	200	0	0	817891	cb9498e5b31070e989df06648eba319248a2a82c5ab5bde976c4fe879b185374	text/html
+4	solar_current_login	https://my.rt-solar.ru/auth/sign-in	https://my.rt-solar.ru/auth/sign-in	403	0	0	23438	efc7ff22afc3b6fd4ba390cbc8c01d1f7571509051ed3af300377f60c148867b	text/html
+5	ttb2b_true	https://b2b.ttk.ru/	https://b2b.ttk.ru/	200	0	0	1604606	7ac4c57a30d864f32dc15eb5ba2af14733b0749865d47776b3d3572fd498be28	text/html; charset=UTF-8
+5	tt_portfolio	https://company.ttk.ru/	https://company.ttk.ru/	200	0	0	1057529	aedd0994d1a5e538f3f7320726744f1ed0354e7097c55d1e05d04abbd731dc48	text/html; charset=UTF-8
+5	rt_solar_solution	https://rt-solar.ru/products/solar_appscreener/	https://rt-solar.ru/products/solar_appscreener/	403	0	0	23438	c8a1790d4021137494d1c98b0444f911e3de0607df3e8811aee67304f92eb84a	text/html
+5	luko_news	https://www.company.rt.ru/press/news_fill/d479707/	https://www.company.rt.ru/press/news_fill/d479707/	200	0	0	58712	58c4f1455f1840082c04b1f65eacc48810fa73d33fb746628d27f6514e49903d	text/html; charset=UTF-8
+5	rtmixx_help	https://skidka.t2.ru/help/article/my-cabinet	https://skidka.t2.ru/help/article/my-cabinet	403	0	0	6327	eb41a1399b92eae95a0d030379bf1df5a6b668e3d05c0e63a89c225af51ae9f3	text/html;charset=utf-8
+5	tt_as	https://stat.ripe.net/AS20485	https://stat.ripe.net/resource/AS20485	200	0	0	7510	c8d43e7487a257a11fb82733c1a5660899780d12c812db4ace01c45c9a5052b5	text/html; charset=utf-8
+5	basis_virtual	https://www.company.rt.ru/press/news/d477611/	https://www.company.rt.ru/press/news/d477611/	200	0	0	62654	a946a20f3921ee47854f0e4f2cd53e4966cabfacde6a8dfeeb8647701803a0c9	text/html; charset=UTF-8
+6	tt_cloud	https://cloud.ttk.ru/	https://cloud.ttk.ru/	200	0	0	946583	f6bff61ac9bd35febec93c7b73f96865540be368a57e00ffa9912b1616a0c3ce	text/html; charset=UTF-8
+6	tt_docs	https://cloud.ttk.ru/documentation	https://cloud.ttk.ru/documentation	200	0	0	388804	9fbaaba53734b1af181dfa92efea6098fd2637c296a06c63e82db4822c56cd3e	text/html; charset=UTF-8
+6	tt_biz	https://b2b.ttk.ru/	https://b2b.ttk.ru/	200	0	0	1604606	7ac4c57a30d864f32dc15eb5ba2af14733b0749865d47776b3d3572fd498be28	text/html; charset=UTF-8
+6	beeline_home	https://cloud.beeline.ru/about-company/	https://cloud.beeline.ru/about-company/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+6	tdata_home	https://docs.tdata.tech/ru/index.html	https://docs.tdata.tech/ru/index.html	200	0	0	13697	17de67d5d2d1d135a47b69a9095741e263fa980728b0f1dfe29f1dbf05860ccf	text/html
+6	dom_official	https://dom.ru/	https://dom.ru/	403	0	0	22998	e79d985b0d3b7ea5bdefffc2bbed87a991a88e395de3053c18ba8970ed257ad9	text/html
+6	mws_home	https://mws.ru/docs/	https://mws.ru/docs/	200	0	0	79960	22c63123f3f11f9aad021288f9d6dc898659088de52c9bff976cd850f0781d86	text/html

@@ -1,0 +1,19 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+api.curator.pro	https://api.curator.pro/	candidate	200	63	0	200	NA	NA	NA	2026-11-15T15:04:26.485119+00:00	workspace_unattributed
+docs.solarspace.pro	https://docs.solarspace.pro/	candidate	200	0	0	200	Документация — Solar Space	NA	3f192c31622692d9c43cc02216a10ac024a9eea666688e77c1b12959b9985836	2026-11-15T15:04:26.508984+00:00	workspace_unattributed
+my.solarspace.pro	https://my.solarspace.pro/auth/sign-in	candidate	301	0	0	200	NA	my.rt-solar.ru	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	2026-11-15T15:04:26.992609+00:00	workspace_unattributed
+my.rt-solar.ru	https://my.rt-solar.ru/auth/sign-in	control	403	0	0	200	NA	NA	c9e1548d46d90ac19ac16f72552fdbc1185975b3799866eefbb1f97af08df4ff	2026-11-15T15:04:26.330539+00:00	workspace_unattributed
+hexway.io	https://hexway.io/	hold	404	0	0	200	NA	NA	7962387f4f97bff9f3891849cffc02380ac2585e5fde80d4c670b2fcda401a19	2026-11-15T15:04:28.585158+00:00	workspace_unattributed
+datalens.tech	https://datalens.tech/ru	hold	301	0	0	200	NA	datalens.ru	NA	2026-11-15T15:04:28.471085+00:00	workspace_unattributed
+datalens.ru	https://datalens.ru/promo	control	302	0	0	200	NA	datalens.ru	NA	2026-11-15T15:04:27.978045+00:00	workspace_unattributed
+b2b.ttk.ru	https://b2b.ttk.ru/	control	200	63	0	200	АО «Компания ТрансТелеКом»	NA	1cdab0309a2496424b28b2dff5748d5df54c53506cf58373b4affe02d7b25047	2026-11-15T15:04:29.660848+00:00	workspace_unattributed
+cloud.ttk.ru	https://cloud.ttk.ru/documentation	control	200	0	0	200	Документация	NA	9fbaaba53734b1af181dfa92efea6098fd2637c296a06c63e82db4822c56cd3e	2026-11-15T15:04:31.219048+00:00	workspace_unattributed
+moscow.megafon.ru	https://moscow.megafon.ru/corporate/services/iot	control	200	0	0	200	IoT решения от МегаФон. Корпоративные тарифы для интернета вещей NB-IoT, Московский регион	NA	3b2470bbd354c0b286f9f2d66c7c927e6137b42fefa1bd8b32f2bc003ec9b020	2026-11-15T15:04:31.990010+00:00	workspace_unattributed
+docs.cloud.beeline.ru	https://docs.cloud.beeline.ru/docs/platform/lk/about/	control	403	0	0	200	NA	NA	8b626d426ee56affc53c6d2acc62a3ab64e3e4a33ed85bd0bdd477d001f976cf	2026-11-15T15:04:30.216995+00:00	workspace_unattributed
+turbocloud.ru	https://turbocloud.ru/services	control	200	0	0	200	Сервисы «Турбо Облака»	NA	5da45d024e3cc56d1da0b0fe5d3294e297e69e4fa6f074e8b8ed321ea3c029d2	2026-11-15T15:04:30.796130+00:00	workspace_unattributed
+tdata.tech	https://tdata.tech/products/warehouse	control	200	0	0	200	RT.Warehouse	NA	cf734247d003fcc2f089716db84e36f39de3e9a445cd60711d50c6ca1f0deb20	2026-11-15T15:04:32.902029+00:00	workspace_unattributed
+lukit.ru	https://lukit.ru/	control	200	0	0	200	NA	NA	a11f14615bb25e068e48acd1f542739dd136507de688157d1f26500b1e3a41b6	2026-11-15T15:04:31.000041+00:00	workspace_unattributed
+basis.ru	https://basis.ru/	control	403	0	0	200	NA	NA	deb66b6210a0d92aa57122c88bd5a1f57a3dc468439b72198f5fa0a689e57f2a	2026-11-15T15:04:33.129643+00:00	workspace_unattributed
+ertelecom.cloud	https://ertelecom.cloud/	control	200	0	0	200	NA	NA	30112a9cb2ccc0260a53af6d3076bc04ed2045048cbdb65d8a78c2e1f7525a3f	2026-11-15T15:04:32.585422+00:00	workspace_unattributed
+b2b.dom.ru	https://b2b.dom.ru/about	control	403	0	0	200	NA	NA	766aed34cac4b7b4c280e250f33d3e8595493b923f6c7df4c4827da94d6845db	2026-11-15T15:04:33.614954+00:00	workspace_unattributed
+mws.ru	https://mws.ru/docs/	control	200	0	0	200	Документация | MWS Docs	NA	22c63123f3f11f9aad021288f9d6dc898659088de52c9bff976cd850f0781d86	2026-11-15T15:04:34.767263+00:00	workspace_unattributed

@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rossijskie_platformy_virtualizatsii/review_table/5fabc8157c0a50ab4727be7f8a137cc6610068aa	российских платформ виртуализации	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	www.comnews.ru	https://www.comnews.ru/content/234517/2024-08-02/2024-w31/1180/reyting-krupneyshie-operatory-kommercheskikh-data-centrov-rossii-stoykam-vvedennym-ekspluataciyu	Comnews Vision 2024	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_key	https://key.rt.ru/	official-link	www.company.rt.ru	https://www.company.rt.ru/about/	О компании	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d453521/	«Ростелеком» закрыл сделку по приобретению компании «ДатаЛайн». Официальный информационный сайт Рост	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_ict	https://www.company.rt.ru/press/news/d471043/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d471043/	«Ростелеком» объявляет о создании коммерческого ИТ-кластера. Официальный информационный сайт Ростеле	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d472630/	«РТК-ЦОД» расширяет возможности управления доступами в «Публичном облаке». Официальный информационны	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d472805/	«Ростелеком» перевел инфраструктуру на российскую платформу Basis Dynamix. Официальный информационны	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d477419/	TData запустит новые продукты в «Турбо Облаке». Официальный информационный сайт Ростелеком.	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d477611/	«Турбо Облако» запустило импортонезависимую виртуальную инфраструктуру на российской экосистеме «Баз	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d479203/	Компания «Турбо Облако» запустила сервис Solar Space для комплексной защиты сайтов и веб-приложений.	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar	https://www.company.rt.ru/press/news/d479367/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d479367/	«Солар» увеличил выручку на 13,2% — до 9,6 млрд рублей по итогам I полугодия 2026 г.. Официальный ин	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_divo	https://www.company.rt.ru/press/news/d479761/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d479761/	Платформа «Диво» от «Ростелекома» получила сертификат ФСТЭК России четвертого уровня доверия. Официа	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news_fill/d479707/	«Лукоморье» для губернаторов: «Ростелеком» покажет на ИТ-форуме в Кургане экосистему для цифровизаци	domain:ru	domain:ru	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	www.e-disclosure.ru	https://www.e-disclosure.ru/portal/company.aspx	Страница эмитента на сайте аккредитованного агентства	domain:ru	domain:ru	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	www.hexway.ru	https://www.hexway.ru/about_company/information/soglasie-na-obrabotku-personalnyh-dannyh	согласие	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.im-center.ru	https://www.im-center.ru/		domain:ru	domain:ru	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-link	www.iso.org	https://www.iso.org/iso/home/standards/country_codes.htm	country code	NA	NA	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	www.linkedin.com	https://www.linkedin.com/company/selectel/		NA	NA	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	www.megafon.ru	https://www.megafon.ru/corporate		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	www.megafon.ru	https://www.megafon.ru/corporate		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.norbit.ru	https://www.norbit.ru/		domain:ru	domain:ru	NA	NA	no
+НСПК	sbp_main	https://sbp.nspk.ru/	official-link	www.nspk.ru	https://www.nspk.ru/about/processing-of-personal-data	Политика обработки персональных данных АО «НСПК»	domain:ru	domain:ru	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-link	www.openssl.org	https://www.openssl.org/docs/manmaster/man5/x509v3_config.html	Subject Alternative Name	NA	NA	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.ot.ru	https://www.ot.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.red-soft.ru	https://www.red-soft.ru/ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_ict	https://www.company.rt.ru/press/news/d471043/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar	https://www.company.rt.ru/press/news/d479367/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_divo	https://www.company.rt.ru/press/news/d479761/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_luko	https://www.company.rt.ru/press/news_fill/d479707/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.s4-group.ru	https://www.s4-group.ru/		domain:ru	domain:ru	NA	NA	no
+Сбер	sber_main	https://developers.sber.ru/	official-link	www.sberbank.ru	https://www.sberbank.ru/	www.sberbank.ru	domain:ru	domain:ru	NA	NA	no
+Сбер	sber_docs	https://developers.sber.ru/docs/	official-link	www.sberbank.ru	https://www.sberbank.ru/	www.sberbank.ru	domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	www.shop.megafon.ru	https://www.shop.megafon.ru/	Интернет-магазин	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	www.shop.megafon.ru	https://www.shop.megafon.ru/	Интернет-магазин	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.t3data.ru	https://www.t3data.ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-link	www.tadviser.ru	https://www.tadviser.ru/a/815077	рейтинг крупнейших разработчиков платформ виртуализации серверов	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.unicon-consulting.ru	https://www.unicon-consulting.ru/		domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	www.youtube.com	https://www.youtube.com/@luntrysolution/featured		NA	NA	NA	YOUTUBE	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	www.youtube.com	https://www.youtube.com/@megafon_probusiness		NA	NA	NA	YOUTUBE	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	www.youtube.com	https://www.youtube.com/@megafon_probusiness		NA	NA	NA	YOUTUBE	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	www.youtube.com	https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng	YouTube	NA	NA	NA	YOUTUBE	no
+Ростелеком	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_ict	https://www.company.rt.ru/press/news/d471043/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis	https://www.company.rt.ru/press/news/d472805/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar	https://www.company.rt.ru/press/news/d479367/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA	no

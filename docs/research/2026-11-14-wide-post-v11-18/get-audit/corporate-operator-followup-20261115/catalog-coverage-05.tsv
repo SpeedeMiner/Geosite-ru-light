@@ -1,0 +1,56 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru	in_research_queue
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	t.me	https://t.me/TDataPlatform		NA	NA	NA	TELEGRAM	no
+Турбо Облако	turbo_site	https://turbocloud.ru/	official-link	t.me	https://t.me/turbocloudnews		NA	NA	NA	TELEGRAM	no
+Турбо Облако	turbo_company	https://turbocloud.ru/company/contacts	official-link	t.me	https://t.me/turbocloudnews		NA	NA	NA	TELEGRAM	no
+Турбо Облако	turbo_products	https://turbocloud.ru/services	official-link	t.me	https://t.me/turbocloudnews		NA	NA	NA	TELEGRAM	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	t1.ru	https://t1.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_products	https://tdata.tech/products	official-source	tdata.tech	https://tdata.tech/products	Продукты и услуги	NA	NA	NA	NA	yes
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-source	tdata.tech	https://tdata.tech/products/warehouse	RT.Warehouse	NA	NA	NA	NA	yes
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	tdata.tech	https://tdata.tech/	TData	NA	NA	NA	NA	yes
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	tech.megafon.ru	https://tech.megafon.ru/	Технологии ПроБизнесПространство, где мы обсуждаем применение цифровых технологий в реальном бизнесе	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	tech.megafon.ru	https://tech.megafon.ru/	Полезные материалы	domain:ru	domain:ru	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	telegram.me	https://telegram.me/basistech	Telegram: View @basistech	NA	NA	NA	TELEGRAM	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	tenchat.ru	https://tenchat.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	tenchat.ru	https://tenchat.ru/megafon_probusiness		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	terralink.ru	https://terralink.ru/		domain:ru	domain:ru	NA	NA	no
+Солар	hexway	https://hexway.ru/	official-link	tilda.ru	https://tilda.ru/page/	😲	domain:ru	domain:ru	NA	NA	no
+Curator	curator_api	https://api.curator.pro/	official-link	tools.ietf.org	https://tools.ietf.org/html/rfc2817	response details	NA	NA	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	transvoc.ru	https://transvoc.ru/	Производство кабелей	domain:ru	domain:ru	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	trk.mail.ru	https://trk.mail.ru/c/sa6p65	IOS	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	trk.mail.ru	https://trk.mail.ru/c/sa6p65	IOS	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	ttk.ru	https://ttk.ru/upload/doc/Politika_opd_ttk.pdf	Политика конфиденциальности	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	ttki.ttk.ru	https://ttki.ttk.ru/	Строительство сетей	domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_site	https://turbocloud.ru/	official-source	turbocloud.ru	https://turbocloud.ru/	Облачная инфраструктура от «Турбо Облака»	domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_company	https://turbocloud.ru/company/contacts	official-source	turbocloud.ru	https://turbocloud.ru/company/contacts	Контакты «Турбо Облака»	domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_waf	https://turbocloud.ru/docs/legal/rules/cloud_services_waf/	official-source	turbocloud.ru	https://turbocloud.ru/docs/legal/rules/cloud_services_waf/	Правила оказания услуги «Защита веб-приложений (WAF)» | Турбо Облако — Документация	domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_docs	https://turbocloud.ru/docs/s3/quick_start/	official-source	turbocloud.ru	https://turbocloud.ru/docs/s3/quick_start/	Быстрый старт | Турбо Облако — Документация	domain:ru	domain:ru	NA	NA	no
+Турбо Облако	turbo_products	https://turbocloud.ru/services	official-source	turbocloud.ru	https://turbocloud.ru/services	Сервисы «Турбо Облака»	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_tdata	https://www.company.rt.ru/press/news/d477419/	official-link	turbocloud.ru	https://turbocloud.ru/	«Турбо Облако»	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_basis_turbo	https://www.company.rt.ru/press/news/d477611/	official-link	turbocloud.ru	https://turbocloud.ru/	«Турбо Облако»	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	official-link	turbocloud.ru	https://turbocloud.ru/services/solarspace	Solar Space в облаке	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	tv.cnews.ru	https://tv.cnews.ru/	ТВ	domain:ru	domain:ru	NA	NA	no
+ТТК	ttb2b_true	https://b2b.ttk.ru/	official-link	vk.com	https://vk.com/ttk		domain:vk.com	domain:vk.com	NA	NA	no
+ТТК	ttcompany	https://company.ttk.ru/	official-link	vk.com	https://vk.com/ttk		domain:vk.com	domain:vk.com	NA	NA	no
+Базис	basis_habr	https://habr.com/ru/companies/basis/profile/	official-link	vk.com	https://vk.com/basistech	VK | VK	domain:vk.com	domain:vk.com	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	vk.com	https://vk.com/luntrysolution		domain:vk.com	domain:vk.com	NA	NA	no
+МегаФон	mf_business	https://moscow.megafon.ru/corporate	official-link	vk.com	https://vk.com/megafon_probusiness		domain:vk.com	domain:vk.com	NA	NA	no
+МегаФон	mega_iot	https://moscow.megafon.ru/corporate/services/iot	official-link	vk.com	https://vk.com/megafon_probusiness		domain:vk.com	domain:vk.com	NA	NA	no
+МТС Линк	link_site	https://mts-link.ru/	official-link	vk.com	https://vk.com/mtslink		domain:vk.com	domain:vk.com	NA	NA	no
+Selectel	sel_cloud	https://selectel.ru/	official-link	vk.com	https://vk.com/selectel	VK	domain:vk.com	domain:vk.com	NA	NA	no
+Турбо Облако	turbo_site	https://turbocloud.ru/	official-link	vk.com	https://vk.com/turbocloudnews		domain:vk.com	domain:vk.com	NA	NA	no
+Турбо Облако	turbo_company	https://turbocloud.ru/company/contacts	official-link	vk.com	https://vk.com/turbocloudnews		domain:vk.com	domain:vk.com	NA	NA	no
+Турбо Облако	turbo_products	https://turbocloud.ru/services	official-link	vk.com	https://vk.com/turbocloudnews		domain:vk.com	domain:vk.com	NA	NA	no
+Турбо Облако	turbo_waf	https://turbocloud.ru/docs/legal/rules/cloud_services_waf/	official-link	waf.cloud.rt-dc.ru	https://waf.cloud.rt-dc.ru/	https://waf.cloud.rt-dc.ru	domain:ru	domain:ru	NA	NA	no
+Солар	luntry	https://luntry.ru/faq	official-link	webinar.luntry.ru	https://webinar.luntry.ru/	Вебинары	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	wone-it.ru	https://wone-it.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.acropolis.uz	https://www.acropolis.uz/		NA	NA	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.analyticshub.ru	https://www.analyticshub.ru/		domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.auxo-it.ru	https://www.auxo-it.ru/		domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	www.bitrix24.ru	https://www.bitrix24.ru/	https://www.bitrix24.ru/	domain:ru	domain:ru	NA	NA	no
+TData	tdata_warehouse	https://tdata.tech/products/warehouse	official-link	www.cedrusdata.ru	https://www.cedrusdata.ru/		domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	www.cloud.rt.ru	https://www.cloud.rt.ru/showcase/main	«Публичное облако» РТК-ЦОД	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-link	www.cnconf.ru	https://www.cnconf.ru/events/lcnc_revolyuciya_novaya_arhitektura_cifrovoi_nezavisimosti.shtml	Low/no-code-революция: новая архитектура цифровой независимости Конференция	domain:ru	domain:ru	NA	NA	no
+МегаФон	mega_found	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	official-source	www.cnews.ru	https://www.cnews.ru/news/line/2026-04-09_megafon_otkryl_biznesu	«МегаФон» открыл бизнесу доступ к 25 ИИ-сервисам - CNews	domain:ru	domain:ru	NA	NA	no
+Ростелеком	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rynok_tsod_2024/articles/vyruchka_kommercheskih_data-tsentrov	2024 год	domain:ru	domain:ru	NA	NA	no

@@ -1,0 +1,41 @@
+batch	key	url	effective	code	curl	tls	bytes	sha256	mime
+1	rt_tdata	https://www.company.rt.ru/press/news/d477419/	https://www.company.rt.ru/press/news/d477419/	200	0	0	59286	63cf5b826d9990d9cc257c53591910238b4eb64976a86095f1e9303f16dbafed	text/html; charset=UTF-8
+1	rt_pcloud	https://www.company.rt.ru/press/news/d472630/	https://www.company.rt.ru/press/news/d472630/	200	0	0	59521	5ca7977c462a05374f05cfba5367afdb1e52749adda10261f33ee7a140693388	text/html; charset=UTF-8
+1	rt_dataline	https://www.company.rt.ru/press/news/d453521/	https://www.company.rt.ru/press/news/d453521/	200	0	0	52988	0d656a40ec72d89e0d20299daf308a580880332dabd4f6bee62722aeb0ee93ac	text/html; charset=UTF-8
+1	rt_dc	https://rt-dc.ru/	https://rt-dc.ru/	403	0	0	7696	705168d6c1bcfee92f6c9658cb1475b750f8c30231130bdae325d37bd75d9be4	text/html;charset=utf-8
+1	turbo_site	https://turbocloud.ru/	https://turbocloud.ru/	200	0	0	331548	b7ac39353c9c2a1a805585cfb126f47fddd5dca6a9d009a5d183131646394465	text/html; charset=utf-8
+1	turbo_products	https://turbocloud.ru/services	https://turbocloud.ru/services	200	0	0	412086	31eed2c70c6f055797fbd778825693e58c1e229a258e88ace518f2e01981b0ab	text/html; charset=utf-8
+1	turbo_docs	https://turbocloud.ru/docs/s3/quick_start/	https://turbocloud.ru/docs/s3/quick_start/	200	0	0	13541	38675d69a79733fd032e50655adebe634e5864669d41cce3388a130d63b67647	text/html
+1	turbo_waf	https://turbocloud.ru/docs/legal/rules/cloud_services_waf/	https://turbocloud.ru/docs/legal/rules/cloud_services_waf/	200	0	0	41786	dff9426b571633aed67d11c63a12a02bbbbc1e3cce61e5c3054f2bbfcd360f59	text/html
+1	turbo_company	https://turbocloud.ru/company/contacts	https://turbocloud.ru/company/contacts	200	0	0	155712	b7da61e3404680c8f6c09fd7ad03efca4d3f65a692eff9cdcd10627aec35e523	text/html; charset=utf-8
+1	tdata_products	https://tdata.tech/products	https://tdata.tech/products	200	0	0	313128	99f968c9b846cb28fbded932796ba28f6e4bc2f4d65aaf0ff0127469f3910529	text/html; charset=UTF-8
+1	tdata_warehouse	https://tdata.tech/products/warehouse	https://tdata.tech/products/warehouse	200	0	0	330669	cf734247d003fcc2f089716db84e36f39de3e9a445cd60711d50c6ca1f0deb20	text/html; charset=UTF-8
+1	tdata_docs	https://docs.tdata.tech/	https://docs.tdata.tech/	200	0	0	761	dbcc543b1523023000e8acc3e57fe632002e3af9186b3e3dc20133ab1cb6d56d	text/html
+1	tdata_packages	https://docs.tdata.tech/ru/common/common_docs/landing_download.html	https://docs.tdata.tech/ru/common/common_docs/landing_download.html	200	0	0	9230	57b400cc9606e5124a85cd34977e4e5a29298656c8c90a33122e8ed0f72a91f9	text/html
+1	t2_catalog	https://msk.t2.ru/business/catalog-services	https://msk.t2.ru/business/catalog-services	403	0	0	6327	1906de07b35ebe925f00b24cecfb9dad8edcaaf2c5ea3db9c23acbf7041c7a29	text/html;charset=utf-8
+1	t2_company	https://t2.ru/business/catalog-services	https://t2.ru/business/catalog-services	403	0	0	6327	f7ef86aa19b075e77907c5be15e0e58eb173826c130bb905045816757f2c6986	text/html;charset=utf-8
+1	t2_mvno	https://msk.t2.ru/about/cooperation/mvne	https://msk.t2.ru/about/cooperation/mvne	403	0	0	6327	94289b7f868f469489cc0cbf4e8cc3ef7de3fdfaf57055d786800904c82753d8	text/html;charset=utf-8
+1	dom_about	https://b2b.dom.ru/about	https://b2b.dom.ru/about	403	0	0	1295	d117f67600be7e6cb98629531ba808f3e5bec228fe6fbb6b8e28e2988e265ef8	text/html
+1	dom_products	https://b2b.dom.ru/	https://b2b.dom.ru/	403	0	0	1295	c1df7b33d00e4b2a6026c37b7d9fbdb4e1ffeaa5199c2f432515892c07669909	text/html
+1	er_sites	https://ertelecom.ru/ru/contacts	https://ertelecom.ru/ru/contacts	200	0	0	2173	1316693c16c806c6099ae8d79b160d6e6c12eff3c7a4fa4c1e3a73a3ab957883	text/html
+1	er_cloud	https://ertelecom.cloud/	https://ertelecom.cloud/	200	0	0	2168	61f94cf662c3a3f389d75abf8a2257f0a3ad5db25d5de3cc0b5f18a57a011367	text/html
+1	bee_catalog	https://docs.cloud.beeline.ru/docs/platform/platform/about/	https://docs.cloud.beeline.ru/docs/platform/platform/about/	403	0	0	14829	ad8b6f53b85bfbd8b2c23174fe84cf0f3b7cf8f8e62b08c581da5b40a87930c7	text/html
+1	bee_lk	https://docs.cloud.beeline.ru/docs/platform/lk/about/	https://docs.cloud.beeline.ru/docs/platform/lk/about/	403	0	0	14823	77c0cc8bc1e3ea6843704c02027deaa7e066d6683a987e2902c4c375036a467c	text/html
+1	bee_cdn	https://docs.cloud.beeline.ru/docs/network/cdn/responsibility/	https://docs.cloud.beeline.ru/docs/network/cdn/responsibility/	403	0	0	14832	8f1fed1de2a9f70f98c758080cf71bc95b693d5ccca217539bfaba37649cd40a	text/html
+1	mws_catalog	https://mws.ru/docs/products.html	https://mws.ru/docs/	200	0	0	79960	22c63123f3f11f9aad021288f9d6dc898659088de52c9bff976cd850f0781d86	text/html
+1	mws_support	https://mws.ru/docs/support/about.html	https://mws.ru/docs/support/about.html	200	0	0	40622	e8bb924dfee2954b65f298326feb1a278a253043320ed04a444687f37514e560	text/html
+1	curator_docs	https://docs.curator.pro/api-reference/usage.html	https://docs.curator.pro/api-reference/usage.html	200	0	0	36820	d68de8503534138201bbb896363bd92d9fa4ae2028e2b91d59d1e92c8101c154	text/html
+1	curator_api	https://api.curator.pro/	https://api.curator.pro/	200	0	0	3340569	cab796c62e40c95230346d15c15a679857d23f4039f08fa793d72d707d768687	text/html
+2	rt_solar	https://www.company.rt.ru/press/news/d479367/	https://www.company.rt.ru/press/news/d479367/	200	0	0	78917	0b1a4347065e0bbe1a08819c6fa39b976dc2793cbe531895edcc9a11182adb2c	text/html; charset=UTF-8
+2	rt_solar_space	https://www.company.rt.ru/press/news/d479203/	https://www.company.rt.ru/press/news/d479203/	200	0	0	66019	d4777e43c5fb00d43651cce795953713dc274d64c378a52947656c442a5d1355	text/html; charset=UTF-8
+2	solar_products	https://rt-solar.ru/products/	https://rt-solar.ru/products/	403	0	0	23438	82ec0f2d717b5d963d7ed4a972b55e0f8675cc267944473b05f8ff5263e0566f	text/html
+2	solar_space	https://rt-solar.ru/products/solar_space/	https://rt-solar.ru/products/solar_space/	403	0	0	23438	2846c68ddecb9b84bc28ecd9291061a2ba5b0fc1b928d8007bba9ae713d7f45b	text/html
+2	solar_space_alt	https://solarspace.pro/	https://my.rt-solar.ru/	403	0	0	23438	672a6a3490e3cc625ccb7d7704df0ed5ca5e03986901fe336cd0f197e582c181	text/html
+2	solar_appscreener	https://rt-solar.ru/products/solar_appscreener/documents/	https://rt-solar.ru/products/solar_appscreener/documents/	403	0	0	23438	820ce5abe8c6615a27d4da31f75a736a3cb2f3014282dbf5a143562c71f0bc2a	text/html
+2	hexway	https://hexway.ru/	https://hexway.ru/	200	0	0	427047	9ebcb38d7de02b705f7d7ea67ad0e119857956bcd1c6bb423e8c6e4e18ffbb35	text/html; charset=UTF-8
+2	luntry	https://luntry.ru/faq	https://luntry.ru/faq	200	0	0	65740	22eb9dfaf9925f8b55dbc94273718fb48710e5d159b1dd408cffa5336de159e0	text/html; charset=UTF-8
+2	t2_cloud	https://konkurs.t2.ru/business/cloud-business	https://konkurs.t2.ru/business/cloud-business	403	0	0	6327	75e37b3d47efc406faa2151fa7523fda7dfc9e1de56599a78538b04a23ff3f83	text/html;charset=utf-8
+2	t2_showcase	https://tura.t2.ru/business/catalog-services	https://tura.t2.ru/business/catalog-services	403	0	0	6327	555be44cbcac616faddee774a72da36f7897f1e724140c34715e00a2cc99b26f	text/html;charset=utf-8
+2	t2_coop	https://eao.t2.ru/about/cooperation/mvne	https://eao.t2.ru/about/cooperation/mvne	403	0	0	6327	1c98452a5b6223e322583db61adc900a5a4a5f0377ddc78f6ee50ef692f5e7d0	text/html;charset=utf-8
+2	bee_site	https://cloud.beeline.ru/	https://cloud.beeline.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+2	bee_services	https://cloud.beeline.ru/cloud-services/	https://cloud.beeline.ru/cloud-services/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
