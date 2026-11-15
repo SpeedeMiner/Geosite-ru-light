@@ -1,0 +1,19 @@
+scope	sector	url	markers	source	note
+RU	business_register	https://egrul.nalog.ru/	ЕГРЮЛ|ЕГРИП	https://www.nalog.gov.ru/rn77/related_activities/registries/	Открытая оболочка без поиска персональных данных
+RU	business_register	https://pb.nalog.ru/	Прозрачный бизнес	https://pb.nalog.ru/	Публичная страница ФНС
+RU	business_register	https://rmsp.nalog.ru/	Единый реестр|предпринимательства	https://rmsp.nalog.ru/	Открытый реестр МСП, без запросов по ИНН
+RU	legislation	https://publication.pravo.gov.ru/	официальное опубликование|правовой информации	https://pravo.gov.ru/	Публичная страница публикаций
+RU	legislation	https://www.consultant.ru/	КонсультантПлюс	https://www.consultant.ru/	Частный справочный сервис, не официальный реестр
+RU	statistics	https://rosstat.gov.ru/	Росстат|государственной статистики	https://rosstat.gov.ru/	Официальная точка статистики
+RU	statistics	https://www.fedstat.ru/	ЕМИСС|Федеральная служба	https://www.fedstat.ru/	Публичные статистические показатели
+KZ	legislation	https://adilet.zan.kz/rus	Әділет|нормативных правовых актов	https://www.gov.kz/org/adilet-krg/press/news/details/601618?lang=ru	Явное имя из инструкции органа юстиции
+KZ	legislation	https://zan.gov.kz/	Эталонный контрольный банк	https://www.gov.kz/org/adilet-krg/press/news/details/601618?lang=ru	Публичный вход контрольного банка
+KZ	statistics	https://stat.gov.kz/ru/	Бюро национальной статистики	https://stat.gov.kz/ru/	Официальная точка статистики
+KZ	opendata	https://data.egov.kz/	Открытые данные|Ашық деректер	https://data.egov.kz/	Каталог открытых данных
+KZ	justice	https://sud.gov.kz/rus/	Верховный Суд	https://sud.gov.kz/rus/	Публичная страница, доступ этого URL требует отдельного подтверждения
+BY	legislation	https://pravo.by/	Национальный правовой|правовой информации	https://pravo.by/	Точный публичный вход, недоступность поисковику не доказательство блока
+BY	statistics	https://www.belstat.gov.by/	Белстат|Статистический комитет	https://www.belstat.gov.by/	Публичная точка статистики
+BY	business_register	https://egr.gov.by/	Единый государственный регистр	https://egr.gov.by/	Публичная оболочка без поиска
+BY	justice	https://court.gov.by/	Верховный Суд	https://court.gov.by/	Официальный адрес требует проверки ответа
+CIS	geodata	https://cisgeo.info/	Геопортал СНГ	https://e-cis.info/	В источнике найден точный публичный хост, уже в матрице 008
+EAEU	justice	https://court.eaeunion.org/	Суд Евразийского экономического союза	https://eaeunion.org/?lang=ru	Очередь ручной сверки, ошибка открытия не подтверждает назначение точного имени
