@@ -1,0 +1,3 @@
+"host"	"url"	"result"	"sources"
+"ifconfig.ovh"	"https://ifconfig.ovh/"	"ip_echo_plain_v6"	"https://docs.ovhcloud.com/en/guides/network/network-tools"
+"ip.ls"	"https://ip.ls/"	"ip_echo_plain_v6"	"https://ip.ls/"

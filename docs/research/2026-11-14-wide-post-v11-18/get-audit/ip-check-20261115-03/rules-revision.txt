@@ -1,0 +1,1 @@
+Strict TLS, exact public HTTPS URLs, no credential or automatic redirects.

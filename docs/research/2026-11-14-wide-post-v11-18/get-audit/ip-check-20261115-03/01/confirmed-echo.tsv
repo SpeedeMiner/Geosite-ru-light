@@ -1,0 +1,7 @@
+"host"	"url"	"result"	"sources"
+"checkmyipnow.com"	"https://checkmyipnow.com/ip"	"ip_echo_plain_v6"	"https://checkmyipnow.com/developers/"
+"globalip.me"	"https://globalip.me/"	"ip_echo_plain_v4"	"https://neos21.net/blog/2019/08/14-02.html"
+"ip.nelchancho.com"	"https://ip.nelchancho.com/ip"	"ip_echo_plain_v6"	"https://ip.nelchancho.com/"
+"ip.tecnotip.com.br"	"https://ip.tecnotip.com.br/?plain"	"ip_echo_plain_v4"	"https://ip.tecnotip.com.br/"
+"webtracecheck.com"	"https://webtracecheck.com/api/v1/ip"	"ip_echo_plain_v6"	"https://webtracecheck.com/zh/ip-api"
+"worldip.io"	"https://worldip.io/ja/"	"ip_echo_json_v6"	"https://worldip.io/ja/"
