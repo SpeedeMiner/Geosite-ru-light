@@ -1,0 +1,59 @@
+key	group	host	url	anchor	source	title	light_ru	server_ru	block	non_ru
+astra	Астра	aic.astra.ru	https://aic.astra.ru/developer_guide/	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	astra.ru	https://astra.ru/about/career/	Карьера	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	dev.astra.ru	https://dev.astra.ru/		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	docs.astra-automation.ru	https://docs.astra-automation.ru/2.0/cdk/	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	docs.astralinux.ru	https://docs.astralinux.ru/latest/index.html	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	docs.bootsman.tech	https://docs.bootsman.tech/product_info/architecture_componets.html	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	NA	NA	NA	NA
+astra	Астра	docs.gitflic.ru	https://docs.gitflic.ru/	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	docs.rubackup.ru	https://docs.rubackup.ru/restapi/2.9.0.0.0/	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	docs.tantorlabs.ru	https://docs.tantorlabs.ru/tdb/ru/17_7/se/internals.html	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	download.workspad.com	https://download.workspad.com/external/link/rupost_4-0-0_preferred_architecture	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	NA	NA	NA	NA
+astra	Астра	dzen.ru	https://dzen.ru/astragroup		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	habr.com	https://habr.com/ru/companies/astralinux/articles/		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:habr.com	domain:habr.com	NA	NA
+astra	Астра	lk.astra.ru	https://lk.astra.ru/	Аккаунт	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	max.ru	https://max.ru/gruppa_astra		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	ok.ru	https://ok.ru/gruppaastra		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	rutube.ru	https://rutube.ru/channel/23720491/		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	t.me	https://t.me/astragroup		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	NA	NA	NA	TELEGRAM
+astra	Астра	tantorlabs.ru	https://tantorlabs.ru/products/pipelinedb	Узнать больше	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	vk.com	https://vk.com/gruppa_astra		https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:vk.com	domain:vk.com	NA	NA
+astra	Астра	wiki.astralinux.ru	https://wiki.astralinux.ru/kb/ 	База знаний	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	www.aldpro.ru	https://www.aldpro.ru/materials/3.2.0/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B0/5_debugging/index.html	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+astra	Астра	www.ispsystem.ru	https://www.ispsystem.ru/docs/vmmanager-admin/razrabotchiku	Документация	https://dev.astra.ru/products	Экосистема продуктов «Группы Астра»	domain:ru	domain:ru	NA	NA
+bootsman	Астра	astra.ru	https://astra.ru/ready-for-astra/companies-partners/	Посмотреть всех партнеров	https://bootsman.tech/	Российская платформа контейнеризации Боцман – гибридная облачная система контейнеризации для управления мультикластерами	domain:ru	domain:ru	NA	NA
+bootsman	Астра	bootsman.tech	https://bootsman.tech/		https://bootsman.tech/	Российская платформа контейнеризации Боцман – гибридная облачная система контейнеризации для управления мультикластерами	NA	NA	NA	NA
+bootsman-docs	Астра	docs.bootsman.tech	https://docs.bootsman.tech/	Перейти к содержимому	https://docs.bootsman.tech/	Вас приветствует Боцман! | Боцман	NA	NA	NA	NA
+workspad	Астра	t.me	https://t.me/astrarupost		https://www.workspad.ru/	WorksPad – Суперапп и управление мобильностью. Организация защищенной мобильной работы	NA	NA	NA	TELEGRAM
+workspad	Астра	vk.com	https://vk.com/gruppa_astra		https://www.workspad.ru/	WorksPad – Суперапп и управление мобильностью. Организация защищенной мобильной работы	domain:vk.com	domain:vk.com	NA	NA
+workspad	Астра	www.workspad.ru	https://www.workspad.ru/main		https://www.workspad.ru/	WorksPad – Суперапп и управление мобильностью. Организация защищенной мобильной работы	domain:ru	domain:ru	NA	NA
+workspad-res	Астра	download.workspad.com	https://download.workspad.com/external/link/adminguide63		https://www.workspad.ru/resources	Полезные Материалы — WorksPad	NA	NA	NA	NA
+workspad-res	Астра	t.me	https://t.me/astrarupost		https://www.workspad.ru/resources	Полезные Материалы — WorksPad	NA	NA	NA	TELEGRAM
+workspad-res	Астра	vk.com	https://vk.com/gruppa_astra		https://www.workspad.ru/resources	Полезные Материалы — WorksPad	domain:vk.com	domain:vk.com	NA	NA
+workspad-res	Астра	www.workspad.ru	https://www.workspad.ru/main		https://www.workspad.ru/resources	Полезные Материалы — WorksPad	domain:ru	domain:ru	NA	NA
+workspad-pages	Астра	download.workspad.com	https://download.workspad.com/external/link/adminguide63		https://download.workspad.com/external/link/adminguide63	Сайт внешнего доступа - WorksPad	NA	NA	NA	NA
+gitverse-docs	СберТех	gitverse.ru	https://gitverse.ru/		https://gitverse.ru/docs/	Документация по платформе GitVerse	domain:ru	domain:ru	NA	NA
+postgrespro	Postgres Pro	max.ru	https://max.ru/id7729445882_biz		https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	domain:ru	domain:ru	NA	NA
+postgrespro	Postgres Pro	postgrespro.com	https://postgrespro.com/	EN	https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	full:postgrespro.com	full:postgrespro.com	NA	NA
+postgrespro	Postgres Pro	postgrespro.ru	https://postgrespro.ru/		https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	domain:ru	domain:ru	NA	NA
+postgrespro	Postgres Pro	repo.postgrespro.ru	https://repo.postgrespro.ru/	https://repo.postgrespro.ru/	https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	domain:ru	domain:ru	NA	NA
+postgrespro	Postgres Pro	t.me	https://t.me/postgres_pro		https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	NA	NA	NA	TELEGRAM
+postgrespro	Postgres Pro	vk.com	https://vk.com/public101507899		https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	domain:vk.com	domain:vk.com	NA	NA
+postgrespro	Postgres Pro	www.youtube.com	https://www.youtube.com/@PostgresProfessional		https://postgrespro.ru/release-policy	Публичный манифест релизной политики СУБД Postgres Pro	NA	NA	NA	YOUTUBE
+pg-support	Postgres Pro	max.ru	https://max.ru/id7729445882_biz		https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	domain:ru	domain:ru	NA	NA
+pg-support	Postgres Pro	postgrespro.com	https://postgrespro.com/	EN	https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	full:postgrespro.com	full:postgrespro.com	NA	NA
+pg-support	Postgres Pro	postgrespro.ru	https://postgrespro.ru/		https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	domain:ru	domain:ru	NA	NA
+pg-support	Postgres Pro	support.postgrespro.ru	https://support.postgrespro.ru/	https://support.postgrespro.ru/	https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	domain:ru	domain:ru	NA	NA
+pg-support	Postgres Pro	t.me	https://t.me/postgres_pro		https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	NA	NA	NA	TELEGRAM
+pg-support	Postgres Pro	vk.com	https://vk.com/public101507899		https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	domain:vk.com	domain:vk.com	NA	NA
+pg-support	Postgres Pro	www.youtube.com	https://www.youtube.com/@PostgresProfessional		https://postgrespro.ru/services/support	Вендорская техническая поддержка СУБД Postgres Pro, PostgreSQL и других продуктов Postgres Professional : Компания Postg	NA	NA	NA	YOUTUBE
+cedrus	VK	cedrusdata.ru	https://cedrusdata.ru		https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:ru	domain:ru	NA	NA
+cedrus	VK	cookiedatabase.org	https://cookiedatabase.org/tcf/purposes/	Read more about these purposes	https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	NA	NA	NA	NA
+cedrus	VK	docs.cedrusdata.ru	https://docs.cedrusdata.ru/latest/	Документация Engine Руководство пользователя, инструкции по установке и настройк	https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:ru	domain:ru	NA	NA
+cedrus	VK	habr.com	https://habr.com/ru/companies/cedrusdata/profile/	Блог на Хабр	https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:habr.com	domain:habr.com	NA	NA
+cedrus	VK	support.cedrusdata.ru	https://support.cedrusdata.ru/	Центр техподдержки Личный кабинет клиента для обращения в поддержку и отслеживан	https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:ru	domain:ru	NA	NA
+cedrus	VK	t.me	https://t.me/cedrusdatachat	Сообщество Trino Крупнейшее русскоязычное сообщество специалистов: помощь и обме	https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	NA	NA	NA	TELEGRAM
+cedrus	VK	vkvideo.ru	https://vkvideo.ru/@club232335451		https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:ru	domain:ru	NA	NA
+cedrus	VK	www.linkedin.com	https://www.linkedin.com/groups/13371047/		https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	NA	NA	NA	NA
+cedrus	VK	www.youtube.com	https://www.youtube.com/@cedrusdata		https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	NA	NA	NA	YOUTUBE
+cedrus	VK	yandex.ru	https://yandex.ru/maps/-/CLSNaF3w		https://cedrusdata.ru/contacts	Контакты, обратная связь | CedrusData	domain:ru	domain:ru	NA	NA

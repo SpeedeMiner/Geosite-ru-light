@@ -1,0 +1,16 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+astra	https://dev.astra.ru/products	https://dev.astra.ru/products	200	0	0	44400	68dfd510a8a8679b0b333c920e7174751e1986a605e07814038e0c4aa6dd6ba4	text/html;charset=utf-8
+bootsman	https://bootsman.tech/	https://bootsman.tech/	200	0	0	94427	4e1119217c0c6c0451baa1e848e1b1963eefcaac28911d4dcb9adfff776bdd93	text/html;charset=utf-8
+bootsman-docs	https://docs.bootsman.tech/	https://docs.bootsman.tech/	200	0	0	448384	ed8c2f3dcfa8acabf79ca8a1532d91e01b3a25322556ba86a344ce7d146b5d9c	text/html
+workspad	https://www.workspad.ru/	https://www.workspad.ru/	200	0	0	925570	f62e318781ce20f744557143ac0d01cbeb9a2d9350b1016e2f3988927ba60d39	text/html; charset=UTF-8
+workspad-res	https://www.workspad.ru/resourses	https://www.workspad.ru/resources	200	0	0	501860	4115bc53c381a44a368a16da61e7693d4c27116deb6fdc485e93e492c5ebd151	text/html; charset=UTF-8
+workspad-pages	https://download.workspad.com/external/link/adminguide63	https://download.workspad.com/external/link/adminguide63	200	0	0	4676	d840c3ebe4718ff5f051a293060d87de65845555709fda5e863bf913f8d90562	text/html; charset=utf-8
+sbertech	https://sbertech.ru/	https://sbertech.ru/	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+sbertech-doc	https://sbertech.ru/documents	https://sbertech.ru/documents	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+sbertech-platformv	https://platformv.sbertech.ru/support	https://platformv.sbertech.ru/support	401	0	0	265	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed	text/html
+gitverse-docs	https://gitverse.ru/docs	https://gitverse.ru/docs/	200	0	0	66146	f32e556968f8b713e654ab6a8b4ff8cffb30c4918392efa962d2439a23dd4366	text/html
+postgrespro	https://postgrespro.ru/release-policy	https://postgrespro.ru/release-policy	200	0	0	229909	df192e260d802270cf6d3ff3a3449356f43c11c052d6334efc2bce9a2a25827a	text/html; charset=utf-8
+pg-support	https://postgrespro.ru/services/support	https://postgrespro.ru/services/support	200	0	0	340603	cb355c20c0572067679af27d74a427ce2547efb5db8341f967fc5767f18bfc1b	text/html; charset=utf-8
+cedrus	https://cedrusdata.ru/contacts	https://cedrusdata.ru/contacts	200	0	0	258767	52a2aca5f33e69994fdd16f05c33612ecee7f9f3df54fca8f95868291857f6db	text/html; charset=UTF-8
+bureau	https://1440.space/	https://1440.space/	477	0	0	8421	e98a89cb61b3c661dd2e35bf3a29c021d955e934f98c93f1f19aa4c7855cde0e	text/html
+kryptonit	https://kryptonite.ru/sitemap/	https://kryptonite.ru/sitemap/	403	0	0	440951	3caac521a51455c445b39215075f4f2671f1f00b60a031b7a39d28650ec61bca	text/html
