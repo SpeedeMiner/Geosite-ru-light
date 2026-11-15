@@ -1,0 +1,17 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+wink_support	https://wink.ru/support	https://block.wink.ru/index.html	200	0	0	4112	a321b152f289b0efdaba04ff127ebdcffdb0de57cc69a03ba17e937ee928a6e0	text/html
+wink_diag	https://wink.ru/faq/141	https://block.wink.ru/index.html	200	0	0	4112	a321b152f289b0efdaba04ff127ebdcffdb0de57cc69a03ba17e937ee928a6e0	text/html
+wink_contacts	https://wink.ru/contacts	https://block.wink.ru/index.html	200	0	0	4112	a321b152f289b0efdaba04ff127ebdcffdb0de57cc69a03ba17e937ee928a6e0	text/html
+rt_dataline	https://www.company.rt.ru/press/news/d453521/	https://www.company.rt.ru/press/news/d453521/	200	0	0	52988	06b862a441ffc041cec9491599d96bef79d096c050f5e620d179135f328babe2	text/html; charset=UTF-8
+rt_ngenix	https://www.company.rt.ru/press/news/d450706/	https://www.company.rt.ru/press/news/d450706/	200	0	0	57096	bd9e34feca6fbe6c9cdd19a36444912c678173f6834da1fa8a86f19fca08e6ee	text/html; charset=UTF-8
+ngenix_status	https://status.ngenix.net/	https://status.ngenix.net/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+beeline_docs	https://docs.cloud.beeline.ru/docs/platform/platform/about/	https://docs.cloud.beeline.ru/docs/platform/platform/about/	403	0	0	14829	6fd993dc9f1378c200bb2105007a342416f30076ecc7651423e08ddff6896037	text/html
+beeline_root	https://docs.cloud.beeline.ru/	https://docs.cloud.beeline.ru/	403	0	0	14784	ae659244980ccc5ca2cf5c9eedc144d89eab7234667e97e8069f717ce22877ad	text/html
+beeline_cdn	https://doc-cdn.beelinecloud.ru/	https://doc-cdn.beelinecloud.ru/	200	0	0	32191	0634d94171aeee698700fdad469353fa98a600294039d25e6d93e3eb83f8017d	text/html
+beeline_cloud	https://cloud.beeline.ru/	https://cloud.beeline.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+megafon_docs	https://megafonapi.github.io/	https://megafonapi.github.io/	200	0	0	3843	7b6f8b5adacd0b8954d2fd0c2f8078543689e21c8b8d9aaa28e0415026c55ba6	text/html; charset=utf-8
+megafon_github	https://github.com/megafonapi/examples	https://github.com/megafonapi/examples	200	0	0	212310	10a427f814335e480e1e5f2b2a3130336578ff5c461d8c588a02aee970d76ff3	text/html; charset=utf-8
+megafon_manuals	https://manuals.megafon.ru/	https://manuals.megafon.ru/	200	0	0	1358	ac00f0a86647ddb2c8f1e677fddb49f35fae1be8a270ecd45bc75e59a4a4dbc5	text/html;charset=utf-8
+megafon_vats	https://vats.megafon.ru/roskvartal	https://vats.megafon.ru/roskvartal	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+rt_arti	https://design.rt.ru/tools_public/arti	https://design.rt.ru/tools_public/arti	200	0	0	245	fb6a00bdee053846f6103d30ff41f4fb23522c2c4b56a899d5e169ffcf4f13de	text/html
+rtcomm	https://www.rtcomm.ru/	https://www.rtcomm.ru/	200	0	0	187223	617d508df15f49e086d379f76ec1be2bd8dd60c237dc7b5a642542344569419d	text/html; charset=UTF-8

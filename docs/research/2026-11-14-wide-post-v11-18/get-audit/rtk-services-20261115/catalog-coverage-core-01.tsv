@@ -1,0 +1,34 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+РТК ИТ	rtkit	https://rtkit.ru/products	official-source	rtkit.ru	https://rtkit.ru/products	Ростелеком ИТ | Главная	domain:ru	domain:ru	NA	NA
+РТК ИТ	rtkit_www	https://www.rtkit.ru/products	official-source	www.rtkit.ru	https://www.rtkit.ru/products	Ростелеком ИТ | Главная	domain:ru	domain:ru	NA	NA
+РТК ИТ	rtkit_arti	https://rtkit.ru/products/arti	official-source	rtkit.ru	https://rtkit.ru/products/arti	Ростелеком ИТ | Главная	domain:ru	domain:ru	NA	NA
+РТК ИТ	rtkit_atomaro	https://rtkit.ru/products/dizain-sistema-atomaro	official-source	rtkit.ru	https://rtkit.ru/products/dizain-sistema-atomaro	Ростелеком ИТ | Главная	domain:ru	domain:ru	NA	NA
+РТК ИТ	rt_design	https://design.rt.ru/	official-source	design.rt.ru	https://design.rt.ru/	Request Rejected	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_neuro	https://www.company.rt.ru/press/news_fill/d480219/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_neuro	https://www.company.rt.ru/press/news_fill/d480219/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news_fill/d480219/	Универсальный ИИ-инструмент: «Ростелеком» представит «Нейрошлюз» на ИТ-форуме в Тюмени. Официальный	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_neuro	https://www.company.rt.ru/press/news_fill/d480219/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_neuro	https://www.company.rt.ru/press/news_fill/d480219/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_market	https://www.rtk-market.ru/product/nejroshljuz	official-link	rtkit.ru	https://rtkit.ru/	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_market	https://www.rtk-market.ru/product/nejroshljuz	official-link	www.company.rt.ru	https://www.company.rt.ru/	NA	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_market	https://www.rtk-market.ru/product/nejroshljuz	official-source	www.rtk-market.ru	https://www.rtk-market.ru/product/nejroshljuz	Нейрошлюз - внедрение искусственного интеллекта в компанию	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_market	https://www.rtk-market.ru/product/nejroshljuz	official-link	yandex.ru	https://yandex.ru/maps/-/CDe1fJYx	108811, г. Москва, 22-й км Киевского ш.дмвл. 6, стр. 1, оф. Е434	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_nop	https://www.company.rt.ru/projects/nop/	official-link	moscow.rt.ru	https://moscow.rt.ru/b2b/service_cloudy/virtual_dc	«Виртуальный ЦОД»	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_nop	https://www.company.rt.ru/projects/nop/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_nop	https://www.company.rt.ru/projects/nop/	official-source	www.company.rt.ru	https://www.company.rt.ru/projects/nop/	Национальная облачная платформа. Официальный информационный сайт Ростелеком.	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_nop	https://www.company.rt.ru/projects/nop/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_nop	https://www.company.rt.ru/projects/nop/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_host	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_host	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	official-link	rt-dc.ru	https://rt-dc.ru/	«РТК-ЦОД»	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_host	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	official-source	www.company.rt.ru	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	«Ростелеком» вошел в перечень провайдеров хостинга для государственных информационных систем . Офици	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_host	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_host	https://www.company.rt.ru/projects/digital_economy_rf/data-centers/d472941/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	rt-dc.ru	https://rt-dc.ru/	«РТК-ЦОД»	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	survey.iksconsulting.ru	https://survey.iksconsulting.ru/page56426925.html	2024 год	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rynok_tsod_2024/articles/vyruchka_kommercheskih_data-tsentrov	2024 год	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	www.comnews.ru	https://www.comnews.ru/content/234517/2024-08-02/2024-w31/1180/reyting-krupneyshie-operatory-kommercheskikh-data-centrov-rossii-stoykam-vvedennym-ekspluataciyu	Comnews Vision 2024	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d473293/	Компания «РТК-ЦОД» открыла новую площадку «Публичного облака» в Москве. Официальный информационный с	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_cloud	https://www.company.rt.ru/press/news/d473293/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	data.rt.ru	https://data.rt.ru/	«Платформы управления данных»	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA

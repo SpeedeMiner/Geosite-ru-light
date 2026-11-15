@@ -1,0 +1,38 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+РТК-ЦОД	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d453521/	«Ростелеком» закрыл сделку по приобретению компании «ДатаЛайн». Официальный информационный сайт Рост	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_dataline	https://www.company.rt.ru/press/news/d453521/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+NGENIX	rt_ngenix	https://www.company.rt.ru/press/news/d450706/	official-link	nocorruption.rt.ru	https://nocorruption.rt.ru/	Противодействие коррупции	domain:ru	domain:ru	NA	NA
+NGENIX	rt_ngenix	https://www.company.rt.ru/press/news/d450706/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d450706/	Провайдер облачных сервисов NGENIX обновил технологическую платформу. Официальный информационный сай	domain:ru	domain:ru	NA	NA
+NGENIX	rt_ngenix	https://www.company.rt.ru/press/news/d450706/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+NGENIX	rt_ngenix	https://www.company.rt.ru/press/news/d450706/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+билайн	beeline_cdn	https://doc-cdn.beelinecloud.ru/	official-source	doc-cdn.beelinecloud.ru	https://doc-cdn.beelinecloud.ru/	Общие сведения - База знаний BeelineCloud	domain:ru	domain:ru	NA	NA
+МегаФон	megafon_docs	https://megafonapi.github.io/	official-source	megafonapi.github.io	https://megafonapi.github.io/	Megafon API	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	public-image	avatars.githubusercontent.com	https://avatars.githubusercontent.com/u/45559405	megafonapi	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	docs.github.com	https://docs.github.com/en	Documentation	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	github.blog	https://github.blog/changelog/	ChangelogYour source for the latest features, improvements, and fixes across GitHub products, all in	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-source	github.com	https://github.com/megafonapi/examples	GitHub - megafonapi/examples: Примеры использования МегаФон.API · GitHub	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	github.community	https://github.community/	Community	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	githubuniverse.com	https://githubuniverse.com/	GitHub UniverseThe event for developers, by developers — talks, workshops, and what’s next for GitHu	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	help.github.com	https://help.github.com/	Customer support	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	learn.github.com	https://learn.github.com/skills	Training	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	support.github.com	https://support.github.com/	Contact	NA	NA	NA	GITHUB
+МегаФон	megafon_github	https://github.com/megafonapi/examples	official-link	www.githubstatus.com	https://www.githubstatus.com/	GitHub Status	NA	NA	NA	GITHUB
+МегаФон	megafon_manuals	https://manuals.megafon.ru/	official-source	manuals.megafon.ru	https://manuals.megafon.ru/	Мануалы	domain:ru	domain:ru	NA	NA
+Ростелеком	rt_arti	https://design.rt.ru/tools_public/arti	official-source	design.rt.ru	https://design.rt.ru/tools_public/arti	Request Rejected	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	apps.apple.com	https://apps.apple.com/ru/app/sensat/id1568651409	NA	NA	NA	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	b2b.rtcomm.ru	https://b2b.rtcomm.ru/login	Корпоративные и государственные клиенты	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	backapi.rustore.ru	https://backapi.rustore.ru/applicationData/storeDownload/ru.rtcomm.lk	NA	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	dzen.ru	https://dzen.ru/rtcomm	NA	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	lk-agent.rtcomm.ru	https://lk-agent.rtcomm.ru/	Агент	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	lk-hse.rtcomm.ru	https://lk-hse.rtcomm.ru/	Восток	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	lk-hsw.rtcomm.ru	https://lk-hsw.rtcomm.ru/	Запад	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	lk.rtcomm.ru	https://lk.rtcomm.ru/login	SenSat	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	novosibirsk.rtcomm.ru	https://novosibirsk.rtcomm.ru/	Новосибирск Филиал «Сибирь» АО «РТКомм.РУ»	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	play.google.com	https://play.google.com/store/apps/details	NA	NA	NA	NA	GOOGLE-PLAY
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	rtcomm.ru	https://rtcomm.ru/orbita/	Вступить в клуб	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	rutube.ru	https://rutube.ru/channel/25384807/	NA	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	vk.com	https://vk.com/rtcomm.official	NA	domain:vk.com	domain:vk.com	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-link	vladivostok.rtcomm.ru	https://vladivostok.rtcomm.ru/	Владивосток Филиал «Дальний Восток» АО «РТКомм.РУ»	domain:ru	domain:ru	NA	NA
+РТКомм	rtcomm	https://www.rtcomm.ru/	official-source	www.rtcomm.ru	https://www.rtcomm.ru/	РТКОММ	domain:ru	domain:ru	NA	NA

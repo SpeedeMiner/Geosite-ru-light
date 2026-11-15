@@ -1,0 +1,41 @@
+group	source_key	source	role	host	url	anchor	light_ru	server_ru	block	non_ru
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	survey.iksconsulting.ru	https://survey.iksconsulting.ru/page44202947.html	iKS Consulting 2023	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	tdata.tech	https://tdata.tech/	TData	NA	NA	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.cnews.ru	https://www.cnews.ru/reviews/rynok_tsod_2022	CNews 2022	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-source	www.company.rt.ru	https://www.company.rt.ru/press/news/d470990/	«РТК ЦОД» расширяет облачную платформу продуктами для управления данными от TData. Официальный инфор	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.rt.ru	https://www.rt.ru/	Услуги и сервисы (www.rt.ru) www.rt.ru Услуги и сервисы	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	www.rtk-dc.ru	https://www.rtk-dc.ru/	«РТК-ЦОД»	domain:ru	domain:ru	NA	NA
+РТК-ЦОД	rt_tdata	https://www.company.rt.ru/press/news/d470990/	official-link	zakupki.rostelecom.ru	https://zakupki.rostelecom.ru/	Закупки с Ростелекомом Закупки Ростелеком	domain:ru	domain:ru	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-source	help.ngenix.net	https://help.ngenix.net/	Добро пожаловать! - Центр поддержки	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	my.ngenix.net	https://my.ngenix.net/	Клиентский портал	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	ngenix.net	https://ngenix.net/	https://ngenix.net/	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	partner.ngenix.net	https://partner.ngenix.net/	Партнерский портал	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	status.ngenix.net	https://status.ngenix.net/	Статус платформы	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	support.ngenix.net	https://support.ngenix.net/sd/	Обратиться за помощью	domain:ngenix.net	domain:ngenix.net	NA	NA
+NGENIX	ngenix_help	https://help.ngenix.net/	official-link	t.me	https://t.me/ngenix_bot	@ngenix_bot	NA	NA	NA	TELEGRAM
+MSK-IX	ix_public	https://kb.msk-ix.ru/ix/services/	official-source	kb.msk-ix.ru	https://kb.msk-ix.ru/ix/services/	Сетевые службы и утилиты	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_public	https://kb.msk-ix.ru/ix/services/	official-link	lg.msk-ix.ru	https://lg.msk-ix.ru/lookingglass/	Looking glass	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_public	https://kb.msk-ix.ru/ix/services/	official-link	media.msk-ix.ru	https://media.msk-ix.ru/download/legal/ru/pd-consent_MSK-IX.pdf	Подробнее	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_public	https://kb.msk-ix.ru/ix/services/	official-link	msk-ix.ru	https://msk-ix.ru/	NA	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_public	https://kb.msk-ix.ru/ix/services/	official-link	my.ix.ru	https://my.ix.ru/	MY.IX.RU	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_lg	https://kb.msk-ix.ru/ix/services_lookingglass/	official-source	kb.msk-ix.ru	https://kb.msk-ix.ru/ix/services_lookingglass/	Looking glass	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_lg	https://kb.msk-ix.ru/ix/services_lookingglass/	official-link	lg.msk-ix.ru	https://lg.msk-ix.ru/lookingglass/	Looking glass	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_lg	https://kb.msk-ix.ru/ix/services_lookingglass/	official-link	media.msk-ix.ru	https://media.msk-ix.ru/download/legal/ru/pd-consent_MSK-IX.pdf	Подробнее	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_lg	https://kb.msk-ix.ru/ix/services_lookingglass/	official-link	msk-ix.ru	https://msk-ix.ru/lookingglass/	https://msk-ix.ru/lookingglass/	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_lg	https://kb.msk-ix.ru/ix/services_lookingglass/	official-link	my.ix.ru	https://my.ix.ru/	MY.IX.RU	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_dns	https://kb.msk-ix.ru/dns/cloud/	official-source	kb.msk-ix.ru	https://kb.msk-ix.ru/dns/cloud/	DNS Cloud	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_dns	https://kb.msk-ix.ru/dns/cloud/	official-link	lg.msk-ix.ru	https://lg.msk-ix.ru/lookingglass/	Looking glass	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_dns	https://kb.msk-ix.ru/dns/cloud/	official-link	media.msk-ix.ru	https://media.msk-ix.ru/download/legal/ru/pd-consent_MSK-IX.pdf	Подробнее	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_dns	https://kb.msk-ix.ru/dns/cloud/	official-link	msk-ix.ru	https://msk-ix.ru/	NA	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_dns	https://kb.msk-ix.ru/dns/cloud/	official-link	stat.ripe.net	https://stat.ripe.net/AS43832	43832	NA	NA	NA	NA
+MSK-IX	ix_peering	https://kb.msk-ix.ru/ix/dns-peering/	official-source	kb.msk-ix.ru	https://kb.msk-ix.ru/ix/dns-peering/	Пиринг с сетями DNS-серверов	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_peering	https://kb.msk-ix.ru/ix/dns-peering/	official-link	lg.msk-ix.ru	https://lg.msk-ix.ru/lookingglass/	Looking glass	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_peering	https://kb.msk-ix.ru/ix/dns-peering/	official-link	media.msk-ix.ru	https://media.msk-ix.ru/download/legal/ru/pd-consent_MSK-IX.pdf	Подробнее	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_peering	https://kb.msk-ix.ru/ix/dns-peering/	official-link	msk-ix.ru	https://msk-ix.ru/members/	ISC	domain:ru	domain:ru	NA	NA
+MSK-IX	ix_peering	https://kb.msk-ix.ru/ix/dns-peering/	official-link	stat.ripe.net	https://stat.ripe.net/AS43832	43832	NA	NA	NA	NA
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-link	metrika.yandex.ru	https://metrika.yandex.ru/stat/	NA	domain:ru	domain:ru	NA	NA
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-link	servicedesk.rtcloud.ru	https://servicedesk.rtcloud.ru/	Техническая поддержка	domain:ru	domain:ru	NA	NA
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-link	t.me	https://t.me/rtcloud_ru	Мы в Telegram	NA	NA	NA	TELEGRAM
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-link	top.mail.ru	https://top.mail.ru/jump	NA	domain:ru	domain:ru	NA	NA
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-link	top100.rambler.ru	https://top100.rambler.ru/navi/2940592/	NA	domain:ru	domain:ru	NA	NA
+RTCloud (атрибуция отдельно)	rtcloud_kb	https://www.rtcloud.ru/kb/	official-source	www.rtcloud.ru	https://www.rtcloud.ru/kb/	База знаний и определений | RTCloud	domain:ru	domain:ru	NA	NA
