@@ -1,0 +1,12 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+bee.gg	35.167.216.18	cloudflare|google	35.160.0.0/13	AS16509
+bee.gg	44.230.115.150	cloudflare|google	44.224.0.0/11	AS16509
+bee.gg	44.252.253.233	cloudflare|google	44.224.0.0/11	AS16509
+beeline.kz	77.74.70.120	cloudflare|google	77.74.70.0/24	AS42770
+help.voka.tv	37.17.95.102	cloudflare|google	37.17.64.0/19	AS42772
+voka.tv	46.53.200.138	cloudflare|google	46.53.200.0/22	AS42772
+voka.tv	46.53.200.139	cloudflare|google	46.53.200.0/22	AS42772
+voka.tv	46.53.200.22	cloudflare|google	46.53.200.0/22	AS42772
+voka.tv	46.53.200.86	cloudflare|google	46.53.200.0/22	AS42772
+www.simply.cards	162.159.143.12	cloudflare|google	162.159.128.0/19	AS13335
+www.simply.cards	172.66.3.8	cloudflare|google	172.66.0.0/22	AS13335

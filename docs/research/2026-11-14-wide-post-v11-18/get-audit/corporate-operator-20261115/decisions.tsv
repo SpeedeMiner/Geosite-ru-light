@@ -1,0 +1,27 @@
+host	region	status	detail	source	light_ru	server_ru	block	non_ru
+1440.space	RU	exact_public_page	БЮРО 1440	vpn:43721614370|43721614370	NA	NA	NA	NA
+bootsman.tech	RU	exact_public_page	Боцман	vpn:43721507811|43721507811	NA	NA	NA	NA
+business.kvadra.tech	RU	exact_public_page	KVADRA	vpn:43721090370|43721090370	NA	NA	NA	NA
+careers.yadro.com	RU	exact_public_page	YADRO	vpn:43721614370|43721614370	NA	NA	NA	NA
+docs-b2c.kvadra.tech	RU	exact_public_page	Техническая документация	vpn:43721090370|43721090370	NA	NA	NA	NA
+docs.bootsman.tech	RU	exact_public_page	Боцман	vpn:43721507811|43721507811	NA	NA	NA	NA
+docs.yadro.com	RU	exact_public_page	Вход	vpn:43721614370|43721614370	NA	NA	NA	NA
+download.workspad.com	RU	exact_public_page	WorksPad	vpn:43721507811|43721507811	NA	NA	NA	NA
+edu.yadro.com	RU	exact_public_page	YADRO	vpn:43721614370|43721614370	NA	NA	NA	NA
+engineer.yadro.com	RU	exact_public_page	Истовый инженер	vpn:43721614370|43721614370	NA	NA	NA	NA
+events.yadro.com	RU	exact_public_page	Yadro Events	vpn:43721614370|43721614370	NA	NA	NA	NA
+job.nexign.com	RU	exact_public_page	Карьера в Nexign	vpn:43720890471|43720890471	NA	NA	NA	NA
+kvadra-service.yadro.com	RU	exact_public_entry_redirect	support.kvadra.tech	vpn:43721090370|43721090370	NA	NA	NA	NA
+kvadra.tech	RU	exact_public_entry_redirect	xn--80aaej1a3b.xn--p1ai	vpn:43721614370|43721614370	NA	NA	NA	NA
+meetups.yadro.com	RU	exact_public_entry_redirect	events.yadro.com	vpn:43721614370|43721614370	NA	NA	NA	NA
+neonhrm.nexign.com	RU	exact_public_page	Neon HRM	vpn:43720890471|43720890471	NA	NA	NA	NA
+partners.yadro.com	RU	exact_public_page	Партнёрский портал YADRO	vpn:43721090370|43721090370	NA	NA	NA	NA
+service.yadro.com	RU	exact_public_page	Сервисный портал YADRO	vpn:43721090370|43721090370	NA	NA	NA	NA
+sp.yadro.com	RU	exact_public_entry_redirect	yadro.com	vpn:43721614370|43721614370	NA	NA	NA	NA
+support.kvadra.tech	RU	exact_public_page	KVADRA	vpn:43721090370|43721090370	NA	NA	NA	NA
+www.yadro.com	RU	exact_public_entry_redirect	yadro.com	vpn:43721614370|43721614370	NA	NA	NA	NA
+yadro.com	RU	exact_public_page	Техническая документация	vpn:43721090370|43721090370	NA	NA	NA	NA
+bee.gg	KZ	pending_or_hold	official Beeline Kazakhstan branded entrypoint; AWS shared ASN; root and app deep link are different services; do not add Branch destination generically	https://beeline.kz/ru/events/news/161026	NA	NA	NA	NA
+help.voka.tv	BY	pending_or_hold	official link, DNS CNAME to A1 and AS42772; branded content not yet confirmed	https://voka.tv/ru-RU	NA	NA	NA	NA
+www.simply.cards	KZ	hold_migrated	official announcement: payment service moved into already covered Janymda app in October 2026; standalone home page is not evidence for current app runtime	https://www.simply.cards/blog	NA	NA	NA	NA
+gravity-ui.com	external	external_portal_review	linked from Yandex Cloud navigation; not a Beeline-origin service	https://yandex.cloud/ru/partners/catalogue/beeline	NA	NA	NA	NA
