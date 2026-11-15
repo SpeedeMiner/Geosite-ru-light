@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ticketscloud.org	ticketscloud.org	https://ticketscloud.org/		https://ticketscloud.com/static/docs/customer_rule.pdf
+corporate	candidate	doc.ticketscloud.org	doc.ticketscloud.org	https://doc.ticketscloud.org/		https://ticketscloud.com/
+corporate	candidate	doc.ticketscloud.org	doc.ticketscloud.org	https://doc.ticketscloud.org/ru/latest/index.html	Ticketscloud	https://ticketscloud.com/
+corporate	candidate	customer.ticketscloud.com	customer.ticketscloud.com	https://customer.ticketscloud.com/	Ticketscloud	https://ticketscloud.com/static/docs/customer_rule.pdf
+corporate	candidate	support.ticketscloud.org	support.ticketscloud.org	https://support.ticketscloud.org/		https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html
+corporate	candidate	ticketscloud.readthedocs.io	ticketscloud.readthedocs.io	https://ticketscloud.readthedocs.io/ru/latest/	Ticketscloud	https://doc.ticketscloud.org/
+corporate	control	ticketscloud.com	ticketscloud.com	https://ticketscloud.com/	Ticketscloud	https://b2b-live.mts.ru/ticket-services
+corporate	control	b2b-live.mts.ru	b2b-live.mts.ru	https://b2b-live.mts.ru/ticket-services	Ticketscloud	https://b2b-live.mts.ru/ticket-services
