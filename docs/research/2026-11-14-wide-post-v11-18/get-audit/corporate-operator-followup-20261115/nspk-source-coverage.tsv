@@ -1,0 +1,12 @@
+host	url	role	source	light_ru	server_ru	block	non_ru
+nspk.ru	https://www.nspk.ru/	RU main	https://www.nspk.ru/about/official_sites/	domain:ru	domain:ru	NA	NA
+nspk.com	https://nspk.com/	EN official	https://www.nspk.ru/about/official_sites/	NA	NA	NA	NA
+www.nspk.com	https://www.nspk.com/	WWW alternative on listed EN domain	https://www.nspk.ru/about/official_sites/	NA	NA	NA	NA
+sbp.nspk.ru	https://sbp.nspk.ru/	SBP	https://www.nspk.ru/about/official_sites/	domain:ru	domain:ru	NA	NA
+vamprivet.ru	https://vamprivet.ru/	Mir loyalty	https://www.nspk.ru/about/official_sites/	domain:ru	domain:ru	NA	NA
+privetmir.ru	https://privetmir.ru/	Mir loyalty former brand	https://www.nspk.ru/about/processing-of-personal-data/	domain:ru	domain:ru	NA	NA
+mironline.ru	https://mironline.ru/	Mir payment system	https://www.nspk.ru/about/processing-of-personal-data/	domain:ru	domain:ru	NA	NA
+mir-platform.ru	https://mir-platform.ru/	Mir platform	https://www.nspk.ru/about/processing-of-personal-data/	domain:ru	domain:ru	NA	NA
+pay.mironline.ru	https://pay.mironline.ru/help/	Public Mir Pay help	https://pay.mironline.ru/help/	domain:ru	domain:ru	NA	NA
+bilet.nspk.ru	https://bilet.nspk.ru/faq	Public transport help	https://pay.mironline.ru/help/	domain:ru	domain:ru	NA	NA
+support.nspk.ru	https://support.nspk.ru/	SBP contact portal coverage only, no GET	https://sbp.nspk.ru/banks	domain:ru	domain:ru	NA	NA

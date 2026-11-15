@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	nspk.com	nspk.com	https://nspk.com/	NSPK|National Payment Card System	https://www.nspk.ru/about/official_sites/
+corporate	candidate	www.nspk.com	www.nspk.com	https://www.nspk.com/	NSPK|National Payment Card System	https://www.nspk.ru/about/official_sites/
+corporate	control	sbp.nspk.ru	sbp.nspk.ru	https://sbp.nspk.ru/	Система быстрых платежей	https://www.nspk.ru/about/official_sites/
+corporate	control	pay.mironline.ru	pay.mironline.ru	https://pay.mironline.ru/help/	Mir Pay	https://www.nspk.ru/about/processing-of-personal-data/
+corporate	control	bilet.nspk.ru	bilet.nspk.ru	https://bilet.nspk.ru/faq	Транспорт|Мир	https://pay.mironline.ru/help/
+corporate	control	cloud.ttk.ru	cloud.ttk.ru	https://cloud.ttk.ru/documentation	Документация|ТТК	https://company.ttk.ru/

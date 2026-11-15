@@ -1,0 +1,2 @@
+full:api.curator.pro
+full:docs.solarspace.pro
