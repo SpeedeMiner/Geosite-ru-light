@@ -1,7 +1,17 @@
 # GeoSite RU Light
 
 Готовая клиентская база доменных правил. Для Xray/V2Ray используйте
-[`geosite_RU.dat`](https://github.com/SpeedeMiner/Geosite-ru-light/releases/latest/download/geosite_RU.dat).
+[автообновляемый DAT из GitHub Releases](https://github.com/SpeedeMiner/Geosite-ru-light/releases/latest/download/geosite_RU.dat).
+Для закреплённой версии скачивайте DAT и его контрольную сумму из одного
+[номерного релиза](https://github.com/SpeedeMiner/Geosite-ru-light/releases).
+
+### CDN и проверка версии
+
+Ветка `release` для jsDelivr содержит только `.dat` и `.srs`, без отчётов и
+манифестов. [Плавающий адрес jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.dat)
+может временно отдавать предыдущий DAT даже после обновления GitHub. Если
+SHA-256 отличается от опубликованной суммы, используйте GitHub Releases или
+CDN-адрес с полным SHA коммита ветки `release` вместо `@release`.
 
 ## sing-box
 
@@ -14,7 +24,7 @@
 | `BLOCK` | [geosite_BLOCK.srs](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_BLOCK.srs) |
 | Категории Hydra, например `GOOGLE-DEEPMIND`, `GOOGLE-PLAY`, `YOUTUBE` | [Все наборы](https://github.com/SpeedeMiner/Geosite-ru-light/tree/release) |
 
-[SHA-256 для всех .srs](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_srs.sha256sum).
+[SHA-256 для всех .srs](https://github.com/SpeedeMiner/Geosite-ru-light/releases/latest/download/geosite_srs.sha256sum).
 Публикуется бинарный формат v1. Точные правила DAT становятся `domain`,
 а правила для домена и его поддоменов становятся `domain_suffix`. Сами
 наборы не задают `DIRECT`, `PROXY` или блокировку.
