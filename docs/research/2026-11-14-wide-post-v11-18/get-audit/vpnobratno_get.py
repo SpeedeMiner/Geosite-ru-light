@@ -131,20 +131,61 @@ def observation(row, rc, stats, body, exit_info, address):
     return x
 
 
-def attach(transport, rows, observations_path):
+def asn_arg(value):
+    value = value.upper()
+    match = re.fullmatch(r'(?:AS)?([0-9]{1,10})', value)
+    if not match or not 1 <= int(match[1]) <= 4294967295:
+        raise argparse.ArgumentTypeError('expected a positive ASN such as AS34533')
+    return int(match[1])
+
+
+def attach(transport, rows, observations_path, exclude_asns=()):
     by_id = {target['id']:row for target,row in zip(catalogue(rows)['targets'],rows)}
-    routed = {'tun':''}
+    routed = {'tun':'','metadata':None}
     wait = transport.wait_for_tunnel
+    lookup_metadata = transport.ip_metadata
+    lookup_origin = transport.network_info
+    excluded = frozenset(exclude_asns)
+    admitted = set()
+    skipped = Counter()
 
     def capture(*args,**kwargs):
-        routed['tun'] = ''
+        routed.update(tun='',metadata=None)
         routed['tun'] = tunnel_interface(wait(*args,**kwargs))
         return routed['tun']
+
+    def metadata(*args,**kwargs):
+        info = lookup_metadata(*args,**kwargs)
+        routed['metadata'] = info
+        return info
+
+    def network_info(address):
+        origin = lookup_origin(address)
+        info = routed['metadata']
+        if not info or address != info.get('ip') or info.get('country') != 'RU':
+            return origin
+        # This upstream call runs before a candidate consumes max_servers.
+        meta_asn = int(info.get('asn') or 0)
+        ripe_asn = int(origin.get('asn') or 0)
+        if meta_asn and ripe_asn and meta_asn != ripe_asn:
+            raise transport.ProbeError('GeoSite rejected conflicting exit ASNs')
+        asn = ripe_asn or meta_asn
+        source = ip_address(address)
+        if (not routed['tun'] or asn <= 0 or info.get('verified_by_sources',0) < 2
+                or source.version != 4 or not source.is_global or source.is_multicast):
+            raise transport.ProbeError('GeoSite requires corroborated public IPv4 RU exit and ASN')
+        if asn in excluded or asn in admitted:
+            skipped[asn] += 1
+            raise transport.ProbeError(f'GeoSite exit AS{asn} excluded or already observed')
+        admitted.add(asn)
+        return origin
 
     def test_target(target, exit_info, _networks, timeout):
         if (exit_info.get('country') != 'RU' or exit_info.get('asn_conflict') is not False
                 or int(exit_info.get('asn') or 0) <= 0 or exit_info.get('verified_by_sources',0) < 2):
             raise transport.ProbeError('GeoSite requires corroborated RU exit IP and non-conflicting ASN')
+        if exit_info['asn'] in excluded:
+            raise transport.ProbeError('excluded GeoSite exit ASN')
         source = ip_address(exit_info['ip'])
         if source.version != 4 or not source.is_global or source.is_multicast:
             raise transport.ProbeError('GeoSite requires a public IPv4 VPN exit')
@@ -183,7 +224,10 @@ def attach(transport, rows, observations_path):
         }
 
     transport.wait_for_tunnel = capture
+    transport.ip_metadata = metadata
+    transport.network_info = network_info
     transport.test_target = test_target
+    return skipped
 
 
 def rc_ok(record):
@@ -226,6 +270,7 @@ def main():
     parser.add_argument('upstream',type=Path,help='directory containing the three locked PR #5 files')
     parser.add_argument('output',type=Path)
     parser.add_argument('--exits',type=int,choices=(1,2,3),default=1)
+    parser.add_argument('--exclude-asn',type=asn_arg,action='append',default=[])
     parser.add_argument('--attempts',type=int,choices=range(1,7),default=6)
     parser.add_argument('--connect-timeout',type=int,choices=range(5,31),default=12)
     args = parser.parse_args()
@@ -242,7 +287,7 @@ def main():
     sys.path.insert(0,str(args.upstream.resolve()))
     upstream = importlib.import_module('vpn_gate')
     scoped = args.output / 'vpnobratno-observations.jsonl'
-    attach(upstream,rows,scoped)
+    skipped = attach(upstream,rows,scoped,args.exclude_asn)
     for sig in (signal.SIGTERM,signal.SIGINT):
         signal.signal(sig,upstream.handle_termination_signal)
     with TemporaryDirectory() as tmp:
@@ -260,6 +305,8 @@ def main():
             summary = summarize(observations,source)
             summary['requested_exits'] = args.exits
             summary['requested_urls'] = len(rows)
+            summary['excluded_asns'] = sorted(set(args.exclude_asn))
+            summary['skipped_asn_attempts'] = dict(skipped)
             (args.output/'geosite-vpnobratno-summary.json').write_text(
                 json.dumps(summary,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     return finish_code(code,summary,args.exits,len(rows))
