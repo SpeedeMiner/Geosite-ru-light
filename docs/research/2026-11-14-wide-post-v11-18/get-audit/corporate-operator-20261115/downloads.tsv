@@ -1,0 +1,26 @@
+key	url	effective	code	curl	tls	bytes	sha256	mime
+mws-index	https://mws.ru/dev-tools/	https://mws.ru/dev-tools/	200	0	0	711909	8125238d774f1cd006c5d730e75dbf2b711dd7782b2a2c6bcfb1f8449892bb32	text/html; charset=utf-8
+mws-products	https://mws.ru/docs/products.html	https://mws.ru/docs/	200	0	0	79960	22c63123f3f11f9aad021288f9d6dc898659088de52c9bff976cd850f0781d86	text/html
+mws-inventory	https://tech.mts.ru/software	https://tech.mts.ru/software	500	0	0	39113	9e3f30da12f5502e161c9600355f7e28f7f17f6e0c6a8a82149de3668e355b9b	text/html
+mws-team	https://mws.ru/dev-tools/teamstream/	https://mws.ru/dev-tools/teamstream/	200	0	0	1299664	6f3d981387f627907488a83c5211af09847f5bfb488f69596f40810284b228fe	text/html; charset=utf-8
+mws-sunq	https://sunq.mws.ru/	https://sunq.mws.ru/	0	28	0	0	NA	
+mws-oct	https://mws.ru/dev-tools/octapi/	https://mws.ru/dev-tools/octapi/	200	0	0	1296247	0440c4509a2c35c6590da1467c7c8599a5549683c9eb3fdde6af3b1f02bf6f2d	text/html; charset=utf-8
+mws-rails	https://mws.ru/dev-tools/devrails/	https://mws.ru/dev-tools/devrails/	200	0	0	786992	d16a31df6fdb54c493493fc5ab6a7edf6a651dc0f49a9b86cc912fca0dbdbfc2	text/html; charset=utf-8
+mws-exolve	https://docs.exolve.ru/docs/ru/api-reference/	https://docs.exolve.ru/docs/ru/api-reference/	200	0	0	224206	150ed35f6496e61d9acd4fda22026df4a91051d2bde39b9fc92cf758ec36195f	text/html; charset=utf-8
+rt-nri	https://www.company.rt.ru/press/news/d470555/	https://www.company.rt.ru/press/news/d470555/	200	0	0	59767	6997c063f575dd848886b589269abae9ff5b6fde2487df879bf6455de09c21bc	text/html; charset=UTF-8
+rt-os	https://www.orangesystem.ru/company/	https://www.orangesystem.ru/company/	200	0	0	48871	2e6175e594d8cb1b0b3b666088d59af120f7ceba9bf151e1e2e5635de127c00f	text/html; charset=UTF-8
+rt-cluster	https://www.company.rt.ru/press/news/d471043/	https://www.company.rt.ru/press/news/d471043/	200	0	0	58648	f6df47248bb63861d1dbbe9d2fc075b770a8c5032f29b6719af354f4c09f67a7	text/html; charset=UTF-8
+rt-lukit	https://lukit.ru/	https://lukit.ru/	200	0	0	1007	a11f14615bb25e068e48acd1f542739dd136507de688157d1f26500b1e3a41b6	text/html
+rt-dc	https://www.rtk-dc.ru/	https://www.rtk-dc.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+rt-cnews	https://www.company.rt.ru/press/news_it/	https://www.company.rt.ru/press/news_it/	200	0	0	89042	bed7c8248048192e36bb64d965b2ac9f4de9c5207259fe92299007f8ecf9e71a	text/html; charset=UTF-8
+bee-cloud	https://cloud.beeline.ru/	https://cloud.beeline.ru/	503	0	0	98	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909	text/plain
+bee-docs	https://docs.cloud.beeline.ru/	https://docs.cloud.beeline.ru/	403	0	0	14784	edc04c02b06e313094b6b80371f3ccf36aa248aa305475b6a1f2869e6f15f12d	text/html
+bee-yc	https://yandex.cloud/ru/partners/catalogue/beeline	https://yandex.cloud/ru/partners/catalogue/beeline	200	0	0	706891	fcd5c6376a6838c3a39721b16138bcf437c615b52af39e319ed9c51f792fb77a	text/html; charset=utf-8
+mf-yota	https://www.yota.ru/	https://www.yota.ru/	200	0	0	354645	ffcbb0ac40cda6815950d33bff1214b156467c56486be1e88108430642a3de31	text/html; charset=utf-8
+mf-wifire	https://www.wifire.ru/	https://www.wifire.ru/	503	0	0	91	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6	text/plain
+mf-corp	https://corp.megafon.ru/	https://corp.megafon.ru/	200	0	0	139252	26c84ae4456e2e126c9cac1ff9739ba4d30692c782821be9f490739250be1611	text/html; charset=utf-8
+ttk-group	https://company.ttk.ru/ttk-group/	https://company.ttk.ru/ttk-group/	200	0	0	751599	6379992e7c07b915a6c90695c57a9f6d349df90f4fc511140a63b4734db73aaf	text/html; charset=UTF-8
+ttk-enterprise	https://b2b.ttk.ru/	https://b2b.ttk.ru/	200	0	0	1604606	7ac4c57a30d864f32dc15eb5ba2af14733b0749865d47776b3d3572fd498be28	text/html; charset=UTF-8
+ttk-cloud	https://cloud.ttk.ru/	https://cloud.ttk.ru/	200	0	0	946583	f6bff61ac9bd35febec93c7b73f96865540be368a57e00ffa9912b1616a0c3ce	text/html; charset=UTF-8
+yandex-index	https://ya.ru/all	https://ya.ru/all?nr=1&redirect_ts=1794750378.00000	200	0	0	413298	19916ba57e72abfde6bad4e484faf55cbb4c130b8311238f67da876db8e850e0	text/html; charset=UTF-8
+yandex-company	https://ir.yandex/key-businesses	https://ir.yandex/key-businesses	200	0	0	56937	8ac2e18ccd53115a00b4e1fb655e4507eb72ce54b222c0b584c5d8015ffd1a8c	text/html; charset=utf-8
