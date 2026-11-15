@@ -1,0 +1,3 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_institutions"	"diagnostic"	"mak-iac.org"	"mak-iac.org"	"https://mak-iac.org/o-mak/"	"Межгосударственный авиационный комитет|Соглашения о гражданской авиации"	"https://mak.ru/"
+"frontier_institutions"	"diagnostic"	"coomet.info"	"coomet.info"	"https://coomet.info/"	"КООМЕТ|метрологических учреждений"	"https://www.bipm.org/en/liaison/regional/coomet"

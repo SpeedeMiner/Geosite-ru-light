@@ -1,0 +1,8 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"control_institutions"	"diagnostic"	"mak.ru"	"mak.ru"	"https://mak.ru/"	"МЕЖГОСУДАРСТВЕННЫЙ АВИАЦИОННЫЙ КОМИТЕТ|МАК"	"https://mak.ru/"
+"control_institutions"	"diagnostic"	"easc.by"	"easc.by"	"https://easc.by/"	"Межгосударственный совет|метрологии"	"https://coomet.info/"
+"control_institutions"	"diagnostic"	"easc.org.by"	"easc.org.by"	"https://easc.org.by/"	"Межгосударственный совет|метрологии"	"https://easc.org.by/"
+"control_institutions"	"diagnostic"	"www.mgs.gost.ru"	"www.mgs.gost.ru"	"https://www.mgs.gost.ru/"	"МГС|стандартизации"	"https://easc.by/"
+"control_institutions"	"diagnostic"	"www.energo-cis.ru"	"www.energo-cis.ru"	"https://www.energo-cis.ru/"	"Электроэнергетического Совета|СНГ"	"https://e-cis.info/cooperation/3075/"
+"control_institutions"	"diagnostic"	"energo-cis.ru"	"energo-cis.ru"	"https://energo-cis.ru/"	"Электроэнергетического Совета|СНГ"	"https://e-cis.info/cooperation/3075/"
+"control_institutions"	"diagnostic"	"www.railways.kz"	"www.railways.kz"	"https://www.railways.kz/ru/company/mezhdunarodnaya-deyatelnost/mnogostoronnee-sotrudnichestvo/sovet-po-zheleznodorozhnomu-transportu-gosudarstv-uchastnikov/"	"Совет по железнодорожному транспорту|Содружества"	"https://www.railways.kz/ru/company/mezhdunarodnaya-deyatelnost/mnogostoronnee-sotrudnichestvo/sovet-po-zheleznodorozhnomu-transportu-gosudarstv-uchastnikov/"

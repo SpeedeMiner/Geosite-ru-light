@@ -1,0 +1,4 @@
+"cohort"	"type"	"rule"	"host"	"url"	"markers"	"source"
+"frontier_registers"	"diagnostic"	"www.eapo.org"	"www.eapo.org"	"https://www.eapo.org/informational-resources/"	"Информационные ресурсы|Евразийского"	"https://pctlegal.wipo.int/eGuide/eqe/view-doc.xhtml?doc-code=EA&doc-lang=EN&doc-type=annex"
+"frontier_registers"	"diagnostic"	"www.eapatis.com"	"www.eapatis.com"	"https://www.eapatis.com/"	"ЕАПАТИС|EAPATIS"	"https://www.eapo.org/informational-resources/"
+"frontier_registers"	"diagnostic"	"services.eapo.org"	"services.eapo.org"	"https://services.eapo.org/attorneys"	"Патентные поверенные|ЕАПВ"	"https://www.eapo.org/informational-resources/"

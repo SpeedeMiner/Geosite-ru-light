@@ -1,5 +1,5 @@
 "zone"	"sector"	"disposition"	"url"	"source"	"markers"	"note"	"host"	"light_categories"	"server_ru"	"action"	"prior_live_id"
-"EAEU"	"trust"	"functional"	"https://docs.eaeunion.org/documents/414/7596/"	"https://dts.gov.kz/ru/documents_ru/"	"доверенной третьей стороны|Евразийской"	"Публичная карточка акта, отдельный путь от уже наблюдавшегося корня"	"docs.eaeunion.org"	""	"no"	"candidate_get4"	""
+"EAEU"	"trust"	"functional"	"https://docs.eaeunion.org/documents/414/7596/"	"https://docs.eaeunion.org/documents/414/7596/"	"доверенной третьей стороны|Евразийской"	"Публичная карточка акта, отдельный путь от уже наблюдавшегося корня"	"docs.eaeunion.org"	""	"no"	"candidate_get4"	""
 "KZ"	"trust"	"control"	"https://dts.gov.kz/ru/main_ru/"	"https://dts.gov.kz/ru/main_ru/"	"ДОВЕРЕННАЯ ТРЕТЬЯ СТОРОНА|КАЗАХСТАН"	"Официальный национальный портал"	"dts.gov.kz"	"RU"	"yes"	"covered_control"	""
 "KZ"	"trust"	"control"	"https://dts.gov.kz/ru/ttp_services_ru/"	"https://dts.gov.kz/ru/main_ru/"	"Сервисы ДТС|Казахстан"	"Справка о сервисах, не загрузка документа"	"dts.gov.kz"	"RU"	"yes"	"covered_control"	""
 "KZ"	"regulations"	"control"	"https://dts.gov.kz/ru/documents_ru/"	"https://dts.gov.kz/ru/main_ru/"	"Документация|ДТС"	"Публичная навигация со ссылками на ИПС Әділет"	"dts.gov.kz"	"RU"	"yes"	"covered_control"	""

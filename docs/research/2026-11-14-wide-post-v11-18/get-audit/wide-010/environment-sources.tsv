@@ -1,0 +1,22 @@
+zone	sector	disposition	url	source	markers	note
+BY	weather	functional	https://belgidromet.by/ru	https://belgidromet.by/ru	Белгидромет|гидрометеорологии	Официальный каталог с прямыми ссылками на отдельные сайты
+BY	weather	functional	https://pogoda.by/	https://belgidromet.by/ru	Pogoda.by|Белгидромет	Публичная прогнозная витрина, возможен JS
+BY	environment	functional	https://rad.org.by/	https://belgidromet.by/ru	Белгидромет|мониторинг	Публичная экологическая информация
+BY	environment	functional	https://www.nsmos.by/	https://belgidromet.by/ru	НСМОС|окружающей среды	Связанный государственный мониторинг, только общая витрина
+BY	environment	review	https://risamos.by/	https://rad.org.by/	РИСАМОС|мониторинг	Одноимённый отраслевой портал, не заявлять рабочим без проверки
+BY	weather	review	https://meteoinfo.by/	https://belgidromet.by/ru	Белгидромет|Погода	Старое имя, в официальной текущей навигации не подтверждено
+BY	environment	review	https://test0351.belta.by/	https://belgidromet.by/ru		Служебный тестовый хост в контактах, не считать рабочей зависимостью
+CIS	weather	functional	https://www.rusbelmeteo.ru/	https://belgidromet.by/ru	Союзного государства|гидрометеорологии	Совместная служба, официальная исходящая ссылка
+CIS	weather	review	https://e-cis.info/cooperation/3213/138553/	https://belgidromet.by/ru	Межгосударственного совета|гидрометеорологии	Документированный орган СНГ, не автоматический допуск корня
+CIS	weather	control	https://soyuz.by/	https://belgidromet.by/ru	Союзного государства	Официальный информационный портал, отдельное имя
+RU	weather	control	https://www.meteorf.gov.ru/press/news/45010/	https://www.meteorf.gov.ru/press/news/45010/	Межгосударственного совета|Росгидромет	Публичная информация, не сводки внутренней сети
+RU	weather	control	https://www.meteorf.gov.ru/about/structure/local/	https://www.meteorf.gov.ru/about/structure/local/	Управления по гидрометеорологии|Росгидромет	Официальные территориальные управления
+RU	warnings	functional	https://eip.meteo.ru/weather-warnings	https://eip.meteo.ru/weather-warnings	Прогностическая карта|предупреждений	Публичный информационный маршрут Росгидромета
+RU	warnings	control	https://meteoinfo.ru/informer-meteoalert	https://meteoinfo.ru/informer-meteoalert	Информер|метеопредупреждений	Публичная справка, без запроса персональных данных
+RU	weather	control	https://special.meteoinfo.ru/	https://special.meteoinfo.ru/	Гидрометцентр России|для специалистов	Общедоступное поддоменное имя
+KZ	warnings	functional	https://www.gov.kz/org/emer/press/article/details/246542?lang=ru	https://www.gov.kz/org/emer/press/article/details/246542?lang=ru	Штормовые предупреждения	Публичная ссылка профильного органа
+KZ	weather	control	https://www.kazhydromet.kz/ru?map=prognoz	https://www.kazhydromet.kz/ru/weather/o-gidrometcentre	Казгидромет|Прогноз	Самостоятельный WWW-хост, публичный параметр карты
+KZ	weather	control	https://kazhydromet.kz/ru/	https://kazhydromet.kz/ru/	Казгидромет|Прогноз	Отличать apex и WWW
+KZ	environment	control	https://www.kazhydromet.kz/ru/interactive_cards	https://www.kazhydromet.kz/ru/interactive_cards	Интерактивные карты|базы данных	Каталог открытых экологических данных
+KZ	environment	control	https://www.kazhydromet.kz/ru/ecology/ob-ekologicheskom-monitoringe	https://www.kazhydromet.kz/ru/ecology/ob-ekologicheskom-monitoringe	экологическом мониторинге|Казгидромет	Общее описание службы
+KZ	environment	functional	https://www.kazhydromet.kz/ru/post/2929	https://www.kazhydromet.kz/ru/post/2929	AirKZ|качества воздуха	Не выводить из названия приложения отдельный домен

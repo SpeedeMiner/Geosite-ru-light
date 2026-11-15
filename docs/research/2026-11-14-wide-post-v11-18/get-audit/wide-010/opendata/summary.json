@@ -1,0 +1,24 @@
+{
+  "actions": {
+    "candidate_get4": 1,
+    "covered_control": 18,
+    "manual": 2,
+    "prior_live_get4": 1
+  },
+  "block_names": 0,
+  "control_plan": 8,
+  "covered_neither_names": 2,
+  "frontier_plan": 1,
+  "light_ru_names": 15,
+  "names": 17,
+  "probe_cost": 27,
+  "sectors": 3,
+  "server_ru_names": 15,
+  "urls": 22,
+  "zones": {
+    "BY": 3,
+    "EAEU": 3,
+    "KZ": 10,
+    "RU": 6
+  }
+}
