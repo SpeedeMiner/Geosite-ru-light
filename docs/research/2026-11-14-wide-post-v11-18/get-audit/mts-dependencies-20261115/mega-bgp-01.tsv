@@ -1,0 +1,4 @@
+host	dns_ip	resolvers	prefix	ripe_ris_origin
+megafon.tv	185.198.112.61	cloudflare|google	185.198.112.0/24	AS200976
+smotreshka.tv	185.198.112.27	cloudflare|google	185.198.112.0/24	AS200976
+ticketscloud.com	95.129.232.92	cloudflare|google	95.129.232.0/24	AS57724

@@ -1,0 +1,4 @@
+host	url	cohort	http	curl_exit	tls_verify	proxy_connect	title	redirect_host	body_sha256	observed_at	scope
+megafon.tv	https://megafon.tv/	candidate	301	0	0	200	NA	smotreshka.tv	48feb6134ea33506a0388bd421a3040238c50bee859d6b1cc5063025d2ac4101	2026-11-15T16:57:03.050618+00:00	workspace_unattributed
+smotreshka.tv	https://smotreshka.tv/	control	200	63	0	200	NA	NA	3d56697a204ab3b74144964f13d6ee013fa05c1769655d6b1ae218983def7f26	2026-11-15T16:57:04.359937+00:00	workspace_unattributed
+ticketscloud.com	https://ticketscloud.com/	control	200	0	0	200	Ticketscloud | Главная	NA	163c697770145552778857694c82ba2aac79c109979b15c3ef6e1143acfdf77a	2026-11-15T16:57:02.507270+00:00	workspace_unattributed

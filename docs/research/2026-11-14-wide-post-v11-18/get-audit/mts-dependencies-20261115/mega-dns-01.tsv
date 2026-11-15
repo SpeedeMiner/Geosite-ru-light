@@ -1,0 +1,13 @@
+host	resolver	rrtype	rcode	answer	cname
+megafon.tv	google	A	0	185.198.112.61	NA
+megafon.tv	google	AAAA	0	NA	NA
+megafon.tv	cloudflare	A	0	185.198.112.61	NA
+megafon.tv	cloudflare	AAAA	0	NA	NA
+smotreshka.tv	google	A	0	185.198.112.27	NA
+smotreshka.tv	google	AAAA	0	NA	NA
+smotreshka.tv	cloudflare	A	0	185.198.112.27	NA
+smotreshka.tv	cloudflare	AAAA	0	NA	NA
+ticketscloud.com	google	A	0	95.129.232.92	NA
+ticketscloud.com	google	AAAA	0	NA	NA
+ticketscloud.com	cloudflare	A	0	95.129.232.92	NA
+ticketscloud.com	cloudflare	AAAA	0	NA	NA

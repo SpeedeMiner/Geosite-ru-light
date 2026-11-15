@@ -1,0 +1,7 @@
+url	asn	asn_ris	eligible	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_scheme	redirect_host	redirect_path	state	observed_at
+https://megafon.tv/	12389	12389	yes	185.198.112.61	301	0	0	text/plain; charset=utf-8	69	48feb6134ea33506a0388bd421a3040238c50bee859d6b1cc5063025d2ac4101	NA	https	smotreshka.tv	/	vpn_redirect	2026-11-15T16:58:11.352414+00:00
+https://megafon.tv/	44724	44724	yes	185.198.112.61	301	0	0	text/plain; charset=utf-8	69	48feb6134ea33506a0388bd421a3040238c50bee859d6b1cc5063025d2ac4101	NA	https	smotreshka.tv	/	vpn_redirect	2026-11-15T16:58:33.939212+00:00
+https://smotreshka.tv/	12389	12389	yes	185.198.112.27	200	63	0	text/html; charset=utf-8	10000	92395cc1ca87641919221120d6cf5bad2578da38ce6dcdcd73f0568292c1bd51	NA	NA	NA	NA	vpn_visible_review	2026-11-15T16:58:16.778826+00:00
+https://smotreshka.tv/	44724	44724	yes	185.198.112.27	200	63	0	text/html; charset=utf-8	10000	92395cc1ca87641919221120d6cf5bad2578da38ce6dcdcd73f0568292c1bd51	NA	NA	NA	NA	vpn_visible_review	2026-11-15T16:58:39.009918+00:00
+https://ticketscloud.com/	12389	12389	yes	95.129.232.92	200	0	0	text/html	10000	2821d7c427e2098a91e25b54bb7238f72a1971b961e9d896a5f5a480cbc5a401	Ticketscloud | Главная	NA	NA	NA	vpn_marker	2026-11-15T16:58:21.864134+00:00
+https://ticketscloud.com/	44724	44724	yes	95.129.232.92	200	0	0	text/html	10000	2821d7c427e2098a91e25b54bb7238f72a1971b961e9d896a5f5a480cbc5a401	Ticketscloud | Главная	NA	NA	NA	vpn_marker	2026-11-15T16:58:42.667731+00:00

@@ -21,17 +21,19 @@ kochubeevka.zelenaya.net	accept_exact	full:kochubeevka.zelenaya.net	NA	NA	NA	NA	
 lipetsk.zelenaya.net	accept_exact	full:lipetsk.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
 lk.seven-sky.net	accept_exact	full:lk.seven-sky.net	NA	NA	NA	NA	43737267639	https://www.seven-sky.net/	Two TLS/200 login pages linked by operator; no credentials or forms submitted
 lk.vdome.mts.ru	covered	NA	domain:ru	domain:ru	NA	NA	NA	https://domofon.mts.ru/eula.html	Native VDome account domain under .ru; no login attempted
+megafon.tv	accept_exact	full:megafon.tv	NA	NA	NA	NA	43738312686	https://www.sostav.ru/publication/smotr-shka-62295.html	Legacy MegaFon TV hostname; two verified HTTPS/301 redirects to the already covered smotreshka.tv; playback untested
 naltel.zelenaya.net	hold_tls	NA	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two certificate verification failures on published contacts path
 neftekamsk.zelenaya.net	accept_exact	full:neftekamsk.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
 nevinka.zelenaya.net	accept_exact	full:nevinka.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
 redirect.appmetrica.yandex.com	hold_tracking_or_store_router	NA	domain:yandex.com	domain:yandex.com	NA	NA	NA	https://rf.t2.ru/about/news-list/2026/11/06/t2-vydelil-mixx-v-samostoyatelnyj-brend-i-zapustil-prilozhenie-dlya-podpiski-fed	Shared distributor for multiple app stores; no MiXX-specific backend evidence
 seven-sky.net	accept_exact	full:seven-sky.net	NA	NA	NA	NA	43737267639	https://tv.seven-sky.net/eula	Two 308 redirects to separately confirmed operator www hostname
+smotreshka.tv	covered_control	NA	domain:smotreshka.tv	domain:smotreshka.tv	NA	NA	43738312686	https://megafon.tv/	Existing suffix; two TLS/200 sampled at the separately listed public root, without playback
 stage.freetc.net	excluded_staging	NA	NA	NA	NA	NA	NA	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	Example staging host; not contacted
 stavropol.zelenaya.net	accept_exact	full:stavropol.zelenaya.net	NA	NA	NA	NA	43737375054	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
 store.seven-sky.net	hold_redirect_loop	NA	NA	NA	NA	NA	43737267639|43737685006	https://www.seven-sky.net/	Root to /ru; explicit /ru repeatedly redirects to itself for requests without a session
 support.ticketscloud.org	hold_tls	NA	NA	NA	NA	NA	43736677600	https://doc.ticketscloud.org/ru/latest/walkthrough/basics.html	Two strict certificate verification failures
 tambov.zelenaya.net	accept_exact	full:tambov.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs
-ticketscloud.com	covered_control	NA	full:ticketscloud.com	full:ticketscloud.com	NA	NA	43736677600|43737267639|43737685006	https://b2b-live.mts.ru/ticket-services	Existing exact rule, two eligible 200 in each control batch
+ticketscloud.com	covered_control	NA	full:ticketscloud.com	full:ticketscloud.com	NA	NA	43736677600|43737267639|43737685006|43738312686	https://b2b-live.mts.ru/ticket-services	Existing exact rule, two eligible 200 in each control batch
 ticketscloud.org	hold_tls	NA	NA	NA	NA	NA	43736677600	https://ticketscloud.com/static/docs/customer_rule.pdf	Two strict certificate verification failures
 ticketscloud.readthedocs.io	hold_external_timeout	NA	NA	NA	NA	NA	43736677600	https://doc.ticketscloud.org/	Two timeouts; never add readthedocs.io suffix
 tomsk.zelenaya.net	accept_exact	full:tomsk.zelenaya.net	NA	NA	NA	NA	43736945426	https://tambov.zelenaya.net/contacts/	Two expected branded public HTML responses from separately verified Russian exit ASNs

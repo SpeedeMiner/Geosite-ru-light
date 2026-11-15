@@ -1,0 +1,14 @@
+resource	ref_or_artifact	value	status
+Geosite-ru-light	main	e3d787f41d2513c9ef2e95a6b19c5b7ca88f6f4b	unchanged
+Geosite-ru-light	release	b3e3c9cd8380854837dff1bbfff36c0dca87a27c	unchanged
+Geosite-ru-light	v11.19	ec6214b628162011ea1b4ebaf454cf0f6ae795d9	unchanged
+Geosite-ru-light	PR-39	129d04dd7d5df045db32cf8db968ae9ec75f3372	unchanged
+Geosite-ru-server	main	a47fedd189ec15758db3192ce505aeda24265c8e	unchanged
+Geosite-ru-server	release	f827741812e36ff8aa4d4618209e92b9ef26b263	unchanged
+Geosite-ru-server	v11.19	f6f6ff55a4260ffc95b251a4c4e1745e4536adac	unchanged
+Geoip-ru-server	main	38f36820f0e10066f7beb7eed97b00ec36c43820	unchanged
+Geoip-ru-server	release	79bddd4c51a36a8d3c2771e234e5171f574104c8	unchanged
+Geoip-ru-server	PR-5	30e797f05ddb8e38ccc2c44938b64846b4fce2fb	unchanged
+jsDelivr Geosite-ru-light	release/geosite_RU.dat	fea7efa5c855ead11d2e8dd867f41d3b395afddba10013d0613e0c592ea7ca9f	matches_v11.19
+jsDelivr Geosite-ru-light	release/geosite_RU.srs	861c876bd52775c3dc360dc62c1ee7335e036bbf804696dc0b9583223a162c65	matches_v11.19
+jsDelivr Geosite-ru-server	release/geosite_RU.dat	a4e42e899853f7095b7a0c13f04115c6d9cc851733b4c2448671ee00a682ee25	matches_v11.19
