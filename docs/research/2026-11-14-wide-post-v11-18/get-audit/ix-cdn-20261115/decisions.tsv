@@ -1,0 +1,22 @@
+host_or_namespace	decision	source	rationale
+www.ixcellerate.com	accept_full	https://www.ixcellerate.com/requisites/	Russian legal identity and branded FAQ, two RU ASNs
+www.eurasiapeering.com	accept_full	https://www.eurasiapeering.com/contact/	Moscow corporate contacts, two RU ASNs
+lg.gblnet.net	accept_full	https://gblnet.ru/en/services/dataix	Official Russian GlobalNet reference and identical HTML on two RU ASNs
+lg.dataix.eu	accept_full	https://dataix.ru/	Official Russian DataIX reference; control-equivalent SPA, manifest and theme on two RU ASNs
+cdnnow.pro	accept_full	https://cdnnow.pro/about/	Same Russian Cluster LLC as cdnnow.ru and matching legal page on two RU ASNs
+selfcare.cdnnow.pro	accept_full	https://cdnnow.pro/	Same-host 302 and branded public login HTML on two RU ASNs
+ps-vitrina.storage-object.pscloud.io	accept_full	https://www.ps.kz/ru/agreements/offer	Exact provider documentation bucket; public PDF samples from two RU ASNs, no KZ-vantage claim
+curator.pro	hold	https://curator.pro/library/faq/	Strict TLS with 401 on two RU ASNs; already approved exact service subdomains unchanged
+tech.vklanding.com	hold	https://vk.company.ru/ru/company/business/	503 or timeout and no current primary inbound link; no inferred apex
+www.curator.pro	hold	https://docs.curator.pro/	Unlinked variant, not inherited
+eurasiapeering.com	hold	https://www.peeringdb.com/org/18724	Apex is not the publicly identified WWW, no inheritance
+cdnnow.net	hold	https://cdnnow.ru/support/	Similar label, no current primary inbound link
+dataix.eu	hold	https://dataix.ru/	Separate from linked LG; international redirect
+gnm.net	exclude	https://gnm-ix.net/	International property, not inferred from domestic GlobalNet service
+gnm-ix.net	exclude	https://gnm-ix.net/	International property, no new suffix rule
+lg.gnm-ix.net	exclude	https://gnm-ix.net/	International LG separated from local DataIX references
+stormwall.network	exclude	https://stormwall.network/	Separate international portal, existing domestic .pro unchanged
+nowcdn.co	exclude	https://cdnnow.pro/support/web/	Tenant namespace, no general route
+pscloud.io	exclude	https://docs.ps.kz/ru/cloud/object-storage/instructions/creating-container	Parent, shared API and tenant endpoints not routed by exact provider bucket decision
+selcdn.net	existing_suffix_review_separately	https://docs.selectel.ru/cdn/resources/domains/	Explicitly tenant-generated per primary documentation; existing rule unchanged
+polyfill-fastly.io	exclude	https://community.fastly.com/t/new-options-for-polyfill-io-users/2540	Independent external dependency, not a PS Cloud property

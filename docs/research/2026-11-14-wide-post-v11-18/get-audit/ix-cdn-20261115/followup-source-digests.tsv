@@ -1,0 +1,11 @@
+source_key	source_url	bytes	sha256	source_state	linked_hosts
+ai-space	https://tech.vk.ru/ai-space/	195	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7	soft_unavailable	0
+vk-hr	https://help.hrtek.ru/	244105	1c09bbfd83474e54ffb19ceef98d86830c4331af1c7bd4e4a6a1393064c54c22	html	1
+vk-partner	https://land.vkcloud-static.ru/partner/	182246	b8bd16908346755a12dfa993129a060d33f69842ab8213f4451c953cb1bb5084	html	15
+vk-report	https://vk.company.ru/ru/press/releases/12477/	148914	fb3a5c59e50de3a5ec4ece81c6ac3d4553ebfd30d2ed8766748e7c71649326df	html	16
+vk-release	https://vk.company.ru/ru/press/releases/12490/	53826	3a5ebefcc346dd34fff6771984efdda2cd9ee7ae4897960a79e2fb530baa2295	html	14
+selectel	https://selectel.ru/	691461	a72869eab81caf9a79cd8ee0169092ef0b08e2d1f13dcc84cf205429d387eac7	html	17
+selectel-cdn	https://docs.selectel.ru/cdn/resources/domains/	36470	e98200dd4f27a345394b8f52c1996d72e686617b1dc988f7ad144610afcb224d	html	5
+ps-data	https://www.ps.kz/ru/agreements/company-docs	53973	9177745463606c63e295f5f483f0024d266b4851d2aff5fc94a94db15faa504d	html	10
+ps-kz	https://www.ps.kz/ru/	3	a2cb686df9361d638cdb5e02082adc221e17c8c6bb5cfc56d1c3d1ba55b735b7	redirect_unfollowed	0
+ps-storage	https://docs.ps.kz/ru/cloud/object-storage/instructions/create-static-website	79080	b5e21325db040d4593abd152ed0e947c1ce073b4e560ea9ac75c97e06404c660	html	9
