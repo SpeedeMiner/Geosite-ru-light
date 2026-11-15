@@ -1,0 +1,27 @@
+{
+  "baseline_pending_before": 1047,
+  "exclusions": {
+    "duplicate_url": 1
+  },
+  "first_baseline_exact": 25,
+  "first_batches": {
+    "baseline_006b": 20,
+    "health_control": 11,
+    "health_frontier": 2,
+    "passenger_control": 7,
+    "passenger_frontier": 1,
+    "trade_control": 19,
+    "trade_frontier": 12,
+    "wide_007b": 8
+  },
+  "first_non_baseline": 55,
+  "next_batches": {
+    "regional_008b": 5,
+    "wide_007b": 9
+  },
+  "planned_first": 80,
+  "planned_next": 14,
+  "required_probes": 240,
+  "unallocated_probes": 10,
+  "verified_prior_get4": 237
+}
