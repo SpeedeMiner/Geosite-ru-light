@@ -1,0 +1,11 @@
+host	decision	url	source	measurement_id	note
+docs.eaeunion.org	offline_preview	https://docs.eaeunion.org/	https://eec.eaeunion.org/	21A9OES8nl36yPkyu00021VVA	Официальный правовой портал из ссылок ЕЭК, 200 с явным маркером внутри основного тела в трёх ASN
+regulation.eaeunion.org	offline_preview	https://regulation.eaeunion.org/	https://docs.eaeunion.org/	2Ymbr6iKE3cxkf1cS00021VVG	Проекты актов и публичные обсуждения, 200 с маркерами основного тела во всех трёх ASN
+eccis.org	offline_preview	https://eccis.org/	https://cis.minsk.by/	2vOPevJFr3sNPxuwo00021VVA	Покрытый официальный вход трижды вернул 301 на этот хост, отдельный GET 200 с видимым названием Исполкома
+belarustractors.com	offline_preview	https://belarustractors.com/contacts/	https://belarus-tractor.com/	2XhKMyF4m8DbrS94A00021VVA	Прямая ссылка МТЗ на его каталог, на том же hostname три 200 и видимый маркер контактов
+kazenergy.com	offline_preview	https://kazenergy.com/association/about-on/	https://kazenergy.com/	2LMvFCs20urEtMc9c00021VVA	Официальная страница ассоциации, видимый KAZENERGY в трёх ASN, отдельный путь контактов имеет такой же результат
+eec.eaeunion.org	hold	https://eec.eaeunion.org/	https://docs.eaeunion.org/	2Z3b3VWLY6a1Dkubd00021VVA	В пробах 200 и валидный TLS, но известен только заголовок, нужны два уже запланированных публичных пути
+portal.eaeunion.org	hold	https://portal.eaeunion.org/	https://eaeunion.org/?lang=ru	22sDmvaJK1xAVzU5I00021VVA	Результат 301 ведёт на непокрытый opendata, полезность полного перехода ещё не подтверждена
+opendata.eaeunion.org	hold	https://opendata.eaeunion.org/opendata/ru/resourses	https://opendata.eaeunion.org/	24Ar27bbvwoSJNJvM00021VVA	Нет полного содержимого ответа и отдельного замера корня, объявленного редиректом
+courteurasian.org	hold	https://courteurasian.org/	https://docs.eaeunion.org/	2AflymWlWh8aMfLKJ00021VVG	Официальность есть, в трёх ASN валидный TLS и 403, доступ к содержимому не подтверждён
+wooppay.group	hold	https://wooppay.group/	https://wooppay.group/	2vjh3EKdu91MyOugC00021VVA	У 200 нет захваченного видимого тела, роль в проведении платежа не доказана
