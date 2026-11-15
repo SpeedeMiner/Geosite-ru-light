@@ -1,0 +1,39 @@
+group	host	service	url	source	role	evidence	disposition	light_ru	server_ru	block	non_ru
+Wildberries	wildberries.ru	RWB corporate index	https://wildberries.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	3d.russoutdoor.ru	RWB corporate index	https://3d.russoutdoor.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	wb-bank.ru	RWB corporate index	https://wb-bank.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	www.wildberries.ru	RWB corporate index	https://www.wildberries.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	university.rwb.ru	RWB corporate index	https://university.rwb.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	sreda.rwb.ru	RWB corporate index	https://sreda.rwb.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	esg.rwb.ru	RWB corporate index	https://esg.rwb.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	career.rwb.ru	RWB corporate index	https://career.rwb.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	legal.wildberries.ru	RWB corporate index	https://legal.wildberries.ru/	https://rwb.ru/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	static-basket-02.wbbasket.ru	WB seller API help	https://static-basket-02.wbbasket.ru/	https://seller.wildberries.ru/instructions/ru/ru/material/wb-api	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	seller.wildberries.ru	WB seller API help	https://seller.wildberries.ru/	https://seller.wildberries.ru/instructions/ru/ru/material/wb-api	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	avito.tech	Avito.Tech editorial	https://avito.tech/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:avito.tech	domain:avito.tech	NA	NA
+Avito	ws.tildacdn.com	Avito.Tech editorial	https://ws.tildacdn.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	static.tildacdn.com	Avito.Tech editorial	https://static.tildacdn.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	neo.tildacdn.com	Avito.Tech editorial	https://neo.tildacdn.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	fonts.gstatic.com	Avito.Tech editorial	https://fonts.gstatic.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	NA	NA	NA	NA
+Avito	fonts.googleapis.com	Avito.Tech editorial	https://fonts.googleapis.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	NA	NA	NA	NA
+Avito	mc.yandex.ru	Avito.Tech editorial	https://mc.yandex.ru/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:ru	domain:ru	domain:mc.yandex.ru	NA
+Avito	career.avito.com	Avito.Tech editorial	https://career.avito.com/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:avito.com	domain:avito.com	NA	NA
+Avito	www.avito.ru	Avito.Tech editorial	https://www.avito.ru/	https://avito.tech/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	thb.tildacdn.com	Avito.Tech editorial	https://thb.tildacdn.com/	https://avito.tech/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	start.avito.ru	Avito.Tech editorial	https://start.avito.ru/	https://avito.tech/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	avito-analytics-academy.ru	Avito.Tech editorial	https://avito-analytics-academy.ru/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	trisigma.io	Avito.Tech editorial	https://trisigma.io/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	NA	NA	NA	NA
+Avito	avitoplato.tech	Avito.Tech editorial	https://avitoplato.tech/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	NA	NA	NA	NA
+Avito	hrmka.ru	Avito.Tech editorial	https://hrmka.ru/	https://avito.tech/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	ads.avito.com	Avito Ads	https://ads.avito.com/	https://ads.avito.com/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:avito.com	domain:avito.com	NA	NA
+Avito	ws.tildacdn.com	Avito Ads	https://ws.tildacdn.com/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	static.tildacdn.com	Avito Ads	https://static.tildacdn.com/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	neo.tildacdn.com	Avito Ads	https://neo.tildacdn.com/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	fonts.googleapis.com	Avito Ads	https://fonts.googleapis.com/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	NA	NA	NA	NA
+Avito	thb.tildacdn.com	Avito Ads	https://thb.tildacdn.com/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:tildacdn.com	domain:tildacdn.com	NA	NA
+Avito	www.avito.ru	Avito Ads	https://www.avito.ru/	https://ads.avito.com/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	ads-help.avito.com	Avito Ads	https://ads-help.avito.com/	https://ads.avito.com/	product_or_portal_review	primary_href_or_asset	research_coverage	domain:avito.com	domain:avito.com	NA	NA
+Avito	avito.ru	Avito Ads	https://avito.ru/	https://ads.avito.com/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Avito	mc.yandex.ru	Avito Ads	https://mc.yandex.ru/	https://ads.avito.com/	third_party_dependency	primary_href_or_asset	do_not_promote_dependency	domain:ru	domain:ru	domain:mc.yandex.ru	NA
+Avito	top-fwz1.mail.ru	Avito Ads	https://top-fwz1.mail.ru/	https://ads.avito.com/	linked_in_primary_site	primary_href_or_asset	research_coverage	domain:ru	domain:ru	NA	NA
+Wildberries	rwb.ru	RWB corporate index	https://rwb.ru/	https://rwb.ru/	official_source_itself	primary_page	research_coverage	domain:ru	domain:ru	NA	NA

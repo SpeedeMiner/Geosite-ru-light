@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	avitoplato.tech	avitoplato.tech	https://avitoplato.tech/	Avito Plato|Авито Тех|Self-service	https://avito.tech/
+corporate	candidate	trisigma.io	trisigma.io	https://trisigma.io/	Trisigma|Авито Тех|A/B	https://avito.tech/
+corporate	candidate	docs.trisigma.io	docs.trisigma.io	https://docs.trisigma.io/	Trisigma|Help center	https://trisigma.io/
+corporate	control	avito.tech	avito.tech	https://avito.tech/	Авито Тех|AvitoTech|Avito.Tech	https://avito.tech/
+corporate	control	rwb.ru	rwb.ru	https://rwb.ru/	RWB|Wildberries	https://rwb.ru/
