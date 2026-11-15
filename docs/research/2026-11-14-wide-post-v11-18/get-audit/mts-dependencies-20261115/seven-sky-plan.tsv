@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.seven-sky.net	www.seven-sky.net	https://www.seven-sky.net/	SevenSky	https://tv.seven-sky.net/eula
+corporate	candidate	seven-sky.net	seven-sky.net	https://seven-sky.net/		https://tv.seven-sky.net/eula
+corporate	candidate	tv.seven-sky.net	tv.seven-sky.net	https://tv.seven-sky.net/faq	FAQ	https://www.seven-sky.net/
+corporate	candidate	lk.seven-sky.net	lk.seven-sky.net	https://lk.seven-sky.net/index.jsp	Личный кабинет	https://www.seven-sky.net/
+corporate	candidate	store.seven-sky.net	store.seven-sky.net	https://store.seven-sky.net/	Seven	https://www.seven-sky.net/
+corporate	candidate	domofon.seven-sky.net	domofon.seven-sky.net	https://domofon.seven-sky.net/	Seven	https://www.seven-sky.net/
+corporate	control	ticketscloud.com	ticketscloud.com	https://ticketscloud.com/	Ticketscloud	https://b2b-live.mts.ru/ticket-services

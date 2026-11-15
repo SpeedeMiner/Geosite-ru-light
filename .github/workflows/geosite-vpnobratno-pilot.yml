@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-mts-greenpoint
+  group: geosite-vpnobratno-seven-sky
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [greenpoint]
+        batch: [seven-sky]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/mts-dependencies-20261115/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 33991 --exclude-asn 42610
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 49531 --exclude-asn 196949
 
       - name: Upload observation and diagnostic reports
         if: always()
