@@ -1,0 +1,17 @@
+url	asn	asn_ris	eligible	target_ipv4	http	curl	tls	mime	bytes	sample_sha256	title	redirect_scheme	redirect_host	redirect_path	state	observed_at
+https://help.planeta.tc/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.141084+00:00
+https://help.planeta.tc/	196949	196949	yes	212.49.103.18	200	0	0	text/html; charset=UTF-8	10000	dc72649e15c712e853cd4b611b68374f1019ee682dfb5b5cbee1a2db559c14d7	Справочный портал Планеты	NA	NA	NA	vpn_visible_review	2026-11-15T16:21:31.444973+00:00
+https://job.planeta.tc/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.194221+00:00
+https://job.planeta.tc/	196949	196949	yes	46.48.103.23	200	0	0	text/html; charset=UTF-8	10000	4c5ed7fe6f8be07e862f4200739268823b91fa16cc4770e5ead0d26e07f7f20d	Работа в Планете	NA	NA	NA	vpn_visible_review	2026-11-15T16:21:40.640010+00:00
+https://my.planeta.tc/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.247283+00:00
+https://my.planeta.tc/	196949	196949	yes	46.48.103.20	301	0	0	NA	0	NA	NA	https	planeta.tc	/private	vpn_redirect	2026-11-15T16:21:47.540518+00:00
+https://old.planeta.tc/ekb/articles/customer/documents	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.273548+00:00
+https://old.planeta.tc/ekb/articles/customer/documents	196949	196949	yes	46.48.103.12	301	0	0	NA	0	NA	NA	https	planeta.tc	/documents	vpn_redirect	2026-11-15T16:21:52.750331+00:00
+https://planeta.tc/	49531	NA	no	46.48.103.235	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T16:22:50.109807+00:00
+https://planeta.tc/	196949	196949	yes	46.48.103.235	200	0	0	text/html; charset=utf-8	10000	8892e1e6619258198f631213cd107e012af664fb3e0ec15409c88302fa442a41	Планета – интернет и ТВ | Интернет-провайдер в Екатеринбурге и области	NA	NA	NA	vpn_visible_review	2026-11-15T16:21:27.670219+00:00
+https://tv.planeta.tc/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.220906+00:00
+https://tv.planeta.tc/	196949	196949	yes	46.48.102.248	NA	35	NA	NA	0	NA	NA	NA	NA	NA	vpn_transport_unproven	2026-11-15T16:21:42.610555+00:00
+https://wink.planeta.tc/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.167783+00:00
+https://wink.planeta.tc/	196949	196949	yes	46.48.103.28	200	0	0	text/html; charset=utf-8	10000	e9e06a8a485a7b1a27bd3e8ecae4b845e25e606e2aefd7178858725bf6ded49d	Планета + Wink	NA	NA	NA	vpn_marker	2026-11-15T16:21:37.063916+00:00
+https://www.company.rt.ru/press/REGIONALNEWS/d457612/	49531	NA	no	NA	NA	-1	NA	NA	0	NA	NA	NA	NA	NA	vpn_dns_unproven	2026-11-15T16:22:54.300285+00:00
+https://www.company.rt.ru/press/REGIONALNEWS/d457612/	196949	196949	yes	213.59.197.65	200	0	0	text/html; charset=UTF-8	10000	af245670045f8a45f5e12657e70259448d541b3976909064698f339e5df81a22	«Ростелеком» приобрел ведущего интернет-провайдера Екатеринбурга и Свердловской области. Официальный информационный сайт Ростелеком.	NA	NA	NA	vpn_visible_review	2026-11-15T16:21:58.383710+00:00
