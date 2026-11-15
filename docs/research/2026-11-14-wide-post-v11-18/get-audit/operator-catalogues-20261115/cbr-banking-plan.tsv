@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	xn--80abkdqhcx2axc5i.net	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/	Кубань Кредит	https://www.cbr.ru/finorg/foinfo/?id=1315037837676
+corporate	control	kk.ru	kk.ru	https://kk.ru/	Кубань Кредит	https://kk.ru/upload/iblock/ae4/m8q8lfahb8a3v8rt5hk81ry8jejdx1u9.pdf
+corporate	control	kk.bank	kk.bank	https://kk.bank/	Кубань Кредит	https://kk.ru/upload/iblock/ae4/m8q8lfahb8a3v8rt5hk81ry8jejdx1u9.pdf
+corporate	candidate	perevod-korona.biz	perevod-korona.biz	https://perevod-korona.biz/	Корона	https://cbr.ru/finorg/foinfo/?ogrn=1025400002968
+corporate	candidate	perevod-korona.info	perevod-korona.info	https://perevod-korona.info/	Корона	https://cbr.ru/finorg/foinfo/?ogrn=1025400002968
+corporate	candidate	perevod-korona.org	perevod-korona.org	https://perevod-korona.org/	Корона	https://cbr.ru/finorg/foinfo/?ogrn=1025400002968
+corporate	candidate	perevod-korona.pro	perevod-korona.pro	https://perevod-korona.pro/	Корона	https://cbr.ru/finorg/foinfo/?ogrn=1025400002968
+corporate	control	koronapay.com	koronapay.com	https://koronapay.com/	Korona	https://cbr.ru/finorg/foinfo/?ogrn=1025400002968
+corporate	diagnostic	www.ccb.cn	www.ccb.cn	https://www.ccb.cn/lng/russia/old/lng/index.shtml	Чайна Констракшн Банк	https://www.cbr.ru/finorg/foinfo/?id=1361343494939
+corporate	control	ru.ccb.com	ru.ccb.com	https://ru.ccb.com/lng/russia/old/lng/about_us/index.shtml	Чайна Констракшн Банк	https://www.cbr.ru/finorg/foinfo/?id=1361343494939

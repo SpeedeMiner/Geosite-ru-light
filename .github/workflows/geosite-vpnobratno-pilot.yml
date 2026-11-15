@@ -1,4 +1,4 @@
-name: GeoSite IP checker GET through VPNObratno (operator catalogues)
+name: GeoSite IP checker GET through VPNObratno (banking public websites)
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-operator-catalogues
+  group: geosite-vpnobratno-cbr-banking
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [operator-catalogues]
+        batch: [cbr-banking]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
