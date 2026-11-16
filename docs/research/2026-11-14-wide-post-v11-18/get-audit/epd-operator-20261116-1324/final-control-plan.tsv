@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	registry.prod7.veeroute.cloud	registry.prod7.veeroute.cloud	https://registry.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	control	monitor.edge7.veeroute.cloud	monitor.edge7.veeroute.cloud	https://monitor.edge7.veeroute.cloud/styles-YPO3BGZH.css		https://monitor.edge7.veeroute.cloud/
+corporate	control	registry.edge7.veeroute.cloud	registry.edge7.veeroute.cloud	https://registry.edge7.veeroute.cloud/styles-DAHOPMNW.css		https://registry.edge7.veeroute.cloud/
+corporate	candidate	veeroute.com	veeroute.com	https://veeroute.com/		https://docs.edge7.veeroute.cloud/en/
