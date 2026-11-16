@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	kremlinpalace.org	kremlinpalace.org	https://kremlinpalace.org/ticket-operators	Билетные партнёры|KASSIR.RU	https://kremlinpalace.org/ticket-operators
+corporate	candidate	www.hermitagemuseum.org	www.hermitagemuseum.org	https://www.hermitagemuseum.org/	Эрмитаж|Hermitage	https://www.hermitagemuseum.org/
+corporate	candidate	claustrophobia.com	claustrophobia.com	https://claustrophobia.com/quests/schedule	Клаустрофобия|Расписание	https://claustrophobia.com/
+corporate	candidate	www.kinoafisha.info	www.kinoafisha.info	https://www.kinoafisha.info/	Киноафиша|кинотеатр	https://www.kinoafisha.info/
+corporate	candidate	sputnik8.com	sputnik8.com	https://sputnik8.com/	Спутник|экскурсии	https://www.sputnik8.com/ru/contacts
+corporate	control	www.sputnik8.com	www.sputnik8.com	https://www.sputnik8.com/ru/contacts	Реквизиты|Sputnik8	https://www.sputnik8.com/ru/pages
+corporate	candidate	gorbilet.com	gorbilet.com	https://gorbilet.com/	Горбилет	https://gorbilet.ru/pages/politika-obrabotki-personalnyh-dannyh/
+corporate	control	gorbilet.ru	gorbilet.ru	https://gorbilet.ru/pages/publichnaya-oferta/	Горбилет|Публичная оферта	https://gorbilet.ru/pages/politika-obrabotki-personalnyh-dannyh/

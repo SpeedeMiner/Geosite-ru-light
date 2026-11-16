@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ru.101xp.com	ru.101xp.com	https://ru.101xp.com/	Игровой центр 101XP|Все наши игры	https://ru.101xp.com/
+corporate	candidate	author.today	author.today	https://author.today/	Author.Today|Читать	https://author.today/
+corporate	candidate	litnet.com	litnet.com	https://litnet.com/ru	Литнет|Читать	https://litnet.com/ru
+corporate	candidate	gamersbase.store	gamersbase.store	https://gamersbase.store/	Gamer’s Base|игры	https://gamersbase.store/
+corporate	candidate	steampay.com	steampay.com	https://steampay.com/	SteamPay|игры	https://steampay.com/
+corporate	control	pvp.vkplay.ru	pvp.vkplay.ru	https://pvp.vkplay.ru/promo/port	Проект ПОРТ|турнир	https://resf.ru/about/faq/
+corporate	control	ru.4game.ru	ru.4game.ru	https://ru.4game.ru/legal/4game/17/	Фогейм|Соглашение	https://ru.4game.ru/legal/4game/17/
