@@ -1,0 +1,19 @@
+vpn_asn	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+12389	my.solarspace.pro	https://my.solarspace.pro/auth/sign-in	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	93.185.164.203	vpn_redirect	301 Moved Permanently	https://my.rt-solar.ru/auth/sign-in
+12389	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	93.185.164.203	vpn_redirect	301 Moved Permanently	https://my.rt-solar.ru/legal/cookies.pdf
+12389	solarspace.pro	https://solarspace.pro/	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	195.18.27.132	vpn_redirect	301 Moved Permanently	https://my.rt-solar.ru/
+12389	eltex-co.com	https://eltex-co.com/policy/	200	0	0	text/html;charset=utf-8	10000	58aae3ba9bca9b8d0797954c4268369431955c91a750efe57384f6b6d50ffcbf	161.104.46.191	vpn_body_unproven	Privacy Policy	
+12389	api.eltex-co.com	https://api.eltex-co.com/storage/upload_center/files/33/ESR_Maintenance_Manual_1.24_en.pdf	200	63	0	application/pdf	0		161.104.46.191	vpn_body_unproven		
+12389	storage.mwsapis.ru	https://storage.mwsapis.ru/mws-ui-site-docs/swagger/demo/swagger.yaml	200	0	0	application/x-yaml	10000	984586424b3a35f19e6b24eca8483aac37b6bd4f3e06af4ae8c98b362988e53a	188.93.55.130	vpn_body_unproven		
+12389	doc-cdn.beelinecloud.ru	https://doc-cdn.beelinecloud.ru/Services_setup/http/	200	0	0	text/html	10000	14a212420535c38c6861702f738c19be0ea6c57c2002440f1dfc6d7319b490a7	151.236.121.67	vpn_visible_review	CDN - База знаний BeelineCloud	
+12389	lk.cloud.beeline.ru	https://lk.cloud.beeline.ru/	200	0	0	text/html	1460	125734049fa8858b7cdd32d59a733b610a862d4e51c39c2f13b5ebf33cc326d8	80.243.79.5	vpn_body_unproven	Личный кабинет Beeline cloud	
+12389	docs.solarspace.pro	https://docs.solarspace.pro/	206	0	0	text/html	10000	af252acb4fd584b39bc21974b12faf05915950b5d0560fbed94c92a08752e121	195.18.27.132	vpn_http_other	Документация — Solar Space	
+12389	my.rt-solar.ru	https://my.rt-solar.ru/	403	0	0	text/html	10000	398f378b05c8df97fe99438e68a04d1e6ae18810da809ba695aea62f90831e49	212.164.137.250	vpn_http_other	Плановые технические работы	
+43761	my.solarspace.pro	https://my.solarspace.pro/auth/sign-in		-1			0		93.185.164.203	vpn_transport_unproven		
+43761	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf		-1			0			vpn_dns_unproven		
+43761	solarspace.pro	https://solarspace.pro/	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	195.18.27.132	vpn_redirect	301 Moved Permanently	https://my.rt-solar.ru/
+43761	eltex-co.com	https://eltex-co.com/policy/		-1			0		161.104.46.191	vpn_transport_unproven		
+43761	api.eltex-co.com	https://api.eltex-co.com/storage/upload_center/files/33/ESR_Maintenance_Manual_1.24_en.pdf		-1			0		161.104.46.191	vpn_transport_unproven		
+43761	storage.mwsapis.ru	https://storage.mwsapis.ru/mws-ui-site-docs/swagger/demo/swagger.yaml		-1			0		188.93.55.130	vpn_transport_unproven		
+43761	doc-cdn.beelinecloud.ru	https://doc-cdn.beelinecloud.ru/Services_setup/http/		-1			0			vpn_dns_unproven		
+43761	lk.cloud.beeline.ru	https://lk.cloud.beeline.ru/		-1			0		80.243.79.5	vpn_transport_unproven		
