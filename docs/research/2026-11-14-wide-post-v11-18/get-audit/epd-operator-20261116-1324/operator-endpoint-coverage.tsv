@@ -1,0 +1,27 @@
+operator	host	public_source	decision_context	light_ru	server_ru	light_block	in_plus98
+АйтиКом	logistics.uc-itcom.ru	https://uc-itcom.ru/help/docs/instrukciya-dlya-perevozchika	Документированный вход	domain:ru	domain:ru	-	no
+Точка	epd.tochka.com	https://tochka.com/epd/kabinet-voditelya-podpisanie-epd/	Отдельный кабинет водителя	domain:tochka.com	domain:tochka.com	-	no
+Тензор	saby.ru	https://saby.ru/tms	Продукт	domain:ru	domain:ru	-	no
+Тензор	online.saby.ru	https://saby.ru/tms	Официальный вход	domain:ru	domain:ru	-	no
+Калуга Астрал	platform.astral.ru	https://platform.astral.ru/service/epd	Продукт	domain:ru	domain:ru	-	no
+СКБ Контур	kontur.ru	https://kontur.ru/logistika/epd	Продукт	domain:ru	domain:ru	-	no
+СберКорус	perevozki-mobile.esphere.ru	https://doc.esphere.ru/tredo/43.html	Кабинет	domain:ru	domain:ru	-	no
+Эдивеб	ediweb.com	https://www.ediweb.ru/	Уже вошёл в +98	-	-	-	yes
+Эдивеб	dropcat.ediweb.com	https://ediweb.com/ru-ru	Уже вошёл в +98	-	-	-	yes
+Эвотор ОФД	epd.platformaofd.ru	https://platformaofd.ru/services/platforma-epd/	Продуктивный вход	domain:ru	domain:ru	-	no
+Эвотор ОФД	lk.platformaofd.ru	https://platformaofd.ru/baza-znaniy/podklyuchenie-k-epd/	Единый кабинет	domain:ru	domain:ru	-	no
+Эвотор ОФД	lk-test.platformaofd.ru	https://platformaofd.ru/baza-znaniy/podklyuchenie-k-epd/	Тестовый адрес, не основание для добавления	domain:ru	domain:ru	-	no
+Первый ОФД	org.1-ofd.ru	https://1-ofd.ru/epd	Опубликованный вход	domain:ru	domain:ru	-	no
+НИИАС	edo.pkitrans.ru	https://edo.pkitrans.ru/kedo/Documentation	Публичное руководство	domain:ru	domain:ru	-	no
+Такском	invoice.taxcom.ru	https://taxcom.ru/baza-znaniy/perevozochnye-dokumenty/stati/kak-sozdat-kabinet-edo-dlya-obmena-elektronnymi-perevozochnymi-dokumentami/	Опубликованный вход	domain:ru	domain:ru	-	no
+ЦРПТ	docs.crpt.ru	https://docs.crpt.ru/gismt/%D0%AD%D0%9F%D0%94_%D0%9B%D0%B0%D0%B9%D1%82/	Публичное руководство ЭПД Лайт	domain:ru	domain:ru	-	no
+НТСсофт	epd.mig24.ru	https://epd.mig24.ru/help	Опубликованное руководство	domain:ru	domain:ru	-	no
+НТСсофт	epd.mig24.online	https://epd.mig24.ru/help	Сверено в действующей очереди	-	-	-	yes
+ФораПром	business.leradata.pro	https://leradata.pro/	Уже вошёл в +98	-	-	-	yes
+Рускон	lk.ruscon.ru	https://ruscon.ru/lk/	Опубликованный вход	domain:ru	domain:ru	-	no
+ТрансКонтейнер	isales.trcont.ru	https://isales.trcont.ru/help	Опубликованный адрес справки	domain:ru	domain:ru	-	no
+ALTLOG	docs.altlog.ru	https://docs.altlog.ru/	Опубликованная справка	domain:ru	domain:ru	-	no
+ALTLOG	stl.altlog.ru	https://altlog.ru/altlog.online	Другой опубликованный вход	domain:ru	domain:ru	-	no
+Loginet	tms.loginet.ru	https://tms.loginet.ru/	Продукт	domain:ru	domain:ru	-	no
+Smartseeds	demo-app.smartseeds.ru	https://smartseeds.ru/elektronnaya-transportnaya-nakladnaya/	Демо, не основание для добавления	domain:ru	domain:ru	-	no
+Минтранс	mintrans.gov.ru	https://mintrans.gov.ru/activities/297/436	Справка ГосЛога объясняет доступ через Госуслуги	domain:ru	domain:ru	-	no
