@@ -1,0 +1,21 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+12389	12389	12389	2	perevod-korona.biz	https://perevod-korona.biz/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	perevod-korona.info	https://perevod-korona.info/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	perevod-korona.org	https://perevod-korona.org/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	perevod-korona.pro	https://perevod-korona.pro/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/		7			0		51.250.13.71	vpn_transport_unproven		
+12389	12389	12389	2	kk.ru	https://kk.ru/requisites/	200	0	0	text/html; charset=UTF-8	10000	f0ff438ff447d2643c3bcc95e328f22faf67b2ebf4576a7379e198a6ab1680e1	178.248.234.134	vpn_visible_review	Реквизиты	
+12389	12389	12389	2	koronapay.com	https://koronapay.com/	403	0	0	text/html	77	f44e2981ce2aab507d69ca4a873384ee2e04b405a79c581a62e2b297c4d4596e	193.232.20.100	vpn_http_other		
+12389	12389	12389	2	eltex-co.com	https://eltex-co.com/download/	200	0	0	text/html;charset=utf-8	10000	ccba14f148d73f33cefed8ca76e66fdd3742a2c1d8ca9baad80fb4fd684074f4	161.104.46.191	vpn_body_unproven	Documents and files - Eltex: designer and manufacturer of communication equipment	
+12389	12389	12389	2	api.eltex-co.com	https://api.eltex-co.com/storage/banner_base/17475689086829c90c3b429	200	0	0	application/octet-stream	5494	297de44bcbaef5525b356a961baf299ae2b63676fa32914ff4d781cbc0c87101	161.104.46.191	vpn_body_unproven		
+12389	12389	12389	2	academy.eltex-co.com	https://academy.eltex-co.com/	200	0	0	text/html; charset=UTF-8	10000	02ef123a2916f35a17062e2927a2eef83ed78b95237ad49d2a8ecf6f00b56ad7	161.104.35.248	vpn_marker	Eltex Academy	
+8749	8749	8749	2	perevod-korona.biz	https://perevod-korona.biz/		-1			0			vpn_dns_unproven		
+8749	8749	8749	2	perevod-korona.info	https://perevod-korona.info/		-1			0			vpn_dns_unproven		
+8749	8749	8749	2	perevod-korona.org	https://perevod-korona.org/		-1			0			vpn_dns_unproven		
+8749	8749	8749	2	perevod-korona.pro	https://perevod-korona.pro/		-1			0			vpn_dns_unproven		
+8749	8749	8749	2	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/		7			0		51.250.13.71	vpn_transport_unproven		
+8749	8749	8749	2	kk.ru	https://kk.ru/requisites/		-1			0		178.248.234.134	vpn_transport_unproven		
+8749	8749	8749	2	koronapay.com	https://koronapay.com/		-1			0		193.232.20.100	vpn_transport_unproven		
+8749	8749	8749	2	eltex-co.com	https://eltex-co.com/download/	200	0	0	text/html;charset=utf-8	10000	ccba14f148d73f33cefed8ca76e66fdd3742a2c1d8ca9baad80fb4fd684074f4	161.104.46.191	vpn_body_unproven	Documents and files - Eltex: designer and manufacturer of communication equipment	
+8749	8749	8749	2	api.eltex-co.com	https://api.eltex-co.com/storage/banner_base/17475689086829c90c3b429	200	0	0	application/octet-stream	5494	297de44bcbaef5525b356a961baf299ae2b63676fa32914ff4d781cbc0c87101	161.104.46.191	vpn_body_unproven		
+8749	8749	8749	2	academy.eltex-co.com	https://academy.eltex-co.com/	200	0	0	text/html; charset=UTF-8	10000	02ef123a2916f35a17062e2927a2eef83ed78b95237ad49d2a8ecf6f00b56ad7	161.104.35.248	vpn_marker	Eltex Academy	

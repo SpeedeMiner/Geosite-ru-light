@@ -1,0 +1,23 @@
+host	decision	run_id	path	source	reason
+payture.com	include	43813734063	https://payture.com/docs/working-with-api	https://payture.com/privacy-policy	Документация и политика 200/curl 0 из AS12389/AS8749
+www.payture.com	include	43813734063	https://www.payture.com/docs/working-with-api	https://payture.com/requisites.pdf	Отдельная документация 200/0, имя указано в информационной карте
+ekassir.com	include	43813734063	https://ekassir.com/resheniya/digital-bank-platform/	https://ekassir.com/about/	Продуктовая страница и карточка компании 200/0
+www.ekassir.com	include	43813734063	https://www.ekassir.com/	https://www.ifcg.ru/about/clients/	Оба выхода 301 на отдельно проверенный 200/0, пользовательская ссылка в каталоге российского контрагента
+eltex-co.com	include	43813949928	https://eltex-co.com/download/	https://docs.eltex-co.ru/display/dgen/Eltex.Guides%2BEN	Центр документации/ПО связан с российской базой знаний, 200/0 из AS12389/AS8749
+api.eltex-co.com	include	43813949928	https://api.eltex-co.com/storage/banner_base/17475689086829c90c3b429	https://eltex-co.com/download/	Точный публичный объект 200/0 из двух сетей. Не тест API или админ-панели
+academy.eltex-co.com	hold	43813949928	https://academy.eltex-co.com/	https://academy.eltex.ru/	Два 200, но есть отдельная российская точка входа уже в RU, зависимости от .com не доказаны
+webinars.eltex-co.com	hold	43813396052	https://webinars.eltex-co.com/	https://webinars.eltex.ru/	Русский контур покрыт, доступность английской витрины не обосновывает DIRECT
+xn--80abkdqhcx2axc5i.net	hold	43813949928	https://xn--80abkdqhcx2axc5i.net/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Есть A в двух DNS, curl 7 в двух RU ASN; не блокировка
+my.solarspace.pro	hold	43813045097	https://my.solarspace.pro/auth/sign-in	https://docs.solarspace.pro/faq/authorization	Старый редирект, целевой кабинет .ru ответил 403 с работами
+solarspace.pro	hold	43813045097	https://solarspace.pro/	https://docs.solarspace.pro/space-description	301 на кабинет .ru, нет рабочего ответа конечного пути
+perevod-korona.biz	hold	43813949928	https://perevod-korona.biz/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Нет A/AAAA в двух публичных DNS и нет HTTP из RU
+perevod-korona.info	hold	43813949928	https://perevod-korona.info/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Нет A/AAAA в двух публичных DNS и нет HTTP из RU
+perevod-korona.org	hold	43813949928	https://perevod-korona.org/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Нет A/AAAA в двух публичных DNS и нет HTTP из RU
+perevod-korona.pro	hold	43813949928	https://perevod-korona.pro/	https://www.cbr.ru/banking_sector/credit/cowebsites/	Нет A/AAAA в двух публичных DNS и нет HTTP из RU
+payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+www.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+api.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+lk.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+widget.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+webform.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
+oferta.payselection.com	hold	43813529002	-	https://payselection.com/documentation	SERVFAIL публичных DNS, нет HTTP из RU
