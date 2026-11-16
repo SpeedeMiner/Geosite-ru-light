@@ -1,0 +1,120 @@
+{
+  "queue_base": 98,
+  "queue_final": 116,
+  "added": 18,
+  "valid_https_completed": 88,
+  "observations": 110,
+  "distinct_urls": 51,
+  "exit_asns": [
+    12389,
+    28840,
+    34974,
+    42610
+  ],
+  "archives": [
+    {
+      "run_id": 43832551128,
+      "batch": "assets",
+      "sha256_zip": "750ffb9f73f520968ffd9d2112e10c9922c6993fa8f7a0ea10dd9656b6d0ce5a",
+      "observations": 14,
+      "planned_urls": 7,
+      "exit_asns": [
+        28840,
+        42610
+      ],
+      "validated_completed_http": 11,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43832640836,
+      "batch": "cargo-repeat",
+      "sha256_zip": "c4e2e4e6c08efd162f491b19372961303fa92b323db7247eef0d106894749d2d",
+      "observations": 8,
+      "planned_urls": 4,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 8,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43831983979,
+      "batch": "cargorun",
+      "sha256_zip": "9e7c77d8ff612507f3109c09bd2b534d35d19885cf5be5468fd99201ef8edd6c",
+      "observations": 16,
+      "planned_urls": 8,
+      "exit_asns": [
+        28840,
+        42610
+      ],
+      "validated_completed_http": 8,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43832280952,
+      "batch": "followup",
+      "sha256_zip": "74a7cb2131b126ae18aae89b03a3211f6ca7e1936ecf7e898eea3cde40eb66d1",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 8,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43831829568,
+      "batch": "operators",
+      "sha256_zip": "cdcc0273b03f0ec55bda06cf297cf30e2fb4c7ddc751c0e8fca9a20845286cdc",
+      "observations": 16,
+      "planned_urls": 8,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 12,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43831829568,
+      "batch": "transport",
+      "sha256_zip": "040271ba060e8647d806038dc7717882d736b2a82e96b484c3faa5f7e01d9cfe",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 11,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43831829568,
+      "batch": "veeroute",
+      "sha256_zip": "72888e3bb4d86f70ab3cda234f4b77303e46a18fbfece3bb8535af7ad8eab0aa",
+      "observations": 18,
+      "planned_urls": 9,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 18,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43832471655,
+      "batch": "veeroute-prod",
+      "sha256_zip": "387f7c0d4b744bacfc8ae3a88be41507300b2120d22b5391916e156cabf69f12",
+      "observations": 14,
+      "planned_urls": 7,
+      "exit_asns": [
+        28840,
+        42610
+      ],
+      "validated_completed_http": 12,
+      "upstream_state": "COMPLETE"
+    }
+  ]
+}

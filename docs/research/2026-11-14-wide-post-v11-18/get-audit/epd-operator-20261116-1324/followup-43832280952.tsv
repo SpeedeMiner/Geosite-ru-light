@@ -1,0 +1,13 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+28840	28840	28840	2	altlog.online	https://altlog.online/login	200	0	0	text/html; charset=utf-8	10000	304d6b18715392a86dc15e99922b4360e83f7c5c2c446b98f067ba107811d537	178.130.50.71	vpn_body_unproven	Altlog	
+28840	28840	28840	2	veeroute.com	https://veeroute.com/		28			0		95.217.173.143	vpn_transport_unproven		
+28840	28840	28840	2	svetofore.com	https://svetofore.com/service/platform-registration	200	0	0	text/html; charset=utf-8	10000	0f2b9696c52a62df995a29c93dc201ddc082e68646995076cad73a81d7c67f34	89.169.29.158	vpn_visible_review	Регистрация на платформе Регистрация на платформе	
+28840	28840	28840	2	isales.trcont.ru	https://isales.trcont.ru/help		60	19		0		185.71.67.130	vpn_tls_unproven		
+28840	28840	28840	2	docs.edge7.veeroute.cloud	https://docs.edge7.veeroute.cloud/docs/studio/intro/	200	0	0	text/html	10000	10a665dd540c567074c80ae506580ca60b810a6a2cb949fa9a38f1a0df67e879	188.68.218.33	vpn_visible_review	VRt.Studio | Veeroute	
+28840	28840	28840	2	altlog.ru	https://altlog.ru/news-2026-08-12-001	301	0	0	text/html; charset=UTF-8	0		77.222.40.66	vpn_redirect		https://altlog.ru/news/obnovleniya-altlog-online-2026-08-12
+34974	34974	34974	2	altlog.online	https://altlog.online/login	200	0	0	text/html; charset=utf-8	10000	304d6b18715392a86dc15e99922b4360e83f7c5c2c446b98f067ba107811d537	178.130.50.71	vpn_body_unproven	Altlog	
+34974	34974	34974	2	veeroute.com	https://veeroute.com/	200	28	0	text/html	10000	74cf941a337f3f9c14b2b47f08eff3e22035cde8c65be56780af2e59e2b269e5	95.217.173.143	vpn_transport_unproven	Veeroute | Cloud-Based Optimization for Business	
+34974	34974	34974	2	svetofore.com	https://svetofore.com/service/platform-registration	200	0	0	text/html; charset=utf-8	10000	0f2b9696c52a62df995a29c93dc201ddc082e68646995076cad73a81d7c67f34	89.169.29.158	vpn_visible_review	Регистрация на платформе Регистрация на платформе	
+34974	34974	34974	2	isales.trcont.ru	https://isales.trcont.ru/help		60	19		0		185.71.67.130	vpn_tls_unproven		
+34974	34974	34974	2	docs.edge7.veeroute.cloud	https://docs.edge7.veeroute.cloud/docs/studio/intro/	200	0	0	text/html	10000	10a665dd540c567074c80ae506580ca60b810a6a2cb949fa9a38f1a0df67e879	188.68.218.33	vpn_visible_review	VRt.Studio | Veeroute	
+34974	34974	34974	2	altlog.ru	https://altlog.ru/news-2026-08-12-001	301	0	0	text/html; charset=UTF-8	0		77.222.40.66	vpn_redirect		https://altlog.ru/news/obnovleniya-altlog-online-2026-08-12

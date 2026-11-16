@@ -1,0 +1,9 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+28840	28840	28840	2	routes.cargo.run	https://routes.cargo.run/	200	0	0	text/html	2059	84c3ab062d6723bce926377c50e347cefb3c4a259dc773ed92160daa1d1464e4	95.213.255.119	vpn_body_unproven	Routes Cargorun	
+28840	28840	28840	2	cargo.run	https://cargo.run/sections/loghistika	301	0	0		17	d18ed36671b8618520016c81125aa889a5b800872038c5e009ef49cd305088cd	95.213.255.119	vpn_redirect		https://cargorun.ru/sections/loghistika
+28840	28840	28840	2	cargorun.ru	https://cargorun.ru/sections/loghistika	200	0	0	text/html	10000	100cef1d600966854aac6a4673ced213f07eba59c7d77509bb616f65f407b8c5	95.213.255.119	vpn_visible_review	CR Логистика — база знаний CARGO.RUN	
+28840	28840	28840	2	cargorun.ru	https://cargorun.ru/gruz	200	0	0	text/html	10000	dc082aa3d2a0ebc76771f3a9db129b5e215afc30cd95308f4574b246e7efee44	95.213.255.119	vpn_visible_review	CR Загрузки — цифровая платформа для грузовладельцев	
+34974	34974	34974	2	routes.cargo.run	https://routes.cargo.run/	200	0	0	text/html	2059	84c3ab062d6723bce926377c50e347cefb3c4a259dc773ed92160daa1d1464e4	95.213.255.119	vpn_body_unproven	Routes Cargorun	
+34974	34974	34974	2	cargo.run	https://cargo.run/sections/loghistika	301	0	0		17	d18ed36671b8618520016c81125aa889a5b800872038c5e009ef49cd305088cd	95.213.255.119	vpn_redirect		https://cargorun.ru/sections/loghistika
+34974	34974	34974	2	cargorun.ru	https://cargorun.ru/sections/loghistika	200	0	0	text/html	10000	100cef1d600966854aac6a4673ced213f07eba59c7d77509bb616f65f407b8c5	95.213.255.119	vpn_visible_review	CR Логистика — база знаний CARGO.RUN	
+34974	34974	34974	2	cargorun.ru	https://cargorun.ru/gruz	200	0	0	text/html	10000	dc082aa3d2a0ebc76771f3a9db129b5e215afc30cd95308f4574b246e7efee44	95.213.255.119	vpn_visible_review	CR Загрузки — цифровая платформа для грузовладельцев	

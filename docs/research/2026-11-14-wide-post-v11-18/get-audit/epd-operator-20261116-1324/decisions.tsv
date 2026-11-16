@@ -1,0 +1,25 @@
+host	decision	public_url	primary_source	reason	verified_completed_exit_asns	runs	http_statuses	redirect_target
+account.edge7.veeroute.cloud	include	https://account.edge7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Documented first-party account public frontend, no authenticated action	12389,28840	43831829568	200	
+account.prod7.veeroute.cloud	include	https://account.prod7.veeroute.cloud/	https://docs.prod7.veeroute.cloud/	Documented first-party account public frontend, no authenticated action	28840,42610	43832471655	200	
+altlog.online	include	https://altlog.online/login	https://altlog.ru/altlog.online	Official public login, not authentication	28840,34974	43832280952	200	
+analytics.veeroute.cloud	hold	https://analytics.veeroute.cloud/script.js	https://veeroute.cloud/	Analytics is not a user-facing routing dependency				
+api.edge7.veeroute.cloud	include	https://api.edge7.veeroute.cloud/account/file/insomnia_account_en.json	https://docs.edge7.veeroute.cloud/en/	Public documented integration export only, no API actions	12389,28840	43831829568	200	
+api.prod7.veeroute.cloud	include	https://api.prod7.veeroute.cloud/account/file/insomnia_account_ru.json	https://docs.prod7.veeroute.cloud/	Public documented integration export only, no API actions	28840,42610	43832471655	200	
+cargo.run	include	https://cargo.run/gruz	https://cargo.run/privacy	First-party published alias, same two ASNs confirmed 301 and completed 200 on the exact destination	28840,42610	43831983979,43832640836	301	https://cargorun.ru/gruz
+cargorun-ru.github.io	hold	https://cargorun-ru.github.io/cargo.run-api-docs/	https://cargo.run/sections/loghistika	Already matched by GITHUB domain:github.io, intentionally not duplicated into RU	28840	43831983979	200	
+docs.edge7.veeroute.cloud	include	https://docs.edge7.veeroute.cloud/en/	https://veeroute.com/	English official documentation	12389,28840	43831829568	200	
+docs.prod7.veeroute.cloud	include	https://docs.prod7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Russian official documentation and published production roles	12389,28840	43831829568,43832471655	200	
+drozd.red	hold	https://drozd.red/	https://simpletms.ru/moduli-simple-tms/elektronnye-perevozochnye-dokumenty	Third-party web marketing vendor, not an operational SimpleTMS dependency	12389,28840	43831829568	200	
+isales.trcont.com	hold	https://isales.trcont.com/	https://isales.trcont.ru/help	Old alias still held; current documented help failed strict TLS from two exits				
+monitor.edge7.veeroute.cloud	include	https://monitor.edge7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Documented first-party monitor public frontend, no authenticated action	12389,28840	43831829568	200	
+monitor.prod7.veeroute.cloud	include	https://monitor.prod7.veeroute.cloud/	https://docs.prod7.veeroute.cloud/	Documented first-party monitor public frontend, no authenticated action	28840,42610	43832471655	200	
+partner.edge7.veeroute.cloud	include	https://partner.edge7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Documented first-party partner public frontend, no authenticated action	12389,28840	43831829568	200	
+partner.prod7.veeroute.cloud	include	https://partner.prod7.veeroute.cloud/	https://docs.prod7.veeroute.cloud/	Documented first-party partner public frontend, no authenticated action	28840,42610	43832471655	200	
+registry.edge7.veeroute.cloud	include	https://registry.edge7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Documented first-party registry public frontend, no authenticated action	12389,28840	43831829568	200	
+registry.prod7.veeroute.cloud	hold	https://registry.prod7.veeroute.cloud/	https://docs.prod7.veeroute.cloud/	First full TLS run from AS28840 only; separate short followup before a change	28840	43832471655	200	
+routes.cargo.run	include	https://routes.cargo.run/	https://cargorun.ru/	Published routing frontend, confirmed completed GET and first-party CSS in two Russian ASNs	28840,34974	43832640836	200	
+studio.edge7.veeroute.cloud	include	https://studio.edge7.veeroute.cloud/	https://docs.edge7.veeroute.cloud/en/	Documented first-party studio public frontend, no authenticated action	12389,28840	43831829568	200	
+studio.prod7.veeroute.cloud	include	https://studio.prod7.veeroute.cloud/	https://docs.prod7.veeroute.cloud/	Documented first-party studio public frontend, no authenticated action	28840,42610	43832471655	200	
+svetofore.com	include	https://svetofore.com/privacy-page?tab=agreement	https://svetofore.com/privacy-page?tab=agreement	Official agreement names .com and .ru, separate registration page also confirmed	12389,28840	43831829568	200	
+veeroute.cloud	include	https://veeroute.cloud/	https://veeroute.ru/	Official Russian site redirects here in both networks	12389,28840	43831829568	200	
+veeroute.com	hold	https://veeroute.com/	https://docs.edge7.veeroute.cloud/en/	Dedicated English marketing hostname observed in AS24940; incomplete transfer in repeat paths, no routing change	28840	43831829568,43832280952	200	
