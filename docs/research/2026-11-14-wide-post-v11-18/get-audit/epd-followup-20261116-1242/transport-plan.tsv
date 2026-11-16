@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	confluence.trucker.group	confluence.trucker.group	https://confluence.trucker.group/manual/7-6-otsleyoivanie-raboty-po-zakazu-2519706250.html	Отслеживание	https://www.trucker.ru/support
+corporate	comparison	landing.trucker.group	landing.trucker.group	https://landing.trucker.group/		https://www.trucker.ru/
+corporate	control	app.tms.ru	app.tms.ru	https://app.tms.ru/sign_in		https://www.trucker.ru/
+corporate	control	status.tms.ru	status.tms.ru	https://status.tms.ru/		https://www.trucker.ru/support
+corporate	candidate	help.monopoly.online	help.monopoly.online	https://help.monopoly.online/		https://monopoly.ru/
+corporate	control	monopoly.online	monopoly.online	https://monopoly.online/		https://monopoly.ru/
+corporate	control	perevozki-mobile.esphere.ru	perevozki-mobile.esphere.ru	https://perevozki-mobile.esphere.ru/		https://doc.esphere.ru/tredo/43.html
+corporate	control	ati.su	ati.su	https://ati.su/landings/d-welcome/	АТИ-Доки	https://ati-doki.ru/
+corporate	control	online.stek-trust.ru	online.stek-trust.ru	https://online.stek-trust.ru/		https://stek-trust.ru/
