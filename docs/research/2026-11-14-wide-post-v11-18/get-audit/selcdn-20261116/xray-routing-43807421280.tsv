@@ -1,0 +1,9 @@
+case	domain_strategy	first_domain_rule	socks_target	sniff_tls_route_only	sni	selected_outbound	dns_queries	pass
+alias-a	AsIs	domain:ru	cdn.selectel.ru	false		domain		true
+alias-b	IPIfNonMatch	domain:ru	cdn.selectel.ru	false		domain		true
+alias-c	IPIfNonMatch	domain:selcdn.net	cdn.selectel.ru	false		ip	cdn.selectel.ru:1	true
+alias-d	IPOnDemand	domain:selcdn.net	cdn.selectel.ru	false		ip	cdn.selectel.ru:1	true
+technical	AsIs	domain:selcdn.net	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	false		domain		true
+ip-no-sniff	AsIs	domain:ru	192.0.2.42	false		ip		true
+ip-sni-alias	AsIs	domain:ru	192.0.2.42	true	cdn.selectel.ru	domain		true
+ip-sni-technical	AsIs	domain:ru	192.0.2.42	true	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	ip		true
