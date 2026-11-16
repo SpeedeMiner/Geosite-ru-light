@@ -1,0 +1,93 @@
+{
+  "published_base": "v11.20",
+  "measurements": 95,
+  "distinct_urls": 43,
+  "strict_http": 88,
+  "status_counts": {
+    "200": 77,
+    "206": 3,
+    "301": 6,
+    "404": 2
+  },
+  "completed_http_by_asn": {
+    "12389": 40,
+    "43761": 6,
+    "52043": 42
+  },
+  "transport_unproven": 7,
+  "globalping_requests": 0,
+  "runs": [
+    {
+      "plan": "services-plan.tsv",
+      "run_id": 43809865357,
+      "head": "5e9e84fc34ceab7bafc4f97afb49b2c2001c5e9f",
+      "artifact_id": 14199808186,
+      "zip_sha256": "ea2a748b2c45a10b58cb0bcb12d3f0dd5c7d535392142ca3b0c765b479a8c545",
+      "attempts": 20,
+      "strict_http": 19
+    },
+    {
+      "plan": "video-cloud-plan.tsv",
+      "run_id": 43810019298,
+      "head": "47964bd6081daff11fa5ce722200ba80a75cafca",
+      "artifact_id": 14200087036,
+      "zip_sha256": "480ec85522686dd62bd4a29c62159e9e7eb8ceb1c2dd72b0174e51c200aac9d7",
+      "attempts": 18,
+      "strict_http": 18
+    },
+    {
+      "plan": "trassir-plan.tsv",
+      "run_id": 43810171834,
+      "head": "c38c7d892ba8057c2a9599e58d4d3c9167f51b81",
+      "artifact_id": 14200067952,
+      "zip_sha256": "963d6b819686de783e3ee1c7a08e5fd4d1abc86fe42efc9f928fd5376d2929c0",
+      "attempts": 14,
+      "strict_http": 14
+    },
+    {
+      "plan": "followup-plan.tsv",
+      "run_id": 43810427670,
+      "head": "98f9551c88f2d2635734eb9dc9832d00accc87ec",
+      "artifact_id": 14200610793,
+      "zip_sha256": "fb5440050002d417c71925391a22d1593f8759325e8f064b8fecbe854a27ee7b",
+      "attempts": 10,
+      "strict_http": 8
+    },
+    {
+      "plan": "dependencies-plan.tsv",
+      "run_id": 43810542095,
+      "head": "70f1b0d5a571a6ec295b1c5da2de2cb095e93561",
+      "artifact_id": 14200282014,
+      "zip_sha256": "c3b8de5d005d761781bf6bf5c417b2c48ecd1da8ef48df13ccc3afb4a5a30f0e",
+      "attempts": 14,
+      "strict_http": 14
+    },
+    {
+      "plan": "distribution-plan.tsv",
+      "run_id": 43810699705,
+      "head": "32a40f1fd73468b37d9ea9c59fb899a3c7108f83",
+      "artifact_id": 14200810204,
+      "zip_sha256": "3ed4ce2c364eb24df8068bb650b4aa7cf8e7cae893ab00fa8ea5a4ccd3990921",
+      "attempts": 8,
+      "strict_http": 8
+    },
+    {
+      "plan": "official-downloads-plan.tsv",
+      "run_id": 43810901374,
+      "head": "77743672a8ad59532a04396501608d7c481b35e0",
+      "artifact_id": 14200427474,
+      "zip_sha256": "08d00fc6da46871d216e829173b6614224a22a616c2ddd517373c6e764d0a037",
+      "attempts": 8,
+      "strict_http": 7
+    },
+    {
+      "plan": "legacy-docs-plan.tsv",
+      "run_id": 43811286774,
+      "head": "7f3773a3b826521a4c0a0f5e61f424e695b2cc0e",
+      "artifact_id": 14200836203,
+      "zip_sha256": "a1cef9bccfded7677576a770f8d541f1d2944b02a8aee1b329f13db8690455ce",
+      "attempts": 3,
+      "strict_http": 0
+    }
+  ]
+}
