@@ -1,0 +1,3 @@
+full:console.k2.cloud
+full:s3.k2.cloud
+full:site-api.k2.cloud

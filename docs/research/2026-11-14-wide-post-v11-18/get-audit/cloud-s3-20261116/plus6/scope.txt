@@ -1,0 +1,6 @@
+full:console.k2.cloud
+full:docs.k2.cloud
+full:k2.cloud
+full:promo.k2.cloud
+full:s3.k2.cloud
+full:site-api.k2.cloud
