@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-payment-deps-sign-me-20261116
+  group: geosite-payment-deps-sign-controls-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [sign-me]
+        batch: [sign-controls]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
