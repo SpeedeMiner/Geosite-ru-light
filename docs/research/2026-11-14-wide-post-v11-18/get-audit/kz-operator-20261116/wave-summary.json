@@ -1,0 +1,79 @@
+{
+  "vpn": [
+    {
+      "group": "canonical",
+      "run": 43841391404,
+      "artifact": 14212948376,
+      "sha256": "9b5eee697a21944916f4b7fb2cbd6ba3bfb8f658188c9e40396c65e61d9c4078",
+      "attempted_urls": 10,
+      "measurements": 20,
+      "http_responses": 19,
+      "curl0_tls0": 17,
+      "asns": [
+        34974,
+        42610
+      ]
+    },
+    {
+      "group": "dependencies",
+      "run": 43841994937,
+      "artifact": 14213332150,
+      "sha256": "870f40accbfc61fb43cf5b1d918ec25c3f88072dc1e5222cd91e4037e7bce4ee",
+      "attempted_urls": 9,
+      "measurements": 18,
+      "http_responses": 12,
+      "curl0_tls0": 12,
+      "asns": [
+        8402,
+        42610
+      ]
+    },
+    {
+      "group": "supl",
+      "run": 43842343546,
+      "artifact": 14213118101,
+      "sha256": "578ec345f5dfcb7cc70be44436058adcf91bad719e585535069c88dfe95acc19",
+      "attempted_urls": 5,
+      "measurements": 10,
+      "http_responses": 5,
+      "curl0_tls0": 5,
+      "asns": [
+        8402,
+        42610
+      ]
+    },
+    {
+      "group": "regional",
+      "run": 43842940883,
+      "artifact": 14212539961,
+      "sha256": "1eb96f75b3049a03eed5bc66c948ebeebcded860855e62611ae5dd842c845b3a",
+      "attempted_urls": 6,
+      "measurements": 12,
+      "http_responses": 12,
+      "curl0_tls0": 12,
+      "asns": [
+        12389,
+        28840
+      ]
+    },
+    {
+      "group": "supl-repeat",
+      "run": 43843059718,
+      "artifact": 14214131530,
+      "sha256": "0ff0f1df96be93f3caaabfd4a3387e828210ec9fe6c856934e67e239fa20f1d9",
+      "attempted_urls": 5,
+      "measurements": 10,
+      "http_responses": 10,
+      "curl0_tls0": 10,
+      "asns": [
+        12389,
+        28840
+      ]
+    }
+  ],
+  "globalping": {
+    "measurements": 32,
+    "observations": 96,
+    "unexpected_probes": 20
+  }
+}
