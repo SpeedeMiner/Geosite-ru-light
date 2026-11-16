@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ntvplus.tv	ntvplus.tv	https://ntvplus.tv/	НТВ-ПЛЮС|телеканалы	https://ntvplus.ru/
+corporate	candidate	limehd.tv	limehd.tv	https://limehd.tv/	Лайм|телеканал	https://limehd.tv/
+corporate	candidate	zeroplus.tv	zeroplus.tv	https://zeroplus.tv/	Ноль Плюс|Кинотеатр	https://zeroplus.tv/
+corporate	candidate	piligrim.fund	piligrim.fund	https://piligrim.fund/about	Пилигрим|кино	https://piligrim.fund/about
+corporate	candidate	nonfiction.film	nonfiction.film	https://nonfiction.film/about/	Платформа|документальн	https://nonfiction.film/about/
+corporate	candidate	www.nonfiction.film	www.nonfiction.film	https://www.nonfiction.film/faq/		https://nonfiction.film/about/
