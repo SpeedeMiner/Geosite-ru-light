@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	cargo.run	cargo.run	https://cargo.run/gruz		https://cargorun.ru/
+corporate	candidate	cargo.run	cargo.run	https://cargo.run/sections/loghistika		https://cargorun.ru/knowledge-base
+corporate	candidate	cargo.run	cargo.run	https://cargo.run/		https://cargorun.ru/
+corporate	candidate	routes.cargo.run	routes.cargo.run	https://routes.cargo.run/		https://cargorun.ru/
+corporate	candidate	cargorun-ru.github.io	cargorun-ru.github.io	https://cargorun-ru.github.io/cargo.run-api-docs/		https://cargo.run/sections/loghistika
+corporate	control	cargorun.ru	cargorun.ru	https://cargorun.ru/gruz		https://cargorun.ru/
+corporate	control	app.cargorun.ru	app.cargorun.ru	https://app.cargorun.ru/		https://cargorun.ru/
+corporate	control	loads.cargorun.ru	loads.cargorun.ru	https://loads.cargorun.ru/		https://cargorun.ru/
