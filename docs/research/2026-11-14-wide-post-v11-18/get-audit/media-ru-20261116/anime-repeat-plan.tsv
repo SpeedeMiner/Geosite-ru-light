@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	deep-ent.ru	deep-ent.ru	https://deep-ent.ru/terms	Пользовательское соглашение|DEEP	https://corp.deep-ent.ru/ru/deep/
+corporate	control	wink.ru	wink.ru	https://wink.ru/collections/anime	Аниме|Wink	https://wink.ru/collections/anime
+corporate	control	www.ivi.ru	www.ivi.ru	https://www.ivi.ru/animation/anime	Аниме|Иви	https://www.ivi.ru/
+corporate	control	2x2tv.ru	2x2tv.ru	https://2x2tv.ru/series/anime/	Аниме|2х2	https://2x2tv.ru/series/anime/
+corporate	control	fantv.ru	fantv.ru	https://fantv.ru/	FAN	https://fantv.ru/
