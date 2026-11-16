@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	livedigital.space	livedigital.space	https://livedigital.space/	livedigital	https://livedigital.space/
+corporate	candidate	edu.livedigital.space	edu.livedigital.space	https://edu.livedigital.space/		https://livedigital.space/
+corporate	candidate	docs.livedigital.space	docs.livedigital.space	https://docs.livedigital.space/docs/	livedigital	https://livedigital.space/
+corporate	candidate	help.livedigital.space	help.livedigital.space	https://help.livedigital.space/		https://livedigital.space/
+corporate	candidate	livedigital.space	livedigital.space	https://livedigital.space/apidocs		https://livedigital.space/
+corporate	candidate	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	https://900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net/		https://edu.livedigital.space/
+corporate	candidate	www.novochag.ru	www.novochag.ru	https://www.novochag.ru/		https://www.novochag.ru/
