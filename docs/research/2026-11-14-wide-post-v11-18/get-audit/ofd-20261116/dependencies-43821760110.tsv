@@ -1,0 +1,17 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+15774	15774	15774	2	crm.handswork.pro	https://crm.handswork.pro/login	200	0	0	text/html; charset=UTF-8	1446	90e928f08da796fd44ea9cb47fadcd6a369795489a93df795013fd481432eb8b	51.250.87.143	vpn_body_unproven		
+15774	15774	15774	2	faq.handswork.pro	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	503	0	0	text/html; charset=UTF-8	2500	eb86ae9c3a2b6f0d0e0d3578e708c1993f0388ff606b07b925c1cc80a0c9fb20	195.161.69.18	vpn_http_other	Maintenance	
+15774	15774	15774	2	faq.handswork.pro	https://faq.handswork.pro/	503	0	0	text/html; charset=UTF-8	2500	eb86ae9c3a2b6f0d0e0d3578e708c1993f0388ff606b07b925c1cc80a0c9fb20	195.161.69.18	vpn_http_other	Maintenance	
+15774	15774	15774	2	ru-sso.ediweb.com	https://ru-sso.ediweb.com/	200	0	0	text/html	2811	0caed940149efba7346242a89f473e0d9ed1b4488443382883fe9ab875db6fa9	185.204.20.86	vpn_body_unproven	SSO - Эдивеб	
+15774	15774	15774	2	ediweb.com	https://ediweb.com/ru-ru/platforms	307	0	0	text/html; charset=utf-8	0		185.204.20.86	vpn_redirect		https://ru-sso.ediweb.com/
+15774	15774	15774	2	dropcat.ediweb.com	https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css	206	0	0	text/css	4096	a72e995d4b9837f8ee349c1774035fe0d5b1158b7f228997b9cae79069a0123b	185.204.20.86	vpn_http_other		
+15774	15774	15774	2	leradata.pro	https://leradata.pro/css/styles.css	200	0	0	text/css	10000	23cecabb15899eb75b34dea2a95a770d9a98e76bf8e64c2131ae5797a1da76fc	91.218.230.70	vpn_body_unproven		
+15774	15774	15774	2	handswork.pro	https://handswork.pro/assets/style-BD5tlGNt.css	206	0	0	text/css	4096	0e8c6da7113c659ba23ccf6d64b01e4ae47e74e79c3b8f5594a94680c0aa3568	51.250.87.143	vpn_http_other		
+52043	52043	52043	2	crm.handswork.pro	https://crm.handswork.pro/login	200	0	0	text/html; charset=UTF-8	1446	84643f6d8d553523576a12a100a5e6a57a6eee7320e365358f6afc3322e44b38	51.250.87.143	vpn_body_unproven		
+52043	52043	52043	2	faq.handswork.pro	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	503	0	0	text/html; charset=UTF-8	2500	eb86ae9c3a2b6f0d0e0d3578e708c1993f0388ff606b07b925c1cc80a0c9fb20	195.161.69.18	vpn_http_other	Maintenance	
+52043	52043	52043	2	faq.handswork.pro	https://faq.handswork.pro/	503	0	0	text/html; charset=UTF-8	2500	eb86ae9c3a2b6f0d0e0d3578e708c1993f0388ff606b07b925c1cc80a0c9fb20	195.161.69.18	vpn_http_other	Maintenance	
+52043	52043	52043	2	ru-sso.ediweb.com	https://ru-sso.ediweb.com/	200	0	0	text/html	2811	0caed940149efba7346242a89f473e0d9ed1b4488443382883fe9ab875db6fa9	185.204.20.86	vpn_body_unproven	SSO - Эдивеб	
+52043	52043	52043	2	ediweb.com	https://ediweb.com/ru-ru/platforms	307	0	0	text/html; charset=utf-8	0		185.204.20.86	vpn_redirect		https://ru-sso.ediweb.com/
+52043	52043	52043	2	dropcat.ediweb.com	https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css	206	0	0	text/css	4096	a72e995d4b9837f8ee349c1774035fe0d5b1158b7f228997b9cae79069a0123b	185.204.20.86	vpn_http_other		
+52043	52043	52043	2	leradata.pro	https://leradata.pro/css/styles.css	200	0	0	text/css	10000	23cecabb15899eb75b34dea2a95a770d9a98e76bf8e64c2131ae5797a1da76fc	91.218.230.70	vpn_body_unproven		
+52043	52043	52043	2	handswork.pro	https://handswork.pro/assets/style-BD5tlGNt.css	206	0	0	text/css	4096	0e8c6da7113c659ba23ccf6d64b01e4ae47e74e79c3b8f5594a94680c0aa3568	51.250.87.143	vpn_http_other		
