@@ -1,89 +1,119 @@
-name: GeoSite LiveDigital five-name SRS preview
+name: GeoSite public video services through VPNObratno
 
 on:
   push:
-    branches: [research/geosite-ru-wide-20261114-1810]
-    paths: [.github/workflows/geosite-vpnobratno-pilot.yml]
+    branches:
+      - research/geosite-ru-wide-20261114-1810
+    paths:
+      - .github/workflows/geosite-vpnobratno-pilot.yml
 
 permissions:
   contents: read
 
+concurrency:
+  group: geosite-vpnobratno-cdn-video-20261116
+  cancel-in-progress: false
+
 jobs:
-  preview:
-    name: Verify exact-only candidate and round-trip all SRS
+  pilot:
+    name: Verify public sites (${{ matrix.batch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [services]
     runs-on: ubuntu-24.04
-    timeout-minutes: 4
+    timeout-minutes: 15
+    env:
+      AUDIT: docs/research/2026-11-14-wide-post-v11-18/get-audit
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Checkout the GeoSite research commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Checkout the unchanged reviewed GeoIP transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
-          repository: SpeedeMiner/Geosite-ru-server
-          ref: e31b5c30d26299315163050a185dac0f7648e466
-          path: .server-tools
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
           persist-credentials: false
-      - name: Build and compare baseline and preview assets
+
+      - name: Checkout the fixed GeoIP inventory input
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 7eef1efcaafbdbe259f3aa4e56a07c38979afbfb
+          path: .vpn-pilot/geoip-release
+          persist-credentials: false
+
+      - name: Install OpenVPN and check runner capabilities
+        timeout-minutes: 6
         run: |
           set -euo pipefail
-          work="$RUNNER_TEMP/geosite-cdn"
-          mkdir -p "$work"
-          curl -fsSL --max-time 30 --proto '=https' --proto-redir '=https' \
-            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_RU.dat \
-            -o "$work/base.dat"
-          printf '493de38dcb8de4076e8b3659271e92992fc30d3f3b41a4251755af9000cfecf9  %s\n' "$work/base.dat" | sha256sum -c
-          python3 - "$work" <<'PY'
-          import sys
+          test -c /dev/net/tun
+          if ! command -v openvpn >/dev/null || ! command -v iptables >/dev/null; then
+            sudo timeout --signal=TERM --kill-after=2s 45s python3 -B - <<'PYTHON'
           from pathlib import Path
-          sys.path.insert(0, str(Path('.server-tools/tools').resolve()))
-          from project_geosite import FULL, digest, encode, fields, message, read_ru
-          root = Path(sys.argv[1])
-          source = (root / 'base.dat').read_bytes()
-          _, rules = read_ru(source)
-          hosts = Path('docs/research/2026-11-14-wide-post-v11-18/get-audit/selcdn-20261116/candidate-plus5.txt').read_text().splitlines()
-          assert len(set(hosts)) == len(hosts) == 5 and all(x.startswith('full:') for x in hosts)
-          for entry in sorted(hosts):
-              host = entry.split(':', 1)[1]
-              assert (FULL, host) not in rules
-              rules[FULL, host] = b'\x08\x03' + message(2, host.encode('ascii'))
-          ru = next(iter(fields(encode(rules))))[1]
-          modified = b''.join(message(1, ru if dict(fields(site))[1] == b'RU' else site) for _, site in fields(source))
-          assert digest(modified) == '31d0ba8a9c725e88e57c40b3f83387c600fe4372e3270d5d850a6864b4d48a6b'
-          (root / 'preview.dat').write_bytes(modified)
-          PY
-          curl -fsSL --max-time 40 --proto '=https' --proto-redir '=https' \
-            https://github.com/SagerNet/sing-box/releases/download/v1.13.12/sing-box-1.13.12-linux-amd64.tar.gz \
-            -o "$work/sing-box.tar.gz"
-          printf '1540533adb3df24f5ad5f14b5c7ca3dbc2401b10a1c1eb278fcadcada47ec6c4  %s\n' "$work/sing-box.tar.gz" | sha256sum -c
-          tar -xOzf "$work/sing-box.tar.gz" sing-box-1.13.12-linux-amd64/sing-box > "$work/sing-box"
-          chmod 0700 "$work/sing-box"
-          for type in base preview; do
-            python3 tools/build_geosite_srs.py build --dat "$work/$type.dat" --output-dir "$work/$type" --sing-box "$work/sing-box"
-          done
-          curl -fsSL --max-time 20 --proto '=https' --proto-redir '=https' \
-            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_srs.sha256sum \
-            -o "$work/published.sha256sum"
-          (cd "$work/base" && sha256sum --check --strict "$work/published.sha256sum")
-          python3 - "$work" > srs-comparison.tsv <<'PY'
-          from pathlib import Path
-          import hashlib
           import sys
-          from struct import unpack
-          root = Path(sys.argv[1])
-          a = {p.name: p for p in (root / 'base').glob('*.srs')}
-          b = {p.name: p for p in (root / 'preview').glob('*.srs')}
-          assert a.keys() == b.keys() and len(a) == 18
-          print('name\tbaseline_sha256\tpreview_sha256\tchanges')
-          for name in sorted(a):
-              old = hashlib.sha256(a[name].read_bytes()).hexdigest()
-              new = hashlib.sha256(b[name].read_bytes()).hexdigest()
-              assert (old != new) == (name == 'geosite_RU.srs'), name
-              print(name, old, new, 'changed' if old != new else 'unchanged', sep='\t')
-          PY
-          cat srs-comparison.tsv
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+          sys.path.insert(0, ".vpn-pilot/upstream/.github/reachability")
+          from vpn_gate import install_ubuntu_apt_host_overrides
+          install_ubuntu_apt_host_overrides(Path("/etc/hosts"))
+          PYTHON
+            sudo timeout --kill-after=5s 120s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 -o APT::Update::Error-Mode=any update
+            sudo timeout --kill-after=5s 90s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 install -y --no-install-recommends openvpn iptables
+          fi
+          command -v ip openvpn iptables ip6tables curl
+          bash -n .vpn-pilot/upstream/.github/reachability/vpn_netns_exec.sh
+          python3 -m unittest discover -s "$AUDIT" -p test_vpnobratno_get.py -q
+
+      - name: Set up the upstream inventory exporter
+        uses: actions/setup-go@0778a10ce47b5d450cf60fb94fafad4330008a35
         with:
-          name: geosite-selcdn-srs-preview
-          path: srs-comparison.tsv
-          if-no-files-found: error
+          go-version: "1.26.10"
+          cache: false
+
+      - name: Export a checksum-verified inventory for annotations
+        timeout-minutes: 3
+        run: |
+          set -euo pipefail
+          (cd .vpn-pilot/geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
+          (
+            cd .vpn-pilot/upstream/.github/reachability/inventory
+            GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/geosite-vpn-inventory" .
+          )
+          "$RUNNER_TEMP/geosite-vpn-inventory" \
+            .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
+
+      - name: Measure documented public service pages
+        timeout-minutes: 8
+        run: |
+          set -euo pipefail
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- \
+              timeout --signal=TERM --kill-after=6s 7m \
+              python3 -B "$AUDIT/vpnobratno_get.py" \
+                "$AUDIT/cdn-video-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
+
+      - name: Upload observation and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: geosite-cdn-video-${{ matrix.batch }}-${{ github.run_attempt }}
+          path: |
+            .vpn-pilot/report/geosite-vpnobratno-summary.json
+            .vpn-pilot/report/vpnobratno-observations.jsonl
+            .vpn-pilot/report/vpn_gate_summary.json
+            .vpn-pilot/report/vpn_gate_providers.tsv
+            .vpn-pilot/report/vpn_gate_vpnobratto_progress.json
+          include-hidden-files: true
+          if-no-files-found: warn
           retention-days: 7
