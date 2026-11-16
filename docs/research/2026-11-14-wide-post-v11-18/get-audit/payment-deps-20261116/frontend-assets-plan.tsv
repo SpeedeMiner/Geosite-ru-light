@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	static.konsol.pro	static.konsol.pro	https://static.konsol.pro/static/js/main-03f87c13.js		https://app.konsol.pro/login
+corporate	candidate	static.konsol.pro	static.konsol.pro	https://static.konsol.pro/static/css/main-dce09c70.css		https://app.konsol.pro/login
+corporate	candidate	cdn.antilopay.com	cdn.antilopay.com	https://cdn.antilopay.com/index.css		https://lk.antilopay.com/
+corporate	candidate	cdn.antilopay.com	cdn.antilopay.com	https://cdn.antilopay.com/index.js		https://lk.antilopay.com/
+corporate	control	frontend-next.nanimatel.com	frontend-next.nanimatel.com	https://frontend-next.nanimatel.com/static/css/main.7a6855db.css		https://frontend-next.nanimatel.com/find-job
+corporate	control	app.simples.work	app.simples.work	https://app.simples.work/app/assets/index-IuDv2h5E.css		https://app.simples.work/app/auth/sign-in
+corporate	control	lite.payture.com	lite.payture.com	https://lite.payture.com/static/css/main.b2a1eca1.css		https://lite.payture.com/payture-lite
+corporate	control	legal.handswork.pro	legal.handswork.pro	https://legal.handswork.pro/assets/index-Ccad2ajH.css		https://legal.handswork.pro/privacy-policy
