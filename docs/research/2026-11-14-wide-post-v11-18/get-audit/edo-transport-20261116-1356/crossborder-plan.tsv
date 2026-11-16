@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	idocs.me	idocs.me	https://idocs.me/		https://kontur.ru/diadoc/mtedo/oferta_tedo
+corporate	control	idocs.kz	idocs.kz	https://idocs.kz/instructions/login		https://idocs.kz/
+corporate	control	edi.metaera.kz	edi.metaera.kz	https://edi.metaera.kz/user/help		https://metaera.kz/help/edi/
+corporate	control	edn.by	edn.by	https://edn.by/		https://kontur.ru/diadoc/mtedo/oferta_tedo
+corporate	control	ctt.by	ctt.by	https://ctt.by/services/		https://kontur.ru/diadoc/mtedo/oferta_tedo
+corporate	control	edi.bidmart.by	edi.bidmart.by	https://edi.bidmart.by/		https://kontur.ru/diadoc/mtedo/oferta_tedo
+corporate	comparison	docs.veeroute.com	docs.veeroute.com	https://docs.veeroute.com/		https://veeroute.com/how-it-works/
