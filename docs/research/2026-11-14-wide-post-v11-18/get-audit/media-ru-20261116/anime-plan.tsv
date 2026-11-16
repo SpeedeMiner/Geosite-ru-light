@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	deep-ent.ru	deep-ent.ru	https://deep-ent.ru/	Монолог фармацевта|DEEP	https://deep-ent.ru/
+corporate	control	wink.ru	wink.ru	https://wink.ru/collections/anime	Аниме|Wink	https://wink.ru/collections/anime
+corporate	control	www.ivi.ru	www.ivi.ru	https://www.ivi.ru/animation/anime	Аниме|Иви	https://www.ivi.ru/
+corporate	control	okko.tv	okko.tv	https://okko.tv/	Okko	https://okko.tv/
