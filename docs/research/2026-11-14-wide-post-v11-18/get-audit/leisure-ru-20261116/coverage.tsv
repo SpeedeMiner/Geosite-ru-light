@@ -1,0 +1,232 @@
+segment	service	host	url	source	role	light_ru	server_ru	plus149	light_block	coverage
+tickets	Яндекс Афиша	afisha.yandex.ru	https://afisha.yandex.ru/	https://kremlinpalace.org/ticket-operators	Витрина	domain:ru	domain:ru	-	-	both
+tickets	Яндекс Билеты	widget.afisha.yandex.ru	https://widget.afisha.yandex.ru/	https://yandex.ru/support/afisha-partners/ru/sell-my-site/my-tickets/post	Отдельная инфраструктура виджетов, точный URL ещё не подтверждён документацией	domain:ru	domain:ru	-	-	both
+tickets	Афиша	www.afisha.ru	https://www.afisha.ru/	https://kremlinpalace.org/ticket-operators	Витрина	domain:ru	domain:ru	-	-	both
+tickets	KASSIR	kassir.ru	https://kassir.ru/	https://kremlinpalace.org/ticket-operators	Федеральный оператор	domain:ru	domain:ru	-	-	both
+tickets	KASSIR	msk.kassir.ru	https://msk.kassir.ru/	https://kremlinpalace.org/ticket-operators	Москва	domain:ru	domain:ru	-	-	both
+tickets	KASSIR	kzn.kassir.ru	https://kzn.kassir.ru/teatry/gbu-kazanskiy-teatr-yunogo-zritelya	https://kazan-tuz.ru/wp-content/uploads/2025/10/pravila-bezopasnosti-pri-pokupke-biletov.pdf	Региональная витрина	domain:ru	domain:ru	-	-	both
+tickets	Ticketland	www.ticketland.ru	https://www.ticketland.ru/	https://kremlinpalace.org/ticket-operators	Федеральная касса	domain:ru	domain:ru	-	-	both
+tickets	Ticketland	kzn.ticketland.ru	https://kzn.ticketland.ru/teatry/kazanskiy-tyuz/repertoire/	https://kazan-tuz.ru/wp-content/uploads/2025/10/pravila-bezopasnosti-pri-pokupke-biletov.pdf	Региональная витрина	domain:ru	domain:ru	-	-	both
+tickets	МТС Live	live.mts.ru	https://live.mts.ru/	https://live.mts.ru/	Витрина концертов и мероприятий	domain:ru	domain:ru	-	-	both
+tickets	Concert.ru	concert.ru	https://concert.ru/	https://kremlinpalace.org/ticket-operators	Официальный партнёр площадки	domain:ru	domain:ru	-	-	both
+tickets	IceTickets	icetickets.ru	https://icetickets.ru/	https://kremlinpalace.org/ticket-operators	Официальный партнёр площадки	domain:ru	domain:ru	-	-	both
+tickets	RedKassa	redkassa.ru	https://redkassa.ru/	https://kremlinpalace.org/ticket-operators	Официальный партнёр площадки	domain:ru	domain:ru	-	-	both
+tickets	Timepad	timepad.ru	https://timepad.ru/about/product/	https://timepad.ru/about/product/	Сервис организаторов	domain:ru	domain:ru	-	-	both
+tickets	Timepad	afisha.timepad.ru	https://afisha.timepad.ru/	https://timepad.ru/	Афиша	domain:ru	domain:ru	-	-	both
+tickets	Timepad	dev.timepad.ru	https://dev.timepad.ru/widget/	https://dev.timepad.ru/widget/	Документация виджета	domain:ru	domain:ru	-	-	both
+tickets	Radario	business.radario.ru	https://business.radario.ru/widget	https://business.radario.ru/widget	Справка организатора	domain:ru	domain:ru	-	-	both
+tickets	Radario	radario.ru	https://radario.ru/frontend/src/api/openapi/openapi.js	https://business.radario.ru/widget	Штатный JS, не запускался	domain:ru	domain:ru	-	-	both
+tickets	Ticketscloud	ticketscloud.com	https://ticketscloud.com/products/widget	https://ticketscloud.com/documents	Виджет и официальный оператор	full:ticketscloud.com	full:ticketscloud.com	-	-	both
+tickets	Ticketscloud EN	en.ticketscloud.com	https://en.ticketscloud.com/products/widget	https://en.ticketscloud.com/documents.html	Англоязычная витрина, не автоматический допуск	-	-	-	-	none
+tickets	Ticketscloud docs	ticketscloud.readthedocs.io	https://ticketscloud.readthedocs.io/ru/stable/	https://github.com/ticketscloud	Документация на выделенном внешнем проекте	-	-	-	-	none
+tickets	Vibeapp	vibeapp.ru	https://vibeapp.ru/	https://ticketscloud.com/for-viewers	Публичная покупательская витрина	domain:ru	domain:ru	-	-	both
+tickets	Vibeapp	kb.vibeapp.ru	https://kb.vibeapp.ru/	https://kb.vibeapp.ru/	Справочная база	domain:ru	domain:ru	-	-	both
+tickets	Мосбилет	bilet.mos.ru	https://bilet.mos.ru/	https://satire.ru/about/visiting	Муниципальная система	domain:ru	domain:ru	-	-	both
+tickets	Агрегатор tcket	tcket.ru	https://tcket.ru/	https://tcket.ru/	Поиск мероприятий	domain:ru	domain:ru	-	-	both
+tickets	Qtickets	qtickets.ru	https://qtickets.ru/	https://qtickets.ru/	Витрина билетной системы	domain:ru	domain:ru	-	-	both
+tickets	Intickets	intickets.ru	https://intickets.ru/	https://intickets.ru/	Витрина билетной системы	domain:ru	domain:ru	-	-	both
+tickets	TicketSoft	ticketsoft.ru	https://ticketsoft.ru/	https://ticketsoft.ru/	Платформа для касс	domain:ru	domain:ru	-	-	both
+tickets	Kinohod	kinohod.ru	https://kinohod.ru/	https://kinohod.ru/	Билеты в залы, не стриминг	domain:ru	domain:ru	-	-	both
+tickets	Киноафиша	www.kinoafisha.info	https://www.kinoafisha.info/about/	https://www.kinoafisha.info/about/contacts/	Киносеансы и афиша	-	-	-	-	none
+tickets	Кинопоиск	www.kinopoisk.ru	https://www.kinopoisk.ru/afisha/	https://www.kinopoisk.ru/afisha/	Киносеансы, уже изученный FQDN	domain:ru	domain:ru	-	-	both
+tickets	Пономиналу	ponominalu.ru	https://ponominalu.ru/	https://ponominalu.ru/	Исторический бренд, контроль	domain:ru	domain:ru	-	-	both
+culture	Культура.РФ	www.culture.ru	https://www.culture.ru/pushkinskaya-karta	https://www.culture.ru/pushkinskaya-karta	Госпрограмма и афиша	domain:ru	domain:ru	-	-	both
+culture	Артефакт	ar.culture.ru	https://ar.culture.ru/	https://ar.culture.ru/	Интерактивные музейные гиды	domain:ru	domain:ru	-	-	both
+culture	PRO.Культура.РФ	pro.culture.ru	https://pro.culture.ru/	https://pro.culture.ru/	Витрина для организаторов	domain:ru	domain:ru	-	-	both
+culture	Музей Победы	victorymuseum.ru	https://victorymuseum.ru/	https://victorymuseum.ru/	Публичный музей	domain:ru	domain:ru	-	-	both
+culture	Эрмитаж	www.hermitagemuseum.org	https://www.hermitagemuseum.org/	https://www.hermitagemuseum.org/	Музей и виртуальные коллекции	-	-	-	-	none
+culture	Третьяковская галерея	www.tretyakovgallery.ru	https://www.tretyakovgallery.ru/	https://www.tretyakovgallery.ru/	Витрина музея	domain:ru	domain:ru	-	-	both
+culture	Пушкинский музей	pushkinmuseum.art	https://pushkinmuseum.art/	https://pushkinmuseum.art/	Витрина музея	full:pushkinmuseum.art	full:pushkinmuseum.art	-	-	both
+culture	Музей Москвы	mosmuseum.ru	https://mosmuseum.ru/	https://mosmuseum.ru/	Витрина музея	domain:ru	domain:ru	-	-	both
+culture	Русский музей	rusmuseum.ru	https://rusmuseum.ru/	https://rusmuseum.ru/	Витрина музея	domain:ru	domain:ru	-	-	both
+culture	Большой театр	bolshoi.ru	https://bolshoi.ru/	https://bolshoi.ru/	Театр	domain:ru	domain:ru	-	-	both
+culture	Мариинский театр	www.mariinsky.ru	https://www.mariinsky.ru/	https://www.mariinsky.ru/	Театр	domain:ru	domain:ru	-	-	both
+culture	Кремлёвский дворец	kremlinpalace.org	https://kremlinpalace.org/ticket-operators	https://kremlinpalace.org/ticket-operators	Список официальных партнёров	-	-	-	-	none
+culture	ВДНХ	vdnh.ru	https://vdnh.ru/	https://vdnh.ru/	Городское пространство	domain:ru	domain:ru	-	-	both
+culture	Зарядье	www.zaryadyepark.ru	https://www.zaryadyepark.ru/	https://www.zaryadyepark.ru/	Городской парк	domain:ru	domain:ru	-	-	both
+culture	Остров мечты	dreamisland.ru	https://dreamisland.ru/	https://dreamisland.ru/	Парк развлечений	domain:ru	domain:ru	-	-	both
+culture	Сочи Парк	www.sochipark.ru	https://www.sochipark.ru/	https://www.sochipark.ru/	Парк развлечений	domain:ru	domain:ru	-	-	both
+culture	Москвариум	www.moskvarium.ru	https://www.moskvarium.ru/	https://www.moskvarium.ru/	Океанариум	domain:ru	domain:ru	-	-	both
+culture	Национальная электронная библиотека	rusneb.ru	https://rusneb.ru/	https://rusneb.ru/	Публичная библиотека	domain:ru	domain:ru	-	-	both
+outings	Tripster	experience.tripster.ru	https://experience.tripster.ru/about/guarantee/	https://experience.tripster.ru/about/terms/	Бронирование экскурсий	domain:ru	domain:ru	-	-	both
+outings	Tripster	tripster.ru	https://tripster.ru/	https://tripster.ru/	Историческая/основная точка перехода	domain:ru	domain:ru	-	-	both
+outings	Sputnik8	www.sputnik8.com	https://www.sputnik8.com/ru/contacts	https://www.sputnik8.com/ru/pages	Экскурсии и контакты	full:www.sputnik8.com	full:www.sputnik8.com	-	-	both
+outings	Sputnik8	sputnik8.com	https://sputnik8.com/	https://www.sputnik8.com/ru/contacts	Корневой алиас, отдельно проверить	-	-	-	-	none
+outings	Горбилет	gorbilet.ru	https://gorbilet.ru/pages/publichnaya-oferta/	https://gorbilet.ru/pages/politika-obrabotki-personalnyh-dannyh/	Действующая витрина по оферте	domain:ru	domain:ru	-	-	both
+outings	Горбилет	gorbilet.com	https://gorbilet.com/	https://gorbilet.ru/pages/politika-obrabotki-personalnyh-dannyh/	Исторический вход, e-mail не подтверждает веб	-	-	-	-	none
+outings	Клаустрофобия	claustrophobia.com	https://claustrophobia.com/quests/schedule	https://claustrophobia.com/	Расписание квестов	-	-	-	-	none
+outings	Мир квестов	mir-kvestov.ru	https://mir-kvestov.ru/	https://nalchik.mir-kvestov.ru/about	Агрегатор	domain:ru	domain:ru	-	-	both
+outings	Мир квестов	nalchik.mir-kvestov.ru	https://nalchik.mir-kvestov.ru/about	https://nalchik.mir-kvestov.ru/about	Региональный поддомен	domain:ru	domain:ru	-	-	both
+outings	Мир квестов	spb.mir-kvestov.ru	https://spb.mir-kvestov.ru/	https://mir-kvestov.ru/	Региональный поддомен	domain:ru	domain:ru	-	-	both
+outings	Гильдия квестов	questguild.ru	https://questguild.ru/	https://questguild.ru/	Агрегатор квестов	domain:ru	domain:ru	-	-	both
+outings	КудаGo	kudago.com	https://kudago.com/msk/	https://kudago.com/msk/	Городская афиша	domain:kudago.com	domain:kudago.com	-	-	both
+outings	КудаGo	www.kudago.com	https://www.kudago.com/	https://kudago.com/msk/	Неподтверждённый WWW, пассивно	domain:kudago.com	domain:kudago.com	-	-	both
+outings	YouTravel.me	youtravel.me	https://youtravel.me/	https://youtravel.me/	Авторские туры, международный контроль	-	-	-	-	none
+outings	RUSSPASS	russpass.ru	https://russpass.ru/	https://russpass.ru/	Городские маршруты и афиша	domain:ru	domain:ru	-	-	both
+outings	Узнай Москву	um.mos.ru	https://um.mos.ru/	https://um.mos.ru/	Городской гид	domain:ru	domain:ru	-	-	both
+games	VK Play	vkplay.ru	https://vkplay.ru/about/	https://vkplay.ru/about/	Магазин и игровой центр	domain:ru	domain:ru	-	-	both
+games	VK Play	support.vkplay.ru	https://support.vkplay.ru/index.php/vkp_common/faq/4760	https://vkplay.ru/about/	Справка	domain:ru	domain:ru	-	-	both
+games	VK Play Cloud	cloud.vkplay.ru	https://cloud.vkplay.ru/	https://vkplay.ru/about/	Облачный гейминг	domain:ru	domain:ru	-	-	both
+games	VK Play Турниры	pvp.vkplay.ru	https://pvp.vkplay.ru/promo/port	https://resf.ru/about/faq/	Турнирный модуль	domain:ru	domain:ru	-	-	both
+games	VK Play Live	live.vkplay.ru	https://live.vkplay.ru/	https://vkplay.ru/about/	Стриминговая витрина или редирект	domain:ru	domain:ru	-	-	both
+games	VK Видео Live	live.vkvideo.ru	https://live.vkvideo.ru/	https://vkplay.ru/about/	Адрес преемника, отдельная сверка	domain:ru	domain:ru	-	-	both
+games	Яндекс Игры	yandex.ru	https://yandex.ru/games/	https://yandex.ru/games/	Браузерные игры	domain:ru	domain:ru	-	-	both
+games	Яндекс Игры	games.yandex.ru	https://games.yandex.ru/	https://yandex.ru/games/	Вариант хоста, пассивно	domain:ru	domain:ru	-	-	both
+games	VK Mini Apps	vk.com	https://vk.com/apps	https://vk.com/apps	Браузерные игры и приложения	domain:vk.com	domain:vk.com	-	-	both
+games	МТС Fog Play	fogplay.mts.ru	https://fogplay.mts.ru/	https://fogplay.mts.ru/	Облачный гейминг	domain:ru	domain:ru	-	-	both
+games	Леста	lesta.ru	https://lesta.ru/lgc	https://lesta.ru/	Лаунчер	domain:ru	domain:ru	-	-	both
+games	Мир танков	tanki.su	https://tanki.su/ru/	https://lesta.ru/	Витрина игры	domain:su	domain:su	-	-	both
+games	Мир кораблей	korabli.su	https://korabli.su/ru/	https://lesta.ru/	Витрина игры	domain:su	domain:su	-	-	both
+games	Tanks Blitz	tanksblitz.ru	https://tanksblitz.ru/	https://lesta.ru/	Витрина игры	domain:ru	domain:ru	-	-	both
+games	Фогейм	ru.4game.ru	https://ru.4game.ru/legal/4game/17/	https://ru.4game.ru/legal/4game/17/	Действующее соглашение с официальным адресом	domain:ru	domain:ru	-	-	both
+games	Фогейм	4game.ru	https://4game.ru/	https://ru.4game.ru/legal/4game/17/	Алиас под .ru	domain:ru	domain:ru	-	-	both
+games	Фогейм	ru.4game.com	https://ru.4game.com/	https://ru.4game.ru/legal/4game/17/	Исторический адрес, доказать редирект	domain:4game.com	domain:4game.com	-	-	both
+games	Фогейм	4game.com	https://4game.com/	https://ru.4game.ru/legal/4game/17/	Глобальный корень, контроль	domain:4game.com	domain:4game.com	-	-	both
+games	Astrum Play	astrum-play.ru	https://astrum-play.ru/	https://astrum-play.ru/	Платформа дистрибуции	domain:ru	domain:ru	-	-	both
+games	Astrum	astrum-entertainment.ru	https://astrum-entertainment.ru/	https://astrum-entertainment.ru/	Издатель и список игр	domain:ru	domain:ru	-	-	both
+games	101XP	ru.101xp.com	https://ru.101xp.com/pages/eula	https://ru.101xp.com/	Соглашение российской витрины игр	-	-	-	-	none
+games	101XP	101xp.com	https://101xp.com/	https://ru.101xp.com/	Глобальный корень, контроль	-	-	-	-	none
+games	GameXP	www.gamexp.ru	https://www.gamexp.ru/	https://www.gamexp.ru/	Игровой портал	domain:ru	domain:ru	-	-	both
+games	Бука	buka.ru	https://buka.ru/	https://buka.ru/	Издатель игр	domain:ru	domain:ru	-	-	both
+games	Бука	shop.buka.ru	https://shop.buka.ru/	https://buka.ru/	Отдельный магазин	domain:ru	domain:ru	-	-	both
+games	Игромагаз	www.igromagaz.ru	https://www.igromagaz.ru/	https://www.igromagaz.ru/	Продажа ключей	domain:ru	domain:ru	-	-	both
+games	SteamPay	steampay.com	https://steampay.com/	https://steampay.com/	Независимый магазин, требуется атрибуция	-	-	-	-	none
+games	Gamer’s Base	gamersbase.store	https://gamersbase.store/	https://gamersbase.store/	Магазин, требуется проверка принадлежности	-	-	-	-	none
+games	Steam	store.steampowered.com	https://store.steampowered.com/	https://store.steampowered.com/	Глобальный контроль, не кандидат	domain:steampowered.com	domain:steampowered.com	-	-	both
+games	GOG	www.gog.com	https://www.gog.com/	https://www.gog.com/	Глобальный контроль, не кандидат	-	-	-	-	none
+games	Epic Games	store.epicgames.com	https://store.epicgames.com/	https://store.epicgames.com/	Глобальный контроль, не кандидат	-	-	-	-	none
+games	Gaijin	warthunder.ru	https://warthunder.ru/ru	https://warthunder.ru/ru	Русскоязычная витрина	domain:ru	domain:ru	-	-	both
+games	Gaijin	warthunder.com	https://warthunder.com/ru	https://warthunder.com/ru	Международная игра, не добавлять по языку	domain:warthunder.com	domain:warthunder.com	-	-	both
+esports	ФКС России	resf.ru	https://resf.ru/about/faq/	https://resf.ru/about/resf/	Федерация	domain:ru	domain:ru	-	-	both
+esports	Cybersport.ru	www.cybersport.ru	https://www.cybersport.ru/	https://www.cybersport.ru/	Киберспортивные новости	domain:ru	domain:ru	-	-	both
+esports	CyberX	cyberxcommunity.com	https://cyberxcommunity.com/	https://cyberxcommunity.ru/	Американская витрина Майами, внешний контроль	-	-	-	-	none
+esports	COLIZEUM	colizeum.ru	https://colizeum.ru/	https://colizeum.ru/	Сеть клубов	domain:ru	domain:ru	-	-	both
+esports	True Gamers	truegamers.ru	https://truegamers.ru/	https://truegamers.ru/	Сеть клубов	domain:ru	domain:ru	-	-	both
+esports	FISSURE	fissure.pro	https://fissure.pro/ru/about	https://fissure.pro/ru/about	Оператор указывает Белград, внешний контроль	-	-	-	-	none
+esports	HLTV	www.hltv.org	https://www.hltv.org/	https://www.hltv.org/	Международный контроль	-	-	-	-	none
+esports	FACEIT	www.faceit.com	https://www.faceit.com/	https://www.faceit.com/	Международный контроль	-	-	-	-	none
+esports	Sports.ru	www.sports.ru	https://www.sports.ru/	https://www.sports.ru/	Спортивные новости	domain:ru	domain:ru	-	-	both
+esports	КХЛ	www.khl.ru	https://www.khl.ru/news/2026/08/18/564238.html	https://www.khl.ru/news/2026/08/18/564238.html	Лига и болельщики	domain:ru	domain:ru	-	-	both
+esports	РПЛ	premierliga.ru	https://premierliga.ru/	https://premierliga.ru/	Лига и болельщики	domain:ru	domain:ru	-	-	both
+media	PlayGround	www.playground.ru	https://www.playground.ru/	https://www.playground.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	StopGame	stopgame.ru	https://stopgame.ru/	https://stopgame.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	Игромания	www.igromania.ru	https://www.igromania.ru/	https://www.igromania.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	DTF	dtf.ru	https://dtf.ru/	https://dtf.ru/	Игровое медиа и сообщество	domain:ru	domain:ru	-	-	both
+media	Канобу	kanobu.ru	https://kanobu.ru/	https://kanobu.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	GoHa	www.goha.ru	https://www.goha.ru/	https://www.goha.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	Shazoo	shazoo.ru	https://shazoo.ru/	https://shazoo.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	iXBT.games	ixbt.games	https://ixbt.games/	https://ixbt.games/	Игровое медиа	domain:ixbt.games	domain:ixbt.games	-	-	both
+media	3DNews	3dnews.ru	https://3dnews.ru/games	https://3dnews.ru/games	Русскоязычная игровая редакция	domain:ru	domain:ru	-	-	both
+media	Игры Mail	games.mail.ru	https://games.mail.ru/	https://games.mail.ru/	Историческая российская игровая площадка	domain:ru	domain:ru	-	-	both
+reading	Литрес	www.litres.ru	https://www.litres.ru/showroom/komiksy-i-manga-274060/	https://www.litres.ru/showroom/komiksy-i-manga-274060/	Электронные комиксы и манга	domain:ru	domain:ru	-	-	both
+reading	КИОН Строки	stroki.mts.ru	https://stroki.mts.ru/comics	https://stroki.mts.ru/comics	Лицензионные комиксы	domain:ru	domain:ru	-	-	both
+reading	BUBBLE	bubble.ru	https://bubble.ru/	https://bubble.ru/	Российский издатель и цифровой магазин	domain:ru	domain:ru	-	-	both
+reading	Букмейт	bookmate.ru	https://bookmate.ru/	https://bookmate.ru/	Русскоязычная книжная подписка, проверить актуальный адрес	domain:ru	domain:ru	-	-	both
+reading	Яндекс Книги	books.yandex.ru	https://books.yandex.ru/	https://books.yandex.ru/	Официальная витрина	domain:ru	domain:ru	-	-	both
+reading	Литнет	litnet.com	https://litnet.com/ru/info/terms	https://litnet.com/ru/info/terms	Авторское чтение, соглашение	-	-	-	-	none
+reading	Author.Today	author.today	https://author.today/pages/about	https://author.today/pages/terms	Книги и сообщество авторов	-	-	-	-	none
+reading	Литмаркет	litmarket.ru	https://litmarket.ru/	https://litmarket.ru/	Авторские книги	domain:ru	domain:ru	-	-	both
+culture	Эрмитаж	hermitagemuseum.org	https://hermitagemuseum.org/tickets	https://www.hermitagemuseum.org/	Официальная навигация по билетам	-	-	-	-	none
+culture	Эрмитаж	tickets.hermitagemuseum.org	https://tickets.hermitagemuseum.org/	https://hermitagemuseum.org/tickets	Собственная билетная витрина	full:tickets.hermitagemuseum.org	full:tickets.hermitagemuseum.org	-	-	both
+culture	StandUp Store	standupstore.ru	https://standupstore.ru/	https://standupstore.ru/	Афиша стендап-клуба	domain:ru	domain:ru	-	-	both
+culture	StandUp Store	www.standupstore.ru	https://www.standupstore.ru/	https://standupstore.ru/	WWW отдельного клуба	domain:ru	domain:ru	-	-	both
+culture	Stand-Up Club #1	standupclub.ru	https://standupclub.ru/	https://standupclub.ru/uploads/oferta.pdf	Официальная афиша и оферта	domain:ru	domain:ru	-	-	both
+tickets	Ticketscloud	api.ticketscloud.org	https://api.ticketscloud.org/	https://ticketscloud.readthedocs.io/ru/stable/simple/basics/	Документированный API, не запрашивается	-	-	-	-	none
+tickets	Киноафиша	kinoafisha.info	https://kinoafisha.info/	https://www.kinoafisha.info/about/	Корневой алиас проверить отдельно	-	-	-	-	none
+tickets	Киноафиша KZ	kz.kinoafisha.info	https://kz.kinoafisha.info/about/editors/	https://kz.kinoafisha.info/about/editors/	Казахстанская редакция, отдельно от российской	-	-	-	-	none
+games	GamersBase Plus	gbplus.gamersbase.store	https://gbplus.gamersbase.store/home/user-agreement	https://gbplus.gamersbase.store/home/user-agreement	Игровая подписка, собственные условия	-	-	-	-	none
+games	GamersBase Steam	steam.gamersbase.store	https://steam.gamersbase.store/user-agreement	https://steam.gamersbase.store/user-agreement	Отдельные условия сервиса пополнения, без операций	-	-	-	-	none
+games	Яндекс Игромир	igromir.yandex.ru	https://igromir.yandex.ru/play	https://yandex.ru/support/igromir-play/ru/what-is-igromir-play	Облачный гейминг	domain:ru	domain:ru	-	-	both
+games	Леста	id.lesta.ru	https://id.lesta.ru/	https://lesta.ru/lgc	Контроль предполагаемого входа, не тестировать	domain:ru	domain:ru	-	-	both
+outings	КудаGo для бизнеса	business.kudago.com	https://business.kudago.com/useragreement	https://business.kudago.com/useragreement	Условия размещения и юридическая атрибуция	domain:kudago.com	domain:kudago.com	-	-	both
+esports	CyberX Россия	cyberxcommunity.ru	https://cyberxcommunity.ru/	https://cyberxcommunity.ru/	Российская витрина сети и клубы, не переносить на .com	domain:ru	domain:ru	-	-	both
+esports	LanGame	langame.ru	https://langame.ru/	https://play.google.com/store/apps/details?hl=ru&id=ru.langame.cyberx	Организация клубов и виджеты	domain:ru	domain:ru	-	-	both
+culture	Русский музей онлайн	rusmuseumvrm.ru	https://rusmuseumvrm.ru/online_resources/virtual_tours/index.php	https://rusmuseumvrm.ru/online_resources/virtual_tours/index.php	Виртуальные туры	domain:ru	domain:ru	-	-	both
+culture	Лаврус	lavrus.rusmuseum.ru	https://lavrus.rusmuseum.ru/	https://rusmuseum.ru/	Лекторий Русского музея	domain:ru	domain:ru	-	-	both
+culture	Музей-заповедник Петергоф	peterhofmuseum.ru	https://peterhofmuseum.ru/	https://peterhofmuseum.ru/	Музей и парки	domain:ru	domain:ru	-	-	both
+culture	Государственный Исторический музей	shm.ru	https://shm.ru/	https://shm.ru/	Музей и афиша	domain:ru	domain:ru	-	-	both
+culture	Музей космонавтики	kosmo-museum.ru	https://kosmo-museum.ru/	https://kosmo-museum.ru/	Музей и события	domain:ru	domain:ru	-	-	both
+culture	Дарвиновский музей	www.darwinmuseum.ru	https://www.darwinmuseum.ru/	https://www.darwinmuseum.ru/	Музей и мероприятия	domain:ru	domain:ru	-	-	both
+culture	Цирк	www.circus.ru	https://www.circus.ru/	https://www.circus.ru/	Росгосцирк и афиши	domain:ru	domain:ru	-	-	both
+culture	Большой Московский цирк	greatcircus.ru	https://greatcircus.ru/	https://greatcircus.ru/	Площадка с афишей	domain:ru	domain:ru	-	-	both
+culture	Цирк Никулина	www.circusnikulin.ru	https://www.circusnikulin.ru/	https://www.circusnikulin.ru/	Площадка с афишей	domain:ru	domain:ru	-	-	both
+culture	Театральный музей Бахрушина	bakhrushinmuseum.ru	https://bakhrushinmuseum.ru/	https://bakhrushinmuseum.ru/	Музей и виртуальные материалы	domain:ru	domain:ru	-	-	both
+culture	Политех	polytech.one	https://polytech.one/	https://polytech.one/	Научные события и музей, отдельно подтвердить официальный URL	-	-	-	-	none
+esports	Матч ТВ	matchtv.ru	https://matchtv.ru/	https://matchtv.ru/	Спортивная витрина	domain:ru	domain:ru	-	-	both
+esports	КХЛ ТВ	video.khl.ru	https://video.khl.ru/	https://www.khl.ru/	Спортивная видеовитрина	domain:ru	domain:ru	-	-	both
+esports	Чемпионат	www.championat.com	https://www.championat.com/	https://www.championat.com/	Спортивное медиа	domain:championat.com	domain:championat.com	-	-	both
+esports	Спорт-Экспресс	www.sport-express.ru	https://www.sport-express.ru/	https://www.sport-express.ru/	Спортивное медиа	domain:ru	domain:ru	-	-	both
+esports	РФС	rfs.ru	https://rfs.ru/	https://rfs.ru/	Календарь матчей и новости	domain:ru	domain:ru	-	-	both
+esports	Лига ВТБ	vtb-league.com	https://vtb-league.com/ru/	https://vtb-league.com/ru/	Баскетбольная лига, отделить региональный и общий входы	-	-	-	-	none
+outings	Москва глазами инженера	engineer-history.ru	https://engineer-history.ru/	https://engineer-history.ru/	Экскурсии по архитектуре	domain:ru	domain:ru	-	-	both
+outings	ЭкстраГид	extraguide.ru	https://extraguide.ru/	https://extraguide.ru/	Каталог экскурсий	domain:ru	domain:ru	-	-	both
+outings	GuideGO	guidego.ru	https://guidego.ru/	https://guidego.ru/	Экскурсии, проверить атрибуцию	domain:ru	domain:ru	-	-	both
+outings	Weatlas	www.weatlas.com	https://www.weatlas.com/	https://www.weatlas.com/	Экскурсии международные, контроль	-	-	-	-	none
+outings	Квесты iLocked	ilocked.ru	https://ilocked.ru/	https://ilocked.ru/	Сеть квестов	domain:ru	domain:ru	-	-	both
+outings	Квесты Квестополия	kvestopolia.ru	https://kvestopolia.ru/	https://kvestopolia.ru/	Квесты, атрибуцию проверить	domain:ru	domain:ru	-	-	both
+reading	Литсовет	litsovet.ru	https://litsovet.ru/	https://litsovet.ru/	Авторское чтение	domain:ru	domain:ru	-	-	both
+reading	Фикбук	ficbook.net	https://ficbook.net/	https://ficbook.net/	Русскоязычный UGC, не допуск по одному языку	-	-	-	-	none
+reading	Ридли	readly.ru	https://readly.ru/	https://readly.ru/	Книжное сообщество	domain:ru	domain:ru	-	-	both
+reading	LiveLib	www.livelib.ru	https://www.livelib.ru/	https://www.livelib.ru/	Книжное сообщество	domain:ru	domain:ru	-	-	both
+reading	ЛитРес Самиздат	selfpub.ru	https://selfpub.ru/	https://selfpub.ru/	Платформа публикации	domain:ru	domain:ru	-	-	both
+reading	ЛитРес Библиотека	biblio.litres.ru	https://biblio.litres.ru/	https://biblio.litres.ru/	Публичный вход библиотечной программы	domain:ru	domain:ru	-	-	both
+games	Playkey	playkey.net	https://playkey.net/ru/	https://playkey.net/ru/	Исторический облачный гейминг, проверить состояние	-	-	-	-	none
+games	Drova	drova.io	https://drova.io/	https://drova.io/	Исторический облачный гейминг, проверить состояние	-	-	-	-	none
+games	ИгрыРостелеком	games.rt.ru	https://games.rt.ru/	https://games.rt.ru/	Витрина провайдера	domain:ru	domain:ru	-	-	both
+games	Игровой Маркет М.Видео	www.mvideo.ru	https://www.mvideo.ru/igry-i-programmy-54	https://www.mvideo.ru/	Цифровая розница, контроль	domain:ru	domain:ru	-	-	both
+games	Территория IT	gamepush.com	https://gamepush.com/ru/	https://gamepush.com/ru/	SDK для публикации игр, глобальный уклон	-	-	-	-	none
+media	GameMAG	gamemag.ru	https://gamemag.ru/	https://gamemag.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	GameGuru	gameguru.ru	https://gameguru.ru/	https://gameguru.ru/	Игровое медиа	domain:ru	domain:ru	-	-	both
+media	AG	ag.ru	https://ag.ru/	https://ag.ru/	Игровой каталог, проверить присутствие ребрендинга	domain:ru	domain:ru	-	-	both
+media	IGM	igm.gg	https://igm.gg/media/about	https://igm.gg/media/about	Игровое медиа, редакция и магазин	-	-	-	-	none
+media	PlayGround forum	forums.playground.ru	https://forums.playground.ru/	https://www.playground.ru/	Форум	domain:ru	domain:ru	-	-	both
+media	Overclockers Игры	overclockers.ru	https://overclockers.ru/games	https://overclockers.ru/games	Смежное медиа	domain:ru	domain:ru	-	-	both
+reading	Author.Today Журнал	journal.author.today	https://journal.author.today/	https://author.today/	Редакционный журнал по прямой ссылке	-	-	-	-	none
+reading	Author.Today Справка	help.author.today	https://help.author.today/knowledge_base/	https://author.today/	База знаний по прямой ссылке	-	-	-	-	none
+reading	Author.Today Идеи	ideas.author.today	https://ideas.author.today/	https://author.today/	Обратная связь, необязательный вход	-	-	-	-	none
+outings	Клаустрофобия для бизнеса	corp.claustrophobia.com	https://corp.claustrophobia.com/	https://claustrophobia.com/quests/schedule	Корпоративные мероприятия по прямой ссылке	-	-	-	-	none
+outings	Клаустрофобия Беларусь	phobia.by	https://phobia.by/	https://claustrophobia.com/quests/schedule	Белорусская витрина отдельно от RU	domain:by	domain:by	-	-	both
+culture	Пушкинский музей	collection.pushkinmuseum.art	https://collection.pushkinmuseum.art/entity/OBJECT	https://pushkinmuseum.art/	Поиск в цифровой коллекции	-	-	-	-	none
+culture	Пушкинский музей	tickets.pushkinmuseum.art	https://tickets.pushkinmuseum.art/	https://pushkinmuseum.art/	Отдельный билетный сайт, без покупки	full:tickets.pushkinmuseum.art	full:tickets.pushkinmuseum.art	-	-	both
+culture	Пушкинский музей	youth.pushkinmuseum.art	https://youth.pushkinmuseum.art/	https://pushkinmuseum.art/	Молодёжное направление	-	-	-	-	none
+culture	Пушкинский музей	conservation.pushkinmuseum.art	https://conservation.pushkinmuseum.art/	https://pushkinmuseum.art/	Отдел реставрации и сохранения	-	-	-	-	none
+culture	Пушкинский музей	decemberfest.pushkinmuseum.art	https://decemberfest.pushkinmuseum.art/index.php	https://pushkinmuseum.art/	Фестиваль «Декабрьские вечера»	-	-	-	-	none
+culture	Пушкинский музей	antonova.pushkinmuseum.art	https://antonova.pushkinmuseum.art/	https://pushkinmuseum.art/	Мемориальный проект	-	-	-	-	none
+culture	Политех	shop.polytech.one	https://shop.polytech.one/info/	https://shop.polytech.one/info/	Официальный магазин, смежный адрес	-	-	-	-	none
+culture	Политех	edu.polytech.one	https://edu.polytech.one/agreement.pdf	https://edu.polytech.one/agreement.pdf	Официальная оферта образовательных событий	-	-	-	-	none
+culture	Русский музей	app.rusmuseum.ru	https://app.rusmuseum.ru/	https://rusmuseum.ru/	Онлайн-гид	domain:ru	domain:ru	-	-	both
+games	101XP	live.ru.portal.media.cdn.101xp.com	https://live.ru.portal.media.cdn.101xp.com/static/js/socket.io.js	https://ru.101xp.com/	Прямая ресурсная ссылка, не запускать JS	-	-	-	-	none
+games	101XP	live.en.portal.cdn.101xp.com	https://live.en.portal.cdn.101xp.com/styles.32e3dcbb69283075.css	https://ru.101xp.com/	Общий для локалей CSS по HTML, роль отдельно	-	-	-	-	none
+games	101XP	en.101xp.com	https://en.101xp.com/	https://ru.101xp.com/	Англоязычный контроль	-	-	-	-	none
+games	101XP	eu.101xp.com	https://eu.101xp.com/	https://ru.101xp.com/	Европейский контроль	-	-	-	-	none
+tickets	Ticketscloud	doc.ticketscloud.org	https://doc.ticketscloud.org/	https://ticketscloud.com/products/widget	Собственная документация напрямую с официальной витрины	full:doc.ticketscloud.org	full:doc.ticketscloud.org	-	-	both
+tickets	Ticketscloud	app70476.carrotquest.help	https://app70476.carrotquest.help/	https://ticketscloud.com/products/widget	Выделенная справка стороннего провайдера	-	-	-	-	none
+tickets	Киноафиша	static.kinoafisha.info	https://static.kinoafisha.info/static/assets/css/base.css	https://www.kinoafisha.info/	Общий CSS, не считать доказательством всей семьи поддоменов	-	-	-	-	none
+control	Киноафиша реклама	cdn.advertronic.io	https://cdn.advertronic.io/	https://www.kinoafisha.info/	Внешняя рекламная инфраструктура, только сверка	-	-	-	-	none
+control	Ticketscloud сторонний CDN	d3e54v103j8qbb.cloudfront.net	https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js	https://ticketscloud.com/products/widget	Общий внешний CDN, только сверка	-	-	-	-	none
+control	Кремлёвский дворец	www.google.com	https://www.google.com/recaptcha/api.js	https://kremlinpalace.org/ticket-operators	Стороннее антибот-решение, только сверка	-	-	-	-	none
+control	Медиа BLOCK	tracking.ott.yandex.net	https://tracking.ott.yandex.net/	https://github.com/SpeedeMiner/Geosite-ru-light/blob/26732bb53fdc8e3e400f5198acd69e9020589485/local/block.txt	Контроль телеметрии, измерений нет	domain:yandex.net	domain:yandex.net	-	domain:tracking.ott.yandex.net	block
+control	Аналитика BLOCK	mc.yandex.ru	https://mc.yandex.ru/	https://github.com/SpeedeMiner/Geosite-ru-light/blob/26732bb53fdc8e3e400f5198acd69e9020589485/local/block.txt	Контроль аналитики, измерений нет	domain:ru	domain:ru	-	domain:mc.yandex.ru	block
+tickets	НТВ-ПЛЮС	ntvplus.tv	https://ntvplus.tv/	https://ntvplus.ru/	Пересечение с закрытой медиаочередью +149, не новое имя	-	-	yes	-	plus149
+culture	Игрокон	igrokon.org	https://igrokon.org/activities	https://igrokon.org/pravila-poseshheniya	Российский фестиваль настольных игр	-	-	-	-	none
+culture	Comic Con Игромир	comiccon.ru	https://comiccon.ru/	https://comiccon.ru/	Фестиваль кино, игр, комиксов и косплея	domain:ru	domain:ru	-	-	both
+culture	Comic Con Russia	comic-con-russia.ru	https://comic-con-russia.ru/	https://comic-con-russia.ru/	Исторический адрес, отличать от действующего	domain:ru	domain:ru	-	-	both
+culture	Игропром	igroprom.ru	https://igroprom.ru/	https://xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai/afisha/8540	Российская выставка геймдева	domain:ru	domain:ru	-	-	both
+culture	Game Scene	gamescene.ru	https://gamescene.ru/	https://gamescene.ru/	Афиша игровых фестивалей	domain:ru	domain:ru	-	-	both
+culture	Hobby Games	hobbygames.ru	https://hobbygames.ru/	https://igrokon.org/pravila-poseshheniya	Настольные игры и игротеки	domain:ru	domain:ru	-	-	both
+culture	Мосигра	www.mosigra.ru	https://www.mosigra.ru/	https://www.mosigra.ru/	Каталог и настольные игры	domain:ru	domain:ru	-	-	both
+culture	VK Fest	vkfest.ru	https://vkfest.ru/	https://vkfest.ru/	Фестиваль VK	domain:ru	domain:ru	-	-	both
+culture	Музей Перми	tickets.museumperm.ru	https://tickets.museumperm.ru/page/agreement	https://tickets.museumperm.ru/page/agreement	Соглашение кассы местного музея	domain:ru	domain:ru	-	-	both
+culture	ПФКИ	xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai	https://xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai/afisha/8540	https://xn--80aeeqaabljrdbg6a3ahhcl4ay9hsa.xn--p1ai/afisha/8540	Официальная культурная афиша, IDN	domain:xn--p1ai	domain:xn--p1ai	-	-	both
+tickets	Кинотеатр.Ру	kinoteatr.ru	https://kinoteatr.ru/legal/24/	https://kinoteatr.ru/legal/24/	Формула Кино и Синема Парк	domain:ru	domain:ru	-	-	both
+tickets	КАРО	karofilm.ru	https://karofilm.ru/	https://karofilm.ru/	Кинотеатры	domain:ru	domain:ru	-	-	both
+tickets	Киномакс	kinomax.ru	https://kinomax.ru/	https://kinomax.ru/	Кинотеатры	domain:ru	domain:ru	-	-	both
+tickets	Мираж Синема	www.mirage.ru	https://www.mirage.ru/	https://www.mirage.ru/	Кинотеатры	domain:ru	domain:ru	-	-	both
+tickets	Синема Стар	www.cinemastar.ru	https://www.cinemastar.ru/	https://www.cinemastar.ru/	Кинотеатры	domain:ru	domain:ru	-	-	both
+tickets	Silver Cinema	silvercinema.ru	https://silvercinema.ru/	https://silvercinema.ru/	Кинотеатры	domain:ru	domain:ru	-	-	both
+tickets	РФС	www.rfs.ru	https://www.rfs.ru/page/739	https://www.rfs.ru/page/739	Официальная справка о билетах	domain:ru	domain:ru	-	-	both
+tickets	ФХР	fhr.ru	https://fhr.ru/tickets/check/	https://fhr.ru/tickets/check/	Публичная справка, билеты не вводятся	domain:ru	domain:ru	-	-	both
+tickets	Quick Tickets	quicktickets.ru	https://quicktickets.ru/	https://quicktickets.ru/	Региональная касса; сверка операторской витрины	domain:ru	domain:ru	-	-	both
+tickets	BIL24	bil24.pro	https://bil24.pro/	https://yandex.ru/support/afisha-partners/ru/sell-afisha/post.html	Интеграция по справке Яндекс Афиши, проверить прямой URL	full:bil24.pro	full:bil24.pro	-	-	both
+reading	Литнет Аудиокниги	audio.litnet.com	https://audio.litnet.com/user-agreement	https://audio.litnet.com/user-agreement	Отдельное аудиоприложение, соглашение	-	-	-	-	none
+reading	ЛитГород	litgorod.ru	https://litgorod.ru/	https://litnet.com/ru/info/IT-activities	Отдельная площадка по сведениям Литнета	domain:ru	domain:ru	-	-	both

@@ -1,0 +1,46 @@
+host	url	curl_exit	http	tls_verify	bytes	visible_chars	main_chars	title	challenge	redirect	content_type	sha256
+ticketscloud.com	https://ticketscloud.com/products/widget	0	200	0	51968	3720	0	Widget	False	-	text/html	8d443ba57359c2dbfe0f2b4c66a66e29fc6187f74c67c9571a5685f807340926
+en.ticketscloud.com	https://en.ticketscloud.com/products/widget	0	200	0	24307	2769	0	Widget	False	-	text/html	25afbeb604a39c5846ea476101e7abcb27580cd13db980096372adc091a51df5
+ticketscloud.readthedocs.io	https://ticketscloud.readthedocs.io/ru/stable/	0	200	0	12056	1088	0	TicketsCloud’s documentation — Документация TicketsCloud v1-beta	False	-	text/html	84b86d0623d49bc368bc0732c209c598f03f1424a2ff9b9ab66bbef6a9ce3e09
+www.kinoafisha.info	https://www.kinoafisha.info/	0	200	0	1101143	5924	5565	Киноафиша – все о кино и кинотеатрах, афиша кинотеатров VIP Кафе Парковка Бар Диваны Кафе VIP Диваны Пандусы Кафе Бар VIP Диваны Пандусы Каф	False	-	text/html; charset=UTF-8	89ae65ea678e83f4fcda35408946f1d7aaada8dc102fec546ed6ef559f36490f
+www.hermitagemuseum.org	https://www.hermitagemuseum.org/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+pushkinmuseum.art	https://pushkinmuseum.art/	0	200	0	206290	9613	0	Пушкинский музей	False	-	text/html; charset=utf-8	654c2865177bedb07f7cc692c0f5e119f5d412f4a9c0f607ba2766cd1c876c21
+kremlinpalace.org	https://kremlinpalace.org/ticket-operators	0	200	0	89415	2516	638	Билетные операторы | Государственный Кремлёвский Дворец	False	-	text/html; charset=utf-8	5124a14cd2f73885c44d85fd1f176fbdbaf897fae2324b782abbb99eb077fc7b
+sputnik8.com	https://sputnik8.com/	0	401	0	265	0	0	-	False	-	text/html	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed
+gorbilet.ru	https://gorbilet.ru/pages/publichnaya-oferta/	0	302	0	0	0	0	-	False	https://gorbilet.ru/tmgrdfrend/showcaptcha	-	-
+gorbilet.com	https://gorbilet.com/	0	301	0	169	34	0	301 Moved Permanently	False	https://gorbilet.ru/	text/html	cf7421bf8021a6e56b4a9aa5e1a0f5bb5f5b341189e61c7776d15f44b82c1fa3
+claustrophobia.com	https://claustrophobia.com/quests/schedule	0	200	0	1316268	8014	7171	Расписание всех квестов | Клаустрофобия	False	-	text/html; charset=utf-8	8221bcba51ccdfbcbac9efccfb6ca338955d9ce26ff04c8dada4ab093c71c472
+youtravel.me	https://youtravel.me/	0	200	0	296073	7815	1791	Бронируйте уникальные путешествия по всему миру · YouTravel.Me logos/google	False	-	text/html; charset=UTF-8	c5997ec070d77313ed9848ec1b9fdf1b5190d9d76a45708d19fa6e3eef737e03
+pvp.vkplay.ru	https://pvp.vkplay.ru/promo/port	0	200	0	29250	106	52	VKPlay Турниры	False	-	text/html; charset=utf-8	f6ef48d229d2f27d20315bda22887ae2728880bb950507c5fc02639692eb9a91
+ru.101xp.com	https://ru.101xp.com/	0	200	0	214125	0	0	101XP ic_arrow-more-837FFF-left ic_attach	False	-	text/html; charset=UTF-8	72a769d186ba0277f88c62b9295c83e8859e3436a1150663d5a62a4edcf5a482
+101xp.com	https://101xp.com/	0	302	0	138	15	0	302 Found	False	https://en.101xp.com/	text/html	cfe9ae58ffeb6d16ea813e30728094b1d1f0279072716928e59261bcfc60f931
+steampay.com	https://steampay.com/	0	403	0	5904	0	0	Just a moment...	True	-	text/html; charset=UTF-8	cda6b2dc9282c6d5b1ec95522bb571e4bbb23882f4e1619473e346fd724f8479
+gamersbase.store	https://gamersbase.store/	0	403	0	15604	0	0	-	False	-	text/html;charset=utf-8	f9a753f0a128548e844dd94da64bd86dd7d8a935ac24c66c2ddcce12f47f873d
+www.gog.com	https://www.gog.com/	0	302	0	26	0	0	-	False	https://www.gog.com/en/	text/plain; charset=utf-8	327e207d963105a12d0f57b187be7e7b20d8aef7cef74f7ae1cccec20226995f
+store.epicgames.com	https://store.epicgames.com/	0	200	0	348371	3535	3505	Epic Games Store | Download & Play PC Games, Mods, DLC & More – Epic Games	False	-	text/html; charset=utf-8	944375cc1adbc61ff5c4b0e9caf727271c9549a5dc5f03f6fd2196b22fcc3dd7
+cyberxcommunity.com	https://cyberxcommunity.com/	0	200	0	384079	1624	0	CyberX - the largest cyberzone in Miami	False	-	text/html; charset=UTF-8	9d6f4a43e65d3a2984a408aaab47179cb37153ecad05ba89b33f2ba3801ec474
+fissure.pro	https://fissure.pro/	0	200	0	56522	1163	732	FISSURE - Emotions for Free	False	-	text/html; charset=utf-8	c4d724b746f9e8ac72e4f4bc5939fab4adf2861ad647ed0605df5ed5e01ea1a5
+www.hltv.org	https://www.hltv.org/	0	200	0	270616	12257	0	Counter-Strike News & Coverage | HLTV.org	False	-	text/html; charset=UTF-8	1edd832d7f578d155a54ea1421b5bd8a76c03178bf4cfb4453988afb790188a9
+www.faceit.com	https://www.faceit.com/	0	307	0	4	0	0	-	False	https://www.faceit.com/en/	-	1043d63cca179c90ac0452bf6593a42c2546e48d7ac1b2b89737d8dec86ba567
+litnet.com	https://litnet.com/ru	0	403	0	55	0	0	-	False	-	application/json	35e642f0e1bd426b9d8b0ee0284aefe801873dc13c18819fbeeaf2bf47136664
+author.today	https://author.today/	0	200	0	228886	12294	0	Книги читать онлайн бесплатно без регистрации, FB2 и EPUB, электронная библиотека	False	-	text/html; charset=utf-8	b474c81e9f4f2745a214b868d27072c04f14781fd3d9ca459e847d13831fcf27
+hermitagemuseum.org	https://hermitagemuseum.org/tickets	28	0	0	0	0	0	-	False	-	-	-
+tickets.hermitagemuseum.org	https://tickets.hermitagemuseum.org/	0	503	0	91	0	0	-	False	-	text/plain	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6
+kinoafisha.info	https://kinoafisha.info/	0	301	0	162	27	0	301 Moved Permanently	False	https://www.kinoafisha.info/	text/html	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a
+kz.kinoafisha.info	https://kz.kinoafisha.info/about/editors/	0	200	0	202540	2170	889	Все авторы Киноафиши Казахстан	False	-	text/html; charset=UTF-8	c242b6d45745865068c3dca51c201b99ba05dd79b496f615b8a345003a4cb328
+gbplus.gamersbase.store	https://gbplus.gamersbase.store/home/user-agreement	0	403	0	15604	0	0	-	False	-	text/html;charset=utf-8	9e6c47a0ef148445444de9e21702c35848ecc827c4196ad4aedbd4a43d4811d9
+steam.gamersbase.store	https://steam.gamersbase.store/user-agreement	0	200	0	49418	19099	18815	Пользовательское соглашение - GamersBase	False	-	text/html; charset=utf-8	8909cf3719ca7dc416dc824bbf449f39a103c2e7edbfd01a5800a850e363c871
+www.kinoafisha.info	https://www.kinoafisha.info/about/	0	200	0	222607	3196	1621	О сайте Киноафиша	False	-	text/html; charset=UTF-8	e1e9c98d043e7aa8e6e23ef17cfacdc025adbe7689894efcf95c812bc9e28b6f
+kremlinpalace.org	https://kremlinpalace.org/ticket-operators	0	200	0	89415	2516	638	Билетные операторы | Государственный Кремлёвский Дворец	False	-	text/html; charset=utf-8	a6d569f2264993c9042a7d86392a6f21a470cff487d79f3187190ce43bb1d848
+claustrophobia.com	https://claustrophobia.com/quests/schedule	0	200	0	1277678	8025	7191	Расписание всех квестов | Клаустрофобия	False	-	text/html; charset=utf-8	5a77d0a0746bd99219394f2c6054029e161d12a9b703e6c9e16986a4a547c381
+author.today	https://author.today/pages/about	0	200	0	44578	3710	0	О проекте	False	-	text/html; charset=utf-8	cd4a09588c279430c86a600cd4453c30e1571fef75a53cd473b97aa75cd1f34a
+tickets.hermitagemuseum.org	https://tickets.hermitagemuseum.org/	0	503	0	91	0	0	-	False	-	text/plain	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6
+polytech.one	https://polytech.one/	0	503	0	91	0	0	-	False	-	text/plain	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6
+vtb-league.com	https://vtb-league.com/ru/	0	200	0	92547	2710	0	Единая Лига ВТБ | VTB United League - Официальный сайт	False	-	text/html; charset=UTF-8	8db92d29e5389e5958c375f2772a30539fbf92ae0ee475cc39b8895814c6c25a
+igm.gg	https://igm.gg/media/about	0	401	0	265	0	0	-	False	-	text/html	d345b3c04d0fcf410b83391892338e6c12b2e14bcfed019b1fb7aa43fedde5ed
+journal.author.today	https://journal.author.today/	0	200	0	200675	6538	4275	Author.Today | Журнал - Пишем, публикуем, читаем, живем	False	-	text/html; charset=UTF-8	01322b3795173467b87506368533f90621d50c755cc25b377822a1cad35c7ba8
+help.author.today	https://help.author.today/knowledge_base/	0	200	0	35981	1666	0	База знаний	False	-	text/html; charset=UTF-8	1f817efb0e91a18da1cc03e958d4b75ea1abe5b8282935b4fdc765cf4b7978b0
+corp.claustrophobia.com	https://corp.claustrophobia.com/	0	200	0	346824	6979	6408	Корпоративы и тимбилдинги от Клаустрофобии	False	-	text/html; charset=utf-8	94c3857df3389d5278246d63b76880053d9866642f56025c61f8b0c8b72104e9
+collection.pushkinmuseum.art	https://collection.pushkinmuseum.art/entity/OBJECT	0	200	0	236932	7866	0	Экспонаты ГМИИ им. А.С. Пушкина	False	-	text/html; charset=utf-8	fe769757cb6187437738e0733feac0b00cb501c7b553faacbdcf32bcbf221947
+shop.polytech.one	https://shop.polytech.one/info/	0	200	0	65907	3654	0	О магазине	False	-	text/html; charset=UTF-8	481bf8cdefea69fbff620904906d43edf34c6557adba337fc2992c35d6639bb5
+igrokon.org	https://igrokon.org/activities	0	200	0	628814	1263	0	Зоны фестиваля | Игрокон 2026 Lite	False	-	text/html; charset=UTF-8	1c8449d14075fc0c35ce95b8893f0d57573c422fcfca7a183de8571dab6a414a

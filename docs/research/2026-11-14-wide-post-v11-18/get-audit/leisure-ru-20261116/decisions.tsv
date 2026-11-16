@@ -1,0 +1,61 @@
+segment	hostname	decision	catalogue_url	verified_url	proof_asns	reason
+tickets	en.ticketscloud.com	comparison	https://en.ticketscloud.com/products/widget	-	-	Англоязычная витрина. Основной ticketscloud.com уже в обоих DAT. Отдельная необходимость для RU не доказана.
+tickets	ticketscloud.readthedocs.io	reserve	https://ticketscloud.readthedocs.io/ru/stable/	-	-	Внешняя платформа со старой документацией. На официальной витрине сейчас указан doc.ticketscloud.org, уже покрытый.
+tickets	www.kinoafisha.info	include	https://www.kinoafisha.info/about/	https://www.kinoafisha.info/	12389,56420	Официальная российская киноафиша и редакция. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+culture	www.hermitagemuseum.org	reserve	https://www.hermitagemuseum.org/	-	-	Официальный сайт Эрмитажа. При строгой проверке TLS получена ошибка цепочки, в том числе из AS12389, AS8402 и AS56420.
+culture	kremlinpalace.org	include	https://kremlinpalace.org/ticket-operators	https://kremlinpalace.org/ticket-operators	12389,56420	Официальный список билетных партнёров Государственного Кремлёвского Дворца. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+outings	sputnik8.com	reserve	https://sputnik8.com/	-	-	Корневой хост и покрытый www.sputnik8.com ответили 401 в двух сетях. Полноценный алиас не доказан.
+outings	gorbilet.com	reserve	https://gorbilet.com/	-	-	Два строгих 301 на покрытый gorbilet.ru, конечная страница в тех же сетях перенаправила на CAPTCHA.
+outings	claustrophobia.com	include	https://claustrophobia.com/quests/schedule	https://claustrophobia.com/quests/schedule	8402,12389	Официальное расписание квестов. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+outings	youtravel.me	comparison	https://youtravel.me/	-	-	Международный каталог авторских поездок, не включать на основании отдельных российских направлений.
+games	ru.101xp.com	reserve	https://ru.101xp.com/pages/eula	-	-	Официальная RU-витрина. Завершённые 200 на соглашении и политике не подтвердили видимый текст даже после расширения выборки.
+games	101xp.com	comparison	https://101xp.com/	-	-	Глобальный корень, не переносить статус локального имени.
+games	steampay.com	reserve	https://steampay.com/	-	-	Публичный сайт найден, два 403 на главной, повтор короткого пути не дал двух содержательных ответов.
+games	gamersbase.store	reserve	https://gamersbase.store/	-	-	Два 403. Не переносить сюда наблюдения о других поддоменах.
+games	www.gog.com	comparison	https://www.gog.com/	-	-	Глобальный магазин.
+games	store.epicgames.com	comparison	https://store.epicgames.com/	-	-	Глобальный магазин.
+esports	cyberxcommunity.com	comparison	https://cyberxcommunity.com/	-	-	Официальный .com описывает Майами. Российская витрина .ru уже покрыта.
+esports	fissure.pro	comparison	https://fissure.pro/ru/about	-	-	Официальная страница указывает Белград. Русская локализация сама по себе не даёт RU.
+esports	www.hltv.org	comparison	https://www.hltv.org/	-	-	Международное киберспортивное медиа.
+esports	www.faceit.com	comparison	https://www.faceit.com/	-	-	Международная турнирная платформа.
+reading	litnet.com	include	https://litnet.com/ru/info/terms	https://litnet.com/ru/info/IT-activities	12389,56420	Российская литературная платформа по сведениям ООО «Литнет». Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+reading	author.today	include	https://author.today/pages/about	https://author.today/pages/about	8402,12389	Русскоязычная литературная платформа и публичное описание продукта. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+culture	hermitagemuseum.org	reserve	https://hermitagemuseum.org/tickets	-	-	Официальная страница билетов, строгий TLS не подтвердился из AS12389 и AS8402. tickets.hermitagemuseum.org уже покрыт.
+tickets	api.ticketscloud.org	reserve	https://api.ticketscloud.org/	-	-	Продакшен API указан в документации. Рабочие операции не запрашивались, найденный URL сам по себе не доказательство для добавления.
+tickets	kinoafisha.info	include	https://kinoafisha.info/	https://kinoafisha.info/	12389,56420	Два строгих 301 на WWW и содержательная публичная конечная страница в тех же ASN.
+tickets	kz.kinoafisha.info	comparison	https://kz.kinoafisha.info/about/editors/	-	-	Самостоятельная казахстанская редакция, не наследует решения для WWW.
+games	gbplus.gamersbase.store	reserve	https://gbplus.gamersbase.store/home/user-agreement	-	-	Два 403 к опубликованному соглашению игровой подписки.
+games	steam.gamersbase.store	reserve	https://steam.gamersbase.store/user-agreement	-	-	Только один содержательный ответ на условия сервиса пополнения; не тестировались операции.
+culture	polytech.one	reserve	https://polytech.one/	-	-	У основного хоста Политеха таймауты в обеих российских сетях. Поддомены оцениваются отдельно.
+esports	vtb-league.com	include	https://vtb-league.com/ru/	https://vtb-league.com/ru/news/kalendarnyj-plan-chempionata-2026-27-edinoj-ligi-vtb/	8402,12389	Официальный календарь лиги и подтверждённый московский офис. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+outings	www.weatlas.com	comparison	https://www.weatlas.com/	-	-	Международная экскурсионная витрина, не включать по отдельным российским предложениям.
+reading	ficbook.net	comparison	https://ficbook.net/	-	-	Русскоязычная UGC-площадка, не включать без отдельной операторской и сетевой проверки.
+games	playkey.net	reserve	https://playkey.net/ru/	-	-	Историческое имя облачного гейминга, текущий статус не подтверждён.
+games	drova.io	reserve	https://drova.io/	-	-	Историческое имя облачного гейминга, текущий статус не подтверждён.
+games	gamepush.com	comparison	https://gamepush.com/ru/	-	-	Международно позиционируемый игровой SDK, возможные российские проекты не основание для общего точного имени.
+media	igm.gg	reserve	https://igm.gg/media/about	-	-	Официальная редакционная страница и договор найдены, два 401 в подтверждающем прогоне.
+reading	journal.author.today	include	https://journal.author.today/	https://journal.author.today/	12389,28840	Официальный редакционный журнал по прямой ссылке с Author.Today. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+reading	help.author.today	include	https://help.author.today/knowledge_base/	https://help.author.today/knowledge_base/	28840,56420	Официальная база знаний по прямой ссылке с Author.Today. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+reading	ideas.author.today	reserve	https://ideas.author.today/	-	-	Опубликована необязательная площадка обратной связи, отдельного достаточного RU-теста нет.
+outings	corp.claustrophobia.com	include	https://corp.claustrophobia.com/	https://corp.claustrophobia.com/	12389,56420	Отдельная витрина корпоративных квестов по прямой ссылке с основной. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+culture	collection.pushkinmuseum.art	include	https://collection.pushkinmuseum.art/entity/OBJECT	https://collection.pushkinmuseum.art/entity/OBJECT	12389,56420	Официальная цифровая коллекция по прямой ссылке Пушкинского музея. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+culture	youth.pushkinmuseum.art	reserve	https://youth.pushkinmuseum.art/	-	-	Опубликован на сайте музея, но этот публичный путь не проходил двухсетевой тест.
+culture	conservation.pushkinmuseum.art	reserve	https://conservation.pushkinmuseum.art/	-	-	Опубликован на сайте музея, но этот публичный путь не проходил двухсетевой тест.
+culture	decemberfest.pushkinmuseum.art	reserve	https://decemberfest.pushkinmuseum.art/index.php	-	-	Опубликован на сайте музея, но этот публичный путь не проходил двухсетевой тест.
+culture	antonova.pushkinmuseum.art	reserve	https://antonova.pushkinmuseum.art/	-	-	Опубликован на сайте музея, но этот публичный путь не проходил двухсетевой тест.
+culture	shop.polytech.one	include	https://shop.polytech.one/info/	https://shop.polytech.one/info/	12389,56420	Официальная страница магазина Политехнического музея. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+culture	edu.polytech.one	reserve	https://edu.polytech.one/agreement.pdf	-	-	Опубликована музейная оферта, полная загрузка из двух ASN не подтверждалась.
+games	live.ru.portal.media.cdn.101xp.com	reserve	https://live.ru.portal.media.cdn.101xp.com/static/js/socket.io.js	-	-	Опубликованный JS без отдельной проверки полного ответа из двух ASN; не запускался.
+games	live.en.portal.cdn.101xp.com	comparison	https://live.en.portal.cdn.101xp.com/styles.32e3dcbb69283075.css	-	-	Общий ресурс используется разными локалями, не переносить доступность RU-витрины на него.
+games	en.101xp.com	comparison	https://en.101xp.com/	-	-	Языковая витрина EN.
+games	eu.101xp.com	comparison	https://eu.101xp.com/	-	-	Отдельная европейская витрина.
+tickets	app70476.carrotquest.help	reserve	https://app70476.carrotquest.help/	-	-	Выделенный справочный адрес стороннего провайдера, необходимость и доступность в двух сетях не доказаны.
+tickets	static.kinoafisha.info	reserve	https://static.kinoafisha.info/static/assets/css/base.css	-	-	Штатный статический ресурс по ссылке, но не проверен как отдельное точное имя из двух ASN.
+control	cdn.advertronic.io	comparison	https://cdn.advertronic.io/	-	-	Сторонняя рекламная инфраструктура.
+control	d3e54v103j8qbb.cloudfront.net	comparison	https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js	-	-	Сторонний CloudFront для вспомогательного JS.
+control	www.google.com	comparison	https://www.google.com/recaptcha/api.js	-	-	Сторонняя CAPTCHA, точное правило не добавлять.
+control	tracking.ott.yandex.net	block	https://tracking.ott.yandex.net/	-	-	Существующий BLOCK для телеметрии сохраняется.
+control	mc.yandex.ru	block	https://mc.yandex.ru/	-	-	Существующий BLOCK для аналитики сохраняется.
+tickets	ntvplus.tv	existing_preview	https://ntvplus.tv/	-	-	Доказанное медиа-имя уже входит в исходный +149.
+culture	igrokon.org	include	https://igrokon.org/activities	https://igrokon.org/activities	12389,56420	Российский фестиваль настольных игр, опубликованная программа и правила посещения. Одинаковый публичный путь ответил содержательным завершённым 200 со строгим TLS в двух ASN.
+reading	audio.litnet.com	reserve	https://audio.litnet.com/user-agreement	-	-	Соглашение отдельного аудиосервиса есть. AS56420 дал содержательный 200, AS12389 — таймаут. Статус основного хоста не переносится.

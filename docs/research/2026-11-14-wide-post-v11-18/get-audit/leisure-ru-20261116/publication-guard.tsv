@@ -1,0 +1,7 @@
+repository	ref	sha
+Light	refs/heads/main	26732bb53fdc8e3e400f5198acd69e9020589485
+Light	refs/heads/release	0485f87e0b9f2d2654bfe20bb2a648e9e491a2c9
+Light	refs/tags/v11.20	26732bb53fdc8e3e400f5198acd69e9020589485
+Server	refs/heads/main	e31b5c30d26299315163050a185dac0f7648e466
+Server	refs/heads/release	1c8e7e94e76aef8401489841879ee921c0494a32
+Server	refs/tags/v11.20	e31b5c30d26299315163050a185dac0f7648e466
