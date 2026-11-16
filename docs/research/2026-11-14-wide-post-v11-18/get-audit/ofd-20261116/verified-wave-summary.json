@@ -1,0 +1,138 @@
+{
+  "total": {
+    "workflows": 8,
+    "artifact_batches": 11,
+    "observations": 144,
+    "unique_urls": 57,
+    "strict_tls_http": 135,
+    "completed_get": 133,
+    "ru_asns": [
+      12389,
+      15774,
+      52043
+    ],
+    "http_codes": {
+      "502": 2,
+      "200": 103,
+      "302": 10,
+      "307": 4,
+      "503": 4,
+      "206": 4,
+      "404": 2,
+      "301": 6
+    },
+    "globalping_requests": 0
+  },
+  "batches": {
+    "43820622762": {
+      "sha256": "c2a5ed8a425deae703f6febe1e8fd27e27714997657b7ff3392bdd049f7cf894",
+      "observations": 14,
+      "strict_tls_http": 12,
+      "completed_get": 12,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43820990392-corporate": {
+      "sha256": "bfcf0d3ae52e5ae59822c830b614751f9d019a06de4916fe5d9fe66b3ce8e218",
+      "observations": 18,
+      "strict_tls_http": 16,
+      "completed_get": 14,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43820990392-service": {
+      "sha256": "f0f4ed81562b8910862fe078853204adf7e21dfe03ad0f4e590053ebb6ec03b4",
+      "observations": 16,
+      "strict_tls_http": 16,
+      "completed_get": 16,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43821104725": {
+      "sha256": "79a682e1ad1a7e2347b110c385c1085698e7077d64db992dfa91850d658b2d40",
+      "observations": 18,
+      "strict_tls_http": 17,
+      "completed_get": 17,
+      "ru_asns": [
+        12389,
+        15774
+      ]
+    },
+    "43821435420-epd": {
+      "sha256": "c1a1709054a718e3228022725f4dd694a2612bf5658d7a9a874beac27fd4781b",
+      "observations": 18,
+      "strict_tls_http": 18,
+      "completed_get": 18,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43821435420-hands-repeat": {
+      "sha256": "c65866c38b19dd395009e540f6c69283b337b158ba9955beed70f92f5aeba70f",
+      "observations": 6,
+      "strict_tls_http": 4,
+      "completed_get": 4,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43821474881-wallet-and-hands": {
+      "sha256": "bf5012d429d2652c12f62b88e8bd4bf092469dccc68907a8ca15b0c75691f016",
+      "observations": 12,
+      "strict_tls_http": 10,
+      "completed_get": 10,
+      "ru_asns": [
+        12389,
+        52043
+      ]
+    },
+    "43821760110-alt": {
+      "sha256": "d211dbdca7bb41da9f686afd5fb36ed3fea3744f3c4abb880d1d8d133faa4263",
+      "observations": 8,
+      "strict_tls_http": 8,
+      "completed_get": 8,
+      "ru_asns": [
+        12389,
+        52043
+      ]
+    },
+    "43821760110-dependencies": {
+      "sha256": "c5abab1a5e044ac0809b091f3159f0536e8af178e75736e5dde412ca1370071b",
+      "observations": 16,
+      "strict_tls_http": 16,
+      "completed_get": 16,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43821850011": {
+      "sha256": "9950c8f31e83170df79afaa93b40ca062380d50595acfbef9fa49f9aba92878b",
+      "observations": 12,
+      "strict_tls_http": 12,
+      "completed_get": 12,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    },
+    "43822012849": {
+      "sha256": "97d7eff231022248649aa519a8e7c14965eabc6ddf751383e553949229af1c9d",
+      "observations": 6,
+      "strict_tls_http": 6,
+      "completed_get": 6,
+      "ru_asns": [
+        15774,
+        52043
+      ]
+    }
+  }
+}

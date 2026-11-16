@@ -1,0 +1,13 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+15774	15774	15774	2	epd.mig24.online	https://epd.mig24.online/	200	0	0	text/html	4339	6bf7b5bf55dc14cc0f64b5ce3d7c8f179ee6e7698f8cb13b52ea439624447fe7	178.47.34.84	vpn_body_unproven	ЭПД.МИГ24	
+15774	15774	15774	2	edo.mig24.online	https://edo.mig24.online/	200	0	0	text/html	1498	b27e5d62bd8bcb0c5458b2cfd6fd13f1abebaead5bb21f3f3e47fcb86527c1fc	178.47.34.84	vpn_body_unproven	ЭДО.МИГ24	
+15774	15774	15774	2	kodedo.mig24.online	https://kodedo.mig24.online/	200	0	0	text/html	5924	6326ce4bc2dae8024b6cd5dfcb1edabfe185b2d298ac6f42a9385c5d0bb31b3c	194.213.21.146	vpn_visible_review	Поиск кодов абонентов ЭДО	
+15774	15774	15774	2	auth-oidc.ntssoft.ru	https://auth-oidc.ntssoft.ru/	200	0	0	text/html	795	13c6b45eacab6312c78be5f94ce6f0eebd88f1e506fd7ba5e37eb051ca703ccf	178.47.34.84	vpn_body_unproven	Аутентификация	
+15774	15774	15774	2	www.ediweb.ru	https://www.ediweb.ru/	302	0	0	text/html	145	de7f116ea31b208fcd14bca99153015352dee9cb904e196a476d48e639faf38c	185.204.20.86	vpn_redirect	302 Found	https://ediweb.com/ru-ru
+15774	15774	15774	2	ediweb.com	https://ediweb.com/ru-ru	200	0	0	text/html; charset=utf-8	10000	ca4fa7b6472489885511aefa8880c24139b7e1157fe3d1742a607d033afdb0d8	185.204.20.86	vpn_visible_review	ЭДО и EDI от оператора Эдивеб | Электронный документооборот	
+52043	52043	52043	2	epd.mig24.online	https://epd.mig24.online/	200	0	0	text/html	4339	6bf7b5bf55dc14cc0f64b5ce3d7c8f179ee6e7698f8cb13b52ea439624447fe7	178.47.34.84	vpn_body_unproven	ЭПД.МИГ24	
+52043	52043	52043	2	edo.mig24.online	https://edo.mig24.online/	200	0	0	text/html	1498	b27e5d62bd8bcb0c5458b2cfd6fd13f1abebaead5bb21f3f3e47fcb86527c1fc	178.47.34.84	vpn_body_unproven	ЭДО.МИГ24	
+52043	52043	52043	2	kodedo.mig24.online	https://kodedo.mig24.online/	200	0	0	text/html	5924	6326ce4bc2dae8024b6cd5dfcb1edabfe185b2d298ac6f42a9385c5d0bb31b3c	194.213.21.146	vpn_visible_review	Поиск кодов абонентов ЭДО	
+52043	52043	52043	2	auth-oidc.ntssoft.ru	https://auth-oidc.ntssoft.ru/	200	0	0	text/html	795	13c6b45eacab6312c78be5f94ce6f0eebd88f1e506fd7ba5e37eb051ca703ccf	178.47.34.84	vpn_body_unproven	Аутентификация	
+52043	52043	52043	2	www.ediweb.ru	https://www.ediweb.ru/	302	0	0	text/html	145	de7f116ea31b208fcd14bca99153015352dee9cb904e196a476d48e639faf38c	185.204.20.86	vpn_redirect	302 Found	https://ediweb.com/ru-ru
+52043	52043	52043	2	ediweb.com	https://ediweb.com/ru-ru	200	0	0	text/html; charset=utf-8	10000	ca4fa7b6472489885511aefa8880c24139b7e1157fe3d1742a607d033afdb0d8	185.204.20.86	vpn_visible_review	ЭДО и EDI от оператора Эдивеб | Электронный документооборот	
