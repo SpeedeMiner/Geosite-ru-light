@@ -1,0 +1,42 @@
+service	host	public_url	primary_source	function	light_ru_v11.20	server_ru_v11.20	plus128	light_block_v11.20
+Supl	supl.biz	https://supl.biz/p/kz/	https://supl.biz/p/kz/	Kazakhstan offer and main platform	-	-	-	-
+Supl	www.supl.biz	https://www.supl.biz/	https://supl.biz/p/terms/	Alias cited in current user agreement	-	-	-	-
+Supl	cdn.supl.biz	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	https://supl.biz/en/faq/post/users_guide_suplbiz/	Published help image, not proof of main platform	-	-	-	-
+Documentolog	doculite.kz	https://doculite.kz/	https://documentolog.com/en/blog/doculite-kz-obnovlen-do-versii-3-2	Historical Kazakhstan brand	domain:kz	domain:kz	-	-
+Documentolog	doculite.com	https://doculite.com/home	https://documentolog.com/blog/novyy-funkcional-servisa-doculite-com-konstruktor-dokumentov-i-quot-zhivaya-quot-podpis	Published legacy Personal entry	-	-	-	-
+Documentolog	personal.documentolog.com	https://personal.documentolog.com/home	https://doculite.com/home	Canonical Personal frontend	-	-	yes	-
+Documentolog	business.documentolog.com	https://business.documentolog.com/useful	https://documentolog.com/	Business frontend	full:business.documentolog.com	full:business.documentolog.com	-	-
+Documentolog	account.documentolog.com	https://account.documentolog.com/support-center/business?locale=ru	https://documentolog.com/	Authorization and support	full:account.documentolog.com	full:account.documentolog.com	-	-
+Documentolog	market.documentolog.com	https://market.documentolog.com/	https://documentolog.com/en	Marketplace	-	-	yes	-
+Documentolog	osihub.documentolog.com	https://osihub.documentolog.com/integrations-business/api	https://documentolog.com/	OSI hub	-	-	yes	-
+Documentolog	apicom.documentolog.com	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	https://documentolog.com/en	Published Business PDF, not API operations	-	-	-	-
+Documentolog	cdn.documentolog.kz	https://cdn.documentolog.kz/public/fonts/Roboto/stylesheet.css	https://personal.documentolog.com/home	Frontend font resource	domain:kz	domain:kz	-	-
+Documentolog	d8n.ai	https://d8n.ai/en/	https://documentolog.com/en	Existing D8N product	full:d8n.ai	full:d8n.ai	-	-
+Documentolog	leeloo.documentolog.com	https://leeloo.documentolog.com/privacy	https://documentolog.com/en	External chat channel privacy notice, exact destination to verify	-	-	-	-
+Mitwork	eep.mitwork.kz	https://eep.mitwork.kz/ru/user/login	https://eep.mitwork.kz/ru/	Eurasian procurement portal sign-in page	domain:kz	domain:kz	-	-
+Mitwork	edoc.kz	https://edoc.kz/	https://mitwork.kz/	Document management	domain:kz	domain:kz	-	-
+Mitwork	getcontract.kz	https://getcontract.kz/	https://mitwork.kz/	Public contracting frontend	domain:kz	domain:kz	-	-
+Mitwork	mitwork-team.atlassian.net	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	https://eep.mitwork.kz/ru/	Published supplier help, exact tenant only	-	-	-	-
+PRG	edo.prg.kz	https://edo.prg.kz/	https://prg.kz/uploads/edov2/index.html	Document management	domain:kz	domain:kz	-	-
+Doodocs	cabinet.doodocs.kz	https://cabinet.doodocs.kz/	https://doodocs.kz/	Sign-in	domain:kz	domain:kz	-	-
+Doodocs	help.doodocs.kz	https://help.doodocs.kz/knowledge_base	https://doodocs.kz/	Knowledge base	domain:kz	domain:kz	-	-
+Docrobot	www.docrobot.kz	https://www.docrobot.kz/	https://www.docrobot.kz/	Kazakhstan product site	domain:kz	domain:kz	-	-
+Docrobot	edi.docrobot.kz	https://edi.docrobot.kz/login	https://www.docrobot.kz/	Operational cabinet	domain:kz	domain:kz	-	-
+reKassa	rekassa.kz	https://rekassa.kz/ru/rekassa-edo	https://rekassa.kz/ru/rekassa-edo	EDO product	domain:kz	domain:kz	-	-
+reKassa	ofd.rekassa.kz	https://ofd.rekassa.kz/portal/login	https://rekassa.kz/ru/rekassa-edo	OFD portal	domain:kz	domain:kz	-	-
+KZ Telecom	docs.telecom.kz	https://docs.telecom.kz/?lang=ru	https://docs.telecom.kz/?lang=ru	Document platform	domain:kz	domain:kz	-	-
+IDOCS	idocs.me	https://idocs.me/	https://idocs.kz/	IDOCS platform	full:idocs.me	full:idocs.me	-	-
+1C Kazakhstan	edo.1c.kz	https://edo.1c.kz/ru/	https://1c.kz/news/detail/176562/	Kazakhstan EDO	domain:kz	domain:kz	-	-
+Setty	setty.kz	https://setty.kz/ru/edi/provider	https://setty.kz/ru/edi	EDI for suppliers	domain:kz	domain:kz	-	-
+Ediweb	ediweb.com	https://ediweb.com/ru-ru/connect/countries/kazakhstan	https://ediweb.com/ru-ru/connect/countries/kazakhstan	Kazakhstan retailer connection	-	-	yes	-
+OnaiDocs	app.onaidocs.kz	https://app.onaidocs.kz/	https://onaidocs.kz/	Published sign-in	domain:kz	domain:kz	-	-
+Uchet	edo.uchet.kz	https://edo.uchet.kz/	https://edo.uchet.kz/instruction	Kazakhstan EDO	domain:kz	domain:kz	-	-
+HyperDocs	hyperdocs.kz	https://hyperdocs.kz/API.html	https://hyperdocs.kz/API.html	Public API docs, no operations	domain:kz	domain:kz	-	-
+SIGEX	www.sigex.kz	https://www.sigex.kz/support/developers/	https://www.sigex.kz/support/developers/	Public signature developer docs	domain:kz	domain:kz	-	-
+Qoldau	cgr.qoldau.kz	https://cgr.qoldau.kz/ru/start	https://qoldau.kz/ru	CargoRuqsat public entry	domain:kz	domain:kz	-	-
+Qoldau	cga.qoldau.kz	https://cga.qoldau.kz/ru/start	https://qoldau.kz/ru	Cargo Alem public entry	domain:kz	domain:kz	-	-
+Qoldau	cgt.qoldau.kz	https://cgt.qoldau.kz/	https://qoldau.kz/ru	Cargo Track published host	domain:kz	domain:kz	-	-
+KZT	epay.railways.kz	https://epay.railways.kz/SVPayments/index.jsf	https://epay.railways.kz/SVPayments/index.jsf	Public payment screen	domain:kz	domain:kz	-	-
+KZT	asudkros.railways.kz	https://asudkros.railways.kz/	https://networksenergy.kz/news/vnimanie-uvazaemye-polzovateli-s-26-12-2022g-10-00-nacinaetsa-poetapnyj-perehod-modulej-na-asu-dkr-na-otkrytyh-tehnologiah	Public client portal	domain:kz	domain:kz	-	-
+KZ Transport	esutd.gov.kz	https://esutd.gov.kz/home	https://esutd.gov.kz/	Transport documents platform	domain:kz	domain:kz	-	-
+KZ Transport	e-cmr.kz	https://e-cmr.kz/	https://e-cmr.kz/	Separate e-CMR entry; no claim of fiscal/legal status	domain:kz	domain:kz	-	-
