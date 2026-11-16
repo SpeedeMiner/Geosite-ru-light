@@ -1,4 +1,4 @@
-name: GeoSite LiveDigital exact-only SRS preview
+name: GeoSite Selectel and LiveDigital public DNS and download checks
 
 on:
   push:
@@ -9,81 +9,69 @@ permissions:
   contents: read
 
 jobs:
-  preview:
-    name: Verify exact-only candidate and round-trip all SRS
+  public-observation:
     runs-on: ubuntu-24.04
-    timeout-minutes: 4
+    timeout-minutes: 3
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          persist-credentials: false
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          repository: SpeedeMiner/Geosite-ru-server
-          ref: e31b5c30d26299315163050a185dac0f7648e466
-          path: .server-tools
-          persist-credentials: false
-      - name: Build and compare baseline and preview assets
+      - name: Query two public resolvers and sample published downloads
         run: |
           set -euo pipefail
-          work="$RUNNER_TEMP/geosite-cdn"
-          mkdir -p "$work"
-          curl -fsSL --max-time 30 --proto '=https' --proto-redir '=https' \
-            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_RU.dat \
-            -o "$work/base.dat"
-          printf '493de38dcb8de4076e8b3659271e92992fc30d3f3b41a4251755af9000cfecf9  %s\n' "$work/base.dat" | sha256sum -c
-          python3 - "$work" <<'PY'
-          import sys
-          from pathlib import Path
-          sys.path.insert(0, str(Path('.server-tools/tools').resolve()))
-          from project_geosite import FULL, digest, encode, fields, message, read_ru
-          root = Path(sys.argv[1])
-          source = (root / 'base.dat').read_bytes()
-          _, rules = read_ru(source)
-          hosts = Path('docs/research/2026-11-14-wide-post-v11-18/get-audit/selcdn-20261116/candidate-plus4.txt').read_text().splitlines()
-          assert len(set(hosts)) == len(hosts) == 4 and all(x.startswith('full:') for x in hosts)
-          for entry in sorted(hosts):
-              host = entry.split(':', 1)[1]
-              assert (FULL, host) not in rules
-              rules[FULL, host] = b'\x08\x03' + message(2, host.encode('ascii'))
-          ru = next(iter(fields(encode(rules))))[1]
-          modified = b''.join(message(1, ru if dict(fields(site))[1] == b'RU' else site) for _, site in fields(source))
-          assert digest(modified) == '08956db76f7048aaa8f1b8c65bd5d5d4b05704d6c1e26036b3586ca38ee29740'
-          (root / 'preview.dat').write_bytes(modified)
-          PY
-          curl -fsSL --max-time 40 --proto '=https' --proto-redir '=https' \
-            https://github.com/SagerNet/sing-box/releases/download/v1.13.12/sing-box-1.13.12-linux-amd64.tar.gz \
-            -o "$work/sing-box.tar.gz"
-          printf '1540533adb3df24f5ad5f14b5c7ca3dbc2401b10a1c1eb278fcadcada47ec6c4  %s\n' "$work/sing-box.tar.gz" | sha256sum -c
-          tar -xOzf "$work/sing-box.tar.gz" sing-box-1.13.12-linux-amd64/sing-box > "$work/sing-box"
-          chmod 0700 "$work/sing-box"
-          for type in base preview; do
-            python3 tools/build_geosite_srs.py build --dat "$work/$type.dat" --output-dir "$work/$type" --sing-box "$work/sing-box"
-          done
-          curl -fsSL --max-time 20 --proto '=https' --proto-redir '=https' \
-            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_srs.sha256sum \
-            -o "$work/published.sha256sum"
-          (cd "$work/base" && sha256sum --check --strict "$work/published.sha256sum")
-          python3 - "$work" > srs-comparison.tsv <<'PY'
-          from pathlib import Path
+          python3 - <<'PY'
+          import concurrent.futures
           import hashlib
-          import sys
-          from struct import unpack
-          root = Path(sys.argv[1])
-          a = {p.name: p for p in (root / 'base').glob('*.srs')}
-          b = {p.name: p for p in (root / 'preview').glob('*.srs')}
-          assert a.keys() == b.keys() and len(a) == 18
-          print('name\tbaseline_sha256\tpreview_sha256\tchanges')
-          for name in sorted(a):
-              old = hashlib.sha256(a[name].read_bytes()).hexdigest()
-              new = hashlib.sha256(b[name].read_bytes()).hexdigest()
-              assert (old != new) == (name == 'geosite_RU.srs'), name
-              print(name, old, new, 'changed' if old != new else 'unchanged', sep='\t')
+          import json
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+
+          hosts = [
+              'cdn.selectel.ru', 'cdn-blog.selectel.ru', 'www.novochag.ru', 'edu.livedigital.space',
+              'docs.livedigital.space', 'help.livedigital.space', 'livedigital.space',
+              'downloads.livedigital.space', 'check.livedigital.space',
+              '900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net',
+          ]
+          resolvers = {'google': 'https://dns.google/resolve', 'cloudflare': 'https://cloudflare-dns.com/dns-query'}
+
+          def dns(item):
+              resolver, host, qtype = item
+              row = dict(kind='dns', resolver=resolver, host=host, qtype=qtype)
+              url = resolvers[resolver] + '?' + urlencode({'name': host, 'type': qtype})
+              try:
+                  with urlopen(Request(url, headers={'Accept': 'application/dns-json'}), timeout=8) as response:
+                      data = json.loads(response.read(65536))
+                  row.update(status=data.get('Status'), answers=[a for a in data.get('Answer', []) if a.get('type') in (1, 5, 28)])
+              except (OSError, ValueError) as error:
+                  row.update(error=type(error).__name__)
+              return row
+
+          def download(url):
+              row = dict(kind='download_range', url=url)
+              with tempfile.TemporaryDirectory() as tmp:
+                  body = Path(tmp) / 'body'
+                  proc = subprocess.run(['curl', '-q', '-sS', '--max-time', '12', '--max-filesize', '65536',
+                                         '--range', '0-511', '--proto', '=https', '--output', str(body),
+                                         '--write-out', '%{json}', '--', url], capture_output=True, text=True, timeout=15)
+                  data = json.loads(proc.stdout or '{}')
+                  row.update(curl_exit=proc.returncode, tls_verify=data.get('ssl_verify_result'),
+                             http=data.get('response_code'), mime=data.get('content_type'),
+                             redirect_url=data.get('redirect_url'), remote_ip=data.get('remote_ip'))
+                  if body.exists():
+                      sample = body.read_bytes()
+                      row.update(sample_size=len(sample), sha256=hashlib.sha256(sample).hexdigest())
+              return row
+
+          tasks = [(resolver, host, qtype) for host in hosts for resolver in resolvers for qtype in ('A','AAAA')]
+          files = ['livedigital-arm64-latest.dmg', 'livedigital-latest.dmg']
+          with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
+              a = list(pool.map(dns, tasks))
+              b = list(pool.map(download, ['https://downloads.livedigital.space/livedigital-desktop/' + name for name in files]))
+          Path('dns-downloads.jsonl').write_text(''.join(json.dumps(r, sort_keys=True) + '\n' for r in a + b))
           PY
-          cat srs-comparison.tsv
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-selcdn-srs-preview
-          path: srs-comparison.tsv
+          name: geosite-selcdn-dns-downloads
+          path: dns-downloads.jsonl
           if-no-files-found: error
           retention-days: 7
