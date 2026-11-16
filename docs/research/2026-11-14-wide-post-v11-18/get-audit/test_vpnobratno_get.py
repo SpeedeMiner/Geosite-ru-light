@@ -143,6 +143,30 @@ class VpnObratnoGetTests(unittest.TestCase):
                 self.assertEqual(rc, 0)
                 self.assertNotIn('same_url_cookie_initial_http', info)
 
+    def test_public_document_requires_a_complete_strict_pdf(self):
+        from hashlib import sha256
+        from vpnobratno_get import APICOM_PUBLIC_PDF
+        row = dict(ROW, url=APICOM_PUBLIC_PDF, host='apicom.documentolog.com', cohort='public_pdf_full')
+        payload = b'%PDF-1.7\nfixture\n%%EOF\n'
+        cases = [(0, 200, 0, payload, True), (28, 200, 0, payload, False),
+                 (0, 206, 0, payload, False), (0, 200, 60, payload, False),
+                 (0, 200, 0, payload[:-7], False)]
+        for rc, status, tls, body, expected in cases:
+            def fake(argv, **kwargs):
+                pathlib.Path(argv[argv.index('--output')+1]).write_bytes(body)
+                stats = dict(STATS, response_code=status, ssl_verify_result=tls,
+                             size_download=len(payload), content_type='application/pdf')
+                return SimpleNamespace(returncode=rc, stdout=json.dumps(stats))
+            with self.subTest(rc=rc, status=status, tls=tls, size=len(body)), patch('vpnobratno_get.subprocess.run', side_effect=fake) as run:
+                _, stats, _ = get_from_tunnel(row, '8.8.8.8', 'tun0', 5)
+                args=run.call_args.args[0]
+                self.assertNotIn('--range', args)
+                self.assertNotIn('--insecure', args)
+                self.assertEqual('public_pdf_sha256' in stats, expected)
+                if expected:
+                    self.assertEqual(stats['public_pdf_sha256'], sha256(payload).hexdigest())
+                    self.assertEqual(stats['public_pdf_bytes'], len(payload))
+
     def test_range_is_limited_to_specific_public_documentation_urls(self):
         for url, cohort, expected in [
             ('https://api.curator.pro/', 'corporate', True),
