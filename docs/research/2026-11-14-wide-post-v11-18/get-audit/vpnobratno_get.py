@@ -55,6 +55,11 @@ PUBLIC_DOC_RANGE = {
 NSPK_TRUST_ONLY = frozenset(('https://nspk.com/', 'https://www.nspk.com/'))
 NSPK_TRUST_ROOT = Path('.vpn-pilot/nspk-ca/root.pem')
 NSPK_TRUST_SHA256 = '936a43fea6e8e525bcc0f81acd9c3d21b4fc4b9b68acea7906d698005afc6504'
+SUPL_COOKIE_GET = frozenset((
+    'https://supl.biz/',
+    'https://supl.biz/p/kz/',
+    'https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/',
+))
 TUN_RE = re.compile(r'tun[a-zA-Z0-9_.-]{1,12}\Z')
 NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
@@ -169,6 +174,10 @@ def get_from_tunnel(row, address, interface, timeout):
                     or hashlib.sha256(NSPK_TRUST_ROOT.read_bytes()).hexdigest() != NSPK_TRUST_SHA256):
                 raise ValueError('invalid scoped NSPK trust diagnostic')
             argv.extend(('--cacert', str(NSPK_TRUST_ROOT)))
+        cookie_get = row.get('cohort') == 'supl_cookie' and row['url'] in SUPL_COOKIE_GET
+        if cookie_get:
+            jar = str(Path(tmp) / 'cookies')
+            argv.extend(('--compressed', '--cookie', jar, '--cookie-jar', jar))
         argv.extend(('--', row['url']))
         allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
         try:
@@ -178,6 +187,17 @@ def get_from_tunnel(row, address, interface, timeout):
                 raise ValueError('invalid curl metadata')
             if stats.get('response_code') and stats.get('remote_ip') != str(target):
                 raise ValueError('curl did not use the pinned destination')
+            if (cookie_get and run.returncode == 0
+                    and stats.get('response_code') == 302
+                    and stats.get('ssl_verify_result') == 0
+                    and stats.get('redirect_url') == row['url']):
+                # Replay only the same public URL with its normal anonymous session.
+                # No credentials, cookie values in reports, or redirect following.
+                run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=timeout+2)
+                stats = json.loads(run.stdout) if run.stdout else {}
+                if not isinstance(stats,dict) or (stats.get('response_code') and stats.get('remote_ip') != str(target)):
+                    raise ValueError('cookie repeat did not use the pinned destination')
+                stats['same_url_cookie_initial_http'] = 302
             if (run.returncode == 0 and stats.get('response_code') == 200
                     and stats.get('ssl_verify_result') == 0
                     and row['url'] == 'https://data.nalog.ru/opendata/7707329152-reestropereldoc/data-20261106-structure-20251025.csv'
@@ -264,6 +284,8 @@ def observation(row, rc, stats, body, exit_info, address):
         else:
             x['echo_exit'] = 'unverified'
     x.pop('proxy_connect',None)
+    if stats.get('same_url_cookie_initial_http') == 302:
+        x['same_url_cookie_initial_http'] = 302
     state = x.pop('state').replace('workspace_', 'vpn_', 1)
     if rc in (51,60,77,83,90,91):
         state = 'vpn_tls_unproven'
