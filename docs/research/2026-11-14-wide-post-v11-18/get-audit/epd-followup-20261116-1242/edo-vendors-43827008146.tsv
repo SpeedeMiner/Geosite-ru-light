@@ -1,0 +1,13 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+52043	52043	52043	2	kb.cryptex.pro	https://kb.cryptex.pro/pages/viewpage.action?pageId=1442300		60	20		0		5.188.114.225	vpn_tls_unproven		
+52043	52043	52043	2	kb.cryptex.pro	https://kb.cryptex.pro/display/SIGP/Web%2BAPI		60	20		0		5.188.114.225	vpn_tls_unproven		
+52043	52043	52043	2	cryptex.pro	https://cryptex.pro/	200	0	0	text/html; charset=UTF-8	10000	89718e4adc09d8e8ff5123df78dd724fe7fb4446b2462492c49414005d672861	185.26.122.68	vpn_visible_review	«Cryptex»	
+52043	52043	52043	2	dikeyca.ru	https://dikeyca.ru/ACTION	200	0	0	text/html; charset=UTF-8	10000	809b3c986ff4df93d5d1b0a54cb54603af0bfb5f4e7bbb9c9f3919ac574dbdc0	176.57.64.61	vpn_body_unproven	ЗАявка на тариф	
+52043	52043	52043	2	metaera.ru	https://metaera.ru/	200	0	0	text/html; charset=UTF-8	10000	59dadb0733b3ceb4ba5a0ca51dba487b842d37d3bfe5ec91f556a304670b8836	31.31.196.163	vpn_body_unproven	MetaEra - Весь офис в одной цифровой экосистеме	
+52043	52043	52043	2	ft-crypto.ru	https://ft-crypto.ru/edo	301	0	0	text/html	169	502083c916ae481cdd413b8d93315300653df5fb3dcc5770c01991de19977eae	217.77.108.72	vpn_redirect	301 Moved Permanently	https://www.ft-crypto.ru/edo
+28840	28840	28840	2	kb.cryptex.pro	https://kb.cryptex.pro/pages/viewpage.action?pageId=1442300		60	20		0		5.188.114.225	vpn_tls_unproven		
+28840	28840	28840	2	kb.cryptex.pro	https://kb.cryptex.pro/display/SIGP/Web%2BAPI		60	20		0		5.188.114.225	vpn_tls_unproven		
+28840	28840	28840	2	cryptex.pro	https://cryptex.pro/	200	0	0	text/html; charset=UTF-8	10000	89718e4adc09d8e8ff5123df78dd724fe7fb4446b2462492c49414005d672861	185.26.122.68	vpn_visible_review	«Cryptex»	
+28840	28840	28840	2	dikeyca.ru	https://dikeyca.ru/ACTION	200	0	0	text/html; charset=UTF-8	10000	809b3c986ff4df93d5d1b0a54cb54603af0bfb5f4e7bbb9c9f3919ac574dbdc0	176.57.64.61	vpn_body_unproven	ЗАявка на тариф	
+28840	28840	28840	2	metaera.ru	https://metaera.ru/	200	0	0	text/html; charset=UTF-8	10000	59dadb0733b3ceb4ba5a0ca51dba487b842d37d3bfe5ec91f556a304670b8836	31.31.196.163	vpn_body_unproven	MetaEra - Весь офис в одной цифровой экосистеме	
+28840	28840	28840	2	ft-crypto.ru	https://ft-crypto.ru/edo	301	0	0	text/html	169	502083c916ae481cdd413b8d93315300653df5fb3dcc5770c01991de19977eae	217.77.108.72	vpn_redirect	301 Moved Permanently	https://www.ft-crypto.ru/edo
