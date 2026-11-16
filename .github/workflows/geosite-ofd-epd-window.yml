@@ -1,4 +1,4 @@
-name: GeoSite Kazakhstan public Workbench dependencies
+name: GeoSite Supl anonymous browser session verification
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-dependencies-20261116
+  group: geosite-supl-ordinary-session-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [dependencies]
+        batch: [supl-session]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
