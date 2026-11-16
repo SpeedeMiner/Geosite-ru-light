@@ -31,6 +31,7 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://s3.k2.cloud/site-static/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%9D%D0%A1%D0%9F%D0%9A%20%D0%A1%D0%91%D0%9F%20QR.pdf': '0-511',
     'https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf': '0-4095',
     'https://handswork.pro/assets/style-BD5tlGNt.css': '0-4095',
     'https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css': '0-4095',

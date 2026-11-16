@@ -1,0 +1,4 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	s3.k2.cloud	s3.k2.cloud	https://s3.k2.cloud/site-static/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%9D%D0%A1%D0%9F%D0%9A%20%D0%A1%D0%91%D0%9F%20QR.pdf		https://support.sigma.ru/knowledge_base/item/267778
+corporate	candidate	console.k2.cloud	console.k2.cloud	https://console.k2.cloud/		https://docs.k2.cloud/ru/startguide.html
+corporate	control	docs.k2.cloud	docs.k2.cloud	https://docs.k2.cloud/ru/startguide.html	Начало работы	https://docs.k2.cloud/ru/startguide.html
