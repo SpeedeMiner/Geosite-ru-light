@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	payture.com	payture.com	https://payture.com/	Payture	https://payture.com/privacy-policy
+corporate	candidate	payture.com	payture.com	https://payture.com/privacy-policy		https://payture.com/
+corporate	candidate	payture.com	payture.com	https://payture.com/docs/working-with-api	Payture	https://payture.com/privacy-policy
+corporate	candidate	www.payture.com	www.payture.com	https://www.payture.com/docs/working-with-api	Payture	https://payture.com/privacy-policy
+corporate	candidate	ekassir.com	ekassir.com	https://ekassir.com/	eKassir	https://ekassir.com/about/
+corporate	candidate	ekassir.com	ekassir.com	https://ekassir.com/about/	eKassir	https://ekassir.com/
+corporate	candidate	ekassir.com	ekassir.com	https://ekassir.com/resheniya/digital-bank-platform/	eKassir	https://ekassir.com/about/
+corporate	comparison	www.ekassir.com	www.ekassir.com	https://www.ekassir.com/		https://ekassir.com/about/
+corporate	control	www.cbr.ru	www.cbr.ru	https://www.cbr.ru/registries/nps/		https://www.cbr.ru/
