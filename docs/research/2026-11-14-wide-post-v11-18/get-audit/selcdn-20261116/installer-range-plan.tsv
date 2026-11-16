@@ -1,0 +1,3 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	downloads.livedigital.space	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg		https://livedigital.space/
+corporate	control	downloads.livedigital.space	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-latest.dmg		https://livedigital.space/
