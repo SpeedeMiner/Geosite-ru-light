@@ -1,4 +1,4 @@
-name: GeoSite public video services through VPNObratno
+name: GeoSite Macroscop and Ivideon public paths
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-cdn-video-20261116
+  group: geosite-vpnobratno-cdn-video-cloud-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [services]
+        batch: [video-cloud]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
