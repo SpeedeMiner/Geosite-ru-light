@@ -1,73 +1,73 @@
 wave	url	measurement_id	measurement_state	asn	country	probe_state	http	trusted_tls	hostname_match	truncated	visible_chars	title	redirect_location
-globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	7987		
-globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	7987		
-globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	0	d8n.ai — AI Business OS: company knowledge for AI agents	
-globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	0	d8n.ai — AI Business OS: company knowledge for AI agents	
-globalping-wave1	https://doculite.com/	25GWhObobOzjfQqIu00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
+globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	7987		-
+globalping-wave1	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png	2pgFeTfdj69dhPLFP00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	7987		-
+globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	0	d8n.ai — AI Business OS: company knowledge for AI agents	-
+globalping-wave1	https://d8n.ai/en/	2EwjfosUQCqV6eBii00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	0	d8n.ai — AI Business OS: company knowledge for AI agents	-
+globalping-wave1	https://doculite.com/	25GWhObobOzjfQqIu00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
 globalping-wave1	https://doculite.com/	25GWhObobOzjfQqIu00021Vuy	probe_coverage_incomplete	12389	RU	redirect_observed	301	True	True	False	34	301 Moved Permanently	https://personal.documentolog.com/
 globalping-wave1	https://doculite.com/	25GWhObobOzjfQqIu00021Vuy	probe_coverage_incomplete	207957	RU	redirect_observed	301	True	True	False	34	301 Moved Permanently	https://personal.documentolog.com/
-globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	10	PRG.ЭДО - Сервис Электронного Документооборота в Казахстане	
-globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	10	PRG.ЭДО - Сервис Электронного Документооборота в Казахстане	
-globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0		
-globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0		
-globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave1	https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/	2tYmYw2PTlkfyDJSI00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
+globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	10	PRG.ЭДО - Сервис Электронного Документооборота в Казахстане	-
+globalping-wave1	https://edo.prg.kz/	2ktvJqfDOfUta5ILw00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	10	PRG.ЭДО - Сервис Электронного Документооборота в Казахстане	-
+globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0		-
+globalping-wave1	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	2gAMmtih9H22dcNdC00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0		-
+globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave1	https://personal.documentolog.com/	2eII1AnmFqkoaH5ik00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave1	https://personal.documentolog.com/registration	2f0AGmSw6v3xGTRQs00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave1	https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/	2tYmYw2PTlkfyDJSI00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
 globalping-wave1	https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/	2tYmYw2PTlkfyDJSI00021Vuy	probe_coverage_incomplete	12389	RU	redirect_observed	302	True	True	False	75		https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/
 globalping-wave1	https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/	2tYmYw2PTlkfyDJSI00021Vuy	probe_coverage_incomplete	207957	RU	redirect_observed	302	True	True	False	75		https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/
-globalping-wave1	https://supl.biz/p/kz/	2k49gOo0SnPEpbus800021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
+globalping-wave1	https://supl.biz/p/kz/	2k49gOo0SnPEpbus800021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
 globalping-wave1	https://supl.biz/p/kz/	2k49gOo0SnPEpbus800021Vuy	probe_coverage_incomplete	12389	RU	redirect_observed	302	True	True	False	28		https://supl.biz/p/kz/
 globalping-wave1	https://supl.biz/p/kz/	2k49gOo0SnPEpbus800021Vuy	probe_coverage_incomplete	207957	RU	redirect_observed	302	True	True	False	28		https://supl.biz/p/kz/
-globalping-wave1	https://www.supl.biz/	2a2sF6uBOSZdAahwe00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
+globalping-wave1	https://www.supl.biz/	2a2sF6uBOSZdAahwe00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
 globalping-wave1	https://www.supl.biz/	2a2sF6uBOSZdAahwe00021Vuy	probe_coverage_incomplete	12389	RU	redirect_observed	301	True	True	False	27	301 Moved Permanently	https://supl.biz/
 globalping-wave1	https://www.supl.biz/	2a2sF6uBOSZdAahwe00021Vuy	probe_coverage_incomplete	207957	RU	redirect_observed	301	True	True	False	27	301 Moved Permanently	https://supl.biz/
-globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	9804		
-globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	9804		
-globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Doodocs.kz	
-globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Doodocs.kz	
-globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	12389	RU	visible_body_review	200	True	True	False	121	Request Rejected	
-globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	207957	RU	visible_body_review	200	True	True	False	121	Request Rejected	
-globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	Sign Contracts Online for Free	
-globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	Sign Contracts Online for Free	
-globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	Электронный документооборот	
-globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	Электронный документооборот	
-globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	12389	RU	visible_body_review	200	True	True	False	1108	E-DOC	
-globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	207957	RU	visible_body_review	200	True	True	False	1108	E-DOC	
-globalping-wave2	https://eep.mitwork.kz/	2rUXzV04PQZCqi2tf00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
+globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	12389	RU	encoding_loss	200	True	True	True	9804		-
+globalping-wave2	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	28ScFdSOY0VuGAgHf00021Vuy	probe_coverage_incomplete	207957	RU	encoding_loss	200	True	True	True	9804		-
+globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	False	0	Doodocs.kz	-
+globalping-wave2	https://cabinet.doodocs.kz/	2GhYTHz0CJKvFXeJA00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	False	0	Doodocs.kz	-
+globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	12389	RU	visible_body_review	200	True	True	False	121	Request Rejected	-
+globalping-wave2	https://docs.telecom.kz/?lang=ru	2YenKvWUvbMoI7MjU00021Vuy	probe_coverage_incomplete	207957	RU	visible_body_review	200	True	True	False	121	Request Rejected	-
+globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	Sign Contracts Online for Free	-
+globalping-wave2	https://documentolog.com/en	2OAxnt6uWLpDKylal00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	Sign Contracts Online for Free	-
+globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	Электронный документооборот	-
+globalping-wave2	https://edi.docrobot.kz/	2dbN7WYAzwygefWDi00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	Электронный документооборот	-
+globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	12389	RU	visible_body_review	200	True	True	False	1108	E-DOC	-
+globalping-wave2	https://edoc.kz/	2H4a9gdzBGj9UgDBu00021Vuy	probe_coverage_incomplete	207957	RU	visible_body_review	200	True	True	False	1108	E-DOC	-
+globalping-wave2	https://eep.mitwork.kz/	2rUXzV04PQZCqi2tf00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
 globalping-wave2	https://eep.mitwork.kz/	2rUXzV04PQZCqi2tf00021Vuy	probe_coverage_incomplete	12389	RU	redirect_observed	302	True	True	False	15	302 Found	http://eep.mitwork.kz/ru/
 globalping-wave2	https://eep.mitwork.kz/	2rUXzV04PQZCqi2tf00021Vuy	probe_coverage_incomplete	207957	RU	redirect_observed	302	True	True	False	15	302 Found	http://eep.mitwork.kz/ru/
-globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	GetContract	
-globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	GetContract	
-globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	ЭДО для бизнеса в Казахстане — электронный документооборот	
-globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	ЭДО для бизнеса в Казахстане — электронный документооборот	
-globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							
-globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	EDI и ЭДО в Казахстане — Docrobot Центральная Азия	
-globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	EDI и ЭДО в Казахстане — Docrobot Центральная Азия	
+globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	GetContract	-
+globalping-wave2	https://getcontract.kz/	2V8kjKWKPI1vpCvx600021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	GetContract	-
+globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	ЭДО для бизнеса в Казахстане — электронный документооборот	-
+globalping-wave2	https://rekassa.kz/ru/rekassa-edo	2Jlfckk2u93242X4n00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	ЭДО для бизнеса в Казахстане — электронный документооборот	-
+globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	3216	RU	unexpected_probe							-
+globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	12389	RU	body_unproven	200	True	True	True	0	EDI и ЭДО в Казахстане — Docrobot Центральная Азия	-
+globalping-wave2	https://www.docrobot.kz/	2H21AcRCNjfIbVenX00021Vuy	probe_coverage_incomplete	207957	RU	body_unproven	200	True	True	True	0	EDI и ЭДО в Казахстане — Docrobot Центральная Азия	-
 globalping-wave3	https://doculite.com/home	2jN1fUmqH0WXIoQX200021Vv0	observed	3216	RU	redirect_observed	301	True	True	False	34	301 Moved Permanently	https://personal.documentolog.com/home
 globalping-wave3	https://doculite.com/home	2jN1fUmqH0WXIoQX200021Vv0	observed	12389	RU	redirect_observed	301	True	True	False	34	301 Moved Permanently	https://personal.documentolog.com/home
 globalping-wave3	https://doculite.com/home	2jN1fUmqH0WXIoQX200021Vv0	observed	207957	RU	redirect_observed	301	True	True	False	34	301 Moved Permanently	https://personal.documentolog.com/home
-globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	3216	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	
-globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	12389	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	
-globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	207957	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	
-globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	3216	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	12389	RU	body_unproven	200	True	True	False	0	Personal	
-globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	207957	RU	body_unproven	200	True	True	False	0	Personal	
+globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	3216	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	-
+globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	12389	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	-
+globalping-wave3	https://eep.mitwork.kz/ru/	23AULCqmgjDT5QaMt00021Vv0	observed	207957	RU	visible_body_review	200	True	True	True	423	Тендеры, аукционы, закупки Казахстана / Евразийский электронный портал	-
+globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	3216	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	12389	RU	body_unproven	200	True	True	False	0	Personal	-
+globalping-wave3	https://personal.documentolog.com/home	2nyJl8vQ0VriOtSv900021Vv0	observed	207957	RU	body_unproven	200	True	True	False	0	Personal	-
 globalping-wave3	https://supl.biz/	2s7asqJVo3YbC6lLU00021Vv0	observed	3216	RU	redirect_observed	302	True	True	False	23		https://supl.biz/
 globalping-wave3	https://supl.biz/	2s7asqJVo3YbC6lLU00021Vv0	observed	12389	RU	redirect_observed	302	True	True	False	23		https://supl.biz/
 globalping-wave3	https://supl.biz/	2s7asqJVo3YbC6lLU00021Vv0	observed	207957	RU	redirect_observed	302	True	True	False	23		https://supl.biz/
@@ -77,21 +77,21 @@ globalping-wave3	https://supl.biz/faq/instrukciya-dlya-postavshikov-registration
 globalping-wave3	https://supl.biz/prices/?currency=kzt	2IEAIsZZRnI5Cjopg00021Vv0	observed	3216	RU	redirect_observed	301	True	True	False	57		https://supl.biz/prices/%3fcurrency=kzt
 globalping-wave3	https://supl.biz/prices/?currency=kzt	2IEAIsZZRnI5Cjopg00021Vv0	observed	12389	RU	redirect_observed	301	True	True	False	57		https://supl.biz/prices/%3fcurrency=kzt
 globalping-wave3	https://supl.biz/prices/?currency=kzt	2IEAIsZZRnI5Cjopg00021Vv0	observed	207957	RU	redirect_observed	301	True	True	False	57		https://supl.biz/prices/%3fcurrency=kzt
-globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	3216	RU	body_unproven	200	True	True	True	0	Электронный документооборот	
-globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	12389	RU	body_unproven	200	True	True	True	0	Электронный документооборот	
-globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	207957	RU	body_unproven	200	True	True	True	0	Электронный документооборот	
-globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	3216	RU	visible_body_review	200	True	True	False	1108	E-DOC	
-globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	12389	RU	visible_body_review	200	True	True	False	1108	E-DOC	
-globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	207957	RU	visible_body_review	200	True	True	False	1108	E-DOC	
-globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	3216	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	
-globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	12389	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	
-globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	207957	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	
-globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	3216	RU	non_html_review	200	True	True	False	621		
-globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	12389	RU	non_html_review	200	True	True	False	621		
-globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	207957	RU	non_html_review	200	True	True	False	621		
-globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	3216	RU	non_html_review	200	True	True	True	9211		
-globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	12389	RU	non_html_review	200	True	True	True	9211		
-globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	207957	RU	non_html_review	200	True	True	True	9211		
-globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	3216	RU	non_html_review	200	True	True	True	8643		
-globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	12389	RU	non_html_review	200	True	True	True	8643		
-globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	207957	RU	non_html_review	200	True	True	True	8643		
+globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	3216	RU	body_unproven	200	True	True	True	0	Электронный документооборот	-
+globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	12389	RU	body_unproven	200	True	True	True	0	Электронный документооборот	-
+globalping-wave4	https://edi.docrobot.kz/login	2EpADaO8E9EdCcamA00021VvA	observed	207957	RU	body_unproven	200	True	True	True	0	Электронный документооборот	-
+globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	3216	RU	visible_body_review	200	True	True	False	1108	E-DOC	-
+globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	12389	RU	visible_body_review	200	True	True	False	1108	E-DOC	-
+globalping-wave4	https://edoc.kz/	2gu61XmnabPJnwDqs00021VvA	observed	207957	RU	visible_body_review	200	True	True	False	1108	E-DOC	-
+globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	3216	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	-
+globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	12389	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	-
+globalping-wave4	https://eep.mitwork.kz/ru/user/login	2u0v6wZUm0rcPpppU00021VvA	observed	207957	RU	visible_body_review	200	True	True	True	335	Авторизация / Евразийский электронный портал	-
+globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	3216	RU	non_html_review	200	True	True	False	621		-
+globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	12389	RU	non_html_review	200	True	True	False	621		-
+globalping-wave4	https://personal.documentolog.com/favicon/manifest.json	2MCtefDYIRbg7M5S300021VvA	observed	207957	RU	non_html_review	200	True	True	False	621		-
+globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	3216	RU	non_html_review	200	True	True	True	9211		-
+globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	12389	RU	non_html_review	200	True	True	True	9211		-
+globalping-wave4	https://personal.documentolog.com/main.css	2pxSfgGk7jtbf5VFc00021VvA	observed	207957	RU	non_html_review	200	True	True	True	9211		-
+globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	3216	RU	non_html_review	200	True	True	True	8643		-
+globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	12389	RU	non_html_review	200	True	True	True	8643		-
+globalping-wave4	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js	2EF1hZldKqOvuljCG00021VvA	observed	207957	RU	non_html_review	200	True	True	True	8643		-
