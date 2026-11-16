@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	account.edge7.veeroute.cloud	account.edge7.veeroute.cloud	https://account.edge7.veeroute.cloud/styles-DAHOPMNW.css		https://account.edge7.veeroute.cloud/
+corporate	control	partner.edge7.veeroute.cloud	partner.edge7.veeroute.cloud	https://partner.edge7.veeroute.cloud/styles-DAHOPMNW.css		https://partner.edge7.veeroute.cloud/
+corporate	control	studio.edge7.veeroute.cloud	studio.edge7.veeroute.cloud	https://studio.edge7.veeroute.cloud/styles-VAXWCZVE.css		https://studio.edge7.veeroute.cloud/
+corporate	control	monitor.edge7.veeroute.cloud	monitor.edge7.veeroute.cloud	https://monitor.edge7.veeroute.cloud/styles-YPO3BGZH.css		https://monitor.edge7.veeroute.cloud/
+corporate	control	registry.edge7.veeroute.cloud	registry.edge7.veeroute.cloud	https://registry.edge7.veeroute.cloud/styles-DAHOPMNW.css		https://registry.edge7.veeroute.cloud/
+corporate	control	altlog.online	altlog.online	https://altlog.online/build/assets/app-Dc8KG67D.css		https://altlog.online/login
+corporate	control	routes.cargo.run	routes.cargo.run	https://routes.cargo.run/sites/606d671bd5c9a30008df3738/theme/stylesheets/bundle.css		https://routes.cargo.run/
