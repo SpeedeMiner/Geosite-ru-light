@@ -105,6 +105,44 @@ class VpnObratnoGetTests(unittest.TestCase):
         self.assertNotIn('HTTPS_PROXY',subprocess.call_args.kwargs['env'])
         self.assertEqual(args[-1],URL)
 
+    def test_supl_cookie_diagnostic_stays_on_one_pinned_public_url(self):
+        url = 'https://supl.biz/p/kz/'
+        row = dict(ROW, host='supl.biz', url=url, cohort='supl_cookie')
+        a = SimpleNamespace(returncode=0, stdout=json.dumps(dict(STATS, response_code=302, redirect_url=url)))
+        b = SimpleNamespace(returncode=0, stdout=json.dumps(STATS))
+        with patch('vpnobratno_get.subprocess.run', side_effect=[a, b]) as run:
+            rc, info, body = get_from_tunnel(row, '8.8.8.8', 'tun0', 5)
+            args1, args2 = [call.args[0] for call in run.call_args_list]
+        self.assertEqual(rc, 0)
+        self.assertEqual(info['same_url_cookie_initial_http'], 302)
+        self.assertEqual(info['response_code'], 200)
+        self.assertEqual(args1, args2)
+        self.assertEqual(args1[-1], url)
+        self.assertEqual(args1[args1.index('--resolve')+1], 'supl.biz:443:8.8.8.8')
+        self.assertEqual(args1[args1.index('--cookie')+1], args1[args1.index('--cookie-jar')+1])
+        self.assertNotIn('--location', args1)
+        self.assertNotIn('--insecure', args1)
+        evidence = observation(row, rc, info, body, EXIT, '8.8.8.8')
+        self.assertEqual(evidence['same_url_cookie_initial_http'], 302)
+        self.assertNotIn('cookies', evidence)
+
+    def test_supl_cookie_diagnostic_does_not_replay_on_other_urls_or_redirects(self):
+        url = 'https://supl.biz/p/kz/'
+        cases = [
+            (dict(ROW, host='supl.biz', url=url, cohort='corporate'), url, False),
+            (dict(ROW, host='supl.biz', url=url+'?x=1', cohort='supl_cookie'), url, False),
+            (dict(ROW, host='supl.biz', url=url, cohort='supl_cookie'), 'https://example.com/', True),
+        ]
+        for row, redirect, cookie in cases:
+            with self.subTest(row=row):
+                a = SimpleNamespace(returncode=0, stdout=json.dumps(dict(STATS, response_code=302, redirect_url=redirect)))
+                with patch('vpnobratno_get.subprocess.run', return_value=a) as run:
+                    rc, info, _ = get_from_tunnel(row, '8.8.8.8', 'tun0', 5)
+                    run.assert_called_once()
+                    self.assertEqual('--cookie' in run.call_args.args[0], cookie)
+                self.assertEqual(rc, 0)
+                self.assertNotIn('same_url_cookie_initial_http', info)
+
     def test_range_is_limited_to_specific_public_documentation_urls(self):
         for url, cohort, expected in [
             ('https://api.curator.pro/', 'corporate', True),
