@@ -1,4 +1,4 @@
-name: GeoSite Sign.Me public product sign-in pages
+name: GeoSite Docsvision learning and retail EDI public sources
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-signme-1356
+  group: geosite-docsvision-1356
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [signme]
+        batch: [docsvision]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
