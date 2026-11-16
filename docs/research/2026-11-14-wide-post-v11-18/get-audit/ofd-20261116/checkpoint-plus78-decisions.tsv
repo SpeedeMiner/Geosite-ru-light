@@ -1,0 +1,23 @@
+host	label	source	public_url	role	decision	strict_asns	runs	codes	observed
+handswork.pro	Рабочие Руки	https://legal.handswork.pro/	https://handswork.pro/	Веб-платформа в правовых документах оператора	include	12389,15774,52043	43820990392-corporate,43821474881-wallet-and-hands	200	12389:200:0,15774:200:0,52043:200:0
+b2bhumancloud.com	Рабочие Руки	https://russian.works/	https://b2bhumancloud.com/	ERP-сервис с прямыми ссылками на CRM и инструкции Рабочих Рук	include	15774,52043	43820990392-corporate	200	15774:200:0,52043:200:0
+russian.works	Рабочие Руки	https://smz.handswork.pro/	https://russian.works/	Официальный сайт для заказчиков, с обратной ссылкой на кабинет исполнителей и правовые документы	include	12389,52043	43820990392-corporate,43821474881-wallet-and-hands	200	12389:200:0,15774:-:28,52043:200:0
+www.russian.works	Рабочие Руки	https://russian.works/	https://www.russian.works/	Собственный WWW, на который ведёт логотип с главной страницы	include	12389,52043	43820990392-corporate,43821474881-wallet-and-hands	200	12389:200:0,15774:-:28,52043:200:0
+smz.handswork.pro	Рабочие Руки	https://npd.nalog.ru/aggregators/	https://smz.handswork.pro/	Адрес для самозанятых из перечня ФНС	hold	52043	43820622762,43821435420-hands-repeat	200	12389:-:-1,15774:-:28,52043:-:-1,52043:200:0
+crm.handswork.pro	Рабочие Руки	https://b2bhumancloud.com/	https://crm.handswork.pro/login	Кнопка входа в собственную рабочую CRM	hold				
+faq.handswork.pro	Рабочие Руки	https://b2bhumancloud.com/	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	Инструкция корпоративного сервиса	hold				
+www.atol.online	АТОЛ Онлайн	https://atol.online/	https://www.atol.online/	Брендовый WWW с редиректом на подтверждённый atol.online	include	15774,52043	43820990392-corporate	301	15774:301:0,52043:301:0
+mapcard.pro	Orange Data	https://orangedata.ru/	https://mapcard.pro/	Ссылка логотипа партнёра, постоянный редирект на vip-pay.ru, самостоятельный обязательный экран не обнаружен	hold				15774:301:0,52043:301:0
+cloudpayments.atlassian.net	CloudKassir	https://cloudkassir.ru/	https://cloudpayments.atlassian.net/wiki/spaces/KB/overview	Публичные страницы поддержки на Atlassian и общем CDN, не фискальная зависимость	hold	15774,52043	43820990392-service	200	15774:200:0,52043:200:0
+send-log.exigento.com	Инитпро ОФД	https://ofd-initpro.ru/	https://send-log.exigento.com/js/logs.js	Скрипт логирования, не функциональный хост кассы	hold				
+cdn5.helpdeskeddy.com	aQsi	https://aqsi.ru/	https://cdn5.helpdeskeddy.com/js/modules/chat_widget/hde.js	Сторонний чат поддержки, не операция кассы	hold				
+business.leradata.pro	LERADATA	https://mintrans.gov.ru/activities/%20214/376/377/380	https://business.leradata.pro/contacts/	Официальный сайт оператора ИС ЭПД	include	12389,15774	43821104725	200	12389:200:0,15774:200:0
+leradata.pro	LERADATA	https://business.leradata.pro/services/elektronnye-perevozochnye-dokumenty-epd/	https://leradata.pro/logon.php	Публичный экран входа по ссылке оператора	include	12389,15774	43821104725	200	12389:200:0,15774:200:0
+ediweb.com	Эдивеб	https://www.ediweb.ru/	https://ediweb.com/ru-ru/support/kb/288	Конечный сайт из реестра и официальная документация CorePlat	include	12389,15774	43821104725	200	12389:200:0,15774:200:0
+ru.ediweb.com	Эдивеб	https://ediweb.com/ru-ru/support/kb/288	https://ru.ediweb.com/secure/edi/ui/coreplat.html	Публичная страница российской платформы CorePlat	include	12389,15774	43821104725	200	12389:200:0,15774:200:0
+dropcat.ediweb.com	Эдивеб	https://ediweb.com/ru-ru/support/support	https://dropcat.ediweb.com/secure/edi/ui/dropcat.html	Публичный экран зарегистрированного продукта DropCat по прямой ссылке	include	15774,52043	43821435420-epd	200	15774:200:0,52043:200:0
+ru-sso.ediweb.com	Эдивеб	https://ediweb.com/ru-ru/platforms	https://ru-sso.ediweb.com/	Хост SSO по кнопке входа на официальном сайте	hold				
+m-core.pro	M-Core	https://npd.nalog.ru/aggregators/	https://m-core.pro/self-employed.html	Путь ФНС повторно 404, корень про ИТ-услуги	hold				15774:404:0,52043:404:0
+payselection.com	Payselection	https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx	https://payselection.com/	30 из 30 SERVFAIL, принадлежность и блокировка этим не определяются	hold				
+npd.walletone.com	Wallet One	https://npd.nalog.ru/credit-orgs/	https://npd.walletone.com/	Отдельная страница российской РНКО для самозанятых указана ФНС	hold				12389:502:0,52043:502:0
+www.walletone.com	Wallet One	https://npd.nalog.ru/credit-orgs/	https://www.walletone.com/ru/wallet/	Общий сервис, наблюдение служит сравнением, а не доказательством обязательной зависимости НПД	hold	12389,52043	43821474881-wallet-and-hands	200	12389:200:0,52043:200:0
