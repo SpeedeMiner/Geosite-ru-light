@@ -1,0 +1,42 @@
+{
+  "run_id": 43850363172,
+  "workflow_conclusion": "failure",
+  "batches": [
+    {
+      "batch": "smart-doc",
+      "artifact_id": 14217945332,
+      "archive_sha256": "99dbc481845a6ba3e438193902756c200b094dd36930b83c6d12a66896c5b054",
+      "conclusion": "success",
+      "asns": [
+        12389,
+        57835
+      ],
+      "observations": 4,
+      "complete_strict_200": 4
+    },
+    {
+      "batch": "smart-assets",
+      "artifact_id": 14217816093,
+      "archive_sha256": "551e3ba5e57ac7a0be2983c46e61cca78cb1b234ef7ea6ee3b65aa2ad39540bd",
+      "conclusion": "success",
+      "asns": [
+        12389,
+        57835
+      ],
+      "observations": 4,
+      "complete_strict_200": 4
+    },
+    {
+      "batch": "documentolog",
+      "artifact_id": 14217760637,
+      "archive_sha256": "5d9232dabee8695e59e6613659f64bc397712b4fe5ec6e0dd868563c3e3a4329",
+      "conclusion": "failure",
+      "asns": [
+        12389,
+        56420
+      ],
+      "observations": 2,
+      "complete_strict_200": 0
+    }
+  ]
+}
