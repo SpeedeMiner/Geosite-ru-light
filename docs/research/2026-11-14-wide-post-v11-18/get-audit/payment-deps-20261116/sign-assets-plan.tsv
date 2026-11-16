@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.sign.me	www.sign.me	https://www.sign.me/click/	Сайн.Клик	https://www.sign.me/promo/click/
+corporate	comparison	www.sign.me	www.sign.me	https://www.sign.me/promo/click/		https://sign.me/
+corporate	control	click.sign.me	click.sign.me	https://click.sign.me/lk/lk.DGctxd8H.css		https://click.sign.me/lk/
+corporate	control	smart.sign.me	smart.sign.me	https://smart.sign.me/assets/promo/css/smart_styles-1XUn6kul.css		https://smart.sign.me/
+corporate	control	backend.payture.com	backend.payture.com	https://backend.payture.com/css/device/general.css		https://backend.payture.com/
+corporate	control	kval.sign.me	kval.sign.me	https://kval.sign.me/login		https://sign.me/
+corporate	control	sign.me	sign.me	https://sign.me/login		https://kval.sign.me/login
