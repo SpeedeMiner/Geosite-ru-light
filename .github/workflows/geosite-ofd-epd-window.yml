@@ -1,4 +1,4 @@
-name: GeoSite independent Smart Cargo production content check
+name: GeoSite Smart Cargo tracking interface and same-host assets
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-edi-logistics-smartcargo-repeat-20261116
+  group: geosite-kz-edi-logistics-assets-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [smartcargo-repeat]
+        batch: [smartcargo-assets]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
