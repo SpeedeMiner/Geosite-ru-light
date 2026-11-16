@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	simples.work	simples.work	https://simples.work/info		https://simples.work/
+corporate	candidate	simples.work	simples.work	https://simples.work/privacy		https://simples.work/
+corporate	candidate	tempojob.org	tempojob.org	https://tempojob.org/polzovatelskoe-soglashenie		https://tempojob.org/
+corporate	candidate	tempojob.org	tempojob.org	https://tempojob.org/privacypolicy		https://tempojob.org/
+corporate	candidate	reg.tempojob.org	reg.tempojob.org	https://reg.tempojob.org/agreement		https://tempojob.org/
+corporate	candidate	balans.pro	balans.pro	https://balans.pro/personal_data		https://balans.pro/smz
+corporate	candidate	smz.handswork.pro	smz.handswork.pro	https://smz.handswork.pro/app		https://smz.handswork.pro/
+corporate	candidate	www.nanimatel.com	www.nanimatel.com	https://www.nanimatel.com/		https://nanimatel.com/
+corporate	candidate	nalog.nanimatel.com	nalog.nanimatel.com	https://nalog.nanimatel.com/		https://nanimatel.com/docs/rules.pdf
+corporate	control	smz.konsol.pro	smz.konsol.pro	https://smz.konsol.pro/	Консоль	https://npd.nalog.ru/aggregators/
