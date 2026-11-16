@@ -1,0 +1,10 @@
+group	probe	candidate	host	url	marker	source
+corporate	candidate	veeroute.cloud	veeroute.cloud	https://veeroute.cloud/		https://veeroute.ru/
+corporate	control	veeroute.ru	veeroute.ru	https://veeroute.ru/		https://veeroute.ru/
+corporate	candidate	docs.prod7.veeroute.cloud	docs.prod7.veeroute.cloud	https://docs.prod7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	account.edge7.veeroute.cloud	account.edge7.veeroute.cloud	https://account.edge7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	partner.edge7.veeroute.cloud	partner.edge7.veeroute.cloud	https://partner.edge7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	studio.edge7.veeroute.cloud	studio.edge7.veeroute.cloud	https://studio.edge7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	monitor.edge7.veeroute.cloud	monitor.edge7.veeroute.cloud	https://monitor.edge7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	registry.edge7.veeroute.cloud	registry.edge7.veeroute.cloud	https://registry.edge7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	api.edge7.veeroute.cloud	api.edge7.veeroute.cloud	https://api.edge7.veeroute.cloud/account/file/insomnia_account_en.json		https://docs.edge7.veeroute.cloud/en/
