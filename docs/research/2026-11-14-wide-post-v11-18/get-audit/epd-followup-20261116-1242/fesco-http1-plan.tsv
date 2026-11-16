@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	trucks.fesco.com	trucks.fesco.com	https://trucks.fesco.com/platform/login		https://www.fesco.ru/ru/clients/lk/
+corporate	candidate	www.fesco.com	www.fesco.com	https://www.fesco.com/ru/clients/lk/	FESCO	https://www.fesco.ru/ru/clients/lk/
+corporate	comparison	fesco.com	fesco.com	https://fesco.com/ru/clients/lk/		https://www.fesco.ru/ru/clients/lk/
+corporate	control	www.fesco.ru	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/	FESCO	https://www.fesco.com/ru/clients/lk/
+corporate	control	my.fesco.com	my.fesco.com	https://my.fesco.com/login?locale=ru		https://www.fesco.ru/ru/clients/lk/
