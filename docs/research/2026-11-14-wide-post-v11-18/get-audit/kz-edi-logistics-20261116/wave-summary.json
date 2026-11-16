@@ -1,0 +1,134 @@
+{
+  "vpn": [
+    {
+      "group": "full-document",
+      "run": 43846916739,
+      "artifact": 14216101050,
+      "sha256": "9e808a8f3642f5acf5482a94d927a920767b1baa7d0c6bb7e83f90b75bf4e5f2",
+      "attempted_urls": 2,
+      "measurements": 4,
+      "http_responses": 1,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 1,
+      "asns": [
+        12389,
+        52043
+      ]
+    },
+    {
+      "group": "freight",
+      "run": 43847227907,
+      "artifact": 14216371411,
+      "sha256": "8cb337d21916ce518b7e043bd8f75c6ef1198c434b6c3674ba80e49633d4e4e9",
+      "attempted_urls": 10,
+      "measurements": 20,
+      "http_responses": 10,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 10,
+      "asns": [
+        12389,
+        52043
+      ]
+    },
+    {
+      "group": "pdf-repeat",
+      "run": 43847640462,
+      "artifact": 14215388304,
+      "sha256": "49c363e8161a38b8b61490b771d88bcbab91482b35d9bcb8b603e69fe72e1729",
+      "attempted_urls": 1,
+      "measurements": 2,
+      "http_responses": 0,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 0,
+      "asns": [
+        12389,
+        56420
+      ]
+    },
+    {
+      "group": "smartcargo",
+      "run": 43847819903,
+      "artifact": 14217080215,
+      "sha256": "1ffb8cedca189b7b44d3383a306ea5e518dc035833fda149de5201f7c1fab1d4",
+      "attempted_urls": 6,
+      "measurements": 12,
+      "http_responses": 11,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 9,
+      "asns": [
+        12389,
+        57835
+      ]
+    },
+    {
+      "group": "freight-repeat",
+      "run": 43847925914,
+      "artifact": 14216965637,
+      "sha256": "4e5792318dc9a0ae6502415ab01e61234cbd2e9b07c0b465347c6d4893d8c4f7",
+      "attempted_urls": 8,
+      "measurements": 15,
+      "http_responses": 8,
+      "upstream_state": "PARTIAL",
+      "curl0_tls0": 8,
+      "asns": [
+        12389,
+        28840
+      ]
+    },
+    {
+      "group": "smartcargo-repeat",
+      "run": 43848419671,
+      "artifact": 14216338071,
+      "sha256": "0934b7c4c4e8e005588be011e25f1f2c305f24a1c27c494f706af7c8821911ff",
+      "attempted_urls": 5,
+      "measurements": 10,
+      "http_responses": 9,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 9,
+      "asns": [
+        12389,
+        56420
+      ]
+    },
+    {
+      "group": "smartcargo-assets",
+      "run": 43848732739,
+      "artifact": 14216642613,
+      "sha256": "e942ac03a927d2bad799520b05d33003de73ace0b20861739d54566c6ccf293e",
+      "attempted_urls": 5,
+      "measurements": 10,
+      "http_responses": 8,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 4,
+      "asns": [
+        12389,
+        56420
+      ]
+    },
+    {
+      "group": "freight-targeted",
+      "run": 43848892955,
+      "artifact": 14217051309,
+      "sha256": "9f0bc2fbc32d33f6ad107262ad589cefd4bb4787571ee30528be0eb75459aa6f",
+      "attempted_urls": 4,
+      "measurements": 8,
+      "http_responses": 8,
+      "upstream_state": "COMPLETE",
+      "curl0_tls0": 8,
+      "asns": [
+        12389,
+        57835
+      ]
+    }
+  ],
+  "globalping": {
+    "measurements": 16,
+    "observations": 48
+  },
+  "local_document": {
+    "bytes": 2582147,
+    "pages": 10,
+    "sha256": "37596866ad4eba07a7b23f95ac3eebdadb7e0e19ec8af70cd465c69adfc06a71",
+    "scope": "workspace_only"
+  }
+}
