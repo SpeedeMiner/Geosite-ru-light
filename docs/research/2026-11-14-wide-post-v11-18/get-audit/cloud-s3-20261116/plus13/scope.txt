@@ -1,0 +1,13 @@
+full:ec2.ru-msk.k2.cloud
+full:ec2.ru-spb.k2.cloud
+full:eks.ru-msk.k2.cloud
+full:eks.ru-spb.k2.cloud
+full:iam.k2.cloud
+full:paas.ru-msk.k2.cloud
+full:paas.ru-spb.k2.cloud
+full:route53.k2.cloud
+full:s3-k41.objstor.cloud4u.com
+full:s3.k2.cloud
+full:s3.objstor.cloud4u.com
+full:s3.ru-msk.k2.cloud
+full:s3.ru-spb.k2.cloud

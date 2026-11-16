@@ -1,0 +1,1 @@
+full:s3.k2.cloud

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "countries": [
+    "RU",
+    "KZ",
+    "BY"
+  ],
+  "targets": [
+    {
+      "id": "cloud-1",
+      "domain": "s3.ru-msk.k2.cloud",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-2",
+      "domain": "s3.ru-spb.k2.cloud",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-3",
+      "domain": "s3.k2.cloud",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-4",
+      "domain": "s3.objstor.cloud4u.com",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-5",
+      "domain": "s3-k41.objstor.cloud4u.com",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-6",
+      "domain": "docs.k2.cloud",
+      "role": "control",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/ru/api/index.html"
+    },
+    {
+      "id": "cloud-7",
+      "domain": "storage.cloud.croc.ru",
+      "role": "control",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-8",
+      "domain": "s3.objstor.cloud4y.ru",
+      "role": "control",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    },
+    {
+      "id": "cloud-9",
+      "domain": "console.k2.cloud",
+      "role": "service",
+      "country_scope": [
+        "RU"
+      ],
+      "port": 443,
+      "path": "/"
+    }
+  ]
+}

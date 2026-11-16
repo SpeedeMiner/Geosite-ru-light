@@ -1,0 +1,69 @@
+host	provider	qtype	rcode	answers_type_and_data
+docs.k2.cloud	google	A	0	5:docs.k2.cloud.website.k2.cloud.,5:website.k2.cloud.,5:website.ru-msk.k2.cloud.,1:217.73.63.99
+docs.k2.cloud	google	AAAA	0	5:docs.k2.cloud.website.k2.cloud.,5:website.k2.cloud.,5:website.ru-msk.k2.cloud.
+docs.k2.cloud	cloudflare	A	0	5:docs.k2.cloud.website.k2.cloud.,5:website.k2.cloud.,5:website.ru-msk.k2.cloud.,1:217.73.63.99
+docs.k2.cloud	cloudflare	AAAA	0	5:docs.k2.cloud.website.k2.cloud.,5:website.k2.cloud.,5:website.ru-msk.k2.cloud.
+ec2.ru-msk.k2.cloud	google	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+ec2.ru-msk.k2.cloud	google	AAAA	0	5:ext.ru-msk.k2.cloud.
+ec2.ru-msk.k2.cloud	cloudflare	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+ec2.ru-msk.k2.cloud	cloudflare	AAAA	0	5:ext.ru-msk.k2.cloud.
+ec2.ru-spb.k2.cloud	google	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+ec2.ru-spb.k2.cloud	google	AAAA	0	5:ext.ru-spb.k2.cloud.
+ec2.ru-spb.k2.cloud	cloudflare	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+ec2.ru-spb.k2.cloud	cloudflare	AAAA	0	5:ext.ru-spb.k2.cloud.
+eks.ru-msk.k2.cloud	google	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+eks.ru-msk.k2.cloud	google	AAAA	0	5:ext.ru-msk.k2.cloud.
+eks.ru-msk.k2.cloud	cloudflare	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+eks.ru-msk.k2.cloud	cloudflare	AAAA	0	5:ext.ru-msk.k2.cloud.
+eks.ru-spb.k2.cloud	google	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+eks.ru-spb.k2.cloud	google	AAAA	0	5:ext.ru-spb.k2.cloud.
+eks.ru-spb.k2.cloud	cloudflare	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+eks.ru-spb.k2.cloud	cloudflare	AAAA	0	5:ext.ru-spb.k2.cloud.
+elastic.k2.cloud	google	A	0	
+elastic.k2.cloud	google	AAAA	0	
+elastic.k2.cloud	cloudflare	A	0	
+elastic.k2.cloud	cloudflare	AAAA	0	
+iam.k2.cloud	google	A	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+iam.k2.cloud	google	AAAA	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.
+iam.k2.cloud	cloudflare	A	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+iam.k2.cloud	cloudflare	AAAA	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.
+paas.ru-msk.k2.cloud	google	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+paas.ru-msk.k2.cloud	google	AAAA	0	5:ext.ru-msk.k2.cloud.
+paas.ru-msk.k2.cloud	cloudflare	A	0	5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+paas.ru-msk.k2.cloud	cloudflare	AAAA	0	5:ext.ru-msk.k2.cloud.
+paas.ru-spb.k2.cloud	google	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+paas.ru-spb.k2.cloud	google	AAAA	0	5:ext.ru-spb.k2.cloud.
+paas.ru-spb.k2.cloud	cloudflare	A	0	5:ext.ru-spb.k2.cloud.,1:5.35.72.3
+paas.ru-spb.k2.cloud	cloudflare	AAAA	0	5:ext.ru-spb.k2.cloud.
+route53.k2.cloud	google	A	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+route53.k2.cloud	google	AAAA	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.
+route53.k2.cloud	cloudflare	A	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.,1:5.35.64.255
+route53.k2.cloud	cloudflare	AAAA	0	5:primary.k2.cloud.,5:ext.ru-msk.k2.cloud.
+s3-k41.objstor.cloud4u.com	google	A	0	1:176.53.183.202
+s3-k41.objstor.cloud4u.com	google	AAAA	0	
+s3-k41.objstor.cloud4u.com	cloudflare	A	0	1:176.53.183.202
+s3-k41.objstor.cloud4u.com	cloudflare	AAAA	0	
+s3.k2.cloud	google	A	0	1:217.73.63.221
+s3.k2.cloud	google	AAAA	0	
+s3.k2.cloud	cloudflare	A	0	1:217.73.63.221
+s3.k2.cloud	cloudflare	AAAA	0	
+s3.objstor.cloud4u.com	google	A	0	1:176.53.183.202
+s3.objstor.cloud4u.com	google	AAAA	0	
+s3.objstor.cloud4u.com	cloudflare	A	0	1:176.53.183.202
+s3.objstor.cloud4u.com	cloudflare	AAAA	0	
+s3.objstor.cloud4y.ru	google	A	0	1:176.53.183.196
+s3.objstor.cloud4y.ru	google	AAAA	0	
+s3.objstor.cloud4y.ru	cloudflare	A	0	1:176.53.183.196
+s3.objstor.cloud4y.ru	cloudflare	AAAA	0	
+s3.ru-msk.k2.cloud	google	A	0	1:217.73.63.221
+s3.ru-msk.k2.cloud	google	AAAA	0	
+s3.ru-msk.k2.cloud	cloudflare	A	0	1:217.73.63.221
+s3.ru-msk.k2.cloud	cloudflare	AAAA	0	
+s3.ru-spb.k2.cloud	google	A	0	1:5.35.72.4
+s3.ru-spb.k2.cloud	google	AAAA	0	
+s3.ru-spb.k2.cloud	cloudflare	A	0	1:5.35.72.4
+s3.ru-spb.k2.cloud	cloudflare	AAAA	0	
+storage.cloud.croc.ru	google	A	0	1:217.73.63.221
+storage.cloud.croc.ru	google	AAAA	0	
+storage.cloud.croc.ru	cloudflare	A	0	1:217.73.63.221
+storage.cloud.croc.ru	cloudflare	AAAA	0	
