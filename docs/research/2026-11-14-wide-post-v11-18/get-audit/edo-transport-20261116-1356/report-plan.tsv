@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	report.myseldon.com	report.myseldon.com	https://report.myseldon.com/about		https://pro.myseldon.com/ru/news/seldon-report-analytics
+corporate	candidate	report.myseldon.com	report.myseldon.com	https://report.myseldon.com/		https://win.myseldon.com/
+corporate	candidate	news.myseldon.com	news.myseldon.com	https://news.myseldon.com/ru/		https://win.myseldon.com/
+corporate	comparison	seldon.org	seldon.org	https://seldon.org/		https://seldongroup.ru/
+corporate	control	win.myseldon.com	win.myseldon.com	https://win.myseldon.com/promo		https://win.myseldon.com/
+corporate	control	pro.myseldon.com	pro.myseldon.com	https://pro.myseldon.com/ru/news/seldon-report-analytics		https://seldongroup.ru/
+corporate	candidate	osihub.documentolog.com	osihub.documentolog.com	https://osihub.documentolog.com/ko		https://osihub.documentolog.com/
