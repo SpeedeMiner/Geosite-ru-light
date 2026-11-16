@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	mastergrad.com	mastergrad.com	https://mastergrad.com/	МастерГрад|ремонте	https://mastergrad.com/forums/individualnye-doma-i-postroyki/
+corporate	candidate	volvocars.club	volvocars.club	https://volvocars.club/	Российский Клуб|Вольво	https://volvocars.club/
+corporate	candidate	modx.pro	modx.pro	https://modx.pro/	MODX|Сообщество	https://modx.pro/
+corporate	candidate	searchengines.guru	searchengines.guru	https://searchengines.guru/ru/forum	Форум об интернет-маркетинге|Поисковые системы	https://searchengines.guru/ru/forum
+corporate	candidate	www.phpbbguru.net	www.phpbbguru.net	https://www.phpbbguru.net/community/	phpBB Guru|русская поддержка	https://www.phpbbguru.net/community/
+corporate	candidate	rsdn.org	rsdn.org	https://rsdn.org/forum/	Темы|Форум|Обсуждение	https://rsdn.org/forum/
+corporate	candidate	4pda.to	4pda.to	https://4pda.to/forum/	Правила|Форум	https://4pda.to/rules

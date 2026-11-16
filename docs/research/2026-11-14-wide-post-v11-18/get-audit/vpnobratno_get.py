@@ -131,6 +131,7 @@ LEISURE_PUBLIC_HTML = frozenset((
 
 
 FORUM_PUBLIC_HTML = frozenset((
+    'https://4pda.to/forum/',
     'https://4pda.to/rules',
     'https://blogs.rsdn.org/',
     'https://bvf.ru/forum/',
@@ -139,11 +140,14 @@ FORUM_PUBLIC_HTML = frozenset((
     'https://forum.faleristika.info/viewforum.php?f=316',
     'https://forum.ixbt.com/',
     'https://forum.omsk.com/',
+    'https://forum.omsk.com/index1.php',
     'https://forum.oszone.net/',
     'https://forum.ru-board.com/',
     'https://forum.rusmedserv.com/',
+    'https://forum.rusmedserv.com/index.php/',
     'https://forum.sibmama.ru/',
     'https://forum.smolensk.ws/',
+    'https://forum.smolensk.ws/index.php',
     'https://forumklerk.ru/',
     'https://forums.modlabs.net/',
     'https://kenotron.com/',
@@ -152,10 +156,13 @@ FORUM_PUBLIC_HTML = frozenset((
     'https://mastergrad.com/',
     'https://mathhelpplanet.com/',
     'https://maultalk.com/',
+    'https://modgames.net/forum/',
     'https://modx.pro/',
     'https://nissan-club.org/',
     'https://pesikot.org/forum/',
+    'https://pesikot.org/forum/index.php',
     'https://qna.habr.com/',
+    'https://rcopen.com/',
     'https://rcopen.com/forum/',
     'https://rpg-world.org/',
     'https://rsdn.org/forum/',
@@ -168,7 +175,9 @@ FORUM_PUBLIC_HTML = frozenset((
     'https://volvocars.club/',
     'https://www.maultalk.com/',
     'https://www.phpbbguru.net/community/',
+    'https://www.rusmedserv.com/about/contacts/',
     'https://www.vaz.ee/',
+    'https://www.yaplakal.com/forum/',
 ))
 
 

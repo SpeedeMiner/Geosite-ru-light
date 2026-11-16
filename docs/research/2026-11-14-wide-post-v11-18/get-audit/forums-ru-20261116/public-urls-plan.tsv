@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	rcopen.com	rcopen.com	https://rcopen.com/	Кордовые модели|Самолеты|Модели	https://rcopen.com/rules
+corporate	candidate	forum.rusmedserv.com	forum.rusmedserv.com	https://forum.rusmedserv.com/index.php/	Дискуссионный Клуб|Правила форума	https://www.rusmedserv.com/about/contacts/
+corporate	candidate	www.rusmedserv.com	www.rusmedserv.com	https://www.rusmedserv.com/about/contacts/	Русский Медицинский Сервер|Контакты	https://www.rusmedserv.com/about/contacts/
+corporate	candidate	forum.omsk.com	forum.omsk.com	https://forum.omsk.com/index1.php	Омский Форум|Раздел	https://forum.omsk.com/
+corporate	candidate	forum.smolensk.ws	forum.smolensk.ws	https://forum.smolensk.ws/index.php	Смоленский|Форум	https://forum.smolensk.ws/
+corporate	candidate	pesikot.org	pesikot.org	https://pesikot.org/forum/index.php	Пес и Кот|АРХИВ ФОРУМА	https://pesikot.org/o-nas/
+corporate	candidate	www.yaplakal.com	www.yaplakal.com	https://www.yaplakal.com/forum/	ЯПлакалъ|Разделы	https://www.yaplakal.com/
+corporate	candidate	modgames.net	modgames.net	https://modgames.net/forum/	ModGames|Форум	https://modgames.net/
