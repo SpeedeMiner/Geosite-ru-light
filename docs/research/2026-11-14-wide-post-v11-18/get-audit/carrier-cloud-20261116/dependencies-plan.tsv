@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	eltex-co.com	eltex-co.com	https://eltex-co.com/support/downloads/	Eltex	https://docs.eltex-co.ru/display/dgen/Eltex.Guides%2BEN
+corporate	candidate	api.eltex-co.com	api.eltex-co.com	https://api.eltex-co.com/storage/banner_base/17475689086829c90c3b429		https://eltex-co.com/support/
+corporate	candidate	academy.eltex-co.com	academy.eltex-co.com	https://academy.eltex-co.com/		https://eltex-co.com/support/
+corporate	candidate	webinars.eltex-co.com	webinars.eltex-co.com	https://webinars.eltex-co.com/		https://eltex-co.com/support/
+corporate	control	eltex.ru	eltex.ru	https://eltex.ru/support/	Элтекс	https://eltex.ru/
+corporate	control	docs.eltex-co.ru	docs.eltex-co.ru	https://docs.eltex-co.ru/display/en/	Eltex	https://docs.eltex-co.ru/display/dgen/Eltex.Guides%2BEN
+corporate	control	www.ispmanager.ru	www.ispmanager.ru	https://www.ispmanager.ru/docs/ispmanager/tekhnicheskaya-podderzhka	ispmanager	https://www.ispmanager.ru/
+corporate	control	helpdesk.ispmanager.tech	helpdesk.ispmanager.tech	https://helpdesk.ispmanager.tech/widgets/render.js		https://www.ispmanager.ru/docs/ispmanager/tekhnicheskaya-podderzhka
+corporate	comparison	www.ispmanager.com	www.ispmanager.com	https://www.ispmanager.com/docs/ispmanager/technical-support	ispmanager	https://www.ispmanager.ru/docs/ispmanager/tekhnicheskaya-podderzhka
+corporate	control	my.rt-solar.ru	my.rt-solar.ru	https://my.rt-solar.ru/auth/sign-in		https://docs.solarspace.pro/faq/authorization
