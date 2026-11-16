@@ -1,4 +1,4 @@
-group	probe	candidate	host	url	marker	source
+cohort	type	rule	host	url	markers	source
 corporate	candidate	veeroute.cloud	veeroute.cloud	https://veeroute.cloud/		https://veeroute.ru/
 corporate	control	veeroute.ru	veeroute.ru	https://veeroute.ru/		https://veeroute.ru/
 corporate	candidate	docs.prod7.veeroute.cloud	docs.prod7.veeroute.cloud	https://docs.prod7.veeroute.cloud/		https://docs.edge7.veeroute.cloud/en/
