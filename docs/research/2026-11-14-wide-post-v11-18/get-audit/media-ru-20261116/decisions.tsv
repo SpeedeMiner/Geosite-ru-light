@@ -1,0 +1,35 @@
+sector	host	service	decision	public_url	reason
+music	app.mave.digital	mave	reserve	https://app.mave.digital/	Интерфейс авторов. Два 200 без содержательного видимого ответа, вход не тестировали.
+music	app.zaycev.net	Зайцев.нет	reserve	https://app.zaycev.net/	Два завершённых 200 без проверяемого видимого текста. Страницу магазина и вход не тестировали.
+cinema	artdoc.media	Artdoc.Media	control	https://artdoc.media/about	Русскоязычная витрина. Не установлена принадлежность к российскому медиарынку по принятым критериям.
+music	band.link	BandLink	reserve	https://band.link/terms	Официальная страница верификации видна по обычному индексу, российские GET обрезаны, curl 63.
+music	cdnimg.zaycev.net	Зайцев.нет	reserve	-	Адрес обложек, не подтверждён как самостоятельный необходимый точный эндпоинт.
+anime	digitalrussia.tv	FAN	reserve	https://digitalrussia.tv/	Корпоративный адрес правообладателя FAN, не каталог. Один DNS не подтверждён, второй 200 без видимого тела.
+music	enter.yoga	YOGA	control	https://enter.yoga/en	Внешняя международная дистрибуция, вне узкой очереди.
+music	help.mave.digital	mave	reserve	https://help.mave.digital/ru/articles/44-upravlenie-podkastami-i-vypuskami	Два завершённых 200, но только короткий фрагмент на 26 символов с брендом, статья не подтверждена.
+music	img.zaycev.net	Зайцев.нет	reserve	https://img.zaycev.net//static/95829/about_1.jpg	Адрес изображений, не подтверждён как самостоятельный необходимый точный эндпоинт.
+music	label.zaycev.net	Зайцев.нет	reserve	https://label.zaycev.net/	Два завершённых 200 и 1584 видимых символа, одинаковый SHA-256. Нет однозначного текстового маркера нужного продукта в отчёте.
+cinema	limehd.tv	Лайм HD TV	reserve	https://limehd.tv/	Официальная ссылка есть. GET / и /privacy-policy дали 200, но проверяемого текста в обоих ASN нет.
+music	mave.digital	mave	include	https://mave.digital/	Подкаст-хостинг, смежный аудиосервис. Два завершённых 200 с основным текстом и маркерами.
+music	mave.stream	mave	reserve	https://mave.stream/	Два завершённых 200 без содержательного видимого ответа.
+other	mc.yandex.ru	Политика	block	-	Отдельное правило блокировки аналитики имеет приоритет над широким RU.
+cinema	movix.tv	Дом.ру Movix	reserve	https://movix.tv/	Исторический адрес, действующая официальная ссылка не установлена. movix.ru уже покрыт.
+music	mp3party.net	MP3party	reserve	https://mp3party.net/	Действующая связь и доступность официальной витрины не доказаны.
+cinema	nonfiction.film	Nonfiction.film	reserve	https://nonfiction.film/about/	307 на тот же адрес, вне VPN также виден interstitial, содержимое не подтверждено.
+cinema	ntvplus.tv	НТВ-ПЛЮС	include	https://ntvplus.tv/	Официальный онлайн-вход НТВ-ПЛЮС. Два завершённых 200 со строгим TLS и видимым маркером «телеканалы».
+cinema	pc.limehd.tv	Лайм HD TV	include	https://pc.limehd.tv/	Официальная страница приложения для Windows, на неё ссылается оператор. Два 200 с «Лайм» и «Windows».
+cinema	piligrim.fund	Пилигрим	include	https://piligrim.fund/about	Витрина авторского кино. Страница /about полностью доступна из двух ASN, есть маркер «Пилигрим».
+music	radio2.zaycev.fm	Зайцев FM	reserve	https://radio2.zaycev.fm/artistimages/000/000/525/large.jpg	Известен опубликованный адрес обложки, не подтверждали необходимость хоста. Аудиопоток не запрашивали.
+cinema	smotret.tv	ТВ	reserve	https://smotret.tv/	Агрегатор, проверяемые основания относить к официальной медиаплатформе не найдены.
+music	soundstream.media	SoundStream	include	https://soundstream.media/	Подкасты, смежный аудиосервис. Витрина и /about прошли в двух ASN, на /about виден текст об операторе.
+music	subscription.zaycev.net	Зайцев.нет	reserve	https://subscription.zaycev.net/	Два завершённых 200 и 1358 видимых символов, одинаковый SHA-256. Нет однозначного текстового маркера нужного продукта в отчёте.
+other	tracking.ott.yandex.net	Политика	block	-	Отдельный адрес телеметрии остаётся в BLOCK.
+other	unpkg.com	Политика	control	https://unpkg.com/	Глобальная сторонняя инфраструктура, не включается на основании встраивания.
+cinema	www.artdoc.media	Artdoc.Media	control	https://www.artdoc.media/	Альтернативный адрес русскоязычной сравнительной витрины, допуск не подтверждён.
+anime	www.crunchyroll.com	Crunchyroll	control	https://www.crunchyroll.com/ru/crunchyroll-service-message/	Глобальный сервис, контроль для проверки, что русскоязычные страницы сами по себе не дают RU.
+cinema	www.nonfiction.film	Nonfiction.film	reserve	https://www.nonfiction.film/faq/	TLS не подтверждён в обоих ASN, curl 60. Не обходили проверку сертификата.
+cinema	www.piligrim.fund	Пилигрим	reserve	https://www.piligrim.fund/	Два 301 на корневой / без подтверждения, что независимый вход востребован. Для основного хоста доказана отдельная страница /about.
+music	www.zaycev.fm	Зайцев FM	include	https://www.zaycev.fm/	Конечный адрес онлайн-радио. Два завершённых 200 с видимыми маркерами «Зайцев», «радио».
+music	zaycev.fm	Зайцев FM	include	https://zaycev.fm/	Два проверенных 302 на www.zaycev.fm и отдельно два полноценных 200 на цели с теми же ASN.
+music	zaycev.net	Зайцев.нет	include	https://zaycev.net/	Официальный музыкальный каталог. Страница о сервисе в обоих ASN содержит видимый текст о музыке.
+cinema	zeroplus.tv	Ноль Плюс	include	https://zeroplus.tv/	Детский кинотеатр. Два завершённых 200 с видимыми маркерами «Ноль Плюс» и «кинотеатр».

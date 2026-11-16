@@ -1,0 +1,58 @@
+service	source_url	curl_exit	http	tls_verify	body_bytes	redirect	body_sha256
+Кинопоиск	https://www.kinopoisk.ru/media/article/4001323/	28	0	0	0	-	-
+Кинопоиск	https://hd.kinopoisk.ru/	28	0	0	0	-	-
+Кинопоиск	https://yandex.ru/support/kinopoisk/ru/	28	0	0	0	-	-
+Иви	https://www.ivi.ru/	28	0	0	0	-	-
+Иви	https://ask.ivi.ru/	28	0	0	0	-	-
+Иви	https://www.ivi.tv/	28	0	0	0	-	-
+Okko	https://okko.tv/	28	0	0	0	-	-
+Okko	https://help.okko.tv/	28	0	0	0	-	-
+Wink	https://wink.ru/collections/anime	28	0	0	0	-	-
+Wink	https://rt.ru/	28	0	0	0	-	-
+KION	https://kion.ru/user-agreement	28	0	0	0	-	-
+KION	https://devices.kion.ru/	28	0	0	0	-	-
+KION	https://blog.kion.ru/	28	0	0	0	-	-
+START	https://start.ru/	28	0	0	0	-	-
+START	https://help.start.ru/	28	0	0	0	-	-
+PREMIER	https://premier.one/	28	0	0	0	-	-
+Амедиатека	https://www.amediateka.ru/	28	0	0	0	-	-
+viju	https://viju.ru/	28	0	0	0	-	-
+Смотрим	https://smotrim.ru/	28	0	0	0	-	-
+Смотрёшка	https://smotreshka.tv/	28	0	0	0	-	-
+Смотрёшка	https://megafon.tv/	28	0	0	0	-	-
+Триколор	https://kino.tricolor.tv/	28	0	0	0	-	-
+Триколор	https://www.tricolor.tv/	28	0	0	0	-	-
+НТВ-ПЛЮС	https://ntvplus.tv/	28	0	0	0	-	-
+НТВ-ПЛЮС	https://ntvplus.ru/	28	0	0	0	-	-
+Билайн ТВ	https://tv.beeline.ru/	28	0	0	0	-	-
+Дом.ру Movix	https://movix.ru/	28	0	0	0	-	-
+Дом.ру Movix	https://movix.tv/	28	0	0	0	-	-
+Лайм HD TV	https://limehd.tv/	28	0	0	0	-	-
+24ТВ	https://24h.tv/	28	0	0	0	-	-
+RUTUBE	https://rutube.ru/	28	0	0	0	-	-
+VK Видео	https://vkvideo.ru/	28	0	0	0	-	-
+Культура.РФ	https://www.culture.ru/cinema/movies	28	0	0	0	-	-
+Ноль Плюс	https://zeroplus.tv/	28	0	0	0	-	-
+Пилигрим	https://piligrim.fund/about	28	0	0	0	-	-
+Artdoc.Media	https://artdoc.media/about	28	0	0	0	-	-
+Artdoc.Media	https://www.artdoc.media/	0	503	0	98	-	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+CoolConnections	https://www.coolconnections.ru/ru/play	0	200	0	52181	-	178817ed6973118d1fdf8a0404ea87d7ea8125cb5e6e673b2703c4da97dbb596
+Яндекс Музыка	https://music.yandex.ru/	0	200	0	212203	-	5e200836c752d8dab55d48cc0ed7a77deace92edfdbf6af953556d94ed2c7b31
+VK Музыка	https://music.vk.com/	28	0	0	0	-	-
+VK Музыка	https://boom.ru/	0	301	0	178	https://music.vk.ru/app	bd9df047d51943acc4bc6cf55d88edb5b6785a53337ee2a0f74dd521aedde87d
+Звук	https://zvuk.com/	0	200	0	2142	-	d422013e643570b376ecc229da23cd72c7f23cbac06f9f6fe2bcd55709990aef
+Звук	https://help.zvuk.com/article/47967	28	0	0	0	-	-
+МТС Музыка	https://music.mts.ru/	28	0	0	0	-	-
+МТС Музыка	https://on-media.ru/about/mts-music	0	200	0	111547	-	c84f54786d1a26d6189c492304855c3a48358f3eef9bfeebaa05d63d792739e5
+Зайцев.нет	https://zaycev.net/	28	0	0	0	-	-
+Зайцев FM	https://zaycev.fm/	28	0	0	0	-	-
+Радио Рекорд	https://www.radiorecord.ru/	0	200	0	512261	-	e93d32209b2f0c983c58a6535368e5dd497dd8d55056f709cd39713699bee75d
+101.ru	https://101.ru/	28	0	0	0	-	-
+PromoDJ	https://promodj.com/	0	200	0	248996	-	fe60b1245760e789d597402ed1b66cb636a1e8b9b170e3cce8d66ed8bdf2939f
+SoundStream	https://soundstream.media/	28	0	0	0	-	-
+mave	https://mave.digital/	28	0	0	0	-	-
+TopRadio	https://top-radio.ru/	0	503	0	91	-	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6
+DEEP	https://deep-ent.ru/	0	302	0	0	https://deep-ent.ru/	-
+Crunchyroll	https://www.crunchyroll.com/ru/crunchyroll-service-message/	0	200	0	39560	-	f4ac58a4fae60bdbc46bc81c6216dafed419a76d4001b83b92da53aa8b04829e
+Nonfiction.film	https://nonfiction.film/about/	0	307	0	164	https://nonfiction.film/about/	8f03491247cbfa8a2e60e0f7ec62d63b5070659f60383a1c81abeb2b20221be3
+Nonfiction.film	https://www.nonfiction.film/faq/	0	503	0	98	-	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909

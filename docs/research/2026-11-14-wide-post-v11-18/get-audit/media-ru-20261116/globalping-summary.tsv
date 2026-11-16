@@ -1,0 +1,43 @@
+wave	url	measurement_id	asn	country	state	http	tls_trusted	tls_san_match	visible_chars
+cinema	https://limehd.tv/	2SVcxYbFBJ9aU1L2400021VwA	3216	RU	body_unproven	200	True	True	0
+cinema	https://limehd.tv/	2SVcxYbFBJ9aU1L2400021VwA	12389	RU	body_unproven	200	True	True	0
+cinema	https://limehd.tv/	2SVcxYbFBJ9aU1L2400021VwA	207957	RU	body_unproven	200	True	True	0
+cinema	https://zeroplus.tv/	2gdFgop3dNWn2z8jC00021VwA	3216	RU	body_unproven	200	True	True	0
+cinema	https://zeroplus.tv/	2gdFgop3dNWn2z8jC00021VwA	12389	RU	body_unproven	200	True	True	0
+cinema	https://zeroplus.tv/	2gdFgop3dNWn2z8jC00021VwA	207957	RU	body_unproven	200	True	True	0
+cinema	https://ntvplus.tv/	2HY0oItOXNiiJ23mA00021VwA	3216	RU	visible_body_review	200	True	True	713
+cinema	https://ntvplus.tv/	2HY0oItOXNiiJ23mA00021VwA	12389	RU	visible_body_review	200	True	True	713
+cinema	https://ntvplus.tv/	2HY0oItOXNiiJ23mA00021VwA	207957	RU	visible_body_review	200	True	True	713
+cinema	https://piligrim.fund/about	2LBdkfeh200R2l6K200021VwA	3216	RU	body_unproven	200	True	True	0
+cinema	https://piligrim.fund/about	2LBdkfeh200R2l6K200021VwA	12389	RU	body_unproven	200	True	True	0
+cinema	https://piligrim.fund/about	2LBdkfeh200R2l6K200021VwA	207957	RU	body_unproven	200	True	True	0
+cinema	https://www.nonfiction.film/faq/	2gCh9TGIrNi3L46k100021VwA	3216	RU	transport_unproven				
+cinema	https://www.nonfiction.film/faq/	2gCh9TGIrNi3L46k100021VwA	12389	RU	transport_unproven				
+cinema	https://www.nonfiction.film/faq/	2gCh9TGIrNi3L46k100021VwA	207957	RU	transport_unproven				
+cinema	https://nonfiction.film/about/	2cxDgxffGmLC9N2K300021VwA	3216	RU	redirect_observed	307	True	True	28
+cinema	https://nonfiction.film/about/	2cxDgxffGmLC9N2K300021VwA	12389	RU	redirect_observed	307	True	True	28
+cinema	https://nonfiction.film/about/	2cxDgxffGmLC9N2K300021VwA	207957	RU	redirect_observed	307	True	True	28
+music	https://zaycev.fm/	2bezuHJHN0pHXoxCx00021VwB	3216	RU	redirect_observed	302	True	True	15
+music	https://zaycev.fm/	2bezuHJHN0pHXoxCx00021VwB	12389	RU	redirect_observed	302	True	True	15
+music	https://zaycev.fm/	2bezuHJHN0pHXoxCx00021VwB	207957	RU	redirect_observed	302	True	True	15
+music	https://soundstream.media/	2KfWsIHbda0YmKWqo00021VwB	3216	RU	body_unproven	200	True	True	0
+music	https://soundstream.media/	2KfWsIHbda0YmKWqo00021VwB	12389	RU	body_unproven	200	True	True	0
+music	https://soundstream.media/	2KfWsIHbda0YmKWqo00021VwB	207957	RU	body_unproven	200	True	True	0
+music	https://zaycev.net/	2ej4wTeYjjXE1vbYl00021VwB	3216	RU	body_unproven	200	True	True	0
+music	https://zaycev.net/	2ej4wTeYjjXE1vbYl00021VwB	12389	RU	body_unproven	200	True	True	0
+music	https://zaycev.net/	2ej4wTeYjjXE1vbYl00021VwB	207957	RU	body_unproven	200	True	True	0
+music	https://mave.digital/	25u9wfF6WBeuqsPu200021VwB	3216	RU	body_unproven	200	True	True	0
+music	https://mave.digital/	25u9wfF6WBeuqsPu200021VwB	12389	RU	body_unproven	200	True	True	0
+music	https://mave.digital/	25u9wfF6WBeuqsPu200021VwB	207957	RU	body_unproven	200	True	True	0
+music	https://zvuk.com/	2fOaFSIfAcAwY9uHK00021VwB	3216	RU	body_unproven	200	True	True	0
+music	https://zvuk.com/	2fOaFSIfAcAwY9uHK00021VwB	12389	RU	body_unproven	200	True	True	0
+music	https://zvuk.com/	2fOaFSIfAcAwY9uHK00021VwB	207957	RU	body_unproven	200	True	True	0
+music	https://help.zvuk.com/article/47967	2aV5igfMgaRxXrPUx00021VwB	3216	RU	body_unproven	200	True	True	0
+music	https://help.zvuk.com/article/47967	2aV5igfMgaRxXrPUx00021VwB	12389	RU	body_unproven	200	True	True	0
+music	https://help.zvuk.com/article/47967	2aV5igfMgaRxXrPUx00021VwB	207957	RU	body_unproven	200	True	True	0
+legal	https://zaycev.net/spages/useragreement.shtml				not_measured				
+legal	https://soundstream.media/eula				not_measured				
+legal	https://soundstream.media/about				not_measured				
+legal	https://band.link/terms				not_measured				
+legal	https://help.mave.digital/ru/articles/22-distribuciya-v-vk				not_measured				
+legal	https://ntvplus.tv/				not_measured				

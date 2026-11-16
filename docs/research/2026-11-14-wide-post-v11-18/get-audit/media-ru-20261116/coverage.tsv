@@ -1,0 +1,109 @@
+sector	service	host	public_url	primary_source	role	light_ru	server_ru	closed_plus140	light_block	coverage
+cinema	Кинопоиск	www.kinopoisk.ru	https://www.kinopoisk.ru/media/article/4001323/	https://www.kinopoisk.ru/media/article/4001323/	Официальный гид	domain:ru	domain:ru	-	-	both
+cinema	Кинопоиск	hd.kinopoisk.ru	https://hd.kinopoisk.ru/	https://www.kinopoisk.ru/media/article/4001323/	Веб-кинотеатр	domain:ru	domain:ru	-	-	both
+cinema	Кинопоиск	yandex.ru	https://yandex.ru/support/kinopoisk/ru/	https://www.kinopoisk.ru/media/article/4001323/	Справка и контроль политики	domain:ru	domain:ru	-	-	both
+cinema	Иви	www.ivi.ru	https://www.ivi.ru/	https://www.ivi.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	Иви	ask.ivi.ru	https://ask.ivi.ru/	https://www.ivi.ru/	Справка	domain:ru	domain:ru	-	-	both
+cinema	Иви	www.ivi.tv	https://www.ivi.tv/	https://www.ivi.tv/	Международное издание, отдельная политика	domain:ivi.tv	domain:ivi.tv	-	-	both
+cinema	Okko	okko.tv	https://okko.tv/	https://okko.tv/	Витрина	domain:okko.tv	domain:okko.tv	-	-	both
+cinema	Okko	help.okko.tv	https://help.okko.tv/	https://okko.tv/	Справка	domain:okko.tv	domain:okko.tv	-	-	both
+cinema	Wink	wink.ru	https://wink.ru/collections/anime	https://wink.ru/collections/anime	Аниме-каталог	domain:ru	domain:ru	-	-	both
+cinema	Wink	rt.ru	https://rt.ru/	https://rt.ru/	Оператор	domain:ru	domain:ru	-	-	both
+cinema	KION	kion.ru	https://kion.ru/user-agreement	https://kion.ru/user-agreement	Пользовательское соглашение	domain:ru	domain:ru	-	-	both
+cinema	KION	devices.kion.ru	https://devices.kion.ru/	https://kion.ru/user-agreement	Подключение устройств	domain:ru	domain:ru	-	-	both
+cinema	KION	blog.kion.ru	https://blog.kion.ru/	https://kion.ru/user-agreement	Блог	domain:ru	domain:ru	-	-	both
+cinema	START	start.ru	https://start.ru/	https://start.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	START	help.start.ru	https://help.start.ru/	https://start.ru/	Справка	domain:ru	domain:ru	-	-	both
+cinema	PREMIER	premier.one	https://premier.one/	https://premier.one/	Витрина	domain:premier.one	domain:premier.one	-	-	both
+cinema	Амедиатека	www.amediateka.ru	https://www.amediateka.ru/	https://www.amediateka.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	viju	viju.ru	https://viju.ru/	https://viju.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	Смотрим	smotrim.ru	https://smotrim.ru/	https://smotrim.ru/	Витрина ВГТРК	domain:ru	domain:ru	-	-	both
+cinema	Смотрёшка	smotreshka.tv	https://smotreshka.tv/	https://smotreshka.tv/	Официальная витрина	domain:smotreshka.tv	domain:smotreshka.tv	-	-	both
+cinema	Смотрёшка	megafon.tv	https://megafon.tv/	https://www.sostav.ru/publication/smotr-shka-62295.html	Исторический алиас, уже исследован	full:megafon.tv	full:megafon.tv	-	-	both
+cinema	Триколор	kino.tricolor.tv	https://kino.tricolor.tv/	https://www.tricolor.tv/	Веб-витрина	domain:tricolor.tv	domain:tricolor.tv	-	-	both
+cinema	Триколор	www.tricolor.tv	https://www.tricolor.tv/	https://www.tricolor.tv/	Оператор	domain:tricolor.tv	domain:tricolor.tv	-	-	both
+cinema	НТВ-ПЛЮС	ntvplus.tv	https://ntvplus.tv/	https://ntvplus.tv/	Онлайн-витрина	-	-	-	-	none
+cinema	НТВ-ПЛЮС	ntvplus.ru	https://ntvplus.ru/	https://ntvplus.ru/	Оператор	domain:ru	domain:ru	-	-	both
+cinema	Билайн ТВ	tv.beeline.ru	https://tv.beeline.ru/	https://tv.beeline.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	Дом.ру Movix	movix.ru	https://movix.ru/	https://movix.ru/	Витрина	domain:ru	domain:ru	-	-	both
+cinema	Дом.ру Movix	movix.tv	https://movix.tv/	https://movix.ru/	Исторический адрес, требуется первичная ссылка	-	-	-	-	none
+cinema	Лайм HD TV	limehd.tv	https://limehd.tv/	https://limehd.tv/	Витрина	-	-	-	-	none
+cinema	24ТВ	24h.tv	https://24h.tv/	https://24h.tv/	Официальный веб-кинотеатр	domain:24h.tv	domain:24h.tv	-	-	both
+cinema	RUTUBE	rutube.ru	https://rutube.ru/	https://rutube.ru/	Видеоплощадка	domain:ru	domain:ru	-	-	both
+cinema	VK Видео	vkvideo.ru	https://vkvideo.ru/	https://vkvideo.ru/	Видеоплощадка	domain:ru	domain:ru	-	-	both
+cinema	Культура.РФ	www.culture.ru	https://www.culture.ru/cinema/movies	https://www.culture.ru/cinema/movies	Каталог кино	domain:ru	domain:ru	-	-	both
+cinema	Ноль Плюс	zeroplus.tv	https://zeroplus.tv/	https://zeroplus.tv/	Детский онлайн-кинотеатр	-	-	-	-	none
+cinema	Пилигрим	piligrim.fund	https://piligrim.fund/about	https://piligrim.fund/about	Независимый онлайн-кинотеатр	-	-	-	-	none
+cinema	Artdoc.Media	artdoc.media	https://artdoc.media/about	https://artdoc.media/about	Русскоязычная витрина, внешнее сравнение	-	-	-	-	none
+cinema	Artdoc.Media	www.artdoc.media	https://www.artdoc.media/	https://artdoc.media/about	Русскоязычная витрина, внешнее сравнение	-	-	-	-	none
+cinema	CoolConnections	www.coolconnections.ru	https://www.coolconnections.ru/ru/play	https://www.coolconnections.ru/ru/play	Кинофестивальный каталог	domain:ru	domain:ru	-	-	both
+music	Яндекс Музыка	music.yandex.ru	https://music.yandex.ru/	https://music.yandex.ru/	Стриминг	domain:ru	domain:ru	-	-	both
+music	VK Музыка	music.vk.com	https://music.vk.com/	https://music.vk.com/	Стриминг	domain:vk.com	domain:vk.com	-	-	both
+music	VK Музыка	boom.ru	https://boom.ru/	https://music.vk.com/	Историческая витрина	domain:ru	domain:ru	-	-	both
+music	Звук	zvuk.com	https://zvuk.com/	https://help.zvuk.com/article/47967	Стриминг	domain:zvuk.com	domain:zvuk.com	-	-	both
+music	Звук	help.zvuk.com	https://help.zvuk.com/article/47967	https://help.zvuk.com/article/47967	Справка	domain:zvuk.com	domain:zvuk.com	-	-	both
+music	КИОН Музыка	music.mts.ru	https://music.mts.ru/	https://on-media.ru/about/mts-music	Стриминг	domain:ru	domain:ru	-	-	both
+music	МТС Музыка	on-media.ru	https://on-media.ru/about/mts-music	https://on-media.ru/about/mts-music	Оператор	domain:ru	domain:ru	-	-	both
+music	Зайцев.нет	zaycev.net	https://zaycev.net/	https://zaycev.net/	Музыкальный каталог	-	-	-	-	none
+music	Зайцев FM	zaycev.fm	https://zaycev.fm/	https://zaycev.fm/	Музыкальное радио	-	-	-	-	none
+music	Радио Рекорд	www.radiorecord.ru	https://www.radiorecord.ru/	https://www.radiorecord.ru/	Музыкальное радио	domain:ru	domain:ru	-	-	both
+music	101.ru	101.ru	https://101.ru/	https://101.ru/	Музыкальное радио	domain:ru	domain:ru	-	-	both
+music	PromoDJ	promodj.com	https://promodj.com/	https://promodj.com/	Музыкальные работы авторов	domain:promodj.com	domain:promodj.com	-	-	both
+music	SoundStream	soundstream.media	https://soundstream.media/	https://soundstream.media/	Аудиоподкасты, смежная категория	-	-	-	-	none
+music	mave	mave.digital	https://mave.digital/	https://mave.digital/	Подкаст-хостинг, смежная категория	-	-	-	-	none
+music	TopRadio	top-radio.ru	https://top-radio.ru/	https://top-radio.ru/	Агрегатор музыкального радио	domain:ru	domain:ru	-	-	both
+anime	DEEP	deep-ent.ru	https://deep-ent.ru/	https://deep-ent.ru/	Лицензионный онлайн-кинотеатр	domain:ru	domain:ru	-	-	both
+anime	Crunchyroll	www.crunchyroll.com	https://www.crunchyroll.com/ru/crunchyroll-service-message/	https://www.crunchyroll.com/ru/crunchyroll-service-message/	Глобальный сервис, отрицательное сравнение	-	-	-	-	none
+cinema	Nonfiction.film	nonfiction.film	https://nonfiction.film/about/	https://nonfiction.film/about/	Платформа документального кино	-	-	-	-	none
+cinema	Nonfiction.film	www.nonfiction.film	https://www.nonfiction.film/faq/	https://nonfiction.film/about/	Вариант WWW	-	-	-	-	none
+cinema	Лайм HD TV	pc.limehd.tv	https://pc.limehd.tv/	https://www.limehd.ru/	Официальная страница Windows	-	-	-	-	none
+cinema	Лайм HD TV	www.limehd.ru	https://www.limehd.ru/	https://www.limehd.ru/	Корпоративный сайт	domain:ru	domain:ru	-	-	both
+cinema	Мосфильм	www.mosfilm.ru	https://www.mosfilm.ru/cinema/	https://www.mosfilm.ru/cinema/	Бесплатный каталог киностудии	domain:ru	domain:ru	-	-	both
+cinema	Мосфильм	centerkino.mosfilm.ru	https://centerkino.mosfilm.ru/	https://www.mosfilm.ru/cinema/	Офлайн-площадка отдельно от видеокаталога	domain:ru	domain:ru	-	-	both
+cinema	НТВ-ПЛЮС	service.ntvplus.ru	https://service.ntvplus.ru/	https://ntvplus.ru/app/	Кабинет	domain:ru	domain:ru	-	-	both
+anime	DEEP	corp.deep-ent.ru	https://corp.deep-ent.ru/ru/deep/	https://corp.deep-ent.ru/ru/deep/	Лицензионная деятельность и ссылка на кинотеатр	domain:ru	domain:ru	-	-	both
+anime	Реанимедиа	reanimedia.ru	https://reanimedia.ru/licenses.html	https://reanimedia.ru/licenses.html	Официальный список лицензий, не стриминг	domain:ru	domain:ru	-	-	both
+music	Звук СТУДИО	studio.zvuk.com	https://studio.zvuk.com/	https://help.zvuk.com/article/57288	Площадка для музыкантов	domain:zvuk.com	domain:zvuk.com	-	-	both
+music	BandLink	band.link	https://band.link/terms	https://yandex.com/support/music-artists/ru/performers-and-copyright-holders/bandlink-verifi	Музыкальные ссылки, условия	-	-	-	-	none
+music	Зайцев.нет	label.zaycev.net	https://label.zaycev.net/	https://zaycev.net/	Лицензирование и публикация	-	-	-	-	none
+music	Зайцев.нет	app.zaycev.net	https://app.zaycev.net/	https://zaycev.net/	Публичная страница приложения	-	-	-	-	none
+music	Зайцев.нет	subscription.zaycev.net	https://subscription.zaycev.net/	https://zaycev.net/	Подписка, без оплаты	-	-	-	-	none
+music	Зайцев.нет	cdnimg.zaycev.net	-	https://zaycev.net/	Видимая зависимость обложек	-	-	-	-	none
+music	mave	help.mave.digital	https://help.mave.digital/ru/articles/44-upravlenie-podkastami-i-vypuskami	https://mave.digital/	Справка авторов	-	-	-	-	none
+music	mave	app.mave.digital	https://app.mave.digital/	https://mave.digital/	Веб-интерфейс для авторов	-	-	-	-	none
+music	mave	mave.stream	https://mave.stream/	https://mave.digital/	Публичная медиаплатформа	-	-	-	-	none
+anime	2×2	2x2tv.ru	https://2x2tv.ru/series/anime/	https://2x2tv.ru/series/anime/	Официальный каталог аниме телеканала	domain:ru	domain:ru	-	-	both
+anime	FAN	fantv.ru	https://fantv.ru/	https://fantv.ru/	Официальная сетка и каталог телеканала	domain:ru	domain:ru	-	-	both
+music	Зайцев FM	www.zaycev.fm	https://www.zaycev.fm/	https://zaycev.net/spages/about.shtml	Официальный конечный адрес радио	-	-	-	-	none
+music	MP3party	mp3party.net	https://mp3party.net/	https://zaycev.net/spages/about.shtml	Связанный музыкальный сервис, доступность и текущее состояние отдельно	-	-	-	-	none
+music	Зайцев.нет	img.zaycev.net	https://img.zaycev.net//static/95829/about_1.jpg	https://zaycev.net/spages/about.shtml	Фирменные изображения страницы о сервисе	-	-	-	-	none
+anime	FAN	digitalrussia.tv	https://digitalrussia.tv/	https://fantv.ru/	Правообладатель канала, корпоративный сайт	-	-	-	-	none
+anime	Кинопоиск	kinopoisk.ru	https://kinopoisk.ru/	https://www.kinopoisk.ru/media/article/4001323/	Базовое имя аниме-каталога	domain:ru	domain:ru	-	-	both
+cinema	ТВ	1tv.ru	https://1tv.ru/	https://www.1tv.ru/	Официальная витрина Первого канала	domain:ru	domain:ru	-	-	both
+cinema	ТВ	www.1tv.ru	https://www.1tv.ru/	https://www.1tv.ru/	Основной адрес Первого канала	domain:ru	domain:ru	-	-	both
+cinema	ТВ	smotret.tv	https://smotret.tv/	https://smotret.tv/	Дополнительный агрегатор, без допуска по одному наличию	-	-	-	-	none
+music	Звук	www.sber.ru	https://www.sber.ru/	https://help.zvuk.com/article/47967	Экосистема, не новое правило	domain:ru	domain:ru	-	-	both
+other	Защита витрины	servicepipe.tech	https://servicepipe.tech/loaders/c8d924e5ff5ff81dc6a77e524f9713cd.js	https://zvuk.com/	Сторонняя защита, не музыкальный сервис	domain:servicepipe.tech	domain:servicepipe.tech	-	-	both
+other	Политика	mc.yandex.ru	-	https://www.mosfilm.ru/cinema/	Аналитика, не переносится в media RU	domain:ru	domain:ru	-	domain:mc.yandex.ru	block
+other	Политика	tracking.ott.yandex.net	-	https://github.com/SpeedeMiner/Geosite-ru-light/blob/26732bb53fdc8e3e400f5198acd69e9020589485/local/block.txt	Контроль сохранности BLOCK	domain:yandex.net	domain:yandex.net	-	domain:tracking.ott.yandex.net	block
+other	Политика	unpkg.com	https://unpkg.com/	https://unpkg.com/	Глобальная инфраструктура, контроль	-	-	-	-	none
+cinema	Пилигрим	www.piligrim.fund	https://www.piligrim.fund/	https://piligrim.fund/agreement	Публично указанный WWW	-	-	-	-	none
+music	Зайцев FM	radio2.zaycev.fm	https://radio2.zaycev.fm/artistimages/000/000/525/large.jpg	https://www.zaycev.fm/	Опубликованная обложка, не аудиопоток	-	-	-	-	none
+music	Яндекс Музыка	music.yandex.com	https://music.yandex.com/	https://yandex.ru/legal/music_termsofuse/ru	Региональный вариант по условиям	domain:yandex.com	domain:yandex.com	-	-	both
+music	Яндекс Музыка	music.yandex.kz	https://music.yandex.kz/	https://yandex.ru/legal/music_termsofuse/ru	Казахстанская витрина, контроль	domain:kz	domain:kz	-	-	both
+music	YOGA	enter.yoga	https://enter.yoga/en	https://enter.yoga/	Международная дистрибуция, вне узкой очереди	-	-	-	-	none
+music	Музуслуги	storage.muzuslugi.ru	https://storage.muzuslugi.ru/applications/muzuslugi_client/documents/public_offer.pdf	https://storage.muzuslugi.ru/applications/muzuslugi_client/documents/public_offer.pdf	Оферта дистрибуции, уже в зоне ru	domain:ru	domain:ru	-	-	both
+cinema	Союзмультфильм	souzmult.ru	https://souzmult.ru/	https://souzmult.ru/	Правообладатель и каталог	domain:ru	domain:ru	-	-	both
+cinema	Мультиландия	multilandia.ru	https://multilandia.ru/	https://multilandia.ru/	Детский телеканал киностудии	domain:ru	domain:ru	-	-	both
+cinema	Мульт	mult.ru	https://mult.ru/	https://mult.ru/	Официальный телеканал анимации	domain:ru	domain:ru	-	-	both
+cinema	More.tv	more.tv	https://more.tv/	https://more.tv/	Исторический вход в Wink, переадресация	domain:more.tv	domain:more.tv	-	-	both
+cinema	НТВ+	www.ntvplus.ru	https://www.ntvplus.ru/	https://ntvplus.ru/	Корпоративный адрес, контроль	domain:ru	domain:ru	-	-	both
+cinema	СЕЗОН	sezooon.ru	https://sezooon.ru/	https://sezooon.ru/	Короткие сериалы	domain:ru	domain:ru	-	-	both
+cinema	Культура.РФ	culture.ru	https://culture.ru/cinema	https://www.culture.ru/cinema	Корневой вариант	domain:ru	domain:ru	-	-	both
+cinema	Мосфильм	mosfilm.ru	https://mosfilm.ru/cinema/	https://www.mosfilm.ru/cinema/	Альтернативное входное имя	domain:ru	domain:ru	-	-	both
+cinema	Мульт	tlum.ru	https://tlum.ru/	https://mult.ru/	Портал анимации и ссылки правообладателя	domain:ru	domain:ru	-	-	both
+music	Радио Record	radiorecord.ru	https://radiorecord.ru/	https://www.radiorecord.ru/	Официальный алиас	domain:ru	domain:ru	-	-	both
+music	VK Музыка	vk.com	https://vk.com/	https://music.vk.com/	Платформа, учитывается отдельно от музыкального интерфейса	domain:vk.com	domain:vk.com	-	-	both
+cinema	Триколор	tricolor.tv	https://tricolor.tv/	https://www.tricolor.tv/	Основной адрес оператора	domain:tricolor.tv	domain:tricolor.tv	-	-	both
+music	КИОН Музыка	music.kion.ru	https://music.kion.ru/	https://music.mts.ru/agreement.pdf	Официальная веб-версия, указана в политике сервиса	domain:ru	domain:ru	-	-	both
+music	КИОН Музыка	support.mts.ru	https://support.mts.ru/kion_muzika/chto-takoe-kion-muzika/o-servise-kion-muzika	https://support.mts.ru/kion_muzika/chto-takoe-kion-muzika/o-servise-kion-muzika	Официальная справка МТС о музыкальном сервисе	domain:ru	domain:ru	-	-	both

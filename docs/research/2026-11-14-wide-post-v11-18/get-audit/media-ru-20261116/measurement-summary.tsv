@@ -1,0 +1,15 @@
+wave	run_id	artifact_id	asn	targets	completed_marker_or_substantive	statuses
+cinema	43852089713	14217513565	12389	6	1	vpn_body_unproven=3, vpn_marker=1, vpn_redirect=1, vpn_tls_unproven=1
+cinema	43852089713	14217513565	56420	6	1	vpn_body_unproven=3, vpn_marker=1, vpn_redirect=1, vpn_tls_unproven=1
+music	43852089713	14218516586	12389	6	0	vpn_body_unproven=5, vpn_redirect=1
+music	43852089713	14218516586	56420	6	0	vpn_body_unproven=5, vpn_redirect=1
+anime	43852089713	14219270132	12389	4	0	vpn_body_unproven=3, vpn_http_other=1
+anime	43852089713	14219270132	56420	4	0	vpn_body_unproven=3, vpn_http_other=1
+companions	43852550609	14218157897	12389	9	3	vpn_body_unproven=4, vpn_marker=3, vpn_visible_review=2
+companions	43852550609	14218157897	49350	9	3	vpn_body_unproven=4, vpn_marker=3, vpn_visible_review=2
+repeat	43852797424	14219680917	12389	7	6	vpn_body_unproven=1, vpn_marker=6
+repeat	43852797424	14219680917	56420	7	6	vpn_body_unproven=1, vpn_marker=6
+anime-repeat	43852797424	14218377407	12389	5	5	vpn_marker=5
+anime-repeat	43852797424	14218377407	56420	5	5	vpn_marker=5
+final-media	43853229643	14220515012	12389	9	1	vpn_body_unproven=7, vpn_marker=1, vpn_redirect=1
+final-media	43853229643	14220515012	56420	9	1	vpn_body_unproven=6, vpn_dns_unproven=1, vpn_marker=1, vpn_redirect=1
