@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	kremlinpalace.org	kremlinpalace.org	https://kremlinpalace.org/ticket-operators	Билетные партнёры|KASSIR.RU	https://kremlinpalace.org/ticket-operators
+corporate	candidate	kinoafisha.info	kinoafisha.info	https://kinoafisha.info/	Киноафиша	https://www.kinoafisha.info/about/
+corporate	candidate	www.kinoafisha.info	www.kinoafisha.info	https://www.kinoafisha.info/	Киноафиша|Кинотеатры	https://www.kinoafisha.info/about/
+corporate	candidate	corp.claustrophobia.com	corp.claustrophobia.com	https://corp.claustrophobia.com/	тимбилдинг|Корпоратив	https://claustrophobia.com/privacy
