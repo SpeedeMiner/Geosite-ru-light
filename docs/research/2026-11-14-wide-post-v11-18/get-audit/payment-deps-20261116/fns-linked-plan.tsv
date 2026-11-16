@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	legal.handswork.pro	legal.handswork.pro	https://legal.handswork.pro/privacy-policy		https://smz.handswork.pro/
+corporate	candidate	frontend-next.nanimatel.com	frontend-next.nanimatel.com	https://frontend-next.nanimatel.com/find-job		https://nanimatel.com/
+corporate	candidate	app.simples.work	app.simples.work	https://app.simples.work/app/auth/sign-in		https://simples.work/
+corporate	candidate	market.inwork.net	market.inwork.net	https://market.inwork.net/contact		https://inwork.net/
+corporate	candidate	getwork.today	getwork.today	https://getwork.today/product-info		https://www.getwork.today/
+corporate	candidate	smz.getwork.today	smz.getwork.today	https://smz.getwork.today/tasks		https://www.getwork.today/
+corporate	candidate	biz.winwork.pro	biz.winwork.pro	https://biz.winwork.pro/		https://winwork.pro/
+corporate	candidate	docs.winwork.pro	docs.winwork.pro	https://docs.winwork.pro/politika-konfidentsialnosti/		https://winwork.pro/
+corporate	candidate	company.balans.pro	company.balans.pro	https://company.balans.pro/company/auth/login/		https://balans.pro/smz
+corporate	candidate	m-core.pro	m-core.pro	https://m-core.pro/		https://npd.nalog.ru/aggregators/
