@@ -175,6 +175,8 @@ FORUM_PUBLIC_HTML = frozenset((
     'https://toyota-club.net/',
     'https://volvocars.club/',
     'https://www.4gameforum.com/help/terms',
+    'https://www.drive2.com/',
+    'https://www.drive2.ru/',
     'https://www.maultalk.com/',
     'https://www.phpbbguru.net/community/',
     'https://www.rusmedserv.com/about/contacts/',

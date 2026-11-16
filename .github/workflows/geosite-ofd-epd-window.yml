@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-forums-ru-final-check-20261116
+  group: geosite-forums-ru-last-mile-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [final-check]
+        batch: [last-mile]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
