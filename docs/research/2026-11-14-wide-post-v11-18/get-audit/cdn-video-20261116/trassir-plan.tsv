@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	trassircloud.com	trassircloud.com	https://trassircloud.com/faq	TRASSIR	https://www.dssl.ru/trassir-cloud/about/
+corporate	candidate	trassircloud.com	trassircloud.com	https://trassircloud.com/tariffs	TRASSIR	https://trassir.ru/products/programmnoe_obespechenie_trassir/trassir_cloud_zapis_v_oblako/
+corporate	candidate	confluence.trassir.com	confluence.trassir.com	https://confluence.trassir.com/spaces/WD/pages/36864630/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8	DSSL	https://www.dssl.ru/support/tech/documentation/
+corporate	control	ru.cloud.trassir.com	ru.cloud.trassir.com	https://ru.cloud.trassir.com/user-login		https://trassircloud.com/cloud-camera-instruction
+corporate	candidate	www.trassir.com	www.trassir.com	https://www.trassir.com/	TRASSIR	https://www.trassir.com/
+corporate	candidate	pro.macroscop.com	pro.macroscop.com	https://pro.macroscop.com/	Macroscop	https://macroscop.com/
+corporate	control	www.dssl.ru	www.dssl.ru	https://www.dssl.ru/about/	TRASSIR	https://www.dssl.ru/about/
