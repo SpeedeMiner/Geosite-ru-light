@@ -31,6 +31,8 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg': '0-511',
+    'https://downloads.livedigital.space/livedigital-desktop/livedigital-latest.dmg': '0-511',
     'https://peers.tv/files/7172/': '0-65535',
     'https://api.curator.pro/': '0-65535',
     'https://docs.solarspace.pro/': '0-65535',
