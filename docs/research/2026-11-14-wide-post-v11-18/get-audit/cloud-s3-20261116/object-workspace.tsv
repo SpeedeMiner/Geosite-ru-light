@@ -1,0 +1,5 @@
+kind	url	source	curl_exit	http	tls_verify	location	content_type	bytes	sha256	marker
+console	https://console.k2.cloud/	https://docs.k2.cloud/ru/startguide.html	0	200	0		text/html	793	f3ad446dec24dc5ddad350e7a6cb3438646b7794f78135b0ce6fa30d1bb0c9db	
+docs	https://docs.k2.cloud/ru/startguide.html	https://docs.k2.cloud/ru/startguide.html	0	403	0		text/html	686	63c62d075553593e93e0b65c34927d47dd056429f443cbc45221217f032884ca	
+site	https://k2.cloud/	https://k2.cloud/	0	200	0		text/html; charset=utf-8	395983	04e64c9a2a22365720d91998cfe625d54f5c3dfd15814d50d9a459d305a52c79	
+s3-response-object	https://s3.k2.cloud/site-static/%D0%9F%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%9D%D0%A1%D0%9F%D0%9A%20%D0%A1%D0%91%D0%9F%20QR.pdf	https://support.sigma.ru/knowledge_base/item/267778	0	206	0		application/pdf	512	4dde4ad41fc7213983db9b531e1df793b62a2322bc8bcaafbde01289e89394c3	PDF
