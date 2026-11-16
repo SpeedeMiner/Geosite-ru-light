@@ -1,0 +1,5 @@
+vpn_asn	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	redirect_followed
+12389	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg	206	0	0	application/x-apple-diskimage; swift_bytes=191584144	512	9462181f199ce0322abd29cd3004270f7022e18af2f745312917bda91d61929e	151.236.91.253	vpn_http_other	False
+12389	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-latest.dmg	206	0	0	application/x-apple-diskimage; swift_bytes=199608769	512	0cc66ed439fb7ff4894e16c1667a1aeaa9a82aec9dde51d8794ac0d69628976a	151.236.91.253	vpn_http_other	False
+43761	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg		-1			0		91.240.170.189	vpn_transport_unproven	False
+43761	downloads.livedigital.space	https://downloads.livedigital.space/livedigital-desktop/livedigital-latest.dmg	206	0	0	application/x-apple-diskimage; swift_bytes=199608769	512	0cc66ed439fb7ff4894e16c1667a1aeaa9a82aec9dde51d8794ac0d69628976a	46.42.191.157	vpn_http_other	False
