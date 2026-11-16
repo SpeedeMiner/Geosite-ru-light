@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	edu.docsvision.com	edu.docsvision.com	https://edu.docsvision.com/		https://docsvision.com/partners/our-partners/edisoft/
+corporate	control	docsvision.com	docsvision.com	https://docsvision.com/partners/our-partners/edisoft/		https://docsvision.com/
+corporate	control	x5transport.ru	x5transport.ru	https://x5transport.ru/help/article/kak-podklyuchitsya-k-operatoru-edo/		https://x5.ru/ru/supplier-services/edi/
+corporate	control	business.leradata.pro	business.leradata.pro	https://business.leradata.pro/		https://x5.ru/ru/supplier-services/edi/
+corporate	control	lenta.com	lenta.com	https://lenta.com/i/postavshchikam/edo-edi/commerce/edi/		https://lenta.com/
