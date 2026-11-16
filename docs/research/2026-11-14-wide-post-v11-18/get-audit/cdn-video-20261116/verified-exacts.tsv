@@ -1,0 +1,18 @@
+hostname	confirmed_url	russian_asns	status	github_run_ids	redirect_target	installer_range_sha256
+cdnvideo.com	https://cdnvideo.com/	12389|52043	301	43809865357	https://www.cdnvideo.com/	
+check.livedigital.space	https://check.livedigital.space/	12389|52043	200	43809865357|43810427670		
+cloud.macroscop.com	https://cloud.macroscop.com/index	12389|52043	200	43810019298		
+confluence.trassir.com	https://confluence.trassir.com/spaces/WD/pages/36864630/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8	12389|52043	200	43810171834		
+doc.macroscop.com	https://doc.macroscop.com/download-documentation.htm	12389|52043	200	43810019298		
+macroscop.com	https://macroscop.com/	12389|52043	200	43810019298		
+packages.ivideon.com	https://packages.ivideon.com/ubuntu/keys/ivideon.list	12389|43761	200	43810901374		
+packages.macroscop.com	https://packages.macroscop.com/rpm/	12389|52043	200	43810699705		
+pro.macroscop.com	https://pro.macroscop.com/	12389|52043	200	43810171834|43810542095		
+shop.trassircloud.com	https://shop.trassircloud.com/support-cloud	12389|52043	200	43810542095		
+store.ivideon.com	https://store.ivideon.com/	12389|52043	200	43810019298		
+stratonet.net	https://stratonet.net/	12389|52043	200	43810542095		
+support.trassir.com	https://support.trassir.com/	12389|52043	200	43810699705		
+trassircloud.com	https://trassircloud.com/robots.txt	43761|52043	200	43810427670		
+updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe	12389|43761	206	43810901374		9a4f7fa57fde2d919a5f93aa938c0e8825433197a2580db2f66bc104fd6b5c9c
+www.cdnvideo.com	https://www.cdnvideo.com/	12389|52043	200	43809865357		
+www.stratonet.net	https://www.stratonet.net/	12389|52043	301	43810542095	https://stratonet.net/	
