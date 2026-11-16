@@ -1,0 +1,21 @@
+vpn_asn	host	url	http	tls_verify_result	state	curl_exit	content_type	body_bytes_sampled	body_sample_sha256	title	redirect_location	target_ipv4
+52043	www.cdnvideo.com	https://www.cdnvideo.com/	200	0	vpn_body_unproven	0	text/html; charset=UTF-8	10000	ef7e95c1d543ff5f4ce688c03006936127f1b2f9247c16bab79bd60972032f6d	A Global CDN for Live Streaming, VoD, Game and Web Acceleration - CDNvideo.com		151.236.80.17
+52043	cdnvideo.com	https://cdnvideo.com/	301	0	vpn_redirect	0	text/html; charset=UTF-8	0			https://www.cdnvideo.com/	151.236.80.17
+52043	doc.cdnvideo.com	https://doc.cdnvideo.com/en/	200	0	vpn_marker	0	text/html	10000	c332e56fb36bf1e6c74c3330b28015aab119e45a49bd3bcbe135c6d6af1a97d1	General information - CDNvideo Documentation		151.236.121.67
+52043	globalcloudnetwork.ru	https://globalcloudnetwork.ru/oferta/	200	0	vpn_body_unproven	0	text/html; charset=UTF-8	10000	6db52137a65c9432902397f01ff75b9712b6936ad1231780258086112c44457e	Оферта - Глобальная Облачная Сеть		78.159.242.19
+52043	videomost.com	https://videomost.com/	200	0	vpn_marker	0	text/html; charset=UTF-8	10000	3f58622d3d5edeed9354333128ec52c3cf954fa82d8a4860e8d49f09f1a63acf	Enterprise-grade Software Video Conferencing Server		62.64.23.133
+52043	www.videomost.com	https://www.videomost.com/	200	0	vpn_marker	0	text/html; charset=UTF-8	10000	744ca2d875c7ba6c5bb89123cd81b07c7faf450345b076668e0f8cbf5dd48500	Enterprise-grade Software Video Conferencing Server		62.64.23.133
+52043	trueconf.com	https://trueconf.com/docs/server-api/ru.html	200	0	vpn_visible_review	0	text/html; charset=utf-8	5831	9a88b2b3f0dde4d40eed1b74d808c0f909f46c401cd5d0c0a7fd02182a48ef7b	TrueConf Server API v4		95.217.107.60
+52043	pruffme.com	https://pruffme.com/webinar/servers/	200	0	vpn_visible_review	0	text/html; charset=UTF-8	6760	3522ec73d24bc7769ad00663260db9666ef467b7d5d286e1bef2ca27e1c311ea			77.223.121.106
+52043	docs.teleboss.ru	https://docs.teleboss.ru/docs/docs/intro	200	0	vpn_visible_review	0	text/html	10000	802ec4d73e6cd5beb477969c2ee1a27b1106009200000d330ae471f01b824050	TeleBoss		139.100.194.181
+52043	check.livedigital.space	https://check.livedigital.space/	200	0	vpn_visible_review	0	text/html	4036	645aa1e52177c7a108aeb3a95015009b605f2aaf59c95d3c7059082af12af571	Проверка стабильности интернет подключения		5.8.74.36
+12389	www.cdnvideo.com	https://www.cdnvideo.com/	200	0	vpn_body_unproven	0	text/html; charset=UTF-8	10000	ef7e95c1d543ff5f4ce688c03006936127f1b2f9247c16bab79bd60972032f6d	A Global CDN for Live Streaming, VoD, Game and Web Acceleration - CDNvideo.com		151.236.80.17
+12389	cdnvideo.com	https://cdnvideo.com/	301	0	vpn_redirect	0	text/html; charset=UTF-8	0			https://www.cdnvideo.com/	151.236.80.17
+12389	doc.cdnvideo.com	https://doc.cdnvideo.com/en/	200	0	vpn_marker	0	text/html	10000	c332e56fb36bf1e6c74c3330b28015aab119e45a49bd3bcbe135c6d6af1a97d1	General information - CDNvideo Documentation		151.236.121.67
+12389	globalcloudnetwork.ru	https://globalcloudnetwork.ru/oferta/	200	0	vpn_body_unproven	0	text/html; charset=UTF-8	10000	6db52137a65c9432902397f01ff75b9712b6936ad1231780258086112c44457e	Оферта - Глобальная Облачная Сеть		78.159.242.19
+12389	videomost.com	https://videomost.com/	200	0	vpn_marker	0	text/html; charset=UTF-8	10000	3f58622d3d5edeed9354333128ec52c3cf954fa82d8a4860e8d49f09f1a63acf	Enterprise-grade Software Video Conferencing Server		62.64.23.133
+12389	www.videomost.com	https://www.videomost.com/	200	0	vpn_marker	0	text/html; charset=UTF-8	10000	744ca2d875c7ba6c5bb89123cd81b07c7faf450345b076668e0f8cbf5dd48500	Enterprise-grade Software Video Conferencing Server		62.64.23.133
+12389	trueconf.com	https://trueconf.com/docs/server-api/ru.html			vpn_transport_unproven	28		0				95.217.107.60
+12389	pruffme.com	https://pruffme.com/webinar/servers/	200	0	vpn_visible_review	0	text/html; charset=UTF-8	6760	3522ec73d24bc7769ad00663260db9666ef467b7d5d286e1bef2ca27e1c311ea			77.223.121.106
+12389	docs.teleboss.ru	https://docs.teleboss.ru/docs/docs/intro	200	0	vpn_visible_review	0	text/html	10000	802ec4d73e6cd5beb477969c2ee1a27b1106009200000d330ae471f01b824050	TeleBoss		139.100.194.181
+12389	check.livedigital.space	https://check.livedigital.space/	200	0	vpn_visible_review	0	text/html	4036	645aa1e52177c7a108aeb3a95015009b605f2aaf59c95d3c7059082af12af571	Проверка стабильности интернет подключения		5.8.74.36
