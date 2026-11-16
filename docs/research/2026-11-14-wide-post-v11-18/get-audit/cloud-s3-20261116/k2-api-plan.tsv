@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	iam.k2.cloud	iam.k2.cloud	https://iam.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	route53.k2.cloud	route53.k2.cloud	https://route53.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	ec2.ru-msk.k2.cloud	ec2.ru-msk.k2.cloud	https://ec2.ru-msk.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	ec2.ru-spb.k2.cloud	ec2.ru-spb.k2.cloud	https://ec2.ru-spb.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	eks.ru-msk.k2.cloud	eks.ru-msk.k2.cloud	https://eks.ru-msk.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	eks.ru-spb.k2.cloud	eks.ru-spb.k2.cloud	https://eks.ru-spb.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	paas.ru-msk.k2.cloud	paas.ru-msk.k2.cloud	https://paas.ru-msk.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	paas.ru-spb.k2.cloud	paas.ru-spb.k2.cloud	https://paas.ru-spb.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	candidate	elastic.k2.cloud	elastic.k2.cloud	https://elastic.k2.cloud/		https://docs.k2.cloud/ru/api/index.html
+corporate	control	docs.k2.cloud	docs.k2.cloud	https://docs.k2.cloud/ru/api/index.html	Справочник API	https://docs.k2.cloud/ru/api/index.html
