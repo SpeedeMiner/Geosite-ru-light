@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	doculite.com	doculite.com	https://doculite.com/home		https://documentolog.com/blog/novyy-funkcional-servisa-doculite-com-konstruktor-dokumentov-i-quot-zhivaya-quot-podpis
+corporate	control	personal.documentolog.com	personal.documentolog.com	https://personal.documentolog.com/home		https://doculite.com/home
+corporate	control	personal.documentolog.com	personal.documentolog.com	https://personal.documentolog.com/main.css		https://personal.documentolog.com/home
+corporate	control	personal.documentolog.com	personal.documentolog.com	https://personal.documentolog.com/main.e033b1232a7d4b46c290.js		https://personal.documentolog.com/home
+corporate	control	personal.documentolog.com	personal.documentolog.com	https://personal.documentolog.com/favicon/manifest.json		https://personal.documentolog.com/home
+corporate	control	cdn.documentolog.kz	cdn.documentolog.kz	https://cdn.documentolog.kz/public/fonts/Roboto/stylesheet.css		https://personal.documentolog.com/home
+corporate	candidate	mitwork-team.atlassian.net	mitwork-team.atlassian.net	https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729	Поставщик|Евразийский электронный портал	https://eep.mitwork.kz/ru/
+corporate	control	eep.mitwork.kz	eep.mitwork.kz	https://eep.mitwork.kz/ru/user/login		https://eep.mitwork.kz/ru/
+corporate	candidate	apicom.documentolog.com	apicom.documentolog.com	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf		https://documentolog.com/en
