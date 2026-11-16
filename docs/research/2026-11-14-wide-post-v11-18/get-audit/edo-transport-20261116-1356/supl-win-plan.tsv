@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	supl.biz	supl.biz	https://supl.biz/p/users-guide/		https://supl.biz/
+corporate	candidate	supl.biz	supl.biz	https://supl.biz/p/terms/		https://supl.biz/
+corporate	candidate	supl.biz	supl.biz	https://supl.biz/about/		https://supl.biz/
+corporate	candidate	win.myseldon.com	win.myseldon.com	https://win.myseldon.com/		https://seldongroup.ru/news/post/seldon-win-analitika-v-servise-smena-nazvaniya-produkta
+corporate	candidate	win.myseldon.com	win.myseldon.com	https://win.myseldon.com/news?newsId=3620		https://seldongroup.ru/news/post/seldon-win-analitika-v-servise-smena-nazvaniya-produkta
+corporate	candidate	account.myseldon.com	account.myseldon.com	https://account.myseldon.com/ru/account/login?returnUrl=https%3A%2F%2Fwin.myseldon.com%2F		https://win.myseldon.com/
+corporate	control	price.myseldon.com	price.myseldon.com	https://price.myseldon.com/ru/		https://win.myseldon.com/
+corporate	candidate	osihub.documentolog.com	osihub.documentolog.com	https://osihub.documentolog.com/		https://osihub.documentolog.com/integrations-business/api
