@@ -1,0 +1,98 @@
+{
+  "runs": {
+    "cargo-frontends": {
+      "run_id": 43826484052,
+      "zip_sha256": "501e3ea37bc707f257c5388de7293a1c20ef97f3303fc6c68c967b769677c18b",
+      "rows": 14,
+      "exit_asns": [
+        12389,
+        52043
+      ]
+    },
+    "edo-gaps-fesco": {
+      "run_id": 43826652080,
+      "zip_sha256": "cd5335985a610b34b27538ba67449dbe6ed26cec3df8954af0abe327097c4aa0",
+      "rows": 16,
+      "exit_asns": [
+        28840,
+        52043
+      ]
+    },
+    "edo-vendors": {
+      "run_id": 43827008146,
+      "zip_sha256": "e87d83d9cd6030e7d8fe0471622c232837c1f03ed9c4b7b04093b03b2e804245",
+      "rows": 12,
+      "exit_asns": [
+        28840,
+        52043
+      ]
+    },
+    "fesco-http1": {
+      "run_id": 43827278483,
+      "zip_sha256": "79069725efa380c59f9c95600c3e3898d54f1fce7e6ead0e8fa99741f50e385d",
+      "rows": 10,
+      "exit_asns": [
+        28840,
+        52043
+      ]
+    },
+    "rail-and-trucks": {
+      "run_id": 43826776198,
+      "zip_sha256": "844fb22651ff506d1982a3b9ce760ce99a572b978cbeacc0e06542e200aacd3f",
+      "rows": 10,
+      "exit_asns": [
+        12389,
+        28840
+      ]
+    },
+    "recheck": {
+      "run_id": 43825738234,
+      "zip_sha256": "44a5c0db0305839a2bddca1f478cb4ac4b3074b861aab093f3d5bb8623331841",
+      "rows": 12,
+      "exit_asns": [
+        12389,
+        28840
+      ]
+    },
+    "redirect-targets": {
+      "run_id": 43826899197,
+      "zip_sha256": "623ee545ca38fd96d7e9bf8fbdbdd2761c52bfe193e3a8afdd6061fb6186dbdb",
+      "rows": 12,
+      "exit_asns": [
+        12389,
+        52043
+      ]
+    },
+    "registry-cargo": {
+      "run_id": 43826261660,
+      "zip_sha256": "d7b093dec33999b7876e12f27ccd05b23274e73b807b8efe2b45ea549cf4ffe9",
+      "rows": 12,
+      "exit_asns": [
+        12389,
+        52043
+      ]
+    },
+    "transport": {
+      "run_id": 43825939317,
+      "zip_sha256": "5da3fbaf8086e036cdeece8fdae88097815122d63851e51c0e6473953d430a1f",
+      "rows": 18,
+      "exit_asns": [
+        12389,
+        28840
+      ]
+    }
+  },
+  "measurements": 116,
+  "unique_urls": 52,
+  "http_strict_tls": 86,
+  "completed_strict_get": 82,
+  "http_statuses": {
+    "404": 4,
+    "200": 68,
+    "301": 6,
+    "308": 2,
+    "502": 2,
+    "503": 2,
+    "302": 2
+  }
+}
