@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	m-core.pro	m-core.pro	https://m-core.pro/self-employed.html		https://npd.nalog.ru/aggregators/
+corporate	candidate	balans.pro	balans.pro	https://balans.pro/smz		https://npd.nalog.ru/aggregators/
+corporate	candidate	files.konsol.pro	files.konsol.pro	https://files.konsol.pro/perm/agreement.pdf		https://konsol.pro/legal
+corporate	candidate	marketing.konsol.pro	marketing.konsol.pro	https://marketing.konsol.pro/Docs/platform_v1.0.pdf		https://konsol.pro/legal
+corporate	comparison	konsol.pro	konsol.pro	https://konsol.pro/blog	Консоль	https://konsol.pro/
+corporate	control	qugo.ru	qugo.ru	https://qugo.ru/samozanyatym		https://npd.nalog.ru/aggregators/
+corporate	control	smz.rocketwork.ru	smz.rocketwork.ru	https://smz.rocketwork.ru/		https://npd.nalog.ru/aggregators/
+corporate	control	www.paygine.ru	www.paygine.ru	https://www.paygine.ru/contacts		https://paygine.ru/contacts
+corporate	control	sbplat.ru	sbplat.ru	https://sbplat.ru/about	СКАПЛ	https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx
