@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	tengiztrans.com	tengiztrans.com	https://tengiztrans.com/suppliers	Поставщикам|Тенгиз	https://tengiztrans.com/
+corporate	candidate	tengiztrans.com	tengiztrans.com	https://tengiztrans.com/contact	Контакты|Тенгиз	https://kffanek.kz/deystvitelnye
+corporate	candidate	alto-logistics.com	alto-logistics.com	https://alto-logistics.com/login/	Авторизация|Личный кабинет	https://alto-logistics.com/contact-us/
+corporate	candidate	alto-logistics.com	alto-logistics.com	https://alto-logistics.com/contact-us/	Контакты компании|Алматы	https://www.kazlogistics.kz/upload/list2024.pdf
+corporate	candidate	alto-logistics.com	alto-logistics.com	https://alto-logistics.com/my-account/		https://alto-logistics.com/contact-us/
+corporate	candidate	falcon-logist.com	falcon-logist.com	https://falcon-logist.com/	Falcon Logistic Group|доставки грузов	https://kffanek.kz/deystvitelnye
+corporate	candidate	middlecorridor.com	middlecorridor.com	https://middlecorridor.com/ru/klientam/tarify	Тарифы|Открыть таблицу	https://middlecorridor.com/ru/
+corporate	candidate	middlecorridor.com	middlecorridor.com	https://middlecorridor.com/ru/klientam/info-klientov	Информация для клиентов|Тарифные скидки	https://middlecorridor.com/ru/
