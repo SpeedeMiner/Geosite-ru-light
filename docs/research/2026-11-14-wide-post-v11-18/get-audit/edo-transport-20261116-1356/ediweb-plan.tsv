@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	docs.ediweb.com	docs.ediweb.com	https://docs.ediweb.com/		https://www.x5.ru/ru/partners/epd/
+corporate	control	doclink.ru	doclink.ru	https://doclink.ru/etrn/		https://www.x5.ru/ru/partners/epd/
+corporate	control	www.esphere.ru	www.esphere.ru	https://www.esphere.ru/products/etrn/		https://www.x5.ru/ru/partners/epd/
+corporate	control	click.sign.me	click.sign.me	https://click.sign.me/lk/		https://sign.me/
+corporate	control	sign.me	sign.me	https://sign.me/register		https://sign.me/smart/
+corporate	control	sign.me	sign.me	https://sign.me/login		https://sign.me/
