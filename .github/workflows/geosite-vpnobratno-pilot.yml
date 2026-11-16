@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-payment-deps-fns-linked-20261116
+  group: geosite-payment-deps-fns-recheck-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [fns-linked]
+        batch: [fns-recheck]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/payment-deps-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 9 --exclude-asn 43761
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 9 --exclude-asn 43761 --exclude-asn 15774
 
       - name: Upload observation and diagnostic reports
         if: always()
