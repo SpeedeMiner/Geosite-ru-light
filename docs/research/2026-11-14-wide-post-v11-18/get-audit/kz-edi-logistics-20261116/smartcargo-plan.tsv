@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	smartcargo.global	smartcargo.global	https://smartcargo.global/faq	Частые вопросы|Smart Cargo	https://smartcargo.global/
+corporate	candidate	smartcargo.global	smartcargo.global	https://smartcargo.global/services/documents/cpp	Цифровой паспорт перевозки|Smart Cargo	https://smartcargo.global/
+corporate	candidate	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/login	Войти|Зарегистрироваться	https://smartcargo.global/
+corporate	candidate	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/tracking	Трекинг|Smart Cargo	https://smartcargo.global/
+corporate	candidate	tura.smartcargo.global	tura.smartcargo.global	https://tura.smartcargo.global/	Биржа грузоперевозок|Казахстан	https://smartcargo.global/
+corporate	control	esutd.gov.kz	esutd.gov.kz	https://esutd.gov.kz/		https://www.gov.kz/org/transport/press/news/details/1205794?lang=ru
