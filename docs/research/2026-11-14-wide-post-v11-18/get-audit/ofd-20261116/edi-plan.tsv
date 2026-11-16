@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ediweb.com	ediweb.com	https://ediweb.com/ru-ru/support/kb/288	CorePlat	https://ediweb.com/ru-ru/products/coreplat
+corporate	comparison	ediweb.com	ediweb.com	https://ediweb.com/ru-ru/products/coreplat	CorePlat	https://x5.ru/ru/supplier-services/edi/
+corporate	candidate	ru.ediweb.com	ru.ediweb.com	https://ru.ediweb.com/secure/edi/ui/coreplat.html	Coreplat	https://ediweb.com/ru-ru/support/kb/288
+corporate	comparison	ru.ediweb.com	ru.ediweb.com	https://ru.ediweb.com/		https://ediweb.com/ru-ru/support/kb/288
+corporate	control	ru.ediweb.com	ru.ediweb.com	https://ru.ediweb.com/secure/edi/ui/703.bundle.d7d4847ffa59b2ca.css		https://ru.ediweb.com/secure/edi/ui/coreplat.html
+corporate	candidate	business.leradata.pro	business.leradata.pro	https://business.leradata.pro/contacts/	LERADATA	https://x5.ru/ru/supplier-services/edi/
+corporate	candidate	leradata.pro	leradata.pro	https://leradata.pro/logon.php	LERADATA	https://business.leradata.pro/info/support/
+corporate	comparison	leradata.pro	leradata.pro	https://leradata.pro/		https://business.leradata.pro/info/support/
+corporate	control	service.ediweb.ru	service.ediweb.ru	https://service.ediweb.ru/edi/		https://ediweb.com/ru-ru/support/kb/4
