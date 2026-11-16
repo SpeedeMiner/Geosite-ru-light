@@ -147,7 +147,13 @@ def tunnel_interface(conn):
 
 APICOM_PUBLIC_PDF = 'https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf'
 APICOM_MAX_BYTES = 3145728
-APICOM_GET_SECONDS = 42
+APICOM_GET_SECONDS = 49
+SMART_PUBLIC_FILES = {
+    'https://sw.smartcargo.global/docs/Smart_Cargo_CPP_Flyer_RU.pdf': 'application/pdf',
+    'https://sw.smartcargo.global/assets/index-DNCDoBVI.css': 'text/css',
+    'https://sw.smartcargo.global/assets/index-DCyG4O6_.js': 'application/javascript',
+}
+SMART_FILE_SECONDS = 25
 
 
 def get_from_tunnel(row, address, interface, timeout):
@@ -193,6 +199,9 @@ def get_from_tunnel(row, address, interface, timeout):
             # Diagnose HTTP/2 framing failure without changing certificate checks.
             argv.append('--http1.1')
         full_public_pdf = row.get('cohort') == 'public_pdf_full' and row['url'] == APICOM_PUBLIC_PDF
+        smart_type = SMART_PUBLIC_FILES.get(row['url']) if row.get('cohort') == 'smart_public_file' else None
+        if smart_type:
+            argv.extend(('--max-time', str(SMART_FILE_SECONDS), '--max-filesize', str(APICOM_MAX_BYTES)))
         if full_public_pdf:
             argv.extend(('--max-time', str(APICOM_GET_SECONDS), '--max-filesize', str(APICOM_MAX_BYTES)))
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
@@ -210,7 +219,7 @@ def get_from_tunnel(row, address, interface, timeout):
         argv.extend(('--', row['url']))
         allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
         try:
-            wall = APICOM_GET_SECONDS if full_public_pdf else timeout
+            wall = APICOM_GET_SECONDS if full_public_pdf else SMART_FILE_SECONDS if smart_type else timeout
             run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=wall+2)
             stats = json.loads(run.stdout) if run.stdout else {}
             if not isinstance(stats,dict):
@@ -244,6 +253,11 @@ def get_from_tunnel(row, address, interface, timeout):
                 if len(data) == stats.get('size_download') and str(stats.get('content_type','')).startswith('application/pdf') and data.startswith(b'%PDF-') and data.rstrip().endswith(b'%%EOF'):
                     stats['public_pdf_bytes'] = len(data)
                     stats['public_pdf_sha256'] = hashlib.sha256(data).hexdigest()
+            if smart_type and run.returncode == 0 and stats.get('response_code') == 200 and stats.get('ssl_verify_result') == 0 and body_file.is_file() and 0 < body_file.stat().st_size <= APICOM_MAX_BYTES:
+                data = body_file.read_bytes()
+                pdf_ok = smart_type != 'application/pdf' or (data.startswith(b'%PDF-') and data.rstrip().endswith(b'%%EOF'))
+                if pdf_ok and len(data) == stats.get('size_download') and str(stats.get('content_type','')).split(';', 1)[0] == smart_type:
+                    stats.update(public_file_sha256=hashlib.sha256(data).hexdigest(), public_file_bytes=len(data))
             if body_file.exists():
                 with body_file.open('rb') as f:
                     sample = f.read(body_sample_limit(row))
@@ -319,6 +333,8 @@ def observation(row, rc, stats, body, exit_info, address):
         else:
             x['echo_exit'] = 'unverified'
     x.pop('proxy_connect',None)
+    if 'public_file_sha256' in stats:
+        x.update(public_file_sha256=stats['public_file_sha256'], public_file_bytes=stats['public_file_bytes'])
     if 'public_pdf_sha256' in stats:
         x.update(public_pdf_sha256=stats['public_pdf_sha256'], public_pdf_bytes=stats['public_pdf_bytes'])
     if stats.get('same_url_cookie_initial_http') == 302:
@@ -504,7 +520,7 @@ def main():
         config = SimpleNamespace(source='vpnobratno',inventory=str(args.inventory),
             output_dir=str(args.output),targets=str(target_file),max_servers=args.exits,
             max_attempts=args.attempts,connect_timeout=args.connect_timeout,
-            request_timeout=30 if all(row.get('cohort') == 'public_pdf_full' for row in rows) else 8)
+            request_timeout=30 if any(row.get('cohort') in ('public_pdf_full', 'smart_public_file') for row in rows) else 8)
         try:
             code = upstream.run(config)
         finally:
