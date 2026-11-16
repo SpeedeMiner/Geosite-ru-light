@@ -1,0 +1,7 @@
+group	probe	candidate	host	url	marker	source
+corporate	candidate	altlog.online	altlog.online	https://altlog.online/		https://altlog.ru/altlog.online
+corporate	candidate	docs.edge7.veeroute.cloud	docs.edge7.veeroute.cloud	https://docs.edge7.veeroute.cloud/en/		https://veeroute.com/
+corporate	candidate	veeroute.com	veeroute.com	https://veeroute.com/	VeeRoute	https://veeroute.ru/
+corporate	candidate	drozd.red	drozd.red	https://drozd.red/		https://simpletms.ru/moduli-simple-tms/elektronnye-perevozochnye-dokumenty
+corporate	control	docs.altlog.ru	docs.altlog.ru	https://docs.altlog.ru/		https://docs.altlog.ru/
+corporate	control	logistics.uc-itcom.ru	logistics.uc-itcom.ru	https://logistics.uc-itcom.ru/login		https://uc-itcom.ru/help/docs/instrukciya-dlya-perevozchika
