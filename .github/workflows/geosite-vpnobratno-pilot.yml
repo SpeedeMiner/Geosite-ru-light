@@ -1,87 +1,119 @@
-name: GeoSite CDN public DNS correction and observed origin ASN
+name: GeoSite retry of exact public documentation endpoints
 
 on:
   push:
-    branches: [research/geosite-ru-wide-20261114-1810]
-    paths: [.github/workflows/geosite-vpnobratno-pilot.yml]
+    branches:
+      - research/geosite-ru-wide-20261114-1810
+    paths:
+      - .github/workflows/geosite-vpnobratno-pilot.yml
 
 permissions:
   contents: read
 
+concurrency:
+  group: geosite-vpnobratno-cdn-legacy-docs-20261116
+  cancel-in-progress: false
+
 jobs:
-  dns:
+  pilot:
+    name: Verify public sites (${{ matrix.batch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [legacy-docs]
     runs-on: ubuntu-24.04
-    timeout-minutes: 4
+    timeout-minutes: 15
+    env:
+      AUDIT: docs/research/2026-11-14-wide-post-v11-18/get-audit
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - name: Compare public DNS and RIPE records without VPN
+      - name: Checkout the GeoSite research commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Checkout the unchanged reviewed GeoIP transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
+          persist-credentials: false
+
+      - name: Checkout the fixed GeoIP inventory input
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 7eef1efcaafbdbe259f3aa4e56a07c38979afbfb
+          path: .vpn-pilot/geoip-release
+          persist-credentials: false
+
+      - name: Install OpenVPN and check runner capabilities
+        timeout-minutes: 6
         run: |
           set -euo pipefail
-          python3 - <<'PY'
-          import concurrent.futures
-          import json
+          test -c /dev/net/tun
+          if ! command -v openvpn >/dev/null || ! command -v iptables >/dev/null; then
+            sudo timeout --signal=TERM --kill-after=2s 45s python3 -B - <<'PYTHON'
           from pathlib import Path
-          from urllib.parse import urlencode
-          from urllib.request import Request, urlopen
+          import sys
+          sys.path.insert(0, ".vpn-pilot/upstream/.github/reachability")
+          from vpn_gate import install_ubuntu_apt_host_overrides
+          install_ubuntu_apt_host_overrides(Path("/etc/hosts"))
+          PYTHON
+            sudo timeout --kill-after=5s 120s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 -o APT::Update::Error-Mode=any update
+            sudo timeout --kill-after=5s 90s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 install -y --no-install-recommends openvpn iptables
+          fi
+          command -v ip openvpn iptables ip6tables curl
+          bash -n .vpn-pilot/upstream/.github/reachability/vpn_netns_exec.sh
+          python3 -m unittest discover -s "$AUDIT" -p test_vpnobratno_get.py -q
 
-          hosts = """cdnvideo.com www.cdnvideo.com doc.cdnvideo.com globalcloudnetwork.ru dashboard.globalcloudnetwork.ru
-          videomost.com trueconf.com developers.trueconf.com check.livedigital.space macroscop.com
-          doc.macroscop.com cloud.macroscop.com pro.macroscop.com packages.macroscop.com store.ivideon.com
-          bx-static.ivideon.com packages.ivideon.com updates.iv-cdn.com trassircloud.com shop.trassircloud.com
-          confluence.trassir.com support.trassir.com sigma.cloud.trassir.com stratonet.net www.stratonet.net""".split()
-          resolvers = {'google':'https://dns.google/resolve','cloudflare':'https://cloudflare-dns.com/dns-query'}
-
-          def get(url, accept='application/json'):
-              req = Request(url, headers={'Accept':accept})
-              with urlopen(req, timeout=8) as res:
-                  return json.loads(res.read(262144))
-
-          def dns(q):
-              name, host, qt = q
-              r = dict(kind='dns', resolver=name, host=host, query=qt)
-              try:
-                  d = get(resolvers[name] + '?' + urlencode(dict(name=host, type=qt)), 'application/dns-json')
-                  r.update(status=d.get('Status'), answers=[a for a in d.get('Answer',[]) if a.get('type') in (1,5,28)])
-              except (OSError, ValueError) as e:
-                  r['error'] = type(e).__name__
-              return r
-
-          def ripe(asn):
-              r = dict(kind='rir', asn=asn)
-              try:
-                  d = get('https://rest.db.ripe.net/ripe/aut-num/AS' + str(asn) + '.json')
-                  attrs = d['objects']['object'][0]['attributes']['attribute']
-                  r['aut_num'] = next((i['value'] for i in attrs if i['name']=='aut-num'), '')
-                  r['as_name'] = next((i['value'] for i in attrs if i['name']=='as-name'), '')
-                  r['org'] = next((i['value'] for i in attrs if i['name']=='org'), '')
-                  r['relation_57363_204720'] = [i['value'] for i in attrs if i['name'] in ('import','export','mp-import','mp-export') and
-                                               (asn==57363 and 'AS204720' in i['value'] or asn==204720 and 'AS57363' in i['value'])]
-              except (OSError, ValueError, KeyError, IndexError) as e:
-                  r['error'] = type(e).__name__
-              return r
-
-          public_ips = """151.236.80.17 151.236.121.67 78.159.242.19 62.64.23.133 95.217.107.60
-          178.63.53.169 5.8.74.36 5.129.240.3 85.198.82.73 37.9.5.23 176.57.67.161
-          176.53.227.51 18.157.170.248 3.121.95.187 88.212.255.156 188.42.40.122 176.57.65.148
-          176.57.64.52 213.33.172.155 85.119.149.185""".split()
-
-          def origin(ip):
-              row = dict(kind='origin', ip=ip)
-              try:
-                  data = get('https://stat.ripe.net/data/network-info/data.json?' + urlencode({'resource':ip}))['data']
-                  row.update(prefix=data.get('prefix'), asns=data.get('asns',[]))
-              except (OSError, ValueError, KeyError) as e:
-                  row['error'] = type(e).__name__
-              return row
-
-          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as p:
-              rows = list(p.map(dns, ((n,h,q) for h in hosts for n in resolvers for q in ('A','AAAA'))))
-              rows.extend(p.map(ripe, (57363,204720,60068)))
-              rows.extend(p.map(origin, public_ips))
-          Path('cdn-dns.jsonl').write_text(''.join(json.dumps(x,sort_keys=True)+'\n' for x in rows))
-          PY
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      - name: Set up the upstream inventory exporter
+        uses: actions/setup-go@0778a10ce47b5d450cf60fb94fafad4330008a35
         with:
-          name: geosite-cdn-video-dns
-          path: cdn-dns.jsonl
-          if-no-files-found: error
+          go-version: "1.26.10"
+          cache: false
+
+      - name: Export a checksum-verified inventory for annotations
+        timeout-minutes: 3
+        run: |
+          set -euo pipefail
+          (cd .vpn-pilot/geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
+          (
+            cd .vpn-pilot/upstream/.github/reachability/inventory
+            GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/geosite-vpn-inventory" .
+          )
+          "$RUNNER_TEMP/geosite-vpn-inventory" \
+            .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
+
+      - name: Measure documented public service pages
+        timeout-minutes: 8
+        run: |
+          set -euo pipefail
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- \
+              timeout --signal=TERM --kill-after=6s 7m \
+              python3 -B "$AUDIT/vpnobratno_get.py" \
+                "$AUDIT/cdn-video-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$upstream" .vpn-pilot/report --exits 1 --attempts 6 --connect-timeout 12 --exclude-asn 12389
+
+      - name: Upload observation and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: geosite-cdn-video-${{ matrix.batch }}-${{ github.run_attempt }}
+          path: |
+            .vpn-pilot/report/geosite-vpnobratno-summary.json
+            .vpn-pilot/report/vpnobratno-observations.jsonl
+            .vpn-pilot/report/vpn_gate_summary.json
+            .vpn-pilot/report/vpn_gate_providers.tsv
+            .vpn-pilot/report/vpn_gate_vpnobratto_progress.json
+          include-hidden-files: true
+          if-no-files-found: warn
           retention-days: 7
