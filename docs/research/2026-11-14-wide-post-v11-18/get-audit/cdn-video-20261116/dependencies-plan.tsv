@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	stratonet.net	stratonet.net	https://stratonet.net/	Стратонет	https://ruvds.com/api-docs/
+corporate	control	www.stratonet.net	www.stratonet.net	https://www.stratonet.net/		https://stratonet.net/
+corporate	candidate	shop.trassircloud.com	shop.trassircloud.com	https://shop.trassircloud.com/support-cloud		https://trassircloud.com/faq
+corporate	control	trassircloud.com	trassircloud.com	https://trassircloud.com/support-cloud	TRASSIR	https://trassircloud.com/faq
+corporate	candidate	trassircloud.com	trassircloud.com	https://trassircloud.com/privacy-policy	TRASSIR	https://trassircloud.com/
+corporate	control	trueconf.com	trueconf.com	https://trueconf.com/docs/main/en/	TrueConf	https://trueconf.com/support.html
+corporate	control	pro.macroscop.com	pro.macroscop.com	https://pro.macroscop.com/	Macroscop	https://macroscop.com/
