@@ -2,9 +2,9 @@
 
 База — опубликованные GeoSite Light/Server v11.20. Ветка исследовательская, выпуск не запускался.
 
-[Очередь +22](candidate-plus22.txt) сохраняет [прежние пять точных имён LiveDigital](../selcdn-20261116/candidate-plus5.txt) и добавляет 17 из текущей волны. [Поимённые решения](decisions.tsv) связывают exact с публичным путём, доказательством и причиной отказа для остальных. [Матрица первичного покрытия](baseline-coverage.tsv) — отдельная выборка, не перепись всех имён провайдеров.
+[Очередь +22](candidate-plus22.txt) сохраняет [прежние пять точных имён LiveDigital](../selcdn-20261116/candidate-plus5.txt) и добавляет 17 из текущей волны. [Поимённые решения](decisions.tsv) и [подтверждения по двум ASN](verified-exacts.tsv) связывают exact с публичным путём, доказательством и причиной отказа для остальных. [Матрица первичного покрытия](baseline-coverage.tsv) — отдельная выборка, не перепись всех имён провайдеров.
 
-- [DAT-превью](dat-preview.tsv): Light 4 469, Server 4 357, только RU, +22/−0.
+- [DAT-превью](dat-preview.tsv): Light 4 469, Server 4 357, изменения только в RU, +22/−0.
 - [Все 18 SRS](srs-43811433910.tsv): в сравнении с опубликованным манифестом меняется только RU. [Прогон](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/43811433910).
 - [DNS Google/Cloudflare, RIPE и origin](dns-rir-origin-43811108353.tsv), [разница регионального назначения Ivideon](ivideon-vantage-origin.tsv). Наблюдение DNS не эквивалентно доступности в стране и не задаёт диапазоны GeoIP.
 - [Сводка и проверенные SHA-256 архивов](wave-summary.json): 95 записей по 43 URL, 88 HTTP-ответов со строгим TLS из трёх российских ASN, 0 Globalping.
