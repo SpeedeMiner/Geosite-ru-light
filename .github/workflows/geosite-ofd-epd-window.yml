@@ -1,4 +1,4 @@
-name: GeoSite CARGO.RUN documented logistics through VPNObratno
+name: GeoSite CARGO.RUN short control through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-cargorun-1324
+  group: geosite-cargo-repeat-1324
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [cargorun]
+        batch: [cargo-repeat]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/epd-operator-20261116-1324/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 14 --exclude-asn 43761
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 16 --exclude-asn 43761 --exclude-asn 42610
 
       - name: Upload observation and diagnostic reports
         if: always()
