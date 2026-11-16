@@ -1,10 +1,10 @@
 {
   "queue_base": 117,
-  "queue_final": 127,
-  "added": 10,
-  "valid_https_completed": 156,
-  "observations": 170,
-  "distinct_urls": 84,
+  "queue_final": 128,
+  "added": 11,
+  "valid_https_completed": 171,
+  "observations": 186,
+  "distinct_urls": 85,
   "exit_asns": [
     3216,
     8402,
@@ -24,6 +24,19 @@
         34974
       ],
       "validated_completed_http": 10,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43837515024,
+      "batch": "closing",
+      "sha256_zip": "78b22562308481f833372c63a772da538dccdda8045a3c19e91a50e4fdc5990a",
+      "observations": 8,
+      "planned_urls": 4,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 7,
       "upstream_state": "COMPLETE"
     },
     {
@@ -128,6 +141,19 @@
         34974
       ],
       "validated_completed_http": 14,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43837632618,
+      "batch": "report-retry",
+      "sha256_zip": "f91e7f7aff38cc049aa27856e144bf0a631fb3bf44dcd5ca0326231903f2dfb6",
+      "observations": 8,
+      "planned_urls": 4,
+      "exit_asns": [
+        8402,
+        12389
+      ],
+      "validated_completed_http": 8,
       "upstream_state": "COMPLETE"
     },
     {
