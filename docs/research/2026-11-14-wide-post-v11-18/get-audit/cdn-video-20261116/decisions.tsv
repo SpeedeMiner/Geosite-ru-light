@@ -1,0 +1,35 @@
+hostname	decision	reason	primary_source	observed_public_url	run_ids
+bx-static.ivideon.com	hold	single_asset_served_by_AWS_in_RU_sample_and_both_public_resolvers	https://ru.ivideon.com/	https://bx-static.ivideon.com/local/assets/files/7d2e350b494e2cf560281df3fdae862e.png	43810019298
+cdnvideo.com	queued_exact	cdnvideo_www_redirect	https://www.cdnvideo.com/privacy-policy-com.pdf	https://cdnvideo.com/	43809865357
+check.livedigital.space	queued_exact	public_connection_test_organizer_link_no_webrtc_test	https://labconsalt.ru/obuchenie/kak-podklyuchitsya/	https://check.livedigital.space/	43809865357|43810427670
+cloud.macroscop.com	queued_exact	official_cloud_public_landing_not_login	https://macroscop.com/assets/documentation/Macroscop_Admin_Guide_ru.pdf	https://cloud.macroscop.com/index	43810019298
+confluence.trassir.com	queued_exact	official_dssl_knowledge_base	https://www.dssl.ru/support/tech/documentation/	https://confluence.trassir.com/spaces/WD/pages/36864630/%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5+%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8	43810171834
+dashboard.cdnvideo.com	already_ru	existing_exact	https://www.cdnvideo.com/	https://dashboard.cdnvideo.com/	
+dashboard.globalcloudnetwork.ru	already_ru	covered_ru_tld	https://globalcloudnetwork.ru/oferta/		
+developers.trueconf.com	hold	linked_legacy_docs_origin_AS24940	https://trueconf.ru/docs/main/ru/	https://developers.trueconf.com/api/server/	43810901374
+doc.cdnvideo.com	already_ru	existing_exact	https://www.cdnvideo.com/	https://doc.cdnvideo.com/en/	43809865357
+doc.macroscop.com	queued_exact	working_document_index_other_path_404	https://macroscop.com/podderzhka/dokumentaciya	https://doc.macroscop.com/download-documentation.htm	43810019298|43810699705
+extcam.com	hold	documented_operational_zone_no_verified_exact	https://support.ivideon.com/l_rus/knowledge_base/item/180944		
+globalcloudnetwork.ru	already_ru	covered_ru_tld	https://globalcloudnetwork.ru/oferta/	https://globalcloudnetwork.ru/oferta/	43809865357
+iv-cdn.com	hold	documented_operational_zone_not_add_as_suffix	https://support.ivideon.com/l_rus/knowledge_base/item/180944		
+macroscop.com	queued_exact	russian_operator_website	https://macroscop.com/o-kompanii	https://macroscop.com/	43810019298
+packages.ivideon.com	queued_exact	documented_Linux_repository_two_asns	https://ru.ivideon.com/ivideon-server-linux/	https://packages.ivideon.com/ubuntu/keys/ivideon.list	43810901374
+packages.macroscop.com	queued_exact	official_linux_package_index	https://doc.macroscop.com/install/linux-server.htm	https://packages.macroscop.com/rpm/	43810699705
+pro.macroscop.com	queued_exact	official_modules_portal	https://macroscop.com/	https://pro.macroscop.com/	43810171834|43810542095
+pruffmelab-a.akamaihd.net	hold	old_third_party_dependency_no_recent_object	https://pruffme.com/landing/Varton/GaussNEW		
+shop.trassircloud.com	queued_exact	public_supported_camera_list	https://trassircloud.com/faq	https://shop.trassircloud.com/support-cloud	43810542095
+sigma.cloud.trassir.com	already_ru	existing_exact_login_redirect_destination	https://trassircloud.com/cloud-camera-instruction	https://sigma.cloud.trassir.com/user-login	43810427670
+store.ivideon.com	queued_exact	linked_from_russian_product	https://ru.ivideon.com/	https://store.ivideon.com/	43810019298
+stratonet.net	queued_exact	official_ruvds_project	https://ruvds.com/api-docs/	https://stratonet.net/	43810542095
+support.trassir.com	queued_exact	official_support_public_landing	https://trassir.ru/support/soft/	https://support.trassir.com/	43810699705
+trassircloud.com	queued_exact	russian_operator_public_content	https://trassircloud.com/privacy-policy	https://trassircloud.com/faq	43810171834|43810427670|43810542095
+trbcdn.net	no_new_suffix	existing_multitenant	https://doc.cdnvideo.com/Services_setup/http/		
+trueconf.com	hold	ru_api_docs_same_exact_as_international_website_AS24940	https://trueconf.com/docs/server-api/ru.html	https://trueconf.com/docs/server-api/ru.html	43809865357|43810427670
+updates.iv-cdn.com	queued_exact	documented_package_client_range_two_asns_regional_dns_split	https://ru.ivideon.com/downloads/	https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe	43810901374
+videomost.com	hold	international_contacts_uae_ru_product_covered	https://videomost.com/contacts	https://videomost.com/	43809865357
+www.cdn77.com	hold	global_cdn_ix_insufficient	https://www.cdn77.com/network		
+www.cdnetworks.com	hold	international_not_derived_from_as204720	https://www.peeringdb.com/net/22983		
+www.cdnvideo.com	queued_exact	operator_first_party_moscow_legal	https://www.cdnvideo.com/privacy-policy-com.pdf	https://www.cdnvideo.com/	43809865357
+www.stratonet.net	queued_exact	canonical_redirect_to_verified_ruvds_project	https://ruvds.com/api-docs/	https://www.stratonet.net/	43810542095
+www.trassir.com	hold	international_marketing_ru_product_covered	https://www.trassir.com/	https://www.trassir.com/	43810171834
+www.videomost.com	hold	international_contacts_uae_ru_product_covered	https://videomost.com/contacts	https://www.videomost.com/	43809865357
