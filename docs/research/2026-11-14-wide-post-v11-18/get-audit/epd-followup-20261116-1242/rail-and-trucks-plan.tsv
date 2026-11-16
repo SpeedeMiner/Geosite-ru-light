@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	trucks.fesco.com	trucks.fesco.com	https://trucks.fesco.com/platform/login		https://www.fesco.ru/ru/clients/lk/
+corporate	control	my.fesco.com	my.fesco.com	https://my.fesco.com/dev/	FESCO	https://my.fesco.com/login
+corporate	candidate	isales.trcont.com	isales.trcont.com	https://isales.trcont.com/		https://trcont.com/
+corporate	comparison	trcont.com	trcont.com	https://trcont.com/investor-relations/shares/registrar	ТрансКонтейнер	https://trcont.com/
+corporate	control	uralspro.ru	uralspro.ru	https://uralspro.ru/	Юралс	https://urals.pro/
