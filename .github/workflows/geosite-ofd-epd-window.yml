@@ -1,4 +1,4 @@
-name: GeoSite public Supl.biz and Seldon.Win pages
+name: GeoSite Seldon public product portals and Documentolog
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-supl-win-1356
+  group: geosite-seldon-report-1356
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [supl-win]
+        batch: [report]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
