@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/tracking		https://smartcargo.global/
+corporate	control	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/assets/index-DNCDoBVI.css		https://sw.smartcargo.global/tracking
+corporate	control	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/assets/index-DCyG4O6_.js		https://sw.smartcargo.global/tracking
+corporate	candidate	sw.smartcargo.global	sw.smartcargo.global	https://sw.smartcargo.global/login	Войти|Зарегистрироваться	https://smartcargo.global/
+corporate	candidate	tura.smartcargo.global	tura.smartcargo.global	https://tura.smartcargo.global/	Биржа грузоперевозок|Казахстан	https://smartcargo.global/
