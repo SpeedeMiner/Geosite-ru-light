@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	market.documentolog.com	market.documentolog.com	https://market.documentolog.com/		https://documentolog.com/
+corporate	candidate	apicom.documentolog.com	apicom.documentolog.com	https://apicom.documentolog.com/		https://documentolog.com/
+corporate	candidate	osihub.documentolog.com	osihub.documentolog.com	https://osihub.documentolog.com/integrations-business/api		https://documentolog.com/
+corporate	candidate	personal.documentolog.com	personal.documentolog.com	https://personal.documentolog.com/registration		https://business.documentolog.com/useful
+corporate	control	business.documentolog.com	business.documentolog.com	https://business.documentolog.com/useful		https://kontur.ru/press/news/83362-kontur_i_documentolog
+corporate	control	documentolog.com	documentolog.com	https://documentolog.com/global		https://kontur.ru/press/news/83362-kontur_i_documentolog
+corporate	control	account.documentolog.com	account.documentolog.com	https://account.documentolog.com/support-center/business?locale=ru		https://documentolog.com/
+corporate	control	sitecom.doculite.kz	sitecom.doculite.kz	https://sitecom.doculite.kz/integrations-business/api		https://osihub.documentolog.com/integrations-business/api
