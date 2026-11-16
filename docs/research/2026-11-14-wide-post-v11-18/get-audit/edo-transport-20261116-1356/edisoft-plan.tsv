@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	edisoft.io	edisoft.io	https://edisoft.io/ru-kz/platforms/edisoft-platform		https://edisoft.io/ru-kz
+corporate	candidate	edisoft.io	edisoft.io	https://edisoft.io/ru-kz/company/contacts		https://edisoft.io/ru-kz
+corporate	candidate	edisoft.io	edisoft.io	https://edisoft.io/ru-kz/solutions/service/integration		https://edisoft.io/ru-kz
+corporate	control	docrobot.kz	docrobot.kz	https://docrobot.kz/		https://docrobot.kz/
+corporate	control	edi.magnit-info.ru	edi.magnit-info.ru	https://edi.magnit-info.ru/provisions/		https://edi.magnit-info.ru/
