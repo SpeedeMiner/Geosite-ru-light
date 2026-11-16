@@ -1,0 +1,19 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+15774	15774	15774	2	m-core.pro	https://m-core.pro/self-employed.html	404	0	0	text/html; charset=UTF-8	574	afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8	176.57.66.49	vpn_http_other	404 Page Not Found.	
+15774	15774	15774	2	balans.pro	https://balans.pro/smz	200	63	0	text/html; charset=UTF-8	10000	c1e3168bfa66b7cb1d946b08af873586125a2c9f15c73a4e17ba71ccfcc878b1	185.215.4.44	vpn_body_unproven	Самозанятые на платформе Balans.PRO	
+15774	15774	15774	2	files.konsol.pro	https://files.konsol.pro/perm/agreement.pdf	200	63	0	application/pdf	0		87.242.126.215	vpn_body_unproven		
+15774	15774	15774	2	marketing.konsol.pro	https://marketing.konsol.pro/Docs/platform_v1.0.pdf	200	63	0	application/pdf	0		213.180.193.247	vpn_body_unproven		
+15774	15774	15774	2	konsol.pro	https://konsol.pro/blog	200	0	0	text/html; charset=utf-8	10000	497c3de592460f1c9252fded4fae096cd8db024c19bdc38d10145e1a32be9b41	178.248.232.81	vpn_marker	Журнал Консоль.Про — 576 статей	
+15774	15774	15774	2	qugo.ru	https://qugo.ru/samozanyatym	200	0	0	text/html; charset=utf-8	10000	9762305ff6c006f8b4e7e163718258fb1ac947e60d291a9c90921c01b6799883	185.71.67.146	vpn_body_unproven	Qugo — Платформа для самозанятых	
+15774	15774	15774	2	smz.rocketwork.ru	https://smz.rocketwork.ru/	200	0	0	text/html	10000	d2703131d56f844cfd02c4385345b624181e024a0a035e7f90a5d7658f9e3a05	178.248.233.155	vpn_visible_review	Рокет Ворк — платформа для самозанятых	
+15774	15774	15774	2	www.paygine.ru	https://www.paygine.ru/contacts	301	0	0	text/html	169	5799fdb905d066f27dbbb19fefc9296e08f3c6bd74432ef3ba2aa0727a0e2d5f	91.215.41.69	vpn_redirect	301 Moved Permanently	https://paygine.ru/contacts
+15774	15774	15774	2	sbplat.ru	https://sbplat.ru/about	200	63	0	text/html; charset=utf-8	0		82.202.240.26	vpn_body_unproven		
+34533	34533	34533	2	m-core.pro	https://m-core.pro/self-employed.html	404	0	0	text/html; charset=UTF-8	574	afa4c5fb407a3253431690879c3bd3d58b0419445a5c300c502efdcc74e563f8	176.57.66.49	vpn_http_other	404 Page Not Found.	
+34533	34533	34533	2	balans.pro	https://balans.pro/smz	200	63	0	text/html; charset=UTF-8	10000	c1e3168bfa66b7cb1d946b08af873586125a2c9f15c73a4e17ba71ccfcc878b1	185.215.4.44	vpn_body_unproven	Самозанятые на платформе Balans.PRO	
+34533	34533	34533	2	files.konsol.pro	https://files.konsol.pro/perm/agreement.pdf	200	63	0	application/pdf	0		87.242.126.215	vpn_body_unproven		
+34533	34533	34533	2	marketing.konsol.pro	https://marketing.konsol.pro/Docs/platform_v1.0.pdf	200	63	0	application/pdf	0		213.180.193.247	vpn_body_unproven		
+34533	34533	34533	2	konsol.pro	https://konsol.pro/blog	200	0	0	text/html; charset=utf-8	10000	dcb883b1b11bdb2b29f2ffe36f579e9c18fbbd431cd9c69c25a21ca196cb5c03	178.248.232.81	vpn_marker	Журнал Консоль.Про — 576 статей	
+34533	34533	34533	2	qugo.ru	https://qugo.ru/samozanyatym	200	0	0	text/html; charset=utf-8	10000	9762305ff6c006f8b4e7e163718258fb1ac947e60d291a9c90921c01b6799883	185.71.67.146	vpn_body_unproven	Qugo — Платформа для самозанятых	
+34533	34533	34533	2	smz.rocketwork.ru	https://smz.rocketwork.ru/	200	0	0	text/html	10000	d2703131d56f844cfd02c4385345b624181e024a0a035e7f90a5d7658f9e3a05	178.248.233.155	vpn_visible_review	Рокет Ворк — платформа для самозанятых	
+34533	34533	34533	2	www.paygine.ru	https://www.paygine.ru/contacts	301	0	0	text/html	169	5799fdb905d066f27dbbb19fefc9296e08f3c6bd74432ef3ba2aa0727a0e2d5f	91.215.41.69	vpn_redirect	301 Moved Permanently	https://paygine.ru/contacts
+34533	34533	34533	2	sbplat.ru	https://sbplat.ru/about	200	63	0	text/html; charset=utf-8	0		82.202.240.26	vpn_body_unproven		
