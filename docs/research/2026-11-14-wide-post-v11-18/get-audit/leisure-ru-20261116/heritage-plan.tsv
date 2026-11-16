@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	hermitagemuseum.org	hermitagemuseum.org	https://hermitagemuseum.org/tickets	Эрмитаж|билеты	https://www.hermitagemuseum.org/
+corporate	control	tickets.hermitagemuseum.org	tickets.hermitagemuseum.org	https://tickets.hermitagemuseum.org/	Эрмитаж|билеты	https://hermitagemuseum.org/tickets
+corporate	candidate	www.kinoafisha.info	www.kinoafisha.info	https://www.kinoafisha.info/about/	Киноафиша|кинотеатр	https://www.kinoafisha.info/about/contacts/
+corporate	candidate	kinoafisha.info	kinoafisha.info	https://kinoafisha.info/	Киноафиша	https://www.kinoafisha.info/about/
+corporate	candidate	vtb-league.com	vtb-league.com	https://vtb-league.com/ru/news/kalendarnyj-plan-chempionata-2026-27-edinoj-ligi-vtb/	Единая Лига ВТБ|Календарный план	https://vtb-league.com/ru/
+corporate	candidate	polytech.one	polytech.one	https://polytech.one/	Политехнический музей|Политех	https://polytech.one/
+corporate	candidate	kremlinpalace.org	kremlinpalace.org	https://kremlinpalace.org/ticket-operators	Билетные партнёры|KASSIR.RU	https://kremlinpalace.org/ticket-operators

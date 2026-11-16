@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	author.today	author.today	https://author.today/pages/about	Что такое Author.Today|писател	https://author.today/pages/terms
+corporate	candidate	litnet.com	litnet.com	https://litnet.com/ru/info/terms	ЛИТНЕТ|литературная платформа	https://litnet.com/ru/info/terms
+corporate	candidate	ru.101xp.com	ru.101xp.com	https://ru.101xp.com/pages/eula	Пользовательское соглашение|101XP	https://ru.101xp.com/
+corporate	candidate	igm.gg	igm.gg	https://igm.gg/media/about	О редакции|IGM	https://igm.gg/media/about
+corporate	candidate	claustrophobia.com	claustrophobia.com	https://claustrophobia.com/	Клаустрофобия|квест	https://claustrophobia.com/quests/schedule
+corporate	candidate	steampay.com	steampay.com	https://steampay.com/about	Гарантии|SteamPay	https://steampay.com/about
+corporate	candidate	gbplus.gamersbase.store	gbplus.gamersbase.store	https://gbplus.gamersbase.store/home/user-agreement	Пользовательское соглашение|GamersBase Plus	https://gbplus.gamersbase.store/
+corporate	candidate	steam.gamersbase.store	steam.gamersbase.store	https://steam.gamersbase.store/user-agreement	Пользовательское соглашение|GamersBase	https://steam.gamersbase.store/user-agreement
