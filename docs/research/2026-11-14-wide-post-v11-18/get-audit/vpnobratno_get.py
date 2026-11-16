@@ -130,6 +130,11 @@ def tunnel_interface(conn):
     return conn
 
 
+APICOM_PUBLIC_PDF = 'https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf'
+APICOM_MAX_BYTES = 3145728
+APICOM_GET_SECONDS = 120
+
+
 def get_from_tunnel(row, address, interface, timeout):
     target = ip_address(address)
     if target.version != 4 or not target.is_global or target.is_multicast:
@@ -170,6 +175,9 @@ def get_from_tunnel(row, address, interface, timeout):
                 }):
             # Diagnose HTTP/2 framing failure without changing certificate checks.
             argv.append('--http1.1')
+        full_public_pdf = row.get('cohort') == 'public_pdf_full' and row['url'] == APICOM_PUBLIC_PDF
+        if full_public_pdf:
+            argv.extend(('--max-time', str(APICOM_GET_SECONDS), '--max-filesize', str(APICOM_MAX_BYTES)))
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
             argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
         if row.get('cohort') == 'nspk_trust':
@@ -185,7 +193,8 @@ def get_from_tunnel(row, address, interface, timeout):
         argv.extend(('--', row['url']))
         allowed_env = {k:os.environ[k] for k in ('PATH','LANG','LC_ALL') if k in os.environ}
         try:
-            run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=timeout+2)
+            wall = APICOM_GET_SECONDS if full_public_pdf else timeout
+            run = subprocess.run(argv,env=allowed_env,capture_output=True,text=True,timeout=wall+2)
             stats = json.loads(run.stdout) if run.stdout else {}
             if not isinstance(stats,dict):
                 raise ValueError('invalid curl metadata')
@@ -213,6 +222,11 @@ def get_from_tunnel(row, address, interface, timeout):
                 data = body_file.read_bytes()
                 filename = 'fns-edo-20261106-' + hashlib.sha256(data).hexdigest() + '.csv'
                 (snapshot_dir / filename).write_bytes(data)
+            if full_public_pdf and run.returncode == 0 and stats.get('response_code') == 200 and stats.get('ssl_verify_result') == 0 and body_file.is_file() and 0 < body_file.stat().st_size <= APICOM_MAX_BYTES:
+                data = body_file.read_bytes()
+                if len(data) == stats.get('size_download') and str(stats.get('content_type','')).startswith('application/pdf') and data.startswith(b'%PDF-') and data.rstrip().endswith(b'%%EOF'):
+                    stats['public_pdf_bytes'] = len(data)
+                    stats['public_pdf_sha256'] = hashlib.sha256(data).hexdigest()
             if body_file.exists():
                 with body_file.open('rb') as f:
                     sample = f.read(body_sample_limit(row))
@@ -288,6 +302,8 @@ def observation(row, rc, stats, body, exit_info, address):
         else:
             x['echo_exit'] = 'unverified'
     x.pop('proxy_connect',None)
+    if 'public_pdf_sha256' in stats:
+        x.update(public_pdf_sha256=stats['public_pdf_sha256'], public_pdf_bytes=stats['public_pdf_bytes'])
     if stats.get('same_url_cookie_initial_http') == 302:
         x['same_url_cookie_initial_http'] = 302
     state = x.pop('state').replace('workspace_', 'vpn_', 1)
