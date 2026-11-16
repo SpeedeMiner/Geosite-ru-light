@@ -1,0 +1,43 @@
+kind	resolver	host_or_url	qtype	status	cname_chain	addresses	curl_exit	tls_verify	response_type	sampled_bytes	sample_sha256
+dns	google	cdn.selectel.ru	A	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.	185.31.113.61					
+dns	google	cdn.selectel.ru	AAAA	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.						
+dns	cloudflare	cdn.selectel.ru	A	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.	151.236.118.252					
+dns	cloudflare	cdn.selectel.ru	AAAA	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.						
+dns	google	cdn-blog.selectel.ru	A	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.	151.236.118.252					
+dns	google	cdn-blog.selectel.ru	AAAA	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.						
+dns	cloudflare	cdn-blog.selectel.ru	A	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.	185.31.113.61					
+dns	cloudflare	cdn-blog.selectel.ru	AAAA	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.						
+dns	google	www.novochag.ru	A	0		185.71.67.73					
+dns	google	www.novochag.ru	AAAA	0							
+dns	cloudflare	www.novochag.ru	A	0		185.71.67.73					
+dns	cloudflare	www.novochag.ru	AAAA	0							
+dns	google	edu.livedigital.space	A	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.	151.236.118.253					
+dns	google	edu.livedigital.space	AAAA	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.						
+dns	cloudflare	edu.livedigital.space	A	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.	185.31.113.62					
+dns	cloudflare	edu.livedigital.space	AAAA	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.						
+dns	google	docs.livedigital.space	A	0	filtered-prod.livedigital.space.	87.228.76.51|178.72.186.211|139.100.194.181					
+dns	google	docs.livedigital.space	AAAA	0	filtered-prod.livedigital.space.						
+dns	cloudflare	docs.livedigital.space	A	0	filtered-prod.livedigital.space.	178.72.186.211|87.228.76.51|139.100.194.181					
+dns	cloudflare	docs.livedigital.space	AAAA	0	filtered-prod.livedigital.space.						
+dns	google	help.livedigital.space	A	0	carrotquest.help.	95.213.181.4					
+dns	google	help.livedigital.space	AAAA	0	carrotquest.help.						
+dns	cloudflare	help.livedigital.space	A	0	carrotquest.help.	95.213.181.4					
+dns	cloudflare	help.livedigital.space	AAAA	0	carrotquest.help.						
+dns	google	livedigital.space	A	0		185.215.4.14					
+dns	google	livedigital.space	AAAA	0							
+dns	cloudflare	livedigital.space	A	0		185.215.4.14					
+dns	cloudflare	livedigital.space	AAAA	0							
+dns	google	downloads.livedigital.space	A	0	7c09244c-4282-461e-9add-897ed59dcb3a.selcdn.net. -> y45sl61knj.a.trbcdn.net.	185.31.113.61					
+dns	google	downloads.livedigital.space	AAAA	0	7c09244c-4282-461e-9add-897ed59dcb3a.selcdn.net. -> y45sl61knj.a.trbcdn.net.						
+dns	cloudflare	downloads.livedigital.space	A	0	7c09244c-4282-461e-9add-897ed59dcb3a.selcdn.net. -> y45sl61knj.a.trbcdn.net.	185.31.113.61					
+dns	cloudflare	downloads.livedigital.space	AAAA	0	7c09244c-4282-461e-9add-897ed59dcb3a.selcdn.net. -> y45sl61knj.a.trbcdn.net.						
+dns	google	check.livedigital.space	A	0		5.8.74.36					
+dns	google	check.livedigital.space	AAAA	0							
+dns	cloudflare	check.livedigital.space	A	0		5.8.74.36					
+dns	cloudflare	check.livedigital.space	AAAA	0							
+dns	google	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	A	0	tco4vspfty.a.trbcdn.net.	151.236.118.253					
+dns	google	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	AAAA	0	tco4vspfty.a.trbcdn.net.						
+dns	cloudflare	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	A	0	tco4vspfty.a.trbcdn.net.	185.31.113.62					
+dns	cloudflare	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	AAAA	0	tco4vspfty.a.trbcdn.net.						
+download_range		https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg		206		185.31.113.61	0	0	application/x-apple-diskimage; swift_bytes=191584144	512	9462181f199ce0322abd29cd3004270f7022e18af2f745312917bda91d61929e
+download_range		https://downloads.livedigital.space/livedigital-desktop/livedigital-latest.dmg		206		185.31.113.61	0	0	application/x-apple-diskimage; swift_bytes=199608769	512	0cc66ed439fb7ff4894e16c1667a1aeaa9a82aec9dde51d8794ac0d69628976a
