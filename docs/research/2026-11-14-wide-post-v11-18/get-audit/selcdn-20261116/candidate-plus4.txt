@@ -1,0 +1,4 @@
+full:docs.livedigital.space
+full:edu.livedigital.space
+full:help.livedigital.space
+full:livedigital.space
