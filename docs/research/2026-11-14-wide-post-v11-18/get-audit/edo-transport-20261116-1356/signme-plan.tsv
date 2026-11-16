@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	click.sign.me	click.sign.me	https://click.sign.me/login		https://sign.me/
+corporate	candidate	kval.sign.me	kval.sign.me	https://kval.sign.me/login		https://sign.me/
+corporate	candidate	smart.sign.me	smart.sign.me	https://smart.sign.me/register		https://sign.me/smart/
+corporate	control	sign.me	sign.me	https://sign.me/support/article/kedo-registratsiia-lichnogo-kabineta		https://sign.me/support/
+corporate	control	sign.me	sign.me	https://sign.me/support/legal/articles/8/269		https://sign.me/support/legal
+corporate	control	www.sign.me	www.sign.me	https://www.sign.me/partners/		https://sign.me/
