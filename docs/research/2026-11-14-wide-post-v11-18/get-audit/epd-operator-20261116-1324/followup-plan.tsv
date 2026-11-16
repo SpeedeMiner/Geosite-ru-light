@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	altlog.online	altlog.online	https://altlog.online/login		https://altlog.ru/altlog.online
+corporate	candidate	veeroute.com	veeroute.com	https://veeroute.com/		https://docs.edge7.veeroute.cloud/en/
+corporate	candidate	svetofore.com	svetofore.com	https://svetofore.com/service/platform-registration		https://svetofore.com/privacy-page?tab=agreement
+corporate	control	isales.trcont.ru	isales.trcont.ru	https://isales.trcont.ru/help		https://isales.trcont.ru/help
+corporate	control	docs.edge7.veeroute.cloud	docs.edge7.veeroute.cloud	https://docs.edge7.veeroute.cloud/docs/studio/intro/		https://veeroute.cloud/
+corporate	control	altlog.ru	altlog.ru	https://altlog.ru/news-2026-08-12-001		https://altlog.ru/altlog.online
