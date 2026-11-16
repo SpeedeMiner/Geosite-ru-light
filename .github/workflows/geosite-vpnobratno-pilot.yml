@@ -1,4 +1,4 @@
-name: GeoSite transport applications and documentation through VPNObratno
+name: GeoSite registry and cargo evidence through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-epd-followup-transport-1242
+  group: geosite-epd-followup-registry-cargo-1242
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [transport]
+        batch: [registry-cargo]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -96,7 +96,7 @@ jobs:
           set -euo pipefail
           upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
           sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
-            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 GEOSITE_EDO_PUBLIC_SNAPSHOT=1 \
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
@@ -111,6 +111,7 @@ jobs:
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl
+            .vpn-pilot/report/fns-edo-20261106-*.csv
             .vpn-pilot/report/vpn_gate_summary.json
             .vpn-pilot/report/vpn_gate_providers.tsv
             .vpn-pilot/report/vpn_gate_vpnobratto_progress.json
