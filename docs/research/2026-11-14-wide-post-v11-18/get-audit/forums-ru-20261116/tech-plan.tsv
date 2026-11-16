@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	4pda.to	4pda.to	https://4pda.to/rules	Правила|Форум	https://4pda.to/forum/
+corporate	candidate	rsdn.org	rsdn.org	https://rsdn.org/forum/	Форумы|RSDN	https://rsdn.org/forum/
+corporate	candidate	forum.ru-board.com	forum.ru-board.com	https://forum.ru-board.com/	Компьютерный форум|Ru.Board	https://forum.ru-board.com/
+corporate	candidate	forum.oszone.net	forum.oszone.net	https://forum.oszone.net/	Форум|OSZone	https://forum.oszone.net/
+corporate	candidate	forums.modlabs.net	forums.modlabs.net	https://forums.modlabs.net/	ModLabs|Форум	https://www.modlabs.net/
+corporate	control	forum.ixbt.com	forum.ixbt.com	https://forum.ixbt.com/	Конференция|iXBT	https://forum.ixbt.com/
+corporate	control	qna.habr.com	qna.habr.com	https://qna.habr.com/	Вопросы|Хабр	https://qna.habr.com/

@@ -130,8 +130,26 @@ LEISURE_PUBLIC_HTML = frozenset((
 ))
 
 
+FORUM_PUBLIC_HTML = frozenset((
+    'https://4pda.to/rules',
+    'https://forum.drom.ru/',
+    'https://forum.ixbt.com/',
+    'https://forum.oszone.net/',
+    'https://forum.ru-board.com/',
+    'https://forums.modlabs.net/',
+    'https://kiario.club/',
+    'https://mastergrad.com/',
+    'https://modx.pro/',
+    'https://qna.habr.com/',
+    'https://rsdn.org/forum/',
+    'https://searchengines.guru/ru/forum',
+    'https://solaris-club.net/',
+    'https://volvocars.club/',
+))
+
+
 def body_sample_limit(row):
-    if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML):
+    if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML | FORUM_PUBLIC_HTML):
         return 524288
     if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
         return 262144
@@ -233,7 +251,7 @@ def get_from_tunnel(row, address, interface, timeout):
         if row.get('cohort') == 'corporate' and row['url'] in dedicated_public_html:
             # Larger response cap applies only to these documented public pages.
             argv.extend(('--compressed', '--max-filesize', dedicated_public_html[row['url']]))
-        if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML):
+        if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML | FORUM_PUBLIC_HTML):
             argv.extend(('--compressed', '--max-filesize', '3145728'))
         if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
             argv.extend(('--compressed', '--max-filesize', '2097152'))
