@@ -131,6 +131,7 @@ LEISURE_PUBLIC_HTML = frozenset((
 
 
 FORUM_PUBLIC_HTML = frozenset((
+    'https://4gameforum.com/help/terms',
     'https://4pda.to/forum/',
     'https://4pda.to/rules',
     'https://blogs.rsdn.org/',
@@ -173,6 +174,7 @@ FORUM_PUBLIC_HTML = frozenset((
     'https://tesall.club/forums/',
     'https://toyota-club.net/',
     'https://volvocars.club/',
+    'https://www.4gameforum.com/help/terms',
     'https://www.maultalk.com/',
     'https://www.phpbbguru.net/community/',
     'https://www.rusmedserv.com/about/contacts/',
