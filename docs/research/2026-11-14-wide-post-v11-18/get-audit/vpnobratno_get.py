@@ -163,6 +163,17 @@ def get_from_tunnel(row, address, interface, timeout):
                 raise ValueError('invalid curl metadata')
             if stats.get('response_code') and stats.get('remote_ip') != str(target):
                 raise ValueError('curl did not use the pinned destination')
+            if (run.returncode == 0 and stats.get('response_code') == 200
+                    and stats.get('ssl_verify_result') == 0
+                    and row['url'] == 'https://data.nalog.ru/opendata/7707329152-reestropereldoc/data-20261106-structure-20251025.csv'
+                    and os.environ.get('GEOSITE_EDO_PUBLIC_SNAPSHOT') == '1'
+                    and body_file.is_file() and 0 < body_file.stat().st_size <= 524288):
+                # Fixed output only for the checked public FNS registry URL.
+                snapshot_dir = Path('.vpn-pilot/report')
+                snapshot_dir.mkdir(parents=True, exist_ok=True)
+                data = body_file.read_bytes()
+                filename = 'fns-edo-20261106-' + hashlib.sha256(data).hexdigest() + '.csv'
+                (snapshot_dir / filename).write_bytes(data)
             if body_file.exists():
                 with body_file.open('rb') as f:
                     sample = f.read(body_sample_limit(row))
