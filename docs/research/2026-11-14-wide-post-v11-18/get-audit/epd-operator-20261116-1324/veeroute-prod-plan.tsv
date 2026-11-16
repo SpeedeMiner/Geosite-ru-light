@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	account.prod7.veeroute.cloud	account.prod7.veeroute.cloud	https://account.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	candidate	partner.prod7.veeroute.cloud	partner.prod7.veeroute.cloud	https://partner.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	candidate	studio.prod7.veeroute.cloud	studio.prod7.veeroute.cloud	https://studio.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	candidate	monitor.prod7.veeroute.cloud	monitor.prod7.veeroute.cloud	https://monitor.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	candidate	registry.prod7.veeroute.cloud	registry.prod7.veeroute.cloud	https://registry.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
+corporate	candidate	api.prod7.veeroute.cloud	api.prod7.veeroute.cloud	https://api.prod7.veeroute.cloud/account/file/insomnia_account_ru.json		https://docs.prod7.veeroute.cloud/
+corporate	control	docs.prod7.veeroute.cloud	docs.prod7.veeroute.cloud	https://docs.prod7.veeroute.cloud/		https://docs.prod7.veeroute.cloud/
