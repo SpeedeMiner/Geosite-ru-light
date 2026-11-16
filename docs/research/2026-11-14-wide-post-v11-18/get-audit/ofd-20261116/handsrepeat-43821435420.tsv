@@ -1,0 +1,7 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+15774	15774	15774	2	smz.handswork.pro	https://smz.handswork.pro/		28			0		185.165.123.36	vpn_transport_unproven		
+15774	15774	15774	2	smz.handswork.pro	https://smz.handswork.pro/app		28			0		185.165.123.36	vpn_transport_unproven		
+15774	15774	15774	2	legal.handswork.pro	https://legal.handswork.pro/privacy-policy	200	0	0	text/html	655	360b7f3111ba6e01d811b7af90124b24b558b65c873e90ccac9ea82c72466555	51.250.87.143	vpn_body_unproven	"Правовые документы ООО ""Рабочие руки"""	
+52043	52043	52043	2	smz.handswork.pro	https://smz.handswork.pro/	200	0	0	text/html; charset=UTF-8	10000	fdf3d5d270d8691a145bb59142da3b381973639f039760075bfe538cbb1fd8ee	185.165.123.36	vpn_body_unproven	Подработка в РР	
+52043	52043	52043	2	smz.handswork.pro	https://smz.handswork.pro/app	200	0	0	text/html; charset=UTF-8	10000	6d2c818ef1f5ae7b61463a0254591add25479f7df2fdd9bd0cf1e7a0ace4a6dd	185.165.123.36	vpn_body_unproven	Мобильное приложение «Мой налог»	
+52043	52043	52043	2	legal.handswork.pro	https://legal.handswork.pro/privacy-policy	200	0	0	text/html	655	360b7f3111ba6e01d811b7af90124b24b558b65c873e90ccac9ea82c72466555	51.250.87.143	vpn_body_unproven	"Правовые документы ООО ""Рабочие руки"""	
