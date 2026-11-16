@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	comparison	cloudpayments.atlassian.net	cloudpayments.atlassian.net	https://cloudpayments.atlassian.net/wiki/spaces/KB/overview	База знаний	https://cloudkassir.ru/
+corporate	control	support.cloudpayments.ru	support.cloudpayments.ru	https://support.cloudpayments.ru/wiki/spaces/KB/pages/2333605963/CloudKassir	CloudKassir	https://cloudkassir.ru/
+corporate	control	help.atol.online	help.atol.online	https://help.atol.online/article/11077	АТОЛ Онлайн	https://atol.online/library/
+corporate	control	developers.cloudkassir.ru	developers.cloudkassir.ru	https://developers.cloudkassir.ru/	CloudKassir	https://cloudkassir.ru/
+corporate	control	apidoc.life-pay.ru	apidoc.life-pay.ru	https://apidoc.life-pay.ru/cloud-print/index		https://life-pay.ru/developers/cloud/
+corporate	control	lk.platformaofd.ru	lk.platformaofd.ru	https://lk.platformaofd.ru/web/noauth/cheque/search		https://platformaofd.ru/
+corporate	control	lk-ofd.taxcom.ru	lk-ofd.taxcom.ru	https://lk-ofd.taxcom.ru/	Такском-Касса	https://taxcom.ru/ofd/lk/
+corporate	control	lk.ofd-ya.ru	lk.ofd-ya.ru	https://lk.ofd-ya.ru/login	Личный кабинет	https://ofd-ya.ru/about/news/new_lk

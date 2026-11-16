@@ -133,12 +133,17 @@ def get_from_tunnel(row, address, interface, timeout):
                 '--request','GET','--proto','=https','--connect-timeout',str(timeout),
                 '--max-time',str(timeout),'--max-filesize','524288','--output',str(body_file),
                 '--write-out','%{json}']
-        if row.get('cohort') == 'corporate' and row['url'] in (
-            'https://smz.handswork.pro/', 'https://smz.handswork.pro/app',
-        ):
-            # Two documented Tilda public HTML pages exceed 512 KiB.
-            # Replace the earlier limit only for these exact two public URLs.
-            argv.extend(('--compressed', '--max-filesize', '1048576'))
+        dedicated_public_html = {
+            'https://smz.handswork.pro/': '1048576',
+            'https://smz.handswork.pro/app': '1048576',
+            'https://russian.works/': '1048576',
+            'https://www.russian.works/': '1048576',
+            'https://b2bhumancloud.com/': '1048576',
+            'https://cloudpayments.atlassian.net/wiki/spaces/KB/overview': '2097152',
+        }
+        if row.get('cohort') == 'corporate' and row['url'] in dedicated_public_html:
+            # Larger response cap applies only to these documented public pages.
+            argv.extend(('--compressed', '--max-filesize', dedicated_public_html[row['url']]))
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
             argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
         if row.get('cohort') == 'nspk_trust':
