@@ -21,7 +21,7 @@ getwork.today	include	work	https://www.getwork.today/	https://getwork.today/prod
 help.konsol.pro	include	work	https://konsol.pro/legal	https://help.konsol.pro/	Справка для исполнителей	15774,34533	43816798462	200
 inwork.net	include	work	https://npd.nalog.ru/aggregators/	https://inwork.net/	Официальная главная, не тот Cloudflare-хост, что market	8402,15774,34533	43816934217,43817301776	200
 konsol.pro	include	work	https://konsol.pro/legal	https://konsol.pro/legal	Публичный юридический раздел платформы	15774,34533	43816798462	200
-kval.sign.me	include	signing	https://sign.me/	https://kval.sign.me/login	Официальная кнопка продукта, два стабильных 301 на отдельно подтверждённый sign.me/login	15774,52043	43817841993	301
+kval.sign.me	include	signing	https://sign.me/	https://kval.sign.me/login	Официальная кнопка продукта, два стабильных 301 на отдельно подтверждённый sign.me/login	15774,52043	43817841993,43818236720	301
 legal.handswork.pro	include	work	https://smz.handswork.pro/	https://legal.handswork.pro/privacy-policy	Официальное правовое приложение, HTML и CSS проверены	15774,34533	43817224800	200
 lite.payture.com	include	payments	https://www.payture.com/connection	https://lite.payture.com/payture-lite	Ссылка на Payture Lite; HTML и CSS проверены	15774,34533	43816798462	200
 lk.antilopay.com	include	payments	https://antilopay.com/	https://lk.antilopay.com/	Публичное открытие официального входа, без авторизации	15774,34533	43816798462	200
@@ -46,4 +46,5 @@ winwork.pro	include	work	https://npd.nalog.ru/aggregators/	https://winwork.pro/	
 www.ckassa.com	include	payments	https://www.ckassa.com/documentation/oferta	https://www.ckassa.com/start	Собственное WWW с публичной офертой и действующей страницей	15774,34533	43817092543	200
 www.getwork.today	include	work	https://npd.nalog.ru/aggregators/	https://www.getwork.today/	Точный WWW в списке ФНС	8402,15774,34533	43816934217,43817301776	200
 www.nanimatel.com	hold	work	https://www.nanimatel.com/	https://www.nanimatel.com/	Рабочая витрина, но актуальные первичные ссылки ведут на apex	15774,52043	43817456865	200
+www.sign.me	include	signing	https://www.sign.me/promo/click/	https://www.sign.me/click/	Публичная страница продукта на самостоятельном WWW, прежний путь перенаправляет на проверенную страницу	15774,52043	43818236720	200
 www.som.place	hold	payments	https://som.place/	https://www.som.place/	Отдельное WWW не прошло строгий TLS, оператор публикует apex			

@@ -131,14 +131,25 @@
         52043
       ],
       "globalping": 0
+    },
+    "43818236720": {
+      "sha256": "97d0b67ade57ac3a3f107a7a47a173b617e175dd046f966379ec53ccf32b3145",
+      "observations": 14,
+      "strict_http": 14,
+      "completed_get": 14,
+      "strict_http_asns": [
+        15774,
+        52043
+      ],
+      "globalping": 0
     }
   },
   "total": {
-    "runs": 12,
-    "observations": 206,
-    "unique_urls": 87,
-    "strict_http": 197,
-    "completed_get": 170,
+    "runs": 13,
+    "observations": 220,
+    "unique_urls": 92,
+    "strict_http": 211,
+    "completed_get": 184,
     "strict_http_asns": [
       8402,
       12389,
@@ -147,9 +158,9 @@
       52043
     ],
     "http_codes": {
-      "200": 175,
+      "200": 185,
       "404": 2,
-      "301": 10,
+      "301": 14,
       "206": 10
     },
     "globalping": 0
