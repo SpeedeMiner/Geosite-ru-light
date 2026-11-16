@@ -1,4 +1,4 @@
-name: GeoSite rail and road user applications through VPNObratno
+name: GeoSite transport redirect targets and documentation controls through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-epd-followup-rail-and-trucks-1242
+  group: geosite-epd-followup-redirect-targets-1242
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [rail-and-trucks]
+        batch: [redirect-targets]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
