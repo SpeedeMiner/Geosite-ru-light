@@ -1,0 +1,17 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+52043	52043	52043	2	kraskript.com	https://kraskript.com/	200	0	0	text/html; charset=UTF-8	10000	8e5815a4abb3a9f35687bf96fb9c686ad48af21d98f7a51e366d008794b69a76	88.212.207.70	vpn_body_unproven	"ООО ""МО ПНИЭИ - КрасКрипт"" - Центр защиты информации"	
+52043	52043	52043	2	urals.pro	https://urals.pro/	200	0	0	text/html	4526	9cf6e0099300872648958a1f0cd649248081d7c94b908eaf26fb33562abb1b3d	194.67.127.162	vpn_body_unproven	Юралс Кэпитал - Строительство нефтепромысловых дорог	
+52043	52043	52043	2	my.fesco.com	https://my.fesco.com/login?locale=ru	200	0	0	text/html	10000	5b33e02eee7218e3fd93de9a7a4500cc11a0c664f8c18903eb8e56cccb9803e6	91.226.49.34	vpn_body_unproven	Личный кабинет транспортной компании FESCO	
+52043	52043	52043	2	my.fesco.com	https://my.fesco.com/help/ru/tracking/location/	200	0	0	text/html	7223	5ffe341caa70e184eab4793d82cfe99694b6f9d36a827486d06529b981d78db0	91.226.49.34	vpn_body_unproven	Местонахождение контейнера | Fesco Help	
+52043	52043	52043	2	www.fesco.com	https://www.fesco.com/ru/clients/lk/		92			0		91.226.49.94	vpn_transport_unproven		
+52043	52043	52043	2	fesco.com	https://fesco.com/ru/clients/lk/		92			0		91.226.49.94	vpn_transport_unproven		
+52043	52043	52043	2	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/		92			0		91.226.49.36	vpn_transport_unproven		
+52043	52043	52043	2	data.nalog.ru	https://data.nalog.ru/opendata/7707329152-reestropereldoc/structure-20251025.csv	200	0	0	application/octet-stream	6340	f688a28bee96007eedebd1a434def6bb8b5fdd3e09666a86672814ce6737a5f6	212.193.155.41	vpn_body_unproven		
+28840	28840	28840	2	kraskript.com	https://kraskript.com/	200	0	0	text/html; charset=UTF-8	10000	8e5815a4abb3a9f35687bf96fb9c686ad48af21d98f7a51e366d008794b69a76	88.212.207.70	vpn_body_unproven	"ООО ""МО ПНИЭИ - КрасКрипт"" - Центр защиты информации"	
+28840	28840	28840	2	urals.pro	https://urals.pro/	200	0	0	text/html	4526	9cf6e0099300872648958a1f0cd649248081d7c94b908eaf26fb33562abb1b3d	194.67.127.162	vpn_body_unproven	Юралс Кэпитал - Строительство нефтепромысловых дорог	
+28840	28840	28840	2	my.fesco.com	https://my.fesco.com/login?locale=ru	200	0	0	text/html	10000	5b33e02eee7218e3fd93de9a7a4500cc11a0c664f8c18903eb8e56cccb9803e6	91.226.49.34	vpn_body_unproven	Личный кабинет транспортной компании FESCO	
+28840	28840	28840	2	my.fesco.com	https://my.fesco.com/help/ru/tracking/location/	200	0	0	text/html	7223	5ffe341caa70e184eab4793d82cfe99694b6f9d36a827486d06529b981d78db0	91.226.49.34	vpn_body_unproven	Местонахождение контейнера | Fesco Help	
+28840	28840	28840	2	www.fesco.com	https://www.fesco.com/ru/clients/lk/		92			0		91.226.49.94	vpn_transport_unproven		
+28840	28840	28840	2	fesco.com	https://fesco.com/ru/clients/lk/		92			0		91.226.49.94	vpn_transport_unproven		
+28840	28840	28840	2	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/		92			0		91.226.49.36	vpn_transport_unproven		
+28840	28840	28840	2	data.nalog.ru	https://data.nalog.ru/opendata/7707329152-reestropereldoc/structure-20251025.csv	200	0	0	application/octet-stream	6340	f688a28bee96007eedebd1a434def6bb8b5fdd3e09666a86672814ce6737a5f6	212.193.155.41	vpn_body_unproven		
