@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	npd.walletone.com	npd.walletone.com	https://npd.walletone.com/		https://npd.nalog.ru/credit-orgs/
+corporate	control	www.walletone.com	www.walletone.com	https://www.walletone.com/ru/wallet/	Единый кошелек	https://xn--80aaanetpw3ba4m.xn--p1ai/
+corporate	control	faq.handswork.pro	faq.handswork.pro	https://faq.handswork.pro/docs/crm-erp-sistema-rr/		https://b2bhumancloud.com/
+corporate	control	crm.handswork.pro	crm.handswork.pro	https://crm.handswork.pro/login		https://b2bhumancloud.com/
+corporate	control	m-core.pro	m-core.pro	https://m-core.pro/self-employed.html		https://npd.nalog.ru/aggregators/
+corporate	control	data.nalog.ru	data.nalog.ru	https://data.nalog.ru/opendata/7707329152-reestropereldoc/data-20261106-structure-20251025.csv		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
