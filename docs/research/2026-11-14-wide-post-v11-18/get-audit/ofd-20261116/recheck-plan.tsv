@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	smz.handswork.pro	smz.handswork.pro	https://smz.handswork.pro/	Подработка в РР	https://npd.nalog.ru/aggregators/
+corporate	comparison	smz.handswork.pro	smz.handswork.pro	https://smz.handswork.pro/app		https://smz.handswork.pro/
+corporate	comparison	m-core.pro	m-core.pro	https://m-core.pro/self-employed.html		https://npd.nalog.ru/aggregators/
+corporate	control	m-core.pro	m-core.pro	https://m-core.pro/	M-Core	https://npd.nalog.ru/aggregators/
+corporate	control	receipt.taxcom.ru	receipt.taxcom.ru	https://receipt.taxcom.ru/		https://taxcom.ru/baza-znaniy/onlaynkassy-i-ofd/stati/ofd-kak-nayti-i-proverit-chek/
+corporate	control	connect.ofd-ya.ru	connect.ofd-ya.ru	https://connect.ofd-ya.ru/check	Проверить чек	https://ofd-ya.ru/
+corporate	control	legal.handswork.pro	legal.handswork.pro	https://legal.handswork.pro/privacy-policy		https://smz.handswork.pro/

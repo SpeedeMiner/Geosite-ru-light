@@ -33,7 +33,6 @@ MAX_TARGETS = 10
 PUBLIC_DOC_RANGE = {
     'https://static.konsol.pro/static/js/main-03f87c13.js': '0-4095',
     'https://cdn.antilopay.com/index.js': '0-4095',
-    'https://smz.handswork.pro/': '0-16383',
     'https://simples.work/': '0-16383',
     'https://tempojob.org/': '0-16383',
     'https://balans.pro/smz': '0-16383',
@@ -134,6 +133,12 @@ def get_from_tunnel(row, address, interface, timeout):
                 '--request','GET','--proto','=https','--connect-timeout',str(timeout),
                 '--max-time',str(timeout),'--max-filesize','524288','--output',str(body_file),
                 '--write-out','%{json}']
+        if row.get('cohort') == 'corporate' and row['url'] in (
+            'https://smz.handswork.pro/', 'https://smz.handswork.pro/app',
+        ):
+            # Two documented Tilda public HTML pages exceed 512 KiB.
+            # Replace the earlier limit only for these exact two public URLs.
+            argv.extend(('--compressed', '--max-filesize', '1048576'))
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
             argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
         if row.get('cohort') == 'nspk_trust':
