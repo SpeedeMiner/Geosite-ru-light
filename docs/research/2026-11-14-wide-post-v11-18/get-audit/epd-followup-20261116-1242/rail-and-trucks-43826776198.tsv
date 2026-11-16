@@ -1,0 +1,11 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+28840	28840	28840	2	trucks.fesco.com	https://trucks.fesco.com/platform/login		92			0		91.226.49.93	vpn_transport_unproven		
+28840	28840	28840	2	my.fesco.com	https://my.fesco.com/dev/	200	0	0	text/html	10000	a72a2b0cca75b9e40a486f38e0205f4a28aa0135a25aac7afc23af2884b46eb6	91.226.49.34	vpn_body_unproven	API FESCO для разработчиков	
+28840	28840	28840	2	isales.trcont.com	https://isales.trcont.com/	308	0	0	text/html	159	11b97463f952c3d350430eaad209e38d88b0b470d38ca5dabbd27ca4da63e732	185.71.67.130	vpn_redirect	308 Permanent Redirect	https://isales.trcont.ru/
+28840	28840	28840	2	trcont.com	https://trcont.com/investor-relations/shares/registrar		60	20		0		185.71.67.130	vpn_tls_unproven		
+28840	28840	28840	2	uralspro.ru	https://uralspro.ru/	200	0	0	text/html; charset=UTF-8	10000	9de51485dc68f90fb6f6b9cdd26ec2a73b96ecad67f6a7222e87498f97fa21cd	37.140.194.216	vpn_visible_review	URALS PRO: ЦИФРОВЫЕ ТРАНСПОРТНЫЕ УСЛУГИ ТЭК В РОССИИ	
+12389	12389	12389	2	trucks.fesco.com	https://trucks.fesco.com/platform/login		92			0		91.226.49.93	vpn_transport_unproven		
+12389	12389	12389	2	my.fesco.com	https://my.fesco.com/dev/	200	0	0	text/html	10000	a72a2b0cca75b9e40a486f38e0205f4a28aa0135a25aac7afc23af2884b46eb6	91.226.49.34	vpn_body_unproven	API FESCO для разработчиков	
+12389	12389	12389	2	isales.trcont.com	https://isales.trcont.com/	308	0	0	text/html	159	11b97463f952c3d350430eaad209e38d88b0b470d38ca5dabbd27ca4da63e732	185.71.67.130	vpn_redirect	308 Permanent Redirect	https://isales.trcont.ru/
+12389	12389	12389	2	trcont.com	https://trcont.com/investor-relations/shares/registrar		60	20		0		185.71.67.130	vpn_tls_unproven		
+12389	12389	12389	2	uralspro.ru	https://uralspro.ru/	200	0	0	text/html; charset=UTF-8	10000	9de51485dc68f90fb6f6b9cdd26ec2a73b96ecad67f6a7222e87498f97fa21cd	37.140.194.216	vpn_visible_review	URALS PRO: ЦИФРОВЫЕ ТРАНСПОРТНЫЕ УСЛУГИ ТЭК В РОССИИ	
