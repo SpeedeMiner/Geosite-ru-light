@@ -31,6 +31,7 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf': '0-4095',
     'https://handswork.pro/assets/style-BD5tlGNt.css': '0-4095',
     'https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css': '0-4095',
     'https://static.konsol.pro/static/js/main-03f87c13.js': '0-4095',
@@ -59,6 +60,7 @@ NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
 
 EXTENDED_PUBLIC_HTML_SAMPLE = frozenset((
+    'https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729',
     'https://www.ixcellerate.com/faq/',
     'https://www.eurasiapeering.com/contact/',
     'https://lg.gblnet.net/',
@@ -136,6 +138,8 @@ def get_from_tunnel(row, address, interface, timeout):
                 '--max-time',str(timeout),'--max-filesize','524288','--output',str(body_file),
                 '--write-out','%{json}']
         dedicated_public_html = {
+            'https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729': '2097152',
+            'https://personal.documentolog.com/main.e033b1232a7d4b46c290.js': '1048576',
             'https://smz.handswork.pro/': '1048576',
             'https://smz.handswork.pro/app': '1048576',
             'https://russian.works/': '1048576',
