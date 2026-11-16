@@ -1,4 +1,4 @@
-name: GeoSite public Documentolog full transfer and logistics
+name: GeoSite Kazakhstan published freight and supplier pages
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-edi-logistics-full-20261116
+  group: geosite-kz-edi-logistics-freight-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [full-document]
+        batch: [freight]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
