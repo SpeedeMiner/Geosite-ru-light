@@ -1,0 +1,38 @@
+host	url	primary_source	role	light_ru_v11.20	server_ru_v11.20	plus133	light_block_v11.20
+apicom.documentolog.com	https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf	https://documentolog.com/en	Official public presentation; no API operations	-	-	-	-
+leeloo.documentolog.com	https://leeloo.documentolog.com/privacy	https://documentolog.com/en	Optional chat privacy notice; no dependency established	-	-	-	-
+documentolog.com	https://documentolog.com/elektronnyi-trudovoi-dogovor	https://documentolog.com/en	Published e-contract control	full:documentolog.com	full:documentolog.com	-	-
+kffanek.kz	https://kffanek.kz/deystvitelnye	https://fiata.org/directory/kz/	National industry association	domain:kz	domain:kz	-	-
+www.kazlogistics.kz	https://www.kazlogistics.kz/ru/members_union	https://www.kazlogistics.kz/ru/members_union	National industry union	domain:kz	domain:kz	-	-
+www.globalinklogistics.com	https://www.globalinklogistics.com/	https://fiata.org/directory/kz/	Corporate directory entry	-	-	-	-
+globalinklogistics.com	https://globalinklogistics.com/kazakhstan/	https://fiata.org/directory/kz/	Global corporate domain with local path	-	-	-	-
+mcmultimodal.com	https://mcmultimodal.com/dokumenty	https://fiata.org/directory/kz/	Document page	full:mcmultimodal.com	full:mcmultimodal.com	-	-
+www.mcmultimodal.com	https://www.mcmultimodal.com/contacts	https://www.mcmultimodal.com/contacts	WWW contact variant	-	-	-	-
+tengiztrans.com	https://tengiztrans.com/suppliers	https://kffanek.kz/deystvitelnye	Current public supplier page	-	-	-	-
+tengiztransgroup.kz	https://tengiztransgroup.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+admin.tengiztransgroup.kz	https://tengiztrans.com/suppliers	https://tengiztrans.com/suppliers	Published assets visible in HTML, not targeted	domain:kz	domain:kz	-	-
+alto-logistics.com	https://alto-logistics.com/login/	https://alto-logistics.com/contact-us/	Published sign-in UI and official contacts	-	-	-	-
+falcon-logist.com	https://falcon-logist.com/	https://kffanek.kz/deystvitelnye	Published website; claimed cabinet link not found	-	-	-	-
+project22883223.tilda.ws	https://project22883223.tilda.ws/page125418853.html	https://falcon-logist.com/	Contact link points to boilerplate, not to announced cabinet	domain:tilda.ws	domain:tilda.ws	-	-
+middlecorridor.com	https://middlecorridor.com/ru/klientam/tarify	https://middlecorridor.com/ru/kontakty	Astana-based corridor association tariffs	-	-	-	-
+www.ktze.kz	https://www.ktze.kz/ru/tracking	https://www.ktze.kz/ru	Public tracking interface	domain:kz	domain:kz	-	-
+www.kdts.kz	https://www.kdts.kz/ru/o-kompanii/partnery/	https://www.kdts.kz/ru	Partner directory	domain:kz	domain:kz	-	-
+atasu.kz	https://atasu.kz/ru	https://old.goszakup.gov.kz/ru/registry/show_supplier/774568	Atasu Group logistics	domain:kz	domain:kz	-	-
+www.transcom.kz	https://www.transcom.kz/	https://fiata.org/directory/kz/	FIATA entry and TLS control	domain:kz	domain:kz	-	-
+1mc.kz	https://1mc.kz/	https://kffanek.kz/deystvitelnye	Public Prima Multimodal site	domain:kz	domain:kz	-	-
+sigis.kz	https://sigis.kz/ru/index/	https://translogistica.kz/ru/media-tsentr/otraslevye-novosti/novosti-blog/1559-sigis-predstavit-tsifrovye-resheniya-dlya-upravleniya-zheleznodorozhnoj-logistikoj-na-translogistica-kazakhstan-2026	Rail logistics software	domain:kz	domain:kz	-	-
+translogistica.kz	https://translogistica.kz/ru/mail/1616-translogistica26-vis-09-09-2026	https://www.gov.kz/org/transport/press/news/details/1310656?lang=ru	Official fair website	domain:kz	domain:kz	-	-
+smartcargo.global	https://smartcargo.global/services/documents/cpp	https://www.gov.kz/org/transport/press/news/details/1212849?lang=ru	Production public passport service description	-	-	-	-
+sw.smartcargo.global	https://sw.smartcargo.global/login	https://smartcargo.global/	Production public sign-in UI	-	-	-	-
+tura.smartcargo.global	https://tura.smartcargo.global/	https://smartcargo.global/	Production freight exchange	-	-	-	-
+esutd.gov.kz	https://esutd.gov.kz/	https://www.gov.kz/org/transport/press/news/details/1205794?lang=ru	Already-covered KZ transport documents service	domain:kz	domain:kz	-	-
+idp.egov.kz	https://smartcargo.global/login	https://smartcargo.global/login	Already-covered public eGov sign-in destination, not targeted	domain:kz	domain:kz	-	-
+e-cmr.kz	https://e-cmr.kz/	https://e-cmr.kz/	Public e-CMR frontend	domain:kz	domain:kz	-	-
+test-smartcargo.codecraft.kz	https://test-smartcargo.codecraft.kz/cpp	https://www.gov.kz/org/transport/press/news/details/1212849?lang=ru	Test hostname surfaced in search; not tested	domain:kz	domain:kz	-	-
+dev-smartcargo.codecraft.kz	https://dev-smartcargo.codecraft.kz/cpp	https://www.gov.kz/org/transport/press/news/details/1212849?lang=ru	Development hostname surfaced in search; not tested	domain:kz	domain:kz	-	-
+ntlogistic.kz	https://ntlogistic.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+www.exdel.kz	https://www.exdel.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+www.kls.kz	https://www.kls.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+sbelt.kz	https://sbelt.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+www.tengiztransgroup.kz	https://www.tengiztransgroup.kz/	https://fiata.org/directory/kz/	FIATA entry	domain:kz	domain:kz	-	-
+onsite.iteca.kz	https://translogistica.kz/ru/mail/1616-translogistica26-vis-09-09-2026	https://translogistica.kz/ru/mail/1616-translogistica26-vis-09-09-2026	Fair directory host already in KZ suffix	domain:kz	domain:kz	-	-
