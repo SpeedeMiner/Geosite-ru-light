@@ -1,4 +1,4 @@
-name: GeoSite active EDO operators and documentation through VPNObratno
+name: GeoSite FESCO HTTP-1 transport control through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-epd-followup-edo-vendors-1242
+  group: geosite-epd-followup-fesco-http1-1242
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [edo-vendors]
+        batch: [fesco-http1]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -96,7 +96,7 @@ jobs:
           set -euo pipefail
           upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
           sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
-            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 GEOSITE_FESCO_HTTP1_DIAGNOSTIC=1 \
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
