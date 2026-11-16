@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	my.solarspace.pro	my.solarspace.pro	https://my.solarspace.pro/auth/sign-in		https://my.solarspace.pro/legal/oferta.pdf
+corporate	candidate	my.solarspace.pro	my.solarspace.pro	https://my.solarspace.pro/legal/cookies.pdf		https://docs.solarspace.pro/faq/authorization
+corporate	comparison	solarspace.pro	solarspace.pro	https://solarspace.pro/		https://docs.solarspace.pro/space-description
+corporate	comparison	eltex-co.com	eltex-co.com	https://eltex-co.com/policy/	Eltex	https://docs.eltex-co.ru/display/dgen/Eltex.Guides%2BEN
+corporate	source	api.eltex-co.com	api.eltex-co.com	https://api.eltex-co.com/storage/upload_center/files/33/ESR_Maintenance_Manual_1.24_en.pdf		https://docs.eltex-co.ru/display/en/
+corporate	control	storage.mwsapis.ru	storage.mwsapis.ru	https://storage.mwsapis.ru/mws-ui-site-docs/swagger/demo/swagger.yaml		https://mws.ru/docs/demo/swagger.html
+corporate	control	doc-cdn.beelinecloud.ru	doc-cdn.beelinecloud.ru	https://doc-cdn.beelinecloud.ru/Services_setup/http/		https://doc-cdn.beelinecloud.ru/
+corporate	control	lk.cloud.beeline.ru	lk.cloud.beeline.ru	https://lk.cloud.beeline.ru/		https://docs.cloud.beeline.ru/docs/platform/lk/about/
+corporate	control	docs.solarspace.pro	docs.solarspace.pro	https://docs.solarspace.pro/		https://rt-solar.ru/space/
+corporate	control	my.rt-solar.ru	my.rt-solar.ru	https://my.rt-solar.ru/		https://docs.solarspace.pro/faq/authorization
