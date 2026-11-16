@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	updates.iv-cdn.com	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_server/3.14.0/IvideonServer_3.14.0_win64_setup.exe		https://ru.ivideon.com/downloads/
+corporate	candidate	updates.iv-cdn.com	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe		https://ru.ivideon.com/downloads/
+corporate	candidate	packages.ivideon.com	packages.ivideon.com	https://packages.ivideon.com/ubuntu/keys/ivideon.list		https://ru.ivideon.com/ivideon-server-linux/
+corporate	candidate	developers.trueconf.com	developers.trueconf.com	https://developers.trueconf.com/api/server/		https://trueconf.ru/docs/main/ru/
