@@ -167,6 +167,33 @@ class VpnObratnoGetTests(unittest.TestCase):
                     self.assertEqual(stats['public_pdf_sha256'], sha256(payload).hexdigest())
                     self.assertEqual(stats['public_pdf_bytes'], len(payload))
 
+    def test_smart_cargo_whole_file_is_exact_mime_scoped_and_hashes_actual_body(self):
+        from hashlib import sha256
+        from vpnobratno_get import SMART_PUBLIC_FILES
+        url = next(u for u, m in SMART_PUBLIC_FILES.items() if m == 'text/css')
+        row = dict(ROW, url=url, host='sw.smartcargo.global', cohort='smart_public_file')
+        body = b'.test{display:block}'
+        for test_row, status, mime, rc, reported, expected in (
+            (row, 200, 'text/css; charset=utf-8', 0, len(body), True),
+            (row, 200, 'text/html', 0, len(body), False),
+            (row, 200, 'text/css', 28, len(body), False),
+            (row, 206, 'text/css', 0, len(body), False),
+            (row, 200, 'text/css', 0, 999, False),
+            (dict(row, url=url+'?x=1'), 200, 'text/css', 0, len(body), False),
+        ):
+            def fake(argv, **kwargs):
+                pathlib.Path(argv[argv.index('--output')+1]).write_bytes(body)
+                stats = dict(STATS, response_code=status, size_download=reported, content_type=mime)
+                return SimpleNamespace(returncode=rc, stdout=json.dumps(stats))
+            with self.subTest(test_row=test_row, status=status, mime=mime, rc=rc, reported=reported), patch('vpnobratno_get.subprocess.run', side_effect=fake) as run:
+                _, stats, _ = get_from_tunnel(test_row, '8.8.8.8', 'tun0', 5)
+                self.assertNotIn('--range', run.call_args.args[0])
+                self.assertNotIn('--insecure', run.call_args.args[0])
+            self.assertEqual('public_file_sha256' in stats, expected)
+            if expected:
+                self.assertEqual(stats['public_file_sha256'], sha256(body).hexdigest())
+                self.assertEqual(stats['public_file_bytes'], len(body))
+
     def test_range_is_limited_to_specific_public_documentation_urls(self):
         for url, cohort, expected in [
             ('https://api.curator.pro/', 'corporate', True),
