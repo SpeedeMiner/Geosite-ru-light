@@ -1,0 +1,98 @@
+{
+  "runs": {
+    "43813045097": {
+      "sha256": "f3199fdd637b2fd4f86e5a0fa5734752678147ebf571c6facf80afb81c51c7a0",
+      "observations": 18,
+      "strict_http": 11,
+      "completed_get": 10,
+      "globalping": 0,
+      "strict_http_exit_asns": [
+        12389,
+        43761
+      ],
+      "strict_http_ripe_corroborated_asns": [
+        12389,
+        43761
+      ]
+    },
+    "43813396052": {
+      "sha256": "3a3f13b582e853bec2573098528278bdea61aca00e3afa42767d2aa5917fdaca",
+      "observations": 18,
+      "strict_http": 13,
+      "completed_get": 11,
+      "globalping": 0,
+      "strict_http_exit_asns": [
+        12389,
+        43761
+      ],
+      "strict_http_ripe_corroborated_asns": [
+        12389
+      ]
+    },
+    "43813529002": {
+      "sha256": "d3cac8a6a1447b994a327b7b90aca73e2d62a228a4b0821f7a1afe903448ad97",
+      "observations": 16,
+      "strict_http": 0,
+      "completed_get": 0,
+      "globalping": 0,
+      "strict_http_exit_asns": [],
+      "strict_http_ripe_corroborated_asns": []
+    },
+    "43813734063": {
+      "sha256": "ac7e2588c3464bebe61148eb972d27f517fed281fe7ac3cb5d13b7c4072f0f01",
+      "observations": 18,
+      "strict_http": 18,
+      "completed_get": 16,
+      "globalping": 0,
+      "strict_http_exit_asns": [
+        8749,
+        12389
+      ],
+      "strict_http_ripe_corroborated_asns": [
+        8749,
+        12389
+      ]
+    },
+    "43813949928": {
+      "sha256": "83874234d0c4c65ba58e186032e25b2babd042b52ae495c9742dd3b16b3c0ba0",
+      "observations": 20,
+      "strict_http": 8,
+      "completed_get": 8,
+      "globalping": 0,
+      "strict_http_exit_asns": [
+        8749,
+        12389
+      ],
+      "strict_http_ripe_corroborated_asns": [
+        8749,
+        12389
+      ]
+    },
+    "43814383035": {
+      "sha256": "63074e700e0a00128fdf138b4446aa98775461b1fbb0ff50fcad6f72d5cde7bf",
+      "observations": 7,
+      "strict_http": 5,
+      "completed_get": 5,
+      "globalping": 0,
+      "strict_http_exit_asns": [
+        52043
+      ],
+      "strict_http_ripe_corroborated_asns": [
+        52043
+      ]
+    }
+  },
+  "total": {
+    "observations": 97,
+    "unique_urls": 46,
+    "strict_http": 55,
+    "completed_get": 50,
+    "http_codes": {
+      "301": 8,
+      "200": 43,
+      "206": 1,
+      "403": 3
+    },
+    "globalping": 0
+  }
+}
