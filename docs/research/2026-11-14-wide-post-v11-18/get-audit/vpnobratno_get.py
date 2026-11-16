@@ -65,7 +65,6 @@ NAMESPACE_RE = re.compile(r'geoip-vpn-[0-9]+-[0-9]+\Z')
 
 
 EXTENDED_PUBLIC_HTML_SAMPLE = frozenset((
-    'https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729',
     'https://www.ixcellerate.com/faq/',
     'https://www.eurasiapeering.com/contact/',
     'https://lg.gblnet.net/',
@@ -73,6 +72,9 @@ EXTENDED_PUBLIC_HTML_SAMPLE = frozenset((
 ))
 
 def body_sample_limit(row):
+    if (row.get('cohort') == 'corporate'
+            and row['url'] == 'https://mitwork-team.atlassian.net/wiki/spaces/SPC/pages/93257729'):
+        return 1048576
     return 65536 if row.get("cohort") == "corporate" and row["url"] in EXTENDED_PUBLIC_HTML_SAMPLE else BODY_LIMIT
 
 
