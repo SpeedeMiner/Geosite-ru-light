@@ -71,7 +71,22 @@ EXTENDED_PUBLIC_HTML_SAMPLE = frozenset((
     'https://cdnnow.pro/about/',
 ))
 
+KZ_LOGISTICS_BODY_URLS = frozenset((
+    'https://tengiztrans.com/suppliers',
+    'https://tengiztrans.com/contact',
+    'https://falcon-logist.com/',
+    'https://alto-logistics.com/login/',
+    'https://smartcargo.global/faq',
+    'https://smartcargo.global/services/documents/cpp',
+    'https://sw.smartcargo.global/login',
+    'https://sw.smartcargo.global/tracking',
+    'https://tura.smartcargo.global/',
+))
+
+
 def body_sample_limit(row):
+    if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
+        return 262144
     if row.get('cohort') == 'supl_cookie' and row['url'] in SUPL_COOKIE_GET:
         return 131072
     if (row.get('cohort') == 'corporate'
@@ -164,6 +179,8 @@ def get_from_tunnel(row, address, interface, timeout):
         if row.get('cohort') == 'corporate' and row['url'] in dedicated_public_html:
             # Larger response cap applies only to these documented public pages.
             argv.extend(('--compressed', '--max-filesize', dedicated_public_html[row['url']]))
+        if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
+            argv.extend(('--compressed', '--max-filesize', '2097152'))
         if (row.get('cohort') == 'corporate'
                 and os.environ.get('GEOSITE_FESCO_HTTP1_DIAGNOSTIC') == '1'
                 and row['url'] in {
