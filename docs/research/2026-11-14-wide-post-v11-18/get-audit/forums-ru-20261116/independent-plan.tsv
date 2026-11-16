@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.phpbbguru.net	www.phpbbguru.net	https://www.phpbbguru.net/community/	phpBB Guru|русская поддержка	https://www.phpbbguru.net/community/
+corporate	candidate	www.maultalk.com	www.maultalk.com	https://www.maultalk.com/	Форум вебмастеров|MaulTalk	https://www.maultalk.com/
+corporate	candidate	maultalk.com	maultalk.com	https://maultalk.com/	Форум вебмастеров|MaulTalk	https://www.maultalk.com/
+corporate	candidate	kenotron.com	kenotron.com	https://kenotron.com/	Кенотрон|Форум	https://kenotron.com/
+corporate	candidate	toyota-club.net	toyota-club.net	https://toyota-club.net/	Toyota|Тойота	https://toyota-club.net/
+corporate	candidate	nissan-club.org	nissan-club.org	https://nissan-club.org/	Nissan|Форум	https://nissan-club.org/
+corporate	candidate	www.vaz.ee	www.vaz.ee	https://www.vaz.ee/	Автопортал|Форум	https://www.vaz.ee/
+corporate	control	bvf.ru	bvf.ru	https://bvf.ru/forum/	Большой Воронежский Форум|Форум	https://bvf.ru/forum/

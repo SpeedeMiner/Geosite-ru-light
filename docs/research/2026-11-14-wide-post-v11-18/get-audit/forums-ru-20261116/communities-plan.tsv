@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	forum.omsk.com	forum.omsk.com	https://forum.omsk.com/	Омский Форум|Раздел	https://forum.omsk.com/
+corporate	candidate	teron.online	teron.online	https://teron.online/	Перм|Teron	https://teron.online/
+corporate	candidate	rcopen.com	rcopen.com	https://rcopen.com/forum/	RCOpen|Модели	https://rcopen.com/forum/
+corporate	candidate	forum.faleristika.info	forum.faleristika.info	https://forum.faleristika.info/viewforum.php?f=316	ПРАВИЛА ФОРУМА|Фалеристика	https://forum.faleristika.info/
+corporate	candidate	pesikot.org	pesikot.org	https://pesikot.org/forum/	Пёс и Кот|Форум	https://pesikot.org/
+corporate	candidate	forum.rusmedserv.com	forum.rusmedserv.com	https://forum.rusmedserv.com/	Дискуссионный Клуб|Правила форума	https://www.rusmedserv.com/about/contacts/
+corporate	control	forumklerk.ru	forumklerk.ru	https://forumklerk.ru/	Форум Клерка|Архив	https://www.klerk.ru/buh/news/688050/
+corporate	control	forum.sibmama.ru	forum.sibmama.ru	https://forum.sibmama.ru/	Сибмама|Правила	https://forum.sibmama.ru/
