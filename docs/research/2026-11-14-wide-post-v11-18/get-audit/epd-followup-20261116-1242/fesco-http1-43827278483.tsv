@@ -1,0 +1,11 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+52043	52043	52043	2	trucks.fesco.com	https://trucks.fesco.com/platform/login		52			0		91.226.49.93	vpn_transport_unproven		
+52043	52043	52043	2	www.fesco.com	https://www.fesco.com/ru/clients/lk/		52			0		91.226.49.94	vpn_transport_unproven		
+52043	52043	52043	2	fesco.com	https://fesco.com/ru/clients/lk/		52			0		91.226.49.94	vpn_transport_unproven		
+52043	52043	52043	2	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/		52			0		91.226.49.36	vpn_transport_unproven		
+52043	52043	52043	2	my.fesco.com	https://my.fesco.com/login?locale=ru	200	0	0	text/html	10000	5b33e02eee7218e3fd93de9a7a4500cc11a0c664f8c18903eb8e56cccb9803e6	91.226.49.34	vpn_body_unproven	Личный кабинет транспортной компании FESCO	
+28840	28840	28840	2	trucks.fesco.com	https://trucks.fesco.com/platform/login		52			0		91.226.49.93	vpn_transport_unproven		
+28840	28840	28840	2	www.fesco.com	https://www.fesco.com/ru/clients/lk/		52			0		91.226.49.94	vpn_transport_unproven		
+28840	28840	28840	2	fesco.com	https://fesco.com/ru/clients/lk/		52			0		91.226.49.94	vpn_transport_unproven		
+28840	28840	28840	2	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/		52			0		91.226.49.36	vpn_transport_unproven		
+28840	28840	28840	2	my.fesco.com	https://my.fesco.com/login?locale=ru	200	0	0	text/html	10000	5b33e02eee7218e3fd93de9a7a4500cc11a0c664f8c18903eb8e56cccb9803e6	91.226.49.34	vpn_body_unproven	Личный кабинет транспортной компании FESCO	
