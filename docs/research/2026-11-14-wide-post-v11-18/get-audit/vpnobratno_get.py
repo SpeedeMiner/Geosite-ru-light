@@ -146,6 +146,17 @@ def get_from_tunnel(row, address, interface, timeout):
         if row.get('cohort') == 'corporate' and row['url'] in dedicated_public_html:
             # Larger response cap applies only to these documented public pages.
             argv.extend(('--compressed', '--max-filesize', dedicated_public_html[row['url']]))
+        if (row.get('cohort') == 'corporate'
+                and os.environ.get('GEOSITE_FESCO_HTTP1_DIAGNOSTIC') == '1'
+                and row['url'] in {
+                    'https://trucks.fesco.com/platform/login',
+                    'https://www.fesco.com/ru/clients/lk/',
+                    'https://fesco.com/ru/clients/lk/',
+                    'https://www.fesco.ru/ru/clients/lk/',
+                    'https://my.fesco.com/login?locale=ru',
+                }):
+            # Diagnose HTTP/2 framing failure without changing certificate checks.
+            argv.append('--http1.1')
         if row['url'] in PUBLIC_DOC_RANGE and row.get('cohort') == 'corporate':
             argv.extend(('--range', PUBLIC_DOC_RANGE[row['url']]))
         if row.get('cohort') == 'nspk_trust':
