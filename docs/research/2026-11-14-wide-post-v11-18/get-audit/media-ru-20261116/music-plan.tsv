@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	zaycev.net	zaycev.net	https://zaycev.net/	Зайцев|музыка	https://zaycev.net/
+corporate	candidate	zaycev.fm	zaycev.fm	https://zaycev.fm/	Зайцев|радио	https://zaycev.fm/
+corporate	candidate	soundstream.media	soundstream.media	https://soundstream.media/	подкасты|SoundStream	https://soundstream.media/
+corporate	candidate	mave.digital	mave.digital	https://mave.digital/	подкасты|mave	https://mave.digital/
+corporate	control	zvuk.com	zvuk.com	https://zvuk.com/	Звук|музыку	https://help.zvuk.com/article/47967
+corporate	control	help.zvuk.com	help.zvuk.com	https://help.zvuk.com/article/47967	Звук	https://zvuk.com/
