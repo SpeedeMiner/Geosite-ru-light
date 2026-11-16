@@ -1,0 +1,87 @@
+segment	hostname	status	catalogue_url	proof_url	proof_asns	explanation
+it	4pda.to	reserve	https://4pda.to/forum/	-	-	Официальная площадка. Правила и индекс дали страницу проверки 403, включая AS12389 и AS56420. Новый адрес не следует из покрытия старого 4pda.ru.
+it	ru.stackoverflow.com	comparison	https://ru.stackoverflow.com/	-	-	Локаль глобальной сети Stack Overflow, не самостоятельный российский проект.
+it	rsdn.org	include	https://rsdn.org/forum/	https://rsdn.org/forum/	12389,56420	Сообщество российских разработчиков, опубликованные темы. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+it	forum.ru-board.com	reserve	https://forum.ru-board.com/	-	-	Публичный вход заявлен, в первом прогоне ошибка транспорта, не включать общий корень.
+it	ru-board.com	reserve	https://ru-board.com/	-	-	Не переносить статус форума на корневой портал.
+it	forum.oszone.net	reserve	https://forum.oszone.net/	-	-	Не подтверждён из российского выхода; отдельно от портала.
+it	oszone.net	reserve	https://oszone.net/	-	-	Основной портал, не подтверждает доступность отдельного форума.
+it	nnmclub.to	comparison	https://nnmclub.to/	-	-	Трекер, вне задач этого исследования.
+it	forum.keenetic.com	reserve	https://forum.keenetic.com/	-	-	Многоязычный форум. Российская витрина поддержки Netcraze учитывается отдельно.
+it	forum.mikrotik.com	comparison	https://forum.mikrotik.com/	-	-	Глобальный форум производителя. Русскоязычный независимый forummikrotik.ru уже покрыт.
+it	forums.modlabs.net	reserve	https://forums.modlabs.net/	-	-	В первом прогоне DNS не подтверждён.
+it	kenotron.com	reserve	https://kenotron.com/	-	-	В рабочей сети редирект на площадку продажи доменов; не считать действующим форумом.
+it	mastergrad.com	include	https://mastergrad.com/	https://mastergrad.com/	12389,56420	Российское сообщество о строительстве и ремонте, открытый каталог. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+it	forum.cxem.net	reserve	https://forum.cxem.net/	-	-	Не переносить принадлежность на основании русского интерфейса.
+web	searchengines.guru	reserve	https://searchengines.guru/ru/forum	https://searchengines.guru/ru/forum	12389,56420	Сетевой тест из двух ASN пройден. Условия указывают MetaQuotes Ltd и иностранную юрисдикцию. Отдельная роль RU для всего хоста не подтверждена.
+web	www.maultalk.com	reserve	https://www.maultalk.com/	-	-	Рабочий GET дал 410. Состояние форума не подтверждено.
+web	maultalk.com	reserve	https://maultalk.com/	-	-	Рабочий GET дал 410. Не считать рабочим алиасом.
+web	forum.mixmarket.biz	reserve	https://forum.mixmarket.biz/	-	-	Исторический адрес партнёрского форума, актуальность не подтверждена.
+web	ru.wordpress.org	comparison	https://ru.wordpress.org/support/forums/	-	-	Русская локаль общего WordPress.org.
+web	modx.pro	reserve	https://modx.pro/	https://modx.pro/	12389,56420	Сетевой тест из двух ASN пройден. Официальное описание указывает, что это международное русскоязычное сообщество без юридического лица. Оставлено в резерве по принадлежности.
+web	rusff.me	reserve	https://rusff.me/	-	-	Мультиарендный хостинг форумов, сам не отдельный форум.
+web	www.phpbbguru.net	include	https://www.phpbbguru.net/community/	https://www.phpbbguru.net/community/	12389,28840,56420	Выделенный форум русскоязычной поддержки phpBB, отдельный от глобальной инфраструктуры. Содержательный завершённый 200 со строгим TLS на том же URL в трёх ASN.
+auto	www.drive2.com	comparison	https://www.drive2.com/	-	-	В AS12389 ответил 302 на www.drive2.ru, но целевой GET дал 402, а AS28840 не подтвердил DNS. Не включается по неполной цепочке.
+auto	volvocars.club	include	https://volvocars.club/	https://volvocars.club/	12389,56420	На публичном сайте указан Российский клуб владельцев Volvo. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+auto	kiario.club	include	https://kiario.club/	https://kiario.club/index.php	12389,56420	Сообщество владельцев Kia Rio, только точный хост. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+auto	solaris-club.net	reserve	https://solaris-club.net/	-	-	Сообщество владельцев Hyundai Solaris, отдельно от одноимённых площадок. Второй независимый содержательный GET не подтверждён.
+auto	toyota-club.net	reserve	https://toyota-club.net/	https://toyota-club.net/	12389,28840	Публичная база и авторский справочник, текущий форум и принадлежность не подтверждены.
+auto	nissan-club.org	reserve	https://nissan-club.org/	-	-	Одноимённый клуб без надёжного содержательного ответа.
+auto	www.vaz.ee	reserve	https://www.vaz.ee/	https://www.vaz.ee/	12389	Автопортал подтверждён, но зона и русский язык не устанавливают принадлежность проекта.
+local	teron.online	reserve	https://teron.online/	https://teron.online/	12389,28840	Содержимое текущего сайта о технологиях, это не найденный Пермский форум.
+local	forum.omsk.com	reserve	https://forum.omsk.com/	-	-	Сайт обнаружен, но российские прогоны не дали завершённого HTTPS для опубликованного каталога.
+local	forum.sevastopol.info	reserve	https://forum.sevastopol.info/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	sevastopol.info	reserve	https://sevastopol.info/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	www.peterburg.biz	reserve	https://www.peterburg.biz/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	littleone.com	reserve	https://littleone.com/	-	-	Ответ в рабочей среде не заменяет подтверждение из двух российских ASN и проверку назначения.
+local	forum.sakh.com	reserve	https://forum.sakh.com/	-	-	Известная история ограничений и переезда новостей не подтверждает текущее состояние форума, автоматически не добавлять.
+local	www.sakh.com	reserve	https://www.sakh.com/	-	-	Смена сайта редакции не доказывает текущие назначения старого хоста.
+local	forum.bratsk.org	reserve	https://forum.bratsk.org/	-	-	Братский региональный форум, локальная принадлежность. Второй независимый содержательный GET не подтверждён.
+home	forum.vinograd.info	reserve	https://forum.vinograd.info/	-	-	Русскоязычный тематический форум, не установлена нужная региональная принадлежность.
+home	forum.stroimdom.com.ua	comparison	https://forum.stroimdom.com.ua/	-	-	Украинский форум, не считать RU только по языку.
+hobby	www.aquaforum.ua	comparison	https://www.aquaforum.ua/	-	-	Украинский форум, внешний контроль.
+hobby	astronomyforum.net	comparison	https://astronomyforum.net/	-	-	Глобальное сообщество, не путать с astronomy.ru.
+hobby	rcopen.com	reserve	https://rcopen.com/	-	-	Действующий индекс и правила опубликованы на корне; завершённые двухсетевые HTTPS-ответы не получены.
+hobby	forum.faleristika.info	reserve	https://forum.faleristika.info/	https://forum.faleristika.info/viewforum.php?f=316	12389	Штатные правила форума подтверждают назначение, российская атрибуция всей площадки недостаточна для допуска.
+hobby	pesikot.org	include	https://pesikot.org/forum/	https://pesikot.org/forum/	12389,28840	Общественный российский проект помощи животным, подтверждён сам форум. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+life	forum.rusmedserv.com	include	https://forum.rusmedserv.com/index.php/	https://forum.rusmedserv.com/index.php/	12389,56420	Публичный каталог Дискуссионного клуба Русского медицинского сервера. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN. Маркеры подтверждены декодированием Windows-1251 после совпадения длины и SHA-256 с обеими сетевыми выборками.
+life	rusmedserv.com	reserve	https://rusmedserv.com/	-	-	Медицинский портал, не переносить допуск форумного поддомена.
+life	forums.medsovet.info	reserve	https://forums.medsovet.info/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+gaming	4gameforum.com	include	https://4gameforum.com/help/terms	https://4gameforum.com/help/terms	12389,56420	На действующей российской витрине Фогейма опубликованы ссылки на этот форум и точные разделы. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+gaming	tesall.club	reserve	https://tesall.club/forums/	https://tesall.club/forums/	28840	Ответ в рабочей среде не заменяет подтверждение из двух российских ASN и проверку назначения.
+gaming	modgames.net	reserve	https://modgames.net/forum/	https://modgames.net/forum/	12389,56420	Сообщество модов, отдельно проверить форумный путь и операторскую атрибуцию.
+gaming	boardgamegeek.com	comparison	https://boardgamegeek.com/forums	-	-	Международный каталог и обсуждения настольных игр.
+gaming	rpg-world.org	reserve	https://rpg-world.org/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+science	mathhelpplanet.com	reserve	https://mathhelpplanet.com/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	sakhalin.info	reserve	https://sakhalin.info/news/225074	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	forum.rzn.info	reserve	https://forum.rzn.info/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	forum.ulcity.net	reserve	https://forum.ulcity.net/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	forum.smolensk.ws	include	https://forum.smolensk.ws/index.php	https://forum.smolensk.ws/	12389,28840	Смоленский городской форум, локальные разделы. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+it	blogs.rsdn.org	reserve	https://blogs.rsdn.org/	https://blogs.rsdn.org/	12389,28840	Смежные блоги сообщества, не переносятся автоматически из решения по форуму.
+it	www.rusmedserv.com	reserve	https://www.rusmedserv.com/about/contacts/	https://www.rusmedserv.com/about/contacts/	12389,56420	Операторские контакты, не самостоятельный форум.
+web	support.rusff.me	reserve	https://support.rusff.me/	-	-	Выделенный форум поддержки, в рабочей сети 404 у корня. Ссылки на отдельные исторические темы не достаточны.
+web	www.rusff.me	reserve	https://www.rusff.me/create/	-	-	Панель регистрации форумов, не правило на тенантов.
+control	tracking.ott.yandex.net	block	https://tracking.ott.yandex.net/	-	-	Действующий BLOCK, не менялся.
+control	mc.yandex.ru	block	https://mc.yandex.ru/	-	-	Действующий BLOCK, не менялся.
+control	author.today	existing_preview	https://author.today/	-	-	Имя уже в закрытом +162, не новая дельта.
+control	discord.com	comparison	https://discord.com/	-	-	Глобальная платформа сообществ, не наследует RU локального форума.
+control	www.reddit.com	comparison	https://www.reddit.com/	-	-	Глобальная UGC-платформа, не наследует RU русскоязычной группы.
+hobby	archive.rcopen.com	reserve	https://archive.rcopen.com/	-	-	Архив RC Design, не действующий форум.
+hobby	motocitizen.info	reserve	https://motocitizen.info/forum/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+home	www.stroimdom.com.ua	comparison	https://www.stroimdom.com.ua/forum/	-	-	Украинская площадка, только внешний контроль.
+profession	railwayclub.info	reserve	https://railwayclub.info/	-	-	Ответ в рабочей среде не заменяет подтверждение из двух российских ASN и проверку назначения.
+profession	parovoz.com	reserve	https://parovoz.com/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+science	pedsovet.org	reserve	https://pedsovet.org/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+local	forum.kostroma.net	reserve	https://forum.kostroma.net/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+hobby	www.reefcentral.com	comparison	https://www.reefcentral.com/forums/	-	-	Глобальный ReefCentral, отдельный от российского ресурса.
+travel	www.turpravda.com	reserve	https://www.turpravda.com/forums/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+travel	www.tripadvisor.com	comparison	https://www.tripadvisor.com/ShowForum-g294459-i705-Russia.html	-	-	Глобальная площадка, региональный раздел не делает весь хост RU.
+web	community.modx.com	comparison	https://community.modx.com/	-	-	Глобальный форум MODX, отдельный от modx.pro.
+web	forum.joomla.org	comparison	https://forum.joomla.org/	-	-	Глобальная поддержка Joomla.
+it	ubuntuforums.org	comparison	https://ubuntuforums.org/	-	-	Глобальный форум Ubuntu.
+it	bbs.archlinux.org	comparison	https://bbs.archlinux.org/	-	-	Глобальный форум Arch Linux.
+it	www.linuxquestions.org	comparison	https://www.linuxquestions.org/questions/	-	-	Глобальный форум Linux.
+it	unix.stackexchange.com	comparison	https://unix.stackexchange.com/	-	-	Глобальная сеть Stack Exchange.
+local	forum.academ.org	reserve	https://forum.academ.org/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.
+gaming	www.4gameforum.com	include	https://www.4gameforum.com/help/terms	https://www.4gameforum.com/help/terms	12389,56420	WWW отдаёт собственную страницу правил форума Фогейма, подтверждён отдельно от корня. Содержательный завершённый 200 со строгим TLS на том же URL в двух ASN.
+it	forall.ru-board.com	reserve	https://forall.ru-board.com/download/	-	-	В реестре поиска; нет достаточного независимого сетевого подтверждения и/или атрибуции.

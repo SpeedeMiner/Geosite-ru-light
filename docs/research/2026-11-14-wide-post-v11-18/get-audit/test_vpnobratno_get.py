@@ -22,6 +22,15 @@ class ScopedHTMLLimitTests(unittest.TestCase):
         self.assertEqual(body_sample_limit({"cohort": "corporate", "url": url + "?x"}), BODY_LIMIT)
 
 
+    def test_forum_sample_expands_only_on_documented_exact_url(self):
+        url = "https://forum.rusmedserv.com/index.php/"
+        self.assertEqual(body_sample_limit({"cohort": "corporate", "url": url}), 524288)
+        for cohort, other in (("control", url), ("corporate", url + "?x"),
+                              ("corporate", "https://forum.rusmedserv.com/private")):
+            with self.subTest(cohort=cohort, url=other):
+                self.assertEqual(body_sample_limit({"cohort": cohort, "url": other}), BODY_LIMIT)
+
+
 class ProbeError(RuntimeError):
     pass
 

@@ -1,0 +1,379 @@
+host	url	curl_exit	http	tls_verify	bytes	visible_chars	main_chars	title	challenge	redirect	content_type	sha256
+4pda.to	https://4pda.to/forum/	0	403	0	10622	1030	0	4PDA .:. Всё в порядке, но...	False	-	text/html; charset=UTF-8	d1098aff8fd372db715b11095012ee46db4dea3ed4b197b3a7a52483add4825c
+4pda.ru	https://4pda.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.ixbt.com	https://forum.ixbt.com/	0	200	0	82918	24113	0	����������� iXBT.com	False	-	text/html; charset=windows-1251	5ede2bc39143a054bd41cf4d327c45bb4db3853d872caf61e6de0cb07015fea5
+www.linux.org.ru	https://www.linux.org.ru/forum/	0	200	0	11041	1557	1384	Форум	False	-	text/html;charset=utf-8	b300db808fb6bc4218f7ac0ff91577174273f139ba11b8e28c6d57e729d56592
+www.opennet.ru	https://www.opennet.ru/openforum/	0	200	0	10206488	32117	0	Forum index	False	-	text/html; charset=koi8-r	cc6efd7827c397144c54dfa7085d2a8528c8799b40e5e25b22bd6252e1086a75
+www.cyberforum.ru	https://www.cyberforum.ru/	0	403	0	1176	106	0	Нет доступа (ошибка 403) - Форум программистов и сисадминов	False	-	text/html	a5ca3853a933fee9f38e391f6c4188f6433d6b18b6ba5240b4a50b0b4d1b6e2c
+qna.habr.com	https://qna.habr.com/	0	200	0	112880	3470	0	Интересные вопросы — Хабр Q&A	False	-	text/html;charset=utf-8	49748833c4c210bd423f92ea1b98ba8f3970fa53eabb2404d011f01114483010
+ru.stackoverflow.com	https://ru.stackoverflow.com/	0	403	0	5912	0	0	Just a moment...	True	-	text/html; charset=UTF-8	f1eb6af7d8643269ae86351385f9f9535ce1c13897c8653f76db9c21c7e77458
+sysadmins.ru	https://sysadmins.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.sql.ru	https://www.sql.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+sql.ru	https://sql.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+murcode.ru	https://murcode.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+rsdn.org	https://rsdn.org/forum/	0	200	0	10886	412	160	Темы - RSDN.ru	False	-	text/html; charset=utf-8	8e1054476fbbd6d58517ed1a28e3647b9984671880fb932ff6ccebb648d1d570
+rsdn.ru	https://rsdn.ru/forum/	0	200	0	10886	412	160	Темы - RSDN.ru	False	-	text/html; charset=utf-8	8e1054476fbbd6d58517ed1a28e3647b9984671880fb932ff6ccebb648d1d570
+devforums.ru	https://devforums.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.ru-board.com	https://forum.ru-board.com/	0	503	0	95	0	0	-	False	-	text/plain	9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925
+ru-board.com	https://ru-board.com/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.oszone.net	https://forum.oszone.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+oszone.net	https://oszone.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+linuxmint.com.ru	https://linuxmint.com.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.ubuntu.ru	https://forum.ubuntu.ru/	0	200	0	59719	5713	0	Форум русскоязычного сообщества Ubuntu	False	-	text/html; charset=UTF-8	23df1b1c9a9f28d6b8c5102dc65733ca0217e9eb3a8afb10f1c9090c23a4d932
+archlinux.org.ru	https://archlinux.org.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.altlinux.org	https://forum.altlinux.org/	0	200	0	68601	7846	0	Форум сообщества ALT Linux - Главная страница	False	-	text/html; charset=UTF-8	771b9ba3b398381b70f32d75733750a8cd72492d8ed19fbb8937ced0dc6021cb
+docs.altlinux.org	https://docs.altlinux.org/ru-RU/alt-kworkstation/10.1/html-single/alt-kworkstation/index.html	0	404	0	168	25	0	404 Not Found	False	-	text/html	d90fbd3f774f368448ce488c0da0526f9a6a7cb3104e695d27e91c0ad9a4ad6e
+forum.astralinux.ru	https://forum.astralinux.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+cryptopro.ru	https://cryptopro.ru/forum2/	0	200	0	128340	7009	0	Форум КриптоПро	False	-	text/html; charset=utf-8	8e376aa681ec97d5e2252649b1143753d6b4c4449d9fcc8205cc5b2b907f7927
+forum.rutoken.ru	https://forum.rutoken.ru/	0	403	0	300	149	0	Access Blocked	False	-	text/html	d47adfc665faa51a7fb813423e4eacd72d31aec07dbea8b28271b38ec3c6b58a
+forum.1c.ru	https://forum.1c.ru/	0	403	0	146	19	0	403 Forbidden	False	-	text/html	32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864
+forum.infostart.ru	https://forum.infostart.ru/	0	200	0	452144	2737	0	����� 1� ������������� 8.3, 8.2, 8, 7.7: �����������, �����������, �������, ��, ���, ���, ERP - �����.���������	False	-	text/html; charset=windows-1251	443bce1e5ec9be23a7c7d311eb9e39460caa083cd68897a58212d3c0aecb9ade
+forum.mista.ru	https://forum.mista.ru/	0	200	0	26176	2162	0	Волшебный форум	False	-	text/html; charset=utf-8	47a657bd6ec48e226b701b3b6f27e81060a311f9ed9c6cf305852f68dea788b8
+v8.1c.ru	https://v8.1c.ru/	0	200	0	50532	5064	2866	Система программ 1С:Предприятие, официальный сайт - поддержка и обучение, приобретение и внедрение	False	-	text/html; charset=UTF-8	4d0f7e3c4105849ee5f6efa375898a08e4862631269873ffe0bb2ad191a92572
+forum.keenetic.com	https://forum.keenetic.com/	0	200	0	55625	2445	1460	Forums - Keenetic Community	False	-	text/html;charset=UTF-8	b7797aaa67f9c807e4b8b23c93dbfa19cbf88582489df4451c1ff69cf6b685b2
+forum.keenetic.ru	https://forum.keenetic.ru/	0	200	0	74404	6011	4746	Форумы - Keenetic Community	False	-	text/html;charset=UTF-8	ed9fa7e0636dd0cc235939495e4ee5dcfd572d6df607c32bc6b732d76c9f4e37
+forummikrotik.ru	https://forummikrotik.ru/	0	200	0	63787	3183	0	Russian Users MikroTik | Форум пользователей MikroTik - Главная страница	False	-	text/html; charset=UTF-8	b4d9e452fc1e05b70b26b34bdd8ec3f9190ad460466addd7e60875ec3a52d583
+forum.mikrotik.com	https://forum.mikrotik.com/	0	200	0	14317	387	0	MikroTik community forum	False	-	text/html; charset=utf-8	fc9555c87a4f4e4d6f3e65f98fccedf7e5d554c2ba4c0421b31b7a2d6faba7ec
+club.dns-shop.ru	https://club.dns-shop.ru/	0	401	0	2250	80	0	-	False	-	text/html	d60128d7844cf803cf1d3c80c2c2780fc708399f9d598d86844f279d7e0f7b8c
+forums.overclockers.ru	https://forums.overclockers.ru/	0	200	0	168680	13315	0	Главная страница • Конференция Overclockers.ru	False	-	text/html; charset=UTF-8	81e1198b92433b869ce6913afa5bbf0080bcdcdd1491a86e4b72d5138d758d27
+forums.modlabs.net	https://forums.modlabs.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.rom.by	https://forum.rom.by/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+monitor.net.ru	https://monitor.net.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+kenotron.com	https://kenotron.com/	0	302	0	0	0	0	-	False	https://www.hugedomains.com/domain_profile.cfm	-	-
+mastergrad.com	https://mastergrad.com/	0	200	0	53765	5948	0	Mastergrad - крупнейший форум о строительстве и ремонте	False	-	text/html; charset=UTF-8	7b52656fb5c7b68f4a15cdba7391eebc7c2cd063dc36149211c7be3094d22443
+forum.easyelectronics.ru	https://forum.easyelectronics.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+radiokot.ru	https://radiokot.ru/forum/	0	403	0	153	26	0	403 Forbidden	False	-	text/html; charset=UTF-8	2411f7714d841f9ebdd1b7c917b7d6182f385c08ec38fdcd5187efcc2b055542
+forum.cxem.net	https://forum.cxem.net/	0	200	0	452194	50918	50523	Форумы - Форум по радиоэлектронике	False	-	text/html;charset=UTF-8	6b50c613aa8623ac409622e0416a03c82dbe3915b58112e0b87a86df1a40f04d
+qrp.ru	https://qrp.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.qrz.ru	https://forum.qrz.ru/	0	400	0	150	21	0	400 Bad Request	False	-	text/html; charset=utf-8	487ad0d2cf075f4328a1adf57ef428759ad4e2c873a8ebd2ad9653990829c9cf
+www.cqham.ru	https://www.cqham.ru/forum/	0	303	0	0	0	0	-	False	https://www.cqham.ru/forum/forum.php	text/html; charset=cp1251	-
+forum.nag.ru	https://forum.nag.ru/	0	200	0	62602	4102	3571	Форумы - Форумы NAG.RU	False	-	text/html;charset=UTF-8	27a8cfd28fb9a89e581b6d93728f52335aa6c65a5a61b4b9f70cfd0a8febb3a2
+forum.ispsystem.ru	https://forum.ispsystem.ru/	0	301	0	162	27	0	301 Moved Permanently	False	https://t.me/ispsystem_chat	text/html	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a
+forum.etersoft.ru	https://forum.etersoft.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+support.myoffice.ru	https://support.myoffice.ru/	0	200	0	36659	1955	1132	Главная | Справочный Центр МойОфис	False	-	text/html	6bdc42da0de0d5f57be2a5176b6a4fc4f406ca806b60dc97217328d148a065b1
+searchengines.guru	https://searchengines.guru/ru/forum	0	403	0	0	0	0	-	False	-	-	-
+forum.searchengines.ru	https://forum.searchengines.ru/	0	301	0	233	0	0	-	False	https://searchengines.guru/ru	-	7e8bc99f5bff76fa7449d73899b6cb9770e5d75f860be89f637219f1b050c99a
+pr-cy.ru	https://pr-cy.ru/talk/	0	404	0	2791	102	0	Ошибка 404 - Страница не найдена	False	-	text/html; charset=utf-8	214484ad2a6ba0661270536f76cc83c9ba43b97a1dc4bd946d7bdb9b02e0b224
+www.maultalk.com	https://www.maultalk.com/	0	410	0	0	0	0	-	False	-	-	-
+maultalk.com	https://maultalk.com/	0	410	0	0	0	0	-	False	-	-	-
+webmasters.ru	https://webmasters.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+seo-forum.ru	https://seo-forum.ru/	0	503	0	91	0	0	-	False	-	text/plain	2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6
+forum.mixmarket.biz	https://forum.mixmarket.biz/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.dle-news.ru	https://forum.dle-news.ru/	0	200	0	58868	2924	2001	Категории и разделы - Форум поддержки DataLife Engine	False	-	text/html;charset=UTF-8	ae8b02d40ce58d7e80b2da5b985f4af929d998b14049d72e53b45e0e587650a6
+ru.wordpress.org	https://ru.wordpress.org/support/forums/	0	200	0	161263	2226	1059	Форумы | WordPress.org Русский WordPress.org WordPress.org WordPress.org	False	-	text/html; charset=UTF-8	3d820df8e4da54832f5c050f4680a342157b49051ad22dc827c6f38d04b3873b
+joomlaforum.ru	https://joomlaforum.ru/	0	200	0	122135	806	0	Форум русской поддержки Joomla! CMS - Все обсуждения - Форум русской поддержки Joomla!	False	-	text/html; charset=UTF-8	e2244b912f151943a90ff5b39ccd237e61d749a70f46dbf72eb62918d21b2fbc
+drupal.ru	https://drupal.ru/	28	0	0	0	0	0	-	False	-	-	-
+modx.pro	https://modx.pro/	0	200	0	237772	9099	8898	MODX Revolution: русскоязычное сообщество | modx.pro MODX.Pro	False	-	text/html; charset=UTF-8	8e85b3f85eb6b5c06acf61cc3d95f679c966c1dc4783c20285267cb266657103
+www.simplemachines.ru	https://www.simplemachines.ru/	28	0	0	0	0	0	-	False	-	-	-
+mybb.ru	https://mybb.ru/	0	200	0	7622	970	0	Создать бесплатный форум на MyBB	False	-	text/html; charset=UTF-8	64b9c4f4faaf5c883857c23b0e8a196d28d1b03c6038984d3b2cfa04fc3b1a6b
+rusff.me	https://rusff.me/	0	200	0	30743	4332	0	Rusff.me — Создать форум без рекламы — Сервис бесплатных персональных форумов	False	-	text/html	a32404cdc80a718076da2b9cc543b4929e61b8d7038deb6ffe74dee7b2d59e01
+www.phpbbguru.net	https://www.phpbbguru.net/community/	0	200	0	98895	8053	0	phpBB Guru - Официальная русская поддержка форума phpBB - Главная страница	False	-	text/html; charset=UTF-8	9e4d2f158931494c7ac75acebb72cd950f6f33586f3aef82bba55fbcd7125be8
+forum.ucoz.ru	https://forum.ucoz.ru/	0	200	0	195	44	0	Site Unavailable	False	-	text/html	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7
+forum.drom.ru	https://forum.drom.ru/	0	200	0	10099	2638	0	������ � �������� �����������	False	-	text/html; charset=windows-1251	1c5146bac473ffa28b76b1c577ebfffd27ecda0ac577b0b94014eead806583fd
+www.drom.ru	https://www.drom.ru/	0	200	0	196818	5348	0	Дром - цены на машины	False	-	text/html	bffa40bc0c849123a933ceadaa89bdab83100c4338de092639f1914396cf30f7
+www.forumsdrom.ru	https://www.forumsdrom.ru/	0	307	0	0	0	0	-	False	https://www.drom.ru/sso/request	text/html; charset=utf-8	-
+www.drive2.ru	https://www.drive2.ru/communities/	0	402	0	160	26	0	402 Payment Required	False	-	text/html	e19c4e8c36a080020750dd55e9999baa0cac7c6c7f0f470b407fa9dc889bbe0d
+www.drive2.com	https://www.drive2.com/	0	302	0	138	15	0	302 Found	False	https://www.drive2.ru/	text/html	753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0
+auto.ru	https://auto.ru/	0	200	0	69304	1997	0	Авто.ру: купить и продать автомобиль	False	-	text/html; charset=utf-8	dd63aca6da5e633934f83c8c696c79fc4ba637870169f6a87b447646c88e5b6a
+autokadabra.ru	https://autokadabra.ru/	0	200	0	9488	771	0	Автокадабра	False	-	text/html; charset=utf-8	3951be44c49ef5a3bd4f22e6d048415576cf88e0db8012427e29f5b04459f9de
+www.audi-club.ru	https://www.audi-club.ru/forums/	0	200	0	209309	13205	0	Ауди Клуб Россия	False	-	text/html; charset=UTF-8	195c19f02bd9fed0666ac0cbff0fc7d106d70cc8d3cdcbdc10eac94a3e61e2a2
+www.bmwclub.ru	https://www.bmwclub.ru/	0	200	0	252071	19500	0	Клуб владельцев и любителей BMW | BMW Club	False	-	text/html; charset=UTF-8	0887b837981b6458738e1e6b41760ff8807b90bcb919d5d2918fe6dd6d86c8f7
+volvocars.club	https://volvocars.club/	0	200	0	307320	17200	0	Российский Клуб владельцев Вольво | Форум Вольво Примечание	False	-	text/html; charset=utf-8	b86e4bd51692bf8a5b609fd48002f169d1b4b90adbfa468c0f4f5a684b661847
+clubvolvo.ru	https://clubvolvo.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.volvo-russia.ru	https://www.volvo-russia.ru/forum/	0	200	0	195	44	0	Site Unavailable	False	-	text/html	5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7
+ffclub.ru	https://ffclub.ru/	0	302	0	138	15	0	302 Found	False	https://challenge.ffclub.ru/	text/html	753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0
+www.ford-club.ru	https://www.ford-club.ru/	0	200	0	44413	2862	0	Ford Club	False	-	text/html; charset=UTF-8	ee077d17bd5fd396bb1b6a8d180af00765ae8bb7955df857401c26ac8d423dba
+forum.kia-club.ru	https://forum.kia-club.ru/	0	200	0	182984	18378	0	KIA-CLUB.RU© • Клуб владельцев корейских автомобилей • Главная страница	False	-	text/html; charset=UTF-8	579ff48f7e6fa85d8873a27e4274e328f64a3c8ed5c4dcc4cca14f8a6c38537c
+kiario.club	https://kiario.club/	0	403	0	12241	212	0	Just a moment...	True	-	text/html;charset=utf-8	6c5f9445bf73302fe6aff1c0f7712b9b33b3f90b81e12c4f9990af4ce3c4f906
+solaris-club.net	https://solaris-club.net/	0	200	0	732	0	0	-	False	-	text/html	275d91724c4dceac0dfdba457fb6b4cb8c9665d3d543eabf6ccc7ca62808eb14
+hyundai-club.ru	https://hyundai-club.ru/	0	301	0	233	47	0	301 Moved Permanently	False	https://hyundai-club.org/	text/html; charset=iso-8859-1	1b0dc1a2fe732ac2ba22c8f69cbdac29b477d99c588b4a2779034d009367be7b
+www.renault-club.ru	https://www.renault-club.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.logan.ru	https://forum.logan.ru/	0	200	0	142815	14428	0	Клуб автолюбителей Рено Логан • Главная страница	False	-	text/html; charset=UTF-8	2ff41f0459e50ddea1e5e41637e62d6e574512ead70656a01e5ea87905c2ada8
+www.vw-club.ru	https://www.vw-club.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+vwts.ru	https://vwts.ru/forum/	0	200	0	156031	10453	0	Volkswagen Technical Site	False	-	text/html; charset=utf-8	e8c71fbde382f39e8723dd1e92c9fb69651ee4547a8dee76fe2c2ae16bcec710
+forum.skoda-club.ru	https://forum.skoda-club.ru/	0	200	0	78043	8939	0	"forum.skoda-club.ru • Конференция Клуба Любителей Автомобилей ""Шкода"""	False	-	text/html; charset=UTF-8	6995119c0164225f7cde42032b462b8a65fc4661bf9ae69e29ff2bc35c7e6051
+peugeot-club.ru	https://peugeot-club.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.opel-club.ru	https://forum.opel-club.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+suzuki-club.ru	https://suzuki-club.ru/	0	403	0	72065	1379	0	Упс! Мы столкнулись с некоторыми проблемами. | SUZUKI CLUB RUSSIA	False	-	text/html; charset=utf-8	558ffc3e08d5e72bb6c0b45784a34358ac62f1caae499139f3501654e65acb88
+toyota-club.net	https://toyota-club.net/	0	200	0	6920	614	0	Toyota-Club.Net	False	-	text/html; charset=UTF-8	74b16fcfb93ce29f1e6369a96e00d75760e723e37475c11a6e117d65e9607b41
+www.land-cruiser.ru	https://www.land-cruiser.ru/	0	200	0	262569	13372	12200	Форумы Land-Cruiser.RU	False	-	text/html;charset=UTF-8	361cf28b703d6ba493e4d2e40b3f3721eec71dccd38873a290df5dd9f0ee7dca
+prado-club.su	https://prado-club.su/forum/	0	200	0	154972	15227	0	Международный Клуб TOYOTA - Главная страница	False	-	text/html; charset=UTF-8	21659cbe53b6ab4cf90070fca0e253f5ec0b907f0ba874129a58cce5d0e135e4
+terranoirk.ru	https://terranoirk.ru/forums/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+nissan-club.org	https://nissan-club.org/	28	0	0	0	0	0	-	False	-	-	-
+mazdaclub.ru	https://mazdaclub.ru/forums/	0	200	0	317637	12586	10606	Форум - Крупнейший официальный клуб Mazda в России	False	-	text/html;charset=UTF-8	419e9a55bee41cace64533811e397e81f781b6151a144d3b3879bcde93623802
+club-subaru.ru	https://club-subaru.ru/	0	200	0	43746	2935	0	Гама Казино зеркало ᐉ Официальный сайт Gama Casino	False	-	text/html; charset=UTF-8	3af1fc2be9634a792d89898626a5155a7c9358365bde703cb2d853ebd17f507d
+haval-club.ru	https://haval-club.ru/	0	403	0	153	26	0	403 Forbidden	False	-	text/html; charset=utf-8	60f2f2bc793c248206b1ede6111cc317e89fcad4f46f903b389bf26a58856232
+chery-club.ru	https://chery-club.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.lada-club.ru	https://www.lada-club.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.vaz.ee	https://www.vaz.ee/	0	200	0	200622	8330	6626	Автопортал о тюнинге — vaz.ee	False	-	text/html; charset=utf-8	f762d53760f979c3cdb3e5178fb1c2bda5e997bf9ec6db3c3efb976fc3e36d36
+forum.chiptuner.ru	https://forum.chiptuner.ru/	0	301	0	0	0	0	-	False	https://chiptuner.ru/forum/	text/html; charset=UTF-8	-
+forum.uazbuka.ru	https://forum.uazbuka.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.niva4x4.ru	https://www.niva4x4.ru/	0	200	0	23034	4618	0	Нива 4x4	False	-	text/html;charset=UTF-8	0e5f1dc99935f32977e59b1b6e90e8dffd7a926da06ec4ae2b27f41d8b472a9b
+www.chevy-niva.ru	https://www.chevy-niva.ru/	0	301	0	170	35	0	301 Moved Permanently	False	https://xn----7sbbagpx1an.xn--p1ai/	text/html	646f4cebed77580971f73047ec463a1010e25d0101be2354f1ca6ed119b5ff7f
+www.snowmobile.ru	https://www.snowmobile.ru/forum/	0	301	0	0	0	0	-	False	https://www.snowmobile.ru/forum/index.php	text/html; charset=utf-8	-
+www.e1.ru	https://www.e1.ru/talk/forum/index.php?f=0	0	200	0	98590	6291	0	����� ������������� � ��������� �����, �������, ������� ������� ������������� | �1.��	False	-	text/html; charset=cp1251	709ab4ddc34986e45a453079c19c2551817668386798cd285964b5da23fc3f70
+udoma66.ru	https://udoma66.ru/communication/forum/	0	200	0	24278	2505	0	Форумы районов Екатеринбурга и городов-спутников	False	-	text/html; charset=utf-8	6658da811a6aecffcda5a5e982ec9fbf180e5cd27e68c96a00f5b8b54980bdd1
+u-mama.ru	https://u-mama.ru/forum/family/travel/	0	200	0	164333	6502	4418	Форум / Страница 1	False	-	text/html; charset=UTF-8	2fe55c58d763a64461d161eecd2909cacf51a6d626f3821629a35ec947a95246
+forum.ngs.ru	https://forum.ngs.ru/	0	428	0	11681	197	0	"Проверяем соединение с сайтом <span class=""site-title"">forum.ngs.ru</span>"	False	-	text/html; charset=utf-8	571200532fb755f13dd0a59b3d6ecd24a4588fa5e9a30e61e670ec26a1f53748
+forum.sibmama.ru	https://forum.sibmama.ru/	0	200	0	194135	22838	0	������� :: ������� - � �����, ������������ � �����	False	-	text/html; charset=windows-1251	f4fee37a60acbc2df45fae9ce2f3daa148ab5cc1d50b44adb0d3a912c9031317
+bvf.ru	https://bvf.ru/forum/	0	200	0	159338	17681	0	������� ����������� ����� - Powered by vBulletin	False	-	text/html; charset=windows-1251	57639e019f1917f28e7c0cc9c2b433dae92e277666a2a654b45170dd0bd9f69f
+forum.ykt.ru	https://forum.ykt.ru/	0	302	0	138	15	0	302 Found	False	https://ykt.ru/	text/html	753e0dd54f28c4f7009b9c0b18a68aed175416bd8b7d134858264586eaac56f0
+forum.na-svyazi.ru	https://forum.na-svyazi.ru/	0	200	0	11542	10	0	-	False	-	text/html; charset=UTF-8	260e22db216cc1100041fdd06063713227ef6c396a4d5fc1e175e4ec3e306e49
+teron.online	https://teron.online/	0	200	0	41799	5587	4054	Teron.online - Технологии, ИИ и Инновации | Новости и Аналитика	False	-	text/html; charset=UTF-8	4ba3149977926194522f7130511f967c3197ac0a2130e8c2597b9264b8a7d7d7
+teron.ru	https://teron.ru/	0	200	0	19229	1219	0	Фотограф Евгений Терон — портретная и пейзажная съёмка	False	-	text/html; charset=UTF-8	4187f05277c7d6f69a01401574bcf36cca417acfff1178c1231afef12ac9ebb3
+forum.krasmama.ru	https://forum.krasmama.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forums.kuban.ru	https://forums.kuban.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.rostovmama.ru	https://forum.rostovmama.ru/	28	0	0	0	0	0	-	False	-	-	-
+khabmama.ru	https://khabmama.ru/forum/	0	404	0	146168	872	0	Страница не найдена — Хабмама	False	-	text/html; charset=UTF-8	dd5186bbd683a1396161073e10361b5fc533939a725c403193946d335ecacfb3
+vladmama.ru	https://vladmama.ru/forum/	0	200	0	130673	11276	0	Главная страница | VLADMAMA.RU	False	-	text/html; charset=UTF-8	37692cab75eb1eccb4938e27489dee29da8f7cd3f657e81faf1c4aacb4dff30d
+forum.omsk.com	https://forum.omsk.com/	0	200	0	16586	3835	0	������ ����� :: �������	False	-	text/html; charset=windows-1251	1958929890a418d47db4f09e97f4a08590ad5eb3318c502d50c9c0fbfbb53a82
+forum.tomsk.ru	https://forum.tomsk.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+izhevsk.ru	https://izhevsk.ru/	0	200	0	69956	5778	0	������ �������� ���������� ������ ������	False	-	text/html; charset=windows-1251	7dc8379792f3bff02fbc5f4ff780f97845e996a15422b130427a38c85ddaabdb
+www.ufamama.ru	https://www.ufamama.ru/Forum/	0	200	0	371327	20930	0	Форумы	False	-	text/html; charset=utf-8	e70830f6da0e095045a61af10d6709f26fcf69e2de17a9b7874f460fb02681f8
+www.nn.ru	https://www.nn.ru/community/	0	428	0	11675	194	0	"Проверяем соединение с сайтом <span class=""site-title"">www.nn.ru</span>"	False	-	text/html; charset=utf-8	96c2b9ed2b64cb6aa7ad1003f4c6c8a515e6683c21c67db9f90f05d99fb17a08
+samaraforum.ru	https://samaraforum.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+kazanfirst.ru	https://kazanfirst.ru/	0	200	0	215519	13531	12936	KazanFirst – главные новости Татарстана и Казани сегодня	False	-	text/html	0dbaf46ed3ff103a1f575aa7b60fe4d8c1a7346006215bea0d9bc630e08ed80b
+www.chelforum.ru	https://www.chelforum.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.nashtransport.ru	https://forum.nashtransport.ru/	0	301	0	237	47	0	301 Moved Permanently	False	https://www.nashtransport.ru/	text/html; charset=iso-8859-1	934ef835f1be74300c859c6f233f3fe6646d337da72fee5bed50a2ce0ed074c5
+forum.tr.ru	https://forum.tr.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.moscowforum.ru	https://www.moscowforum.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.peterburg.biz	https://www.peterburg.biz/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.littleone.ru	https://forum.littleone.ru/	0	200	0	918	36	0	90.96.187.196 16.11.2026 15:09:03	False	-	text/html; charset=windows-1251	00ac9b807d1918f10ec71a66e659dd25fdacc74d4230ec0502247c883fb1a59d
+littleone.com	https://littleone.com/	0	200	0	173	0	0	-	False	-	text/html	0ffa1bc78bddb308f028aed1bf86bdaa4d3074b2e2835621c4288b3fcbf09470
+forum.sakh.com	https://forum.sakh.com/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.sakh.com	https://www.sakh.com/	0	301	0	162	27	0	301 Moved Permanently	False	https://sakh.com/	text/html	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a
+forum.murman.ru	https://forum.murman.ru/	0	200	0	58037	6627	0	����� �� ������� - ������� ��������. ������ ��������� � ���������� �������	False	-	text/html; charset=windows-1251	dc6493a3424d1ccc31078751703abd1cf5501e2caf8e402b367658987fcbaf1d
+forum.novgorod.ru	https://forum.novgorod.ru/	0	401	0	421	238	0	401 Unauthorized	False	-	text/html; charset=iso-8859-1	d0db99e7a4533883ddfef42e654b38b538281743582875a1165cb74988fe2739
+forum.bratsk.org	https://forum.bratsk.org/	28	0	0	0	0	0	-	False	-	-	-
+www.forumhouse.ru	https://www.forumhouse.ru/forums	28	0	0	0	0	0	-	False	-	-	-
+izba.su	https://izba.su/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.izba.su	https://www.izba.su/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.vashdom.ru	https://forum.vashdom.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.ivd.ru	https://forum.ivd.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.stroyka.ru	https://forum.stroyka.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.prihoz.ru	https://forum.prihoz.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.tvoysad.ru	https://forum.tvoysad.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.websad.ru	https://www.websad.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.vinograd.info	https://forum.vinograd.info/	28	0	0	0	0	0	-	False	-	-	-
+www.chipmaker.ru	https://www.chipmaker.ru/	28	0	0	0	0	0	-	False	-	-	-
+astom.ru	https://astom.ru/ru/forum	28	0	0	0	0	0	-	False	-	-	-
+forum.homecitrus.ru	https://forum.homecitrus.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.aqa.ru	https://www.aqa.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.aqualogo.ru	https://www.aqualogo.ru/seaurls	28	0	0	0	0	0	-	False	-	-	-
+reefcentral.ru	https://reefcentral.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+astronomy.ru	https://astronomy.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+foto.ru	https://foto.ru/forums	28	0	0	0	0	0	-	False	-	-	-
+club.foto.ru	https://club.foto.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.photoforum.ru	https://www.photoforum.ru/forum/index.ru.html	28	0	0	0	0	0	-	False	-	-	-
+forum.velomania.ru	https://forum.velomania.ru/	28	0	0	0	0	0	-	False	-	-	-
+velopiter.spb.ru	https://velopiter.spb.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.ski.ru	https://forum.ski.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.rusfishing.ru	https://www.rusfishing.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+fisher.spb.ru	https://fisher.spb.ru/forums/	28	0	0	0	0	0	-	False	-	-	-
+rcopen.com	https://rcopen.com/	28	0	0	0	0	0	-	False	-	-	-
+forum.rcdesign.ru	https://forum.rcdesign.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.vegalab.ru	https://forum.vegalab.ru/	28	0	0	0	0	0	-	False	-	-	-
+player.ru	https://player.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.doctorhead.ru	https://forum.doctorhead.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.hi-fi.ru	https://www.hi-fi.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.homedistiller.ru	https://forum.homedistiller.ru/	28	0	0	0	0	0	-	False	-	-	-
+club.osinka.ru	https://club.osinka.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.stranamam.ru	https://www.stranamam.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.livemaster.ru	https://www.livemaster.ru/	28	0	0	0	0	0	-	False	-	-	-
+coins.su	https://coins.su/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.faleristika.info	https://forum.faleristika.info/	28	0	0	0	0	0	-	False	-	-	-
+forum.vgd.ru	https://forum.vgd.ru/	28	0	0	0	0	0	-	False	-	-	-
+pesiq.ru	https://pesiq.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+pesikot.org	https://pesikot.org/forum/	28	0	0	0	0	0	-	False	-	-	-
+mauforum.ru	https://mauforum.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.zoovet.ru	https://www.zoovet.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.toadstool.ru	https://forum.toadstool.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.woman.ru	https://www.woman.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.babyblog.ru	https://www.babyblog.ru/community	28	0	0	0	0	0	-	False	-	-	-
+deti.mail.ru	https://deti.mail.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+conf.7ya.ru	https://conf.7ya.ru/	28	0	0	0	0	0	-	False	-	-	-
+eva.ru	https://eva.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.baby.ru	https://www.baby.ru/community/	28	0	0	0	0	0	-	False	-	-	-
+forum.rusmedserv.com	https://forum.rusmedserv.com/index.php/	28	0	0	0	0	0	-	False	-	-	-
+rusmedserv.com	https://rusmedserv.com/	28	0	0	0	0	0	-	False	-	-	-
+www.medkrug.ru	https://www.medkrug.ru/community/	28	0	0	0	0	0	-	False	-	-	-
+forums.medsovet.info	https://forums.medsovet.info/	28	0	0	0	0	0	-	False	-	-	-
+forumklerk.ru	https://forumklerk.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.klerk.ru	https://forum.klerk.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.buhonline.ru	https://www.buhonline.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.glavbukh.ru	https://forum.glavbukh.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.banki.ru	https://www.banki.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.yurclub.ru	https://forum.yurclub.ru/	28	0	0	0	0	0	-	False	-	-	-
+zakon.ru	https://zakon.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.garant.ru	https://forum.garant.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.forumavia.ru	https://www.forumavia.ru/	28	0	0	0	0	0	-	False	-	-	-
+aviaforum.ru	https://aviaforum.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.ato.ru	https://www.ato.ru/	28	0	0	0	0	0	-	False	-	-	-
+topwar.ru	https://topwar.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.awd.ru	https://forum.awd.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.turizm.ru	https://forum.turizm.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.tourister.ru	https://www.tourister.ru/forums/tourister	28	0	0	0	0	0	-	False	-	-	-
+tonkosti.ru	https://tonkosti.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.tury.ru	https://www.tury.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.saabclub.su	https://www.saabclub.su/	28	0	0	0	0	0	-	False	-	-	-
+www.ski.ru	https://www.ski.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.tanki.su	https://forum.tanki.su/	28	0	0	0	0	0	-	False	-	-	-
+forum.korabli.su	https://forum.korabli.su/	28	0	0	0	0	0	-	False	-	-	-
+forum.tanksblitz.ru	https://forum.tanksblitz.ru/	28	0	0	0	0	0	-	False	-	-	-
+wiki.lesta.ru	https://wiki.lesta.ru/	28	0	0	0	0	0	-	False	-	-	-
+vkplay.ru	https://vkplay.ru/community/	28	0	0	0	0	0	-	False	-	-	-
+forums.4game.ru	https://forums.4game.ru/	28	0	0	0	0	0	-	False	-	-	-
+4gameforum.com	https://4gameforum.com/	28	0	0	0	0	0	-	False	-	-	-
+pwonline.ru	https://pwonline.ru/forums/	28	0	0	0	0	0	-	False	-	-	-
+allods.ru	https://allods.ru/forums/	28	0	0	0	0	0	-	False	-	-	-
+ru.warface.com	https://ru.warface.com/	28	0	0	0	0	0	-	False	-	-	-
+forum.warthunder.ru	https://forum.warthunder.ru/	28	0	0	0	0	0	-	False	-	-	-
+forums.playground.ru	https://forums.playground.ru/	28	0	0	0	0	0	-	False	-	-	-
+forums.goha.ru	https://forums.goha.ru/	28	0	0	0	0	0	-	False	-	-	-
+tesall.club	https://tesall.club/forums/	28	0	0	0	0	0	-	False	-	-	-
+modgames.net	https://modgames.net/forum/	28	0	0	0	0	0	-	False	-	-	-
+boardgamer.ru	https://boardgamer.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+tesera.ru	https://tesera.ru/project/tesera/	28	0	0	0	0	0	-	False	-	-	-
+boardgamegeek.com	https://boardgamegeek.com/forums	28	0	0	0	0	0	-	False	-	-	-
+rpg-world.org	https://rpg-world.org/	28	0	0	0	0	0	-	False	-	-	-
+dxdy.ru	https://dxdy.ru/topic3476.html	28	0	0	0	0	0	-	False	-	-	-
+discuss-science.ru	https://discuss-science.ru/	28	0	0	0	0	0	-	False	-	-	-
+molbiol.ru	https://molbiol.ru/forums/	28	0	0	0	0	0	-	False	-	-	-
+scientific.ru	https://scientific.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.scientific.ru	https://forum.scientific.ru/	28	0	0	0	0	0	-	False	-	-	-
+fipi.ru	https://fipi.ru/	28	0	0	0	0	0	-	False	-	-	-
+mathhelpplanet.com	https://mathhelpplanet.com/	28	0	0	0	0	0	-	False	-	-	-
+olimpiada.ru	https://olimpiada.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.proshkolu.ru	https://www.proshkolu.ru/	28	0	0	0	0	0	-	False	-	-	-
+metodisty.ru	https://metodisty.ru/	28	0	0	0	0	0	-	False	-	-	-
+xn--80aughmz.xn--p1ai	https://xn--80aughmz.xn--p1ai/	28	0	0	0	0	0	-	False	-	-	-
+sakhalin.info	https://sakhalin.info/news/225074	28	0	0	0	0	0	-	False	-	-	-
+forum.sarbc.ru	https://forum.sarbc.ru/	28	0	0	0	0	0	-	False	-	-	-
+penzamama.ru	https://penzamama.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.35.ru	https://www.35.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.ulcity.net	https://forum.ulcity.net/	28	0	0	0	0	0	-	False	-	-	-
+forum.smolensk.ws	https://forum.smolensk.ws/	28	0	0	0	0	0	-	False	-	-	-
+akademekb.ru	https://akademekb.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+59.ru	https://59.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+forum.kurgan.ru	https://forum.kurgan.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.stv.ru	https://forum.stv.ru/	28	0	0	0	0	0	-	False	-	-	-
+pikabu.ru	https://pikabu.ru/communities	28	0	0	0	0	0	-	False	-	-	-
+cs.pikabu.ru	https://cs.pikabu.ru/	28	0	0	0	0	0	-	False	-	-	-
+d3.ru	https://d3.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.yaplakal.com	https://www.yaplakal.com/forum/	28	0	0	0	0	0	-	False	-	-	-
+otzovik.com	https://otzovik.com/	28	0	0	0	0	0	-	False	-	-	-
+irecommend.ru	https://irecommend.ru/	28	0	0	0	0	0	-	False	-	-	-
+support.netcraze.ru	https://support.netcraze.ru/	28	0	0	0	0	0	-	False	-	-	-
+netcraze.ru	https://netcraze.ru/ru/company	28	0	0	0	0	0	-	False	-	-	-
+blogs.rsdn.org	https://blogs.rsdn.org/	28	0	0	0	0	0	-	False	-	-	-
+www.rusmedserv.com	https://www.rusmedserv.com/about/contacts/	28	0	0	0	0	0	-	False	-	-	-
+support.rusff.me	https://support.rusff.me/	0	404	0	0	0	0	-	False	-	text/html; charset=windows-1251	-
+www.rusff.me	https://www.rusff.me/create/	0	200	0	35939	9201	0	Rusff.me — Создать форум без рекламы — Регистрация форума	False	-	text/html	bf2973ac8f3c7742f772f79dc253a7de0c2cb1862a48746ec5315842c231d03f
+www.phpbb-work.ru	https://www.phpbb-work.ru/	0	200	0	60476	6162	0	phpBB : настройка и модификация - Главная страница	False	-	text/html; charset=UTF-8	cc25b62115f27f976dacdad59c7970c5a7ef890a91df950c3d9c3c9ecf83cab6
+archive.rcopen.com	https://archive.rcopen.com/	0	200	0	10121	1397	0	Радиоуправляемые Модели и Игрушки: Самолеты, Вертолеты, Машины, Авиамодели, Катера, Лодки. RC Design.	False	-	text/html	3be2cfbcb13d76b4f8ac33d4071e7498b832aaaff534ee2d4870054983bb2b81
+mau.ru	https://mau.ru/	0	301	0	223	47	0	301 Moved Permanently	False	https://mau.ru/	text/html; charset=iso-8859-1	642566e95a8f3fe31d316fc8037e405bca2bc3245a1c53a08d3c3119f7d70386
+www.penta-club.ru	https://www.penta-club.ru/forum/	0	200	0	105938	1034	0	Форумы Пента-клуба	False	-	text/html;charset=UTF-8	de46cb89c309eaaf3f753041b55e8ad530a623631fea2df338f3efbee0fb9d78
+sony-club.ru	https://sony-club.ru/forum/	0	200	0	192814	11293	0	SonyClub	False	-	text/html; charset=UTF-8	909bc2d11b771b353fd600cb15cbfc453d14d020ed3d8025a7efb2a043bba57f
+www.nikonclub.ru	https://www.nikonclub.ru/forum/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.astronomy.ru	https://www.astronomy.ru/forum/	0	301	0	169	34	0	301 Moved Permanently	False	https://astronomy.ru/forum/	text/html	ac4f0faf0824b16e13bf1ac909b209e0b58547a7e0c427e5bf308f301d63598a
+www.astroforum.ru	https://www.astroforum.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.velo36.ru	https://forum.velo36.ru/	0	200	0	60728	5108	0	velo36.ru - Главная страница	False	-	text/html; charset=UTF-8	ec222c0046e01b574e79e99e8c7db2a9abf751368fbb8fcde24464a6dd5d2394
+www.motoforum.ru	https://www.motoforum.ru/forum/	0	403	0	150	23	0	403 Forbidden	False	-	text/html	32cbc376cd769a26d108ae31678f975b863b7066e110c59d9a212c7281bd8c81
+motocitizen.info	https://motocitizen.info/forum/	0	404	0	28512	1041	177	К сожалению, мы не могли найти это!	False	-	text/html;charset=UTF-8	e5747186b85167fdac252346c8697b97708eaa8a90d496a5a16ce8b99db1eb24
+www.stroimdom.com.ua	https://www.stroimdom.com.ua/forum/	0	301	0	323	109	0	301 Moved Permanently	False	https://www.stroimdom.com.ua/	text/html; charset=iso-8859-1	b6b80144989b11d844f04cfdf6c2c5998ce315119342e81ffc37a9d1d14377ce
+dacha.wcb.ru	https://dacha.wcb.ru/	0	200	0	274	0	0	-	False	-	text/html	0032588b8d93a807cf0f48a806ccf125677503a6fabe4105a6dc69e81ace6091
+forum.remontnik.ru	https://forum.remontnik.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.woodtools.ru	https://forum.woodtools.ru/	0	403	0	321	118	0	403 Forbidden	False	-	text/html; charset=iso-8859-1	fda6a07a0cec7c3684520a9eaaeee130f523c440bbb062848bf34292eca6161c
+www.radioscanner.ru	https://www.radioscanner.ru/forum/	0	200	0	46879	5008	0	�����	False	-	text/html; charset=WINDOWS-1251	e06fcbfa6a1dbc4b99d9831573329e8944f9474b356705e6802630c7077ddb6e
+forum.ucoz.com	https://forum.ucoz.com/	0	200	0	74291	5396	0	uCoz Community	False	-	text/html; charset=UTF-8	349aeb19a984ce7f4b49c9bf7a17aff248b4437ca8326000ea6b9ab81dbe4969
+www.klerk.ru	https://www.klerk.ru/consultations/	28	0	0	0	0	0	-	False	-	-	-
+wiki.astralinux.ru	https://wiki.astralinux.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.altlinux.org	https://www.altlinux.org/	0	301	0	0	0	0	-	False	https://www.altlinux.org/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0	text/html; charset=UTF-8	-
+forum.basealt.ru	https://forum.basealt.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+railwayclub.info	https://railwayclub.info/	0	200	0	1728	223	0	Railwayclub.info	False	-	text/html; charset=cp1251	dcab4bd24e6b2755899ccdfac63f01bcdb70caaf4c0deac1a88690b7c3630f7e
+parovoz.com	https://parovoz.com/	28	0	0	0	0	0	-	False	-	-	-
+astro-bratsk.ru	https://astro-bratsk.ru/forum/	0	404	0	29323	2962	0	404 - Error	False	-	text/html; charset=utf-8	0b80957eb6bc02b4742cf4834521f4a46e270163a4ffc25103bb4d1504504bde
+pedsovet.org	https://pedsovet.org/	28	0	0	0	0	0	-	False	-	-	-
+forum.kirov.ru	https://forum.kirov.ru/	28	0	0	0	0	0	-	False	-	-	-
+forums.oren.ru	https://forums.oren.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.kostroma.net	https://forum.kostroma.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+www.altayforum.ru	https://www.altayforum.ru/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.24auto.ru	https://forum.24auto.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.nashtransport.ru	https://www.nashtransport.ru/	0	200	0	365431	22292	11757	Наш транспорт. Интернет-проект о транспорте в России и мире - Наш транспорт	False	-	text/html;charset=UTF-8	03f906a744aaeb7b4a23367e9b9894c72515b081ade2bf2eb4482058011d8d11
+forum.drweb.com	https://forum.drweb.com/index.php?showforum=1	0	200	0	14713	180	0	Dr.Web service unavaliable	False	-	text/html	92d665ad614cb72c052b9bbfe33f646fd221fbba7fb189c1280930570ee4de8b
+www.drweb.ru	https://www.drweb.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.kaspersky.com	https://forum.kaspersky.com/	0	200	0	245547	17091	13501	Forums - Kaspersky Support Forum	False	-	text/html;charset=UTF-8	154ab639c5c415411f634b80cb37919247a7cd8fef2cc580a656d8dceeb721fc
+www.kaspersky.ru	https://www.kaspersky.ru/	0	302	0	181	15	0	302 Found	False	https://www.kaspersky.kz/	text/html	adb1dc1e3f543a6e087b31cb02bd6d19d0f94fdf9422b67e1d56f7b69d76a93c
+support.moysklad.ru	https://support.moysklad.ru/	28	0	0	0	0	0	-	False	-	-	-
+dev.1c-bitrix.ru	https://dev.1c-bitrix.ru/community/forums/	28	0	0	0	0	0	-	False	-	-	-
+helpdesk.bitrix24.ru	https://helpdesk.bitrix24.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.amocrm.ru	https://www.amocrm.ru/support/	28	0	0	0	0	0	-	False	-	-	-
+help-ru.tilda.cc	https://help-ru.tilda.cc/	28	0	0	0	0	0	-	False	-	-	-
+yandex.ru	https://yandex.ru/support/tracker/ru/	28	0	0	0	0	0	-	False	-	-	-
+dev.vk.com	https://dev.vk.com/ru	28	0	0	0	0	0	-	False	-	-	-
+support.selectel.ru	https://support.selectel.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.velonn.ru	https://www.velonn.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.reefcentral.com	https://www.reefcentral.com/forums/	28	0	0	0	0	0	-	False	-	-	-
+piterhunt.ru	https://piterhunt.ru/f/	28	0	0	0	0	0	-	False	-	-	-
+fishingclub.ru	https://fishingclub.ru/forum/	28	0	0	0	0	0	-	False	-	-	-
+www.snowrock.ru	https://www.snowrock.ru/forum/	0	404	0	19419	4547	4162	Страница не найдена (ошибка 404)	False	-	text/html; charset=utf-8	c99d0b06ac4e512717eb0ac6a708e419d74ace19506008ed54667f048d91bbf3
+forum.svrt.ru	https://forum.svrt.ru/	28	0	0	0	0	0	-	False	-	-	-
+hobbyportal.ru	https://hobbyportal.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.turpravda.com	https://www.turpravda.com/forums/	28	0	0	0	0	0	-	False	-	-	-
+www.tripadvisor.ru	https://www.tripadvisor.ru/ShowForum-g294459-i705-Russia.html	28	0	0	0	0	0	-	False	-	-	-
+www.tripadvisor.com	https://www.tripadvisor.com/ShowForum-g294459-i705-Russia.html	28	0	0	0	0	0	-	False	-	-	-
+forum.materinstvo.ru	https://forum.materinstvo.ru/	28	0	0	0	0	0	-	False	-	-	-
+www.nanya.ru	https://www.nanya.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.rodim.ru	https://forum.rodim.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.sape.ru	https://forum.sape.ru/	28	0	0	0	0	0	-	False	-	-	-
+community.modx.com	https://community.modx.com/	28	0	0	0	0	0	-	False	-	-	-
+forum.joomla.org	https://forum.joomla.org/	28	0	0	0	0	0	-	False	-	-	-
+ubuntuforums.org	https://ubuntuforums.org/	28	0	0	0	0	0	-	False	-	-	-
+bbs.archlinux.org	https://bbs.archlinux.org/	28	0	0	0	0	0	-	False	-	-	-
+www.linuxquestions.org	https://www.linuxquestions.org/questions/	28	0	0	0	0	0	-	False	-	-	-
+unix.stackexchange.com	https://unix.stackexchange.com/	28	0	0	0	0	0	-	False	-	-	-
+www.teron.ru	https://www.teron.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.academ.org	https://forum.academ.org/	28	0	0	0	0	0	-	False	-	-	-
+forum.74.ru	https://forum.74.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.72.ru	https://forum.72.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.irk.ru	https://forum.irk.ru/	28	0	0	0	0	0	-	False	-	-	-
+forum.vl.ru	https://forum.vl.ru/	28	0	0	0	0	0	-	False	-	-	-
+4pda.to	https://4pda.to/forum/	0	403	0	10622	1030	0	4PDA .:. Всё в порядке, но...	False	-	text/html; charset=UTF-8	e01584c4c56e15b3f97572305eea3693a904a3000f17ef5d3567385ee2e307c3
+rsdn.org	https://rsdn.org/forum/	0	200	0	10886	412	160	Темы - RSDN.ru	False	-	text/html; charset=utf-8	8e1054476fbbd6d58517ed1a28e3647b9984671880fb932ff6ccebb648d1d570
+forum.ru-board.com	https://forum.ru-board.com/	0	503	0	95	0	0	-	False	-	text/plain	9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925
+ru-board.com	https://ru-board.com/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.oszone.net	https://forum.oszone.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+oszone.net	https://oszone.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forums.modlabs.net	https://forums.modlabs.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+kenotron.com	https://kenotron.com/	0	302	0	0	0	0	-	False	https://www.hugedomains.com/domain_profile.cfm	-	-
+mastergrad.com	https://mastergrad.com/	0	200	0	53765	5948	0	Mastergrad - крупнейший форум о строительстве и ремонте	False	-	text/html; charset=UTF-8	7b52656fb5c7b68f4a15cdba7391eebc7c2cd063dc36149211c7be3094d22443
+searchengines.guru	https://searchengines.guru/ru/forum	0	403	0	0	0	0	-	False	-	-	-
+www.maultalk.com	https://www.maultalk.com/	0	410	0	0	0	0	-	False	-	-	-
+maultalk.com	https://maultalk.com/	0	410	0	0	0	0	-	False	-	-	-
+modx.pro	https://modx.pro/	0	200	0	214426	9186	8985	MODX Revolution: русскоязычное сообщество | modx.pro MODX.Pro	False	-	text/html; charset=UTF-8	42d4384f3d652ee2fffb20405ace83077a2ec639d364cfb93c39edc95f67aacb
+www.phpbbguru.net	https://www.phpbbguru.net/community/	0	200	0	98866	8053	0	phpBB Guru - Официальная русская поддержка форума phpBB - Главная страница	False	-	text/html; charset=UTF-8	a90dfee4d0c53116658059fb9ed96b65c6d8383ddf5aada48f460ce4d69df32a
+volvocars.club	https://volvocars.club/	0	200	0	307286	17202	0	Российский Клуб владельцев Вольво | Форум Вольво Примечание	False	-	text/html; charset=utf-8	74ef133d9ef2ec97f13b251879b4369d8b1b3cb60cef448e235e6f58dd99e6fd
+kiario.club	https://kiario.club/	0	403	0	12241	212	0	Just a moment...	True	-	text/html;charset=utf-8	6c5f9445bf73302fe6aff1c0f7712b9b33b3f90b81e12c4f9990af4ce3c4f906
+solaris-club.net	https://solaris-club.net/	0	200	0	732	0	0	-	False	-	text/html	4f8fc8741a40503e57af48cd2d70537634ba6eeef629ea2f1e7a98a306937a12
+toyota-club.net	https://toyota-club.net/	0	200	0	6920	614	0	Toyota-Club.Net	False	-	text/html; charset=UTF-8	74b16fcfb93ce29f1e6369a96e00d75760e723e37475c11a6e117d65e9607b41
+nissan-club.org	https://nissan-club.org/	28	0	0	0	0	0	-	False	-	-	-
+www.vaz.ee	https://www.vaz.ee/	0	200	0	200874	8341	6626	Автопортал о тюнинге — vaz.ee	False	-	text/html; charset=utf-8	d11edaa72d23f6fdbc3db099de1b428d71f2067ab74d9db1b5b5e6b3c9aa7a0d
+teron.online	https://teron.online/	0	200	0	41799	5587	4054	Teron.online - Технологии, ИИ и Инновации | Новости и Аналитика	False	-	text/html; charset=UTF-8	4ba3149977926194522f7130511f967c3197ac0a2130e8c2597b9264b8a7d7d7
+forum.omsk.com	https://forum.omsk.com/	0	200	0	16586	3835	0	������ ����� :: �������	False	-	text/html; charset=windows-1251	1958929890a418d47db4f09e97f4a08590ad5eb3318c502d50c9c0fbfbb53a82
+forum.bratsk.org	https://forum.bratsk.org/	28	0	0	0	0	0	-	False	-	-	-
+rcopen.com	https://rcopen.com/forum/	0	404	0	15	0	0	-	False	-	text/plain; charset=utf-8	848d5e71b9c4c08fe509851c2fed25e8386039f7e080f4cba8945c23821411c4
+forum.faleristika.info	https://forum.faleristika.info/	0	200	0	199274	16335	16065	Фалеристика — форум об орденах, медалях и знаках	False	-	text/html; charset=UTF-8	e2294a4a142a79f3f1d4be59ea96a7a9453f1f90d6bf7433f41e82777e3aa29e
+pesikot.org	https://pesikot.org/forum/	0	200	0	131158	5913	4656	Форум Пес и Кот	False	-	text/html;charset=UTF-8	d78888649718b35f9beb1fc45417034550f63074f847b78287eeca6a9e7cecfc
+forum.rusmedserv.com	https://forum.rusmedserv.com/	0	302	0	0	0	0	-	False	https://forum.rusmedserv.com/index.php/	text/html	-
+rusmedserv.com	https://rusmedserv.com/	0	200	0	75442	15280	5159	Русский Медицинский Сервер - Медицина и здоровье в России - Russian Medical Server - Доказательная медицина - Все о медицине. Лечение, здоро	False	-	text/html; charset=utf-8	50aa72cba6545f6a3790965d1fc275e9bb5be5de912d59af5441808213532ba4
+4gameforum.com	https://4gameforum.com/	0	403	0	146	19	0	403 Forbidden	False	-	text/html	32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864
+tesall.club	https://tesall.club/forums/	0	200	0	263972	23603	22782	Форумы - TESAll.Club - Русскоязычная база модов, статей, уроков и новостей по вселенным The Elder Scrolls, Fallout и другим играм.	False	-	text/html;charset=UTF-8	4c6bea03f0cf438bee617414c48f7886ee7b58b77e21f62452956fa20ab334f0
+modgames.net	https://modgames.net/forum/	0	200	0	111207	10537	0	Моды для Skyrim, Fallout 4, Fallout: New Vegas | ModGames.net	False	-	text/html; charset=utf-8	30a986a1093c6e6bdae4a97edbe60d0662842a6344ad7ea7aef00a8c0ac010bc
+rpg-world.org	https://rpg-world.org/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+mathhelpplanet.com	https://mathhelpplanet.com/	28	0	0	0	0	0	-	False	-	-	-
+forum.ulcity.net	https://forum.ulcity.net/	0	503	0	98	0	0	-	False	-	text/plain	33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909
+forum.smolensk.ws	https://forum.smolensk.ws/	0	200	0	107037	7326	0	Смоленский Форум - Главная страница	False	-	text/html; charset=UTF-8	83144b517350d841adb7c0659a2da7657131c85af424ab08cb569ae4834255c7
+www.yaplakal.com	https://www.yaplakal.com/forum/	0	200	0	609761	55741	0	ЯПлакалъ - Разделы	False	-	text/html; charset=utf-8	afc7e8bfac625234f2a4bfeb761d917a0731c25cc790d806f2dc27e069eb0856
+blogs.rsdn.org	https://blogs.rsdn.org/	0	200	0	10944	1071	0	Блоги - RSDN.ru	False	-	text/html; charset=utf-8	866f27a8aab2d3472f4ffddaccb5fd0f42abc8cf783e4bb2c4a27b0755fe6914
+www.rusmedserv.com	https://www.rusmedserv.com/about/contacts/	0	200	0	36628	6678	8	Контакты / О сайте / Русский Медицинский Сервер	False	-	text/html; charset=utf-8	acbd6026990dc3b63706a690383d711a629a95273ebf986c43ace6ddf73b2d3e
+support.rusff.me	https://support.rusff.me/	0	404	0	0	0	0	-	False	-	text/html; charset=windows-1251	-

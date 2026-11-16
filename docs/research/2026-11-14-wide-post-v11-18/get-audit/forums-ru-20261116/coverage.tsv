@@ -1,0 +1,359 @@
+segment	service	host	url	source	role	light_ru	server_ru	plus162	light_block	coverage
+it	4PDA	4pda.to	https://4pda.to/forum/	https://4pda.to/forum/	Мобильные устройства и ПО	-	-	-	-	none
+it	4PDA старый адрес	4pda.ru	https://4pda.ru/forum/	https://4pda.to/forum/	Старый адрес, алиас проверить отдельно	domain:ru	domain:ru	-	-	both
+it	iXBT	forum.ixbt.com	https://forum.ixbt.com/	https://forum.ixbt.com/	Конференция о технике	domain:ixbt.com	domain:ixbt.com	-	-	both
+it	Linux.org.ru	www.linux.org.ru	https://www.linux.org.ru/forum/	https://www.linux.org.ru/forum/	Linux и открытое ПО	domain:ru	domain:ru	-	-	both
+it	OpenNET	www.opennet.ru	https://www.opennet.ru/openforum/	https://www.opennet.ru/openforum/	Открытое ПО и UNIX	domain:ru	domain:ru	-	-	both
+it	CyberForum	www.cyberforum.ru	https://www.cyberforum.ru/	https://www.cyberforum.ru/	Программирование и ИТ	domain:ru	domain:ru	-	-	both
+it	Хабр Q&A	qna.habr.com	https://qna.habr.com/	https://qna.habr.com/	Вопросы и ответы, не классический форум	domain:habr.com	domain:habr.com	-	-	both
+it	Stack Overflow на русском	ru.stackoverflow.com	https://ru.stackoverflow.com/	https://stackoverflow.com/	Глобальная платформа с локалью, контроль	-	-	-	-	none
+it	SysAdmins	sysadmins.ru	https://sysadmins.ru/	https://sysadmins.ru/	Администрирование	domain:ru	domain:ru	-	-	both
+it	SQL.ru	www.sql.ru	https://www.sql.ru/forum/	https://www.sql.ru/forum/	Исторический архив, не считать активным	domain:ru	domain:ru	-	-	both
+it	SQL.ru архив	sql.ru	https://sql.ru/forum/	https://www.sql.ru/forum/	Алиас исторического форума	domain:ru	domain:ru	-	-	both
+it	SQL.ru зеркало	murcode.ru	https://murcode.ru/	https://murcode.ru/	Сохранённый архив, отдельно от первичного сайта	domain:ru	domain:ru	-	-	both
+it	RSDN	rsdn.org	https://rsdn.org/forum/	https://rsdn.org/forum/	Сообщество разработчиков	-	-	-	-	none
+it	RSDN RU	rsdn.ru	https://rsdn.ru/forum/	https://rsdn.org/forum/	Вариант адреса	domain:ru	domain:ru	-	-	both
+it	Devforums	devforums.ru	https://devforums.ru/	https://devforums.ru/	Форум разработчиков, статус уточнить	domain:ru	domain:ru	-	-	both
+it	Ru-Board	forum.ru-board.com	https://forum.ru-board.com/	https://forum.ru-board.com/	Универсальный ИТ-форум	-	-	-	-	none
+it	Ru-Board корень	ru-board.com	https://ru-board.com/	https://forum.ru-board.com/	Корпоративный корень, не наследует решение	-	-	-	-	none
+it	OSZone	forum.oszone.net	https://forum.oszone.net/	https://forum.oszone.net/	Форум пользователей ОС	-	-	-	-	none
+it	OSZone корень	oszone.net	https://oszone.net/	https://forum.oszone.net/	Портал, отличается от конференции	-	-	-	-	none
+it	NNM Club	nnmclub.to	https://nnmclub.to/	https://nnmclub.to/	Трекер, вне кандидатов	-	-	-	-	none
+it	Linux Mint Россия	linuxmint.com.ru	https://linuxmint.com.ru/	https://linuxmint.com.ru/	Независимое сообщество	domain:ru	domain:ru	-	-	both
+it	Ubuntu Россия	forum.ubuntu.ru	https://forum.ubuntu.ru/	https://forum.ubuntu.ru/	Независимое сообщество	domain:ru	domain:ru	-	-	both
+it	Arch Linux Russia	archlinux.org.ru	https://archlinux.org.ru/forum/	https://archlinux.org.ru/forum/	Сообщество Arch	domain:ru	domain:ru	-	-	both
+it	ALT Linux	forum.altlinux.org	https://forum.altlinux.org/	https://docs.altlinux.org/	Сопровождение систем ALT	full:forum.altlinux.org	full:forum.altlinux.org	-	-	both
+it	ALT Linux Docs	docs.altlinux.org	https://docs.altlinux.org/ru-RU/alt-kworkstation/10.1/html-single/alt-kworkstation/index.html	https://docs.altlinux.org/ru-RU/alt-kworkstation/10.1/html-single/alt-kworkstation/index.html	Атрибуция, не форум	full:docs.altlinux.org	full:docs.altlinux.org	-	-	both
+it	Astra Linux	forum.astralinux.ru	https://forum.astralinux.ru/	https://astralinux.ru/	Форум поддержки	domain:ru	domain:ru	-	-	both
+it	РЕД ОС	forum.red-soft.ru	https://forum.red-soft.ru/	https://red-soft.ru/	Адрес проверить, не автоматически	domain:ru	domain:ru	-	-	both
+it	КриптоПро	cryptopro.ru	https://cryptopro.ru/forum2/	https://cryptopro.ru/forum2/	Официальный форум производителя	domain:ru	domain:ru	-	-	both
+it	Рутокен	forum.rutoken.ru	https://forum.rutoken.ru/	https://forum.rutoken.ru/	Официальный форум поддержки	domain:ru	domain:ru	-	-	both
+it	1С	forum.1c.ru	https://forum.1c.ru/	https://1c.ru/	Официальный форум, проверить публичность	domain:ru	domain:ru	-	-	both
+it	Инфостарт	forum.infostart.ru	https://forum.infostart.ru/	https://infostart.ru/	Форум 1С	domain:ru	domain:ru	-	-	both
+it	Миста	forum.mista.ru	https://forum.mista.ru/	https://forum.mista.ru/	Независимое сообщество 1С	domain:ru	domain:ru	-	-	both
+it	V8 1C	v8.1c.ru	https://v8.1c.ru/	https://v8.1c.ru/	Портал оператора, контроль	domain:ru	domain:ru	-	-	both
+it	Keenetic	forum.keenetic.com	https://forum.keenetic.com/	https://forum.keenetic.com/	Официальное сообщество, проверить локальный адрес	-	-	-	-	none
+it	Keenetic Россия	forum.keenetic.ru	https://forum.keenetic.ru/	https://keenetic.ru/	Региональный вход проверить	domain:ru	domain:ru	-	-	both
+it	MikroTik Россия	forummikrotik.ru	https://forummikrotik.ru/	https://forummikrotik.ru/	Сообщество пользователей, не форум вендора	domain:ru	domain:ru	-	-	both
+it	MikroTik глобальный	forum.mikrotik.com	https://forum.mikrotik.com/	https://mikrotik.com/	Международный контроль	-	-	-	-	none
+it	DNS клуб	club.dns-shop.ru	https://club.dns-shop.ru/	https://club.dns-shop.ru/	Сообщество техники	domain:ru	domain:ru	-	-	both
+it	Overclockers	forums.overclockers.ru	https://forums.overclockers.ru/	https://overclockers.ru/	Конференция о ПК	domain:ru	domain:ru	-	-	both
+it	ModLabs	forums.modlabs.net	https://forums.modlabs.net/	https://www.modlabs.net/	Оверклокинг и техника	-	-	-	-	none
+it	BIOS	forum.rom.by	https://forum.rom.by/	https://forum.rom.by/	Белорусская зона, контроль текущей политики	domain:by	domain:by	-	-	both
+it	Monitor	monitor.net.ru	https://monitor.net.ru/forum/	https://monitor.net.ru/forum/	Ремонт техники	domain:ru	domain:ru	-	-	both
+it	Kenotron	kenotron.com	https://kenotron.com/	https://kenotron.com/	Ремонт электроники, проверить статус	-	-	-	-	none
+it	Mastergrad	mastergrad.com	https://mastergrad.com/	https://mastergrad.com/privacy_policy/	Российский оператор и тематический каталог	-	-	-	-	none
+it	Easyelectronics	forum.easyelectronics.ru	https://forum.easyelectronics.ru/	https://easyelectronics.ru/	Электроника и микроконтроллеры	domain:ru	domain:ru	-	-	both
+it	Радиокот	radiokot.ru	https://radiokot.ru/forum/	https://radiokot.ru/forum/	Радиолюбители и электроника	domain:ru	domain:ru	-	-	both
+it	Паяльник	forum.cxem.net	https://forum.cxem.net/	https://cxem.net/	Радиоэлектроника, сверить принадлежность	-	-	-	-	none
+it	QRP	qrp.ru	https://qrp.ru/forum/	https://qrp.ru/forum/	Радиолюбители	domain:ru	domain:ru	-	-	both
+it	QRZ	forum.qrz.ru	https://forum.qrz.ru/	https://www.qrz.ru/	Радиолюбители	domain:ru	domain:ru	-	-	both
+it	CQHAM	www.cqham.ru	https://www.cqham.ru/forum/	https://www.cqham.ru/	Радиосвязь	domain:ru	domain:ru	-	-	both
+it	Nag	forum.nag.ru	https://forum.nag.ru/	https://nag.ru/	Телеком и интернет-провайдеры	domain:ru	domain:ru	-	-	both
+it	ISPsystem	forum.ispsystem.ru	https://forum.ispsystem.ru/	https://www.ispsystem.ru/	Форум поддержки проверить	domain:ru	domain:ru	-	-	both
+it	Etersoft	forum.etersoft.ru	https://forum.etersoft.ru/	https://etersoft.ru/	Форум продукта, статус	domain:ru	domain:ru	-	-	both
+it	МойОфис	support.myoffice.ru	https://support.myoffice.ru/	https://myoffice.ru/	Справка, не форум	domain:ru	domain:ru	-	-	both
+web	SearchEngines	searchengines.guru	https://searchengines.guru/ru/forum	https://searchengines.guru/ru/about/terms	Рунетовский форум, действующий оператор указан отдельно	-	-	-	-	none
+web	SearchEngines старый	forum.searchengines.ru	https://forum.searchengines.ru/	https://searchengines.guru/ru/forum	Исторический адрес	domain:ru	domain:ru	-	-	both
+web	PR-CY	pr-cy.ru	https://pr-cy.ru/talk/	https://pr-cy.ru/talk/	SEO-сообщество и вопросы	domain:ru	domain:ru	-	-	both
+web	MaulTalk	www.maultalk.com	https://www.maultalk.com/	https://www.maultalk.com/	Вебмастера	-	-	-	-	none
+web	MaulTalk корень	maultalk.com	https://maultalk.com/	https://www.maultalk.com/	Алиас, проверить	-	-	-	-	none
+web	Webmasters	webmasters.ru	https://webmasters.ru/forum/	https://webmasters.ru/forum/	Вебмастера	domain:ru	domain:ru	-	-	both
+web	SEO Forum	seo-forum.ru	https://seo-forum.ru/	https://seo-forum.ru/	Форум продвижения	domain:ru	domain:ru	-	-	both
+web	MIXMarket	forum.mixmarket.biz	https://forum.mixmarket.biz/	https://mixmarket.biz/	Исторический партнёрский форум	-	-	-	-	none
+web	DLE	forum.dle-news.ru	https://forum.dle-news.ru/	https://dle-news.ru/	Форум разработчика CMS	domain:ru	domain:ru	-	-	both
+web	WordPress Russia	ru.wordpress.org	https://ru.wordpress.org/support/forums/	https://wordpress.org/	Русская локаль глобальной платформы	-	-	-	-	none
+web	Joomla Россия	joomlaforum.ru	https://joomlaforum.ru/	https://joomlaforum.ru/	Локальное сообщество CMS	domain:ru	domain:ru	-	-	both
+web	Drupal Россия	drupal.ru	https://drupal.ru/	https://drupal.ru/	Российский форум Drupal	domain:ru	domain:ru	-	-	both
+web	MODX	modx.pro	https://modx.pro/	https://modx.pro/about	Международное русскоязычное сообщество CMS	-	-	-	-	none
+web	SMF	www.simplemachines.ru	https://www.simplemachines.ru/	https://www.simplemachines.ru/	Русское сообщество SMF	domain:ru	domain:ru	-	-	both
+web	MyBB Russia	mybb.ru	https://mybb.ru/	https://mybb.ru/	Платформа форумов, не один форум	domain:ru	domain:ru	-	-	both
+web	RusFF	rusff.me	https://rusff.me/	https://rusff.me/	Хостинг форумов, не допуск всей платформы по одному тенанту	-	-	-	-	none
+web	phpBB Россия	www.phpbbguru.net	https://www.phpbbguru.net/community/	https://www.phpbbguru.net/community/	Сообщество и локализация движка, проверить	-	-	-	-	none
+web	Ucoz	forum.ucoz.ru	https://forum.ucoz.ru/	https://www.ucoz.ru/	Форум поддержки платформы	domain:ru	domain:ru	-	-	both
+auto	Дром	forum.drom.ru	https://forum.drom.ru/	https://www.drom.ru/sitemap/	Автомобильные форумы	domain:ru	domain:ru	-	-	both
+auto	Дром WWW	www.drom.ru	https://www.drom.ru/	https://www.drom.ru/sitemap/	Портал-источник	domain:ru	domain:ru	-	-	both
+auto	Форумы Дром копия	www.forumsdrom.ru	https://www.forumsdrom.ru/	https://www.drom.ru/sitemap/	Отдельный сайт, принадлежность не предполагать	domain:ru	domain:ru	-	-	both
+auto	DRIVE2	www.drive2.ru	https://www.drive2.ru/communities/	https://www.drive2.ru/communities/	Сообщества автомобилистов	domain:ru	domain:ru	-	-	both
+auto	DRIVE2 net	www.drive2.com	https://www.drive2.com/	https://www.drive2.ru/communities/	Международный вариант, контроль	-	-	-	-	none
+auto	Автору	auto.ru	https://auto.ru/	https://auto.ru/	Портал, контроль	domain:ru	domain:ru	-	-	both
+auto	Автокадабра	autokadabra.ru	https://autokadabra.ru/	https://autokadabra.ru/	Автосообщество	domain:ru	domain:ru	-	-	both
+auto	Audi клуб	www.audi-club.ru	https://www.audi-club.ru/forums/	https://www.audi-club.ru/forums/	Автоклуб России	domain:ru	domain:ru	-	-	both
+auto	BMW Club	www.bmwclub.ru	https://www.bmwclub.ru/	https://www.bmwclub.ru/	Автоклуб	domain:ru	domain:ru	-	-	both
+auto	Volvo Club	volvocars.club	https://volvocars.club/	https://volvocars.club/	Российский клуб владельцев Volvo	-	-	-	-	none
+auto	Club Volvo	clubvolvo.ru	https://clubvolvo.ru/	https://clubvolvo.ru/	Другой клуб, не алиас по названию	domain:ru	domain:ru	-	-	both
+auto	Volvo Russia	www.volvo-russia.ru	https://www.volvo-russia.ru/forum/	https://www.volvo-russia.ru/forum/	Автоклуб	domain:ru	domain:ru	-	-	both
+auto	Ford Focus Club	ffclub.ru	https://ffclub.ru/	https://ffclub.ru/	Автоклуб Ford	domain:ru	domain:ru	-	-	both
+auto	Форд Клуб	www.ford-club.ru	https://www.ford-club.ru/	https://www.ford-club.ru/	Автоклуб Ford, отдельно	domain:ru	domain:ru	-	-	both
+auto	KIA Club	forum.kia-club.ru	https://forum.kia-club.ru/	https://forum.kia-club.ru/	Автоклуб KIA	domain:ru	domain:ru	-	-	both
+auto	KIA Rio	kiario.club	https://kiario.club/	https://kiario.club/	Автоклуб	-	-	-	-	none
+auto	Hyundai Solaris	solaris-club.net	https://solaris-club.net/	https://solaris-club.net/	Клуб Solaris	-	-	-	-	none
+auto	Hyundai Club	hyundai-club.ru	https://hyundai-club.ru/	https://hyundai-club.ru/	Автоклуб	domain:ru	domain:ru	-	-	both
+auto	Renault Club	www.renault-club.ru	https://www.renault-club.ru/	https://www.renault-club.ru/	Автоклуб	domain:ru	domain:ru	-	-	both
+auto	Logan	forum.logan.ru	https://forum.logan.ru/	https://forum.logan.ru/	Клуб Logan	domain:ru	domain:ru	-	-	both
+auto	VW Club	www.vw-club.ru	https://www.vw-club.ru/forum/	https://www.vw-club.ru/forum/	Клуб VW	domain:ru	domain:ru	-	-	both
+auto	VWTS	vwts.ru	https://vwts.ru/forum/	https://vwts.ru/forum/	Сообщество VW	domain:ru	domain:ru	-	-	both
+auto	Skoda Club	forum.skoda-club.ru	https://forum.skoda-club.ru/	https://forum.skoda-club.ru/	Клуб Skoda	domain:ru	domain:ru	-	-	both
+auto	Peugeot клуб	peugeot-club.ru	https://peugeot-club.ru/	https://peugeot-club.ru/	Клуб Peugeot	domain:ru	domain:ru	-	-	both
+auto	Opel клуб	forum.opel-club.ru	https://forum.opel-club.ru/	https://forum.opel-club.ru/	Клуб Opel	domain:ru	domain:ru	-	-	both
+auto	Suzuki	suzuki-club.ru	https://suzuki-club.ru/	https://suzuki-club.ru/	Клуб Suzuki	domain:ru	domain:ru	-	-	both
+auto	Toyota	toyota-club.net	https://toyota-club.net/	https://toyota-club.net/	Сообщество Toyota	-	-	-	-	none
+auto	Land Cruiser	www.land-cruiser.ru	https://www.land-cruiser.ru/	https://www.land-cruiser.ru/	Клуб Toyota	domain:ru	domain:ru	-	-	both
+auto	Prado Club	prado-club.su	https://prado-club.su/forum/	https://prado-club.su/forum/	Клуб Prado	domain:su	domain:su	-	-	both
+auto	Terrano	terranoirk.ru	https://terranoirk.ru/forums/	https://terranoirk.ru/forums/	Клуб Nissan	domain:ru	domain:ru	-	-	both
+auto	Nissan Club	nissan-club.org	https://nissan-club.org/	https://nissan-club.org/	Марочный форум, проверить публичность	-	-	-	-	none
+auto	Mazda Club	mazdaclub.ru	https://mazdaclub.ru/forums/	https://mazdaclub.ru/forums/	Клуб Mazda	domain:ru	domain:ru	-	-	both
+auto	Subaru Club	club-subaru.ru	https://club-subaru.ru/	https://club-subaru.ru/	Клуб Subaru	domain:ru	domain:ru	-	-	both
+auto	Haval клуб	haval-club.ru	https://haval-club.ru/	https://haval-club.ru/	Клуб владельцев, статус	domain:ru	domain:ru	-	-	both
+auto	Chery Club	chery-club.ru	https://chery-club.ru/	https://chery-club.ru/	Клуб владельцев	domain:ru	domain:ru	-	-	both
+auto	Lada Club	www.lada-club.ru	https://www.lada-club.ru/	https://www.lada-club.ru/	Клуб Lada	domain:ru	domain:ru	-	-	both
+auto	Vaz.ee	www.vaz.ee	https://www.vaz.ee/	https://www.vaz.ee/	Автофорум тюнинга	-	-	-	-	none
+auto	Чиптюнер	forum.chiptuner.ru	https://forum.chiptuner.ru/	https://forum.chiptuner.ru/	Диагностика и ремонт	domain:ru	domain:ru	-	-	both
+auto	UAZbuka	forum.uazbuka.ru	https://forum.uazbuka.ru/	https://uazbuka.ru/	Сообщество УАЗ	domain:ru	domain:ru	-	-	both
+auto	Niva	www.niva4x4.ru	https://www.niva4x4.ru/	https://www.niva4x4.ru/	Сообщество Нивы	domain:ru	domain:ru	-	-	both
+auto	Chevy Niva	www.chevy-niva.ru	https://www.chevy-niva.ru/	https://www.chevy-niva.ru/	Клуб владельцев	domain:ru	domain:ru	-	-	both
+auto	Снегоход	www.snowmobile.ru	https://www.snowmobile.ru/forum/	https://www.snowmobile.ru/forum/	Форум техники, смежный	domain:ru	domain:ru	-	-	both
+local	Е1 Екатеринбург	www.e1.ru	https://www.e1.ru/talk/forum/index.php?f=0	https://www.e1.ru/talk/forum/index.php?f=0	Городской форум	domain:ru	domain:ru	-	-	both
+local	У дома Екатеринбург	udoma66.ru	https://udoma66.ru/communication/forum/	https://udoma66.ru/communication/forum/	Районные ветки	domain:ru	domain:ru	-	-	both
+local	U-mama	u-mama.ru	https://u-mama.ru/forum/family/travel/	https://u-mama.ru/forum/family/travel/	Екатеринбург, родители	domain:ru	domain:ru	-	-	both
+local	НГС	forum.ngs.ru	https://forum.ngs.ru/	https://forum.ngs.ru/	Новосибирск	domain:ru	domain:ru	-	-	both
+local	Сибмама	forum.sibmama.ru	https://forum.sibmama.ru/	https://forum.sibmama.ru/	Новосибирск, семьи	domain:ru	domain:ru	-	-	both
+local	Воронеж	bvf.ru	https://bvf.ru/forum/	https://bvf.ru/forum/	Большой Воронежский форум	domain:ru	domain:ru	-	-	both
+local	Якутск	forum.ykt.ru	https://forum.ykt.ru/	https://forum.ykt.ru/	Региональный портал	domain:ru	domain:ru	-	-	both
+local	Чувашия	forum.na-svyazi.ru	https://forum.na-svyazi.ru/	https://forum.na-svyazi.ru/	Чебоксары и Чувашия	domain:ru	domain:ru	-	-	both
+local	Пермь	teron.online	https://teron.online/	https://teron.online/	Текущий сайт о технологиях, не Пермский форум	-	-	-	-	none
+local	Пермь старый адрес	teron.ru	https://teron.ru/	https://teron.online/	Исторический адрес	domain:ru	domain:ru	-	-	both
+local	Красноярск	forum.krasmama.ru	https://forum.krasmama.ru/	https://forum.krasmama.ru/	Красноярские родители	domain:ru	domain:ru	-	-	both
+local	Краснодар	forums.kuban.ru	https://forums.kuban.ru/	https://forums.kuban.ru/	Региональный форум Кубани	domain:ru	domain:ru	-	-	both
+local	Ростов	forum.rostovmama.ru	https://forum.rostovmama.ru/	https://forum.rostovmama.ru/	Региональный семейный форум	domain:ru	domain:ru	-	-	both
+local	Хабаровск	khabmama.ru	https://khabmama.ru/forum/	https://khabmama.ru/forum/	Хабаровское родительское сообщество	domain:ru	domain:ru	-	-	both
+local	Владивосток	vladmama.ru	https://vladmama.ru/forum/	https://vladmama.ru/forum/	Владивосток, родители	domain:ru	domain:ru	-	-	both
+local	Омск	forum.omsk.com	https://forum.omsk.com/	https://forum.omsk.com/	Омский форум, актуальный URL уточнить	-	-	-	-	none
+local	Томск	forum.tomsk.ru	https://forum.tomsk.ru/	https://forum.tomsk.ru/	Локальный адрес, статус уточнить	domain:ru	domain:ru	-	-	both
+local	Ижевск	izhevsk.ru	https://izhevsk.ru/	https://izhevsk.ru/	Городские форумы	domain:ru	domain:ru	-	-	both
+local	Уфа	www.ufamama.ru	https://www.ufamama.ru/Forum/	https://www.ufamama.ru/Forum/	Уфимское семейное сообщество	domain:ru	domain:ru	-	-	both
+local	Нижний Новгород	www.nn.ru	https://www.nn.ru/community/	https://www.nn.ru/community/	Городские форумы и разделы	domain:ru	domain:ru	-	-	both
+local	Самара	samaraforum.ru	https://samaraforum.ru/	https://samaraforum.ru/	Локальный адрес, статус уточнить	domain:ru	domain:ru	-	-	both
+local	Казань	kazanfirst.ru	https://kazanfirst.ru/	https://kazanfirst.ru/	Новостное сравнение, не форум	domain:ru	domain:ru	-	-	both
+local	Челябинск	www.chelforum.ru	https://www.chelforum.ru/	https://www.chelforum.ru/	Городской форум	domain:ru	domain:ru	-	-	both
+local	Севастополь	forum.sevastopol.info	https://forum.sevastopol.info/	https://forum.sevastopol.info/	Региональный форум, не выводить геополитику из доступности	-	-	-	-	none
+local	Севастополь корень	sevastopol.info	https://sevastopol.info/	https://forum.sevastopol.info/	Отдельное имя, не наследует форум	-	-	-	-	none
+local	Транспорт городов	forum.nashtransport.ru	https://forum.nashtransport.ru/	https://forum.nashtransport.ru/	Транспортная инфраструктура	domain:ru	domain:ru	-	-	both
+local	Общественный транспорт	forum.tr.ru	https://forum.tr.ru/	https://forum.tr.ru/	Общественный транспорт	domain:ru	domain:ru	-	-	both
+local	Москва	www.moscowforum.ru	https://www.moscowforum.ru/	https://www.moscowforum.ru/	Городской форум, проверить статус	domain:ru	domain:ru	-	-	both
+local	Piter	www.peterburg.biz	https://www.peterburg.biz/	https://www.peterburg.biz/	Справочник, контроль	-	-	-	-	none
+local	Littleone	forum.littleone.ru	https://forum.littleone.ru/	https://forum.littleone.ru/	Петербургские семьи	domain:ru	domain:ru	-	-	both
+local	Littleone форум	littleone.com	https://littleone.com/	https://forum.littleone.ru/	Отдельный редакционный проект, не форум без доказательства	-	-	-	-	none
+local	Сахалин	forum.sakh.com	https://forum.sakh.com/	https://forum.sakh.com/	Сахалин и Курилы	-	-	-	-	none
+local	Сахалин портал	www.sakh.com	https://www.sakh.com/	https://forum.sakh.com/	Портал, отличие от форума	-	-	-	-	none
+local	Мурманск	forum.murman.ru	https://forum.murman.ru/	https://forum.murman.ru/	Локальный адрес, статус уточнить	domain:ru	domain:ru	-	-	both
+local	Великий Новгород	forum.novgorod.ru	https://forum.novgorod.ru/	https://forum.novgorod.ru/	Региональный форум	domain:ru	domain:ru	-	-	both
+local	Братск	forum.bratsk.org	https://forum.bratsk.org/	https://forum.bratsk.org/	Региональный форум, уточнить текущий адрес	-	-	-	-	none
+home	FORUMHOUSE	www.forumhouse.ru	https://www.forumhouse.ru/forums	https://www.forumhouse.ru/forums	Строительство и дача	domain:ru	domain:ru	-	-	both
+home	ИЗБА	izba.su	https://izba.su/forum/	https://izba.su/forum/	Строительство домов	domain:su	domain:su	-	-	both
+home	ИЗБА WWW	www.izba.su	https://www.izba.su/forum/	https://izba.su/forum/	Вариант входа	domain:su	domain:su	-	-	both
+home	ВашДом	forum.vashdom.ru	https://forum.vashdom.ru/	https://forum.vashdom.ru/	Строительный форум	domain:ru	domain:ru	-	-	both
+home	ИВД	forum.ivd.ru	https://forum.ivd.ru/	https://forum.ivd.ru/	Интерьер, ремонт	domain:ru	domain:ru	-	-	both
+home	Стройка	forum.stroyka.ru	https://forum.stroyka.ru/	https://forum.stroyka.ru/	Строительный форум, проверить статус	domain:ru	domain:ru	-	-	both
+home	Приусадебное хозяйство	forum.prihoz.ru	https://forum.prihoz.ru/	https://forum.prihoz.ru/	Сад и дача	domain:ru	domain:ru	-	-	both
+home	Твой сад	forum.tvoysad.ru	https://forum.tvoysad.ru/	https://forum.tvoysad.ru/	Садовый форум	domain:ru	domain:ru	-	-	both
+home	WebSad	www.websad.ru	https://www.websad.ru/	https://www.websad.ru/	Декоративный сад	domain:ru	domain:ru	-	-	both
+home	Виноград инфо	forum.vinograd.info	https://forum.vinograd.info/	https://forum.vinograd.info/	Виноградарство, оператор и регион отдельно	-	-	-	-	none
+home	Гараж	www.chipmaker.ru	https://www.chipmaker.ru/	https://www.chipmaker.ru/	Металлообработка и мастерские	domain:ru	domain:ru	-	-	both
+home	Дом и стройка	forum.stroimdom.com.ua	https://forum.stroimdom.com.ua/	https://www.stroimdom.com.ua/	Украинский внешний контроль, не проверять	-	-	-	-	none
+home	Цветоводство	astom.ru	https://astom.ru/ru/forum	https://astom.ru/ru/forum	Клуб цветоводов	domain:ru	domain:ru	-	-	both
+home	Цитрусовые	forum.homecitrus.ru	https://forum.homecitrus.ru/	https://forum.homecitrus.ru/	Домашние цитрусовые	domain:ru	domain:ru	-	-	both
+hobby	AQA	www.aqa.ru	https://www.aqa.ru/forum/	https://www.aqa.ru/forum/	Аквариумисты	domain:ru	domain:ru	-	-	both
+hobby	АкваЛого	www.aqualogo.ru	https://www.aqualogo.ru/seaurls	https://www.aqualogo.ru/seaurls	Первичный указатель морских форумов	domain:ru	domain:ru	-	-	both
+hobby	АкваЛого Форум	reefcentral.ru	https://reefcentral.ru/forum/	https://reefcentral.ru/forum/	Русское сообщество морской аквариумистики	domain:ru	domain:ru	-	-	both
+hobby	Аквафорум UA	www.aquaforum.ua	https://www.aquaforum.ua/	https://www.aquaforum.ua/	Украинский внешний контроль	-	-	-	-	none
+hobby	Астрофорум	astronomy.ru	https://astronomy.ru/forum/	https://astronomy.ru/forum/	Любительская астрономия	domain:ru	domain:ru	-	-	both
+hobby	Астрофорум альтернативный	astronomyforum.net	https://astronomyforum.net/	https://astronomyforum.net/	Глобальное сообщество, не считать RU	-	-	-	-	none
+hobby	Клуб Foto.ru	foto.ru	https://foto.ru/forums	https://foto.ru/	Фотография	domain:ru	domain:ru	-	-	both
+hobby	Клуб Foto.ru старый вход	club.foto.ru	https://club.foto.ru/forum/	https://foto.ru/forums	Исторический адрес, отдельная сверка	domain:ru	domain:ru	-	-	both
+hobby	Фотофорум	www.photoforum.ru	https://www.photoforum.ru/forum/index.ru.html	https://www.photoforum.ru/forum/index.ru.html	Фотография	domain:ru	domain:ru	-	-	both
+hobby	Веломания	forum.velomania.ru	https://forum.velomania.ru/	https://forum.velomania.ru/	Велосипеды	domain:ru	domain:ru	-	-	both
+hobby	Велопитер	velopiter.spb.ru	https://velopiter.spb.ru/forum/	https://velopiter.spb.ru/forum/	Велосипеды и маршруты	domain:ru	domain:ru	-	-	both
+hobby	SKI.RU	forum.ski.ru	https://forum.ski.ru/	https://forum.ski.ru/	Горнолыжный форум	domain:ru	domain:ru	-	-	both
+hobby	Русфишинг	www.rusfishing.ru	https://www.rusfishing.ru/forum/	https://www.rusfishing.ru/forum/	Рыбалка	domain:ru	domain:ru	-	-	both
+hobby	Рыболовный клуб Питер	fisher.spb.ru	https://fisher.spb.ru/forums/	https://fisher.spb.ru/forums/	Рыбалка	domain:ru	domain:ru	-	-	both
+hobby	RC Design	rcopen.com	https://rcopen.com/	https://rcopen.com/rules	Радиоуправляемые модели и правила сообщества	-	-	-	-	none
+hobby	RC Design старый	forum.rcdesign.ru	https://forum.rcdesign.ru/	https://rcopen.com/forum/	Старый адрес	domain:ru	domain:ru	-	-	both
+hobby	DiyAudio	forum.vegalab.ru	https://forum.vegalab.ru/	https://forum.vegalab.ru/	Аудиотехника	domain:ru	domain:ru	-	-	both
+hobby	Портативное аудио	player.ru	https://player.ru/	https://player.ru/	Форум аудио	domain:ru	domain:ru	-	-	both
+hobby	Doctorhead	forum.doctorhead.ru	https://forum.doctorhead.ru/	https://forum.doctorhead.ru/	Аудиотехника	domain:ru	domain:ru	-	-	both
+hobby	Hi-Fi	www.hi-fi.ru	https://www.hi-fi.ru/forum/	https://www.hi-fi.ru/forum/	Аудиотехника	domain:ru	domain:ru	-	-	both
+hobby	Самогон	forum.homedistiller.ru	https://forum.homedistiller.ru/	https://forum.homedistiller.ru/	Тематический форум	domain:ru	domain:ru	-	-	both
+hobby	Город мастеров рукоделие	club.osinka.ru	https://club.osinka.ru/	https://club.osinka.ru/	Рукоделие	domain:ru	domain:ru	-	-	both
+hobby	Страна Мам	www.stranamam.ru	https://www.stranamam.ru/	https://www.stranamam.ru/	Рукоделие, семья	domain:ru	domain:ru	-	-	both
+hobby	Ярмарка мастеров	www.livemaster.ru	https://www.livemaster.ru/	https://www.livemaster.ru/	Сообщество и торговля, смежное	domain:ru	domain:ru	-	-	both
+hobby	Нумизматика	coins.su	https://coins.su/forum/	https://coins.su/forum/	Нумизматика	domain:su	domain:su	-	-	both
+hobby	Нумизматика 2	forum.faleristika.info	https://forum.faleristika.info/	https://forum.faleristika.info/	Коллекционеры и награды	-	-	-	-	none
+hobby	ВГД	forum.vgd.ru	https://forum.vgd.ru/	https://forum.vgd.ru/	Генеалогия	domain:ru	domain:ru	-	-	both
+hobby	PESIQ	pesiq.ru	https://pesiq.ru/forum/	https://pesiq.ru/forum/	Собаки	domain:ru	domain:ru	-	-	both
+hobby	Пес и Кот	pesikot.org	https://pesikot.org/forum/	https://pesikot.org/o-nas/	Помощь животным, проект и форум	-	-	-	-	none
+hobby	Мау Клуб	mauforum.ru	https://mauforum.ru/	https://mauforum.ru/	Кошки	domain:ru	domain:ru	-	-	both
+hobby	Зоовет	www.zoovet.ru	https://www.zoovet.ru/forum/	https://www.zoovet.ru/forum/	Животные, без персональных веток	domain:ru	domain:ru	-	-	both
+hobby	Грибной форум	forum.toadstool.ru	https://forum.toadstool.ru/	https://forum.toadstool.ru/	Микология	domain:ru	domain:ru	-	-	both
+life	Woman.ru	www.woman.ru	https://www.woman.ru/forum/	https://www.woman.ru/forum/	Дискуссии и семья	domain:ru	domain:ru	-	-	both
+life	Babyblog	www.babyblog.ru	https://www.babyblog.ru/community	https://www.babyblog.ru/community	Родительские сообщества	domain:ru	domain:ru	-	-	both
+life	Бебиблог старый форум	forum.babyblog.ru	https://forum.babyblog.ru/	https://www.babyblog.ru/community	Предполагаемый адрес, не тестировать без связи	domain:ru	domain:ru	-	-	both
+life	Дети Mail	deti.mail.ru	https://deti.mail.ru/forum/	https://deti.mail.ru/forum/	Родительский исторический вход	domain:ru	domain:ru	-	-	both
+life	7я	conf.7ya.ru	https://conf.7ya.ru/	https://conf.7ya.ru/	Семейные конференции	domain:ru	domain:ru	-	-	both
+life	Ева	eva.ru	https://eva.ru/forum/	https://eva.ru/forum/	Семейные форумы	domain:ru	domain:ru	-	-	both
+life	Baby.ru	www.baby.ru	https://www.baby.ru/community/	https://www.baby.ru/community/	Родительские сообщества	domain:ru	domain:ru	-	-	both
+life	Русмедсерв	forum.rusmedserv.com	https://forum.rusmedserv.com/index.php/	https://www.rusmedserv.com/about/contacts/	Медицинский форум, только каталог разделов	-	-	-	-	none
+life	Русмедсерв портал	rusmedserv.com	https://rusmedserv.com/	https://forum.rusmedserv.com/	Отдельный портал	-	-	-	-	none
+life	Медкруг	www.medkrug.ru	https://www.medkrug.ru/community/	https://www.medkrug.ru/community/	Медицинские сообщества, статус	domain:ru	domain:ru	-	-	both
+life	Медсовет	forums.medsovet.info	https://forums.medsovet.info/	https://forums.medsovet.info/	Медицинский адрес, наличие уточнить	-	-	-	-	none
+profession	Клерк	forumklerk.ru	https://forumklerk.ru/	https://www.klerk.ru/buh/news/688050/	Официально обновлённый форум	domain:ru	domain:ru	-	-	both
+profession	Клерк старый	forum.klerk.ru	https://forum.klerk.ru/	https://www.klerk.ru/buh/news/688050/	Исторический вход отдельно	domain:ru	domain:ru	-	-	both
+profession	Бухонлайн	www.buhonline.ru	https://www.buhonline.ru/forum/	https://www.buhonline.ru/forum/	Бухгалтерский форум	domain:ru	domain:ru	-	-	both
+profession	Главбух	forum.glavbukh.ru	https://forum.glavbukh.ru/	https://forum.glavbukh.ru/	Бухгалтерский форум	domain:ru	domain:ru	-	-	both
+profession	Банки.ру	www.banki.ru	https://www.banki.ru/forum/	https://www.banki.ru/forum/	Финансовый форум, без операций	domain:ru	domain:ru	-	-	both
+profession	Форум юристов	forum.yurclub.ru	https://forum.yurclub.ru/	https://forum.yurclub.ru/	Юридическое сообщество	domain:ru	domain:ru	-	-	both
+profession	Закон.ру	zakon.ru	https://zakon.ru/	https://zakon.ru/	Юридическое сообщество, смежное	domain:ru	domain:ru	-	-	both
+profession	Гарант	forum.garant.ru	https://forum.garant.ru/	https://forum.garant.ru/	Юридический форум	domain:ru	domain:ru	-	-	both
+profession	Консультант	forum.consultant.ru	https://forum.consultant.ru/	https://www.consultant.ru/	Адрес уточнить	domain:ru	domain:ru	-	-	both
+profession	Форум авиа	www.forumavia.ru	https://www.forumavia.ru/	https://www.forumavia.ru/	Авиация, форум	domain:ru	domain:ru	-	-	both
+profession	Авиафорум	aviaforum.ru	https://aviaforum.ru/	https://aviaforum.ru/	Авиация, форум	domain:ru	domain:ru	-	-	both
+profession	Форум АТО	www.ato.ru	https://www.ato.ru/	https://www.ato.ru/	Смежные авиационные новости	domain:ru	domain:ru	-	-	both
+profession	Военное обозрение	topwar.ru	https://topwar.ru/	https://topwar.ru/	Смежное сообщество, только покрытие	domain:ru	domain:ru	-	-	both
+travel	Форум Винского	forum.awd.ru	https://forum.awd.ru/	https://forum.awd.ru/viewforum.php?f=182	Самостоятельные путешествия	domain:ru	domain:ru	-	-	both
+travel	Туризм.ру	forum.turizm.ru	https://forum.turizm.ru/	https://forum.turizm.ru/	Туристический форум	domain:ru	domain:ru	-	-	both
+travel	Туристер	www.tourister.ru	https://www.tourister.ru/forums/tourister	https://www.tourister.ru/forums/tourister	Туристический форум	domain:ru	domain:ru	-	-	both
+travel	Тонкости	tonkosti.ru	https://tonkosti.ru/	https://tonkosti.ru/	Путеводитель и дискуссии, смежное	domain:ru	domain:ru	-	-	both
+travel	Туры	www.tury.ru	https://www.tury.ru/forum/	https://www.tury.ru/forum/	Форум, статус уточнить	domain:ru	domain:ru	-	-	both
+travel	Форум автопутешествий	www.saabclub.su	https://www.saabclub.su/	https://www.saabclub.su/	Тематический клуб, уточнить назначение	domain:su	domain:su	-	-	both
+travel	Ски Ру	www.ski.ru	https://www.ski.ru/	https://forum.ski.ru/	Портал и отдельный форум	domain:ru	domain:ru	-	-	both
+gaming	Мир танков	forum.tanki.su	https://forum.tanki.su/	https://legal.lesta.ru/forum-contests/	Официальный форум издателя	domain:su	domain:su	-	-	both
+gaming	Мир кораблей	forum.korabli.su	https://forum.korabli.su/	https://legal.lesta.ru/forum-contests/	Официальный форум издателя	domain:su	domain:su	-	-	both
+gaming	Танки Блиц	forum.tanksblitz.ru	https://forum.tanksblitz.ru/	https://tanksblitz.ru/	Форум, уточнить официальный адрес	domain:ru	domain:ru	-	-	both
+gaming	Леста Wiki	wiki.lesta.ru	https://wiki.lesta.ru/	https://legal.lesta.ru/forum-contests/	Контроль принадлежности, не форум	domain:ru	domain:ru	-	-	both
+gaming	VK Play	vkplay.ru	https://vkplay.ru/community/	https://vkplay.ru/about/	Игровое сообщество, уточнить публичный путь	domain:ru	domain:ru	-	-	both
+gaming	Фогейм	forums.4game.ru	https://forums.4game.ru/	https://ru.4game.ru/legal/4game/17/	Локальная площадка, подтвердить ссылки	domain:ru	domain:ru	-	-	both
+gaming	Фогейм прежний	4gameforum.com	https://4gameforum.com/help/terms	https://ru.4game.ru/	Действующий форум Фогейма, отдельно от WWW и сайта дистрибуции	-	-	-	-	none
+gaming	Perfect World	pwonline.ru	https://pwonline.ru/forums/	https://pwonline.ru/	Форум игры, уточнить путь	domain:ru	domain:ru	-	-	both
+gaming	Аллоды	allods.ru	https://allods.ru/forums/	https://allods.ru/	Форум игры	domain:ru	domain:ru	-	-	both
+gaming	Warface	ru.warface.com	https://ru.warface.com/	https://ru.warface.com/	Игровой портал и новости, отдельная атрибуция	full:ru.warface.com	full:ru.warface.com	-	-	both
+gaming	Игры War Thunder	forum.warthunder.ru	https://forum.warthunder.ru/	https://warthunder.ru/ru	Русскоязычный форум, служебный хост	domain:ru	domain:ru	-	-	both
+gaming	War Thunder глобальный	forum.warthunder.com	https://forum.warthunder.com/	https://warthunder.com/	Внешний контроль, не допуск по локали	domain:warthunder.com	domain:warthunder.com	-	-	both
+gaming	PlayGround	forums.playground.ru	https://forums.playground.ru/	https://www.playground.ru/	Игровой форум	domain:ru	domain:ru	-	-	both
+gaming	GoHa.Ru	forums.goha.ru	https://forums.goha.ru/	https://www.goha.ru/	Игровой форум	domain:ru	domain:ru	-	-	both
+gaming	TESALL	tesall.club	https://tesall.club/forums/	https://tesall.club/forums/	Сообщество Elder Scrolls, оператор и статус уточнить	-	-	-	-	none
+gaming	ModGames	modgames.net	https://modgames.net/forum/	https://modgames.net/forum/	Игровые моды и обсуждения	-	-	-	-	none
+gaming	Boardgamer	boardgamer.ru	https://boardgamer.ru/forum/	https://boardgamer.ru/forum/	Настольные игры	domain:ru	domain:ru	-	-	both
+gaming	Тесера	tesera.ru	https://tesera.ru/project/tesera/	https://tesera.ru/project/tesera/	Настольные игры, смежные обсуждения	domain:ru	domain:ru	-	-	both
+gaming	BoardGameGeek	boardgamegeek.com	https://boardgamegeek.com/forums	https://boardgamegeek.com/forums	Глобальный контроль	-	-	-	-	none
+gaming	НРИ	rpg-world.org	https://rpg-world.org/	https://rpg-world.org/	Форум настольных ролевых игр	-	-	-	-	none
+science	dxdy	dxdy.ru	https://dxdy.ru/topic3476.html	https://dxdy.ru/	Научный форум и его правила	domain:ru	domain:ru	-	-	both
+science	Discuss Science	discuss-science.ru	https://discuss-science.ru/	https://discuss-science.ru/	Научно-популярное сообщество	domain:ru	domain:ru	-	-	both
+science	Молбиол	molbiol.ru	https://molbiol.ru/forums/	https://molbiol.ru/forums/	Биология и лабораторная практика, только сверка хоста	domain:ru	domain:ru	-	-	both
+science	Scientific.ru	scientific.ru	https://scientific.ru/	https://scientific.ru/	Историческое научное сообщество	domain:ru	domain:ru	-	-	both
+science	Наука	forum.scientific.ru	https://forum.scientific.ru/	https://scientific.ru/	Исторический поддомен, без предположений	domain:ru	domain:ru	-	-	both
+science	ФИПИ	fipi.ru	https://fipi.ru/	https://fipi.ru/	Официальный ресурс, не форум	domain:ru	domain:ru	-	-	both
+science	Математический форум	mathhelpplanet.com	https://mathhelpplanet.com/	https://mathhelpplanet.com/	Учебное сообщество, территориальная связь отдельно	-	-	-	-	none
+science	Портал олимпиад	olimpiada.ru	https://olimpiada.ru/	https://olimpiada.ru/	Смежный образовательный портал	domain:ru	domain:ru	-	-	both
+science	Профобразование	www.proshkolu.ru	https://www.proshkolu.ru/	https://www.proshkolu.ru/	Сообщество педагогов	domain:ru	domain:ru	-	-	both
+science	Методисты	metodisty.ru	https://metodisty.ru/	https://metodisty.ru/	Образовательное сообщество	domain:ru	domain:ru	-	-	both
+local	Сахком РФ	xn--80aughmz.xn--p1ai	https://xn--80aughmz.xn--p1ai/	https://t.me/s/Sakhcom	Переезд новостей, не подтверждает переезд форума	domain:xn--p1ai	domain:xn--p1ai	-	-	both
+local	Сахалин.Инфо	sakhalin.info	https://sakhalin.info/news/225074	https://sakhalin.info/news/225074	Источник о переезде, не форум	-	-	-	-	none
+local	Саратов	forum.sarbc.ru	https://forum.sarbc.ru/	https://www.sarbc.ru/	Региональный форум, статус	domain:ru	domain:ru	-	-	both
+local	Пенза	penzamama.ru	https://penzamama.ru/	https://penzamama.ru/	Местное родительское сообщество	domain:ru	domain:ru	-	-	both
+local	Вологда	www.35.ru	https://www.35.ru/	https://www.35.ru/	Региональный портал, не форум автоматически	domain:ru	domain:ru	-	-	both
+local	Тверь	forum.tverigrad.ru	https://forum.tverigrad.ru/	https://tverigrad.ru/	Проверять существование публичного адреса отдельно	domain:ru	domain:ru	-	-	both
+local	Рязань	forum.rzn.info	https://forum.rzn.info/	https://www.rzn.info/	Проверять существование публичного адреса отдельно	-	-	-	-	none
+local	Ульяновск	forum.ulcity.net	https://forum.ulcity.net/	https://forum.ulcity.net/	Исторический городской адрес	-	-	-	-	none
+local	Смоленск	forum.smolensk.ws	https://forum.smolensk.ws/index.php	https://forum.smolensk.ws/	Смоленский форум	-	-	-	-	none
+local	Екатеринбург Академический	akademekb.ru	https://akademekb.ru/forum/	https://akademekb.ru/forum/	Районный форум	domain:ru	domain:ru	-	-	both
+local	Пермь 59.ru	59.ru	https://59.ru/forum/	https://59.ru/forum/	Местные обсуждения, статус отдельно	domain:ru	domain:ru	-	-	both
+local	Курган	forum.kurgan.ru	https://forum.kurgan.ru/	https://forum.kurgan.ru/	Региональный форум, статус	domain:ru	domain:ru	-	-	both
+local	Форум Ставрополь	forum.stv.ru	https://forum.stv.ru/	https://forum.stv.ru/	Региональный адрес, статус	domain:ru	domain:ru	-	-	both
+local	Пикабу	pikabu.ru	https://pikabu.ru/communities	https://pikabu.ru/communities	Тематические сообщества, не классический форум	domain:ru	domain:ru	-	-	both
+local	Пикабу UGC	cs.pikabu.ru	https://cs.pikabu.ru/	https://pikabu.ru/communities	Ресурсный хост, только сверка	domain:ru	domain:ru	-	-	both
+local	D3	d3.ru	https://d3.ru/	https://d3.ru/	Историческое сетевое сообщество	domain:ru	domain:ru	-	-	both
+local	ЯПлакалъ	www.yaplakal.com	https://www.yaplakal.com/forum/	https://www.yaplakal.com/	Общий форум, территориальная атрибуция отдельно	domain:yaplakal.com	domain:yaplakal.com	-	-	both
+local	Отзовик	otzovik.com	https://otzovik.com/	https://otzovik.com/	Смежные пользовательские отзывы, не форум	domain:otzovik.com	domain:otzovik.com	-	-	both
+local	iRecommend	irecommend.ru	https://irecommend.ru/	https://irecommend.ru/	Смежные отзывы, не форум	domain:ru	domain:ru	-	-	both
+it	Netcraze поддержка	support.netcraze.ru	https://support.netcraze.ru/	https://netcraze.ru/ru/company	Справка после ребрендинга, не форум	domain:ru	domain:ru	-	-	both
+it	Netcraze оператор	netcraze.ru	https://netcraze.ru/ru/company	https://netcraze.ru/ru/company	Атрибуция российской ветки	domain:ru	domain:ru	-	-	both
+it	RSDN блоги	blogs.rsdn.org	https://blogs.rsdn.org/	https://rsdn.org/forum/	Блоги сообщества, отдельный FQDN	-	-	-	-	none
+it	Rusmedserv WWW	www.rusmedserv.com	https://www.rusmedserv.com/about/contacts/	https://www.rusmedserv.com/about/contacts/	Первичный источник, самостоятельный адрес	-	-	-	-	none
+web	RusFF поддержка	support.rusff.me	https://support.rusff.me/	https://rusff.me/contacts/	Выделенный форум поддержки провайдера	-	-	-	-	none
+web	RusFF WWW	www.rusff.me	https://www.rusff.me/create/	https://rusff.me/contacts/	Панель создания, не правило на тенантов	-	-	-	-	none
+web	phpBB Work	www.phpbb-work.ru	https://www.phpbb-work.ru/	https://www.phpbb-work.ru/	Русскоязычный форум модификаций	domain:ru	domain:ru	-	-	both
+control	Телеметрия	tracking.ott.yandex.net	https://tracking.ott.yandex.net/	https://github.com/SpeedeMiner/Geosite-ru-light/blob/26732bb53fdc8e3e400f5198acd69e9020589485/local/block.txt	Сохранность BLOCK, не тестировать	domain:yandex.net	domain:yandex.net	-	domain:tracking.ott.yandex.net	block
+control	Яндекс Метрика	mc.yandex.ru	https://mc.yandex.ru/	https://github.com/SpeedeMiner/Geosite-ru-light/blob/26732bb53fdc8e3e400f5198acd69e9020589485/local/block.txt	Сохранность BLOCK, не тестировать	domain:ru	domain:ru	-	domain:mc.yandex.ru	block
+control	Author.Today	author.today	https://author.today/	https://author.today/pages/about	Сообщество авторов уже в +162	-	-	yes	-	plus162
+control	Discord	discord.com	https://discord.com/	https://discord.com/	Внешняя платформа, не переносить форумы	-	-	-	-	none
+control	Reddit	www.reddit.com	https://www.reddit.com/	https://www.reddit.com/	Глобальная UGC-платформа, не переносить RU по языку	-	-	-	-	none
+hobby	RC Design архив	archive.rcopen.com	https://archive.rcopen.com/	https://rcopen.com/rules	Архив статей, не включать по результату форума	-	-	-	-	none
+hobby	Кошки	mau.ru	https://mau.ru/	https://mauforum.ru/	Портал, не форум	domain:ru	domain:ru	-	-	both
+hobby	Фотоклуб Pentax	www.penta-club.ru	https://www.penta-club.ru/forum/	https://www.penta-club.ru/forum/	Фотоклуб	domain:ru	domain:ru	-	-	both
+hobby	Сони клуб	sony-club.ru	https://sony-club.ru/forum/	https://sony-club.ru/forum/	Фотоклуб	domain:ru	domain:ru	-	-	both
+hobby	Клуб Nikon	www.nikonclub.ru	https://www.nikonclub.ru/forum/	https://www.nikonclub.ru/forum/	Фотоклуб, статус	domain:ru	domain:ru	-	-	both
+hobby	КЛА	www.astronomy.ru	https://www.astronomy.ru/forum/	https://astronomy.ru/forum/	Вариант WWW	domain:ru	domain:ru	-	-	both
+hobby	Астрофото	www.astroforum.ru	https://www.astroforum.ru/	https://www.astroforum.ru/	Астрономический адрес, статус	domain:ru	domain:ru	-	-	both
+hobby	Вело	forum.velo36.ru	https://forum.velo36.ru/	https://forum.velo36.ru/	Велофорум, Воронеж	domain:ru	domain:ru	-	-	both
+hobby	Мотофорум	www.motoforum.ru	https://www.motoforum.ru/forum/	https://www.motoforum.ru/forum/	Мотоциклисты	domain:ru	domain:ru	-	-	both
+hobby	Мотоситизен	motocitizen.info	https://motocitizen.info/forum/	https://motocitizen.info/forum/	Мотосообщество	-	-	-	-	none
+home	СтроимДом RU	www.stroimdom.com.ua	https://www.stroimdom.com.ua/forum/	https://www.stroimdom.com.ua/	Отдельный ареал, внешний контраст	-	-	-	-	none
+home	Dacha	dacha.wcb.ru	https://dacha.wcb.ru/	https://dacha.wcb.ru/	Садоводы, публичность уточнить	domain:ru	domain:ru	-	-	both
+home	Ремонт и дизайн	forum.remontnik.ru	https://forum.remontnik.ru/	https://www.remontnik.ru/	Справка и обсуждения, адрес уточнить	domain:ru	domain:ru	-	-	both
+home	Клуб ремонта	forum.woodtools.ru	https://forum.woodtools.ru/	https://forum.woodtools.ru/	Форум столяров	domain:ru	domain:ru	-	-	both
+home	Радиосканер	www.radioscanner.ru	https://www.radioscanner.ru/forum/	https://www.radioscanner.ru/forum/	Радиосвязь, публичные разделы	domain:ru	domain:ru	-	-	both
+web	Ucoz глобальный	forum.ucoz.com	https://forum.ucoz.com/	https://www.ucoz.ru/	Раздел глобальной платформы, внешний контроль	domain:ucoz.com	domain:ucoz.com	-	-	both
+web	Klerk Q&A	www.klerk.ru	https://www.klerk.ru/consultations/	https://www.klerk.ru/buh/news/688050/	Публичная площадка, не отдельный форум	domain:ru	domain:ru	-	-	both
+it	Astra wiki	wiki.astralinux.ru	https://wiki.astralinux.ru/	https://astralinux.ru/	Документация, не отдельный форум	domain:ru	domain:ru	-	-	both
+it	ALTLinux Wiki	www.altlinux.org	https://www.altlinux.org/	https://docs.altlinux.org/	Официальная вики, контроль политики	full:www.altlinux.org	full:www.altlinux.org	-	-	both
+it	ALT форум зеркало	forum.basealt.ru	https://forum.basealt.ru/	https://www.basealt.ru/	Проверить официальную связь, не тестировать	domain:ru	domain:ru	-	-	both
+profession	Железнодорожный клуб	railwayclub.info	https://railwayclub.info/	https://railwayclub.info/	Тематический сайт, атрибуция	-	-	-	-	none
+profession	Паровоз ИС	parovoz.com	https://parovoz.com/	https://parovoz.com/	Транспортное сообщество и фотогалерея, не автоматически RU	-	-	-	-	none
+science	Астрофорум АстроБратск	astro-bratsk.ru	https://astro-bratsk.ru/forum/	https://astro-bratsk.ru/forum/	Местное сообщество, актуальность	domain:ru	domain:ru	-	-	both
+science	Педсовет	pedsovet.org	https://pedsovet.org/	https://pedsovet.org/	Учительское сообщество	-	-	-	-	none
+local	Киров	forum.kirov.ru	https://forum.kirov.ru/	https://forum.kirov.ru/	Локальный адрес проверить	domain:ru	domain:ru	-	-	both
+local	Оренбург	forums.oren.ru	https://forums.oren.ru/	https://forums.oren.ru/	Локальный адрес проверить	domain:ru	domain:ru	-	-	both
+local	Кострома	forum.kostroma.net	https://forum.kostroma.net/	https://forum.kostroma.net/	Локальный адрес проверить	-	-	-	-	none
+local	Алтай	www.altayforum.ru	https://www.altayforum.ru/	https://www.altayforum.ru/	Локальный адрес проверить	domain:ru	domain:ru	-	-	both
+local	Красноярск 24	forum.24auto.ru	https://forum.24auto.ru/	https://forum.24auto.ru/	Автофорум региона	domain:ru	domain:ru	-	-	both
+local	Московский транспорт	www.nashtransport.ru	https://www.nashtransport.ru/	https://forum.nashtransport.ru/	Транспортная площадка, редирект не предполагать	domain:ru	domain:ru	-	-	both
+vendor	Dr.Web	forum.drweb.com	https://forum.drweb.com/index.php?showforum=1	https://forum.drweb.com/index.php?showforum=1	Русский раздел официального форума, общий хост с другими локалями	domain:drweb.com	domain:drweb.com	-	-	both
+vendor	Доктор Веб	www.drweb.ru	https://www.drweb.ru/	https://www.drweb.ru/	Российский оператор, не отдельный форум	domain:ru	domain:ru	-	-	both
+vendor	Kaspersky	forum.kaspersky.com	https://forum.kaspersky.com/	https://forum.kaspersky.com/	Общий форум производителя с несколькими языками	domain:kaspersky.com	domain:kaspersky.com	-	-	both
+vendor	Kaspersky RU	www.kaspersky.ru	https://www.kaspersky.ru/	https://www.kaspersky.ru/	Локальная витрина производителя, не форум	domain:ru	domain:ru	-	-	both
+vendor	МойСклад	support.moysklad.ru	https://support.moysklad.ru/	https://www.moysklad.ru/	Справка, не классический форум	domain:ru	domain:ru	-	-	both
+vendor	Битрикс	dev.1c-bitrix.ru	https://dev.1c-bitrix.ru/community/forums/	https://dev.1c-bitrix.ru/community/forums/	Официальные форумы разработки	domain:ru	domain:ru	-	-	both
+vendor	Битрикс24	helpdesk.bitrix24.ru	https://helpdesk.bitrix24.ru/	https://www.bitrix24.ru/	Документация и справка, контроль	domain:ru	domain:ru	-	-	both
+vendor	Amo CRM	www.amocrm.ru	https://www.amocrm.ru/support/	https://www.amocrm.ru/support/	Справка, контроль	domain:ru	domain:ru	-	-	both
+vendor	Tilda	help-ru.tilda.cc	https://help-ru.tilda.cc/	https://tilda.cc/ru/	Справка, не форум	domain:tilda.cc	domain:tilda.cc	-	-	both
+vendor	Yandex Tracker	yandex.ru	https://yandex.ru/support/tracker/ru/	https://yandex.ru/support/tracker/ru/	Справка, не форум	domain:ru	domain:ru	-	-	both
+vendor	VK разработчики	dev.vk.com	https://dev.vk.com/ru	https://dev.vk.com/ru	Документация, не форум	domain:vk.com	domain:vk.com	-	-	both
+vendor	Seti	support.selectel.ru	https://support.selectel.ru/	https://selectel.ru/	Контроль публикации поддержки, не тестировать	domain:ru	domain:ru	-	-	both
+hobby	Велофорум Нижний Новгород	www.velonn.ru	https://www.velonn.ru/	https://forum.velomania.ru/forum.php	Региональный форум, связь проверить	domain:ru	domain:ru	-	-	both
+hobby	Морской ReefCentral	www.reefcentral.com	https://www.reefcentral.com/forums/	https://www.reefcentral.com/forums/	Глобальный контроль, не смешивать с .ru	-	-	-	-	none
+hobby	Охота и рыбалка	piterhunt.ru	https://piterhunt.ru/f/	https://piterhunt.ru/f/	Петербургский клуб, только публичный общий каталог	domain:ru	domain:ru	-	-	both
+hobby	Рыболовный форум	fishingclub.ru	https://fishingclub.ru/forum/	https://fishingclub.ru/forum/	Публичное сообщество, статус	domain:ru	domain:ru	-	-	both
+hobby	Горные лыжи	www.snowrock.ru	https://www.snowrock.ru/forum/	https://www.snowrock.ru/forum/	Тематический адрес, статус	domain:ru	domain:ru	-	-	both
+hobby	Генеалогия СВРТ	forum.svrt.ru	https://forum.svrt.ru/	https://forum.svrt.ru/	Любительская генеалогия	domain:ru	domain:ru	-	-	both
+hobby	Хобби Портал	hobbyportal.ru	https://hobbyportal.ru/	https://hobbyportal.ru/	Хобби и коллекционирование, актуальность	domain:ru	domain:ru	-	-	both
+travel	Мир путешествий	www.turpravda.com	https://www.turpravda.com/forums/	https://www.turpravda.com/forums/	Русскоязычные обсуждения, оператор и рынок отдельно	-	-	-	-	none
+travel	Tripadvisor RU	www.tripadvisor.ru	https://www.tripadvisor.ru/ShowForum-g294459-i705-Russia.html	https://www.tripadvisor.ru/	Глобальный оператор с локальной витриной, только контроль	domain:ru	domain:ru	-	-	both
+travel	Tripadvisor com	www.tripadvisor.com	https://www.tripadvisor.com/ShowForum-g294459-i705-Russia.html	https://www.tripadvisor.com/	Глобальный контроль	-	-	-	-	none
+life	Родительство Материнство	forum.materinstvo.ru	https://forum.materinstvo.ru/	https://forum.materinstvo.ru/	Родительские форумы в России	domain:ru	domain:ru	-	-	both
+life	Родительство Няня	www.nanya.ru	https://www.nanya.ru/	https://www.nanya.ru/	Архив и портал, наличие форума отдельно	domain:ru	domain:ru	-	-	both
+life	Родительство Родим	forum.rodim.ru	https://forum.rodim.ru/	https://forum.rodim.ru/	Семейные форумы	domain:ru	domain:ru	-	-	both
+web	Сапа	forum.sape.ru	https://forum.sape.ru/	https://www.sape.ru/	Форум платформы, статус	domain:ru	domain:ru	-	-	both
+web	Профсообщество CMS	community.modx.com	https://community.modx.com/	https://modx.pro/	Глобальная платформа, отдельный контроль	-	-	-	-	none
+web	Joomla Global	forum.joomla.org	https://forum.joomla.org/	https://forum.joomla.org/	Не переносить статус локального сообщества	-	-	-	-	none
+it	Ubuntu global	ubuntuforums.org	https://ubuntuforums.org/	https://ubuntuforums.org/	Глобальный контроль	-	-	-	-	none
+it	Arch Linux global	bbs.archlinux.org	https://bbs.archlinux.org/	https://bbs.archlinux.org/	Глобальный контроль	-	-	-	-	none
+it	LinuxQuestions	www.linuxquestions.org	https://www.linuxquestions.org/questions/	https://www.linuxquestions.org/questions/	Глобальный контроль	-	-	-	-	none
+it	Unix StackExchange	unix.stackexchange.com	https://unix.stackexchange.com/	https://unix.stackexchange.com/	Глобальный контроль	-	-	-	-	none
+local	Пермь Портал	www.teron.ru	https://www.teron.ru/	https://teron.online/	Исторический алиас, не переносить без прямой связи	domain:ru	domain:ru	-	-	both
+local	Новосибирск Академгородок	forum.academ.org	https://forum.academ.org/	https://forum.academ.org/	Локальный форум, актуальность	-	-	-	-	none
+local	Челябинск форум	forum.74.ru	https://forum.74.ru/	https://74.ru/	Локальный адрес, актуальность	domain:ru	domain:ru	-	-	both
+local	Тюмень форум	forum.72.ru	https://forum.72.ru/	https://72.ru/	Локальный адрес, актуальность	domain:ru	domain:ru	-	-	both
+local	Иркутск	forum.irk.ru	https://forum.irk.ru/	https://www.irk.ru/	Локальный адрес, актуальность	domain:ru	domain:ru	-	-	both
+local	Владивосток город	forum.vl.ru	https://forum.vl.ru/	https://www.vl.ru/	Локальный адрес, актуальность	domain:ru	domain:ru	-	-	both
+gaming	Форум Фогейма WWW	www.4gameforum.com	https://www.4gameforum.com/help/terms	https://www.4gameforum.com/	Действующий публичный форум, отдельный WWW и условия	-	-	-	-	none
+it	Ru.Board архив	forall.ru-board.com	https://forall.ru-board.com/download/	https://forall.ru-board.com/ibarchive/	Архивные страницы, вне допуска форума	-	-	-	-	none
