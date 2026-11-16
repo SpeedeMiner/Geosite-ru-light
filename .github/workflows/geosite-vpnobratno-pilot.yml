@@ -1,4 +1,4 @@
-name: GeoSite public fiscal services through VPNObratno
+name: GeoSite public EDI dependencies through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-ofd-corporate-service-20261116
+  group: geosite-ofd-edi-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [corporate, service]
+        batch: [edi]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
