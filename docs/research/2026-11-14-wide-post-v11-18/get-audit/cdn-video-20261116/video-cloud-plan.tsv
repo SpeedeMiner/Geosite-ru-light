@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	macroscop.com	macroscop.com	https://macroscop.com/	Macroscop	https://macroscop.com/o-kompanii
+corporate	control	macroscop.com	macroscop.com	https://macroscop.com/o-kompanii	Macroscop	https://macroscop.com/
+corporate	candidate	doc.macroscop.com	doc.macroscop.com	https://doc.macroscop.com/api-sdk/api-sdk.htm	Macroscop	https://macroscop.com/podderzhka/dokumentaciya
+corporate	control	doc.macroscop.com	doc.macroscop.com	https://doc.macroscop.com/download-documentation.htm	Macroscop	https://macroscop.com/podderzhka/dokumentaciya
+corporate	candidate	cloud.macroscop.com	cloud.macroscop.com	https://cloud.macroscop.com/index	Macroscop	https://macroscop.com/assets/documentation/Macroscop_Admin_Guide_ru.pdf
+corporate	candidate	store.ivideon.com	store.ivideon.com	https://store.ivideon.com/	Ivideon	https://ru.ivideon.com/
+corporate	candidate	bx-static.ivideon.com	bx-static.ivideon.com	https://bx-static.ivideon.com/local/assets/files/7d2e350b494e2cf560281df3fdae862e.png		https://ru.ivideon.com/
+corporate	control	support.ivideon.com	support.ivideon.com	https://support.ivideon.com/l_rus/knowledge_base/item/180944	Ivideon	https://ru.ivideon.com/
+corporate	control	ru.ivideon.com	ru.ivideon.com	https://ru.ivideon.com/	Ivideon	https://ru.ivideon.com/
