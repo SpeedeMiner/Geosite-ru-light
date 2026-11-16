@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	data.nalog.ru	data.nalog.ru	https://data.nalog.ru/opendata/7707329152-reestropereldoc/data-20261106-structure-20251025.csv		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	candidate	truckradar.com	truckradar.com	https://truckradar.com/contacts	Трак Радар	https://truckradar.com/
+corporate	comparison	truckradar.com	truckradar.com	https://truckradar.com/	ТРАК РАДАР	https://truckradar.com/contacts
+corporate	comparison	cargonomica.com	cargonomica.com	https://cargonomica.com/		https://max.ru/cargonomica
+corporate	candidate	www.cargonomica.com	www.cargonomica.com	https://www.cargonomica.com/	Каргономика	https://max.ru/cargonomica
+corporate	candidate	inthemelab.com	inthemelab.com	https://inthemelab.com/	INTHEME LAB	https://astra.ru/ready-for-astra/companies-partners/43098/
