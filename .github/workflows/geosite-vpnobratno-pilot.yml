@@ -1,4 +1,4 @@
-name: GeoSite FESCO HTTP-1 transport control through VPNObratno
+name: GeoSite EPD operator and logistics endpoints through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-epd-followup-fesco-http1-1242
+  group: geosite-epd-operator-1324
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [fesco-http1]
+        batch: [transport]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -96,18 +96,18 @@ jobs:
           set -euo pipefail
           upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
           sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
-            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 GEOSITE_FESCO_HTTP1_DIAGNOSTIC=1 \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
             bash "$upstream/vpn_netns_exec.sh" -- \
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
-                "$AUDIT/epd-followup-20261116-1242/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$AUDIT/epd-operator-20261116-1324/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
                 "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 9 --exclude-asn 43761
 
       - name: Upload observation and diagnostic reports
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-epd-followup-${{ matrix.batch }}-${{ github.run_attempt }}
+          name: geosite-epd-operator-${{ matrix.batch }}-${{ github.run_attempt }}
           path: |
             .vpn-pilot/report/geosite-vpnobratno-summary.json
             .vpn-pilot/report/vpnobratno-observations.jsonl
