@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	market.inwork.net	market.inwork.net	https://market.inwork.net/offer		https://inwork.net/
+corporate	candidate	market.inwork.net	market.inwork.net	https://market.inwork.net/privacy		https://inwork.net/
+corporate	candidate	market.inwork.net	market.inwork.net	https://market.inwork.net/contact		https://inwork.net/
+corporate	candidate	getwork.today	getwork.today	https://getwork.today/law		https://www.getwork.today/
+corporate	candidate	winwork.pro	winwork.pro	https://winwork.pro/juridicheskaya-informaciya/	WinWork	https://winwork.pro/
+corporate	candidate	balans.pro	balans.pro	https://balans.pro/npd	НПД	https://balans.pro/smz
+corporate	candidate	business.winwork.pro	business.winwork.pro	https://business.winwork.pro/		https://business.winwork.pro/
+corporate	control	app.konsol.pro	app.konsol.pro	https://app.konsol.pro/login		https://konsol.pro/
