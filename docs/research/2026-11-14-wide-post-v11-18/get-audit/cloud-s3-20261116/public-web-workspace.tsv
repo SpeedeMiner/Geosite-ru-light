@@ -1,0 +1,7 @@
+host	url	curl_exit	http	tls_verify	content_type	redirect	bytes	sha256	title	svg_magic
+console.k2.cloud	https://console.k2.cloud/login	0	200	0	text/html		793	f3ad446dec24dc5ddad350e7a6cb3438646b7794f78135b0ce6fa30d1bb0c9db	Консоль управления K2 Облака	False
+docs.k2.cloud	https://docs.k2.cloud/ru/	0	200	0	text/html		289738	688cf0e2fb12556156a2adac2485dfa823d3e6b3c28fadd08e10ccb42a852fc2	К2 Облако &#8212; документация K2 Cloud Platform	False
+k2.cloud	https://k2.cloud/	0	200	0	text/html; charset=utf-8		395983	04e64c9a2a22365720d91998cfe625d54f5c3dfd15814d50d9a459d305a52c79	K2 Cloud — облако с экспертизой интегратора	False
+promo.k2.cloud	https://promo.k2.cloud/iaas-calculator	0	200	0	text/html; charset=UTF-8		111760	a53e4d392cbbab64fbc4a783e37dc84ab64b6c32cfda9df97a1ca1218e5afac7	Запрос облачных ресурсов	False
+site-api.k2.cloud	https://site-api.k2.cloud/storage/1bvN9poFqVxKp9skRpDD2RJOubAGSRlsaPYv7Q1g.svg	0	200	0	image/svg+xml		40016	ce5b95f1759586de8e3a95bf5e462cb0aaf5568dd8a4d73a5c75212c69d9e11b		True
+team.k2.cloud	https://team.k2.cloud/	0	200	0	text/html; charset=utf-8		224234	b0ca675ecff0b34b3cc494072fbc3c9d40bbe9b887b185eb3f2a5982a68c8fc5	Карьера в K2 Cloud	False
