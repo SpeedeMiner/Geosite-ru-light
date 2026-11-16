@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	epd.mig24.online	epd.mig24.online	https://epd.mig24.online/	ЭПД.МИГ24	https://epd.mig24.ru/help
+corporate	candidate	edo.mig24.online	edo.mig24.online	https://edo.mig24.online/	ЭДО.МИГ24	https://ftp.ntssoft.ru/docs/260101_PriceMIG24.pdf
+corporate	candidate	kodedo.mig24.online	kodedo.mig24.online	https://kodedo.mig24.online/	Поиск кодов	https://epd.mig24.ru/help
+corporate	control	auth-oidc.ntssoft.ru	auth-oidc.ntssoft.ru	https://auth-oidc.ntssoft.ru/		https://epd.mig24.ru/help
+corporate	comparison	www.ediweb.ru	www.ediweb.ru	https://www.ediweb.ru/		https://mintrans.gov.ru/activities/%20214/376/377/380
+corporate	control	ediweb.com	ediweb.com	https://ediweb.com/ru-ru	Эдивеб	https://x5.ru/ru/supplier-services/edi/
