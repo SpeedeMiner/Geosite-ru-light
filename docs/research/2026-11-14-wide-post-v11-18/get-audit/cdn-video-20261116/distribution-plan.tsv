@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	packages.macroscop.com	packages.macroscop.com	https://packages.macroscop.com/rpm/	Index of	https://doc.macroscop.com/install/linux-server.htm
+corporate	control	packages.macroscop.com	packages.macroscop.com	https://packages.macroscop.com/deb/		https://doc.macroscop.com/install/linux-server.htm
+corporate	candidate	support.trassir.com	support.trassir.com	https://support.trassir.com/	TRASSIR	https://trassir.ru/support/soft/
+corporate	control	doc.macroscop.com	doc.macroscop.com	https://doc.macroscop.com/install/linux-server.htm	Macroscop	https://macroscop.com/podderzhka/distributivy
