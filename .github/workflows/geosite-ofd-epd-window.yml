@@ -1,4 +1,4 @@
-name: GeoSite Kazakhstan second-network public dependency recheck
+name: GeoSite Supl identical public FAQ independent repeat
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-regional-repeat-20261116
+  group: geosite-supl-ordinary-session-repeat-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [regional-repeat]
+        batch: [supl-recheck]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/kz-operator-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 16 --exclude-asn 43761 --exclude-asn 42610
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 16 --exclude-asn 43761 --exclude-asn 8402
 
       - name: Upload observation and diagnostic reports
         if: always()
