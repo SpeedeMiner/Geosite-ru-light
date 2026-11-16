@@ -1,0 +1,17 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+28840	28840	28840	2	svetofore.com	https://svetofore.com/privacy-page?tab=agreement	200	0	0	text/html; charset=utf-8	10000	cf567634b23266ba2d22f388726e75b3657b6650a7800a837a93de52604e5758	89.169.29.158	vpn_visible_review	Политика конфиденциальности Политика конфиденциальности	
+28840	28840	28840	2	svetofore.com	https://svetofore.com/	200	0	0	text/html; charset=utf-8	10000	05701d81f5528108ab1af17088b429c3510a718123f512b068789fb99fc50fa3	89.169.29.158	vpn_visible_review	Главная Главная	
+28840	28840	28840	2	svetofore.ru	https://svetofore.ru/	200	0	0	text/html; charset=utf-8	10000	05701d81f5528108ab1af17088b429c3510a718123f512b068789fb99fc50fa3	89.169.29.158	vpn_visible_review	Главная Главная	
+28840	28840	28840	2	epd.tochka.com	https://epd.tochka.com/		60	19		0		185.169.155.210	vpn_tls_unproven		
+28840	28840	28840	2	org.1-ofd.ru	https://org.1-ofd.ru/registration/login-mail	200	0	0	text/html	10000	b0703fedc70f188106a150f4f4074409be97f381cb4488c43493b29d6b43a058	91.107.114.10	vpn_body_unproven		
+28840	28840	28840	2	edo.pkitrans.ru	https://edo.pkitrans.ru/kedo/Documentation		60	19		0		83.234.76.11	vpn_tls_unproven		
+28840	28840	28840	2	lk.ruscon.ru	https://lk.ruscon.ru/platform/law/privacy-policy	200	0	0	text/html	8525	6837f4a38a15a76bf3a511677aac0d96f6f1937d68e83b3066ff69b06ea70a7c	185.71.64.221	vpn_body_unproven	Вход в личный кабинет	
+28840	28840	28840	2	altlog.online	https://altlog.online/	302	0	0	text/html; charset=utf-8	354	2ab3a5b775aa40fa9db4b642e36b2234613fd0e3bb455a3c2cdfb73eec96c96e	178.130.50.71	vpn_redirect	Redirecting to https://altlog.online/login	https://altlog.online/login
+12389	12389	12389	2	svetofore.com	https://svetofore.com/privacy-page?tab=agreement	200	0	0	text/html; charset=utf-8	10000	cf567634b23266ba2d22f388726e75b3657b6650a7800a837a93de52604e5758	89.169.29.158	vpn_visible_review	Политика конфиденциальности Политика конфиденциальности	
+12389	12389	12389	2	svetofore.com	https://svetofore.com/	200	0	0	text/html; charset=utf-8	10000	05701d81f5528108ab1af17088b429c3510a718123f512b068789fb99fc50fa3	89.169.29.158	vpn_visible_review	Главная Главная	
+12389	12389	12389	2	svetofore.ru	https://svetofore.ru/	200	0	0	text/html; charset=utf-8	10000	05701d81f5528108ab1af17088b429c3510a718123f512b068789fb99fc50fa3	89.169.29.158	vpn_visible_review	Главная Главная	
+12389	12389	12389	2	epd.tochka.com	https://epd.tochka.com/		60	19		0		185.169.155.210	vpn_tls_unproven		
+12389	12389	12389	2	org.1-ofd.ru	https://org.1-ofd.ru/registration/login-mail	200	0	0	text/html	10000	b0703fedc70f188106a150f4f4074409be97f381cb4488c43493b29d6b43a058	91.107.114.10	vpn_body_unproven		
+12389	12389	12389	2	edo.pkitrans.ru	https://edo.pkitrans.ru/kedo/Documentation		60	19		0		83.234.76.11	vpn_tls_unproven		
+12389	12389	12389	2	lk.ruscon.ru	https://lk.ruscon.ru/platform/law/privacy-policy	200	0	0	text/html	8525	6837f4a38a15a76bf3a511677aac0d96f6f1937d68e83b3066ff69b06ea70a7c	185.71.64.221	vpn_body_unproven	Вход в личный кабинет	
+12389	12389	12389	2	altlog.online	https://altlog.online/	302	0	0	text/html; charset=utf-8	354	2ab3a5b775aa40fa9db4b642e36b2234613fd0e3bb455a3c2cdfb73eec96c96e	178.130.50.71	vpn_redirect	Redirecting to https://altlog.online/login	https://altlog.online/login

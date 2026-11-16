@@ -1,0 +1,17 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+28840	28840	28840	2	cargo.run	https://cargo.run/gruz	301	0	0		17	d18ed36671b8618520016c81125aa889a5b800872038c5e009ef49cd305088cd	95.213.255.119	vpn_redirect		https://cargorun.ru/gruz
+28840	28840	28840	2	cargo.run	https://cargo.run/sections/loghistika		-1			0			vpn_dns_unproven		
+28840	28840	28840	2	cargo.run	https://cargo.run/		-1			0			vpn_dns_unproven		
+28840	28840	28840	2	routes.cargo.run	https://routes.cargo.run/		-1			0		95.213.255.119	vpn_transport_unproven		
+28840	28840	28840	2	cargorun-ru.github.io	https://cargorun-ru.github.io/cargo.run-api-docs/	200	0	0	text/html; charset=utf-8	10000	fbd14b92a3e97c11452d71badc9907169b5b140f68ac7e4f3a569967e95413b8	185.199.108.153	vpn_visible_review	CARGO.RUN Документация	
+28840	28840	28840	2	cargorun.ru	https://cargorun.ru/gruz	200	0	0	text/html	10000	dc082aa3d2a0ebc76771f3a9db129b5e215afc30cd95308f4574b246e7efee44	95.213.255.119	vpn_visible_review	CR Загрузки — цифровая платформа для грузовладельцев	
+28840	28840	28840	2	app.cargorun.ru	https://app.cargorun.ru/	200	0	0	text/html	3668	e3745ae5a8eee445b489593a99118d5081b27f1d8847961579b3589a661a9154	95.213.255.119	vpn_body_unproven	CARGO.RUN	
+28840	28840	28840	2	loads.cargorun.ru	https://loads.cargorun.ru/	200	0	0	text/html; charset=utf-8	814	b99eb93f9d48fe53bdfaf5ff5e85835893d1da432df731d697dfe77c5a53371e	5.182.5.105	vpn_body_unproven	Загрузки	
+42610	42610	42610	2	cargo.run	https://cargo.run/gruz	301	0	0		17	d18ed36671b8618520016c81125aa889a5b800872038c5e009ef49cd305088cd	95.213.255.119	vpn_redirect		https://cargorun.ru/gruz
+42610	42610	42610	2	cargo.run	https://cargo.run/sections/loghistika	301	0	0		17	d18ed36671b8618520016c81125aa889a5b800872038c5e009ef49cd305088cd	95.213.255.119	vpn_redirect		https://cargorun.ru/sections/loghistika
+42610	42610	42610	2	cargo.run	https://cargo.run/		28			0		95.213.255.119	vpn_transport_unproven		
+42610	42610	42610	2	routes.cargo.run	https://routes.cargo.run/		-1			0			vpn_dns_unproven		
+42610	42610	42610	2	cargorun-ru.github.io	https://cargorun-ru.github.io/cargo.run-api-docs/		-1			0			vpn_dns_unproven		
+42610	42610	42610	2	cargorun.ru	https://cargorun.ru/gruz	200	0	0	text/html	10000	dc082aa3d2a0ebc76771f3a9db129b5e215afc30cd95308f4574b246e7efee44	95.213.255.119	vpn_visible_review	CR Загрузки — цифровая платформа для грузовладельцев	
+42610	42610	42610	2	app.cargorun.ru	https://app.cargorun.ru/		-1			0			vpn_dns_unproven		
+42610	42610	42610	2	loads.cargorun.ru	https://loads.cargorun.ru/		-1			0			vpn_dns_unproven		
