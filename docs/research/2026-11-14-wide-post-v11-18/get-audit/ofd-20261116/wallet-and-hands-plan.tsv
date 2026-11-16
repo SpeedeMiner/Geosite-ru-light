@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	npd.walletone.com	npd.walletone.com	https://npd.walletone.com/		https://npd.nalog.ru/credit-orgs/
+corporate	comparison	www.walletone.com	www.walletone.com	https://www.walletone.com/ru/wallet/		https://xn--80aaanetpw3ba4m.xn--p1ai/%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0%D0%BC-%D0%B8-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D0%B5%D1%80%D0%B0%D0%BC-%D1%80%D0%BD%D0%BA%D0%BE/
+corporate	control	smz.handswork.pro	smz.handswork.pro	https://smz.handswork.pro/	Подработка в РР	https://npd.nalog.ru/aggregators/
+corporate	candidate	russian.works	russian.works	https://russian.works/	Рабочие Руки	https://wh-education.ru/privacy-policy
+corporate	comparison	www.russian.works	www.russian.works	https://www.russian.works/		https://russian.works/
+corporate	control	handswork.pro	handswork.pro	https://handswork.pro/	Рабочие Руки	https://wh-education.ru/privacy-policy
