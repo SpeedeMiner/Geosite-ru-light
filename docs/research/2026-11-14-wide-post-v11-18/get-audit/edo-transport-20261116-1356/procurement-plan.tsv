@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.tender.pro	www.tender.pro	https://www.tender.pro/registration		https://help.tender.pro/registratsiya.html
+corporate	candidate	www.tender.pro	www.tender.pro	https://www.tender.pro/api/faq		https://help.tender.pro/cabinet.html
+corporate	candidate	tender.pro	tender.pro	https://tender.pro/		https://help.tender.pro/
+corporate	control	help.tender.pro	help.tender.pro	https://help.tender.pro/cabinet.html		https://help.tender.pro/
+corporate	control	bidzaar.com	bidzaar.com	https://bidzaar.com/for-suppliers		https://bidzaar.com/
+corporate	control	bidzaar.com	bidzaar.com	https://bidzaar.com/app/requests/public/buy		https://bidzaar.com/
