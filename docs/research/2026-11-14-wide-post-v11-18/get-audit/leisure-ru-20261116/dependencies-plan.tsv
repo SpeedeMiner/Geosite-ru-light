@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	journal.author.today	journal.author.today	https://journal.author.today/	Author.Today|Журнал	https://author.today/
+corporate	candidate	help.author.today	help.author.today	https://help.author.today/knowledge_base/	База знаний|Author.Today	https://author.today/
+corporate	candidate	corp.claustrophobia.com	corp.claustrophobia.com	https://corp.claustrophobia.com/	Клаустрофобия|мероприятия	https://claustrophobia.com/quests/schedule
+corporate	candidate	collection.pushkinmuseum.art	collection.pushkinmuseum.art	https://collection.pushkinmuseum.art/entity/OBJECT	Коллекция|музей	https://pushkinmuseum.art/
+corporate	candidate	shop.polytech.one	shop.polytech.one	https://shop.polytech.one/info/	Политехнического музея|магазине	https://shop.polytech.one/info/
+corporate	control	doc.ticketscloud.org	doc.ticketscloud.org	https://doc.ticketscloud.org/	Ticketscloud|Документация	https://ticketscloud.com/products/widget
+corporate	candidate	www.kinoafisha.info	www.kinoafisha.info	https://www.kinoafisha.info/about/	Киноафиша|кинотеатр	https://www.kinoafisha.info/about/contacts/
+corporate	candidate	kremlinpalace.org	kremlinpalace.org	https://kremlinpalace.org/ticket-operators	Билетные партнёры|KASSIR.RU	https://kremlinpalace.org/ticket-operators

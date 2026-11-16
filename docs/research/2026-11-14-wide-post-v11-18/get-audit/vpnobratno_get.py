@@ -103,8 +103,28 @@ MEDIA_PUBLIC_HTML = frozenset((
 ))
 
 
+LEISURE_PUBLIC_HTML = frozenset((
+    'https://author.today/pages/about',
+    'https://claustrophobia.com/quests/schedule',
+    'https://collection.pushkinmuseum.art/entity/OBJECT',
+    'https://corp.claustrophobia.com/',
+    'https://doc.ticketscloud.org/',
+    'https://gorbilet.ru/',
+    'https://help.author.today/knowledge_base/',
+    'https://igm.gg/media/about',
+    'https://journal.author.today/',
+    'https://kremlinpalace.org/ticket-operators',
+    'https://litnet.com/ru/info/terms',
+    'https://polytech.one/',
+    'https://ru.101xp.com/pages/eula',
+    'https://shop.polytech.one/info/',
+    'https://vtb-league.com/ru/news/kalendarnyj-plan-chempionata-2026-27-edinoj-ligi-vtb/',
+    'https://www.kinoafisha.info/about/',
+))
+
+
 def body_sample_limit(row):
-    if row.get('cohort') == 'corporate' and row['url'] in MEDIA_PUBLIC_HTML:
+    if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML):
         return 524288
     if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
         return 262144
@@ -206,7 +226,7 @@ def get_from_tunnel(row, address, interface, timeout):
         if row.get('cohort') == 'corporate' and row['url'] in dedicated_public_html:
             # Larger response cap applies only to these documented public pages.
             argv.extend(('--compressed', '--max-filesize', dedicated_public_html[row['url']]))
-        if row.get('cohort') == 'corporate' and row['url'] in MEDIA_PUBLIC_HTML:
+        if row.get('cohort') == 'corporate' and row['url'] in (MEDIA_PUBLIC_HTML | LEISURE_PUBLIC_HTML):
             argv.extend(('--compressed', '--max-filesize', '3145728'))
         if row.get('cohort') == 'corporate' and row['url'] in KZ_LOGISTICS_BODY_URLS:
             argv.extend(('--compressed', '--max-filesize', '2097152'))

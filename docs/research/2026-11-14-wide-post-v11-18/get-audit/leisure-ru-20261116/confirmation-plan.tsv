@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	claustrophobia.com	claustrophobia.com	https://claustrophobia.com/quests/schedule	Клаустрофобия|Расписание	https://claustrophobia.com/
+corporate	candidate	author.today	author.today	https://author.today/pages/about	Что такое Author.Today|писател	https://author.today/pages/terms
+corporate	candidate	polytech.one	polytech.one	https://polytech.one/	Политехнический музей|Политех	https://polytech.one/
+corporate	candidate	vtb-league.com	vtb-league.com	https://vtb-league.com/ru/news/kalendarnyj-plan-chempionata-2026-27-edinoj-ligi-vtb/	Единая Лига ВТБ|Календарный план	https://vtb-league.com/ru/
+corporate	candidate	ru.101xp.com	ru.101xp.com	https://ru.101xp.com/pages/eula	Пользовательское соглашение|101XP	https://ru.101xp.com/
+corporate	candidate	litnet.com	litnet.com	https://litnet.com/ru/info/terms	ЛИТНЕТ|литературная платформа	https://litnet.com/ru/info/terms
+corporate	candidate	igm.gg	igm.gg	https://igm.gg/media/about	О редакции|IGM	https://igm.gg/media/about
+corporate	control	gorbilet.ru	gorbilet.ru	https://gorbilet.ru/	Горбилет|экскурсии	https://gorbilet.ru/pages/publichnaya-oferta/
