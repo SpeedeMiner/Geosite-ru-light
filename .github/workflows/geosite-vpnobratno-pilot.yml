@@ -1,4 +1,4 @@
-name: GeoSite LiveDigital GET and Xray CNAME loopback
+name: GeoSite independent Selectel CDN object repeat
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-selcdn-live-20261116
+  group: geosite-vpnobratno-selcdn-repeat-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [livedigital]
+        batch: [object-retry]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/selcdn-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 201776 --exclude-asn 43761
 
       - name: Upload observation and diagnostic reports
         if: always()
@@ -115,34 +115,5 @@ jobs:
             .vpn-pilot/report/vpn_gate_providers.tsv
             .vpn-pilot/report/vpn_gate_vpnobratto_progress.json
           include-hidden-files: true
-          if-no-files-found: warn
-          retention-days: 7
-
-  xray-loopback:
-    name: Xray 26.7.28 DNS and TLS SNI loopback
-    runs-on: ubuntu-24.04
-    timeout-minutes: 4
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          persist-credentials: false
-      - name: Verify release binary and compare routing scenarios
-        run: |
-          set -euo pipefail
-          curl --fail --silent --show-error --location --max-time 40 \
-            --proto '=https' --proto-redir '=https' \
-            'https://github.com/XTLS/Xray-core/releases/download/v26.7.28/Xray-linux-64.zip' \
-            -o "$RUNNER_TEMP/xray-release.zip"
-          printf '8195d909f1109b8f3d99eefe401a3c451d7bf4af71f24d3815420f77e5dd2a40  %s\n' "$RUNNER_TEMP/xray-release.zip" | sha256sum -c
-          unzip -p "$RUNNER_TEMP/xray-release.zip" xray > "$RUNNER_TEMP/xray"
-          chmod 0700 "$RUNNER_TEMP/xray"
-          "$RUNNER_TEMP/xray" version
-          python3 docs/research/2026-11-14-wide-post-v11-18/get-audit/selcdn-20261116/xray_cname_probe.py \
-            "$RUNNER_TEMP/xray" xray-cname.jsonl
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
-        if: always()
-        with:
-          name: geosite-selcdn-xray-${{ github.run_attempt }}
-          path: xray-cname.jsonl
           if-no-files-found: warn
           retention-days: 7
