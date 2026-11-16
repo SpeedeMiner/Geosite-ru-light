@@ -31,6 +31,9 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://doc.antilopay.com/AntilopayAPI.pdf': '0-511',
+    'https://files.konsol.pro/perm/agreement.pdf': '0-511',
+    'https://marketing.konsol.pro/Docs/platform_v1.0.pdf': '0-511',
     'https://updates.iv-cdn.com/bundles/ivideon_server/3.14.0/IvideonServer_3.14.0_win64_setup.exe': '0-511',
     'https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe': '0-511',
     'https://downloads.livedigital.space/livedigital-desktop/livedigital-arm64-latest.dmg': '0-511',

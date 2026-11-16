@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	doc.antilopay.com	doc.antilopay.com	https://doc.antilopay.com/AntilopayAPI.pdf		https://antilopay.com/api-docs
+corporate	candidate	files.konsol.pro	files.konsol.pro	https://files.konsol.pro/perm/agreement.pdf		https://konsol.pro/legal
+corporate	candidate	marketing.konsol.pro	marketing.konsol.pro	https://marketing.konsol.pro/Docs/platform_v1.0.pdf		https://konsol.pro/legal
+corporate	candidate	backend.payture.com	backend.payture.com	https://backend.payture.com/	Payture	https://www.payture.com/docs/merchant-account/payture
+corporate	candidate	www.ckassa.com	www.ckassa.com	https://www.ckassa.com/start	Ckassa	https://ckassa.com/start
+corporate	candidate	business.winwork.pro	business.winwork.pro	https://business.winwork.pro/		https://winwork.pro/
+corporate	candidate	smz.balans.pro	smz.balans.pro	https://smz.balans.pro/smz/auth/login/		https://balans.pro/smz
+corporate	candidate	assets.konsol.pro	assets.konsol.pro	https://assets.konsol.pro/packs/assets/application-BrFnTlUq.js		https://konsol.pro/
+corporate	control	docs.konsol.pro	docs.konsol.pro	https://docs.konsol.pro/articles/konsol-samozanyatye-api/vvedenie	Консоль	https://konsol.pro/
