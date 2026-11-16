@@ -1,0 +1,27 @@
+host	decision	url	source	rationale	expected_location	strict_exit_asns	runs	http_statuses	redirect_path
+cargonomica.com	include	https://cargonomica.com/	https://max.ru/cargonomica	Official channel links apex; exact 301 plus destination 200 from the same two ASNs	https://www.cargonomica.com/	12389,52043	43826261660	301	https://www.cargonomica.com/
+confluence.trucker.group	include	https://confluence.trucker.group/manual/7-6-otsleyoivanie-raboty-po-zakazu-2519706250.html	https://app.tms.ru/docs/default/privacy.pdf	First-party TMS documentation host cited in current policy		12389,28840	43825939317	200	
+cryptex.pro	covered	https://cryptex.pro/	https://data.nalog.ru/opendata/7707329152-reestropereldoc	Registry-listed landing answered; already exact in v11.20 Light and Server		28840,52043	43827008146	200	
+ecosystem.cargonomica.com	hold	https://ecosystem.cargonomica.com/insurance	https://ecosystem.cargonomica.com/insurance	Historical landing returns 404 x2; current signup host reviewed separately			43826484052	404	
+faq.handswork.pro	hold	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	503 maintenance repeated from two ASNs			43825738234	503	
+fesco.com	hold	https://fesco.com/ru/clients/lk/	https://www.fesco.ru/ru/clients/lk/	HTTP/1.1 empty reply 52; no demonstrated canonical path					
+fleet.cargonomica.com	include	https://fleet.cargonomica.com/appv2/auth/registration	https://ecosystem.cargonomica.com/insurance	Historically published first-party signup link; current public app shell has Cargonomica title, no signup attempted		12389,52043	43826484052	200	
+help.monopoly.online	include	https://help.monopoly.online/	https://help.monopoly.online/pages/viewpage.action?pageId=3475062	Operator's public Confluence docs; agreement path independently showed branded 200 within sample cap		12389,28840	43825939317	200	
+inthemelab.com	include	https://inthemelab.com/	https://astra.ru/ready-for-astra/companies-partners/43098/	Russian logistics software and consultancy; corroborated by Astra and TransRussia		12389,52043	43826261660	200	
+isales.trcont.com	hold	https://isales.trcont.com/	https://isales.trcont.ru/	Exact 308 exists, but destination failed strict TLS from two ASNs	https://isales.trcont.ru/	12389,28840	43826776198	308	https://isales.trcont.ru/
+kb.cryptex.pro	hold	https://kb.cryptex.pro/pages/viewpage.action?pageId=1442300	https://cryptex.pro/	Strict TLS verification failed from two ASNs					
+kraskript.com	include	https://kraskript.com/	https://data.nalog.ru/opendata/7707329152-reestropereldoc	Exact operator website listed in FNS registry; verified branded corporate homepage		28840,52043	43826652080	200	
+landing.trucker.group	hold	https://landing.trucker.group/	https://app.tms.ru/docs/default/privacy.pdf	No two completed validated GETs					
+m-core.pro	hold	https://m-core.pro/self-employed.html	https://m-core.pro/self-employed.html	404 repeated from two ASNs			43825738234	404	
+money.cargonomica.com	include	https://money.cargonomica.com/privacy	https://money.cargonomica.com/privacy	First-party branded legal page identifies the publisher; payment access not tested		12389,52043	43826484052	200	
+my.fesco.com	include	https://my.fesco.com/login?locale=ru	https://www.fesco.ru/ru/clients/lk/	Official customer account; help and developer docs also answered		28840,52043	43826652080,43827278483	200	
+nnk.cargonomica.com	hold	https://nnk.cargonomica.com/users/login?next=%2F	https://nnk.cargonomica.com/users/login?next=%2F	Cargo Fuel login shell observed; current official linkage to the selected logistics service not established		12389,52043	43826484052	200	
+npd.walletone.com	hold	https://npd.walletone.com/	https://npd.walletone.com/	502 repeated from two ASNs			43825738234	502	
+tech.cargonomica.com	out-of-scope	https://tech.cargonomica.com/cargotech	https://tech.cargonomica.com/cargotech	Recruiting page, not a required logistics frontend		12389,52043	43826484052	200	
+thing.cargonomica.com	out-of-scope	https://thing.cargonomica.com/	https://thing.cargonomica.com/	Clothing shop, not a required logistics frontend		12389,52043	43826484052	200	
+trcont.com	hold	https://trcont.com/investor-relations/shares/registrar	https://trcont.com/investor-relations/shares/registrar	TLS verification failed; no exception					
+truckradar.com	include	https://truckradar.com/	https://truckradar.com/contacts	Carrier service with branded title; contacts and partner pages also 200		12389,52043	43826261660	200	
+trucks.fesco.com	hold	https://trucks.fesco.com/platform/login	https://www.fesco.ru/ru/clients/lk/	HTTP/2 stream error 92 and narrow HTTP/1.1 empty reply 52; control my.fesco.com answered					
+urals.pro	include	https://urals.pro/	https://urals.pro/docs/soglasie-na-obrabotku-personalnyh-dannyh.html	Exact registry-listed operator website and matching INN 7730675129; no EDO frontend inferred		28840,52043	43826652080	200	
+www.cargonomica.com	include	https://www.cargonomica.com/	https://max.ru/cargonomica	Canonical site serves Nuxt app shell; logistics path separately returns 200		12389,52043	43826261660	200	
+www.fesco.com	hold	https://www.fesco.com/ru/clients/lk/	https://www.fesco.ru/ru/clients/lk/	No completed GET in both HTTP versions; no broad .com suffix					
