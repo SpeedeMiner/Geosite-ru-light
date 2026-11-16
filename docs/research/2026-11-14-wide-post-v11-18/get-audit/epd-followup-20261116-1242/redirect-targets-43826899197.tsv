@@ -1,0 +1,13 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+52043	52043	52043	2	isales.trcont.ru	https://isales.trcont.ru/		60	19		0		185.71.67.130	vpn_tls_unproven		
+52043	52043	52043	2	www.trcont.com	https://www.trcont.com/		28			0		212.164.138.237	vpn_transport_unproven		
+52043	52043	52043	2	trcont.ru	https://trcont.ru/		60	20		0		185.71.67.130	vpn_tls_unproven		
+52043	52043	52043	2	truckradar.com	https://truckradar.com/partner_offer	200	0	0	text/html; charset=UTF-8	10000	c85d72db21864443f6766b49cf44855b4992132f6f5c82042b9cf9a43cadfa0b	185.215.4.37	vpn_body_unproven	Предложения для партнёров Трак Радар	
+52043	52043	52043	2	www.cargonomica.com	https://www.cargonomica.com/logistics	200	0	0	text/html	4316	1f1e7cdc44b8a84de44504941755eab8b6b6df3755a8541037129cf016ef7db2	87.228.81.162	vpn_body_unproven		
+52043	52043	52043	2	help.monopoly.online	https://help.monopoly.online/pages/viewpage.action?pageId=3475062	200	63	0	text/html;charset=UTF-8	10000	b8eec638ef5e3f05a7e710a7d654a1fcdee704628ccd87acd0924433ad6ed74f	193.233.15.92	vpn_body_unproven	Пользовательское соглашение (действующая редакция) - Документация - Confluence	
+12389	12389	12389	2	isales.trcont.ru	https://isales.trcont.ru/		60	19		0		185.71.67.130	vpn_tls_unproven		
+12389	12389	12389	2	www.trcont.com	https://www.trcont.com/		28			0		212.164.138.237	vpn_transport_unproven		
+12389	12389	12389	2	trcont.ru	https://trcont.ru/		60	20		0		185.71.67.130	vpn_tls_unproven		
+12389	12389	12389	2	truckradar.com	https://truckradar.com/partner_offer	200	0	0	text/html; charset=UTF-8	10000	c85d72db21864443f6766b49cf44855b4992132f6f5c82042b9cf9a43cadfa0b	185.215.4.37	vpn_body_unproven	Предложения для партнёров Трак Радар	
+12389	12389	12389	2	www.cargonomica.com	https://www.cargonomica.com/logistics	200	0	0	text/html	4316	1f1e7cdc44b8a84de44504941755eab8b6b6df3755a8541037129cf016ef7db2	87.228.81.162	vpn_body_unproven		
+12389	12389	12389	2	help.monopoly.online	https://help.monopoly.online/pages/viewpage.action?pageId=3475062	200	63	0	text/html;charset=UTF-8	10000	16bb4588873c21f7928dc5780d706149a487e1a4ec78d10ded291f051f536fd4	193.233.15.92	vpn_body_unproven	Пользовательское соглашение (действующая редакция) - Документация - Confluence	
