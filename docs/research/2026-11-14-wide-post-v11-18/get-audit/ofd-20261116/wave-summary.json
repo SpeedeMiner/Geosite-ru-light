@@ -1,0 +1,73 @@
+{
+  "batches": {
+    "alt": {
+      "run": 43821760110,
+      "observations": 8,
+      "zip_sha256": "d211dbdca7bb41da9f686afd5fb36ed3fea3744f3c4abb880d1d8d133faa4263"
+    },
+    "corporate": {
+      "run": 43820990392,
+      "observations": 18,
+      "zip_sha256": "bfcf0d3ae52e5ae59822c830b614751f9d019a06de4916fe5d9fe66b3ce8e218"
+    },
+    "dependencies": {
+      "run": 43821760110,
+      "observations": 16,
+      "zip_sha256": "c5abab1a5e044ac0809b091f3159f0536e8af178e75736e5dde412ca1370071b"
+    },
+    "edi": {
+      "run": 43821104725,
+      "observations": 18,
+      "zip_sha256": "79a682e1ad1a7e2347b110c385c1085698e7077d64db992dfa91850d658b2d40"
+    },
+    "epd": {
+      "run": 43821435420,
+      "observations": 18,
+      "zip_sha256": "c1a1709054a718e3228022725f4dd694a2612bf5658d7a9a874beac27fd4781b"
+    },
+    "handsrepeat": {
+      "run": 43821435420,
+      "observations": 6,
+      "zip_sha256": "c65866c38b19dd395009e540f6c69283b337b158ba9955beed70f92f5aeba70f"
+    },
+    "mig24": {
+      "run": 43821850011,
+      "observations": 12,
+      "zip_sha256": "9950c8f31e83170df79afaa93b40ca062380d50595acfbef9fa49f9aba92878b"
+    },
+    "mig24-sign": {
+      "run": 43822012849,
+      "observations": 6,
+      "zip_sha256": "97d7eff231022248649aa519a8e7c14965eabc6ddf751383e553949229af1c9d"
+    },
+    "recheck": {
+      "run": 43820622762,
+      "observations": 14,
+      "zip_sha256": "c2a5ed8a425deae703f6febe1e8fd27e27714997657b7ff3392bdd049f7cf894"
+    },
+    "service": {
+      "run": 43820990392,
+      "observations": 16,
+      "zip_sha256": "f0f4ed81562b8910862fe078853204adf7e21dfe03ad0f4e590053ebb6ec03b4"
+    },
+    "wallet": {
+      "run": 43821474881,
+      "observations": 12,
+      "zip_sha256": "bf5012d429d2652c12f62b88e8bd4bf092469dccc68907a8ca15b0c75691f016"
+    }
+  },
+  "total_observations": 144,
+  "unique_urls": 57,
+  "strict_http": 135,
+  "completed_strict_get": 133,
+  "strict_http_codes": {
+    "200": 103,
+    "301": 6,
+    "503": 4,
+    "307": 4,
+    "206": 4,
+    "302": 10,
+    "404": 2,
+    "502": 2
+  }
+}
