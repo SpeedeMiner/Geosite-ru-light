@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+comparison	control	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	https://6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net/blog/wp-content/uploads/2026/05/system-admin.jpg		https://selectel.ru/blog/
+comparison	control	cdn-blog.selectel.ru	cdn-blog.selectel.ru	https://cdn-blog.selectel.ru/blog/wp-content/uploads/2026/05/system-admin.jpg		https://selectel.ru/blog/
+comparison	control	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	https://6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net/blog/wp-content/uploads/2026/06/MD-6920_2-1525x623.png		https://selectel.ru/services/cloud/storage/
+comparison	control	cdn.selectel.ru	cdn.selectel.ru	https://cdn.selectel.ru/		https://selectel.ru/
+comparison	control	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	https://736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net/		https://subanalyzer.com/domain/selectel.ru
+comparison	control	7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net	7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net	https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/de918790-c982-45c7-831b-9dea3ef8257b/		https://gorodskoyportal.ru/peterburg/afisha/poster/1048499/
+comparison	control	437e81e1-5ed1-4d53-bed7-e6f8d97dcc9b.selcdn.net	437e81e1-5ed1-4d53-bed7-e6f8d97dcc9b.selcdn.net	https://437e81e1-5ed1-4d53-bed7-e6f8d97dcc9b.selcdn.net/c7/21/f0/a53e5c1e71ed29fbd98fe0e85d5419745b/1161x832q5/header.jpg		https://opr.ae/projects/damac-safa-one-de-grisogono-the-skylofts-collection-for-sale-in-dubai
+comparison	control	www.novochag.ru	www.novochag.ru	https://www.novochag.ru/		https://novochag.ru.cutestat.com/
+comparison	control	edu.livedigital.space	edu.livedigital.space	https://edu.livedigital.space/		https://whoisfreaks.com/tools/dns/history/lookup/edu.livedigital.space?type=all
