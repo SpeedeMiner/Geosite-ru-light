@@ -376,6 +376,31 @@
           "size": 3366
         }
       }
+    },
+    "v11.20": {
+      "commit": "26732bb53fdc8e3e400f5198acd69e9020589485",
+      "assets": {
+        "geosite_RU.dat": {
+          "sha256": "493de38dcb8de4076e8b3659271e92992fc30d3f3b41a4251755af9000cfecf9",
+          "size": 110649
+        },
+        "geosite_RU.dat.sha256sum": {
+          "sha256": "443bfb53677208eebfc8b06c71136b69506e11aad4f0c867e28edcd1a9227747",
+          "size": 81
+        },
+        "geosite_RU_categories.txt": {
+          "sha256": "c6589a2a72e0abe72a9ec71034450b37f39781e08d4f31c793f9f1398bc4026f",
+          "size": 2437
+        },
+        "geosite_RU_hydra_appended_categories.txt": {
+          "sha256": "a31f315d68998a5ff6d6bd57fec61947d0fde95f2a2301f97029fd1b5005afd5",
+          "size": 245
+        },
+        "geosite_RU_new_sources.txt": {
+          "sha256": "0b05435c9371dc7da6ca4bc13ef385fceb372fa9b23eeca76eee97affe54a36c",
+          "size": 3366
+        }
+      }
     }
   }
 }
