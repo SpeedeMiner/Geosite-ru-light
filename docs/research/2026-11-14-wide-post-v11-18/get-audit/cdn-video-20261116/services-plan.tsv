@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	www.cdnvideo.com	www.cdnvideo.com	https://www.cdnvideo.com/	CDNvideo	https://www.cdnvideo.com/
+corporate	candidate	cdnvideo.com	cdnvideo.com	https://cdnvideo.com/		https://www.cdnvideo.com/
+corporate	control	doc.cdnvideo.com	doc.cdnvideo.com	https://doc.cdnvideo.com/en/	CDNvideo	https://www.cdnvideo.com/
+corporate	control	globalcloudnetwork.ru	globalcloudnetwork.ru	https://globalcloudnetwork.ru/oferta/	ГЛОС	https://globalcloudnetwork.ru/
+corporate	candidate	videomost.com	videomost.com	https://videomost.com/	VideoMost	https://videomost.ru/
+corporate	candidate	www.videomost.com	www.videomost.com	https://www.videomost.com/	VideoMost	https://videomost.ru/
+corporate	candidate	trueconf.com	trueconf.com	https://trueconf.com/docs/server-api/ru.html	TrueConf	https://developers.trueconf.ru/group/api/
+corporate	control	pruffme.com	pruffme.com	https://pruffme.com/webinar/servers/		https://pruffme.com/
+corporate	control	docs.teleboss.ru	docs.teleboss.ru	https://docs.teleboss.ru/docs/docs/intro	TeleBoss	https://teleboss.ru/
+corporate	candidate	check.livedigital.space	check.livedigital.space	https://check.livedigital.space/		https://labconsalt.ru/obuchenie/kak-podklyuchitsya/
