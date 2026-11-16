@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	antilopay.com	antilopay.com	https://antilopay.com/	Antilopay	https://antilopay.com/rules
+corporate	candidate	antilopay.com	antilopay.com	https://antilopay.com/rules		https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx
+corporate	control	antilopay.com	antilopay.com	https://antilopay.com/api-docs		https://antilopay.com/
+corporate	candidate	doc.antilopay.com	doc.antilopay.com	https://doc.antilopay.com/AntilopayAPI.pdf		https://antilopay.com/api-docs
+corporate	candidate	som.place	som.place	https://som.place/		https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx
+corporate	comparison	www.som.place	www.som.place	https://www.som.place/		https://som.place/
+corporate	control	paygine.ru	paygine.ru	https://paygine.ru/contacts	Paygine	https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx
+corporate	control	www.payture.com	www.payture.com	https://www.payture.com/contacts	Payture	https://payture.com/
+corporate	control	life-pay.ru	life-pay.ru	https://life-pay.ru/company/contacts	LIFE PAY	https://www.cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx
