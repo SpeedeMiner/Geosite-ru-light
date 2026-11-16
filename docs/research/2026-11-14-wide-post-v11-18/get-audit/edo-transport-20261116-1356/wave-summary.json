@@ -1,0 +1,199 @@
+{
+  "queue_base": 117,
+  "queue_final": 127,
+  "added": 10,
+  "valid_https_completed": 156,
+  "observations": 170,
+  "distinct_urls": 84,
+  "exit_asns": [
+    3216,
+    8402,
+    12389,
+    28840,
+    34974
+  ],
+  "archives": [
+    {
+      "run_id": 43837262802,
+      "batch": "aliases",
+      "sha256_zip": "6a9a675fff15b5aec7a2aef87370fde7778db6f36fd1ae9d8fee34526940827f",
+      "observations": 10,
+      "planned_urls": 5,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 10,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43835716496,
+      "batch": "crossborder",
+      "sha256_zip": "96566575dc37c2c72605f146d232395e9d0af1fcd433da3f2c5695be4834c656",
+      "observations": 14,
+      "planned_urls": 7,
+      "exit_asns": [
+        3216,
+        12389
+      ],
+      "validated_completed_http": 14,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836998320,
+      "batch": "docsvision",
+      "sha256_zip": "bacc112900b442410139ab26f63c22e3d65f091dec5918fd4aebb79bd23e43c5",
+      "observations": 10,
+      "planned_urls": 5,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 10,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43835579063,
+      "batch": "documentolog",
+      "sha256_zip": "c6426539796e0dd4ec835281592bd320853ddc8f04acd9af168e274c20d86be0",
+      "observations": 16,
+      "planned_urls": 8,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 14,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836893399,
+      "batch": "edisoft",
+      "sha256_zip": "0e84610a90802c1562ce50160287fef267525ac0a17d0ae831486f4a8243b3a8",
+      "observations": 10,
+      "planned_urls": 5,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 8,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43837069647,
+      "batch": "ediweb",
+      "sha256_zip": "0d3a0887a16b408991f829baa6d97a15ad3b4738913be97c1e26999e00836400",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 9,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836023067,
+      "batch": "eltorg",
+      "sha256_zip": "c2a88a5de38a5bbd64fd0a4f31eb917772799215e688546c76e0fe479bb8ffbf",
+      "observations": 10,
+      "planned_urls": 5,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 10,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43835896327,
+      "batch": "procurement",
+      "sha256_zip": "704fdc89c16cb9ec8164d57fd8f2cd3b0adbb96feec4a719e74ad133383bb4a1",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        12389,
+        28840
+      ],
+      "validated_completed_http": 12,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836775333,
+      "batch": "report",
+      "sha256_zip": "25824526a508487bbe8e8f7773907fbde9d30ec4b5ed264ec1a8d2e40fcedfc0",
+      "observations": 14,
+      "planned_urls": 7,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 14,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836124956,
+      "batch": "seldon",
+      "sha256_zip": "c6d9efb7a98b53c56d11033473e8b483e8dfe7181337335d9d321d7fe69d113c",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 12,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836483675,
+      "batch": "seldon-retry",
+      "sha256_zip": "cc1e362491e70f25a657dd54841154a553974ee867764bf22bbb38c0433e3ece",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        28840,
+        34974
+      ],
+      "validated_completed_http": 12,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836626081,
+      "batch": "signme",
+      "sha256_zip": "ea402dd34fd7b5a0aac04f5599c85b131f4fb52aa1448b2bcbef619c45db1f82",
+      "observations": 12,
+      "planned_urls": 6,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 11,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43836286765,
+      "batch": "supl-win",
+      "sha256_zip": "33767000330a9244d031ddc3b33af79715c2680b80e944b0c6dc09010b6f8e87",
+      "observations": 16,
+      "planned_urls": 8,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 16,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43835410094,
+      "batch": "veeroute-komita",
+      "sha256_zip": "704fdfa3da3228530b7f7a417652352c8e9b247ade25467c2fa59a7ae8cc8262",
+      "observations": 10,
+      "planned_urls": 5,
+      "exit_asns": [
+        3216,
+        12389
+      ],
+      "validated_completed_http": 4,
+      "upstream_state": "COMPLETE"
+    }
+  ]
+}

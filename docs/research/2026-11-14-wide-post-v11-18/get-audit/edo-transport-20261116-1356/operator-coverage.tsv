@@ -1,0 +1,25 @@
+country	operator	host	source	scope	light_ru	server_ru	light_block	in_plus117
+KZ	IDOCSKZ	idocs.me	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	full:idocs.me	full:idocs.me	-	no
+BY	ЭДиН	edn.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+BY	СТТ	ctt.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+BY	МетаЭра	metaera.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+BY	Бидмартс	edi.bidmart.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+BY	ЮрСпектр	ttn.ilex.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+KZ	Documentolog	documentolog.com	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	full:documentolog.com	full:documentolog.com	-	no
+KZ	МетаЭра	metaera.kz	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:kz	domain:kz	-	no
+UZ	UNICON.UZ	unicon.uz	https://kontur.ru/diadoc/mtedo/oferta_tedo	Outside this RU/BY/KZ follow-up, do not expand geography based on partnership alone	-	-	-	no
+BY	Белоруснефть	edi.beloil.by	https://kontur.ru/diadoc/mtedo/oferta_tedo	Published partner entrypoint	domain:by	domain:by	-	no
+KZ	IDOCSKZ	account.idocs.kz	https://idocs.me/	Official shared sign-in	domain:kz	domain:kz	-	no
+KZ	IDOCSKZ	help.idocs.kz	https://idocs.me/	Official help host	domain:kz	domain:kz	-	no
+BY	ЭДиН	app.edn.by	https://edn.by/	Official sign-in	domain:by	domain:by	-	no
+BY	СТТ	edi.ctt.by	https://ctt.by/	Official sign-in	domain:by	domain:by	-	no
+BY	МетаЭра	login.meta-era.by	https://metaera.by/dokumentooborot/	Official sign-in	domain:by	domain:by	-	no
+BY	МетаЭра	wiki.meta-era.by	https://metaera.by/dokumentooborot/	Official knowledge base	domain:by	domain:by	-	no
+KZ	МетаЭра	edi.metaera.kz	https://metaera.kz/help/edi/	Official knowledge base link, checked separately	domain:kz	domain:kz	-	no
+KZ	Documentolog	account.documentolog.com	https://documentolog.com/	Official support and identity host	full:account.documentolog.com	full:account.documentolog.com	-	no
+KZ	Documentolog	business.documentolog.com	https://documentolog.com/	Official business application	full:business.documentolog.com	full:business.documentolog.com	-	no
+KZ	Documentolog	cdn.documentolog.kz	https://market.documentolog.com/	Declared font source, already under .kz	domain:kz	domain:kz	-	no
+RU	КОМИТА	www.comita.ru	https://24.rosstat.gov.ru/folder/50867	Official site, not an EPD workspace	domain:ru	domain:ru	-	no
+RU	КОМИТА	new.comita.ru	https://new.comita.ru/projects/tax_reporting/comita_report	Redirecting old project page, tax reporting	domain:ru	domain:ru	-	no
+RU	КОМИТА	etp.comita.ru	https://etp.comita.ru/downloads/rp_registration_etp.pdf	Procurement, not an EPD workspace	domain:ru	domain:ru	-	no
+RU	КОМИТА	comita.su	https://comita.su/support/	Corporate support only	domain:su	domain:su	-	no
