@@ -1,4 +1,4 @@
-name: GeoSite Russian media companion endpoint review
+name: GeoSite media page content and anime public catalogue review
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-media-ru-companions-20261116
+  group: geosite-media-ru-repeat-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [companions]
+        batch: [repeat, anime-repeat]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
