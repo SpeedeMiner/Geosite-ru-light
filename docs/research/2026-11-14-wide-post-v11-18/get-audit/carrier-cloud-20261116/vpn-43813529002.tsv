@@ -1,0 +1,17 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+12389	12389	12389	2	payselection.com	https://payselection.com/documentation		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	payselection.com	https://payselection.com/term-of-use		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	api.payselection.com	https://api.payselection.com/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	lk.payselection.com	https://lk.payselection.com/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	widget.payselection.com	https://widget.payselection.com/lib/pay-widget.js		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	oferta.payselection.com	https://oferta.payselection.com/oferta-payselection-podeli.pdf		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	webform.payselection.com	https://webform.payselection.com/		-1			0			vpn_dns_unproven		
+12389	12389	12389	2	www.payselection.com	https://www.payselection.com/		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	payselection.com	https://payselection.com/documentation		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	payselection.com	https://payselection.com/term-of-use		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	api.payselection.com	https://api.payselection.com/		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	lk.payselection.com	https://lk.payselection.com/		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	widget.payselection.com	https://widget.payselection.com/lib/pay-widget.js		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	oferta.payselection.com	https://oferta.payselection.com/oferta-payselection-podeli.pdf		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	webform.payselection.com	https://webform.payselection.com/		-1			0			vpn_dns_unproven		
+43761	43761	43761	2	www.payselection.com	https://www.payselection.com/		-1			0			vpn_dns_unproven		
