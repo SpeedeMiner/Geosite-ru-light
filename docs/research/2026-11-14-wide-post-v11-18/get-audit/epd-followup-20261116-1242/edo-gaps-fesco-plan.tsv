@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	kraskript.com	kraskript.com	https://kraskript.com/	КрасКрипт	https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	candidate	urals.pro	urals.pro	https://urals.pro/		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	candidate	my.fesco.com	my.fesco.com	https://my.fesco.com/login?locale=ru	FESCO	https://www.fesco.ru/ru/clients/lk/
+corporate	comparison	my.fesco.com	my.fesco.com	https://my.fesco.com/help/ru/tracking/location/		https://www.fesco.ru/ru/clients/lk/
+corporate	candidate	www.fesco.com	www.fesco.com	https://www.fesco.com/ru/clients/lk/	FESCO	https://www.fesco.ru/ru/clients/lk/
+corporate	comparison	fesco.com	fesco.com	https://fesco.com/ru/clients/lk/	FESCO	https://www.fesco.ru/ru/clients/lk/
+corporate	control	www.fesco.ru	www.fesco.ru	https://www.fesco.ru/ru/clients/lk/	FESCO	https://www.fesco.com/ru/clients/lk/
+corporate	control	data.nalog.ru	data.nalog.ru	https://data.nalog.ru/opendata/7707329152-reestropereldoc/structure-20251025.csv		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
