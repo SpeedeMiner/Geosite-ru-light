@@ -1,0 +1,9 @@
+vpn_asn	host	url	http	tls_verify_result	state	curl_exit	content_type	body_bytes_sampled	body_sample_sha256	title	redirect_location	target_ipv4
+12389	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_server/3.14.0/IvideonServer_3.14.0_win64_setup.exe	206	0	vpn_http_other	0	application/x-msdos-program	512	c90084868352154c1e35d4a40506b64a072ef5ed43a584c890a51a771a61cae2			158.160.107.154
+12389	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe	206	0	vpn_http_other	0	application/x-msdos-program	512	9a4f7fa57fde2d919a5f93aa938c0e8825433197a2580db2f66bc104fd6b5c9c			158.160.107.154
+12389	packages.ivideon.com	https://packages.ivideon.com/ubuntu/keys/ivideon.list	200	0	vpn_body_unproven	0	text/plain	55	cafb2d36036d5459a842cbc1b7f5cae1e03395dbfdb2787466934fb7ad54acf7			88.212.255.156
+12389	developers.trueconf.com	https://developers.trueconf.com/api/server/	200	0	vpn_body_unproven	0	text/html; charset=utf-8	10000	0be3b567ef52402da35c2506d305463a88db6f584bf72b7e4aa59e4d4def4bd8	TrueConf Server API Documentation		178.63.53.169
+43761	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_server/3.14.0/IvideonServer_3.14.0_win64_setup.exe			vpn_dns_unproven	-1		0				
+43761	updates.iv-cdn.com	https://updates.iv-cdn.com/bundles/ivideon_client/6.21.0/IvideonClient_6.21.0_win64_setup.exe	206	0	vpn_http_other	0	application/x-msdos-program	512	9a4f7fa57fde2d919a5f93aa938c0e8825433197a2580db2f66bc104fd6b5c9c			158.160.107.154
+43761	packages.ivideon.com	https://packages.ivideon.com/ubuntu/keys/ivideon.list	200	0	vpn_body_unproven	0	text/plain	55	cafb2d36036d5459a842cbc1b7f5cae1e03395dbfdb2787466934fb7ad54acf7			88.212.255.156
+43761	developers.trueconf.com	https://developers.trueconf.com/api/server/	200	0	vpn_transport_unproven	28	text/html; charset=utf-8	7943	66aff275c101adab18e42fd196570d342127406193cf2ec15dd9b0c6d8da734b	TrueConf Server API Documentation		178.63.53.169
