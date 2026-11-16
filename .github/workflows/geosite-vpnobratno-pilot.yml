@@ -1,4 +1,4 @@
-name: GeoSite public MIG24 fiscal transport documentation through VPNObratno
+name: GeoSite public MIG24 signature and mandates through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-ofd-mig24-20261116
+  group: geosite-ofd-mig24-sign-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [mig24]
+        batch: [mig24-sign]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
