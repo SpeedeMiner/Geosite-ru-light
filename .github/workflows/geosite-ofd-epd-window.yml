@@ -1,4 +1,4 @@
-name: GeoSite Kazakhstan independent freight content and account paths
+name: GeoSite independent Smart Cargo production content check
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-edi-logistics-freight-repeat-20261116
+  group: geosite-kz-edi-logistics-smartcargo-repeat-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [freight-repeat]
+        batch: [smartcargo-repeat]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
