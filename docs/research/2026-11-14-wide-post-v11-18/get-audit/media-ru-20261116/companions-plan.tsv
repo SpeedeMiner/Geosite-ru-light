@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	pc.limehd.tv	pc.limehd.tv	https://pc.limehd.tv/	Лайм|Windows	https://www.limehd.ru/
+corporate	candidate	band.link	band.link	https://band.link/info/help-verification	BandLink|Верификация	https://band.link/
+corporate	candidate	label.zaycev.net	label.zaycev.net	https://label.zaycev.net/	Зайцев|лицензион	https://zaycev.net/
+corporate	candidate	app.zaycev.net	app.zaycev.net	https://app.zaycev.net/	Зайцев|музыка	https://zaycev.net/
+corporate	candidate	subscription.zaycev.net	subscription.zaycev.net	https://subscription.zaycev.net/	Зайцев|подписка	https://zaycev.net/
+corporate	candidate	help.mave.digital	help.mave.digital	https://help.mave.digital/ru/articles/44-upravlenie-podkastami-i-vypuskami	Управление подкастами|mave	https://mave.digital/
+corporate	candidate	app.mave.digital	app.mave.digital	https://app.mave.digital/	mave	https://mave.digital/
+corporate	candidate	mave.stream	mave.stream	https://mave.stream/	mave	https://mave.digital/
+corporate	control	studio.zvuk.com	studio.zvuk.com	https://studio.zvuk.com/	Студио|Звук	https://help.zvuk.com/article/57288
