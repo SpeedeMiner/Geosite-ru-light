@@ -1,11 +1,12 @@
 {
   "queue_base": 98,
-  "queue_final": 116,
-  "added": 18,
-  "valid_https_completed": 88,
-  "observations": 110,
+  "queue_final": 117,
+  "added": 19,
+  "valid_https_completed": 94,
+  "observations": 118,
   "distinct_urls": 51,
   "exit_asns": [
+    8402,
     12389,
     28840,
     34974,
@@ -49,6 +50,19 @@
         42610
       ],
       "validated_completed_http": 8,
+      "upstream_state": "COMPLETE"
+    },
+    {
+      "run_id": 43833030320,
+      "batch": "final-control",
+      "sha256_zip": "7c1f5b773cbcfa5dd32be1dc8d3f6f15f7267d22d7df0e32e46515d4b95ffd64",
+      "observations": 8,
+      "planned_urls": 4,
+      "exit_asns": [
+        8402,
+        34974
+      ],
+      "validated_completed_http": 6,
       "upstream_state": "COMPLETE"
     },
     {
