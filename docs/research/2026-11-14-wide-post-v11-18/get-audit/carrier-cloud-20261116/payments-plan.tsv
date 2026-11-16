@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	payselection.com	payselection.com	https://payselection.com/documentation	Payselection	https://payselection.com/term-of-use
+corporate	candidate	payselection.com	payselection.com	https://payselection.com/term-of-use		https://payselection.com/documentation
+corporate	candidate	api.payselection.com	api.payselection.com	https://api.payselection.com/		https://payselection.com/documentation
+corporate	candidate	lk.payselection.com	lk.payselection.com	https://lk.payselection.com/		https://oferta.payselection.com/oferta-payselection-podeli.pdf
+corporate	candidate	widget.payselection.com	widget.payselection.com	https://widget.payselection.com/lib/pay-widget.js		https://newapi-payselection.testpaygate.com/
+corporate	candidate	oferta.payselection.com	oferta.payselection.com	https://oferta.payselection.com/oferta-payselection-podeli.pdf		https://payselection.com/documentation
+corporate	comparison	webform.payselection.com	webform.payselection.com	https://webform.payselection.com/		https://github.com/Payselection/Payselection-PayApp-SDK-PHP
+corporate	comparison	www.payselection.com	www.payselection.com	https://www.payselection.com/		https://payselection.com/term-of-use

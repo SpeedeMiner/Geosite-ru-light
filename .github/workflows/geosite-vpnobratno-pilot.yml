@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-carrier-20261116
+  group: geosite-vpnobratno-carrier-payments-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [dependencies]
+        batch: [payments]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
