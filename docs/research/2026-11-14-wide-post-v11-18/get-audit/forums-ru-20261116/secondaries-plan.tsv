@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	blogs.rsdn.org	blogs.rsdn.org	https://blogs.rsdn.org/	Блоги|Блог	https://rsdn.org/forum/
+corporate	candidate	support.rusff.me	support.rusff.me	https://support.rusff.me/	RusFF|Поддержка	https://rusff.me/contacts/
+corporate	candidate	forum.smolensk.ws	forum.smolensk.ws	https://forum.smolensk.ws/	Смоленск|Форум	https://forum.smolensk.ws/
+corporate	candidate	forum.bratsk.org	forum.bratsk.org	https://forum.bratsk.org/	Братск|Форум	https://forum.bratsk.org/
+corporate	candidate	rpg-world.org	rpg-world.org	https://rpg-world.org/	Ролевых|Форум	https://rpg-world.org/
+corporate	candidate	mathhelpplanet.com	mathhelpplanet.com	https://mathhelpplanet.com/	Математика|Форум	https://mathhelpplanet.com/
+corporate	candidate	tesall.club	tesall.club	https://tesall.club/forums/	TESALL|Форум	https://tesall.club/
