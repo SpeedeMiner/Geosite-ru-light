@@ -1,4 +1,4 @@
-name: GeoSite Macroscop package indexes and TRASSIR public support
+name: GeoSite Ivideon update ranges and legacy TrueConf documentation
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-cdn-distribution-20261116
+  group: geosite-vpnobratno-cdn-official-downloads-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [distribution]
+        batch: [official-downloads]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
