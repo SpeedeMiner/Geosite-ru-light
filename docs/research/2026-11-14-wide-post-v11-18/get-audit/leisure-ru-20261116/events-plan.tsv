@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	igrokon.org	igrokon.org	https://igrokon.org/activities	Игрокон|Игротеки	https://igrokon.org/pravila-poseshheniya
+corporate	control	bil24.pro	bil24.pro	https://bil24.pro/	Билетная платформа|Forzum	https://yandex.ru/support/afisha-partners/ru/sell-afisha/post.html
+corporate	control	gorbilet.ru	gorbilet.ru	https://gorbilet.ru/	Горбилет|экскурсии	https://gorbilet.ru/pages/publichnaya-oferta/
+corporate	candidate	litnet.com	litnet.com	https://litnet.com/ru/info/IT-activities	ООО «Литнет»|литературными онлайн-платформами	https://litnet.com/ru/info/IT-activities
+corporate	candidate	audio.litnet.com	audio.litnet.com	https://audio.litnet.com/user-agreement	ООО «Литнет»|Условия	https://audio.litnet.com/user-agreement
+corporate	control	www.kinoafisha.info	www.kinoafisha.info	https://www.kinoafisha.info/	Киноафиша|кинотеатр	https://www.kinoafisha.info/about/

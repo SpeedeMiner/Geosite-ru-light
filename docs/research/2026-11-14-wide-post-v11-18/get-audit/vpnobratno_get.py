@@ -104,6 +104,13 @@ MEDIA_PUBLIC_HTML = frozenset((
 
 
 LEISURE_PUBLIC_HTML = frozenset((
+    'https://audio.litnet.com/user-agreement',
+    'https://bil24.pro/',
+    'https://igrokon.org/activities',
+    'https://litnet.com/ru/info/IT-activities',
+    'https://ru.101xp.com/pages/personal',
+    'https://www.hermitagemuseum.org/',
+    'https://www.kinoafisha.info/',
     'https://author.today/pages/about',
     'https://claustrophobia.com/quests/schedule',
     'https://collection.pushkinmuseum.art/entity/OBJECT',
