@@ -1,0 +1,19 @@
+host	resolver	qtype	status	cname_chain	ipv4
+cdn.selectel.ru	google	A	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.	185.31.113.61
+cdn.selectel.ru	cloudflare	A	0	736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net. -> ye6vu31zwv.a.trbcdn.net.	151.236.118.252
+cdn-blog.selectel.ru	google	A	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.	185.31.113.61
+cdn-blog.selectel.ru	cloudflare	A	0	6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net. -> nsl6zt76mu.a.trbcdn.net.	151.236.118.252
+www.novochag.ru	google	A	0		185.71.67.73
+www.novochag.ru	cloudflare	A	0		185.71.67.73
+edu.livedigital.space	google	A	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.	185.31.113.62
+edu.livedigital.space	cloudflare	A	0	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net. -> tco4vspfty.a.trbcdn.net.	151.236.118.253
+6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	google	A	0	nsl6zt76mu.a.trbcdn.net.	185.31.113.61
+6ef4e6a1-9d49-47ac-bfed-170f67a815cf.selcdn.net	cloudflare	A	0	nsl6zt76mu.a.trbcdn.net.	151.236.118.252
+736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	google	A	0	ye6vu31zwv.a.trbcdn.net.	185.31.113.61
+736f2fc5-de36-4920-8de7-fecea64c2448.selcdn.net	cloudflare	A	0	ye6vu31zwv.a.trbcdn.net.	151.236.118.252
+6f3bf64a-14d1-4b68-9202-2a000ca072b9.selcdn.net	google	A	3		
+6f3bf64a-14d1-4b68-9202-2a000ca072b9.selcdn.net	cloudflare	A	3		
+8b08ab88-ee1b-4b04-9ae9-321e0da71ae2.selcdn.net	google	A	0	zzrlozlezx.a.trbcdn.net.	185.31.113.61
+8b08ab88-ee1b-4b04-9ae9-321e0da71ae2.selcdn.net	cloudflare	A	0	zzrlozlezx.a.trbcdn.net.	151.236.118.252
+36000382-a1c2-4a8a-a109-3fc3bfc73cf7.selcdn.net	google	A	0	98yd9uzend.a.trbcdn.net.	151.236.118.252
+36000382-a1c2-4a8a-a109-3fc3bfc73cf7.selcdn.net	cloudflare	A	0	98yd9uzend.a.trbcdn.net.	185.31.113.61
