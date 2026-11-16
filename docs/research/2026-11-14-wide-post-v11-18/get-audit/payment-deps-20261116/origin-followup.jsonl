@@ -1,0 +1,11 @@
+{"ip": "151.236.66.125", "hosts": ["cdn.antilopay.com"], "asn": ["204720"], "prefix": "151.236.66.0/24", "status": "ok"}
+{"ip": "151.236.72.248", "hosts": ["static.konsol.pro"], "status": "ok", "asn": ["57363"], "prefix": "151.236.72.0/24"}
+{"ip": "151.236.91.253", "hosts": ["cdn.antilopay.com"], "status": "ok", "asn": ["57363"], "prefix": "151.236.91.0/24"}
+{"ip": "185.215.4.10", "hosts": ["tempojob.org"], "asn": ["57724"], "prefix": "185.215.4.0/24", "status": "ok"}
+{"ip": "185.215.4.52", "hosts": ["simples.work"], "asn": ["57724"], "prefix": "185.215.4.0/24", "status": "ok"}
+{"ip": "193.17.93.194", "hosts": ["sso-forms-prod.t-static.ru"], "asn": ["210756"], "prefix": "193.17.93.0/24", "status": "ok"}
+{"ip": "31.31.198.216", "hosts": ["nalog.nanimatel.com"], "asn": ["197695"], "prefix": "31.31.198.0/24", "status": "ok"}
+{"ip": "78.159.249.192", "hosts": ["static.konsol.pro"], "asn": ["57363"], "prefix": "78.159.249.0/24", "status": "ok"}
+{"ip": "91.231.235.125", "hosts": ["cdn.antilopay.com"], "asn": ["57363"], "prefix": "91.231.235.0/24", "status": "ok"}
+{"ip": "91.240.169.232", "hosts": ["static.konsol.pro"], "asn": ["57363"], "prefix": "91.240.169.0/24", "status": "ok"}
+{"ip": "95.129.238.129", "hosts": ["click.sign.me", "kval.sign.me", "sign.me", "smart.sign.me"], "status": "ok", "asn": ["57724"], "prefix": "95.129.238.0/24"}

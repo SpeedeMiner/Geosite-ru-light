@@ -1,0 +1,157 @@
+{
+  "runs": {
+    "43816683106": {
+      "sha256": "d841ddf5fd299d49b73f29ad00321a506c75a4b056410d4fa7f4f22957fdddc3",
+      "observations": 18,
+      "strict_http": 16,
+      "completed_get": 14,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43816798462": {
+      "sha256": "ed1fd405bc615b40280e8168392e41416b5c9cbe5fa725b2d8cd690f1165a9a3",
+      "observations": 18,
+      "strict_http": 18,
+      "completed_get": 18,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43816934217": {
+      "sha256": "0776efc4992556b2d08d3e0be5a08a0b0086473e485994dcbeda9653614402da",
+      "observations": 20,
+      "strict_http": 19,
+      "completed_get": 14,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43816957026": {
+      "sha256": "4dcc21e32eef58ad06e419701ffe3a0e7eeb64e590ff5d184c48e54b4acae69a",
+      "observations": 18,
+      "strict_http": 18,
+      "completed_get": 10,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43817092543": {
+      "sha256": "740374994bd8274c28089a6ce1cd6ef146afab30a69cbd75a4b5cc2591fac405",
+      "observations": 18,
+      "strict_http": 18,
+      "completed_get": 18,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43817224800": {
+      "sha256": "41bf6f0a601c14d787f6e9b317ddbe8bea63805fa82f3f0bfe248476ea28fd5b",
+      "observations": 20,
+      "strict_http": 18,
+      "completed_get": 17,
+      "strict_http_asns": [
+        15774,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43817301776": {
+      "sha256": "6f8a3a6278aba86da06c7c80a64f097b708be456817381b12fc6a81ea8535772",
+      "observations": 16,
+      "strict_http": 16,
+      "completed_get": 8,
+      "strict_http_asns": [
+        8402,
+        34533
+      ],
+      "globalping": 0
+    },
+    "43817456865": {
+      "sha256": "267db3011a33ed1043acefe284f1e2ab349d8536e67e77bc9a6e7fe7fee98cd8",
+      "observations": 20,
+      "strict_http": 19,
+      "completed_get": 16,
+      "strict_http_asns": [
+        15774,
+        52043
+      ],
+      "globalping": 0
+    },
+    "43817532167": {
+      "sha256": "2a4dbb55fc21b31ed3b652090c4e4accc6d2f7957c4041cf9cf183f4caf5fcb8",
+      "observations": 16,
+      "strict_http": 13,
+      "completed_get": 13,
+      "strict_http_asns": [
+        12389,
+        52043
+      ],
+      "globalping": 0
+    },
+    "43817568839": {
+      "sha256": "f57569edaccb21f61e628a89109d39e9bd4cc1f141c5e3f2e8053869186ef3dc",
+      "observations": 16,
+      "strict_http": 16,
+      "completed_get": 16,
+      "strict_http_asns": [
+        15774,
+        52043
+      ],
+      "globalping": 0
+    },
+    "43817841993": {
+      "sha256": "92dabd3b35cee8c1247b242a651503eea775d94b28fd543be0c61162b63a0f32",
+      "observations": 14,
+      "strict_http": 14,
+      "completed_get": 14,
+      "strict_http_asns": [
+        15774,
+        52043
+      ],
+      "globalping": 0
+    },
+    "43817936207": {
+      "sha256": "da486aca9ef85a80de25ee36f9e327c2d4afd1c41bb87bbf4fa4787663710507",
+      "observations": 12,
+      "strict_http": 12,
+      "completed_get": 12,
+      "strict_http_asns": [
+        15774,
+        52043
+      ],
+      "globalping": 0
+    }
+  },
+  "total": {
+    "runs": 12,
+    "observations": 206,
+    "unique_urls": 87,
+    "strict_http": 197,
+    "completed_get": 170,
+    "strict_http_asns": [
+      8402,
+      12389,
+      15774,
+      34533,
+      52043
+    ],
+    "http_codes": {
+      "200": 175,
+      "404": 2,
+      "301": 10,
+      "206": 10
+    },
+    "globalping": 0
+  }
+}
