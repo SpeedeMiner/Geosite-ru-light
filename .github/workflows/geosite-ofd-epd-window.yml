@@ -1,4 +1,4 @@
-name: GeoSite Kazakhstan and Supl public canonical GET
+name: GeoSite Kazakhstan public Workbench dependencies
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-kz-canonical-20261116
+  group: geosite-kz-dependencies-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [canonical]
+        batch: [dependencies]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
