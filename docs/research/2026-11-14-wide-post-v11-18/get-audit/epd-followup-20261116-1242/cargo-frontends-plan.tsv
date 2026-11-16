@@ -1,0 +1,8 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	ecosystem.cargonomica.com	ecosystem.cargonomica.com	https://ecosystem.cargonomica.com/insurance	Карго	https://money.cargonomica.com/privacy
+corporate	candidate	fleet.cargonomica.com	fleet.cargonomica.com	https://fleet.cargonomica.com/appv2/auth/registration		https://ecosystem.cargonomica.com/insurance
+corporate	comparison	cargonomica.com	cargonomica.com	https://cargonomica.com/logistics		https://www.cargonomica.com/
+corporate	candidate	money.cargonomica.com	money.cargonomica.com	https://money.cargonomica.com/privacy	Каргономика	https://money.cargonomica.com/privacy
+corporate	comparison	nnk.cargonomica.com	nnk.cargonomica.com	https://nnk.cargonomica.com/users/login?next=%2F	Cargo	https://nnk.cargonomica.com/
+corporate	candidate	thing.cargonomica.com	thing.cargonomica.com	https://thing.cargonomica.com/	Карго.Вещь	https://money.cargonomica.com/privacy
+corporate	comparison	tech.cargonomica.com	tech.cargonomica.com	https://tech.cargonomica.com/cargotech	Каргономика	https://www.cargonomica.com/
