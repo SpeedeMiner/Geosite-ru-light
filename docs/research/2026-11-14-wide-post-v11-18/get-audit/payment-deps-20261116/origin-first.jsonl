@@ -1,0 +1,30 @@
+{"ip": "104.21.46.215", "hosts": ["market.inwork.net"], "asn": ["13335"], "prefix": "104.21.32.0/20", "status": "ok"}
+{"ip": "176.57.65.231", "hosts": ["business.winwork.pro"], "asn": ["57724"], "prefix": "176.57.64.0/23", "status": "ok"}
+{"ip": "176.57.66.217", "hosts": ["getwork.today", "www.getwork.today"], "asn": ["57724"], "prefix": "176.57.66.0/24", "status": "ok"}
+{"ip": "176.57.66.49", "hosts": ["m-core.pro"], "asn": ["57724"], "prefix": "176.57.66.0/24", "status": "ok"}
+{"ip": "178.170.196.103", "hosts": ["inwork.net"], "asn": ["208677"], "prefix": "178.170.196.0/23", "status": "ok"}
+{"ip": "178.248.232.10", "hosts": ["pro.sigma.net"], "asn": ["51115"], "prefix": "178.248.232.0/23", "status": "ok"}
+{"ip": "178.248.232.160", "hosts": ["app.konsol.pro"], "asn": ["51115"], "prefix": "178.248.232.0/23", "status": "ok"}
+{"ip": "178.248.232.81", "hosts": ["assets.konsol.pro", "konsol.pro"], "asn": ["51115"], "prefix": "178.248.232.0/23", "status": "ok"}
+{"ip": "178.248.233.155", "hosts": ["smz.rocketwork.ru"], "asn": ["51115"], "prefix": "178.248.232.0/23", "status": "ok"}
+{"ip": "178.248.234.73", "hosts": ["backend.payture.com", "lite.payture.com", "www.payture.com"], "asn": ["51115"], "prefix": "178.248.234.0/23", "status": "ok"}
+{"ip": "178.72.179.50", "hosts": ["app.simples.work"], "asn": ["49505"], "prefix": "178.72.176.0/22", "status": "ok"}
+{"ip": "185.129.100.112", "hosts": ["elogistics.online"], "asn": ["57724"], "prefix": "185.129.100.0/24", "status": "ok"}
+{"ip": "185.215.4.13", "hosts": ["ckassa.com", "www.ckassa.com"], "asn": ["57724"], "prefix": "185.215.4.0/24", "status": "ok"}
+{"ip": "185.215.4.44", "hosts": ["balans.pro"], "asn": ["57724"], "prefix": "185.215.4.0/24", "status": "ok"}
+{"ip": "185.215.4.61", "hosts": ["antilopay.com"], "asn": ["57724"], "prefix": "185.215.4.0/24", "status": "ok"}
+{"ip": "185.71.67.11", "hosts": ["lk.antilopay.com"], "asn": ["43298"], "prefix": "185.71.67.0/24", "status": "ok"}
+{"ip": "185.71.67.146", "hosts": ["qugo.ru"], "asn": ["43298"], "prefix": "185.71.67.0/24", "status": "ok"}
+{"ip": "203.81.219.80", "hosts": ["life-pay.ru"], "asn": ["206805"], "prefix": "203.81.208.0/20", "status": "ok"}
+{"ip": "213.180.193.247", "hosts": ["marketing.konsol.pro"], "asn": ["13238", "208398"], "prefix": "213.180.192.0/19", "status": "ok"}
+{"ip": "217.150.196.150", "hosts": ["som.place"], "asn": ["12389"], "prefix": "217.150.196.0/24", "status": "ok"}
+{"ip": "31.31.198.24", "hosts": ["nanimatel.com"], "asn": ["197695"], "prefix": "31.31.198.0/24", "status": "ok"}
+{"ip": "51.250.87.143", "hosts": ["legal.handswork.pro"], "asn": ["200350"], "prefix": "51.250.0.0/17", "status": "ok"}
+{"ip": "79.137.174.252", "hosts": ["biz.winwork.pro", "docs.winwork.pro"], "asn": ["47764"], "prefix": "79.137.174.0/23", "status": "ok"}
+{"ip": "79.137.175.206", "hosts": ["winwork.pro"], "asn": ["47764"], "prefix": "79.137.174.0/23", "status": "ok"}
+{"ip": "87.242.125.19", "hosts": ["smz.konsol.pro"], "asn": ["208677"], "prefix": "87.242.120.0/21", "status": "ok"}
+{"ip": "87.242.126.215", "hosts": ["docs.konsol.pro", "files.konsol.pro", "help.konsol.pro", "support.konsol.pro"], "asn": ["208677"], "prefix": "87.242.120.0/21", "status": "ok"}
+{"ip": "89.111.136.27", "hosts": ["company.balans.pro", "smz.balans.pro"], "asn": ["39494"], "prefix": "89.111.128.0/20", "status": "ok"}
+{"ip": "90.156.213.178", "hosts": ["frontend-next.nanimatel.com"], "asn": ["47764"], "prefix": "90.156.212.0/22", "status": "ok"}
+{"ip": "91.215.41.69", "hosts": ["paygine.ru", "www.paygine.ru"], "asn": ["57724"], "prefix": "91.215.41.0/24", "status": "ok"}
+{"ip": "92.53.68.17", "hosts": ["doc.antilopay.com"], "asn": ["49505"], "prefix": "92.53.64.0/19", "status": "ok"}
