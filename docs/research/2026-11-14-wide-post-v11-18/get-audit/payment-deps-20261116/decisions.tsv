@@ -1,0 +1,49 @@
+host	decision	category	source	observed_path	reason	independent_ru_asns	evidence_runs	status_codes
+antilopay.com	include	payments	https://antilopay.com/rules	https://antilopay.com/	ООО Прайм Пейментс, ИНН совпал с реестром ЦБ; публичная страница и правила	15774,34533	43816683106	200
+app.konsol.pro	include	work	https://smz.konsol.pro/	https://app.konsol.pro/login	Публичная HTML-оболочка официального кабинета	12389,15774,34533,52043	43816798462,43817532167	200
+app.simples.work	include	work	https://simples.work/	https://app.simples.work/app/auth/sign-in	Ссылка на экран входа + CSS	15774,34533	43817224800	200
+assets.konsol.pro	include	work	https://konsol.pro/	https://assets.konsol.pro/packs/assets/application-BrFnTlUq.js	Скрипт основного сайта без исполнения	15774,34533	43817092543	200
+backend.payture.com	include	payments	https://www.payture.com/docs/merchant-account/payture	https://backend.payture.com/	Публичная точка входа, подписанная в официальной справке как личный кабинет	15774,34533	43817092543	200
+balans.pro	include	work	https://npd.nalog.ru/aggregators/	https://balans.pro/npd	Два завершённых GET по отдельному пути НПД	8402,12389,34533,52043	43817301776,43817532167	200
+biz.winwork.pro	include	work	https://winwork.pro/	https://biz.winwork.pro/	Текущий корпоративный вход с официальной страницы	15774,34533	43817224800	200
+business.winwork.pro	hold	work	https://winwork.pro/	https://business.winwork.pro/	Рабочая витрина «Мои Самозанятые», текущий основной вход ведёт на biz.winwork.pro	12389,15774,34533,52043	43817092543,43817532167	200
+cdn.antilopay.com	include	payments	https://lk.antilopay.com/	https://cdn.antilopay.com/index.css	Официальный CSS кабинета и 4096 байт его JS, без исполнения	15774,52043	43817568839	200
+ckassa.com	include	payments	https://npd.nalog.ru/aggregators/	https://ckassa.com/start	Официальный путь Ckassa Старт	8402,15774,34533	43816934217,43817301776	200
+click.sign.me	include	signing	https://sign.me/	https://click.sign.me/lk/	Официальная ссылка /login и публичная цель /lk/ подтверждены отдельно	15774,52043	43817936207	200
+company.balans.pro	include	work	https://balans.pro/smz	https://company.balans.pro/company/auth/login/	Экран входа компании, без отправки формы	15774,34533	43817224800	200
+doc.antilopay.com	include	payments	https://antilopay.com/api-docs	https://doc.antilopay.com/AntilopayAPI.pdf	Официальный PDF, только 512 байт, хеш одинаковый	15774,34533	43817092543	206
+docs.konsol.pro	include	work	https://konsol.pro/	https://docs.konsol.pro/articles/konsol-samozanyatye-api/vvedenie	Публичная статья, не API-вызов	15774,34533	43817092543	200
+docs.winwork.pro	include	work	https://winwork.pro/	https://docs.winwork.pro/politika-konfidentsialnosti/	Публичный PDF, файл не исполнялся	15774,34533	43817224800	200
+elogistics.online	include	work	https://npd.nalog.ru/aggregators/	https://elogistics.online/	Официальная логистическая площадка	15774,34533	43816934217	200
+files.konsol.pro	include	work	https://konsol.pro/legal	https://files.konsol.pro/perm/agreement.pdf	Ссылка из юридического раздела, 512 байт PDF	15774,34533	43817092543	206
+frontend-next.nanimatel.com	include	work	https://nanimatel.com/	https://frontend-next.nanimatel.com/find-job	Официальная ссылка поиска задач; оболочка + CSS	15774,34533	43817224800	200
+getwork.today	include	work	https://www.getwork.today/	https://getwork.today/product-info	Карточка правообладателя линкована с WWW	15774,34533	43817224800	200
+help.konsol.pro	include	work	https://konsol.pro/legal	https://help.konsol.pro/	Справка для исполнителей	15774,34533	43816798462	200
+inwork.net	include	work	https://npd.nalog.ru/aggregators/	https://inwork.net/	Официальная главная, не тот Cloudflare-хост, что market	8402,15774,34533	43816934217,43817301776	200
+konsol.pro	include	work	https://konsol.pro/legal	https://konsol.pro/legal	Публичный юридический раздел платформы	15774,34533	43816798462	200
+kval.sign.me	include	signing	https://sign.me/	https://kval.sign.me/login	Официальная кнопка продукта, два стабильных 301 на отдельно подтверждённый sign.me/login	15774,52043	43817841993	301
+legal.handswork.pro	include	work	https://smz.handswork.pro/	https://legal.handswork.pro/privacy-policy	Официальное правовое приложение, HTML и CSS проверены	15774,34533	43817224800	200
+lite.payture.com	include	payments	https://www.payture.com/connection	https://lite.payture.com/payture-lite	Ссылка на Payture Lite; HTML и CSS проверены	15774,34533	43816798462	200
+lk.antilopay.com	include	payments	https://antilopay.com/	https://lk.antilopay.com/	Публичное открытие официального входа, без авторизации	15774,34533	43816798462	200
+m-core.pro	hold	work	https://npd.nalog.ru/aggregators/	https://m-core.pro/self-employed.html	Указанный путь ФНС 404, корень обслуживает другой продукт			
+market.inwork.net	hold	work	https://inwork.net/	https://market.inwork.net/contact	Наблюдаемый frontend Cloudflare AS13335, не подменять его origin и не делать суффикс	12389,34533	43817224800,43817532167	200
+marketing.konsol.pro	include	work	https://konsol.pro/legal	https://marketing.konsol.pro/Docs/platform_v1.0.pdf	Отдельный официальный путь публикации документов, 512 байт PDF	15774,34533	43817092543	206
+nalog.nanimatel.com	hold	work	https://nanimatel.com/	https://nalog.nanimatel.com/	Рабочая отдельная страница, текущая ссылка ФНС ведёт на apex	15774,52043	43817456865	200
+nanimatel.com	include	work	https://npd.nalog.ru/aggregators/	https://nanimatel.com/	Публичный вход платформы	15774,34533	43816934217	200
+pro.sigma.net	include	work	https://npd.nalog.ru/aggregators/	https://pro.sigma.net/	Официальный домен платформы Sigma, не весь sigma.net	15774,34533	43816934217	200
+reg.tempojob.org	hold	work	https://tempojob.org/	https://reg.tempojob.org/agreement	Два 200 с curl 63; актуальность отдельного маршрута не подтверждена			
+simples.work	include	work	https://npd.nalog.ru/aggregators/	https://simples.work/info	Документация о правообладателе, корень остался частичным	15774,52043	43817456865	200
+smart.sign.me	include	signing	https://sign.me/support/article/kak-otpravit-dokument-na-podpis	https://smart.sign.me/	Отдельная публичная страница Сайн.Смарт; регистрация уходит на основной домен	15774,52043	43817841993	200
+smz.balans.pro	include	work	https://balans.pro/smz	https://smz.balans.pro/smz/auth/login/	Экран входа физлица, без отправки формы	15774,34533	43817092543	200
+smz.getwork.today	hold	work	https://www.getwork.today/	https://smz.getwork.today/tasks	Два строгих TLS-отказа, не обходить проверку			
+smz.handswork.pro	hold	work	https://npd.nalog.ru/aggregators/	https://smz.handswork.pro/	Не было двух завершённых GET			
+smz.konsol.pro	include	work	https://npd.nalog.ru/aggregators/	https://smz.konsol.pro/	Точный пользовательский вход ФНС	15774,34533,52043	43816798462,43817456865	200
+som.place	include	payments	https://som.place/	https://som.place/	АО СОМ, ИНН 9704141780, совпал реестр ЦБ; публичный сайт	15774,34533	43816683106	200
+static.konsol.pro	include	work	https://app.konsol.pro/login	https://static.konsol.pro/static/css/main-dce09c70.css	Официальный CSS приложения и 4096 байт первого JS	15774,52043	43817568839	200
+support.konsol.pro	include	work	https://konsol.pro/legal	https://support.konsol.pro/	Справка для компаний	15774,34533	43816798462	200
+tempojob.org	include	work	https://npd.nalog.ru/aggregators/	https://tempojob.org/polzovatelskoe-soglashenie	Соглашение и политика; корень остался частичным	15774,52043	43817456865	200
+winwork.pro	include	work	https://npd.nalog.ru/aggregators/	https://winwork.pro/	Официальная платформа WinWork	15774,34533	43816934217	200
+www.ckassa.com	include	payments	https://www.ckassa.com/documentation/oferta	https://www.ckassa.com/start	Собственное WWW с публичной офертой и действующей страницей	15774,34533	43817092543	200
+www.getwork.today	include	work	https://npd.nalog.ru/aggregators/	https://www.getwork.today/	Точный WWW в списке ФНС	8402,15774,34533	43816934217,43817301776	200
+www.nanimatel.com	hold	work	https://www.nanimatel.com/	https://www.nanimatel.com/	Рабочая витрина, но актуальные первичные ссылки ведут на apex	15774,52043	43817456865	200
+www.som.place	hold	payments	https://som.place/	https://www.som.place/	Отдельное WWW не прошло строгий TLS, оператор публикует apex			
