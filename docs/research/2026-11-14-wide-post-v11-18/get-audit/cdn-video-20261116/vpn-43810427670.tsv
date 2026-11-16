@@ -1,0 +1,11 @@
+vpn_asn	host	url	http	tls_verify_result	state	curl_exit	content_type	body_bytes_sampled	body_sample_sha256	title	redirect_location	target_ipv4
+52043	sigma.cloud.trassir.com	https://sigma.cloud.trassir.com/user-login	200	0	vpn_visible_review	0	text/html	2199	dfa3c1558dbd67a53fe9193a7f108ae3493f61fcbc7785b93ad80d4714550df8			217.74.37.20
+52043	trassircloud.com	https://trassircloud.com/robots.txt	200	0	vpn_body_unproven	0	text/plain; charset=UTF-8	3584	f72832ad44c92b03d97734464b515acadf55a65fbcc303c77dcb713bd8648608			176.57.65.148
+52043	trueconf.com	https://trueconf.com/docs/server-api/ru.html	200	0	vpn_visible_review	0	text/html; charset=utf-8	5831	9a88b2b3f0dde4d40eed1b74d808c0f909f46c401cd5d0c0a7fd02182a48ef7b	TrueConf Server API v4		95.217.107.60
+52043	www.cdnvideo.com	https://www.cdnvideo.com/about_us/	200	0	vpn_body_unproven	0	text/html; charset=UTF-8	10000	5bdd40baa37d1e9e69a081f7a8fd70c99b0c562000714d7db26d1a274c37e338	About Us - Company Information - History & Milestones - CDNvideo.com		151.236.80.17
+52043	check.livedigital.space	https://check.livedigital.space/	200	0	vpn_visible_review	0	text/html	4036	645aa1e52177c7a108aeb3a95015009b605f2aaf59c95d3c7059082af12af571	Проверка стабильности интернет подключения		5.8.74.36
+43761	sigma.cloud.trassir.com	https://sigma.cloud.trassir.com/user-login	200	0	vpn_visible_review	0	text/html	2199	dfa3c1558dbd67a53fe9193a7f108ae3493f61fcbc7785b93ad80d4714550df8			217.74.37.20
+43761	trassircloud.com	https://trassircloud.com/robots.txt	200	0	vpn_body_unproven	0	text/plain; charset=UTF-8	3584	f72832ad44c92b03d97734464b515acadf55a65fbcc303c77dcb713bd8648608			176.57.65.148
+43761	trueconf.com	https://trueconf.com/docs/server-api/ru.html	200	0	vpn_visible_review	0	text/html; charset=utf-8	5831	9a88b2b3f0dde4d40eed1b74d808c0f909f46c401cd5d0c0a7fd02182a48ef7b	TrueConf Server API v4		95.217.107.60
+43761	www.cdnvideo.com	https://www.cdnvideo.com/about_us/			vpn_transport_unproven	28		0				151.236.80.17
+43761	check.livedigital.space	https://check.livedigital.space/			vpn_transport_unproven	28		0				5.8.74.36
