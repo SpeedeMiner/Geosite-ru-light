@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	isales.trcont.ru	isales.trcont.ru	https://isales.trcont.ru/		https://isales.trcont.com/
+corporate	comparison	www.trcont.com	www.trcont.com	https://www.trcont.com/		https://trcont.com/
+corporate	control	trcont.ru	trcont.ru	https://trcont.ru/		https://isales.trcont.ru/
+corporate	candidate	truckradar.com	truckradar.com	https://truckradar.com/partner_offer	Трак Радар	https://truckradar.com/
+corporate	candidate	www.cargonomica.com	www.cargonomica.com	https://www.cargonomica.com/logistics		https://cargonomica.com/logistics
+corporate	comparison	help.monopoly.online	help.monopoly.online	https://help.monopoly.online/pages/viewpage.action?pageId=3475062		https://help.monopoly.online/
