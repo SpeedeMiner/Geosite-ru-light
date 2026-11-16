@@ -1,4 +1,4 @@
-name: GeoSite public EPD follow-up controls through VPNObratno
+name: GeoSite transport applications and documentation through VPNObratno
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-epd-followup-recheck-1242
+  group: geosite-epd-followup-transport-1242
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [recheck]
+        batch: [transport]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
