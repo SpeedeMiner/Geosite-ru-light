@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	torgi.eltorg.org	torgi.eltorg.org	https://torgi.eltorg.org/indexNew1.aspx/		https://eltorg.org/
+corporate	candidate	torgi.eltorg.org	torgi.eltorg.org	https://torgi.eltorg.org/admin/ReglamentNew.aspx		https://eltorg.org/
+corporate	control	eltorg.org	eltorg.org	https://eltorg.org/		https://eltorg.org/
+corporate	control	zakupki223.eltorg.org	zakupki223.eltorg.org	https://zakupki223.eltorg.org/ManualsNew/registration.aspx		https://eltorg.org/
+corporate	control	etp.comita.ru	etp.comita.ru	https://etp.comita.ru/		https://etp.comita.ru/downloads/rp_registration_etp.pdf
