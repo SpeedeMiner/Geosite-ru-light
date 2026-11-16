@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	myseldon.com	myseldon.com	https://myseldon.com/ru		https://myseldon.com/
+corporate	candidate	myseldon.com	myseldon.com	https://myseldon.com/en		https://myseldon.com/
+corporate	control	account.myseldon.com	account.myseldon.com	https://account.myseldon.com/account/privacypolicy		https://basis.myseldon.com/ru/home/privacypolicy
+corporate	control	account.myseldon.com	account.myseldon.com	https://account.myseldon.com/content/css/style-auth.css		https://account.myseldon.com/ru/account/login
+corporate	control	win.myseldon.com	win.myseldon.com	https://win.myseldon.com/promo/_next/static/css/d2597467cf413373.css		https://win.myseldon.com/
+corporate	candidate	supl.biz	supl.biz	https://supl.biz/supl-biz-account-details/		https://supl.biz/p/terms/
