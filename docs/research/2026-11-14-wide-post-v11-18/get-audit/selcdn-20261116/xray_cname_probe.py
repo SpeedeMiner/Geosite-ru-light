@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Loopback-only Xray routing test: request name, DNS CNAME, resolved IP and TLS SNI."""
 import contextlib
-import hashlib
 import json
 from pathlib import Path
 import socket
@@ -25,7 +24,8 @@ def labels(name):
 
 class DNS(socketserver.BaseRequestHandler):
     def handle(self):
-        payload, sock = self.request
+        self.request.settimeout(2)
+        payload = receive(self.request, struct.unpack('!H', receive(self.request, 2))[0])
         if len(payload) < 17:
             return
         off = 12
@@ -44,7 +44,8 @@ class DNS(socketserver.BaseRequestHandler):
                 answers.append(b'\xc0\x0c' + struct.pack('!HHIH', 5, 1, 0, len(encoded)) + encoded)
             answers.append(labels(CNAME) + struct.pack('!HHIH', 1, 1, 0, 4) + socket.inet_aton(ADDR))
         header = payload[:2] + struct.pack('!HHHHH', 0x8180, 1, len(answers), 0, 0)
-        sock.sendto(header + payload[12:off + 5] + b''.join(answers), self.client_address)
+        reply = header + payload[12:off + 5] + b''.join(answers)
+        self.request.sendall(struct.pack('!H', len(reply)) + reply)
 
 
 class Sink(socketserver.BaseRequestHandler):
@@ -120,7 +121,7 @@ def main():
         ('ip-sni-technical', 'AsIs', 'domain:ru', ADDR, True, CNAME, 'ip', False),
     ]
     with tempfile.TemporaryDirectory() as tmp, contextlib.ExitStack() as stack:
-        dns = stack.enter_context(serve(socketserver.UDPServer, DNS, questions=[]))
+        dns = stack.enter_context(serve(socketserver.ThreadingTCPServer, DNS, questions=[]))
         sinks = {tag: stack.enter_context(serve(socketserver.ThreadingTCPServer, Sink, marker=tag))
                  for tag in ('fallback', 'domain', 'ip')}
         for key, strategy, pattern, target, sniff, sni, wanted, dns_expected in scenarios:
@@ -129,7 +130,7 @@ def main():
                 port = s.getsockname()[1]
             cfg = {
                 'log': {'loglevel': 'warning'},
-                'dns': {'servers': [{'address': '127.0.0.1', 'port': dns.server_address[1]}],
+                'dns': {'servers': [f'tcp+local://127.0.0.1:{dns.server_address[1]}'],
                         'queryStrategy': 'UseIPv4'},
                 'inbounds': [{'listen': '127.0.0.1', 'port': port, 'protocol': 'socks',
                               'settings': {'auth': 'noauth', 'udp': False},
