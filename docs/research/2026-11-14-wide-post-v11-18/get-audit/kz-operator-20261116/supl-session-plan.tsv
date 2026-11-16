@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+supl_cookie	candidate	supl.biz	supl.biz	https://supl.biz/	оптовые поставщики|поставщиков	https://supl.biz/p/kz/
+supl_cookie	candidate	supl.biz	supl.biz	https://supl.biz/p/kz/	Публичная оферта|Сапл-биз Казахстан	https://supl.biz/p/kz/
+supl_cookie	candidate	supl.biz	supl.biz	https://supl.biz/faq/post/instrukciya-dlya-postavshikov-registration/	Инструкция по работе с платформой|регистрация и настройка профиля	https://supl.biz/faq/instrukciya-dlya-postavshikov-registration/
+corporate	candidate	www.supl.biz	www.supl.biz	https://www.supl.biz/		https://supl.biz/p/terms/
+corporate	candidate	cdn.supl.biz	cdn.supl.biz	https://cdn.supl.biz/media/faq_images/2023/09/28/1-6.png		https://supl.biz/en/faq/post/users_guide_suplbiz/
