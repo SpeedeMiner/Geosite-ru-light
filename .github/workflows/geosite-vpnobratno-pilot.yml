@@ -1,77 +1,119 @@
-name: GeoSite Selectel and LiveDigital public DNS and download checks
+name: GeoSite public LiveDigital installer ranges through VPNObratno
 
 on:
   push:
-    branches: [research/geosite-ru-wide-20261114-1810]
-    paths: [.github/workflows/geosite-vpnobratno-pilot.yml]
+    branches:
+      - research/geosite-ru-wide-20261114-1810
+    paths:
+      - .github/workflows/geosite-vpnobratno-pilot.yml
 
 permissions:
   contents: read
 
+concurrency:
+  group: geosite-vpnobratno-selcdn-installers
+  cancel-in-progress: false
+
 jobs:
-  public-observation:
+  pilot:
+    name: Verify public sites (${{ matrix.batch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        batch: [installer-range]
     runs-on: ubuntu-24.04
-    timeout-minutes: 3
+    timeout-minutes: 15
+    env:
+      AUDIT: docs/research/2026-11-14-wide-post-v11-18/get-audit
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - name: Query two public resolvers and sample published downloads
+      - name: Checkout the GeoSite research commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Checkout the unchanged reviewed GeoIP transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
+          persist-credentials: false
+
+      - name: Checkout the fixed GeoIP inventory input
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 7eef1efcaafbdbe259f3aa4e56a07c38979afbfb
+          path: .vpn-pilot/geoip-release
+          persist-credentials: false
+
+      - name: Install OpenVPN and check runner capabilities
+        timeout-minutes: 6
         run: |
           set -euo pipefail
-          python3 - <<'PY'
-          import concurrent.futures
-          import hashlib
-          import json
+          test -c /dev/net/tun
+          if ! command -v openvpn >/dev/null || ! command -v iptables >/dev/null; then
+            sudo timeout --signal=TERM --kill-after=2s 45s python3 -B - <<'PYTHON'
           from pathlib import Path
-          import subprocess
-          import tempfile
-          from urllib.parse import urlencode
-          from urllib.request import Request, urlopen
+          import sys
+          sys.path.insert(0, ".vpn-pilot/upstream/.github/reachability")
+          from vpn_gate import install_ubuntu_apt_host_overrides
+          install_ubuntu_apt_host_overrides(Path("/etc/hosts"))
+          PYTHON
+            sudo timeout --kill-after=5s 120s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 -o APT::Update::Error-Mode=any update
+            sudo timeout --kill-after=5s 90s apt-get \
+              -o Acquire::Retries=1 -o Acquire::http::Timeout=12 \
+              -o Acquire::https::Timeout=12 install -y --no-install-recommends openvpn iptables
+          fi
+          command -v ip openvpn iptables ip6tables curl
+          bash -n .vpn-pilot/upstream/.github/reachability/vpn_netns_exec.sh
+          python3 -m unittest discover -s "$AUDIT" -p test_vpnobratno_get.py -q
 
-          hosts = [
-              'cdn.selectel.ru', 'cdn-blog.selectel.ru', 'www.novochag.ru', 'edu.livedigital.space',
-              'docs.livedigital.space', 'help.livedigital.space', 'livedigital.space',
-              'downloads.livedigital.space', 'check.livedigital.space',
-              '900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net',
-          ]
-          resolvers = {'google': 'https://dns.google/resolve', 'cloudflare': 'https://cloudflare-dns.com/dns-query'}
-
-          def dns(item):
-              resolver, host, qtype = item
-              row = dict(kind='dns', resolver=resolver, host=host, qtype=qtype)
-              url = resolvers[resolver] + '?' + urlencode({'name': host, 'type': qtype})
-              try:
-                  with urlopen(Request(url, headers={'Accept': 'application/dns-json'}), timeout=8) as response:
-                      data = json.loads(response.read(65536))
-                  row.update(status=data.get('Status'), answers=[a for a in data.get('Answer', []) if a.get('type') in (1, 5, 28)])
-              except (OSError, ValueError) as error:
-                  row.update(error=type(error).__name__)
-              return row
-
-          def download(url):
-              row = dict(kind='download_range', url=url)
-              with tempfile.TemporaryDirectory() as tmp:
-                  body = Path(tmp) / 'body'
-                  proc = subprocess.run(['curl', '-q', '-sS', '--max-time', '12', '--max-filesize', '65536',
-                                         '--range', '0-511', '--proto', '=https', '--output', str(body),
-                                         '--write-out', '%{json}', '--', url], capture_output=True, text=True, timeout=15)
-                  data = json.loads(proc.stdout or '{}')
-                  row.update(curl_exit=proc.returncode, tls_verify=data.get('ssl_verify_result'),
-                             http=data.get('response_code'), mime=data.get('content_type'),
-                             redirect_url=data.get('redirect_url'), remote_ip=data.get('remote_ip'))
-                  if body.exists():
-                      sample = body.read_bytes()
-                      row.update(sample_size=len(sample), sha256=hashlib.sha256(sample).hexdigest())
-              return row
-
-          tasks = [(resolver, host, qtype) for host in hosts for resolver in resolvers for qtype in ('A','AAAA')]
-          files = ['livedigital-arm64-latest.dmg', 'livedigital-latest.dmg']
-          with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
-              a = list(pool.map(dns, tasks))
-              b = list(pool.map(download, ['https://downloads.livedigital.space/livedigital-desktop/' + name for name in files]))
-          Path('dns-downloads.jsonl').write_text(''.join(json.dumps(r, sort_keys=True) + '\n' for r in a + b))
-          PY
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      - name: Set up the upstream inventory exporter
+        uses: actions/setup-go@0778a10ce47b5d450cf60fb94fafad4330008a35
         with:
-          name: geosite-selcdn-dns-downloads
-          path: dns-downloads.jsonl
-          if-no-files-found: error
+          go-version: "1.26.10"
+          cache: false
+
+      - name: Export a checksum-verified inventory for annotations
+        timeout-minutes: 3
+        run: |
+          set -euo pipefail
+          (cd .vpn-pilot/geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
+          (
+            cd .vpn-pilot/upstream/.github/reachability/inventory
+            GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/geosite-vpn-inventory" .
+          )
+          "$RUNNER_TEMP/geosite-vpn-inventory" \
+            .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
+
+      - name: Measure documented public service pages
+        timeout-minutes: 8
+        run: |
+          set -euo pipefail
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" \
+            GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- \
+              timeout --signal=TERM --kill-after=6s 7m \
+              python3 -B "$AUDIT/vpnobratno_get.py" \
+                "$AUDIT/selcdn-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
+
+      - name: Upload observation and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: geosite-selcdn-${{ matrix.batch }}-${{ github.run_attempt }}
+          path: |
+            .vpn-pilot/report/geosite-vpnobratno-summary.json
+            .vpn-pilot/report/vpnobratno-observations.jsonl
+            .vpn-pilot/report/vpn_gate_summary.json
+            .vpn-pilot/report/vpn_gate_providers.tsv
+            .vpn-pilot/report/vpn_gate_vpnobratto_progress.json
+          include-hidden-files: true
+          if-no-files-found: warn
           retention-days: 7
