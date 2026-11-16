@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	konsol.pro	konsol.pro	https://konsol.pro/legal	Консоль	https://www.moneta.ru/info/d/ru/public/users/nko/marketplaces.pdf
+corporate	candidate	docs.konsol.pro	docs.konsol.pro	https://docs.konsol.pro/	Консоль	https://konsol.pro/
+corporate	candidate	support.konsol.pro	support.konsol.pro	https://support.konsol.pro/	База знаний	https://konsol.pro/
+corporate	candidate	help.konsol.pro	help.konsol.pro	https://help.konsol.pro/	База знаний	https://konsol.pro/
+corporate	candidate	smz.konsol.pro	smz.konsol.pro	https://smz.konsol.pro/	Консоль	https://konsol.pro/
+corporate	candidate	app.konsol.pro	app.konsol.pro	https://app.konsol.pro/login		https://konsol.pro/
+corporate	candidate	lite.payture.com	lite.payture.com	https://lite.payture.com/payture-lite		https://www.payture.com/connection
+corporate	candidate	lk.antilopay.com	lk.antilopay.com	https://lk.antilopay.com/		https://antilopay.com/
+corporate	control	www.payture.com	www.payture.com	https://www.payture.com/connection	Payture	https://payture.com/

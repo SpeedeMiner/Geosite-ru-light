@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-payment-deps-aggregators-20261116
+  group: geosite-payment-deps-public-products-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [aggregators]
+        batch: [public-products]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
