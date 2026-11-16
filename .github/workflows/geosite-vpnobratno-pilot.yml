@@ -1,4 +1,4 @@
-name: GeoSite Komita and Veeroute public documentation
+name: GeoSite procurement public service frontends
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-edo-transport-1356
+  group: geosite-procurement-1356
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [veeroute-komita]
+        batch: [procurement]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
