@@ -1,0 +1,15 @@
+vpn_asn	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	redirect_followed
+12389	livedigital.space	https://livedigital.space/	200	63	0	text/html; charset=UTF-8	10000	ab15349998a10e39ba6f2ed8e522b2f7b4b7251beb43510a8eccc2dd97387148	185.215.4.14	vpn_body_unproven	False
+12389	edu.livedigital.space	https://edu.livedigital.space/	200	0	0	text/html	9433	122599e930ae82bef04782e223da82ea8bd97041207fd77c610a4429c0e3c557	151.236.91.254	vpn_body_unproven	False
+12389	docs.livedigital.space	https://docs.livedigital.space/docs/	200	0	0	text/html	10000	632030266d723667e9bc89ee960910247f4dd01b640bf37b554704a91a412394	139.100.194.181	vpn_visible_review	False
+12389	help.livedigital.space	https://help.livedigital.space/	200	0	0	text/html; charset=utf-8	10000	6eac80e1248aa19c0b316ade843f1a848d72c8f77a8027f5ca20583b1c4825a2	95.213.181.4	vpn_body_unproven	False
+12389	livedigital.space	https://livedigital.space/apidocs	200	0	0	text/html; charset=UTF-8	10000	517e9d20d0da08d060cf101d4f98b33ee08a824cef665e717f5bfeec5d5789cf	185.215.4.14	vpn_body_unproven	False
+12389	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	https://900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net/	200	0	0	text/html	9433	122599e930ae82bef04782e223da82ea8bd97041207fd77c610a4429c0e3c557	82.196.135.62	vpn_body_unproven	False
+12389	www.novochag.ru	https://www.novochag.ru/	200	63	0	text/html; charset=utf-8	0		185.71.67.73	vpn_body_unproven	False
+34974	livedigital.space	https://livedigital.space/	200	63	0	text/html; charset=UTF-8	10000	ab15349998a10e39ba6f2ed8e522b2f7b4b7251beb43510a8eccc2dd97387148	185.215.4.14	vpn_body_unproven	False
+34974	edu.livedigital.space	https://edu.livedigital.space/	200	0	0	text/html	9433	122599e930ae82bef04782e223da82ea8bd97041207fd77c610a4429c0e3c557	46.42.187.253	vpn_body_unproven	False
+34974	docs.livedigital.space	https://docs.livedigital.space/docs/	200	0	0	text/html	10000	632030266d723667e9bc89ee960910247f4dd01b640bf37b554704a91a412394	139.100.194.181	vpn_visible_review	False
+34974	help.livedigital.space	https://help.livedigital.space/	200	0	0	text/html; charset=utf-8	10000	6eac80e1248aa19c0b316ade843f1a848d72c8f77a8027f5ca20583b1c4825a2	95.213.181.4	vpn_body_unproven	False
+34974	livedigital.space	https://livedigital.space/apidocs	200	0	0	text/html; charset=UTF-8	10000	517e9d20d0da08d060cf101d4f98b33ee08a824cef665e717f5bfeec5d5789cf	185.215.4.14	vpn_body_unproven	False
+34974	900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net	https://900e128c-56c0-4e51-8817-ad005b45783f.selcdn.net/	200	0	0	text/html	9433	122599e930ae82bef04782e223da82ea8bd97041207fd77c610a4429c0e3c557	151.236.115.222	vpn_body_unproven	False
+34974	www.novochag.ru	https://www.novochag.ru/	200	63	0	text/html; charset=utf-8	0		185.71.67.73	vpn_body_unproven	False
