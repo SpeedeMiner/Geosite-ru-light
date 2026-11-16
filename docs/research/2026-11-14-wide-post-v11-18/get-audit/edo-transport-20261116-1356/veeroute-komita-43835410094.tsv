@@ -1,0 +1,11 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+12389	12389	12389	2	veeroute.com	https://veeroute.com/how-it-works/		28			0		95.217.173.143	vpn_transport_unproven		
+12389	12389	12389	2	veeroute.com	https://veeroute.com/	200	28	0	text/html	10000	74cf941a337f3f9c14b2b47f08eff3e22035cde8c65be56780af2e59e2b269e5	95.217.173.143	vpn_transport_unproven	Veeroute | Cloud-Based Optimization for Business	
+12389	12389	12389	2	www.comita.ru	https://www.comita.ru/	200	0	0	text/html; charset=UTF-8	8610	0ec93857d787235e6b791250817a309dca9afd4230a8126fbadc3c9172c69e64	217.73.62.105	vpn_body_unproven	"АО ""Комита"""	
+12389	12389	12389	2	new.comita.ru	https://new.comita.ru/projects/tax_reporting/comita_report	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	217.73.62.105	vpn_redirect	301 Moved Permanently	https://comita.ru/projects/tax_reporting/comita_report
+12389	12389	12389	2	comita.su	https://comita.su/support/		60	1		0		185.12.29.187	vpn_tls_unproven		
+3216	3216	3216	2	veeroute.com	https://veeroute.com/how-it-works/	200	28	0	text/html	10000	353abc11bdb43793de345d9313578737395f42c9e4abe4113253a61f6a6e2755	95.217.173.143	vpn_transport_unproven	How the Optimizer Works — Intro | Veeroute	
+3216	3216	3216	2	veeroute.com	https://veeroute.com/	200	28	0	text/html	10000	74cf941a337f3f9c14b2b47f08eff3e22035cde8c65be56780af2e59e2b269e5	95.217.173.143	vpn_transport_unproven	Veeroute | Cloud-Based Optimization for Business	
+3216	3216	3216	2	www.comita.ru	https://www.comita.ru/	200	0	0	text/html; charset=UTF-8	8610	0ec93857d787235e6b791250817a309dca9afd4230a8126fbadc3c9172c69e64	217.73.62.105	vpn_body_unproven	"АО ""Комита"""	
+3216	3216	3216	2	new.comita.ru	https://new.comita.ru/projects/tax_reporting/comita_report	301	0	0	text/html	162	9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a	217.73.62.105	vpn_redirect	301 Moved Permanently	https://comita.ru/projects/tax_reporting/comita_report
+3216	3216	3216	2	comita.su	https://comita.su/support/		60	1		0		185.12.29.187	vpn_tls_unproven		
