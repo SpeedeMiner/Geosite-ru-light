@@ -1,0 +1,7 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	kb.cryptex.pro	kb.cryptex.pro	https://kb.cryptex.pro/pages/viewpage.action?pageId=1442300	Системные требования	https://cryptex.pro/
+corporate	comparison	kb.cryptex.pro	kb.cryptex.pro	https://kb.cryptex.pro/display/SIGP/Web%2BAPI	Web API	https://cryptex.pro/
+corporate	control	cryptex.pro	cryptex.pro	https://cryptex.pro/		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	control	dikeyca.ru	dikeyca.ru	https://dikeyca.ru/ACTION		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	control	metaera.ru	metaera.ru	https://metaera.ru/		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
+corporate	control	ft-crypto.ru	ft-crypto.ru	https://ft-crypto.ru/edo		https://www.nalog.gov.ru/opendata/7707329152-reestropereldoc/
