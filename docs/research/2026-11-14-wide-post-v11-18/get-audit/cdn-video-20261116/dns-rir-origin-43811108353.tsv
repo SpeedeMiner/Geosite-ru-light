@@ -1,0 +1,124 @@
+kind	key	resolver_or_org	qtype_or_as_name	status	cname	addresses	origin_asns_or_relation	error
+dns	cdnvideo.com	google	A	0		151.236.80.17		
+dns	cdnvideo.com	google	AAAA	0				
+dns	cdnvideo.com	cloudflare	A	0		151.236.80.17		
+dns	cdnvideo.com	cloudflare	AAAA	0				
+dns	www.cdnvideo.com	google	A	0		151.236.80.17		
+dns	www.cdnvideo.com	google	AAAA	0				
+dns	www.cdnvideo.com	cloudflare	A	0		151.236.80.17		
+dns	www.cdnvideo.com	cloudflare	AAAA	0				
+dns	doc.cdnvideo.com	google	A	0	s39.cdnvideo.ru.	151.236.121.67		
+dns	doc.cdnvideo.com	google	AAAA	0	s39.cdnvideo.ru.			
+dns	doc.cdnvideo.com	cloudflare	A	0	s39.cdnvideo.ru.	151.236.121.67		
+dns	doc.cdnvideo.com	cloudflare	AAAA	0	s39.cdnvideo.ru.			
+dns	globalcloudnetwork.ru	google	A	0		78.159.242.19		
+dns	globalcloudnetwork.ru	google	AAAA	0				
+dns	globalcloudnetwork.ru	cloudflare	A	0		78.159.242.19		
+dns	globalcloudnetwork.ru	cloudflare	AAAA	0				
+dns	dashboard.globalcloudnetwork.ru	google	A	0	dashboard.cdnvideo.ru. -> s39.cdnvideo.ru.	151.236.121.67		
+dns	dashboard.globalcloudnetwork.ru	google	AAAA	0	dashboard.cdnvideo.ru. -> s39.cdnvideo.ru.			
+dns	dashboard.globalcloudnetwork.ru	cloudflare	A	0	dashboard.cdnvideo.ru. -> s39.cdnvideo.ru.	151.236.121.67		
+dns	dashboard.globalcloudnetwork.ru	cloudflare	AAAA	0	dashboard.cdnvideo.ru. -> s39.cdnvideo.ru.			
+dns	videomost.com	google	A	0		62.64.23.133		
+dns	videomost.com	google	AAAA	0				
+dns	videomost.com	cloudflare	A	0		62.64.23.133		
+dns	videomost.com	cloudflare	AAAA	0				
+dns	trueconf.com	google	A	0		95.217.107.60		
+dns	trueconf.com	google	AAAA	0				
+dns	trueconf.com	cloudflare	A	0		95.217.107.60		
+dns	trueconf.com	cloudflare	AAAA	0				
+dns	developers.trueconf.com	google	A	0		178.63.53.169		
+dns	developers.trueconf.com	google	AAAA	0				
+dns	developers.trueconf.com	cloudflare	A	0		178.63.53.169		
+dns	developers.trueconf.com	cloudflare	AAAA	0				
+dns	check.livedigital.space	google	A	0		5.8.74.36		
+dns	check.livedigital.space	google	AAAA	0				
+dns	check.livedigital.space	cloudflare	A	0		5.8.74.36		
+dns	check.livedigital.space	cloudflare	AAAA	0				
+dns	macroscop.com	google	A	0		5.129.240.3		
+dns	macroscop.com	google	AAAA	0				
+dns	macroscop.com	cloudflare	A	0		5.129.240.3		
+dns	macroscop.com	cloudflare	AAAA	0				
+dns	doc.macroscop.com	google	A	0		85.198.82.73		
+dns	doc.macroscop.com	google	AAAA	0				
+dns	doc.macroscop.com	cloudflare	A	0		85.198.82.73		
+dns	doc.macroscop.com	cloudflare	AAAA	0				
+dns	cloud.macroscop.com	google	A	0		37.9.5.23		
+dns	cloud.macroscop.com	google	AAAA	0				
+dns	cloud.macroscop.com	cloudflare	A	0		37.9.5.23		
+dns	cloud.macroscop.com	cloudflare	AAAA	0				
+dns	pro.macroscop.com	google	A	0		176.57.67.161		
+dns	pro.macroscop.com	google	AAAA	0				
+dns	pro.macroscop.com	cloudflare	A	0		176.57.67.161		
+dns	pro.macroscop.com	cloudflare	AAAA	0				
+dns	packages.macroscop.com	google	A	0		85.198.82.73		
+dns	packages.macroscop.com	google	AAAA	0				
+dns	packages.macroscop.com	cloudflare	A	0		85.198.82.73		
+dns	packages.macroscop.com	cloudflare	AAAA	0				
+dns	store.ivideon.com	google	A	0		176.53.227.51		
+dns	store.ivideon.com	google	AAAA	0				
+dns	store.ivideon.com	cloudflare	A	0		176.53.227.51		
+dns	store.ivideon.com	cloudflare	AAAA	0				
+dns	bx-static.ivideon.com	google	A	0		18.157.170.248|3.121.95.187		
+dns	bx-static.ivideon.com	google	AAAA	0				
+dns	bx-static.ivideon.com	cloudflare	A	0		18.157.170.248|3.121.95.187		
+dns	bx-static.ivideon.com	cloudflare	AAAA	0				
+dns	packages.ivideon.com	google	A	0		88.212.255.156		
+dns	packages.ivideon.com	google	AAAA	0				
+dns	packages.ivideon.com	cloudflare	A	0		88.212.255.156		
+dns	packages.ivideon.com	cloudflare	AAAA	0				
+dns	updates.iv-cdn.com	google	A	0	firmwares.iv-cdn.com. -> firmwares-eu01.iv-cdn.com.	188.42.40.122		
+dns	updates.iv-cdn.com	google	AAAA	0	firmwares.iv-cdn.com. -> firmwares-eu01.iv-cdn.com.			
+dns	updates.iv-cdn.com	cloudflare	A	0	firmwares.iv-cdn.com. -> firmwares-eu01.iv-cdn.com.	188.42.40.122		
+dns	updates.iv-cdn.com	cloudflare	AAAA	0	firmwares.iv-cdn.com. -> firmwares-eu01.iv-cdn.com.			
+dns	trassircloud.com	google	A	0		176.57.65.148		
+dns	trassircloud.com	google	AAAA	0				
+dns	trassircloud.com	cloudflare	A	0		176.57.65.148		
+dns	trassircloud.com	cloudflare	AAAA	0				
+dns	shop.trassircloud.com	google	A	0		176.57.64.52		
+dns	shop.trassircloud.com	google	AAAA	0				
+dns	shop.trassircloud.com	cloudflare	A	0		176.57.64.52		
+dns	shop.trassircloud.com	cloudflare	AAAA	0				
+dns	confluence.trassir.com	google	A	0		213.33.172.155		
+dns	confluence.trassir.com	google	AAAA	0				
+dns	confluence.trassir.com	cloudflare	A	0		213.33.172.155		
+dns	confluence.trassir.com	cloudflare	AAAA	0				
+dns	support.trassir.com	google	A	0		213.33.172.155		
+dns	support.trassir.com	google	AAAA	0				
+dns	support.trassir.com	cloudflare	A	0		213.33.172.155		
+dns	support.trassir.com	cloudflare	AAAA	0				
+dns	sigma.cloud.trassir.com	google	A	0	cloud.trassir.com.	80.64.105.234|89.208.34.28|79.137.213.180|92.38.235.133|92.38.235.93|217.74.37.20|89.208.79.204|80.64.105.238|95.163.121.70|46.21.255.108|79.137.213.181|89.208.32.160|217.74.37.21|79.137.213.138|92.38.235.44|89.208.32.157|92.38.235.189|80.64.105.230|95.163.104.38|89.208.34.31|80.64.105.226|79.137.213.139|46.21.255.53		
+dns	sigma.cloud.trassir.com	google	AAAA	0	cloud.trassir.com.			
+dns	sigma.cloud.trassir.com	cloudflare	A	0	cloud.trassir.com.	80.64.105.230|95.163.121.70|217.74.37.21|92.38.235.93|89.208.32.157|89.208.79.204|79.137.213.181|92.38.235.133|89.208.34.31|89.208.32.160|217.74.37.20|79.137.213.180|46.21.255.53|92.38.235.189|80.64.105.238|92.38.235.44|80.64.105.234|95.163.104.38|80.64.105.226|46.21.255.108|79.137.213.139|79.137.213.138|89.208.34.28		
+dns	sigma.cloud.trassir.com	cloudflare	AAAA	0	cloud.trassir.com.			
+dns	stratonet.net	google	A	0		85.119.149.185		
+dns	stratonet.net	google	AAAA	0				
+dns	stratonet.net	cloudflare	A	0		85.119.149.185		
+dns	stratonet.net	cloudflare	AAAA	0				
+dns	www.stratonet.net	google	A	0	stratonet.net.	85.119.149.185		
+dns	www.stratonet.net	google	AAAA	0	stratonet.net.			
+dns	www.stratonet.net	cloudflare	A	0	stratonet.net.	85.119.149.185		
+dns	www.stratonet.net	cloudflare	AAAA	0	stratonet.net.			
+rir	AS57363	ORG-CL197-RIPE	CDNvideo-AS				from AS204720 action pref=100; accept ANY | to AS204720 announce AS-CDNVIDEO	
+rir	AS204720	ORG-QL107-RIPE	CDNetworks				from AS57363 accept AS-CDNVIDEO | to AS57363 announce ANY	
+rir	AS60068	ORG-DL201-RIPE	CDN77					
+origin	151.236.80.17					151.236.80.0/24	57363	
+origin	151.236.121.67					151.236.121.0/24	204720	
+origin	78.159.242.19					78.159.242.0/24	204720	
+origin	62.64.23.133					62.64.16.0/20	25159	
+origin	95.217.107.60					95.217.0.0/16	24940	
+origin	178.63.53.169					178.63.0.0/16	24940	
+origin	5.8.74.36					5.8.74.0/24	50340	
+origin	5.129.240.3					5.129.240.0/24	9123	
+origin	85.198.82.73					85.198.82.0/24	9123	
+origin	37.9.5.23					37.9.4.0/23	49505	
+origin	176.57.67.161					176.57.67.0/24	57724	
+origin	176.53.227.51					176.53.224.0/19	50340	
+origin	18.157.170.248					18.156.0.0/14	16509	
+origin	3.121.95.187					3.120.0.0/14	16509	
+origin	88.212.255.156					88.212.255.0/24	50340	
+origin	188.42.40.122					188.42.40.0/24	7979	
+origin	176.57.65.148					176.57.64.0/23	57724	
+origin	176.57.64.52					176.57.64.0/23	57724	
+origin	213.33.172.155					213.33.128.0/17	3216	
+origin	85.119.149.185					85.119.149.0/24	50340	
