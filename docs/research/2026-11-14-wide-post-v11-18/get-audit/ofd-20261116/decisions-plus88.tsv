@@ -1,0 +1,28 @@
+host	decision	url	source	rationale	strict_completed_asns	run_ids	http_success_codes	observed_http_codes
+b2bhumancloud.com	include	https://b2bhumancloud.com/	https://wh-education.ru/privacy-policy	Официальное ERP-направление ООО Рабочие Руки	12389,15774,52043	43820990392,43821760110	200	200
+business.leradata.pro	include	https://business.leradata.pro/contacts/	https://mintrans.gov.ru/activities/%20214/376/377/380	Официальный сайт из реестра ИС ЭПД	12389,15774	43821104725	200	200
+cloudpayments.atlassian.net	hold	https://cloudpayments.atlassian.net/wiki/spaces/KB/overview	https://cloudkassir.ru/	Сторонний Atlassian Cloud; содержимое страницы не подтверждено	15774,52043	43820990392	200	200
+crm.handswork.pro	include	https://crm.handswork.pro/login	https://b2bhumancloud.com/	Публичная HTML-оболочка официального CRM; работа авторизации не проверялась	15774,52043	43821760110	200	200
+dropcat.ediweb.com	include	https://dropcat.ediweb.com/secure/edi/ui/dropcat.html	https://dropcat.ru/	Публичный экран DropCat и диапазон CSS	15774,52043	43821435420	200	200
+ediweb.com	include	https://ediweb.com/ru-ru	https://www.ediweb.ru/	На российскую страницу направляет покрытый реестровый www.ediweb.ru	15774,52043	43821435420,43821850011	200	200
+edo.mig24.online	include	https://edo.mig24.online/	https://mig24.ru/services	Производственный интерфейс ЭДО, точное имя из описания правообладателя	15774,52043	43821850011	200	200
+epd.mig24.online	include	https://epd.mig24.online/	https://epd.mig24.ru/help	Производственный интерфейс ЭПД по инструкции НТСсофт, отдельно от реестровой .ru витрины	15774,52043	43821850011	200	200
+faq.handswork.pro	hold	https://faq.handswork.pro/docs/crm-erp-sistema-rr/	https://b2bhumancloud.com/	Два 503 Maintenance, не доказательство блокировки				503
+handswork.pro	include	https://handswork.pro/	https://wh-education.ru/privacy-policy	Официальная оболочка приложения; CSS проверен отдельным 206	12389,15774,52043	43820990392,43821474881	200	200
+kodedo.mig24.online	include	https://kodedo.mig24.online/	https://epd.mig24.ru/help	Публичная форма поиска кодов, никаких запросов с ИНН не выполнялось	15774,52043	43821850011	200	200
+leradata.pro	include	https://leradata.pro/logon.php	https://business.leradata.pro/info/support/	Официальный вход платформы; редирект с корня и конечная страница отдельно	12389,15774	43821104725	200	200
+m-core.pro	hold	https://m-core.pro/self-employed.html	https://npd.nalog.ru/aggregators/	Два 404, главная относится к другому продукту				404
+m4d.mig24.online	include	https://m4d.mig24.online/	https://mig24.ru/help/orgs	Публичная оболочка сервиса доверенностей из документации	15774,52043	43822012849	200	200
+mapcard.pro	hold	https://mapcard.pro/	https://www.vipservice.ru/contacts/	Два редиректа на vip-pay.ru; источник публикует его сайт, mapcard.pro указан как почта	15774,52043	43820990392	301	301
+market.inwork.net	hold	https://market.inwork.net/contact	https://inwork.net/	Прежний наблюдаемый общий Cloudflare edge; решения в этом окне не менялись				
+npd.walletone.com	hold	https://npd.walletone.com/	https://npd.nalog.ru/credit-orgs/	Два 502 с валидным TLS				502
+orgs.mig24.online	include	https://orgs.mig24.online/	https://mig24.ru/help/orgs	Публичная оболочка управления организацией из документации	15774,52043	43822012849	200	200
+payselection.com	hold	https://payselection.com/	https://www.cbr.ru/psystem/registers/	Повтор DNS: 30 из 30 SERVFAIL, не доказательство блокировки				
+ru-sso.ediweb.com	include	https://ru-sso.ediweb.com/	https://ediweb.com/ru-ru/platforms	Официальный SSO; публичный экран и исходный редирект проверены	15774,52043	43821760110	200	200
+ru.ediweb.com	include	https://ru.ediweb.com/secure/edi/ui/coreplat.html	https://ediweb.com/ru-ru/support/kb/288	CorePlat: подтверждены корневой редирект, конечный HTML и CSS	12389,15774	43821104725	200	200
+russian.works	include	https://russian.works/	https://wh-education.ru/privacy-policy	Официальный B2B-сайт из политики оператора	12389,52043	43820990392,43821474881,43821760110	200	200
+sign.mig24.online	include	https://sign.mig24.online/	https://sign.mig24.ru/help	Публичная оболочка сервиса подписи из документации	15774,52043	43822012849	200	200
+smz.handswork.pro	include	https://smz.handswork.pro/	https://npd.nalog.ru/aggregators/	Опубликованное имя самозанятых; смена ASN дала два завершённых GET	12389,52043	43820622762,43821435420,43821760110	200	200
+www.atol.online	include	https://www.atol.online/	https://atol.online/	Сохраняется утверждённый на +78 брендовый WWW; два 301 на стабильный atol.online, конечный URL проверен отдельно	15774,52043	43820990392	301	301
+www.russian.works	include	https://www.russian.works/	https://russian.works/	Официальный логотип с apex ссылается на точный WWW, подтверждены два 200	12389,52043	43820990392,43821474881,43821760110	200	200
+www.walletone.com	include	https://www.walletone.com/ru/wallet/	https://xn--80aaanetpw3ba4m.xn--p1ai/	Кошелёк по прямой ссылке самой РНКО; не распространять на apex и НПД	12389,52043	43821474881	200	200
