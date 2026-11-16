@@ -132,7 +132,7 @@ def tunnel_interface(conn):
 
 APICOM_PUBLIC_PDF = 'https://apicom.documentolog.com/uploads/files/1750923912_6c2775d06e96f830eb8bf033625eda14.pdf'
 APICOM_MAX_BYTES = 3145728
-APICOM_GET_SECONDS = 120
+APICOM_GET_SECONDS = 42
 
 
 def get_from_tunnel(row, address, interface, timeout):
@@ -486,7 +486,8 @@ def main():
         target_file.write_text(json.dumps(targets),encoding='utf-8')
         config = SimpleNamespace(source='vpnobratno',inventory=str(args.inventory),
             output_dir=str(args.output),targets=str(target_file),max_servers=args.exits,
-            max_attempts=args.attempts,connect_timeout=args.connect_timeout,request_timeout=8)
+            max_attempts=args.attempts,connect_timeout=args.connect_timeout,
+            request_timeout=30 if all(row.get('cohort') == 'public_pdf_full' for row in rows) else 8)
         try:
             code = upstream.run(config)
         finally:
