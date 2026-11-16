@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	limehd.tv	limehd.tv	https://limehd.tv/privacy-policy	ЛАЙМ ЭЙЧ ДИ|Политика	https://www.limehd.ru/
+corporate	candidate	zeroplus.tv	zeroplus.tv	https://zeroplus.tv/contacts	Контакты|Институт развития кино	https://zeroplus.tv/
+corporate	candidate	piligrim.fund	piligrim.fund	https://piligrim.fund/agreement	Пилигрим|Пользовательское соглашение	https://piligrim.fund/about
+corporate	candidate	www.piligrim.fund	www.piligrim.fund	https://www.piligrim.fund/		https://piligrim.fund/agreement
+corporate	candidate	www.zaycev.fm	www.zaycev.fm	https://www.zaycev.fm/contacts	Зайцев.ФМ|Контакты	https://zaycev.net/spages/about.shtml
+corporate	candidate	zaycev.net	zaycev.net	https://zaycev.net/spages/useragreement.shtml	Пользовательское соглашение|ЗАЙЦЕВ.НЕТ	https://zaycev.net/
+corporate	candidate	soundstream.media	soundstream.media	https://soundstream.media/about	Русские Медиа|подкаст	https://soundstream.media/
+corporate	candidate	soundstream.media	soundstream.media	https://soundstream.media/eula	Пользовательское соглашение|Русские Медиа	https://soundstream.media/
+corporate	candidate	digitalrussia.tv	digitalrussia.tv	https://digitalrussia.tv/	Цифровое телевидение|Телеканалы	https://fantv.ru/
