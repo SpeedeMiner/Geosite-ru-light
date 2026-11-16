@@ -30,7 +30,8 @@ sha256sum --check --strict geosite_RU.dat.sha256sum
 
 # This check is local and precedes any release API call. The read-only
 # build job must have rehearsed recovery for these exact numbered bytes.
-if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
+# Scheduled builds only publish rolling; they never create or edit numbered assets.
+if [[ "$GITHUB_EVENT_NAME" != schedule && -n "${NUMBERED_RELEASE:-}" ]]; then
   [[ "$NUMBERED_RELEASE" =~ ^v[0-9]+[.][0-9]+([.][0-9]+)?$ ]]
   [[ "${NUMBERED_DAT_SHA:-}" =~ ^[0-9a-f]{64}$ ]]
   if [[ "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
@@ -62,7 +63,7 @@ published_dat="$(asset_digest geosite_RU.dat)"
 
 # Publish a numbered snapshot from the same verified bundle. Subsequent runs
 # verify its pinned DAT without trying to replace it with a newer rolling DAT.
-if [[ -n "${NUMBERED_RELEASE:-}" ]]; then
+if [[ "$GITHUB_EVENT_NAME" != schedule && -n "${NUMBERED_RELEASE:-}" ]]; then
   [[ "$NUMBERED_RELEASE" =~ ^v[0-9]+[.][0-9]+([.][0-9]+)?$ ]]
   [[ "$NUMBERED_DAT_SHA" =~ ^[0-9a-f]{64}$ ]]
   numbered_id() {
@@ -213,7 +214,7 @@ rolling_title='Optimized RU GeoSite Light'
 {
   printf 'The rolling GeoSite RU Light build. The download URL stays the same.\n\n'
   if [[ -n "${NUMBERED_RELEASE:-}" && "$CANDIDATE_SHA" == "$NUMBERED_DAT_SHA" ]]; then
-    printf 'Current build: [%s](%s/releases/tag/%s).\n\n' \
+    printf 'Current DAT matches [%s](%s/releases/tag/%s).\n\n' \
       "$NUMBERED_RELEASE" "$repo" "$NUMBERED_RELEASE"
   elif [[ -n "${NUMBERED_RELEASE:-}" ]]; then
     printf 'Current build: unnumbered rolling snapshot.\n\n'
