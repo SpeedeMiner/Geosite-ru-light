@@ -1,4 +1,4 @@
-name: GeoSite Russian exit IP and CDN DNS scope check
+name: GeoSite CDN and video exact-only SRS preview
 
 on:
   push:
@@ -9,79 +9,80 @@ permissions:
   contents: read
 
 jobs:
-  dns:
+  preview:
+    name: Verify exact-only candidate and round-trip all SRS
     runs-on: ubuntu-24.04
-    timeout-minutes: 3
+    timeout-minutes: 4
     steps:
-      - name: Compare public DNS and RIPE records without VPN
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: SpeedeMiner/Geosite-ru-server
+          ref: e31b5c30d26299315163050a185dac0f7648e466
+          path: .server-tools
+          persist-credentials: false
+      - name: Build and compare baseline and preview assets
         run: |
           set -euo pipefail
-          python3 - <<'PY'
-          import concurrent.futures
-          import json
+          work="$RUNNER_TEMP/geosite-cdn"
+          mkdir -p "$work"
+          curl -fsSL --max-time 30 --proto '=https' --proto-redir '=https' \
+            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_RU.dat \
+            -o "$work/base.dat"
+          printf '493de38dcb8de4076e8b3659271e92992fc30d3f3b41a4251755af9000cfecf9  %s\n' "$work/base.dat" | sha256sum -c
+          python3 - "$work" <<'PY'
+          import sys
           from pathlib import Path
-          from urllib.parse import urlencode
-          from urllib.request import Request, urlopen
-
-          hosts = """cdnvideo.com www.cdnvideo.com doc.cdnvideo.com globalcloudnetwork.ru dashboard.globalcloudnetwork.ru
-          videomost.com trueconf.com developers.trueconf.com check.livedigital.space macroscop.com
-          doc.macroscop.com cloud.macroscop.com pro.macroscop.com packages.macroscop.com store.ivideon.com
-          bx-static.ivideon.com packages.ivideon.com updates.iv-cdn.com trassircloud.com shop.trassircloud.com
-          confluence.trassir.com support.trassir.com sigma.cloud.trassir.com stratonet.net www.stratonet.net""".split()
-          resolvers = {'google':'https://dns.google/resolve','cloudflare':'https://cloudflare-dns.com/dns-query'}
-
-          def get(url, accept='application/json'):
-              req = Request(url, headers={'Accept':accept})
-              with urlopen(req, timeout=8) as res:
-                  return json.loads(res.read(262144))
-
-          def dns(q):
-              name, host, qt = q
-              r = dict(kind='dns', resolver=name, host=host, query=qt)
-              try:
-                  d = get(resolvers[name] + '?' + urlencode(dict(name=host, type=qt)), 'application/dns-json')
-                  r.update(status=d.get('Status'), answers=[a for a in d.get('Answer',[]) if a.get('type') in (1,5,28)])
-              except (OSError, ValueError) as e:
-                  r['error'] = type(e).__name__
-              return r
-
-          def ripe(asn):
-              r = dict(kind='rir', asn=asn)
-              try:
-                  d = get('https://rest.db.ripe.net/ripe/aut-num/AS' + str(asn) + '.json')
-                  attrs = d['objects']['object'][0]['attributes']['attribute']
-                  r['aut_num'] = next((i['value'] for i in attrs if i['name']=='aut-num'), '')
-                  r['as_name'] = next((i['value'] for i in attrs if i['name']=='as-name'), '')
-                  r['org'] = next((i['value'] for i in attrs if i['name']=='org'), '')
-                  r['relation_57363_204720'] = [i['value'] for i in attrs if i['name'] in ('import','export','mp-import','mp-export') and
-                                               (asn==57363 and 'AS204720' in i['value'] or asn==204720 and 'AS57363' in i['value'])]
-              except (OSError, ValueError, KeyError, IndexError) as e:
-                  r['error'] = type(e).__name__
-              return r
-
-          public_ips = """151.236.80.17 151.236.121.67 78.159.242.19 62.64.23.133 95.217.107.60
-          178.63.53.169 5.8.74.36 5.129.240.3 85.198.82.73 37.9.5.23 176.57.67.161
-          176.53.227.51 18.157.170.248 3.121.95.187 88.212.255.156 188.42.40.122 176.57.65.148
-          176.57.64.52 213.33.172.155 85.119.149.185 158.160.107.154""".split()
-
-          def origin(ip):
-              row = dict(kind='origin', ip=ip)
-              try:
-                  data = get('https://stat.ripe.net/data/network-info/data.json?' + urlencode({'resource':ip}))['data']
-                  row.update(prefix=data.get('prefix'), asns=data.get('asns',[]))
-              except (OSError, ValueError, KeyError) as e:
-                  row['error'] = type(e).__name__
-              return row
-
-          with concurrent.futures.ThreadPoolExecutor(max_workers=8) as p:
-              rows = list(p.map(dns, ((n,h,q) for h in hosts for n in resolvers for q in ('A','AAAA'))))
-              rows.extend(p.map(ripe, (57363,204720,60068)))
-              rows.extend(p.map(origin, public_ips))
-          Path('cdn-dns.jsonl').write_text(''.join(json.dumps(x,sort_keys=True)+'\n' for x in rows))
+          sys.path.insert(0, str(Path('.server-tools/tools').resolve()))
+          from project_geosite import FULL, digest, encode, fields, message, read_ru
+          root = Path(sys.argv[1])
+          source = (root / 'base.dat').read_bytes()
+          _, rules = read_ru(source)
+          hosts = Path('docs/research/2026-11-14-wide-post-v11-18/get-audit/cdn-video-20261116/candidate-plus22.txt').read_text().splitlines()
+          assert len(set(hosts)) == len(hosts) == 22 and all(x.startswith('full:') for x in hosts)
+          for entry in sorted(hosts):
+              host = entry.split(':', 1)[1]
+              assert (FULL, host) not in rules
+              rules[FULL, host] = b'\x08\x03' + message(2, host.encode('ascii'))
+          ru = next(iter(fields(encode(rules))))[1]
+          modified = b''.join(message(1, ru if dict(fields(site))[1] == b'RU' else site) for _, site in fields(source))
+          assert digest(modified) == '5944a8d59c49f979dbcbe89a22cb561fc95b7d2bdc33c31bb88208d62219de6e'
+          (root / 'preview.dat').write_bytes(modified)
           PY
+          curl -fsSL --max-time 40 --proto '=https' --proto-redir '=https' \
+            https://github.com/SagerNet/sing-box/releases/download/v1.13.12/sing-box-1.13.12-linux-amd64.tar.gz \
+            -o "$work/sing-box.tar.gz"
+          printf '1540533adb3df24f5ad5f14b5c7ca3dbc2401b10a1c1eb278fcadcada47ec6c4  %s\n' "$work/sing-box.tar.gz" | sha256sum -c
+          tar -xOzf "$work/sing-box.tar.gz" sing-box-1.13.12-linux-amd64/sing-box > "$work/sing-box"
+          chmod 0700 "$work/sing-box"
+          for type in base preview; do
+            python3 tools/build_geosite_srs.py build --dat "$work/$type.dat" --output-dir "$work/$type" --sing-box "$work/sing-box"
+          done
+          curl -fsSL --max-time 20 --proto '=https' --proto-redir '=https' \
+            https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/v11.20/geosite_srs.sha256sum \
+            -o "$work/published.sha256sum"
+          (cd "$work/base" && sha256sum --check --strict "$work/published.sha256sum")
+          python3 - "$work" > srs-comparison.tsv <<'PY'
+          from pathlib import Path
+          import hashlib
+          import sys
+          root = Path(sys.argv[1])
+          a = {p.name: p for p in (root / 'base').glob('*.srs')}
+          b = {p.name: p for p in (root / 'preview').glob('*.srs')}
+          assert a.keys() == b.keys() and len(a) == 18
+          print('name\tbaseline_sha256\tpreview_sha256\tchanges')
+          for name in sorted(a):
+              old = hashlib.sha256(a[name].read_bytes()).hexdigest()
+              new = hashlib.sha256(b[name].read_bytes()).hexdigest()
+              assert (old != new) == (name == 'geosite_RU.srs'), name
+              print(name, old, new, 'changed' if old != new else 'unchanged', sep='\t')
+          PY
+          cat srs-comparison.tsv
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: geosite-cdn-video-dns
-          path: cdn-dns.jsonl
+          name: geosite-cdn-video-srs-preview
+          path: srs-comparison.tsv
           if-no-files-found: error
           retention-days: 7
