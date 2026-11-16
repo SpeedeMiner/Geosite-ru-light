@@ -1,0 +1,4 @@
+vpn_asn	host	url	http	tls_verify_result	state	curl_exit	content_type	body_bytes_sampled	body_sample_sha256	title	redirect_location	target_ipv4
+43761	developers.trueconf.com	https://developers.trueconf.com/api/server/			vpn_transport_unproven	-1		0				178.63.53.169
+43761	trueconf.com	https://trueconf.com/docs/server-api/ru.html			vpn_transport_unproven	-1		0				95.217.107.60
+43761	support.trassir.com	https://support.trassir.com/			vpn_transport_unproven	-1		0				213.33.172.155
