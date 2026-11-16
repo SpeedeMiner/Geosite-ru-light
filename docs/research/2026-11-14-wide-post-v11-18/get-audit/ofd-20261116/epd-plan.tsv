@@ -1,0 +1,10 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	business.leradata.pro	business.leradata.pro	https://business.leradata.pro/services/elektronnye-perevozochnye-dokumenty-epd/	Электронные перевозочные документы	https://mintrans.gov.ru/activities/%20214/376/377/380
+corporate	candidate	leradata.pro	leradata.pro	https://leradata.pro/logon.php?q=Lw==		https://business.leradata.pro/services/elektronnye-perevozochnye-dokumenty-epd/
+corporate	comparison	leradata.pro	leradata.pro	https://leradata.pro/		https://business.leradata.pro/services/elektronnye-perevozochnye-dokumenty-epd/
+corporate	candidate	ediweb.com	ediweb.com	https://ediweb.com/ru-ru/solutions/docflow/dropcat	DropCat	https://www.ediweb.ru/
+corporate	comparison	ediweb.com	ediweb.com	https://ediweb.com/ru-ru	Эдивеб	https://www.ediweb.ru/
+corporate	candidate	dropcat.ediweb.com	dropcat.ediweb.com	https://dropcat.ediweb.com/secure/edi/ui/dropcat.html	DropCat	https://ediweb.com/ru-ru/support/support
+corporate	control	www.ediweb.ru	www.ediweb.ru	https://www.ediweb.ru/		https://mintrans.gov.ru/activities/%20214/376/377/380
+corporate	control	dropcat.ru	dropcat.ru	https://dropcat.ru/	DropCat	https://ediweb.com/ru-ru/solutions/docflow/dropcat
+corporate	control	epd.platformaofd.ru	epd.platformaofd.ru	https://epd.platformaofd.ru/		https://platformaofd.ru/baza-znaniy/podklyuchenie-k-epd/

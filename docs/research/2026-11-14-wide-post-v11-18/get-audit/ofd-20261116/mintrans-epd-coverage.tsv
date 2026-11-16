@@ -1,0 +1,18 @@
+record	organization	inn	registry_status	connection	listed_site	host	light_ru	server_ru	plus68	link_check
+202209003	АО «ПФ «СКБ Контур»	6663003127	действует до 01.05.2027	Подключен	https://kontur.ru/	kontur.ru	domain:ru	domain:ru	false	same_host
+202209001	АО «Калуга Астрал»	4029017981	действует до 31.12.2026	Подключен	https://astral.ru/	astral.ru	domain:ru	domain:ru	false	same_host
+202209004	ООО «Эдивеб»	7801471082	действует до 17.09.2027	Подключен	https://www.ediweb.ru	www.ediweb.ru	domain:ru	domain:ru	false	same_host
+202209005	ООО «Такском»	7704211201	действует до 01.07.2027	Подключен	https://taxcom.ru/	taxcom.ru	domain:ru	domain:ru	false	-
+202209006	ООО «СберКорус»	7801392271	действует до 31.03.2028	Подключен	https://www.esphere.ru	www.esphere.ru	domain:ru	domain:ru	false	same_host
+202209007	ООО «Компания «Тензор»	7605016030	действует до 26.10.2027	Подключен	https://saby.ru/tms	saby.ru	domain:ru	domain:ru	false	same_host
+202209008	ООО «Эвотор ОФД»	9715260691	действует до 01.08.2027	Подключен	https://platformaofd.ru/	platformaofd.ru	domain:ru	domain:ru	false	same_host
+202305010	ООО «ФораПром»	7723815417	действует до 16.11.2027	Подключен	https://business.leradata.pro/	business.leradata.pro	-	-	false	same_host
+202305011	ООО «Айтиком»	7714407563	действует до 26.10.2027	Подключен	https://uc-itcom.ru	uc-itcom.ru	domain:ru	domain:ru	false	same_host
+202408012	ООО «ОПЕРАТОР-ЦРПТ»	7731376812	действует до 28.03.2027	Подключен	https://xn--80ajghhoc2aj1c8b.xn--p1ai/	xn--80ajghhoc2aj1c8b.xn--p1ai	domain:xn--p1ai	domain:xn--p1ai	false	same_host
+202512013	АО «Точка»	9705120864	действует до 01.12.2026	Подключен	https://tochka.com/	tochka.com	domain:tochka.com	domain:tochka.com	false	-
+202605014	ООО «НТСсофт»	6670237020	действует до 30.09.2027	Подключен	https://epd.mig24.ru/	epd.mig24.ru	domain:ru	domain:ru	false	same_host
+202605015	АО «Энергетические системы и коммуникации»	7709364346	действует до 15.02.2027	Подключен	https://www.1-ofd.ru/	www.1-ofd.ru	domain:ru	domain:ru	false	same_host
+202607016	АО «НИИАС»	7709752846	действует до 01.05.2027	Подключен	https://edo.pkitrans.ru/kedo/	edo.pkitrans.ru	domain:ru	domain:ru	false	same_host
+202608017	ООО «АТИ-Доки»	7802866157	действует до 01.12.2027	В процессе	https://ati-doki.ru/	ati-doki.ru	domain:ru	domain:ru	false	same_host
+202608018	АО «НТЦ СТЭК»	7451019159	действует до 01.01.2028	Подключен	https://stek-trust.ru	stek-trust.ru	domain:ru	domain:ru	false	same_host
+202610019	АО «КОМИТА»	7813061041	действует до 06.06.2027	В процессе	www.comita.ru	www.comita.ru	domain:ru	domain:ru	false	same_host
