@@ -1,0 +1,7 @@
+vpn_asn	asn_ip_metadata	asn_ripestat	verified_by_sources	host	url	http	curl_exit	tls_verify_result	content_type	body_bytes_sampled	body_sample_sha256	target_ipv4	state	title	redirect_location
+15774	15774	15774	2	sign.mig24.online	https://sign.mig24.online/	200	0	0	text/html	1532	80178d9109d757fc8ecbd2292a0370f03f8e00d8fd8bf8052e3a676e3ff63925	178.47.34.84	vpn_body_unproven	МИГ24	
+15774	15774	15774	2	m4d.mig24.online	https://m4d.mig24.online/	200	0	0	text/html; charset=utf-8	10000	9227742ee74416b68724c8ed4d524c55e49c841463a4170afe15bdb6b99e7f75	178.47.34.84	vpn_visible_review	МЧД	
+15774	15774	15774	2	orgs.mig24.online	https://orgs.mig24.online/	200	0	0	text/html	617	3743d179c99eef09a457fe548f7bcf68909cbb4f8282781da4038edfebcb9f74	178.47.34.84	vpn_body_unproven	МИГ24.Организации	
+52043	52043	52043	2	sign.mig24.online	https://sign.mig24.online/	200	0	0	text/html	1532	80178d9109d757fc8ecbd2292a0370f03f8e00d8fd8bf8052e3a676e3ff63925	178.47.34.84	vpn_body_unproven	МИГ24	
+52043	52043	52043	2	m4d.mig24.online	https://m4d.mig24.online/	200	0	0	text/html; charset=utf-8	10000	9227742ee74416b68724c8ed4d524c55e49c841463a4170afe15bdb6b99e7f75	178.47.34.84	vpn_visible_review	МЧД	
+52043	52043	52043	2	orgs.mig24.online	https://orgs.mig24.online/	200	0	0	text/html	617	3743d179c99eef09a457fe548f7bcf68909cbb4f8282781da4038edfebcb9f74	178.47.34.84	vpn_body_unproven	МИГ24.Организации	
