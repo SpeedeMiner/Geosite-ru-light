@@ -211,6 +211,8 @@ jobs:
         id: semantic_gate
         # Fail closed before production publication, not just in PR builds.
         if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        env:
+          LIVE_SOURCES_FRESH: ${{ steps.source_downloads.outputs.all_tier2_fresh }}
         shell: bash
         run: |
           set -euo pipefail
@@ -251,15 +253,15 @@ jobs:
             exit "$RESULT"
           else
             test -s geosite_RU_semantic_delta.md
-            if [ "$GITHUB_EVENT_NAME" = schedule ]; then
-              echo "### Live discovery is report-only. Publish via reviewed locked inputs." >> "$GITHUB_STEP_SUMMARY"
+            if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$LIVE_SOURCES_FRESH" != true ]; then
+              echo "### Not all live sources were freshly verified. Publication skipped." >> "$GITHUB_STEP_SUMMARY"
             else
               echo "publish_allowed=true" >> "$GITHUB_OUTPUT"
             fi
           fi
 
       - name: Build and round-trip verify sing-box rule-sets
-        if: github.event_name != 'schedule' && steps.semantic_gate.outputs.publish_allowed == 'true'
+        if: steps.semantic_gate.outputs.publish_allowed == 'true'
         run: bash tools/build_geosite_srs.sh --dat "$OUTPUT_FILE"
 
       - name: Verify numbered release recovery
@@ -360,7 +362,7 @@ jobs:
 
       - name: Seal approved release bundle
         id: release_bundle
-        if: github.ref == 'refs/heads/main' && github.event_name != 'schedule' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && steps.semantic_gate.outputs.publish_allowed == 'true'
         run: |
           set -euo pipefail
           files=("$OUTPUT_FILE" "$OUTPUT_SHA_FILE" "$CATEGORY_FILE" "$HYDRA_APPEND_FILE" "$NEW_SOURCES_REPORT_FILE")
@@ -395,7 +397,7 @@ jobs:
 
   publish:
     needs: build
-    if: github.ref == 'refs/heads/main' && github.event_name != 'schedule' && github.event_name != 'pull_request' && needs.build.outputs.publish_allowed == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && needs.build.outputs.publish_allowed == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:

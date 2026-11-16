@@ -7,7 +7,8 @@ blocking regression takes the review path instead of publishing.
 
 | Semantic gate | Weekly schedule | PR, main push or manual build |
 | --- | --- | --- |
-| Pass | Existing release path | Existing behavior |
+| Pass, with fresh sources on a scheduled run | Update the rolling release and CDN branch after DAT/SRS verification | Existing behavior |
+| Pass using a cached fallback | Keep public artifacts, retain source diagnostics | Not applicable to locked inputs |
 | Unapproved RU additions only, with existing approval and BLOCK checks passing | Keep the published DAT, retain the candidate artifact, update the weekly draft | Fail the build, never publish the candidate |
 | Coverage regression, BLOCK change, invalid input, or release-reference error | Fail the build and retain available diagnostics, no draft update | Fail the build |
 

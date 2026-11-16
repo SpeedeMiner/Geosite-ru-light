@@ -71,6 +71,26 @@ class PublishBoundaryTest(unittest.TestCase):
         self.assertIn("numbered recovery receipt", run.stderr)
         self.assertFalse(self.called.exists())
 
+    def test_schedule_keeps_numbered_release_out_of_rolling_publication(self):
+        self.env.update(GITHUB_EVENT_NAME="schedule", NUMBERED_RELEASE="v11.21",
+                        NUMBERED_DAT_SHA=self.candidate_sha, NUMBERED_RECOVERY_BASELINE="v11.20")
+        fake = self.path / "gh"
+        fake.write_text(
+            f"#!/bin/sh\nprintf '%s\\n' \"$*\" >> '{self.called}'\n"
+            + f"case \"$1 $2\" in\n"
+            + f"  'api repos/Owner/Repo/git/ref/heads/main') echo '{self.env['GITHUB_SHA']}' ;;\n"
+            + "  'api repos/Owner/Repo/releases/tags/latest-optimized') echo "
+            + f"'{{\"assets\":[{{\"name\":\"geosite_RU.dat\",\"digest\":\"sha256:{self.candidate_sha}\"}}]}}' ;;\n"
+            + "  *) exit 42 ;;\n"
+            + "esac\n"
+        )
+        run = self.run_publisher()
+        self.assertEqual(run.returncode, 42, run.stderr)
+        self.assertEqual(self.called.read_text().splitlines(),
+                         ["api repos/Owner/Repo/git/ref/heads/main --jq .object.sha",
+                          "api repos/Owner/Repo/releases/tags/latest-optimized",
+                          "auth setup-git --hostname github.com"])
+
     def test_tampered_asset_stops_before_any_remote_call(self):
         (self.bundle / FILES[2]).write_text("changed\n")
         self.assertNotEqual(self.run_publisher().returncode, 0)

@@ -8,13 +8,16 @@ The build has two modes.
   assets the record also carries the release tag, asset ID and upstream
   digest observed at review. The release URL is not a trust anchor: the
   expected bytes are checked after download. A mismatch is a hard failure.
-- Monday runs use the live sources and keep the existing bounded Tier-2
-  fallback. They produce a JSON comparison of source hashes and the v2fly
-  revision against the lock, and run the routing-policy gate as before.
-  They can open the existing review draft for unreviewed RU additions, but
-  never publish directly. The live report does not change the lock or
-  authorize a release. Reviewed upstream updates are promoted by updating
-  the lock in a PR, along with routing approvals when needed.
+- Monday runs (00:00 UTC) build from live sources and compare their hashes
+  and the v2fly revision against the lock. With all sources freshly fetched
+  and the semantic gate and DAT/SRS checks passing, they update the
+  `latest-optimized` rolling release and the CDN `release` branch.
+  Identical assets are not uploaded again. A cached Tier-2 fallback is
+  usable only for diagnostics and review, never for scheduled publication.
+  Unapproved RU additions can open or update the existing review draft
+  without changing public artifacts. The schedule does not change the lock
+  or create or modify numbered releases. Reviewed source changes can still
+  be pinned in a PR, with routing approvals when needed.
 
 The initial lock was verified against the exact inputs used to build v11.6.
 It does not change any rules, release tags or numbered assets. The JSON
