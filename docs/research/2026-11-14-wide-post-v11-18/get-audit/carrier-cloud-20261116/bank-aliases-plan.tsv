@@ -1,0 +1,11 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	perevod-korona.biz	perevod-korona.biz	https://perevod-korona.biz/		https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.info	perevod-korona.info	https://perevod-korona.info/		https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.org	perevod-korona.org	https://perevod-korona.org/		https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	perevod-korona.pro	perevod-korona.pro	https://perevod-korona.pro/		https://www.cbr.ru/banking_sector/credit/cowebsites/
+corporate	candidate	xn--80abkdqhcx2axc5i.net	xn--80abkdqhcx2axc5i.net	https://xn--80abkdqhcx2axc5i.net/		https://www.cbr.ru/finorg/foinfo/?id=1315037837676
+corporate	control	kk.ru	kk.ru	https://kk.ru/requisites/	Кубань Кредит	https://www.cbr.ru/finorg/foinfo/?id=1315037837676
+corporate	control	koronapay.com	koronapay.com	https://koronapay.com/		https://www.cbr.ru/finorg/foinfo/?id=1315037837646
+corporate	candidate	eltex-co.com	eltex-co.com	https://eltex-co.com/download/	Eltex	https://docs.eltex-co.ru/display/dgen/Eltex.Guides%2BEN
+corporate	candidate	api.eltex-co.com	api.eltex-co.com	https://api.eltex-co.com/storage/banner_base/17475689086829c90c3b429		https://eltex-co.com/support/
+corporate	candidate	academy.eltex-co.com	academy.eltex-co.com	https://academy.eltex-co.com/	Eltex	https://eltex-co.com/support/
