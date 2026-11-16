@@ -1,4 +1,4 @@
-name: GeoSite TRASSIR and Macroscop official public paths
+name: GeoSite public CDN and video follow-up
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: geosite-vpnobratno-trassir-20261116
+  group: geosite-vpnobratno-cdn-followup-20261116
   cancel-in-progress: false
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        batch: [trassir]
+        batch: [followup]
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -101,7 +101,7 @@ jobs:
               timeout --signal=TERM --kill-after=6s 7m \
               python3 -B "$AUDIT/vpnobratno_get.py" \
                 "$AUDIT/cdn-video-20261116/${{ matrix.batch }}-plan.tsv" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12
+                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 12 --exclude-asn 12389
 
       - name: Upload observation and diagnostic reports
         if: always()
