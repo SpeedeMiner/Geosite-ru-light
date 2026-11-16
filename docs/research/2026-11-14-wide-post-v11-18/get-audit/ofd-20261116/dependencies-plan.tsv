@@ -1,0 +1,9 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	crm.handswork.pro	crm.handswork.pro	https://crm.handswork.pro/login		https://b2bhumancloud.com/
+corporate	candidate	faq.handswork.pro	faq.handswork.pro	https://faq.handswork.pro/docs/crm-erp-sistema-rr/		https://b2bhumancloud.com/
+corporate	comparison	faq.handswork.pro	faq.handswork.pro	https://faq.handswork.pro/		https://b2bhumancloud.com/
+corporate	candidate	ru-sso.ediweb.com	ru-sso.ediweb.com	https://ru-sso.ediweb.com/	SSO	https://ediweb.com/ru-ru/platforms
+corporate	control	ediweb.com	ediweb.com	https://ediweb.com/ru-ru/platforms		https://ediweb.com/ru-ru
+corporate	control	dropcat.ediweb.com	dropcat.ediweb.com	https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css		https://dropcat.ediweb.com/secure/edi/ui/dropcat.html
+corporate	control	leradata.pro	leradata.pro	https://leradata.pro/css/styles.css		https://leradata.pro/logon.php
+corporate	control	handswork.pro	handswork.pro	https://handswork.pro/assets/style-BD5tlGNt.css		https://handswork.pro/

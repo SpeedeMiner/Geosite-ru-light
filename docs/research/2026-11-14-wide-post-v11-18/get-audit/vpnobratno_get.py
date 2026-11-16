@@ -31,6 +31,8 @@ TRANSPORT = 'vpnobratno_openvpn'
 MAX_TARGETS = 10
 # Exact public documentation URLs whose bodies exceed the ordinary download cap.
 PUBLIC_DOC_RANGE = {
+    'https://handswork.pro/assets/style-BD5tlGNt.css': '0-4095',
+    'https://dropcat.ediweb.com/secure/edi/ui/418.bundle.c4da298bf3cc0f67.css': '0-4095',
     'https://static.konsol.pro/static/js/main-03f87c13.js': '0-4095',
     'https://cdn.antilopay.com/index.js': '0-4095',
     'https://simples.work/': '0-16383',

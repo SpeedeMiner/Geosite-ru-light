@@ -1,0 +1,5 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	smz.handswork.pro	smz.handswork.pro	https://smz.handswork.pro/	Подработка в РР	https://npd.nalog.ru/aggregators/
+corporate	candidate	russian.works	russian.works	https://russian.works/	Рабочие Руки	https://smz.handswork.pro/
+corporate	comparison	www.russian.works	www.russian.works	https://www.russian.works/		https://russian.works/
+corporate	control	b2bhumancloud.com	b2bhumancloud.com	https://b2bhumancloud.com/		https://russian.works/
