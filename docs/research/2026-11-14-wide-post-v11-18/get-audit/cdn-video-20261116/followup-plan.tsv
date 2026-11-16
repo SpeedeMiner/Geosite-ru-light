@@ -1,0 +1,6 @@
+cohort	type	rule	host	url	markers	source
+corporate	candidate	sigma.cloud.trassir.com	sigma.cloud.trassir.com	https://sigma.cloud.trassir.com/user-login	TRASSIR	https://trassircloud.com/cloud-camera-instruction
+corporate	control	trassircloud.com	trassircloud.com	https://trassircloud.com/robots.txt		https://trassircloud.com/faq
+corporate	candidate	trueconf.com	trueconf.com	https://trueconf.com/docs/server-api/ru.html	TrueConf	https://developers.trueconf.ru/group/api/
+corporate	control	www.cdnvideo.com	www.cdnvideo.com	https://www.cdnvideo.com/about_us/	CDNvideo	https://www.cdnvideo.com/
+corporate	candidate	check.livedigital.space	check.livedigital.space	https://check.livedigital.space/		https://labconsalt.ru/obuchenie/kak-podklyuchitsya/
