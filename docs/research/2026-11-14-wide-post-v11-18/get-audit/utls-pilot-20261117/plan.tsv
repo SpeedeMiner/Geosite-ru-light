@@ -1,0 +1,4 @@
+cohort	type	rule	host	url	markers	source
+corporate	control	s3.objstor.cloud4u.com	s3.objstor.cloud4u.com	https://s3.objstor.cloud4u.com/		https://www.cloud4u.ru/documentation/obektnoe-khranilishche-s3/1-1-parametry-dlya-podklyucheniya-k-obektnomu-khranilishchu-s3-v-cloud4u/
+corporate	control	docs.k2.cloud	docs.k2.cloud	https://docs.k2.cloud/ru/startguide.html		https://docs.k2.cloud/ru/startguide.html
+corporate	control	console.k2.cloud	console.k2.cloud	https://console.k2.cloud/	Консоль	https://k2.cloud/

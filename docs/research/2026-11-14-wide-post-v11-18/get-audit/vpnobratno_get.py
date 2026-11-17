@@ -465,7 +465,51 @@ def asn_arg(value):
     return int(match[1])
 
 
-def attach(transport, rows, observations_path, exclude_asns=()):
+TLS_COMPARE_STATUSES = frozenset((403,))
+TLS_COMPARE_CURL_ERRORS = frozenset((35, 51, 60, 77, 83, 90, 91))
+TLS_COMPARE_PROFILES = ('go', 'chrome_auto_http1')
+
+
+def tls_compare_needed(row, primary):
+    # Keep specialized trust, Range, cookies and IP-echo checks out of this lane.
+    return (row.get('cohort') == 'corporate' and row['url'] not in PUBLIC_DOC_RANGE
+            and (primary['http'] in TLS_COMPARE_STATUSES
+                 or primary['curl_exit'] in TLS_COMPARE_CURL_ERRORS))
+
+
+def write_tls_comparison(binary, path, row, address, interface, primary):
+    """Keep secondary evidence separate from the routing verdict and VPN counts."""
+    check_url(row['url'])
+    target = ip_address(address)
+    if target.version != 4 or not target.is_global or target.is_multicast:
+        raise ValueError('public IPv4 required inside the tunnel')
+    argv = [str(binary), '--url', row['url'], '--ip', str(target),
+            '--interface', tunnel_interface(interface), '--timeout', '4']
+    out = dict(url=row['url'], target_ipv4=str(target), vpn_asn=primary['vpn_asn'],
+               primary_http=primary['http'], primary_curl_exit=primary['curl_exit'],
+               observed_at=primary['observed_at'], purpose='diagnostic_only',
+               http_method='GET', request_protocol='HTTP/1.1', results=[])
+    try:
+        run = subprocess.run(argv, capture_output=True, text=True, timeout=10,
+                             env={k: os.environ[k] for k in ('LANG','LC_ALL') if k in os.environ})
+        if run.returncode != 0:
+            raise ValueError('helper returned a nonzero exit code')
+        results = json.loads(run.stdout)
+        if (not isinstance(results, list) or len(results) != 2
+                or any(not isinstance(x, dict) for x in results)
+                or tuple(x.get('profile') for x in results) != TLS_COMPARE_PROFILES):
+            raise ValueError('invalid helper result')
+        # Copy only the documented fields and never log subprocess stderr or body.
+        fields = ('profile','stage','status','tls_version','tls_verified','alpn','http_version',
+                  'content_type','body_bytes','body_sha256','body_complete')
+        out['results'] = [{k: item[k] for k in fields if k in item} for item in results]
+    except (OSError, subprocess.TimeoutExpired, ValueError):
+        out['state'] = 'helper_unavailable'
+    with path.open('a', encoding='utf-8') as f:
+        f.write(json.dumps(out, ensure_ascii=False, sort_keys=True) + '\n')
+
+
+def attach(transport, rows, observations_path, exclude_asns=(), tls_compare=None, primary_timeout=None):
     by_id = {target['id']:row for target,row in zip(catalogue(rows)['targets'],rows)}
     routed = {'tun':'','metadata':None}
     wait = transport.wait_for_tunnel
@@ -518,6 +562,7 @@ def attach(transport, rows, observations_path, exclude_asns=()):
         if not routed['tun']:
             raise transport.ProbeError('no verified OpenVPN interface')
         row = by_id[target['id']]
+        timeout = min(timeout, primary_timeout) if primary_timeout is not None else timeout
         try:
             a, aaaa = transport.call_with_wall_clock_timeout(
                 lambda: transport.resolve_domain_families(target['domain'],max(2,timeout//2)),
@@ -541,6 +586,9 @@ def attach(transport, rows, observations_path, exclude_asns=()):
                       asn_conflict=False,verified_by_sources=exit_info['verified_by_sources'])
         with observations_path.open('a',encoding='utf-8') as f:
             f.write(json.dumps(record,ensure_ascii=False,sort_keys=True)+'\n')
+        if tls_compare is not None and address and tls_compare_needed(row, record):
+            write_tls_comparison(tls_compare, observations_path.with_name('tls-comparison.jsonl'),
+                                 row, address, routed['tun'], record)
         status = record['http']
         return {
             'SOURCE':'vpn_gate','OBSERVED_AT':transport.utc_now(),'TARGET_ID':target['id'],
@@ -602,10 +650,16 @@ def main():
     parser.add_argument('--exclude-asn',type=asn_arg,action='append',default=[])
     parser.add_argument('--attempts',type=int,choices=range(1,7),default=6)
     parser.add_argument('--connect-timeout',type=int,choices=range(5,31),default=12)
+    parser.add_argument('--tls-compare', type=Path,
+                        help='optional absolute path to the audited Go/uTLS diagnostic helper')
     args = parser.parse_args()
     try:
         require_namespace()
         validate_upstream(args.upstream)
+        if args.tls_compare is not None and (not args.tls_compare.is_absolute()
+                or args.tls_compare.is_symlink() or not args.tls_compare.is_file()
+                or not os.access(args.tls_compare, os.X_OK)):
+            raise ValueError('--tls-compare requires an absolute executable path')
         rows = records(args.plan)
         targets = catalogue(rows)
         if args.attempts < args.exits:
@@ -616,7 +670,8 @@ def main():
     sys.path.insert(0,str(args.upstream.resolve()))
     upstream = importlib.import_module('vpn_gate')
     scoped = args.output / 'vpnobratno-observations.jsonl'
-    skipped = attach(upstream,rows,scoped,args.exclude_asn)
+    primary_timeout = 30 if any(row.get('cohort') in ('public_pdf_full', 'smart_public_file') for row in rows) else 8
+    skipped = attach(upstream,rows,scoped,args.exclude_asn,args.tls_compare,primary_timeout)
     for sig in (signal.SIGTERM,signal.SIGINT):
         signal.signal(sig,upstream.handle_termination_signal)
     with TemporaryDirectory() as tmp:
@@ -625,7 +680,7 @@ def main():
         config = SimpleNamespace(source='vpnobratno',inventory=str(args.inventory),
             output_dir=str(args.output),targets=str(target_file),max_servers=args.exits,
             max_attempts=args.attempts,connect_timeout=args.connect_timeout,
-            request_timeout=30 if any(row.get('cohort') in ('public_pdf_full', 'smart_public_file') for row in rows) else 8)
+            request_timeout=min(30, primary_timeout + (5 if args.tls_compare else 0)))
         try:
             code = upstream.run(config)
         finally:

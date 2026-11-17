@@ -6,7 +6,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from vpnobratno_get import body_sample_limit, BODY_LIMIT, MAX_TARGETS, asn_arg, attach, catalogue, echo_matches_exit, finish_code, observation, get_from_tunnel, summarize, validate_upstream
+from vpnobratno_get import body_sample_limit, BODY_LIMIT, MAX_TARGETS, asn_arg, attach, catalogue, echo_matches_exit, finish_code, observation, get_from_tunnel, summarize, validate_upstream, tls_compare_needed
 
 URL = 'https://service.example/public?q=one'
 ROW = dict(host='service.example',url=URL,markers='pilot')
@@ -277,6 +277,39 @@ class VpnObratnoGetTests(unittest.TestCase):
             r=json.loads(path.read_text())
             self.assertEqual((r['target_ipv4'],r['state'],r['vpn_asn']),('8.8.8.8','vpn_marker',64496))
             self.assertFalse(r['fresh_ru_credit'])
+
+    def test_utls_comparison_only_for_opted_in_public_disputes(self):
+        row = dict(ROW, cohort='corporate')
+        base = dict(http=403, curl_exit=0)
+        self.assertTrue(tls_compare_needed(row, base))
+        self.assertTrue(tls_compare_needed(row, dict(http=None, curl_exit=35)))
+        for http, rc in [(200, 0), (429, 0), (None, 28)]:
+            self.assertFalse(tls_compare_needed(row, dict(http=http, curl_exit=rc)))
+        self.assertFalse(tls_compare_needed(dict(row, cohort='nspk_trust'), base))
+        self.assertFalse(tls_compare_needed(dict(row, cohort='ip_echo'), base))
+
+    def test_utls_compares_same_pinned_url_and_keeps_primary_403(self):
+        row = dict(ROW, cohort='corporate')
+        statuses = [{'profile': 'go', 'status': 403, 'tls_verified': True},
+                    {'profile': 'chrome_auto_http1', 'status': 200, 'tls_verified': True}]
+        with TemporaryDirectory() as tmp:
+            observations = pathlib.Path(tmp)/'vpnobratno-observations.jsonl'
+            transport = fake_transport()
+            attach(transport, [row], observations, tls_compare=pathlib.Path('/tmp/geosite-tlscompare'))
+            transport.wait_for_tunnel()
+            with patch('vpnobratno_get.get_from_tunnel',
+                       return_value=(0, dict(STATS, response_code=403), b'denied')), \
+                 patch('vpnobratno_get.subprocess.run',
+                       return_value=SimpleNamespace(returncode=0, stdout=json.dumps(statuses))) as run:
+                out = transport.test_target(catalogue([row])['targets'][0], EXIT, {}, 8)
+            argv = run.call_args.args[0]
+            self.assertEqual(argv[1:7], ['--url', URL, '--ip', '8.8.8.8', '--interface', 'tun0'])
+            self.assertEqual(out['HTTP_STATUS'], 403)
+            self.assertEqual(json.loads(observations.read_text())['http'], 403)
+            secondary = json.loads(observations.with_name('tls-comparison.jsonl').read_text())
+            self.assertEqual((secondary['purpose'], secondary['primary_http']), ('diagnostic_only', 403))
+            self.assertEqual(secondary['results'], statuses)
+            self.assertNotIn('vpn_exit_ip', secondary)
 
     def test_no_public_ipv4_seals_dns_only_observation(self):
         with TemporaryDirectory() as tmp:
