@@ -1,25 +1,60 @@
 # GeoSite RU Light
 
-Готовая клиентская база доменных правил. Для Xray/V2Ray используйте
-[`geosite_RU.dat`](https://github.com/SpeedeMiner/Geosite-ru-light/releases/latest/download/geosite_RU.dat).
+Компактная база доменных правил для **раздельной маршрутизации России, Беларуси и Казахстана**. Помогает направлять региональные сервисы напрямую, а для остальных сайтов выбирать маршрут отдельно. В центре проекта не список блокировок, а покрытие сервисов: от банков, доставки и госуслуг до ЭДО, облачных API, медиа и форумов. Это доменная база GeoSite, а не база IP-адресов GeoIP.
 
-## sing-box
+**Срез [v11.21](https://github.com/SpeedeMiner/Geosite-ru-light/releases/tag/v11.21):** 4 619 правил `RU` (3 064 суффиксных и 1 555 точных), 44 правила `BLOCK` и 1 003 правила в 16 отдельных категориях Hydra. Всего 18 категорий и 114 562 байта в DAT. В [GeoSite RU Server v11.21](https://github.com/SpeedeMiner/Geosite-ru-server/releases/tag/v11.21) — одна категория `RU` с 4 507 правилами.
 
-В [последнем релизе](https://github.com/SpeedeMiner/Geosite-ru-light/releases/latest)
-и ветке `release` публикуется отдельный бинарный rule-set для каждой категории DAT.
+## Что отличает сборку
 
-| Категория | Файл |
+- **Точные правила вместо широких исключений.** `full:` добавляет только нужный хост, например API, кабинет или CDN-зависимость сервиса. Выбранные зоны России, Беларуси и Казахстана свёрнуты в суффиксы. Глобальные зоны `.com`, `.net` и `.org` целиком в `RU` не добавляются. `4pda.to` и его поддомены не покрываются `RU`.
+- **Списки источников проходят отбор.** Сборщик использует выбранные категории и положительные правила, удаляет дубли и вложенные правила. Блокировочные ленты не превращаются в DIRECT. В Light локальный `BLOCK` и отдельные наборы Hydra не смешиваются с `RU` и могут получить свои действия в конфигурации клиента.
+- **Есть собственное исследование и проверяемые правки.** Для новых точечных правил фиксируются принадлежность хоста, публичный HTTPS-путь и, где это требовалось, результаты из независимых российских сетей. Успешный GET не приравнивается к рабочему входу, оплате или видеопотоку. В [v11.21](docs/v11-21-reviewed-services.md) вошли 172 таких точных правила без удалений и без изменений остальных категорий. [Журнал исследования](https://github.com/SpeedeMiner/Geosite-ru-light/blob/research/geosite-ru-wide-20261114-1810/docs/research/2026-11-14-wide-post-v11-18/JOURNAL.md)
+- **Публикация проверяется до выкладки.** Номерные сборки воспроизводятся из зафиксированных входов с SHA-256. CI сравнивает покрытие с действующим выпуском, проверяет точные правила и суффиксы в SRS после декомпиляции и не пропускает неутверждённые добавления. [Воспроизводимость](docs/reproducible-build.md) · [Откат](docs/release-recovery.md)
+
+## Вклад источников в RU
+
+**Локальный список добавляет 1 667 правил, которые не покрываются внешними источниками в этой сборке.** Это **36,09%** готового `RU`: 1 555 точных хостов и 112 суффиксов. Без `local/ru.txt` остаётся **2 952 правила** при тех же внешних источниках, 18 настроенных корнях и той же политике фильтрации. Локальный список увеличивает эту базу на **56,47%**. Вместе с 18 корнями вклад проекта, по атрибуции сборщика, составляет **1 685 правил (36,48%)**, вклад внешних входов — **2 934 (63,52%)**.
+
+| Источник правил RU | Правил в сборке | Доля RU | Выпадет без этого входа |
+| --- | ---: | ---: | ---: |
+| [Локальный список проекта](local/ru.txt) | 1 667 | 36,09% | 1 667 |
+| [Runetfreedom](https://github.com/runetfreedom/russia-blocked-geosite) | 1 594 | 34,51% | 142 |
+| [DigneZzZ/routing](https://github.com/DigneZzZ/routing) | 827 | 17,90% | 0 |
+| [Hydra / roscomvpn-geosite](https://github.com/hydraponique/roscomvpn-geosite) | 175 | 3,79% | 3 |
+| [Davoyan / category-ru-legacy](https://github.com/Davoyan/mihomo-rule-sets) | 139 | 3,01% | 139 |
+| [mvrvntn/routing](https://github.com/mvrvntn/routing) | 86 | 1,86% | 56 |
+| [w1zardz / ru-direct-domains](https://github.com/w1zardz/amnezia-vpn-russia-split-tunneling) | 43 | 0,93% | 43 |
+| [GrimbirdUsers / ru-routing-dat](https://github.com/GrimbirdUsers/ru-routing-dat) | 40 | 0,87% | 34 |
+| [Корни, настроенные проектом](tools/ru-geosite-filter/common.go) | 18 | 0,39% | — |
+| [Yularzhi / geosite_russia](https://github.com/Yularzhi/geosite_russia) | 16 | 0,35% | 16 |
+| [vpnyasha/geosite](https://github.com/vpnyasha/geosite) | 9 | 0,19% | 8 |
+| [kyoresuas / ru-direct](https://github.com/kyoresuas/ru-direct) | 4 | 0,09% | 4 |
+| [kirilllavrov / RU-domain-list-for-whitelist](https://github.com/kirilllavrov/RU-domain-list-for-whitelist) | 1 | 0,02% | 1 |
+| [v2fly / domain-list-community](https://github.com/v2fly/domain-list-community), прямой импорт | 0 | 0,00% | 0 |
+| **Итого RU** | **4 619** | **100%** | — |
+
+Доли рассчитаны **по правилам в готовой категории RU**, а не по количеству сайтов, трафику или доле Рунета. Повторяющееся правило засчитано один раз, первому входу по фактическому порядку сборки. Для последнего столбца входы исключались **по одному** при неизменных остальных источниках и политике точности. Считалось покрытие, потерянное относительно опубликованного DAT, с учётом суффиксов. Столбец не суммируется. Например, DigneZzZ даёт 827 правил по порядку загрузки, но в этом срезе остальные входы их покрывают. Прямой импорт v2fly не дал отдельной дельты, однако v2fly также определяет выбор категорий в DAT Runetfreedom. Числа Hydra в таблице относятся только к `RU`. Другие 16 категорий Hydra и локальный `BLOCK` посчитаны отдельно.
+
+Расчёт сделан на [закреплённых входах v11.21](https://github.com/SpeedeMiner/Geosite-ru-light/blob/v11.21/data/geosite-inputs.lock.json). Полная пересборка побайтно совпала с опубликованным DAT. Варианты без одного входа — измерение перекрытий, а не выпуски для использования. «Локальный» означает, что правило пришло из файла проекта и не покрывается другими входами этой сборки. Это не означает, что домена нет ни в одном другом публичном списке.
+
+## Скачать и подключить
+
+| Назначение | Файл |
 | --- | --- |
-| `RU` | [geosite_RU.srs](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_RU.srs) |
-| `BLOCK` | [geosite_BLOCK.srs](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_BLOCK.srs) |
-| Категории Hydra, например `GOOGLE-DEEPMIND`, `GOOGLE-PLAY`, `YOUTUBE` | [Все наборы](https://github.com/SpeedeMiner/Geosite-ru-light/tree/release) |
+| Xray / V2Ray, Light | [`geosite_RU.dat` из latest-optimized](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_RU.dat) |
+| sing-box, `RU` | [`geosite_RU.srs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_RU.srs) |
+| sing-box, `BLOCK` | [`geosite_BLOCK.srs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_BLOCK.srs) |
+| sing-box, отдельные категории Hydra | [Все SRS в ветке release](https://github.com/SpeedeMiner/Geosite-ru-light/tree/release) |
+| GeoSite Server, только `RU` | [Отдельная серверная сборка](https://github.com/SpeedeMiner/Geosite-ru-server/releases) |
+| Проверка SHA-256 | [DAT](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_RU.dat.sha256sum) · [все SRS](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_srs.sha256sum) |
 
-[SHA-256 для всех .srs](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_srs.sha256sum).
-Публикуется бинарный формат v1. Точные правила DAT становятся `domain`,
-а правила для домена и его поддоменов становятся `domain_suffix`. Сами
-наборы не задают `DIRECT`, `PROXY` или блокировку.
+Для фиксированной конфигурации используйте [номерные релизы](https://github.com/SpeedeMiner/Geosite-ru-light/releases). Плавающий `latest-optimized` и ветка `release` обновляются после проверок, в том числе по понедельникам в 00:00 UTC на свежих входах. Неутверждённые новые правила отправляются на ручную проверку. В ветке CDN только DAT и SRS. Контрольные суммы хранятся в GitHub Releases. Если jsDelivr ещё отдаёт старый кеш, используйте GitHub Release или файл по SHA коммита ветки `release` и проверьте хэш.
 
-Пример элемента массива `route.rule_set`:
+В Xray указывайте `geosite:ru` и `geosite:block` в правилах маршрутизации. Сам файл DAT не назначает выходы. Доступны также [DAT через jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.dat) и [RU SRS через jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.srs).
+
+### Пример для sing-box
+
+Добавьте элемент в массив `route.rule_set`:
 
 ```json
 {
@@ -30,11 +65,9 @@
 }
 ```
 
-Укажите тег в `route.rules[].rule_set` и назначьте нужное действие. Если
-используете `BLOCK` и отдельные проксируемые категории как исключения из
-`RU`, расположите их правила раньше `RU`.
+Укажите этот тег в `route.rules[].rule_set` и назначьте нужное действие. SRS публикуются в бинарном формате v1. Точное правило DAT становится `domain`, суффикс — `domain_suffix`. Сами наборы не задают `DIRECT`, `PROXY` или блокировку. Если используете `BLOCK` и отдельные категории как исключения из `RU`, расположите их правила раньше `RU`.
 
-### Повторная сборка из DAT
+### Повторная сборка SRS из DAT
 
 На Linux x86-64 из корня репозитория, с пустой папкой для результата:
 
@@ -42,6 +75,3 @@
 bash tools/build_geosite_srs.sh --dat /path/to/geosite_RU.dat --output-dir srs
 (cd srs && sha256sum --check --strict geosite_srs.sha256sum)
 ```
-
-Сборка фиксирует версию компилятора и проверяет его SHA-256. Каждый набор
-проверяется декомпиляцией и сравнением точных правил и суффиксов с исходным DAT.
