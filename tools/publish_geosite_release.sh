@@ -11,12 +11,17 @@ cd "$bundle"
 core_files=(geosite_RU.dat geosite_RU.dat.sha256sum geosite_RU_categories.txt geosite_RU_hydra_appended_categories.txt geosite_RU_new_sources.txt)
 srs_files="$(python3 "$root/tools/build_geosite_srs.py" verify-assets --dat geosite_RU.dat)"
 mapfile -t srs_assets <<< "$srs_files"
-files=("${core_files[@]}" "${srs_assets[@]}")
-# The CDN branch exposes only runtime rule sets. Checksums and audit metadata
-# remain available in the numbered and rolling GitHub Releases.
-raw_files=(geosite_RU.dat)
-for file in "${srs_assets[@]}"; do
-  [[ "$file" == *.srs ]] && raw_files+=("$file")
+mrs_files="$(python3 "$root/tools/build_geosite_mrs.py" verify-assets --dat geosite_RU.dat)"
+mapfile -t mrs_assets <<< "$mrs_files"
+rule_assets=("${srs_assets[@]}" "${mrs_assets[@]}")
+files=("${core_files[@]}" "${rule_assets[@]}")
+# The CDN branch exposes runtime rule-sets and the mihomo checksum manifest.
+raw_files=(geosite_RU.dat geosite_mrs.sha256sum)
+is_ruleset_name() {
+  [[ "$1" =~ ^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.](srs|mrs)$ ]]
+}
+for file in "${rule_assets[@]}"; do
+  if is_ruleset_name "$file"; then raw_files+=("$file"); fi
 done
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
@@ -105,25 +110,25 @@ if [[ "$GITHUB_EVENT_NAME" != schedule && -n "${NUMBERED_RELEASE:-}" ]]; then
       jq -er --arg name "$1" '.assets[] | select(.name == $name) | .digest' "$tmp/numbered.json"
     }
     # Backfill derived assets only for this exact snapshot, preserving the
-    # pinned recovery files and any already published numbered SRS bytes.
+    # pinned recovery files and any already published numbered rule-set bytes.
     for file in "${core_files[@]}"; do
       want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
       [[ "$(numbered_digest "$file")" == "$want" ]]
     done
-    missing_srs=()
-    for file in "${srs_assets[@]}"; do
+    missing_rulesets=()
+    for file in "${rule_assets[@]}"; do
       want="sha256:$(sha256sum "$file" | cut -d' ' -f1)"
       if jq -e --arg name "$file" 'any(.assets[]; .name == $name)' "$tmp/numbered.json" >/dev/null; then
         [[ "$(numbered_digest "$file")" == "$want" ]] || {
-          echo "numbered SRS asset differs: $file" >&2
+          echo "numbered rule-set asset differs: $file" >&2
           exit 1
         }
       else
-        missing_srs+=("$file")
+        missing_rulesets+=("$file")
       fi
     done
-    if (( ${#missing_srs[@]} )); then
-      gh release upload "$NUMBERED_RELEASE" "${missing_srs[@]}" --repo "$GITHUB_REPOSITORY"
+    if (( ${#missing_rulesets[@]} )); then
+      gh release upload "$NUMBERED_RELEASE" "${missing_rulesets[@]}" --repo "$GITHUB_REPOSITORY"
       gh api "$api/releases/tags/$NUMBERED_RELEASE" > "$tmp/numbered.json"
     fi
     for file in "${files[@]}"; do
@@ -136,17 +141,16 @@ fi
 # The existing release branch is kept as a normal fast-forward history.
 gh auth setup-git --hostname github.com
 git clone --quiet --depth=1 --single-branch --branch release "$repo.git" "$tmp/raw"
-# Manage only names produced by the SRS exporter. Remove obsolete category
-# files if the reviewed DAT changes its set of categories.
-current_srs() {
-  grep -Fxq -- "$1" <<< "$srs_files"
+# Remove obsolete category files if the reviewed DAT changes its categories.
+current_ruleset() {
+  grep -Fxq -- "$1" <<< "$srs_files"$'\n'"$mrs_files"
 }
-git -C "$tmp/raw" ls-files -- 'geosite_*.srs' > "$tmp/raw-srs.txt"
+git -C "$tmp/raw" ls-files -- 'geosite_*.srs' 'geosite_*.mrs' > "$tmp/raw-rulesets.txt"
 while IFS= read -r old; do
-  if [[ "$old" =~ ^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$ ]] && ! current_srs "$old"; then
+  if is_ruleset_name "$old" && ! current_ruleset "$old"; then
     git -C "$tmp/raw" rm -- "$old"
   fi
-done < "$tmp/raw-srs.txt"
+done < "$tmp/raw-rulesets.txt"
 for old in geosite_RU.dat.sha256sum geosite_RU_categories.txt \
   geosite_RU_hydra_appended_categories.txt geosite_RU_new_sources.txt geosite_srs.sha256sum; do
   if git -C "$tmp/raw" ls-files --error-unmatch -- "$old" >/dev/null 2>&1; then
@@ -156,7 +160,7 @@ done
 cp -- "${raw_files[@]}" "$tmp/raw/"
 git -C "$tmp/raw" add -- "${raw_files[@]}"
 while IFS= read -r path; do
-  [[ "$path" == geosite_RU.dat || "$path" =~ ^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$ ]] || {
+  [[ "$path" == geosite_RU.dat || "$path" == geosite_mrs.sha256sum ]] || is_ruleset_name "$path" || {
     echo "unexpected file in CDN branch: $path" >&2
     exit 1
   }
@@ -169,12 +173,12 @@ if ! git -C "$tmp/raw" diff --cached --quiet; then
 fi
 raw_commit="$(git -C "$tmp/raw" rev-parse HEAD)"
 [[ "$(git -C "$tmp/raw" ls-remote origin refs/heads/release | cut -f1)" == "$raw_commit" ]]
-curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
-  "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_RU.dat" -o "$tmp/raw.dat"
-cmp geosite_RU.dat "$tmp/raw.dat"
-curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
-  "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/geosite_RU.srs" -o "$tmp/raw.srs"
-cmp geosite_RU.srs "$tmp/raw.srs"
+distribution_checks=(geosite_RU.dat geosite_RU.srs geosite_RU.mrs geosite_BLOCK.mrs geosite_mrs.sha256sum)
+for file in "${distribution_checks[@]}"; do
+  curl -fsSL --retry 2 --connect-timeout 10 --max-time 25 \
+    "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$raw_commit/$file" -o "$tmp/raw-asset"
+  cmp "$file" "$tmp/raw-asset"
+done
 
 changed=()
 for file in "${files[@]}"; do
@@ -186,16 +190,16 @@ if (( ${#changed[@]} )); then
   gh release upload "$rolling" "${changed[@]}" --clobber --repo "$GITHUB_REPOSITORY"
 fi
 gh api "$api/releases/tags/$rolling" > "$tmp/release.json"
-jq -r '.assets[].name | select(test("^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.]srs$"))' \
-  "$tmp/release.json" > "$tmp/rolling-srs.txt"
-removed_srs=false
+jq -r '.assets[].name | select(test("^geosite_[A-Z0-9]+(-[A-Z0-9]+)*[.](srs|mrs)$"))' \
+  "$tmp/release.json" > "$tmp/rolling-rulesets.txt"
+removed_rulesets=false
 while IFS= read -r old; do
-  if ! current_srs "$old"; then
+  if ! current_ruleset "$old"; then
     gh release delete-asset "$rolling" "$old" --repo "$GITHUB_REPOSITORY" --yes
-    removed_srs=true
+    removed_rulesets=true
   fi
-done < "$tmp/rolling-srs.txt"
-if [[ "$removed_srs" == true ]]; then
+done < "$tmp/rolling-rulesets.txt"
+if [[ "$removed_rulesets" == true ]]; then
   gh api "$api/releases/tags/$rolling" > "$tmp/release.json"
 fi
 for file in "${files[@]}"; do
@@ -224,6 +228,7 @@ rolling_title='Optimized RU GeoSite Light'
     printf 'Current build: unnumbered rolling snapshot.\n\n'
   fi
   printf 'For sing-box, download `geosite_RU.srs`, `geosite_BLOCK.srs` or individual categories below. Verify their digests with `geosite_srs.sha256sum`.\n\n'
+  printf 'For mihomo, use the `geosite_*.mrs` domain providers with `geosite_mrs.sha256sum`.\n\n'
   printf -- '- Source commit: [`%s`](%s/commit/%s)\n- DAT SHA-256: `%s`\n' \
     "$GITHUB_SHA" "$repo" "$GITHUB_SHA" "$CANDIDATE_SHA"
 } > "$tmp/rolling-notes.md"
@@ -245,19 +250,20 @@ jq -e --arg tag "$rolling" --arg title "$rolling_title" --rawfile notes "$tmp/ro
     exit 1
   }
 
-# The CDN is eventually consistent. Compare runtime DAT and RU SRS bytes.
+# The CDN is eventually consistent. Spot-check runtime files and the MRS manifest.
 cdn="https://cdn.jsdelivr.net/gh/$GITHUB_REPOSITORY@release"
 sync=false
 check_cdn() {
-  curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/geosite_RU.dat" -o "$tmp/cdn.dat" &&
-    cmp -s geosite_RU.dat "$tmp/cdn.dat" &&
-    curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/geosite_RU.srs" -o "$tmp/cdn.srs" &&
-    cmp -s geosite_RU.srs "$tmp/cdn.srs"
+  local file
+  for file in "${distribution_checks[@]}"; do
+    curl -fsSL --connect-timeout 6 --max-time 12 "$cdn/$file" -o "$tmp/cdn-asset" || return 1
+    cmp -s "$file" "$tmp/cdn-asset" || return 1
+  done
 }
 if check_cdn; then
   sync=true
 else
-  for file in geosite_RU.dat geosite_RU.srs; do
+  for file in "${distribution_checks[@]}"; do
     curl -fsS --connect-timeout 6 --max-time 15 \
       "https://purge.jsdelivr.net/gh/$GITHUB_REPOSITORY@release/$file" >/dev/null || true
   done
@@ -267,7 +273,7 @@ else
   done
 fi
 if [[ "$sync" == false ]]; then
-  echo "::warning::CDN DAT/SRS has not converged. Use the GitHub release or verified raw commit."
+  echo "::warning::CDN DAT/SRS/MRS has not converged. Use the GitHub release or verified raw commit."
 fi
-printf '### Verified GeoSite distribution\n\n- GitHub Release: %s/releases/tag/%s\n- Verified raw commit: `%s`\n- DAT SHA-256: `%s`\n- jsDelivr DAT + RU SRS match: %s\n' \
+printf '### Verified GeoSite distribution\n\n- GitHub Release: %s/releases/tag/%s\n- Verified raw commit: `%s`\n- DAT SHA-256: `%s`\n- jsDelivr DAT + SRS/MRS spot checks match: %s\n' \
   "$repo" "$rolling" "$raw_commit" "$CANDIDATE_SHA" "$sync" >> "$GITHUB_STEP_SUMMARY"

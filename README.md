@@ -9,7 +9,7 @@
 - **Точные правила вместо широких исключений.** `full:` добавляет только нужный хост, например API, кабинет или CDN-зависимость сервиса. Выбранные зоны России, Беларуси и Казахстана свёрнуты в суффиксы. Глобальные зоны `.com`, `.net` и `.org` целиком в `RU` не добавляются. `4pda.to` и его поддомены не покрываются `RU`.
 - **Списки источников проходят отбор.** Сборщик использует выбранные категории и положительные правила, удаляет дубли и вложенные правила. Блокировочные ленты не превращаются в DIRECT. В Light локальный `BLOCK` и отдельные наборы Hydra не смешиваются с `RU` и могут получить свои действия в конфигурации клиента.
 - **Есть собственное исследование и проверяемые правки.** Для новых точечных правил фиксируются принадлежность хоста, публичный HTTPS-путь и, где это требовалось, результаты из независимых российских сетей. Успешный GET не приравнивается к рабочему входу, оплате или видеопотоку. В [v11.21](docs/v11-21-reviewed-services.md) вошли 172 таких точных правила без удалений и без изменений остальных категорий. [Журнал исследования](https://github.com/SpeedeMiner/Geosite-ru-light/blob/research/geosite-ru-wide-20261114-1810/docs/research/2026-11-14-wide-post-v11-18/JOURNAL.md)
-- **Публикация проверяется до выкладки.** Номерные сборки воспроизводятся из зафиксированных входов с SHA-256. CI сравнивает покрытие с действующим выпуском, проверяет точные правила и суффиксы в SRS после декомпиляции и не пропускает неутверждённые добавления. [Воспроизводимость](docs/reproducible-build.md) · [Откат](docs/release-recovery.md)
+- **Публикация проверяется до выкладки.** Номерные сборки воспроизводятся из зафиксированных входов с SHA-256. CI сравнивает покрытие с действующим выпуском, проверяет точные правила и суффиксы в SRS и MRS после декомпиляции и не пропускает неутверждённые добавления. [Воспроизводимость](docs/reproducible-build.md) · [Откат](docs/release-recovery.md)
 
 ## Вклад источников в RU
 
@@ -45,10 +45,13 @@
 | sing-box, `RU` | [`geosite_RU.srs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_RU.srs) |
 | sing-box, `BLOCK` | [`geosite_BLOCK.srs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_BLOCK.srs) |
 | sing-box, отдельные категории Hydra | [Все SRS в ветке release](https://github.com/SpeedeMiner/Geosite-ru-light/tree/release) |
+| mihomo, `RU` | [`geosite_RU.mrs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_RU.mrs) · [jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.mrs) |
+| mihomo, `BLOCK` | [`geosite_BLOCK.mrs`](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_BLOCK.mrs) · [jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_BLOCK.mrs) |
+| mihomo, отдельные категории Hydra | [Все MRS в ветке release](https://github.com/SpeedeMiner/Geosite-ru-light/tree/release) |
 | GeoSite Server, только `RU` | [Отдельная серверная сборка](https://github.com/SpeedeMiner/Geosite-ru-server/releases) |
-| Проверка SHA-256 | [DAT](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_RU.dat.sha256sum) · [все SRS](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_srs.sha256sum) |
+| Проверка SHA-256 | [DAT](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_RU.dat.sha256sum) · [все SRS](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_srs.sha256sum) · [`geosite_mrs.sha256sum`](https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_mrs.sha256sum) ([raw](https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_mrs.sha256sum) · [jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_mrs.sha256sum)) |
 
-Для фиксированной конфигурации используйте [номерные релизы](https://github.com/SpeedeMiner/Geosite-ru-light/releases). Плавающий `latest-optimized` и ветка `release` обновляются после проверок, в том числе по понедельникам в 00:00 UTC на свежих входах. Неутверждённые новые правила отправляются на ручную проверку. В ветке CDN только DAT и SRS. Контрольные суммы хранятся в GitHub Releases. Если jsDelivr ещё отдаёт старый кеш, используйте GitHub Release или файл по SHA коммита ветки `release` и проверьте хэш.
+Для фиксированной конфигурации используйте [номерные релизы](https://github.com/SpeedeMiner/Geosite-ru-light/releases). Плавающий `latest-optimized` и ветка `release` обновляются после проверок, в том числе по понедельникам в 00:00 UTC на свежих входах. Неутверждённые новые правила отправляются на ручную проверку. В ветке CDN доступны DAT, SRS, MRS и манифест MRS. Все контрольные суммы хранятся в GitHub Releases. Если jsDelivr ещё отдаёт старый кеш, используйте GitHub Release или файл по SHA коммита ветки `release` и проверьте хэш.
 
 В Xray указывайте `geosite:ru` и `geosite:block` в правилах маршрутизации. Сам файл DAT не назначает выходы. Доступны также [DAT через jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.dat) и [RU SRS через jsDelivr](https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/geosite_RU.srs).
 
@@ -75,3 +78,36 @@
 bash tools/build_geosite_srs.sh --dat /path/to/geosite_RU.dat --output-dir srs
 (cd srs && sha256sum --check --strict geosite_srs.sha256sum)
 ```
+
+
+### mihomo
+
+```yaml
+rule-providers:
+  geosite-ru:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release/geosite_RU.mrs
+    path: ./rules/geosite_RU.mrs
+    interval: 86400
+
+rules:
+  - RULE-SET,geosite-ru,DIRECT
+```
+
+Направление `DIRECT` в примере задаёт конфигурация, а не сам набор. Для
+`BLOCK` и категорий Hydra используйте отдельные провайдеры с соответствующими
+именами файлов. Если они должны иметь приоритет над `RU`, поставьте их
+правила раньше.
+
+Пересборка из готового DAT на Linux x86-64 использует закреплённый
+официальный mihomo и проверяет точные домены и суффиксы после декомпиляции.
+
+```sh
+bash tools/build_geosite_mrs.sh --dat /path/to/geosite_RU.dat --output-dir mrs
+(cd mrs && sha256sum --check --strict geosite_mrs.sha256sum)
+```
+
+Для офлайн-сборки и сверки с опубликованными байтами см.
+[воспроизводимую сборку MRS](docs/reproducible-build.md#reproduce-mihomo-mrs-offline).

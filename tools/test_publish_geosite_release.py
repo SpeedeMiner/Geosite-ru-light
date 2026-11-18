@@ -6,6 +6,7 @@ import subprocess
 import tempfile
 import unittest
 
+from test_build_geosite_mrs import NAMES as MRS_NAMES
 from test_build_geosite_srs import FIXTURE, NAMES
 
 
@@ -14,7 +15,7 @@ CORE_FILES = (
     "geosite_RU.dat", "geosite_RU.dat.sha256sum", "geosite_RU_categories.txt",
     "geosite_RU_hydra_appended_categories.txt", "geosite_RU_new_sources.txt",
 )
-FILES = (*CORE_FILES, *NAMES, "geosite_srs.sha256sum")
+FILES = (*CORE_FILES, *NAMES, "geosite_srs.sha256sum", *MRS_NAMES, "geosite_mrs.sha256sum")
 
 
 def checksum(path):
@@ -33,6 +34,8 @@ class PublishBoundaryTest(unittest.TestCase):
         (self.bundle / FILES[0]).write_bytes(FIXTURE)
         (self.bundle / "geosite_srs.sha256sum").write_text(
             "".join(f"{checksum(self.bundle / name)}  {name}\n" for name in NAMES))
+        (self.bundle / "geosite_mrs.sha256sum").write_text(
+            "".join(f"{checksum(self.bundle / name)}  {name}\n" for name in MRS_NAMES))
         self.candidate_sha = checksum(self.bundle / FILES[0])
         (self.bundle / FILES[1]).write_text(f"{self.candidate_sha}  {FILES[0]}\n")
         manifest = self.bundle / "release-bundle.sha256sum"
@@ -101,6 +104,24 @@ class PublishBoundaryTest(unittest.TestCase):
         run = self.run_publisher()
         self.assertNotEqual(run.returncode, 0)
         self.assertIn("SRS checksum manifest", run.stderr)
+        self.assertFalse(self.called.exists())
+
+    def test_missing_mrs_stops_before_any_remote_call(self):
+        (self.bundle / MRS_NAMES[0]).unlink()
+        run = self.run_publisher()
+        self.assertNotEqual(run.returncode, 0)
+        self.assertIn("MRS files do not match", run.stderr)
+        self.assertFalse(self.called.exists())
+
+    def test_even_resealed_mrs_is_bound_to_approved_bundle(self):
+        (self.bundle / MRS_NAMES[0]).write_bytes(b"tampered")
+        (self.bundle / "geosite_mrs.sha256sum").write_text(
+            "".join(f"{checksum(self.bundle / name)}  {name}\n" for name in MRS_NAMES))
+        (self.bundle / "release-bundle.sha256sum").write_text(
+            "".join(f"{checksum(self.bundle / name)}  {name}\n" for name in FILES))
+        run = self.run_publisher()
+        self.assertNotEqual(run.returncode, 0)
+        self.assertIn("release-bundle.sha256sum: FAILED", run.stdout)
         self.assertFalse(self.called.exists())
 
     def test_tampered_manifest_and_pull_request_stop_locally(self):
