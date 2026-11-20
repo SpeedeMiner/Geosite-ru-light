@@ -93,6 +93,33 @@ func TestLockedReleaseGate(t *testing.T) {
 			}
 		})
 	}
+	t.Run("only the Habr suffix may be removed from both baselines", func(t *testing.T) {
+		historical := append(base, rule(suffix, excludedHabrApex))
+		makeDat("locked.dat", historical, hydra, true)
+		makeDat("rolling.dat", historical, hydra, true)
+		makeDat("candidate.dat", base, hydra, true)
+		if err := check(); err != nil {
+			t.Fatalf("explicit Habr removal failed: %v", err)
+		}
+		makeDat("rolling.dat", base, hydra, true)
+		if err := check(); err != nil {
+			t.Fatalf("next publication against the locked floor failed: %v", err)
+		}
+		for _, bad := range [][]*router.Domain{
+			nil,
+			historical,
+			append(base, rule(exact, excludedHabrApex)),
+			append(base, rule(exact, "api."+excludedHabrApex)),
+			append(base, rule(suffix, "com")),
+		} {
+			makeDat("candidate.dat", bad, hydra, true)
+			if err := check(); err == nil {
+				t.Fatalf("gate accepted unrelated loss or restored Habr coverage: %v", bad)
+			}
+		}
+		makeDat("locked.dat", base, hydra, true)
+	})
+
 	t.Run("approved addition remains approved after publication", func(t *testing.T) {
 		write("decisions.tsv", ledger)
 		write("approvals.txt", "domain:existing.example\nfull:new.example\n")

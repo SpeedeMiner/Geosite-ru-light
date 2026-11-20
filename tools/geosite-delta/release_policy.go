@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+const excludedHabrApex = "habr.com"
+
 func verifyRoutingDecisions(ru rules, reviews map[string]reviewDecision) error {
 	// User-selected no-DIRECT subtree. Independent of external inventory and
 	// review file: removing a TSV line cannot weaken this routing policy.
@@ -20,6 +22,9 @@ func verifyRoutingDecisions(ru rules, reviews map[string]reviewDecision) error {
 	}
 	if conflict := rejectedSubtreeConflict(ru, "4pda.to"); conflict != "" {
 		return fmt.Errorf("4pda.to no-DIRECT subtree policy violated: %s", conflict)
+	}
+	if conflict := rejectedSubtreeConflict(ru, excludedHabrApex); conflict != "" {
+		return fmt.Errorf("%s no-DIRECT subtree policy violated: %s", excludedHabrApex, conflict)
 	}
 	for domain, review := range reviews {
 		isRU := covered(ru, domain, false)
@@ -142,8 +147,12 @@ func verifyCategoryTransition(old, now map[string]rules, addedRU, lostRU, change
 		!(len(changed) == 1 && changed[0] == "BLOCK" && approvedBlockAddition(old["BLOCK"], now["BLOCK"])) {
 		return fmt.Errorf("unreviewed protected category changes: %s", strings.Join(changed, ", "))
 	}
-	if len(lostRU) > 0 {
-		return fmt.Errorf("%d release RU rules no longer covered; review before merge", len(lostRU))
+	// The user approved removing this specific historical suffix from RU.
+	// Do not accept any other lost rules, or an exact/child replacement.
+	for _, rule := range lostRU {
+		if rule != "domain:"+excludedHabrApex || rejectedSubtreeConflict(now["RU"], excludedHabrApex) != "" {
+			return fmt.Errorf("release RU rule no longer covered: %s; review before merge", rule)
+		}
 	}
 	if raw := os.Getenv("GEOSITE_EXPECTED_RU_ADDITIONS"); raw != "" {
 		expected, err := strconv.Atoi(raw)

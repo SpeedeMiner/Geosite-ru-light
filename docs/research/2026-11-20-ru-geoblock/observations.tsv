@@ -1,0 +1,43 @@
+https_url	published_ru_match	locked_geoblock_sources	ru_a	ru_b	nl	public_measurement
+https://habr.com/ru/articles/870110/	domain:habr.com	hydra	RU AS12389: 451 (TLS OK)	RU AS8359: 451 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2fcNS2bK5I74g3BkU00021XPm
+https://4pda.ru/	domain:ru	hydra,mvrvntn	RU AS12389: ENODATA	RU AS8359: ENODATA	NL AS31898: ENODATA	https://api.globalping.io/v1/measurements/2Os6AxZPyCFxUBZeP00021XPn
+https://agentura.ru/	domain:ru	mvrvntn	RU AS12389: TLS handshake	RU AS8359: TLS handshake	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/25wQ0LFTdsFj9PJiF00021XPn
+https://airbnb.ru/	domain:ru	mvrvntn	RU AS12389: 301 (TLS OK)	RU AS8359: 301 (TLS OK)	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2Ws7AS5ocBdv8XENk00021XPn
+https://appstorrent.ru/	domain:ru	mvrvntn	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2ZBNilcn2fXnzZU3500021XPn
+https://battle.net/	domain:battle.net	hydra	RU AS12389: 301 (TLS OK)	RU AS8359: 301 (TLS OK)	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2474ZEwCwpmu3AEew00021XPn
+https://bestchange.ru/	domain:ru	mvrvntn	RU AS12389: 301 (TLS OK)	RU AS8359: 301 (TLS OK)	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2TWKNJQf1uspMzNg200021XPn
+https://colta.ru/	domain:ru	mvrvntn	RU AS12389: 301 (TLS OK)	RU AS8359: 301 (TLS OK)	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2wVfW6AeFbpZCLTTc00021XPn
+https://crashlytics.com/	domain:crashlytics.com	hydra,mvrvntn	RU AS12389: 301 (TLS OK)	RU AS8359: Private IP	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2rkufabVZm59ye8Yd00021XPn
+https://discord-attachments-uploads-prd.storage.googleapis.com/	domain:storage.googleapis.com	mvrvntn	RU AS12389: TLS handshake	RU AS8359: TLS handshake	NL AS31898: 403 (TLS OK)	https://api.globalping.io/v1/measurements/2XjjrW1yZWzEbKq5z00021XPn
+https://freedom-travel.kz/	domain:kz	mvrvntn	RU AS12389: 403 (TLS OK)	RU AS8359: 403 (TLS OK)	NL AS31898: 403 (TLS OK)	https://api.globalping.io/v1/measurements/2hflZ32lWRsS2uTg300021XPn
+https://habr.com/	domain:habr.com	hydra	RU AS12389: 302 (TLS OK)	RU AS8359: 302 (TLS OK)	NL AS214677: 302 (TLS OK)	https://api.globalping.io/v1/measurements/2b7tlguNTkghuLtCK00021XPo
+https://habrastorage.org/	domain:habrastorage.org	hydra	RU AS12389: 302 (TLS OK)	RU AS8359: 302 (TLS OK)	NL AS31898: 302 (TLS OK)	https://api.globalping.io/v1/measurements/2WfqErZGoyMjsCHnS00021XPo
+https://joyreactor.cc/	domain:joyreactor.cc	hydra,mvrvntn	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2paml9UYB7pvYRWET00021XPo
+https://kemono.su/	domain:su	hydra	RU AS12389: ENOTFOUND	RU AS8359: ENOTFOUND	NL AS31898: ENOTFOUND	https://api.globalping.io/v1/measurements/2krmRE8ve8XpgZafW00021XPo
+https://lava.ru/	domain:ru	mvrvntn	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2Y4NrkxTYf1zmLZZX00021XPo
+https://meduza.io/	domain:meduza.io	mvrvntn	RU AS12389: TLS handshake	RU AS8359: TLS handshake	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/21e3jTZqdTlvMv5y500021XPo
+https://musically-alternate.app.link/	domain:app.link	hydra,mvrvntn	RU AS12389: 307 (TLS OK)	RU AS8359: 307 (TLS OK)	NL AS214677: 307 (TLS OK)	https://api.globalping.io/v1/measurements/2CrshiVIitaQoaWZ100021XPo
+https://musically.app.link/	domain:app.link	hydra,mvrvntn	RU AS12389: 307 (TLS OK)	RU AS8359: 307 (TLS OK)	NL AS31898: 307 (TLS OK)	https://api.globalping.io/v1/measurements/2twzRnNflsfjYhaGT00021XPo
+https://orda.kz/	domain:kz	mvrvntn	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2kPRbPoLwF9kEQTB900021XPo
+https://reddit.app.link/	domain:app.link	hydra,mvrvntn	RU AS12389: 307 (TLS OK)	RU AS8359: 307 (TLS OK)	NL AS214677: 307 (TLS OK)	https://api.globalping.io/v1/measurements/2RoqD2ptUWARprg1900021XPo
+https://roovza.launches.appsflyersdk.com/	domain:launches.appsflyersdk.com	hydra,mvrvntn	RU AS12389: 404 (TLS OK)	RU AS8359: 404 (TLS OK)	NL AS214677: 404 (TLS OK)	https://api.globalping.io/v1/measurements/27MaPzlSDKQ15JaHo00021XPo
+https://torrent.by/	domain:by	mvrvntn	RU AS12389: TLS handshake	RU AS8359: TLS handshake	NL AS31898: 200 (TLS unverified)	https://api.globalping.io/v1/measurements/2Oo4qXyFjDGROQALu00021XPo
+https://ubi.com/	domain:ubi.com	hydra	RU AS12389: 301 (TLS OK)	RU AS8359: 301 (TLS OK)	NL AS31898: 301 (TLS OK)	https://api.globalping.io/v1/measurements/2VGdyRbYC33auHNRe00021XPo
+https://vlast.kz/	domain:kz	mvrvntn	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2KCITvkDbaatdNThC00021XPo
+https://windsurf.com/	domain:windsurf.com	hydra,mvrvntn	RU AS12389: 308 (TLS OK)	RU AS8359: 308 (TLS OK)	NL AS31898: 308 (TLS OK)	https://api.globalping.io/v1/measurements/2iKB0XhhWS4tr9hFA00021XPo
+https://habr.com/ru/docs/help/451/	domain:habr.com	hydra	RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/212cCTO6xbTvcvfnB00021XPo
+https://shop.battle.net/	domain:battle.net		RU AS12389: 302 (TLS OK)	RU AS8359: 302 (TLS OK)	NL AS31898: 302 (TLS OK)	https://api.globalping.io/v1/measurements/2SEWhWg5lzf8VP3Yu00021XPo
+https://windsurf.com/editor	domain:windsurf.com	hydra,mvrvntn	RU AS12389: 308 (TLS OK)	RU AS8359: 308 (TLS OK)	NL AS31898: 308 (TLS OK)	https://api.globalping.io/v1/measurements/2ZcCMQhpueY8sBfcg00021XPo
+https://gosuslugi.ru/	domain:ru		RU AS12389: 200 (TLS OK)	RU AS8359: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2BD4pR8Ikpsq4d7DW00021XPo
+https://habrastorage.org/getpro/habr/upload_files/a38/f24/551/a38f24551f19e34a4bb20550e04b0087.jpg	domain:habrastorage.org	hydra	RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2GlpFynOSS3uhotqX00021XPo
+https://eu.shop.battle.net/	domain:battle.net		RU AS3216: 307 (TLS OK)	RU AS49505: 307 (TLS OK)	NL AS31898: 307 (TLS OK)	https://api.globalping.io/v1/measurements/2SFaZkgii6wJjKmye00021XPo
+https://redirection.ubisoft.com/site/entrance	domain:ubisoft.com		RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2nSznTzLT6N7U4CaN00021XPo
+https://store.ubisoft.com/	domain:ubisoft.com		RU AS3216: 302 (TLS OK)	RU AS49505: 302 (TLS OK)	NL AS214677: 302 (TLS OK)	https://api.globalping.io/v1/measurements/2GRJHFX7817jRfo5j00021XPo
+https://devin.ai/desktop	-		RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2iUlupzywJffhNrm800021XPo
+https://www.airbnb.ru/	domain:ru		RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2j64O1nmG1hvs5f1I00021XPp
+https://www.bestchange.ru/	domain:ru		RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2rnMrd3ktetfIq0tr00021XPp
+https://www.colta.ru/	domain:ru		RU AS3216: ENOTFOUND	RU AS49505: ECONNRESET	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2BqUsMKb4G2HZFrNL00021XPp
+https://habr.com/ru/feed/	domain:habr.com	hydra	RU AS3216: 200 (TLS OK)	RU AS49505: 200 (TLS OK)	NL AS214677: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2jwyuI0Y0Pno7jbjo00021XPp
+https://agentura.ru/	domain:ru	mvrvntn	RU AS3216: ECONNRESET	RU AS49505: ECONNRESET	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2iB2FR7i0PXVGcgIW00021XPp
+https://meduza.io/	domain:meduza.io	mvrvntn	RU AS3216: ECONNRESET	RU AS49505: ECONNRESET	NL AS31898: 200 (TLS OK)	https://api.globalping.io/v1/measurements/2LwnFYkIGCaEMzzqN00021XPp
+https://torrent.by/	domain:by	mvrvntn	RU AS3216: ENOTFOUND	RU AS49505: ECONNRESET	NL AS214677: 200 (TLS unverified)	https://api.globalping.io/v1/measurements/24Phu8V192bhLc4PX00021XPp

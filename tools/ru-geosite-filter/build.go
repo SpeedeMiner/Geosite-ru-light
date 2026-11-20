@@ -56,22 +56,22 @@ var excludedRUPositiveDomains = map[string]bool{
 	"stream.kick.com": true, // Kick international video stream CDN
 }
 
-// The user explicitly forbids any DIRECT coverage of 4pda.to,
-// including its subdomains. Check both descendants and a RootDomain
-// ancestor (e.g. a future "to" root) that would cover 4pda.to.
-func forbidden4PDAInRU(typ router.Domain_Type, value string) bool {
-	const apex = "4pda.to"
+// These domains and their subdomains must not be routed by geosite:RU.
+func forbiddenSubtreeInRU(typ router.Domain_Type, value string) string {
 	name := normalizeName(value)
-	if name == apex || strings.HasSuffix(name, "."+apex) {
-		return true
+	for _, apex := range []string{"4pda.to", "habr.com"} {
+		if name == apex || strings.HasSuffix(name, "."+apex) ||
+			typ == router.Domain_RootDomain && strings.HasSuffix(apex, "."+name) {
+			return apex
+		}
 	}
-	return typ == router.Domain_RootDomain && strings.HasSuffix(apex, "."+name)
+	return ""
 }
 
 func addRoot(site *router.GeoSite, seen map[string]bool, value string) bool {
 	if normalizeName(site.CountryCode) == "ru" &&
 		(excludedRUPositiveDomains[normalizeName(value)] ||
-			forbidden4PDAInRU(router.Domain_RootDomain, value)) {
+			forbiddenSubtreeInRU(router.Domain_RootDomain, value) != "") {
 		return false
 	}
 	if normalizeName(site.CountryCode) == "ru" {
@@ -190,6 +190,9 @@ func loadExactRUPositiveHosts(path string) (map[string]bool, error) {
 			return nil, fmt.Errorf("invalid approved RU rule on line %d: %q", i+1, line)
 		}
 		if kind == "domain" {
+			if forbidden := forbiddenSubtreeInRU(router.Domain_RootDomain, value); forbidden != "" {
+				return nil, fmt.Errorf("approved RU root %q covers excluded subtree %s", value, forbidden)
+			}
 			if roots[value] {
 				return nil, fmt.Errorf("duplicate approved root on line %d: %q", i+1, line)
 			}
@@ -197,7 +200,7 @@ func loadExactRUPositiveHosts(path string) (map[string]bool, error) {
 			continue
 		}
 		if !strings.Contains(value, ".") || isRussianTLD(value) ||
-			forbidden4PDAInRU(router.Domain_Full, value) || exact[value] {
+			forbiddenSubtreeInRU(router.Domain_Full, value) != "" || exact[value] {
 			return nil, fmt.Errorf("invalid or duplicate Full rule on line %d: %q", i+1, line)
 		}
 		exact[value] = true
@@ -235,7 +238,7 @@ func writeSuppressedExactAncestors(path string) error {
 
 func addPositiveRule(category *router.GeoSite, seen map[string]bool, value string) bool {
 	if normalizeName(category.CountryCode) == "ru" &&
-		forbidden4PDAInRU(router.Domain_Full, value) {
+		forbiddenSubtreeInRU(router.Domain_Full, value) != "" {
 		return false
 	}
 	if normalizeName(category.CountryCode) == "ru" && exactRUPositiveHosts[value] {
@@ -661,8 +664,8 @@ func runBuild(args []string) {
 	// Required even in scheduled main builds, where PR-only delta
 	// checks do not run. Never emit forbidden DIRECT coverage.
 	for _, domain := range ruCategory.Domain {
-		if forbidden4PDAInRU(domain.Type, domain.Value) {
-			fatalf("4pda.to no-DIRECT production policy violated: %v:%s", domain.Type, domain.Value)
+		if forbidden := forbiddenSubtreeInRU(domain.Type, domain.Value); forbidden != "" {
+			fatalf("%s no-DIRECT production policy violated: %v:%s", forbidden, domain.Type, domain.Value)
 		}
 	}
 	sortDomains(ruCategory.Domain)
