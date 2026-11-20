@@ -113,8 +113,8 @@ func runValidate(args []string) {
 	// Validation requires their exact type even if a source changes.
 	validateRules("RU", ru.Domain, true)
 	for _, entry := range ru.Domain {
-		if forbidden4PDAInRU(entry.Type, entry.Value) {
-			fatalf("4pda.to prohibited in output RU DAT: %v:%s", entry.Type, entry.Value)
+		if forbidden := forbiddenSubtreeInRU(entry.Type, entry.Value); forbidden != "" {
+			fatalf("%s prohibited in output RU DAT: %v:%s", forbidden, entry.Type, entry.Value)
 		}
 	}
 	exactSeen := make(map[string]bool)

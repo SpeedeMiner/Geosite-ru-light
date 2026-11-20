@@ -44,6 +44,8 @@ wildberries.md	hold	2026-11-12 historical Moldova launches referenced md.wildber
 hexlet.io	confirmed	2026-11-12 first-party contacts list ООО Хекслет Рус INN 7325174845 https://ru.hexlet.io/pages/contacts and TOO Hexlet Kazakhstan BIN 230340043714 https://hexlet.io/pages/contacts
 4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
 www.4pda.to	reject	User explicit policy 2026-11-12: exclude 4pda.to and its subdomains from RU-DIRECT even if official site; access from RU networks not reliable
+habr.com	reject	2026-11-20: user-requested exclusion of the Habr website from RU DIRECT; Habr applies IP-country restrictions per publication https://habr.com/ru/docs/help/451/
+www.habr.com	reject	2026-11-20: same no-DIRECT Habr subtree policy as habr.com
 codeforces.com	hold	2026-11-12 official https://codeforces.com/about names founder/owner IE Mikhail Mirzayanov with Bishkek Kyrgyzstan contact; https://codeforces.com/privacy names CODEFORCES GLOBAL FZCO (UAE). Russian origin alone is not RU/KZ/BY corporate ownership
 che.tv	hold	2026-11-12 official current CTC Media page points to chetv.ru, not che.tv https://ctc.media/channel/che
 dom-kino.tv	hold	2026-11-12 upstream no A/DNS; historical association with Dom Kino insufficient to include

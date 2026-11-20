@@ -122,7 +122,7 @@ func TestNo4PDADirectInScheduledAndPRBuild(t *testing.T) {
 	} {
 		ru := &router.GeoSite{CountryCode: "RU"}
 		seen := make(map[string]bool)
-		if !forbidden4PDAInRU(router.Domain_RootDomain, value) {
+		if forbiddenSubtreeInRU(router.Domain_RootDomain, value) != "4pda.to" {
 			t.Fatalf("forbidden 4PDA coverage was not recognized: %s", value)
 		}
 		if addRoot(ru, seen, value) || len(ru.Domain) != 0 {
@@ -131,18 +131,36 @@ func TestNo4PDADirectInScheduledAndPRBuild(t *testing.T) {
 	}
 	for _, value := range []string{"4pda.ru", "not4pda.to", "foo4pda.to"} {
 		ru := &router.GeoSite{CountryCode: "RU"}
-		if forbidden4PDAInRU(router.Domain_RootDomain, value) {
+		if forbiddenSubtreeInRU(router.Domain_RootDomain, value) != "" {
 			t.Fatalf("unrelated domain falsely forbidden: %s", value)
 		}
 		if !addRoot(ru, make(map[string]bool), value) {
 			t.Fatalf("unrelated RU candidate rejected: %s", value)
 		}
 	}
-	if !forbidden4PDAInRU(router.Domain_Full, "forum.4pda.to") {
+	if forbiddenSubtreeInRU(router.Domain_Full, "forum.4pda.to") != "4pda.to" {
 		t.Fatal("Full subdomain must also be forbidden")
 	}
-	if forbidden4PDAInRU(router.Domain_Full, "to") {
+	if forbiddenSubtreeInRU(router.Domain_Full, "to") != "" {
 		t.Fatal("Full 'to' is not a suffix root and cannot cover 4pda.to")
+	}
+}
+
+func TestHabrExcludedFromRUWithoutTouchingOtherDomains(t *testing.T) {
+	ru := &router.GeoSite{CountryCode: "RU"}
+	seen := make(map[string]bool)
+	for _, host := range []string{"habr.com", "www.habr.com", "api.habr.com"} {
+		if addPositiveRule(ru, seen, host) || addRoot(ru, seen, host) {
+			t.Fatalf("excluded Habr coverage returned through a positive source: %s", host)
+		}
+	}
+	if addRoot(ru, seen, "com") || len(ru.Domain) != 0 {
+		t.Fatal("an enclosing suffix could bypass the Habr exclusion")
+	}
+	for _, host := range []string{"habrastorage.org", "not-habr.com"} {
+		if !addPositiveRule(ru, seen, host) {
+			t.Fatalf("unrelated domain rejected: %s", host)
+		}
 	}
 }
 
