@@ -67,7 +67,7 @@ jobs:
             return 1
           }
           fetch_feed input/phishing-army.txt https://phishing.army/download/phishing_army_blocklist_extended.txt https://www.phishing.army/download/phishing_army_blocklist_extended.txt
-          fetch_feed input/hagezi-tif.txt https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/tif.txt
+          fetch_feed input/hagezi-tif.txt https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif.medium-onlydomains.txt https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/wildcard/tif.medium-onlydomains.txt
           curl -fsSL --retry 3 --max-time 180 -o input/geosite.dat https://raw.githubusercontent.com/runetfreedom/russia-blocked-geosite/release/geosite-ru-only.dat
           curl -fsSL --retry 3 --max-time 180 -o input/geoip.dat https://raw.githubusercontent.com/SpeedeMiner/Geoip-ru-server/cdn/geoip_RU.dat
           curl -fsSL --retry 3 --max-time 180 -o /tmp/sing.tar.gz https://github.com/SagerNet/sing-box/releases/download/v1.13.12/sing-box-1.13.12-linux-amd64.tar.gz
