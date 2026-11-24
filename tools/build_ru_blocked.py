@@ -21,6 +21,7 @@ from ru_blocked_index import DirectPrefixIndex, normalize_domain
 POSITIVE_TTL = 7 * 86400
 NEGATIVE_TTL = 86400
 MAX_BACKOFF = 3 * 86400
+PROBE_VERSION = "https-tls-v2"
 
 
 def varint(data, offset):
@@ -145,6 +146,8 @@ def encode_dat(rules):
 
 def cache_fresh(row, now):
     try:
+        if row.get("probe_version") != PROBE_VERSION:
+            return False
         age = now - float(row["checked_at"])
         streak = max(0, min(int(row.get("fail_streak", 0)), 3))
         ttl = POSITIVE_TTL if row["alive"] and row["in_direct_geoip"] else min(MAX_BACKOFF, NEGATIVE_TTL * 2 ** max(0, streak - 1))
@@ -171,28 +174,21 @@ async def resolve(host, resolver):
 
 
 async def alive(host, addresses):
+    """TLS handshake with SNI on DIRECT IPs only; no plaintext HTTP probe."""
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
     for address in addresses[:4]:
-        try:
-            _, writer = await asyncio.wait_for(asyncio.open_connection(address, 443, ssl=context, server_hostname=host, ssl_handshake_timeout=4), 5)
-            writer.close()
-            await writer.wait_closed()
-            return True
-        except (OSError, asyncio.TimeoutError, ssl.SSLError):
-            pass
-        try:
-            reader, writer = await asyncio.wait_for(asyncio.open_connection(address, 80), 4)
-            writer.write(("HEAD / HTTP/1.0\r\nHost: " + host + "\r\nConnection: close\r\n\r\n").encode("ascii"))
-            await writer.drain()
-            line = await asyncio.wait_for(reader.readline(), 4)
-            writer.close()
-            await writer.wait_closed()
-            if line.startswith(b"HTTP/1.") and len(line.split()) >= 2 and line.split()[1].isdigit():
+        for _ in range(2):
+            try:
+                _, writer = await asyncio.wait_for(
+                    asyncio.open_connection(address, 443, ssl=context, server_hostname=host,
+                                            ssl_handshake_timeout=4), 5)
+                writer.close()
+                await writer.wait_closed()
                 return True
-        except (OSError, asyncio.TimeoutError):
-            pass
+            except (OSError, asyncio.TimeoutError, ssl.SSLError):
+                pass
     return False
 
 
@@ -222,7 +218,9 @@ async def run_probes(hosts, index, cache, force, concurrency, resolver=None):
             is_alive = await alive(host, direct) if direct else False
             streak = 0 if is_alive else min(int(row.get("fail_streak", 0)) + 1, 10)
             output[host] = {"ips": ips, "direct_ips": direct, "in_direct_geoip": bool(direct), "alive": is_alive,
-                            "checked_at": now, "fail_streak": streak}
+                            "checked_at": now, "fail_streak": streak,
+                            "probe_version": PROBE_VERSION,
+                            "reason": "https_ok" if is_alive else ("https_unreachable" if direct else "no_direct_ip")}
     # Batches cap both open tasks and memory.
     hosts = sorted(hosts)
     for start in range(0, len(hosts), 2000):

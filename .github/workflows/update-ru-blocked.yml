@@ -47,8 +47,8 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .cache/ru_blocked_probe_cache.json
-          key: ru-blocked-v1-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: ru-blocked-v1-
+          key: ru-blocked-https-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ru-blocked-https-v2-
       - name: Download source snapshots and pinned compilers
         shell: bash
         run: |
@@ -76,7 +76,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .cache/ru_blocked_probe_cache.json
-          key: ru-blocked-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          key: ru-blocked-https-v2-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Upload verified artifacts and statistics
         uses: actions/upload-artifact@v4
         with:
