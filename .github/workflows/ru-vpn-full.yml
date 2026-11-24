@@ -84,27 +84,43 @@ jobs:
           (cd .vpn-pilot/geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
           (cd .vpn-pilot/upstream/.github/reachability/inventory && GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/vpn-inventory" .)
           "$RUNNER_TEMP/vpn-inventory" .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
-      - name: Measure batch through two independent Russian ASNs
+      - name: Measure all subgroups through independent Russian ASNs
         timeout-minutes: 65
         run: |
           set -euo pipefail
           printf -v plan 'vpn-plan/batch-%03d.tsv' "$BATCH"
+          mkdir -p .vpn-pilot/subplans .vpn-pilot/reports
+          PLAN="$plan" python3 - <<'PY'
+          import csv, os
+          from pathlib import Path
+          with open(os.environ['PLAN'],encoding='utf-8',newline='') as f:
+              reader=csv.DictReader(f,delimiter='\t'); fields=reader.fieldnames; rows=list(reader)
+          for i in range(0,len(rows),10):
+              with open(f'.vpn-pilot/subplans/{i//10:02d}.tsv','w',encoding='utf-8',newline='') as f:
+                  writer=csv.DictWriter(f,fieldnames=fields,delimiter='\t'); writer.writeheader(); writer.writerows(rows[i:i+10])
+          PY
           upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
-          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
-            bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 62m \
-              python3 -B tools/vpn_full_wrapper.py "$AUDIT/vpnobratno_get.py" "$plan" .vpn-pilot/inventory.tsv \
-                "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 16
+          failed=0
+          for subplan in .vpn-pilot/subplans/*.tsv; do
+            name="$(basename "$subplan" .tsv)"
+            echo "Starting subgroup $name of batch $BATCH"
+            if sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+              bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 5m \
+                python3 -B tools/vpn_full_wrapper.py "$AUDIT/vpnobratno_get.py" "$subplan" .vpn-pilot/inventory.tsv \
+                  "$upstream" ".vpn-pilot/reports/$name" --exits 2 --attempts 6 --connect-timeout 16; then :; else failed=1; fi
+          done
+          exit "$failed"
       - name: Print coverage summary
         if: always()
-        run: if test -f .vpn-pilot/report/geosite-vpnobratno-summary.json; then cat .vpn-pilot/report/geosite-vpnobratno-summary.json; fi
+        run: find .vpn-pilot/reports -name geosite-vpnobratno-summary.json -exec cat {} \; || true
       - name: Upload partial or complete observations
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: vpn-shard-${{ matrix.batch }}
           path: |
-            .vpn-pilot/report/geosite-vpnobratno-summary.json
-            .vpn-pilot/report/vpnobratno-observations.jsonl
+            .vpn-pilot/reports/*/geosite-vpnobratno-summary.json
+            .vpn-pilot/reports/*/vpnobratno-observations.jsonl
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 14

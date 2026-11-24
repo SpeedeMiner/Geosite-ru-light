@@ -8,12 +8,12 @@ manifest=json.loads((plan/'manifest.json').read_text(encoding='utf-8'))
 observed=collections.defaultdict(list); jobs=[]
 for n in range(manifest['batch_count']):
     folder=root/f'vpn-shard-{n}'
-    summary=folder/'geosite-vpnobratno-summary.json'
-    observations=folder/'vpnobratno-observations.jsonl'
-    job={'batch':n,'summary':json.loads(summary.read_text(encoding='utf-8')) if summary.exists() else None,'observation_file':observations.exists()}
+    summaries=list(folder.rglob('geosite-vpnobratno-summary.json'))
+    observations=list(folder.rglob('vpnobratno-observations.jsonl'))
+    job={'batch':n,'summaries':[json.loads(p.read_text(encoding='utf-8')) for p in summaries],'observation_files':len(observations)}
     jobs.append(job)
-    if observations.exists():
-        for line in observations.read_text(encoding='utf-8').splitlines():
+    for obs in observations:
+        for line in obs.read_text(encoding='utf-8').splitlines():
             r=json.loads(line); observed[r['host']].append(r)
 results=[]
 for host,rules in manifest['hosts_to_rules'].items():
