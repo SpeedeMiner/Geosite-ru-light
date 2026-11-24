@@ -1,0 +1,30 @@
+name: RU historical VPN session verification
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-vpn-history-verify.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-source-evidence-45417945474
+          run-id: 45428437312
+          github-token: ${{ github.token }}
+          path: evidence
+      - name: Compare session summaries with raw observations
+        run: python3 tools/audit_historical_sessions.py evidence historical-results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-vpn-historical-sessions
+          path: historical-results/
+          retention-days: 90
