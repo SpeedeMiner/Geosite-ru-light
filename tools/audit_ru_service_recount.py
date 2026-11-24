@@ -80,6 +80,20 @@ summary={"total":4495,"groups":{k:{"count":len(v),"percent":round(len(v)*100/449
  "same registrable-domain HTTPS redirects with 2xx but unverified content are counted as responding endpoints",
  "unconfirmed geography and infrastructure are not inferred from 403/404 or domain names alone",
  "a domain suffix rule covers subdomains; no changes have been made"]}
+unknown_dns=collections.Counter()
+for entry in full:
+ if entry["classification"]!="UNKNOWN": continue
+ samples=[entry.get("dns") or {},entry.get("independent_dns") or {}]
+ states=[(sample.get(t) or {}).get("status") for sample in samples for t in ("A","AAAA")]
+ ips=[ip for sample in samples for t in ("A","AAAA") for ip in (sample.get(t) or {}).get("ips",[])]
+ if ips: bucket="resolved_address"
+ elif states and all(x=="NXDOMAIN" for x in states): bucket="nxdomain_both_dns_configurations"
+ elif any(x and ("timeout" in str(x).lower()) for x in states): bucket="dns_timeout"
+ elif any(x and ("servfail" in str(x).lower() or "nameservers" in str(x).lower()) for x in states): bucket="dns_nameserver_failure"
+ elif all(x is None for x in states): bucket="dns_evidence_missing"
+ else: bucket="dns_other_or_nodata"
+ unknown_dns[bucket]+=1
+summary["unknown_dns_evidence"]=dict(unknown_dns)
 (out/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
 (out/"classification.json").write_text(json.dumps({"summary":summary,"hosts":full},ensure_ascii=False),encoding="utf-8")
 fields=["hostname","classification","reason","ru_https_responded","ru_content_confirmed","us_https_responded","previous_category","previous_reason"]
