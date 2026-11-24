@@ -1,0 +1,94 @@
+name: RU VPN live disconnect test
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-vpn-live-disconnect.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      AUDIT: .vpn-pilot/research/docs/research/2026-11-14-wide-post-v11-18/get-audit
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c84fc559733525194da3f899cc5b10bc8a1bdebf
+          path: .vpn-pilot/research
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 7eef1efcaafbdbe259f3aa4e56a07c38979afbfb
+          path: .vpn-pilot/geoip-release
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: vpn-fast-plan
+          run-id: 45417945474
+          github-token: ${{ github.token }}
+          path: plan
+      - name: Select one planned domain
+        run: head -n 2 plan/batch-000.tsv > one.tsv
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends openvpn iptables
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'aiohttp==3.11.18' 'dnspython==2.7.0' 'publicsuffix2==2.20191221'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26.10'
+          cache: false
+      - name: Prepare pinned inventory
+        run: |
+          set -euo pipefail
+          (cd .vpn-pilot/geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
+          (cd .vpn-pilot/upstream/.github/reachability/inventory && GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/vpn-inventory" .)
+          "$RUNNER_TEMP/vpn-inventory" .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
+      - name: Disconnect active VPN and probe guard before unwinding
+        timeout-minutes: 8
+        run: |
+          set -euo pipefail
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          py="$(command -v python)"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 6m \
+              "$py" -B tools/vpn_live_disconnect.py "$AUDIT/vpnobratno_get.py" one.tsv .vpn-pilot/inventory.tsv \
+              "$upstream" .vpn-pilot/reports/main --exits 1 --attempts 4 --connect-timeout 16
+      - name: Verify evidence was captured
+        if: always()
+        run: |
+          test -s live-disconnect/report.json
+          python - <<'PY'
+          import json
+          d=json.load(open('live-disconnect/report.json'))
+          assert d['openvpn_pids'] and d['process_exited'], d
+          assert d['before']['tcp4']['sent'], d
+          assert not d['after']['tcp4']['sent'] and not d['after']['dns4']['sent'], d
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vpn-live-disconnect-evidence
+          path: |
+            live-disconnect/
+            .vpn-pilot/reports/main/vpn_gate_summary.json
+            .vpn-pilot/reports/main/vpn_gate_providers.tsv
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: warn
