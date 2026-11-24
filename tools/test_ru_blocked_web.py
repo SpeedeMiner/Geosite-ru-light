@@ -73,7 +73,7 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(fetch), (False, "tls_cert_invalid"))
 
     async def test_bad_statuses_rejected(self):
-        for status in (400, 404, 405, 410, 451, 500):
+        for status in (400, 403, 404, 405, 410, 451, 500):
             with self.subTest(status=status):
                 self.assertEqual(await self.probe(AsyncMock(return_value=(status, {}, b"working service"))),
                                  (False, "http_status_rejected"))
@@ -90,8 +90,8 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
                              (False, "empty_or_trivial"))
 
-    async def test_valid_403_or_204_passes(self):
-        for status in (204, 401, 403):
+    async def test_valid_401_or_204_passes(self):
+        for status in (204, 401):
             self.assertEqual(await self.probe(AsyncMock(return_value=(status, {}, b""))),
                              (True, "https_ok"))
 
@@ -107,7 +107,7 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
                          (False, "parked_or_expired"))
         headers = {"X-Parking-Info": "Домен   не привязан"}
-        self.assertEqual(await self.probe(AsyncMock(return_value=(403, headers, b""))),
+        self.assertEqual(await self.probe(AsyncMock(return_value=(401, headers, b""))),
                          (False, "parked_or_expired"))
 
     async def test_registrar_mention_alone_is_not_placeholder(self):

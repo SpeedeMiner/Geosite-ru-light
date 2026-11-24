@@ -206,7 +206,7 @@ async def probe_https(host, ips, index, resolver, threats, resolve, fetch=fetch_
                 return False, "redirect_limit"
             url = target
             continue
-        if not (200 <= status <= 299 or status in (401, 403)):
+        if not (200 <= status <= 299 or status == 401):
             return False, "http_status_rejected"
         if parked(body, headers):
             return False, "parked_or_expired"

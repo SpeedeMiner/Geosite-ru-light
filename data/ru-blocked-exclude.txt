@@ -1,7 +1,2 @@
 # Manual RU-BLOCKED exclusions. Bare names and domain: cover a suffix; full: is exact.
 # A broader suffix rule that covers an excluded name is removed in full.
-domain:mechanics.team
-# Reported parking / unreachable from the user's network.
-domain:agroprognoz.ru
-domain:anapa360.ru
-domain:5element.by
