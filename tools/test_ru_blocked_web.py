@@ -2,7 +2,7 @@ import asyncio
 import unittest
 from unittest.mock import AsyncMock, patch
 from ru_blocked_index import DirectPrefixIndex
-from ru_blocked_web import parse_feed, matches, probe_https
+from ru_blocked_web import parse_feed, matches, probe_https, TLSCertificateInvalid
 import build_ru_blocked as builder
 
 
@@ -41,7 +41,7 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(fetch), (False, "https_unreachable"))
 
     async def test_clean_https_passes(self):
-        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, b"<html>hello</html>"))),
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, b"<html><title>Welcome</title><body>Working service</body></html>"))),
                          (True, "https_ok"))
 
     async def test_parking_host_and_unsafe_redirect_rejected(self):
@@ -61,6 +61,39 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(fetch.await_count, 2)
         self.assertTrue(all(call.args[0].startswith("https://") for call in fetch.await_args_list))
 
+
+    async def test_invalid_certificate_rejected(self):
+        fetch = AsyncMock(side_effect=TLSCertificateInvalid("hostname parking"))
+        self.assertEqual(await self.probe(fetch), (False, "tls_cert_invalid"))
+        self.assertEqual(fetch.await_count, 1)
+
+    async def test_invalid_certificate_on_redirect_rejected(self):
+        fetch = AsyncMock(side_effect=[(302, {"Location": "https://other.example/"}, b""),
+                                       TLSCertificateInvalid("bad certificate")])
+        self.assertEqual(await self.probe(fetch), (False, "tls_cert_invalid"))
+
+    async def test_bad_statuses_rejected(self):
+        for status in (400, 404, 405, 410, 451, 500):
+            with self.subTest(status=status):
+                self.assertEqual(await self.probe(AsyncMock(return_value=(status, {}, b"working service"))),
+                                 (False, "http_status_rejected"))
+
+    async def test_parking_in_title_or_late_body_rejected(self):
+        for body in (b"<html><title>Domain is for sale</title></html>",
+                     b"<html><body>" + b"x" * 32000 + b" domain expired</body></html>"):
+            with self.subTest(length=len(body)):
+                self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                                 (False, "parked_or_expired"))
+
+    async def test_empty_and_script_only_page_rejected(self):
+        for body in (b"", b"<html><head><script>lotsofjavascript</script></head></html>"):
+            self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                             (False, "empty_or_trivial"))
+
+    async def test_valid_403_or_204_passes(self):
+        for status in (204, 401, 403):
+            self.assertEqual(await self.probe(AsyncMock(return_value=(status, {}, b""))),
+                             (True, "https_ok"))
 
 if __name__ == "__main__":
     unittest.main()
