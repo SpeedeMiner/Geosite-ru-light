@@ -1,4 +1,7 @@
 import unittest
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from publicsuffix2 import PublicSuffixList
 import audit_ru_liveness as audit
 
