@@ -111,3 +111,8 @@ bash tools/build_geosite_mrs.sh --dat /path/to/geosite_RU.dat --output-dir mrs
 
 Для офлайн-сборки и сверки с опубликованными байтами см.
 [воспроизводимую сборку MRS](docs/reproducible-build.md#reproduce-mihomo-mrs-offline).
+
+
+## RU-BLOCKED
+
+Отдельный набор из upstream `ru-blocked` (`geosite-ru-only.dat`) проходит DNS-проверку по базе DIRECT проекта Geoip-ru-server и проверку доступности по TLS/HTTP. Принадлежность к DIRECT не является определением геолокации. Правила `full` и `domain` сохраняют исходную семантику; проверка домена не подтверждает доступность и IP его поддоменов. Категория не добавляется в RU. Workflow формирует отдельные DAT, SRS и MRS и статистику в артефакте Actions; это не публикация в существующий выпуск или CDN. Кэш живых результатов действует 7 дней, остальных от 1 до 3 дней. Доступность и DNS зависят от точки проверки GitHub Actions.
