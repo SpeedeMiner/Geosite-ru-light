@@ -1,0 +1,50 @@
+name: Review expired-domain signals
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-fqdn-candidates.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-fqdn-classification-final
+          run-id: 45449547279
+          github-token: ${{ github.token }}
+          path: inputs
+      - name: Compare RDAP and DNS without new requests
+        run: |
+          python3 - <<'PY'
+          import csv,json,pathlib,shutil,collections
+          p=pathlib.Path('inputs');o=pathlib.Path('reviewed');shutil.copytree(p,o)
+          reg=json.loads((p/'registration.json').read_text()); direct=json.loads((p/'rdap-authoritative.json').read_text())['results']
+          diag=json.loads((p/'diagnostics.json').read_text()); candidates=[]
+          with (p/'classification.csv').open(encoding='utf-8',newline='') as f: rows=list(csv.DictReader(f))
+          for row in rows:
+            if row['category']!='UNKNOWN': continue
+            h=row['hostname']; domain=reg['host_to_domain'].get(h); rdap=direct.get(domain,{})
+            d=diag.get(h,{}); system=(d.get('https') or {}).get('dns') or {}; independent=d.get('independent_dns') or {}
+            def nx(v): return all((v.get(k) or {}).get('status')=='NXDOMAIN' for k in ('A','AAAA'))
+            if rdap.get('http')==404 and nx(system) and nx(independent):
+              candidates.append({'hostname':h,'registrable_domain':domain,'rule_types':row['rule_types'],
+                  'evidence':'authoritative RDAP HTTP 404 and NXDOMAIN on two resolver configurations',
+                  'decision':'manual review only; RDAP 404 does not prove expiry, ownership or full routing scope'})
+          with (o/'removal-review.csv').open('w',encoding='utf-8',newline='') as f:
+            fields=['hostname','registrable_domain','rule_types','evidence','decision']
+            w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(candidates)
+          lines=['# Candidates for manual review','','A registry RDAP 404 and two resolver configurations returned NXDOMAIN. These are weak, time-specific signals, not confirmation of expired registration, a permanently dead service, or safe removal of a domain-suffix rule. No automatic changes.','']
+          lines += [f"- `{r['hostname']}` — {r['evidence']}; rule type: {r['rule_types']}." for r in candidates]
+          if not candidates: lines.append('No names met these conservative review criteria.')
+          (o/'removal-candidates.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+          print(json.dumps({'candidates':candidates,'count':len(candidates)},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ru-fqdn-classification-reviewed
+          path: reviewed/
+          retention-days: 90
