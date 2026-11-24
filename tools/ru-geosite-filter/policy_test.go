@@ -7,6 +7,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/SpeedeMiner/Geosite-ru-light/internal/ruunregistered"
 	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
 )
 
@@ -406,5 +407,42 @@ func TestSuppressionIsLabelBoundedAndRUOnly(t *testing.T) {
 	const expected = "suppressed_root\tprotected_exact_hosts\nexample.net\tapi.example.net,www.example.net\n"
 	if err != nil || string(data) != expected {
 		t.Fatalf("missing deterministic suppression evidence: %q (%v)", data, err)
+	}
+}
+
+
+func TestUnregisteredRUExclusionsAreScopedAndCannotBeReimported(t *testing.T) {
+	if len(ruunregistered.Names()) != 29 {
+		t.Fatalf("unexpected reviewed exclusion count: %d", len(ruunregistered.Names()))
+	}
+	for _, domain := range ruunregistered.Names() {
+		t.Run(domain, func(t *testing.T) {
+			for _, host := range []string{domain, "www." + domain, "api." + domain} {
+				if got := forbiddenSubtreeInRU(router.Domain_RootDomain, host); got != domain {
+					t.Fatalf("unblocked root %q: %q", host, got)
+				}
+				if got := forbiddenSubtreeInRU(router.Domain_Full, host); got != domain {
+					t.Fatalf("unblocked exact %q: %q", host, got)
+				}
+				if addPositiveRule(&router.GeoSite{CountryCode: "RU"}, map[string]bool{}, host) {
+					t.Fatalf("external or local RU reimport accepted: %s", host)
+				}
+				if !addPositiveRule(&router.GeoSite{CountryCode: "BLOCK"}, map[string]bool{}, host) {
+					t.Fatalf("RU policy unexpectedly changed another category: %s", host)
+				}
+			}
+			parent := domain[strings.IndexByte(domain, '.')+1:]
+			if forbiddenSubtreeInRU(router.Domain_RootDomain, parent) == "" {
+				t.Fatalf("covering suffix %q was not rejected", parent)
+			}
+			if got := forbiddenSubtreeInRU(router.Domain_Full, parent); got == domain {
+				t.Fatalf("exact parent incorrectly considered a covering suffix: %s", parent)
+			}
+		})
+	}
+	for _, domain := range []string{"unrelated-example.org", "not-cdn-tinkoff.com", "habrastorage.org"} {
+		if got := forbiddenSubtreeInRU(router.Domain_RootDomain, domain); got != "" {
+			t.Fatalf("unrelated domain %q rejected as %q", domain, got)
+		}
 	}
 }
