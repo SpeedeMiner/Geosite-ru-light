@@ -1,0 +1,36 @@
+name: Include matched RU US evidence
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-geo-merge.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  merge:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-unknown-final-evidence
+          run-id: 45454070323
+          github-token: ${{ github.token }}
+          path: joined
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-us-matched-geo-ten
+          run-id: 45453796025
+          github-token: ${{ github.token }}
+          path: geo
+      - run: python3 tools/audit_geo_merge.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-complete-fqdn-audit
+          path: report-final/
+          retention-days: 90
+          if-no-files-found: warn
