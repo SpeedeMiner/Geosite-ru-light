@@ -48,8 +48,8 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .cache/ru_blocked_probe_cache.json
-          key: ru-blocked-no-403-v7-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: ru-blocked-no-403-v7-
+          key: ru-blocked-js-parking-v8-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: ru-blocked-js-parking-v8-
       - name: Download source snapshots and pinned compilers
         shell: bash
         run: |
@@ -91,7 +91,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .cache/ru_blocked_probe_cache.json
-          key: ru-blocked-no-403-v7-${{ github.run_id }}-${{ github.run_attempt }}
+          key: ru-blocked-js-parking-v8-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Upload verified artifacts and statistics
         uses: actions/upload-artifact@v4
         with:

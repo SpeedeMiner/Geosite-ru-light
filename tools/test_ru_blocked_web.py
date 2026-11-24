@@ -132,5 +132,16 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
                          (True, "https_ok"))
 
+
+    async def test_javascript_domain_parking_shell(self):
+        body = b"<html><title>example.test</title><noscript>We're sorry but domain_page doesn't work properly without JavaScript enabled. Please enable it to continue.</noscript></html>"
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                         (False, "parked_or_expired"))
+
+    async def test_generic_javascript_app_not_parking(self):
+        body = b"<html><title>Legitimate application</title><noscript>Please enable JavaScript to continue.</noscript><p>Customer account service</p></html>"
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                         (True, "https_ok"))
+
 if __name__ == "__main__":
     unittest.main()
