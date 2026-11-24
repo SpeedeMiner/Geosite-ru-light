@@ -9,7 +9,6 @@ domain:avito.st
 domain:beget.com
 domain:beget.tech
 domain:by
-domain:cdn-tinkoff.com
 domain:ddos-guard.net
 domain:ecom.tech
 domain:edgecenter.io
