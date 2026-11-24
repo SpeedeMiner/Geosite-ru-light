@@ -130,7 +130,12 @@ async def probe(name, fresh=False):
                     async with session.get(url,allow_redirects=False) as resp:
                         location=resp.headers.get('Location')
                         h.update(status=resp.status,tls='valid',location=safe_url(urljoin(url,location)) if location else None)
-                        raw=await resp.content.read(65536)
+                        chunks=[]; remaining=65536
+                        while remaining:
+                            chunk=await resp.content.read(min(remaining,8192))
+                            if not chunk: break
+                            chunks.append(chunk); remaining-=len(chunk)
+                        raw=b''.join(chunks)
                         content=raw.decode(resp.charset or 'utf-8',errors='replace')
                         sample=normalize(content+' '+str(dict(resp.headers)))
                         park=next((p for p in PARK if re.search(p,sample)),None)
@@ -189,7 +194,7 @@ async def main():
         psl=PublicSuffixList(io.StringIO(psl_bytes.decode()))
         feed_data=await asyncio.gather(*(feed(session,n,u) for n,u in FEEDS.items()))
     feeds=[x[0] for x in feed_data]
-    jobs={}
+    jobs={}; flagged=set()
     for r in rules:
         yes,value=applicable(r,psl); r['applicable']=yes
         if yes:
@@ -201,6 +206,7 @@ async def main():
                     suffix='.'.join(parts[i:])
                     if suffix in domains: matches.append({'feed':meta['name'],'matched_rule':suffix,'match':'exact' if i==0 else 'parent-domain'}); break
             r['threat_intel']=matches
+            if matches: flagged.add(value)
             jobs[value]=None
         else: r['state']='not_applicable'; r['reason']=value; r['recommendation']='retain unless independently reviewed'
     names=list(jobs)
@@ -211,7 +217,7 @@ async def main():
         while True:
             try: name=queue.get_nowait()
             except asyncio.QueueEmpty: return
-            first=await probe(name); repeat=await probe(name,True) if first['result']!='available' else None
+            first=await probe(name); repeat=await probe(name,True) if first['result']!='available' or name in flagged else None
             jobs[name]={'first':first,'repeat':repeat}; queue.task_done()
     await asyncio.gather(*(worker() for _ in range(40)))
     for r in rules:
@@ -229,6 +235,7 @@ async def main():
         lines.append(f"- `{r['type']}:{r['value']}` — {r['state']}; {json.dumps(r.get('first'),ensure_ascii=False)}; repeat: {json.dumps(r.get('repeat'),ensure_ascii=False)}; TI: {json.dumps(r.get('threat_intel'),ensure_ascii=False)}")
     lines+=['','## Retain','','Available rules and non-applicable root zones and general suffixes; see report.json. Review all domain suffixes in the context of their subdomains.']
     text='\n'.join(lines)+'\n'; (OUT/'report.md').write_text(text,encoding='utf-8')
+    print(json.dumps({'metadata':metadata,'feeds':feeds,'counts':counts,'types':types,'total_rules':len(rules),'unique_testable_hostnames':len(names)},ensure_ascii=False),flush=True)
     summary=os.environ.get('GITHUB_STEP_SUMMARY')
     if summary:
         with open(summary,'a',encoding='utf-8') as f: f.write('\n'.join(lines[:12])+'\n\nFull details are in the uploaded artifact.\n')
