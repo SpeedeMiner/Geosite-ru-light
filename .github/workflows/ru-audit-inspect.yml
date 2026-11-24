@@ -1,0 +1,52 @@
+name: RU audit artifact inspection
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-inspect.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: vpn-fast-coverage
+          run-id: 45417945474
+          github-token: ${{ github.token }}
+          path: audit-input
+      - name: Inspect existing observations
+        run: |
+          python3 - <<'PY'
+          import collections, json, pathlib, hashlib
+          p=pathlib.Path('audit-input/report.json')
+          data=json.loads(p.read_text())
+          rows=data['hosts']
+          states=collections.Counter()
+          reasons=collections.Counter()
+          asns=collections.Counter()
+          obs_count=0
+          duplicates=0
+          incomplete=0
+          for h in rows:
+              seen=set()
+              for o in h.get('observations',[]):
+                  obs_count+=1
+                  states[str(o.get('state'))]+=1
+                  reasons[str((o.get('evidence') or {}).get('reason'))]+=1
+                  asns[str(o.get('vpn_asn'))]+=1
+                  k=(o.get('vpn_asn'),o.get('vpn_exit_ip'),o.get('observed_at'))
+                  if k in seen: duplicates+=1
+                  seen.add(k)
+                  if not o.get('evidence') or not o.get('observed_at'): incomplete+=1
+          out={'input_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'dat_sha256':data['sha256'],'rules':data['rules'],'hosts':len(rows),'reported_coverage':data['coverage'],'observations':obs_count,'states':states,'reasons':reasons,'asn_observation_counts':asns,'duplicate_keys':duplicates,'incomplete_records':incomplete,'jobs':len(data.get('jobs',[])),'missing_observation_files':[j['batch'] for j in data.get('jobs',[]) if not j.get('observation_files')]}
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          pathlib.Path('inspection.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ru-audit-inspection
+          path: inspection.json
+          retention-days: 14
