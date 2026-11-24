@@ -23,13 +23,13 @@ if counts!={"address":393,"nxdomain":45,"dns_error":24,"other":141}:raise System
 plan=Path("plan603");plan.mkdir(exist_ok=True)
 for group,names in groups.items():(plan/(group+".txt")).write_text("\n".join(names)+"\n",encoding="utf-8")
 network=groups["address"]
-for i in range(math.ceil(len(network)/30)):
+for i in range(math.ceil(len(network)/15)):
  with (plan/f"batch-{i:03d}.tsv").open("w",encoding="utf-8",newline="") as f:
   w=csv.DictWriter(f,fieldnames=["cohort","type","rule","host","url","markers","source"],delimiter="\t");w.writeheader()
-  for h in network[i*30:(i+1)*30]:
+  for h in network[i*15:(i+1)*15]:
    rule=hosts[h]["rules"][0]
    w.writerow({"cohort":"audit","type":rule["type"],"rule":rule["value"],"host":h,"url":"https://"+h+"/","markers":"","source":"603 unknown followup"})
-manifest={"groups":dict(groups),"counts":counts,"batches":math.ceil(len(network)/30),"source_run":45456957539}
+manifest={"groups":dict(groups),"counts":counts,"batches":math.ceil(len(network)/15),"source_run":45456957539}
 (plan/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False),encoding="utf-8")
 with open(__import__("os").environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as f:f.write("batches="+json.dumps(list(range(manifest["batches"])))+"\n")
 print(json.dumps({"counts":counts,"batches":manifest["batches"]}),flush=True)
