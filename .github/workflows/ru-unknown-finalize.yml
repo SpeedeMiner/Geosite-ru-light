@@ -1,0 +1,60 @@
+name: Finalize RU unknown evidence
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-unknown-finalize.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  finalize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-fqdn-classification-reviewed
+          run-id: 45449848242
+          github-token: ${{ github.token }}
+          path: existing
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-assembled-report
+          run-id: 45445214672
+          github-token: ${{ github.token }}
+          path: preserved
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-candidates-authoritative
+          run-id: 45452539903
+          github-token: ${{ github.token }}
+          path: candidate
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-candidate-source-matches
+          run-id: 45452784126
+          github-token: ${{ github.token }}
+          path: sources
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-unknown-network-and-infrastructure
+          run-id: 45453153219
+          github-token: ${{ github.token }}
+          path: services
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-unknown-registration-followup
+          run-id: 45452930143
+          github-token: ${{ github.token }}
+          path: registration
+      - run: python3 tools/audit_unknown_finalize.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-unknown-final-evidence
+          path: completed/
+          retention-days: 90
+          if-no-files-found: warn
