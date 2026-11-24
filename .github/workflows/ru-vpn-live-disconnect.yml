@@ -61,6 +61,8 @@ jobs:
           (cd .vpn-pilot/upstream/.github/reachability/inventory && GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/vpn-inventory" .)
           "$RUNNER_TEMP/vpn-inventory" .vpn-pilot/geoip-release/geoip_RU.dat .vpn-pilot/inventory.tsv
       - name: Disconnect active VPN and probe guard before unwinding
+        id: disconnect
+        continue-on-error: true # adapter returns nonzero because the deliberately interrupted probe has no observation
         timeout-minutes: 8
         run: |
           set -euo pipefail
@@ -77,6 +79,7 @@ jobs:
           python - <<'PY'
           import json
           d=json.load(open('live-disconnect/report.json'))
+          assert d['source_run'] == __import__('os').environ['GITHUB_RUN_ID'], d
           assert d['openvpn_pids'] and d['process_exited'] and d['tun_removed'], d
           assert d['before']['tcp4']['sent'], d
           assert not d['after']['tcp4']['sent'] and not d['after']['dns4']['sent'], d
