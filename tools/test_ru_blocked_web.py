@@ -95,5 +95,25 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(await self.probe(AsyncMock(return_value=(status, {}, b""))),
                              (True, "https_ok"))
 
+
+    async def test_hosting_placeholder_variants(self):
+        for phrase in ("Сайт размещен некорректно", "Сайт размещён\n   некорректно"):
+            body = ("<html><title>" + phrase + "</title></html>").encode("utf-8")
+            self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                             (False, "parked_or_expired"))
+
+    async def test_placeholder_across_markup_and_header(self):
+        body = "<html><title>Сайт <b>размещён</b> некорректно</title></html>".encode("utf-8")
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                         (False, "parked_or_expired"))
+        headers = {"X-Parking-Info": "Домен   не привязан"}
+        self.assertEqual(await self.probe(AsyncMock(return_value=(403, headers, b""))),
+                         (False, "parked_or_expired"))
+
+    async def test_registrar_mention_alone_is_not_placeholder(self):
+        body = "<html><title>Рабочий сервис</title><p>Мы пользуемся reg.ru</p></html>".encode("utf-8")
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                         (True, "https_ok"))
+
 if __name__ == "__main__":
     unittest.main()

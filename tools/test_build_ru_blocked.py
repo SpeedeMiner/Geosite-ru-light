@@ -61,6 +61,25 @@ class CodecTest(unittest.TestCase):
         self.assertEqual(result["example.com"]["reason"], "https_unreachable")
         self.assertEqual(result["example.com"]["probe_version"], b.PROBE_VERSION)
 
+
+    def test_manual_exclusion_rule_semantics(self):
+        exclusions = b.parse_exclusions("# comment\n domain:bad.example # inline\nfull:only.example\n")
+        for rule in ((2, "bad.example"), (3, "sub.bad.example"), (2, "sub.bad.example"),
+                     (3, "only.example"), (2, "only.example")):
+            self.assertTrue(b.rule_intersects_exclusion(rule, exclusions), rule)
+        for rule in ((3, "good.example"), (3, "sub.only.example"), (2, "other.example")):
+            self.assertFalse(b.rule_intersects_exclusion(rule, exclusions), rule)
+        # A broad suffix must not silently re-include an excluded child.
+        self.assertTrue(b.rule_intersects_exclusion((2, "example.com"), {(3, "child.example.com")}))
+        self.assertTrue(b.rule_intersects_exclusion((2, "example.com"), {(2, "child.example.com")}))
+        self.assertFalse(b.rule_intersects_exclusion((3, "example.com"), {(3, "child.example.com")}))
+
+    def test_manual_exclusions_normalize_and_fail_closed(self):
+        self.assertEqual(b.parse_exclusions(" EXAMPLE.COM. # comment\n"), {(2, "example.com")})
+        for value in ("regexp:example.com", "domain:bad..example", "full:"):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                b.parse_exclusions(value)
+
 if __name__ == "__main__":
     unittest.main()
 

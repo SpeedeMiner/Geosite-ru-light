@@ -24,7 +24,7 @@ from ru_blocked_index import DirectPrefixIndex, normalize_domain
 POSITIVE_TTL = 7 * 86400
 NEGATIVE_TTL = 86400
 MAX_BACKOFF = 3 * 86400
-PROBE_VERSION = "https-verified-content-v4"
+PROBE_VERSION = "https-placeholder-exclude-v5"
 
 
 def varint(data, offset):
@@ -147,6 +147,44 @@ def encode_dat(rules):
     return blob(1, category)
 
 
+def parse_exclusions(text):
+    """Parse bare/domain: suffixes and full: exact exclusions; reject bad input."""
+    result = set()
+    for number, raw in enumerate(text.splitlines(), 1):
+        line = raw.split("#", 1)[0].strip()
+        if not line:
+            continue
+        prefix, sep, value = line.partition(":")
+        if sep:
+            kind = {"domain": 2, "full": 3}.get(prefix.lower())
+            if kind is None:
+                raise ValueError(f"invalid exclusion type on line {number}")
+        else:
+            kind, value = 2, prefix
+        try:
+            result.add((kind, normalize_domain(value.strip())))
+        except ValueError as exc:
+            raise ValueError(f"invalid exclusion on line {number}") from exc
+    return result
+
+
+def covered_by(host, suffix):
+    return host == suffix or host.endswith("." + suffix)
+
+
+def rule_intersects_exclusion(rule, exclusions):
+    """Drop a whole suffix if it covers any excluded name/subtree."""
+    kind, host = rule
+    for excluded_kind, excluded in exclusions:
+        if excluded_kind == 2 and covered_by(host, excluded):
+            return True
+        if kind == 2 and covered_by(excluded, host):
+            return True
+        if kind == 3 and excluded_kind == 3 and host == excluded:
+            return True
+    return False
+
+
 def cache_fresh(row, now):
     try:
         if row.get("probe_version") != PROBE_VERSION:
@@ -223,6 +261,7 @@ async def run_probes(hosts, index, cache, force, concurrency, resolver=None, thr
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--threat-feed", type=Path, action="append", required=True)
+    p.add_argument("--exclude-file", type=Path, default=Path("data/ru-blocked-exclude.txt"))
     p.add_argument("--source", type=Path, required=True)
     p.add_argument("--geoip", type=Path, required=True)
     p.add_argument("--cache", type=Path, required=True)
@@ -235,6 +274,8 @@ def main():
     source = args.source.read_bytes()
     geoip = args.geoip.read_bytes()
     rules, unsupported = extract_rules(source)
+    exclusions = parse_exclusions(args.exclude_file.read_text(encoding="utf-8-sig"))
+    excluded_rules = {rule for rule in rules if rule_intersects_exclusion(rule, exclusions)}
     index = DirectPrefixIndex(extract_cidrs(geoip))
     try:
         cache = json.loads(args.cache.read_text(encoding="utf-8"))
@@ -257,7 +298,8 @@ def main():
     hosts = {host for _, host in rules}
     output, stats = asyncio.run(run_probes(hosts, index, cache, args.force_refresh, args.concurrency,
                                           threats=threats, threat_digest=threat_digest))
-    accepted = {(kind, host) for kind, host in rules if output[host]["in_direct_geoip"] and output[host]["alive"]}
+    pre_exclusion_accepted = {(kind, host) for kind, host in rules if output[host]["in_direct_geoip"] and output[host]["alive"]}
+    accepted = pre_exclusion_accepted - excluded_rules
     if not accepted:
         raise ValueError("no live DIRECT matches; refusing empty artifact")
     args.output.mkdir(parents=True, exist_ok=True)
@@ -281,6 +323,9 @@ def main():
     live = sum(output[h]["alive"] and output[h]["in_direct_geoip"] for h in hosts)
     report = {"source_rules": len(rules), "source_hosts": len(hosts), "unsupported_rules": unsupported,
               "direct_hosts": direct, "alive_hosts": live, "accepted_rules": len(accepted),
+              "manual_excluded_rules": len(excluded_rules),
+              "manual_excluded_hosts": len({host for _, host in excluded_rules}),
+              "manual_excluded_alive_rules": len(pre_exclusion_accepted & excluded_rules),
               "cache_hits": stats["cache_hits"], "probed": stats["probed"],
               "cache_entries": len(output), "threat_feed_sha256": feed_hashes,
               "threat_domains": len(threats), "reasons": dict(sorted(Counter(row["reason"] for row in output.values()).items())),

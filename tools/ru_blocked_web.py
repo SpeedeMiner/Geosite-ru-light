@@ -1,6 +1,8 @@
 """Threat matching and bounded HTTPS response checking for RU-BLOCKED."""
 import asyncio
 import ipaddress
+import html
+import re
 import socket
 import ssl
 from html.parser import HTMLParser
@@ -18,7 +20,10 @@ PARKING_TEXT = ("срок регистрации домена", "истек ср
                 "this domain is parked", "this domain is available for purchase",
                 "домен припаркован", "парковка домена", "домен выставлен на продажу", "домен продается",
                 "домен продаётся", "делегирование домена приостановлено",
-                "срок регистрации истек", "срок регистрации истёк")
+                "срок регистрации истек", "срок регистрации истёк",
+                "сайт размещен некорректно", "домен не привязан",
+                "домен не настроен", "сайт не настроен",
+                "домен не подключен к хостингу", "ошибка размещения сайта")
 REDIRECTS = {301, 302, 303, 307, 308}
 
 
@@ -89,13 +94,22 @@ def matches(host, domains):
     return any(".".join(parts[i:]) in domains for i in range(len(parts) - 1))
 
 
-def parked(body):
-    # UTF-8 and common Russian legacy encoding; inspect only a bounded prefix.
-    body = body[:MAX_BODY]
+def normalize_page(text):
+    return " ".join(html.unescape(text).lower().replace("ё", "е").split())
+
+
+def parked(body, headers=None):
+    # Check raw HTML (including meta/script), visible text and HTTP headers.
+    prefix = body[:MAX_BODY]
+    header_text = " ".join(str(k) + " " + str(v) for k, v in (headers or {}).items())
     for encoding in ("utf-8", "cp1251"):
-        text = body.decode(encoding, errors="ignore").lower()
-        if any(signature in text for signature in PARKING_TEXT):
-            return True
+        text = prefix.decode(encoding, errors="ignore")
+        raw = normalize_page(header_text + " " + text)
+        without_tags = normalize_page(header_text + " " + re.sub(r"<[^>]*>", " ", text))
+        for signature in PARKING_TEXT:
+            needle = normalize_page(signature)
+            if needle in raw or needle in without_tags:
+                return True
     return False
 
 
@@ -189,7 +203,7 @@ async def probe_https(host, ips, index, resolver, threats, resolve, fetch=fetch_
             continue
         if not (200 <= status <= 299 or status in (401, 403)):
             return False, "http_status_rejected"
-        if parked(body):
+        if parked(body, headers):
             return False, "parked_or_expired"
         content_type = next((v for k, v in headers.items() if k.lower() == "content-type"), "")
         if status == 200 and trivial(body, content_type):

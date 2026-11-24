@@ -1,0 +1,3 @@
+# Manual RU-BLOCKED exclusions. Bare names and domain: cover a suffix; full: is exact.
+# A broader suffix rule that covers an excluded name is removed in full.
+domain:mechanics.team
