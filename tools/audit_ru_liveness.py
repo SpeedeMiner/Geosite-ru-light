@@ -23,7 +23,7 @@ PARK = [r'сайт размещен некорректно', r'доменное 
 WAF = [r'captcha', r'cloudflare ray id', r'checking your browser', r'подтвердите,? что вы не робот', r'access denied']
 FEEDS = {
  'Phishing Army': ['https://phishing.army/download/phishing_army_blocklist_extended.txt', 'https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-domains-ACTIVE.txt'],
- 'HaGeZi TIF': ['https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt', 'https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/tif.txt'],
+ 'HaGeZi TIF': ['https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/tif-onlydomains.txt', 'https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif-onlydomains.txt'],
 }
 
 def varint(data, pos):
