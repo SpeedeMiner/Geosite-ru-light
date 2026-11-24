@@ -39,7 +39,7 @@ class CodecTest(unittest.TestCase):
         cache = {"example.com": dict(ips=["8.8.8.8"], in_direct_geoip=True,
                                       alive=True, checked_at=time.time(), fail_streak=0, probe_version=b.PROBE_VERSION)}
         with patch.object(b, "resolve", new=AsyncMock(return_value=["1.1.1.1"])), \
-             patch.object(b, "alive", new=AsyncMock(return_value=True)):
+             patch.object(b, "probe_https", new=AsyncMock(return_value=(True, "https_ok"))):
             result, stats = asyncio.run(b.run_probes(set(cache), index, cache, False, 2, resolver=object()))
         self.assertEqual(stats["probed"], 1)
         self.assertTrue(result["example.com"]["alive"])
@@ -52,31 +52,10 @@ class CodecTest(unittest.TestCase):
                    alive=True, checked_at=now, fail_streak=0)
         self.assertFalse(b.cache_fresh(row, now))
 
-    def test_https_unreachable_never_probes_http_even_if_parked(self):
-        async def connect(host, port, **kwargs):
-            if port == 443:
-                raise ConnectionRefusedError()
-            return object(), object()  # HTTP-only, possibly a parking page
-        with patch.object(b.asyncio, "open_connection", new=AsyncMock(side_effect=connect)) as connect_mock:
-            self.assertFalse(asyncio.run(b.alive("example.com", ["8.8.8.8"])))
-        self.assertEqual(connect_mock.await_count, 2)
-        self.assertTrue(all(call.args[1] == 443 for call in connect_mock.await_args_list))
-        self.assertTrue(all(call.kwargs["server_hostname"] == "example.com" for call in connect_mock.await_args_list))
-
-    def test_https_handshake_succeeds(self):
-        writer = unittest.mock.MagicMock()
-        writer.wait_closed = AsyncMock()
-        with patch.object(b.asyncio, "open_connection", new=AsyncMock(return_value=(object(), writer))) as connect:
-            self.assertTrue(asyncio.run(b.alive("example.com", ["8.8.8.8"])))
-        self.assertEqual(connect.await_args.args[1], 443)
-        self.assertEqual(connect.await_args.kwargs["server_hostname"], "example.com")
-        writer.close.assert_called_once()
-        writer.wait_closed.assert_awaited_once()
-
     def test_no_https_reason_in_probe_cache(self):
         index = DirectPrefixIndex(["1.1.1.0/24"])
         with patch.object(b, "resolve", new=AsyncMock(return_value=["1.1.1.1"])), \
-             patch.object(b, "alive", new=AsyncMock(return_value=False)):
+             patch.object(b, "probe_https", new=AsyncMock(return_value=(False, "https_unreachable"))):
             result, _ = asyncio.run(b.run_probes({"example.com"}, index, {}, False, 2, resolver=object()))
         self.assertFalse(result["example.com"]["alive"])
         self.assertEqual(result["example.com"]["reason"], "https_unreachable")

@@ -15,13 +15,16 @@ from pathlib import Path
 import socket
 import ssl
 import time
+from collections import Counter
+
+from ru_blocked_web import matches, parse_feed, probe_https
 
 from ru_blocked_index import DirectPrefixIndex, normalize_domain
 
 POSITIVE_TTL = 7 * 86400
 NEGATIVE_TTL = 86400
 MAX_BACKOFF = 3 * 86400
-PROBE_VERSION = "https-tls-v2"
+PROBE_VERSION = "https-response-threat-v3"
 
 
 def varint(data, offset):
@@ -173,38 +176,27 @@ async def resolve(host, resolver):
     return sorted(set(rows[0] + rows[1]))
 
 
-async def alive(host, addresses):
-    """TLS handshake with SNI on DIRECT IPs only; no plaintext HTTP probe."""
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-    context.check_hostname = False
-    context.verify_mode = ssl.CERT_NONE
-    for address in addresses[:4]:
-        for _ in range(2):
-            try:
-                _, writer = await asyncio.wait_for(
-                    asyncio.open_connection(address, 443, ssl=context, server_hostname=host,
-                                            ssl_handshake_timeout=4), 5)
-                writer.close()
-                await writer.wait_closed()
-                return True
-            except (OSError, asyncio.TimeoutError, ssl.SSLError):
-                pass
-    return False
 
 
-async def run_probes(hosts, index, cache, force, concurrency, resolver=None):
+async def run_probes(hosts, index, cache, force, concurrency, resolver=None, threats=None, threat_digest=''):
     if resolver is None:
         import dns.asyncresolver
         resolver = dns.asyncresolver.Resolver()
         resolver.timeout = 2
         resolver.lifetime = 4
+    threats = threats or set()
     semaphore = asyncio.Semaphore(concurrency)
     now = time.time()
     stats = {"cache_hits": 0, "probed": 0}
     output = {}
     async def one(host):
         row = cache.get(host, {})
-        if not force and cache_fresh(row, now):
+        if matches(host, threats):
+            output[host] = {"ips": [], "direct_ips": [], "in_direct_geoip": False,
+                            "alive": False, "reason": "phishing_or_scam", "checked_at": now,
+                            "fail_streak": 0, "probe_version": PROBE_VERSION, "threat_digest": threat_digest}
+            return
+        if not force and cache_fresh(row, now) and (row.get("threat_digest") == threat_digest or (not row.get("alive") and row.get("reason") != "phishing_or_scam")):
             # Reevaluate cached IPs against the current DIRECT snapshot.
             direct = [ip for ip in row["ips"] if index.contains(ip)]
             if sorted(direct) == sorted(row.get("direct_ips", [])) and bool(direct) == bool(row["in_direct_geoip"]):
@@ -215,12 +207,12 @@ async def run_probes(hosts, index, cache, force, concurrency, resolver=None):
             stats["probed"] += 1
             ips = await resolve(host, resolver)
             direct = [ip for ip in ips if index.contains(ip)]
-            is_alive = await alive(host, direct) if direct else False
+            is_alive, reason = await probe_https(host, direct, index, resolver, threats, resolve) if direct else (False, "no_direct_ip")
             streak = 0 if is_alive else min(int(row.get("fail_streak", 0)) + 1, 10)
             output[host] = {"ips": ips, "direct_ips": direct, "in_direct_geoip": bool(direct), "alive": is_alive,
                             "checked_at": now, "fail_streak": streak,
-                            "probe_version": PROBE_VERSION,
-                            "reason": "https_ok" if is_alive else ("https_unreachable" if direct else "no_direct_ip")}
+                            "probe_version": PROBE_VERSION, "threat_digest": threat_digest,
+                            "reason": reason}
     # Batches cap both open tasks and memory.
     hosts = sorted(hosts)
     for start in range(0, len(hosts), 2000):
@@ -230,6 +222,7 @@ async def run_probes(hosts, index, cache, force, concurrency, resolver=None):
 
 def main():
     p = argparse.ArgumentParser()
+    p.add_argument("--threat-feed", type=Path, action="append", required=True)
     p.add_argument("--source", type=Path, required=True)
     p.add_argument("--geoip", type=Path, required=True)
     p.add_argument("--cache", type=Path, required=True)
@@ -249,8 +242,21 @@ def main():
             cache = {}
     except (OSError, ValueError):
         cache = {}
+    threats = set()
+    feed_hashes = {}
+    if len(args.threat_feed) < 2:
+        raise ValueError("at least two threat feeds required")
+    for feed in args.threat_feed:
+        raw = feed.read_bytes()
+        domains = parse_feed(raw.decode("utf-8-sig", errors="strict"))
+        if len(domains) < 100:
+            raise ValueError(f"empty or invalid threat feed: {feed}")
+        threats.update(domains)
+        feed_hashes[feed.name] = hashlib.sha256(raw).hexdigest()
+    threat_digest = hashlib.sha256(json.dumps(feed_hashes, sort_keys=True).encode()).hexdigest()
     hosts = {host for _, host in rules}
-    output, stats = asyncio.run(run_probes(hosts, index, cache, args.force_refresh, args.concurrency))
+    output, stats = asyncio.run(run_probes(hosts, index, cache, args.force_refresh, args.concurrency,
+                                          threats=threats, threat_digest=threat_digest))
     accepted = {(kind, host) for kind, host in rules if output[host]["in_direct_geoip"] and output[host]["alive"]}
     if not accepted:
         raise ValueError("no live DIRECT matches; refusing empty artifact")
@@ -276,7 +282,9 @@ def main():
     report = {"source_rules": len(rules), "source_hosts": len(hosts), "unsupported_rules": unsupported,
               "direct_hosts": direct, "alive_hosts": live, "accepted_rules": len(accepted),
               "cache_hits": stats["cache_hits"], "probed": stats["probed"],
-              "cache_entries": len(output), "source_sha256": hashlib.sha256(source).hexdigest(),
+              "cache_entries": len(output), "threat_feed_sha256": feed_hashes,
+              "threat_domains": len(threats), "reasons": dict(sorted(Counter(row["reason"] for row in output.values()).items())),
+              "source_sha256": hashlib.sha256(source).hexdigest(),
               "geoip_sha256": hashlib.sha256(geoip).hexdigest()}
     text = json.dumps(report, indent=2, sort_keys=True)
     (args.output / "ru-blocked-stats.json").write_text(text + "\n", encoding="utf-8")
