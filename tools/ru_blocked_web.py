@@ -123,8 +123,12 @@ async def probe_https(host, ips, index, resolver, threats, resolve, fetch=fetch_
             location = next((v for k, v in headers.items() if k.lower() == "location"), None)
             if not location:
                 return False, "https_unreachable"
-            target = urljoin(url, location)
-            if urlsplit(target).scheme.lower() == "http":
+            try:
+                target = urljoin(url, location)
+                target_scheme = urlsplit(target).scheme.lower()
+            except (TypeError, ValueError):
+                return False, "https_unreachable"
+            if target_scheme == "http":
                 return False, "https_to_http_redirect"
             if step == MAX_REDIRECTS:
                 return False, "redirect_limit"

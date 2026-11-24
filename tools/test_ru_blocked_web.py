@@ -36,6 +36,10 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
                          (False, "parked_or_expired"))
 
+    async def test_malformed_redirect_is_rejected(self):
+        fetch = AsyncMock(return_value=(302, {"Location": "https://[invalid"}, b""))
+        self.assertEqual(await self.probe(fetch), (False, "https_unreachable"))
+
     async def test_clean_https_passes(self):
         self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, b"<html>hello</html>"))),
                          (True, "https_ok"))
