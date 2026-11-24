@@ -1,4 +1,4 @@
-name: Finalize RU unknown evidence
+name: Finalize RU unknown evidence with reasons
 on:
   push:
     branches: [audit/ru-domain-liveness]
