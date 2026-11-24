@@ -15,7 +15,7 @@ meta={r["hostname"]:r for r in previous}
 five_by={r["domain"]:r for r in five["records"]}
 if len(rows)!=4495 or len({r["hostname"] for r in rows})!=4495 or len(new["records"])!=33:raise SystemExit("unexpected inputs")
 def explicit_absence(lines):
- return any(re.search(r'^no match for ',s,re.I) or re.search(r'^(%%\s*)?(domain\s+)?not found\.?$',s,re.I) or re.search(r'^>>>\s*domain\s+\S+\s+is available for registration',s,re.I) for s in lines)
+ return any(re.search(r'^no match for ',s,re.I) or re.search(r'^(%%\s*)?(domain\s+)?not found\.?$',s,re.I) or re.search(r'^>>>\s*domain\s+\S+\s+is available for registration',s,re.I) or s.lower() == 'the queried object does not exist: no object found' for s in lines)
 def evidence_http(e):
  if not isinstance(e,dict):return []
  return [{"url":h.get("url"),"status":h.get("status"),"ip":h.get("ip")} for h in e.get("hops",[]) if h.get("tls")=="valid" and type(h.get("status")) is int and 100<=h["status"]<=599]
