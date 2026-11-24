@@ -8,6 +8,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/SpeedeMiner/Geosite-ru-light/internal/ruunregistered"
 	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
 	"google.golang.org/protobuf/proto"
 )
@@ -59,7 +60,7 @@ var excludedRUPositiveDomains = map[string]bool{
 // These domains and their subdomains must not be routed by geosite:RU.
 func forbiddenSubtreeInRU(typ router.Domain_Type, value string) string {
 	name := normalizeName(value)
-	for _, apex := range []string{"4pda.to", "habr.com"} {
+	for _, apex := range append([]string{"4pda.to", "habr.com"}, ruunregistered.Names()...) {
 		if name == apex || strings.HasSuffix(name, "."+apex) ||
 			typ == router.Domain_RootDomain && strings.HasSuffix(apex, "."+name) {
 			return apex

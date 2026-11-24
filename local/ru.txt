@@ -95,7 +95,6 @@ domain:edgecenter.io
 domain:timeweb.cloud
 domain:timeweb.com
 domain:tinkoff.com
-domain:cdn-tinkoff.com
 domain:tbank.com
 domain:sberbank.com
 domain:alfabank.com

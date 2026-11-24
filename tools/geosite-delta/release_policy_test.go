@@ -7,6 +7,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/SpeedeMiner/Geosite-ru-light/internal/ruunregistered"
 	router "github.com/v2fly/v2ray-core/v5/app/router/routercommon"
 	"google.golang.org/protobuf/proto"
 )
@@ -196,5 +197,38 @@ func TestApprovedCrashlyticsBlockTransition(t *testing.T) {
 		if covered(after, h, false) {
 			t.Fatalf("exact Crashlytics rule unexpectedly covers %s", h)
 		}
+	}
+}
+
+
+func TestReviewedUnregisteredLossesDoNotRelaxOtherProtection(t *testing.T) {
+	t.Setenv("GEOSITE_EXPECTED_RU_ADDITIONS", "")
+	makeRules := func() rules {
+		return rules{roots: map[string]bool{}, full: map[string]bool{}, opaque: map[string]bool{}}
+	}
+	old := map[string]rules{"RU": makeRules(), "BLOCK": makeRules(), "APPLE": makeRules()}
+	now := map[string]rules{"RU": makeRules(), "BLOCK": makeRules(), "APPLE": makeRules()}
+	var lost []string
+	for _, domain := range ruunregistered.Names() {
+		old["RU"].roots[domain] = true
+		lost = append(lost, "domain:"+domain)
+	}
+	if err := verifyCategoryTransition(old, now, nil, lost, nil); err != nil {
+		t.Fatalf("reviewed losses rejected: %v", err)
+	}
+	for _, extra := range []string{"domain:unrelated.example", "full:" + ruunregistered.Names()[0]} {
+		if err := verifyCategoryTransition(old, now, nil, append(append([]string{}, lost...), extra), nil); err == nil {
+			t.Fatalf("unexpectedly allowed additional loss %s", extra)
+		}
+	}
+	for _, restored := range []string{ruunregistered.Names()[0], "api." + ruunregistered.Names()[0], "com"} {
+		now["RU"].roots[restored] = true
+		if err := verifyCategoryTransition(old, now, nil, lost, nil); err == nil {
+			t.Fatalf("restored excluded coverage %s was accepted", restored)
+		}
+		delete(now["RU"].roots, restored)
+	}
+	if err := verifyCategoryTransition(old, now, nil, lost, []string{"APPLE"}); err == nil {
+		t.Fatal("unrelated protected-category change was accepted")
 	}
 }

@@ -8,6 +8,8 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/SpeedeMiner/Geosite-ru-light/internal/ruunregistered"
 )
 
 const excludedHabrApex = "habr.com"
@@ -147,10 +149,18 @@ func verifyCategoryTransition(old, now map[string]rules, addedRU, lostRU, change
 		!(len(changed) == 1 && changed[0] == "BLOCK" && approvedBlockAddition(old["BLOCK"], now["BLOCK"])) {
 		return fmt.Errorf("unreviewed protected category changes: %s", strings.Join(changed, ", "))
 	}
-	// The user approved removing this specific historical suffix from RU.
-	// Do not accept any other lost rules, or an exact/child replacement.
+	// Approved RU losses are limited to the existing Habr exclusion and the
+	// reviewed, time-sensitive unregistered list. Reject restored coverage even
+	// after the rolling release already incorporates these losses.
+	for _, apex := range ruunregistered.Names() {
+		if conflict := rejectedSubtreeConflict(now["RU"], apex); conflict != "" {
+			return fmt.Errorf("unregistered RU exclusion %s violated: %s", apex, conflict)
+		}
+	}
 	for _, rule := range lostRU {
-		if rule != "domain:"+excludedHabrApex || rejectedSubtreeConflict(now["RU"], excludedHabrApex) != "" {
+		allowed := rule == "domain:"+excludedHabrApex ||
+			(strings.HasPrefix(rule, "domain:") && ruunregistered.Contains(strings.TrimPrefix(rule, "domain:")))
+		if !allowed || (rule == "domain:"+excludedHabrApex && rejectedSubtreeConflict(now["RU"], excludedHabrApex) != "") {
 			return fmt.Errorf("release RU rule no longer covered: %s; review before merge", rule)
 		}
 	}
