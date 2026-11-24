@@ -1,0 +1,56 @@
+name: Preserve and reconcile RU VPN evidence
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-preserve.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: vpn-fast-plan
+          run-id: 45417945474
+          github-token: ${{ github.token }}
+          path: evidence/vpn-fast-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: vpn-shard-*
+          run-id: 45417945474
+          github-token: ${{ github.token }}
+          path: evidence
+      - uses: actions/download-artifact@v4
+        with:
+          name: vpn-fast-coverage
+          run-id: 45417945474
+          github-token: ${{ github.token }}
+          path: evidence/vpn-fast-coverage
+      - name: Verify release DAT
+        run: |
+          curl --fail --location --retry 2 -o evidence/geosite_RU.dat https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized/geosite_RU.dat
+          printf '%s  %s\n' 027939e3a31591bd48a57428c893a8237fe61352d90a8c3077b39366a3a3d0cc evidence/geosite_RU.dat | sha256sum -c -
+      - name: Reconcile raw observation records
+        run: python3 tools/audit_raw_integrity.py evidence audit-verified
+      - name: Preserve source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru-audit-source-evidence-45417945474
+          path: evidence/
+          retention-days: 90
+          include-hidden-files: true
+      - name: Preserve reconciliation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ru-audit-verified-reports
+          path: audit-verified/
+          retention-days: 90
