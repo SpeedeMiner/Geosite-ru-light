@@ -2,11 +2,12 @@
 """Combine baseline and targeted observations without discarding uncertain cases."""
 import collections,csv,datetime,json,os,sys
 from pathlib import Path
+from vpn_targeted_integrity import validate_targeted
 
 base=json.loads(Path("baseline/report.json").read_text(encoding="utf-8"))
 plan=json.loads(Path("target-plan/manifest.json").read_text(encoding="utf-8"))
 root=Path("target-results");out=Path("final-report");out.mkdir(exist_ok=True)
-expected=set(plan["hosts"]); added=collections.defaultdict(list); problems=[]; missing=[]
+expected=set(plan["hosts"]); added=collections.defaultdict(list); problems=validate_targeted(plan, "target-plan", root); missing=[]
 for i in range(plan["batch_count"]):
     batchroot=root/f"target-shard-{i}"
     files=list(batchroot.rglob("vpnobratno-observations.jsonl"))
