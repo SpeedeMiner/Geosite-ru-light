@@ -77,7 +77,7 @@ jobs:
           python - <<'PY'
           import json
           d=json.load(open('live-disconnect/report.json'))
-          assert d['openvpn_pids'] and d['process_exited'], d
+          assert d['openvpn_pids'] and d['process_exited'] and d['tun_removed'], d
           assert d['before']['tcp4']['sent'], d
           assert not d['after']['tcp4']['sent'] and not d['after']['dns4']['sent'], d
           PY
