@@ -196,11 +196,12 @@ async def alive(host, addresses):
     return False
 
 
-async def run_probes(hosts, index, cache, force, concurrency):
-    import dns.asyncresolver
-    resolver = dns.asyncresolver.Resolver()
-    resolver.timeout = 2
-    resolver.lifetime = 4
+async def run_probes(hosts, index, cache, force, concurrency, resolver=None):
+    if resolver is None:
+        import dns.asyncresolver
+        resolver = dns.asyncresolver.Resolver()
+        resolver.timeout = 2
+        resolver.lifetime = 4
     semaphore = asyncio.Semaphore(concurrency)
     now = time.time()
     stats = {"cache_hits": 0, "probed": 0}

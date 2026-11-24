@@ -40,7 +40,7 @@ class CodecTest(unittest.TestCase):
                                       alive=True, checked_at=time.time(), fail_streak=0)}
         with patch.object(b, "resolve", new=AsyncMock(return_value=["1.1.1.1"])), \
              patch.object(b, "alive", new=AsyncMock(return_value=True)):
-            result, stats = asyncio.run(b.run_probes(set(cache), index, cache, False, 2))
+            result, stats = asyncio.run(b.run_probes(set(cache), index, cache, False, 2, resolver=object()))
         self.assertEqual(stats["probed"], 1)
         self.assertTrue(result["example.com"]["alive"])
         self.assertEqual(result["example.com"]["ips"], ["1.1.1.1"])
