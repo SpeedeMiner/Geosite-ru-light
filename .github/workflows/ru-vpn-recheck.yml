@@ -97,7 +97,7 @@ jobs:
           upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
           sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" PYTHONDONTWRITEBYTECODE=1 \
             bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 10m \
-              python -B "$AUDIT/vpnobratno_get.py" audit-output/vpn-plan.tsv .vpn-pilot/inventory.tsv \
+              python3 -B "$AUDIT/vpnobratno_get.py" audit-output/vpn-plan.tsv .vpn-pilot/inventory.tsv \
                 "$upstream" .vpn-pilot/report --exits 2 --attempts 6 --connect-timeout 16
       - name: Print sanitized evidence
         if: always()
