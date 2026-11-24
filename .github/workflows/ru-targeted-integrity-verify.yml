@@ -36,7 +36,8 @@ jobs:
           path: target-results
       - name: Validate and collect saved observations
         env:
-          GITHUB_RUN_ID_SOURCE: '45431389815'
+          TARGET_SOURCE_RUN: '45431389815'
+          TARGET_SOURCE_SHA: '8bd84a4cca41549624571f055c85ac854e19a9d5'
         run: python3 tools/vpn_targeted_collect.py
       - uses: actions/upload-artifact@v4
         if: always()
