@@ -19,8 +19,8 @@ DNS_CACHE = {}
 TTL = 300
 HEADERS = {'User-Agent': 'Geosite-RU-Audit/1.0 (+https://github.com/SpeedeMiner/Geosite-ru-light)'}
 TYPES = {0:'plain', 1:'regex', 2:'domain', 3:'full'}
-PARK = [r'ᠩ� ࠧ��饭 �����४⭮', r'�������� ��� .{0,100} �த�����', r'����� ��ॣ����஢�� � �ਯ�મ���', r'����� �ਯ�મ���', r'����� �த�����', r'����� ���⠢��� �� �த���', r'domain (?:name )?(?:is )?for sale', r'this domain (?:has )?expired', r'domain (?:has )?expired', r'parking page', r'�ப ॣ����樨 ������ ��⥪']
-WAF = [r'captcha', r'cloudflare ray id', r'checking your browser', r'���⢥न�,? �� �� �� ஡��', r'access denied']
+PARK = [r'сайт размещен некорректно', r'доменное имя .{0,100} продается', r'домен зарегистрирован и припаркован', r'домен припаркован', r'домен продается', r'домен выставлен на продажу', r'domain (?:name )?(?:is )?for sale', r'this domain (?:has )?expired', r'domain (?:has )?expired', r'parking page', r'срок регистрации домена истек']
+WAF = [r'captcha', r'cloudflare ray id', r'checking your browser', r'подтвердите,? что вы не робот', r'access denied']
 FEEDS = {
  'Phishing Army': ['https://phishing.army/download/phishing_army_blocklist_extended.txt', 'https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-domains-ACTIVE.txt'],
  'HaGeZi TIF': ['https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/tif.txt', 'https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@main/domains/tif.txt'],
@@ -66,7 +66,7 @@ def extract(data):
     return result
 
 def normalize(s):
-    return re.sub(r'\s+', ' ', html.unescape(s).lower().replace('�','�')).strip()
+    return re.sub(r'\s+', ' ', html.unescape(s).lower().replace('ё','е')).strip()
 
 def safe_url(url):
     p=urlsplit(url)
@@ -226,7 +226,7 @@ async def main():
     lines=['# RU liveness audit','','**One GitHub-hosted runner; region unknown. No independent RU measurement.**','',f"Release ID: {release['id']}  ",f'DAT SHA-256: `{digest}` (verified against published checksum)  ',f"Checked at: {metadata['downloaded_at']}  ",f'Rules: {len(rules)}; unique testable hostnames: {len(names)}','',f'Types: `{json.dumps(types,ensure_ascii=False)}`',f'States: `{json.dumps(counts,ensure_ascii=False)}`','',f'Feeds: `{json.dumps(feeds,ensure_ascii=False)}`','','## Removal candidates','','None: independent confirmations unavailable.','','## Manual review','','Full per-rule DNS, TLS, HTTP, redirects, signals, timing and repeats are in report.json. A suffix apex does not determine the availability of subdomains.','']
     for r in rules:
         if r.get('state') in ('available','not_applicable'): continue
-        lines.append(f"- `{r['type']}:{r['value']}` - {r['state']}; {json.dumps(r.get('first'),ensure_ascii=False)}; repeat: {json.dumps(r.get('repeat'),ensure_ascii=False)}; TI: {json.dumps(r.get('threat_intel'),ensure_ascii=False)}")
+        lines.append(f"- `{r['type']}:{r['value']}` — {r['state']}; {json.dumps(r.get('first'),ensure_ascii=False)}; repeat: {json.dumps(r.get('repeat'),ensure_ascii=False)}; TI: {json.dumps(r.get('threat_intel'),ensure_ascii=False)}")
     lines+=['','## Retain','','Available rules and non-applicable root zones and general suffixes; see report.json. Review all domain suffixes in the context of their subdomains.']
     text='\n'.join(lines)+'\n'; (OUT/'report.md').write_text(text,encoding='utf-8')
     summary=os.environ.get('GITHUB_STEP_SUMMARY')
@@ -234,4 +234,3 @@ async def main():
         with open(summary,'a',encoding='utf-8') as f: f.write('\n'.join(lines[:12])+'\n\nFull details are in the uploaded artifact.\n')
 
 if __name__=='__main__': asyncio.run(main())
-

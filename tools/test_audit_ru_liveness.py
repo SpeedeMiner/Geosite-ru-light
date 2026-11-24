@@ -31,7 +31,6 @@ class AuditTests(unittest.TestCase):
         self.assertTrue(audit.public('8.8.8.8'))
 
     def test_placeholder_normalization(self):
-        self.assertRegex(audit.normalize('����  ࠧ����\n�����४⭮'),audit.PARK[0])
+        self.assertRegex(audit.normalize('Сайт  размещён\nнекорректно'),audit.PARK[0])
 
 if __name__=='__main__': unittest.main()
-
