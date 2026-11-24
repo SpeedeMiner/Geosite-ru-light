@@ -40,7 +40,7 @@ jobs:
                 try:
                   server='ccwhois.verisign-grs.com' if host.endswith('.cc') else 'whois.verisign-grs.com'
                   with socket.create_connection((server,43),timeout=8) as sock:
-                    sock.settimeout(8);sock.sendall((host+'\\r\\n').encode());data=b''
+                    sock.settimeout(8);sock.sendall((host+'\r\n').encode());data=b''
                     while len(data)<65536:
                       block=sock.recv(8192)
                       if not block:break
