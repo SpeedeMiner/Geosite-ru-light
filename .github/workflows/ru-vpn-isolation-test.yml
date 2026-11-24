@@ -1,4 +1,4 @@
-name: RU VPN namespace disconnect test
+name: RU VPN namespace disconnect test with IPv6 route
 on:
   push:
     branches: [audit/ru-domain-liveness]
