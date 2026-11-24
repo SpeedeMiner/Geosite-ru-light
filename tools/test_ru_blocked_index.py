@@ -4,7 +4,7 @@ from ru_blocked_index import DirectPrefixIndex, normalize_domain
 
 class Tests(unittest.TestCase):
     def test_normalization_and_validation(self):
-        self.assertEqual(normalize_domain(' ������.��. '), 'xn--e1afmkfd.xn--p1ai')
+        self.assertEqual(normalize_domain(' \u041f\u0420\u0418\u041c\u0415\u0420.\u0420\u0424. '), 'xn--e1afmkfd.xn--p1ai')
         for invalid in ('a', 'bad..example', '-a.example', 'http://x.example', 'x_.example', 'xn--.example'):
             with self.subTest(invalid=invalid), self.assertRaises(ValueError):
                 normalize_domain(invalid)
