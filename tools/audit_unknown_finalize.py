@@ -65,6 +65,15 @@ for row in rows:
  if states and all(x["url"]==fh[0].get("url") for x in states):
   geo.append({"hostname":h,"ru":states,"us_status":fh[0].get("status"),
      "note":"Matched initial HTTPS GET; 403/451 may be WAF, rate limits or geography; no confirmed geoblock."})
+domain_by_host=json.loads((root/"registration.json").read_text(encoding="utf-8"))["host_to_domain"]
+reg_by_domain={v["domain"]:v for v in registration["records"]}
+network_by_host={v["hostname"]:v["group"] for v in network["hosts"]}
+for row in rows:
+ if row["category"]=="UNKNOWN":
+  h=row["hostname"]; domain=domain_by_host.get(h); extra=reg_by_domain.get(domain,{})
+  who=extra.get("whois",{}); retry=extra.get("rdap_retry",{})
+  state="; ".join(who.get("lines",[])[:2]) or who.get("error") or ("RDAP "+str(retry.get("http")) if retry else "already recorded")
+  row["reason"]+="; network group: "+network_by_host.get(h,"unknown")+"; registration follow-up: "+state[:400]
 cats={k:[] for k in ("ALIVE","INFRASTRUCTURE","GEO_BLOCKED","PARKED","EXPIRED","DEAD","UNKNOWN")}
 for row in rows:cats[row["category"]].append(row["hostname"])
 if sum(map(len,cats.values()))!=4495:raise SystemExit("coverage mismatch")
