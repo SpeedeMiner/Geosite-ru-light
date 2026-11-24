@@ -1,0 +1,44 @@
+name: Resolve five ambiguous WHOIS results
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-five-registry.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Query five zone WHOIS servers
+        run: |
+          mkdir -p five-results
+          python3 - <<'PY'
+          import concurrent.futures,datetime,json,socket
+          pairs=[('bankonline.center','whois.nic.center'),('bonus-card.ml','whois.nic.ml'),('creditdevelopment.pro','whois.nic.pro'),('rtde.express','whois.nic.express'),('russiatoday.tv','whois.nic.tv')]
+          def one(pair):
+              domain,server=pair
+              try:
+                  with socket.create_connection((server,43),timeout=7) as s:
+                      s.settimeout(7);s.sendall((domain+'\r\n').encode());data=b''
+                      while len(data)<65536:
+                          b=s.recv(8192)
+                          if not b:break
+                          data+=b
+                  lines=data.decode('utf-8',errors='replace').splitlines()
+                  keys=('no match','not found','no data found','no entries','available','no object','status:','state:','expiry','expiration','free','not registered','domain name:')
+                  selected=[line.strip()[:500] for line in lines if any(k in line.lower() for k in keys)]
+                  return {'domain':domain,'server':server,'selected':selected[:40],'bytes':len(data)}
+              except Exception as e:return {'domain':domain,'server':server,'error':type(e).__name__}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex: results=list(ex.map(one,pairs))
+          result={'time':datetime.datetime.now(datetime.timezone.utc).isoformat(),'records':results,'limitations':['filtered WHOIS lines exclude personal contact fields','an absent status is inconclusive']}
+          open('five-results/whois.json','w',encoding='utf8').write(json.dumps(result,ensure_ascii=False,indent=2))
+          print(json.dumps(result,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-five-registry
+          path: five-results/
+          retention-days: 90
