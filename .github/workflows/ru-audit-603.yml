@@ -1,0 +1,238 @@
+name: Targeted 603-name RU audit
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-603.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      batches: ${{ steps.plan.outputs.batches }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-final-service-recount
+          run-id: 45456957539
+          github-token: ${{ github.token }}
+          path: previous
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-verified-reports
+          run-id: 45428437312
+          github-token: ${{ github.token }}
+          path: baseline
+      - id: plan
+        run: python3 tools/audit_603_plan.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plan603
+          path: plan603/
+          retention-days: 90
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: upstream
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 7eef1efcaafbdbe259f3aa4e56a07c38979afbfb
+          path: geoip-release
+          persist-credentials: false
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26.10'
+          cache: false
+      - name: Build verified-TLS Chrome uTLS and inventory
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/utls-build" prepared
+          cp audit/utls_603.go.txt "$RUNNER_TEMP/utls-build/main.go"
+          (cd "$RUNNER_TEMP/utls-build" && go mod init audit603 && go get github.com/refraction-networking/utls@v1.8.1 golang.org/x/net/http2@v0.43.0 && go build -o "$GITHUB_WORKSPACE/prepared/audit-603" .)
+          (cd geoip-release && sha256sum -c geoip_RU.dat.sha256sum)
+          (cd upstream/.github/reachability/inventory && GOTOOLCHAIN=local go build -mod=mod -o "$RUNNER_TEMP/vpn-inventory" .)
+          "$RUNNER_TEMP/vpn-inventory" geoip-release/geoip_RU.dat prepared/inventory.tsv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared603
+          path: prepared/
+          retention-days: 90
+  dns:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'aiohttp==3.11.18' 'dnspython==2.7.0' 'publicsuffix2==2.20191221'
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan603
+          path: plan603
+      - run: python tools/audit_603_dns.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dns603
+          path: dns603/
+          retention-days: 90
+          if-no-files-found: warn
+  foreign:
+    needs: [plan, prepare]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'aiohttp==3.11.18'
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan603
+          path: plan603
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared603
+          path: prepared
+      - name: Probe only the 393 address-bearing hosts
+        run: |
+          chmod +x prepared/audit-603
+          AUDIT_UTLS_BIN="$PWD/prepared/audit-603" python tools/audit_603_foreign.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: foreign603
+          path: foreign603/
+          retention-days: 90
+          if-no-files-found: warn
+  ru:
+    needs: [plan, prepare]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        batch: ${{ fromJSON(needs.plan.outputs.batches) }}
+    env:
+      AUDIT: .vpn-pilot/research/docs/research/2026-11-14-wide-post-v11-18/get-audit
+      BATCH: ${{ matrix.batch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c84fc559733525194da3f899cc5b10bc8a1bdebf
+          path: .vpn-pilot/research
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'aiohttp==3.11.18' 'dnspython==2.7.0' 'publicsuffix2==2.20191221'
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan603
+          path: plan603
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared603
+          path: prepared
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends openvpn iptables
+      - name: Probe 15 hosts through two verified RU exits
+        run: |
+          set -euo pipefail
+          chmod +x prepared/audit-603
+          printf -v plan 'plan603/batch-%03d.tsv' "$BATCH"
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          py="$(command -v python)"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" AUDIT_UTLS_BIN="$PWD/prepared/audit-603" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 8m \
+            "$py" -B tools/vpn_603_wrapper.py "$AUDIT/vpnobratno_get.py" "$plan" prepared/inventory.tsv \
+              "$upstream" .vpn-pilot/reports/main --exits 2 --attempts 6 --connect-timeout 16
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru603-${{ matrix.batch }}
+          path: |
+            .vpn-pilot/reports/**/geosite-vpnobratno-summary.json
+            .vpn-pilot/reports/**/vpnobratno-observations.jsonl
+            .vpn-pilot/reports/**/vpn_gate_summary.json
+            .vpn-pilot/reports/**/vpn_gate_providers.tsv
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 90
+  collect:
+    if: always() && needs.plan.result == 'success'
+    needs: [plan, prepare, dns, foreign, ru]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan603
+          path: plan603
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-final-service-recount
+          run-id: 45456957539
+          github-token: ${{ github.token }}
+          path: previous
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: dns603
+          path: dns603
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: foreign603
+          path: foreign603
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: ru603-*
+          path: ru603
+      - name: Aggregate and preserve incomplete cases
+        run: |
+          mkdir -p dns603 foreign603 ru603
+          test -s dns603/results.json || printf '[]' > dns603/results.json
+          test -s foreign603/results.json || printf '{"point":[],"results":[]}' > foreign603/results.json
+          python3 tools/audit_603_collect.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit603-results
+          path: results603/
+          retention-days: 90
+          if-no-files-found: warn
