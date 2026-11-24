@@ -1,0 +1,50 @@
+name: Verify registration before RU changes
+on:
+  push:
+    branches: [fix/remove-unregistered-ru-domains]
+    paths: [.github/workflows/ru-registration-preflight.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Query authoritative RDAP services for 29 domains
+        run: |
+          mkdir -p registration-preflight
+          python3 - <<'PY'
+          import concurrent.futures,datetime,json,urllib.request,urllib.error,hashlib
+          hosts="aksyuterian.com aodahl.com avito-services.com bluestacksads.com bluestacksapi.com bluestackscdn.com bluestackscloud.com bluestacksdata.com bluestacksengine.com bonus-card.ml cdn-tinkoff.com honestmark.org investalfabank.com lead-pro2023.online rosbank-credit.com russieactuelle.fr sberfinance.net sbruss.store smsemailstats.com tbankjob.site tinkoff-anketa.site tinkoff-digital.com tinkoffdigital.com tinkoffip.site tinkoffreg.site tynkoff.cc vk.cloud vkcache.com vkusvill.net".split()
+          with urllib.request.urlopen('https://data.iana.org/rdap/dns.json',timeout=25) as response: raw=response.read()
+          bootstrap=json.loads(raw);mapping={}
+          for zones,urls in bootstrap['services']:
+            valid=[u.rstrip('/') for u in urls if u.startswith('https://')]
+            if valid:
+              for zone in zones:mapping[zone.lower()]=valid[0]
+          def check(host):
+            base=mapping.get(host.rsplit('.',1)[-1])
+            if not base:return {'host':host,'status':'inconclusive','reason':'no HTTPS RDAP in IANA bootstrap'}
+            url=base+'/domain/'+host
+            try:
+              with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Geosite-RU-Preflight/1.0'}),timeout=20) as r:
+                obj=json.load(r)
+                return {'host':host,'status':'registered','http':r.status,'url':url,'objectClassName':obj.get('objectClassName')}
+            except urllib.error.HTTPError as e:
+              try: body=json.loads(e.read(65536))
+              except Exception: body={}
+              state='not_registered' if e.code==404 and body.get('errorCode')==404 else 'inconclusive'
+              return {'host':host,'status':state,'http':e.code,'url':url,'errorCode':body.get('errorCode'),'retry_after':e.headers.get('Retry-After')}
+            except Exception as e:return {'host':host,'status':'inconclusive','error':type(e).__name__}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: results=list(pool.map(check,hosts))
+          result={'time':datetime.datetime.now(datetime.timezone.utc).isoformat(),'iana_bootstrap_sha256':hashlib.sha256(raw).hexdigest(),'results':results}
+          open('registration-preflight/report.json','w').write(json.dumps(result,indent=2))
+          print(json.dumps(result))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-registration-preflight
+          path: registration-preflight/
+          retention-days: 90
