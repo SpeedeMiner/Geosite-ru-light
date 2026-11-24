@@ -24,7 +24,7 @@ from ru_blocked_index import DirectPrefixIndex, normalize_domain
 POSITIVE_TTL = 7 * 86400
 NEGATIVE_TTL = 86400
 MAX_BACKOFF = 3 * 86400
-PROBE_VERSION = "https-placeholder-exclude-v5"
+PROBE_VERSION = "https-registrar-exclude-v6"
 
 
 def varint(data, offset):

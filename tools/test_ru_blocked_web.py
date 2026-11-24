@@ -115,5 +115,22 @@ class WebTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
                          (True, "https_ok"))
 
+
+    async def test_domain_sale_and_registrar_parking(self):
+        pages = (
+            "<html><title>Доменное имя agroprognoz.ru продается</title></html>",
+            "<html><p>Доменное имя <b>agroprognoz.ru</b> продаётся</p></html>",
+            "<html><title>Домен зарегистрирован и припаркован в Рег.ру</title></html>",
+        )
+        for page in pages:
+            with self.subTest(page=page):
+                fetch = AsyncMock(return_value=(200, {}, page.encode("utf-8")))
+                self.assertEqual(await self.probe(fetch), (False, "parked_or_expired"))
+
+    async def test_domain_sale_signature_does_not_block_unrelated_content(self):
+        body = "<html><p>Прогноз погоды и сельскохозяйственные новости</p></html>".encode("utf-8")
+        self.assertEqual(await self.probe(AsyncMock(return_value=(200, {}, body))),
+                         (True, "https_ok"))
+
 if __name__ == "__main__":
     unittest.main()

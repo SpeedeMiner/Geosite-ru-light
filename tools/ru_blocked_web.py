@@ -18,12 +18,15 @@ PARKING_TEXT = ("срок регистрации домена", "истек ср
                 "domain expired", "expired domain", "parked domain", "domain parking", "buy this domain",
                 "this domain has expired", "domain has expired", "domain is for sale",
                 "this domain is parked", "this domain is available for purchase",
-                "домен припаркован", "парковка домена", "домен выставлен на продажу", "домен продается",
+                "домен припаркован", "домен зарегистрирован и припаркован", "парковка домена", "домен выставлен на продажу", "домен продается",
                 "домен продаётся", "делегирование домена приостановлено",
                 "срок регистрации истек", "срок регистрации истёк",
                 "сайт размещен некорректно", "домен не привязан",
                 "домен не настроен", "сайт не настроен",
                 "домен не подключен к хостингу", "ошибка размещения сайта")
+PARKING_PATTERNS = (
+    re.compile(r"\bдоменное\s+имя\s+(?:[a-z0-9а-яё][a-z0-9а-яё.-]*\s+)?продается\b"),
+)
 REDIRECTS = {301, 302, 303, 307, 308}
 
 
@@ -110,6 +113,8 @@ def parked(body, headers=None):
             needle = normalize_page(signature)
             if needle in raw or needle in without_tags:
                 return True
+        if any(pattern.search(raw) or pattern.search(without_tags) for pattern in PARKING_PATTERNS):
+            return True
     return False
 
 
