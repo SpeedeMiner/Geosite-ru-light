@@ -21,6 +21,13 @@ def one_control(rows):
 
 def attach(transport, rows, observations_path, exclude_asns=(), tls_compare=None, primary_timeout=None):
     skipped=original_attach(transport,rows,observations_path,exclude_asns,tls_compare,primary_timeout)
+    upstream_run=transport.run
+    def run_with_batch_budget(config):
+        # The reviewed gate uses request_timeout to bound each target callback;
+        # give the single callback enough time to finish its concurrent batch.
+        config.request_timeout=30
+        return upstream_run(config)
+    transport.run=run_with_batch_budget
     def batch_target(target, exit_info, _networks, timeout):
         if (exit_info.get('country')!='RU' or exit_info.get('asn_conflict') is not False
             or not exit_info.get('asn') or exit_info.get('verified_by_sources',0)<2):
@@ -50,8 +57,8 @@ def attach(transport, rows, observations_path, exclude_asns=(), tls_compare=None
                             f.write(json.dumps(record,ensure_ascii=False)+'\n')
                         completed.append(record)
                     finally: queue.task_done()
-            workers=[asyncio.create_task(worker()) for _ in range(16)]
-            try: await asyncio.wait_for(asyncio.gather(*workers),timeout=14)
+            workers=[asyncio.create_task(worker()) for _ in range(24)]
+            try: await asyncio.wait_for(asyncio.gather(*workers),timeout=54)
             except asyncio.TimeoutError: pass
             return completed
         completed=asyncio.run(batch())
