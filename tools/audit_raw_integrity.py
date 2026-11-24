@@ -21,6 +21,14 @@ def analyze(root, out):
     if len(names)!=manifest["host_count"]: errors.append("host count mismatch")
     rules=sum(map(len,names.values()))+len(manifest["not_applicable"])
     if rules!=manifest["rule_count"]: errors.append("rule count mismatch")
+    dat_path=root/"geosite_RU.dat"
+    if dat_path.exists():
+        from audit_ru_liveness import extract
+        dat_rules=extract(dat_path.read_bytes())
+        def rule_key(r): return (r["type"],r["type_code"],r["value"])
+        manifest_rules=[r for rs in names.values() for r in rs]+manifest["not_applicable"]
+        if collections.Counter(map(rule_key,dat_rules))!=collections.Counter(map(rule_key,manifest_rules)):
+            errors.append("manifest rule multiset differs from DAT")
     planned=set(); all_shards={p.name for p in root.glob("vpn-shard-*") if p.is_dir()}
     wanted={"vpn-shard-"+str(n) for n in range(manifest["batch_count"])}
     if all_shards!=wanted: errors.append("missing/unexpected shards: "+str(sorted(all_shards^wanted)))
@@ -44,7 +52,7 @@ def analyze(root, out):
                     errors.append(f"batch {n} line {line_no}: invalid JSON"); continue
                 h=r.get("host"); a=r.get("vpn_asn")
                 if h not in batch: errors.append(f"batch {n}: unexpected host {h}"); continue
-                if r.get("vpn_country")!="RU" or not a or r.get("asn_conflict") is not False or r.get("verified_by_sources",0)<2: errors.append(f"batch {n}: unverified exit {h}")
+                if r.get("vpn_country")!="RU" or not str(a).isdigit() or int(a or 0)<=0 or r.get("asn_conflict") is not False or r.get("verified_by_sources",0)<2: errors.append(f"batch {n}: unverified exit {h}")
                 if not r.get("vpn_exit_ip") or not r.get("observed_at") or not isinstance(r.get("evidence"),dict): errors.append(f"batch {n}: incomplete observation {h}")
                 key=(h,str(a))
                 if key in seen: errors.append(f"batch {n}: duplicate host/ASN {h}/{a}")
