@@ -15,3 +15,11 @@
 ## Remaining
 
 Inspect and preserve all raw artifacts; validate plan, sources, per-observation provenance and network isolation. Review the pinned VPN gate and DNS/TLS details; fix and test aggregation without triggering an unnecessary full run. Generate the requested reports and targeted recheck plan, run only justified rechecks, verify CI, and update PR #46. Do not modify rules, main, release, CDN, or other repositories. No domain removal is authorized. Keep PR draft.
+
+## Artifact inspection
+
+[Inspection run 45425949612](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/45425949612) downloaded the original coverage artifact and parsed its JSON. It found 4,495 host entries, 8,990 observations, 4,495 records each for AS12389 and AS12494, 45 job entries, and no missing observation-file counts. Exact repeated (ASN, exit IP, timestamp) keys per host: 0. Every observation had nonempty evidence and a timestamp. This is a structural check of the aggregate, not a raw-shard or network-isolation validation.
+
+Observation states (not unique domains): 4,044 available, 2,851 review, 384 TLS error, 1,711 network error. The available state means the existing classifier found valid TLS and nonempty 2xx; it does not prove full application functionality. Reason counters are preserved in the inspection artifact. Raw observations remain in the original run. Follow-up must avoid interpreting observation counts as unique-site counts.
+
+The inspection workflow is `.github/workflows/ru-audit-inspect.yml`. It accesses the previous artifact read-only and does not start new VPN measurements. No final report or recheck queue has been produced yet.
