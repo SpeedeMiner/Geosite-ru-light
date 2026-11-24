@@ -1,3 +1,4 @@
+# Rebuild the full plan with reverse-DNS rules marked as non-web infrastructure.
 name: RU fast VPN coverage (review only)
 on:
   push:
