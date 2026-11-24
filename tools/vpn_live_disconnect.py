@@ -90,19 +90,40 @@ def attach(transport, rows, observations_path, exclude_asns=(), tls_compare=None
                     'tcp6':probe(socket.AF_INET6,socket.SOCK_STREAM,('2606:4700:4700::1111',443,0,0)),
                     'dns6':probe(socket.AF_INET6,socket.SOCK_DGRAM,('2606:4700:4700::1111',53,0,0),dns)}
         before=snapshot()
+        def tun_interfaces():
+            return sorted(p.name for p in Path('/sys/class/net').iterdir()
+                          if (p / 'tun_flags').exists())
+        def process_states(pids):
+            states={}
+            for pid in pids:
+                try:
+                    stat=Path(f'/proc/{pid}/stat').read_text()
+                    states[str(pid)]=stat[stat.rfind(')')+2:].split()[0]
+                except FileNotFoundError:
+                    states[str(pid)]='gone'
+            return states
+        before_tun=tun_interfaces()
         proc=subprocess.run(['pgrep','-x','openvpn'],text=True,capture_output=True)
         pids=[int(x) for x in proc.stdout.split() if x.isdigit()]
-        for pid in pids: os.kill(pid,signal.SIGTERM)
-        for _ in range(30):
-            alive=subprocess.run(['pgrep','-x','openvpn'],capture_output=True).returncode==0
-            if not alive: break
+        states_before=process_states(pids)
+        for pid in pids:
+            try: os.kill(pid,signal.SIGTERM)
+            except ProcessLookupError: pass
+        for _ in range(50):
+            states_after=process_states(pids)
+            after_tun=tun_interfaces()
+            if all(state in ('Z','X','gone') for state in states_after.values()) and not set(before_tun) & set(after_tun):
+                break
             time.sleep(.2)
+        process_exited=bool(pids) and all(state in ('Z','X','gone') for state in states_after.values())
+        tun_removed=bool(before_tun) and not set(before_tun) & set(after_tun)
         after=snapshot()
         firewall=subprocess.run(['iptables','-L','OUTPUT','-v','-n','-x'],capture_output=True,text=True).stdout
         firewall6=subprocess.run(['ip6tables','-L','OUTPUT','-v','-n','-x'],capture_output=True,text=True).stdout
         evidence={'source_run':os.environ.get('GITHUB_RUN_ID'),'source_sha':os.environ.get('GITHUB_SHA'),
           'vpn_asn':exit_info['asn'],'vpn_country':exit_info['country'],'verified_by_sources':exit_info['verified_by_sources'],
-          'openvpn_pids':pids,'process_exited':not alive,'before':before,'after':after,
+          'openvpn_pids':pids,'process_states_before':states_before,'process_states_after':states_after,
+          'process_exited':process_exited,'tun_before':before_tun,'tun_after':after_tun,'tun_removed':tun_removed,'before':before,'after':after,
           'firewall':firewall,'firewall6':firewall6,'limitations':['DNS UDP send is not a verified DNS answer','IPv6 may have no route; preexisting namespace rules affect interpretation','test does not prove behavior in historical run']}
         resultdir=Path('live-disconnect');resultdir.mkdir(exist_ok=True)
         (resultdir/'report.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
