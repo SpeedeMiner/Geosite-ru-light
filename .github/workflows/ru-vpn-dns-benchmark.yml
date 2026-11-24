@@ -47,11 +47,16 @@ jobs:
         run: |
           python tools/vpn_full_plan.py
           python - <<'PY'
-          import csv
-          with open('vpn-plan/batch-000.tsv',encoding='utf-8',newline='') as f:
-              reader=csv.DictReader(f,delimiter='\t'); fields=reader.fieldnames; rows=list(reader)
+          import csv, json
+          m=json.load(open('vpn-plan/manifest.json',encoding='utf-8'))
+          hosts=sorted(m['hosts_to_rules'])
+          fields=['cohort','type','rule','host','url','markers','source']
+          rows=[]
+          for i in range(10):
+              host=hosts[i*(len(hosts)-1)//9]; rule=m['hosts_to_rules'][host][0]
+              rows.append(dict(cohort='audit',type=rule['type'],rule=rule['value'],host=host,url='https://'+host+'/',markers='',source='verified rolling DAT'))
           with open('vpn-plan/benchmark.tsv','w',encoding='utf-8',newline='') as f:
-              writer=csv.DictWriter(f,fieldnames=fields,delimiter='\t'); writer.writeheader(); writer.writerows(rows[::10][:10])
+              writer=csv.DictWriter(f,fieldnames=fields,delimiter='\t'); writer.writeheader(); writer.writerows(rows)
           PY
       - name: Install isolated VPN dependencies
         run: |

@@ -79,6 +79,8 @@ def public(ip):
 def applicable(r, psl):
     v=r['value'].rstrip('.').lower()
     if r['type'] not in ('domain','full'): return False,'non-FQDN rule type'
+    if v in ('in-addr.arpa','ip6.arpa') or v.endswith(('.in-addr.arpa','.ip6.arpa')):
+        return False,'reverse-DNS infrastructure; HTTPS site check not applicable'
     try: a=v.encode('idna').decode('ascii')
     except UnicodeError: return False,'invalid IDNA'
     if len(a)>253 or any(not re.fullmatch(r'[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?', x) for x in a.split('.')): return False,'invalid hostname'

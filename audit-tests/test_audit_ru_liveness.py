@@ -28,6 +28,8 @@ class AuditTests(unittest.TestCase):
         psl=PublicSuffixList()
         self.assertFalse(audit.applicable({'type':'domain','value':'ru'},psl)[0])
         self.assertFalse(audit.applicable({'type':'regex','value':'.*example'},psl)[0])
+        self.assertFalse(audit.applicable({'type':'domain','value':'104.100.in-addr.arpa'},psl)[0])
+        self.assertFalse(audit.applicable({'type':'full','value':'1.0.ip6.arpa'},psl)[0])
         self.assertTrue(audit.applicable({'type':'domain','value':'example.com'},psl)[0])
 
     def test_public_address(self):
