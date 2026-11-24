@@ -1,5 +1,7 @@
 import unittest
 import sys
+import asyncio
+from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 from publicsuffix2 import PublicSuffixList
@@ -35,5 +37,24 @@ class AuditTests(unittest.TestCase):
 
     def test_placeholder_normalization(self):
         self.assertRegex(audit.normalize('Сайт  размещён\nнекорректно'),audit.PARK[0])
+
+    def test_dns_a_and_aaaa_are_queried_concurrently(self):
+        async def check():
+            entered=[]; ready=asyncio.Event()
+            class Answer:
+                rrset=True
+                def __init__(self, kind): self.kind=kind
+                def __iter__(self): return iter(['8.8.8.8' if self.kind=='A' else '2001:4860:4860::8888'])
+            async def fake(name,kind,**kwargs):
+                entered.append(kind)
+                if len(entered)==2: ready.set()
+                await asyncio.wait_for(ready.wait(),1)
+                return Answer(kind)
+            with patch.object(audit.dns.asyncresolver,'resolve',side_effect=fake):
+                result=await audit.resolve('parallel.example',fresh=True)
+            self.assertCountEqual(entered,['A','AAAA'])
+            self.assertEqual(result['A']['status'],'ok')
+            self.assertEqual(result['AAAA']['status'],'ok')
+        asyncio.run(check())
 
 if __name__=='__main__': unittest.main()

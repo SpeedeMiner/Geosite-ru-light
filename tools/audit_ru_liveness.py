@@ -88,16 +88,19 @@ def applicable(r, psl):
 async def resolve(name, fresh=False):
     now=time.monotonic()
     if not fresh and name in DNS_CACHE and now-DNS_CACHE[name][0]<TTL: return DNS_CACHE[name][1]
-    result={}
-    for kind in ('A','AAAA'):
+    async def query(kind):
+        answer=None
         for attempt in range(2):
             try:
                 ans=await dns.asyncresolver.resolve(name,kind,lifetime=4,raise_on_no_answer=False)
-                result[kind]={'status':'ok' if ans.rrset else 'no_answer','ips':[str(x) for x in ans] if ans.rrset else []}; break
-            except dns.resolver.NXDOMAIN: result[kind]={'status':'NXDOMAIN','ips':[]}; break
-            except dns.resolver.NoNameservers: result[kind]={'status':'SERVFAIL_or_no_nameservers','ips':[]}
-            except dns.exception.Timeout: result[kind]={'status':'timeout','ips':[]}
-            except Exception as e: result[kind]={'status':type(e).__name__,'ips':[]}
+                return {'status':'ok' if ans.rrset else 'no_answer','ips':[str(x) for x in ans] if ans.rrset else []}
+            except dns.resolver.NXDOMAIN: return {'status':'NXDOMAIN','ips':[]}
+            except dns.resolver.NoNameservers: answer={'status':'SERVFAIL_or_no_nameservers','ips':[]}
+            except dns.exception.Timeout: answer={'status':'timeout','ips':[]}
+            except Exception as e: answer={'status':type(e).__name__,'ips':[]}
+        return answer
+    a,aaaa=await asyncio.gather(query('A'),query('AAAA'))
+    result={'A':a,'AAAA':aaaa}
     DNS_CACHE[name]=(now,result)
     return result
 
