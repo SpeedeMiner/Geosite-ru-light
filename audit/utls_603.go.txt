@@ -82,8 +82,8 @@ func main(){
     if req.URL.User!=nil || req.URL.Hostname()=="" || (req.URL.Scheme!="http" && req.URL.Scheme!="https"){return fmt.Errorf("unsafe redirect")}
     if port:=req.URL.Port();port!="" && port!="80" && port!="443"{return fmt.Errorf("nonstandard redirect port")}
     if mode=="utls-chrome-h2" && req.URL.Scheme!="https"{return fmt.Errorf("h2 redirect to http")}
-    req.URL.RawQuery="";req.URL.Fragment=""
-    redirects=append(redirects,req.URL.String());return nil
+    safe:=*req.URL;safe.RawQuery="";safe.Fragment=""
+    redirects=append(redirects,safe.String());return nil
    }}
    scheme:="https";if mode=="http1-plain"{scheme="http"}
    req,_:=http.NewRequestWithContext(ctx,"GET",scheme+"://"+host+"/",nil)
