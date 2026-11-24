@@ -1,4 +1,4 @@
-name: Recount RU content and responding endpoints
+name: Recount RU content and responding endpoints with DNS
 on:
   push:
     branches: [audit/ru-domain-liveness]
