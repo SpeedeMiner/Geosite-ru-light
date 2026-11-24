@@ -1,4 +1,4 @@
-name: Investigate 33 RU audit candidates
+name: Recheck 33 RU audit candidates
 on:
   push:
     branches: [audit/ru-domain-liveness]
