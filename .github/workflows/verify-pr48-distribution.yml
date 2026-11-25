@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
+      - name: Request refresh for stale CDN assets
+        shell: bash
+        run: |
+          for file in geosite_RU.dat geosite_mrs.sha256sum; do
+            curl -fsSL --connect-timeout 8 --max-time 25 "https://purge.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/$file" || true
+          done
       - name: Compare release and CDN content
         shell: bash
         run: |
