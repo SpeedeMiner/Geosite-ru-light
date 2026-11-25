@@ -22,7 +22,7 @@ jobs:
           curl --connect-timeout 10 --max-time 30 -sS https://data.iana.org/rdap/dns.json > evidence/iana-bootstrap.json
           dig +time=4 +tries=1 +short NS site. > evidence/site-nameservers.txt
           for name in vtbkep.site xn--90aifd0aza.site; do
-            curl --connect-timeout 10 --max-time 30 -sS -D "evidence/$name.headers" -o "evidence/$name.rdap.json" "https://rdap.identitydigital.services/rdap/domain/$name" || true
+            curl --connect-timeout 10 --max-time 30 -sS -D "evidence/$name.headers" -o "evidence/$name.rdap.json" "https://rdap.radix.host/rdap/domain/$name" || true
             timeout 15s whois -h whois.nic.site "$name" > "evidence/$name.whois.txt" 2>&1 || true
             for ns in $(head -n 3 evidence/site-nameservers.txt); do
               dig +time=4 +tries=1 +norecurse "@$ns" "$name" A >> "evidence/$name.authority.txt" 2>&1 || true
