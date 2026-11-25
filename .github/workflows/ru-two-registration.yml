@@ -1,0 +1,36 @@
+name: Registration confirmation for two RU exclusions
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-two-registration.yml]
+permissions:
+  contents: read
+jobs:
+  registry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends dnsutils whois
+      - name: Query authoritative zone and registry
+        shell: bash
+        run: |
+          mkdir -p evidence
+          date -u +%FT%TZ > evidence/time-utc.txt
+          curl --connect-timeout 10 --max-time 30 -sS https://data.iana.org/rdap/dns.json > evidence/iana-bootstrap.json
+          dig +time=4 +tries=1 +short NS site. > evidence/site-nameservers.txt
+          for name in vtbkep.site xn--90aifd0aza.site; do
+            curl --connect-timeout 10 --max-time 30 -sS -D "evidence/$name.headers" -o "evidence/$name.rdap.json" "https://rdap.radix.host/rdap/domain/$name" || true
+            timeout 15s whois -h whois.nic.site "$name" > "evidence/$name.whois.txt" 2>&1 || true
+            for ns in $(head -n 3 evidence/site-nameservers.txt); do
+              dig +time=4 +tries=1 +norecurse "@$ns" "$name" A >> "evidence/$name.authority.txt" 2>&1 || true
+            done
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: registration-confirmation-two
+          path: evidence/
+          retention-days: 90

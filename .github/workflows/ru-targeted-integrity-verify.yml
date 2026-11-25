@@ -1,0 +1,48 @@
+name: Validate preserved targeted audit
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-targeted-integrity-verify.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test shard integrity
+        run: python3 -m unittest discover -s audit-tests -p test_vpn_targeted_integrity.py -v
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-verified-reports
+          run-id: 45428437312
+          github-token: ${{ github.token }}
+          path: baseline
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-target-plan
+          run-id: 45431389815
+          github-token: ${{ github.token }}
+          path: target-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: target-shard-*
+          run-id: 45431389815
+          github-token: ${{ github.token }}
+          path: target-results
+      - name: Validate and collect saved observations
+        env:
+          TARGET_SOURCE_RUN: '45431389815'
+          TARGET_SOURCE_SHA: '8bd84a4cca41549624571f055c85ac854e19a9d5'
+        run: python3 tools/vpn_targeted_collect.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: targeted-integrity-validation
+          path: final-report/
+          retention-days: 90
+          if-no-files-found: warn

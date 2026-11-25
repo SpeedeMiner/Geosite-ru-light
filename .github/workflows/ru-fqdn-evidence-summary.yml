@@ -1,0 +1,32 @@
+name: Summarize freshness evidence
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-fqdn-evidence-summary.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  summarize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-fqdn-classification
+          run-id: 45448771840
+          github-token: ${{ github.token }}
+          path: files
+      - name: Count concrete diagnostic outcomes
+        run: |
+          python3 - <<'PY'
+          import collections,json
+          from pathlib import Path
+          d=json.loads(Path('files/diagnostics.json').read_text())
+          r=json.loads(Path('files/registration.json').read_text())['records']
+          c=collections.Counter((v.get('https') or {}).get('result',v.get('error','missing')) for v in d.values())
+          errors=collections.Counter(v.get('error','') for v in d.values() if v.get('error'))
+          http=collections.Counter(str((v.get('http') or {}).get('status') or (v.get('http') or {}).get('error') or (v.get('http') or {}).get('result')) for v in d.values())
+          rdap=collections.Counter(str(v.get('http') or v.get('error') or v.get('status')) for v in r.values())
+          print(json.dumps({'external_https':dict(c),'worker_errors':dict(errors),'http':dict(http),'rdap':dict(rdap)},ensure_ascii=False,indent=2))
+          PY

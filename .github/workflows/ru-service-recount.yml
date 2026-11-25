@@ -1,0 +1,48 @@
+name: Recount RU content and responding endpoints with DNS
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-service-recount.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  recount:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-complete-fqdn-audit
+          run-id: 45454309967
+          github-token: ${{ github.token }}
+          path: old
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-assembled-report
+          run-id: 45445214672
+          github-token: ${{ github.token }}
+          path: baseline
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-candidates-authoritative
+          run-id: 45456043247
+          github-token: ${{ github.token }}
+          path: recheck
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-five-registry
+          run-id: 45456266146
+          github-token: ${{ github.token }}
+          path: five
+      - run: python3 tools/audit_ru_service_recount.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-final-service-recount
+          path: recount/
+          retention-days: 90
+          if-no-files-found: warn

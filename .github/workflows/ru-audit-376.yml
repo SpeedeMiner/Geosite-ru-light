@@ -1,0 +1,29 @@
+name: Targeted IPv6 probe
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-376.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  ipv6:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: audit603-results
+          run-id: 45555011119
+          github-token: ${{ github.token }}
+          path: previous
+      - run: python3 tools/audit_376_globalping.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit376-globalping-ipv6
+          path: globalping-ipv6.json
+          retention-days: 90

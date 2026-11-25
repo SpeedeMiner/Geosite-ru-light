@@ -1,0 +1,45 @@
+name: Assemble RU audit report
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-final-report.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Integrity unit tests
+        run: python3 -m unittest discover -s audit-tests -p test_vpn_targeted_integrity.py -v
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-verified-reports
+          run-id: 45428437312
+          github-token: ${{ github.token }}
+          path: baseline
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-target-plan
+          run-id: 45431389815
+          github-token: ${{ github.token }}
+          path: target-plan
+      - uses: actions/download-artifact@v4
+        with:
+          name: targeted-integrity-validation
+          run-id: 45442775676
+          github-token: ${{ github.token }}
+          path: final-report
+      - name: Assemble report without network measurements
+        run: python3 tools/audit_final_report.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-audit-assembled-report
+          path: complete-report/
+          if-no-files-found: warn
+          retention-days: 90

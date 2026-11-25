@@ -1,0 +1,39 @@
+name: RU VPN namespace disconnect test with IPv6 route
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-vpn-isolation-test.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: upstream
+          persist-credentials: false
+      - name: Install network tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y iptables iproute2
+      - name: Exercise pinned firewall in isolated namespace
+        run: |
+          set -euo pipefail
+          upstream="$PWD/upstream/.github/reachability"
+          sudo bash "$upstream/vpn_netns_exec.sh" -- python3 "$PWD/tools/test_vpn_disconnect_namespace.py" "$upstream" "$PWD/isolation-results/report.json"
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vpn-namespace-isolation-test
+          path: isolation-results/
+          retention-days: 90
+          if-no-files-found: warn

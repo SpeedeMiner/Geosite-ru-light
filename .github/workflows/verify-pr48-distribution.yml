@@ -1,0 +1,51 @@
+name: Verify distribution after PR 48
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/verify-pr48-distribution.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Request refresh for stale CDN assets
+        shell: bash
+        run: |
+          for file in geosite_RU.dat geosite_mrs.sha256sum; do
+            curl -fsSL --connect-timeout 8 --max-time 25 "https://purge.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release/$file" || true
+          done
+      - name: Compare release and CDN content
+        shell: bash
+        run: |
+          set -u
+          mkdir -p evidence tmp
+          base="https://github.com/SpeedeMiner/Geosite-ru-light/releases/download/latest-optimized"
+          raw="https://raw.githubusercontent.com/SpeedeMiner/Geosite-ru-light/release"
+          cdn="https://cdn.jsdelivr.net/gh/SpeedeMiner/Geosite-ru-light@release"
+          : > evidence/checks.tsv
+          printf 'attempt\tfile\trelease_sha256\traw_sha256\tcdn_sha256\tresult\n' > evidence/checks.tsv
+          for attempt in 1 2 3 4; do
+            all_ok=true
+            for file in geosite_RU.dat geosite_RU.srs geosite_RU.mrs geosite_mrs.sha256sum; do
+              rm -f tmp/release tmp/raw tmp/cdn
+              release_hash=error; raw_hash=error; cdn_hash=error
+              if curl -fsSL --retry 1 --connect-timeout 8 --max-time 25 "$base/$file" -o tmp/release; then release_hash=$(sha256sum tmp/release | cut -d' ' -f1); fi
+              if curl -fsSL --retry 1 --connect-timeout 8 --max-time 25 "$raw/$file" -o tmp/raw; then raw_hash=$(sha256sum tmp/raw | cut -d' ' -f1); fi
+              if curl -fsSL --retry 1 --connect-timeout 8 --max-time 25 "$cdn/$file" -o tmp/cdn; then cdn_hash=$(sha256sum tmp/cdn | cut -d' ' -f1); fi
+              result=match
+              if [ "$release_hash" = error ] || [ "$release_hash" != "$raw_hash" ] || [ "$release_hash" != "$cdn_hash" ]; then result=mismatch; all_ok=false; fi
+              printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$attempt" "$file" "$release_hash" "$raw_hash" "$cdn_hash" "$result" | tee -a evidence/checks.tsv
+            done
+            date -u +%FT%TZ >> evidence/times.txt
+            if [ "$all_ok" = true ]; then exit 0; fi
+            if [ "$attempt" -lt 4 ]; then sleep 15; fi
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr48-distribution-check
+          path: evidence/
+          retention-days: 90

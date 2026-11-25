@@ -1,0 +1,40 @@
+name: Reconcile RU HTTPS redirects
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-fqdn-redirect-refine.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  refine:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'publicsuffix2==2.20191221'
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-fqdn-classification
+          run-id: 45448771840
+          github-token: ${{ github.token }}
+          path: first
+      - uses: actions/download-artifact@v4
+        with:
+          name: ru-audit-assembled-report
+          run-id: 45445214672
+          github-token: ${{ github.token }}
+          path: preserved
+      - run: python tools/audit_fqdn_redirect_refine.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ru-fqdn-classification-refined
+          path: refined/
+          retention-days: 90
+          if-no-files-found: warn
