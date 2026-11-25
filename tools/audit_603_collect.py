@@ -84,7 +84,7 @@ candidates=summary["new_registration_candidates"]
 candidate_lines=["# New candidates for manual review","","Registry and authoritative DNS evidence indicates current non-registration. These are not automatic removals; registration may change and rule scope must be reviewed.",""]
 for h in candidates:
  candidate_lines.append("- `"+h+"` — rules: "+json.dumps(original_rules.get(h,[]),ensure_ascii=False))
-(out/"new-candidates.md").write_text("\\n".join(candidate_lines)+"\\n",encoding="utf-8")
+(out/"new-candidates.md").write_text("\n".join(candidate_lines)+"\n",encoding="utf-8")
 for k,v in outputs.items():(out/(k+".txt")).write_text("\n".join(v)+("\n" if v else ""),encoding="utf-8")
 lines=["# 603-name targeted audit","","| Category | Names |","|---|---:|"]+[f"| {k} | {len(v)} |" for k,v in outputs.items()]
 lines += ["",f"RU incomplete: {len(missing)}. Foreign country: {foreign_country}.", "All 4495 names and individual reasons are in classification.csv; original 29 removals are included because the original audit baseline is retained.","","## Limits",""]+["- "+x for x in summary["limitations"]]
