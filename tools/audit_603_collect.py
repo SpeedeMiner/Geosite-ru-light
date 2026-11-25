@@ -6,6 +6,10 @@ previous=json.loads(Path("previous/classification.json").read_text())
 plan=json.loads(Path("plan603/manifest.json").read_text())
 foreign=json.loads(Path("foreign603/results.json").read_text())
 dns=json.loads(Path("dns603/results.json").read_text())
+authority=json.loads(Path("authority603/results.json").read_text()) if Path("authority603/results.json").exists() else []
+authority_by={r["host"]:r for r in authority}
+baseline=json.loads(Path("baseline/report.json").read_text())
+original_rules={r["hostname"]:r["rules"] for r in baseline["hosts"]}
 base={r["hostname"]:r for r in previous["hosts"]}
 if len(base)!=4495 or sum(plan["counts"].values())!=603:raise SystemExit("plan mismatch")
 dns_by={r["host"]:r for r in dns};external={r["host"]:r for r in foreign["results"]}
@@ -65,7 +69,7 @@ for h,item in sorted(base.items()):
 summary={"source_hosts":4495,"followup":603,"counts":{k:len(v) for k,v in outputs.items()},
  "new_ru_hosts":sum(bool(observed[h]) for h in wanted),"ru_incomplete_hosts":len(missing),
  "missing_ru_hosts":missing,"foreign_hosts":len(external),"foreign_country":foreign_country,"dns_hosts":len(dns_by),
- "validation_errors":errors,"new_registration_candidates":[r["hostname"] for r in rows if r["category"]=="UNREGISTERED" and base[r["hostname"]]["classification"]=="UNKNOWN"],
+ "authoritative_host_checks":len(authority_by), "validation_errors":errors,"new_registration_candidates":[r["hostname"] for r in rows if r["category"]=="UNREGISTERED" and base[r["hostname"]]["classification"]=="UNKNOWN"],
  "limitations":["original audited DAT predates 29 removals merged to main; counts describe the original 4495-host baseline",
  "foreign and VPN observations are point-in-time; WAF or IP reputation does not prove geographic blocking",
  "DNS records alone do not prove a working service; 404 RDAP alone does not prove a registration has expired",
@@ -73,9 +77,14 @@ summary={"source_hosts":4495,"followup":603,"counts":{k:len(v) for k,v in output
  "a domain suffix may include subdomains not tested by an apex probe","no automatic rule removal"]}
 out=Path("results603");out.mkdir(exist_ok=True)
 (out/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
-(out/"results.json").write_text(json.dumps({"summary":summary,"rows":rows,"ru":observed,"foreign":foreign,"dns":dns},ensure_ascii=False),encoding="utf-8")
+(out/"results.json").write_text(json.dumps({"summary":summary,"rows":rows,"ru":observed,"foreign":foreign,"dns":dns,"authority":authority},ensure_ascii=False),encoding="utf-8")
 with (out/"classification.csv").open("w",encoding="utf-8",newline="") as f:
  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+candidates=summary["new_registration_candidates"]
+candidate_lines=["# New candidates for manual review","","Registry and authoritative DNS evidence indicates current non-registration. These are not automatic removals; registration may change and rule scope must be reviewed.",""]
+for h in candidates:
+ candidate_lines.append("- `"+h+"` — rules: "+json.dumps(original_rules.get(h,[]),ensure_ascii=False))
+(out/"new-candidates.md").write_text("\\n".join(candidate_lines)+"\\n",encoding="utf-8")
 for k,v in outputs.items():(out/(k+".txt")).write_text("\n".join(v)+("\n" if v else ""),encoding="utf-8")
 lines=["# 603-name targeted audit","","| Category | Names |","|---|---:|"]+[f"| {k} | {len(v)} |" for k,v in outputs.items()]
 lines += ["",f"RU incomplete: {len(missing)}. Foreign country: {foreign_country}.", "All 4495 names and individual reasons are in classification.csv; original 29 removals are included because the original audit baseline is retained.","","## Limits",""]+["- "+x for x in summary["limitations"]]
