@@ -14,6 +14,7 @@ base={r["hostname"]:r for r in previous["hosts"]}
 if len(base)!=4495 or sum(plan["counts"].values())!=603:raise SystemExit("plan mismatch")
 dns_by={r["host"]:r for r in dns};external={r["host"]:r for r in foreign["results"]}
 wanted=set(plan["groups"]["address"]);observed=collections.defaultdict(list);errors=[]
+if set(authority_by)!=set(plan["groups"]["nxdomain"]):errors.append("authoritative host evidence missing")
 for i in range(plan["batches"]):
  expected=set()
  with (Path("plan603")/f"batch-{i:03d}.tsv").open(encoding="utf-8",newline="") as f:
