@@ -28,7 +28,6 @@ async def one(host):
     except Exception as e:result["servers"].append({"server":server,"error":type(e).__name__})
    return result
   except Exception as e:return {"host":host,"error":type(e).__name__}
-results=asyncio.run(asyncio.gather(*[])) if False else None
 async def main():return await asyncio.gather(*(one(h) for h in names))
 results=asyncio.run(main())
 out=Path("authority603");out.mkdir(exist_ok=True)
