@@ -1,11 +1,9 @@
-import json, socket, ssl, urllib.request
+import ipaddress, json, socket, ssl, urllib.request
 from pathlib import Path
 
 out={'control':{},'checks':{}}
-for host in ('one.one.one.one','ipv6.google.com'):
+for host,ip in (('one.one.one.one','2606:4700:4700::1111'),('dns.google','2001:4860:4860::8888')):
     try:
-        infos=socket.getaddrinfo(host,443,socket.AF_INET6,socket.SOCK_STREAM)
-        ip=infos[0][4][0]
         with socket.socket(socket.AF_INET6,socket.SOCK_STREAM) as s:
             s.settimeout(6); s.connect((ip,443))
             with ssl.create_default_context().wrap_socket(s,server_hostname=host) as t:
@@ -17,7 +15,9 @@ for h in hosts:
     if not live: out['checks'][h]={'skipped':'No confirmed working IPv6 control'}; continue
     try:
         infos=socket.getaddrinfo(h,443,socket.AF_INET6,socket.SOCK_STREAM)
-        ip=infos[0][4][0]
+        addrs=[a[4][0] for a in infos if not ipaddress.IPv6Address(a[4][0]).ipv4_mapped]
+        if not addrs: raise ValueError('No native AAAA address')
+        ip=addrs[0]
         with socket.socket(socket.AF_INET6,socket.SOCK_STREAM) as s:
             s.settimeout(5); s.connect((ip,443))
             with ssl.create_default_context().wrap_socket(s,server_hostname=h) as t:
