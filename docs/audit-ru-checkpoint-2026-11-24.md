@@ -103,3 +103,13 @@ User requested seven evidence-based FQDN categories and specifically directed re
 [Repeat of 33 registry candidates](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/45456043247) reconfirmed the 28 with authoritative DNS, RDAP and clear WHOIS. [Targeted WHOIS for five](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/45456266146) added an explicit no-object result for bonus-card.ml; the other four remained inconclusive. The report records 29 candidate domain-suffix rules, sources and limitations. Reconfirm before any future exclusion: domain re-registration or reimport from upstream remains possible. No RU, main, releases, CDN or other repository was changed.
 
 Existing prohibition mechanism is `forbiddenSubtreeInRU` in `tools/ru-geosite-filter/build.go`; it is enforced during insertion and by final output validation, also in validate.go. Existing exact-name map has narrower semantics. Changes would require policy and approved-manifest/semantic-gate coordination; none performed. PR remains Draft.
+
+
+## Заключительная адресная проверка 603 UNKNOWN — 25 ноября 2026
+
+[Подробный отчёт и конкретные списки](https://github.com/SpeedeMiner/Geosite-ru-light/blob/audit/ru-domain-liveness/docs/audit-603-results-2026-11-25.md) · [Архив: классификация всех 4 495 имён, списки и наблюдения](https://github.com/SpeedeMiner/Geosite-ru-light/actions/runs/45555011119/artifacts/14995431760).
+
+Из 603: ALIVE_RU 6, ALIVE_RESTRICTED 219, UNREGISTERED 2, UNKNOWN 376. Новых подтверждённых INFRASTRUCTURE, GEO_BLOCKED, PARKED или DEAD нет. Два новых кандидата: `domain:vtbkep.site` и `domain:xn--90aifd0aza.site`; авторитетный NXDOMAIN, реестровый RDAP 404 и отрицательный WHOIS. Перед изменением правил нужна повторная регистрационная проверка.
+
+По исходным 4 495: ALIVE_RU 2 254; ALIVE_RESTRICTED 1 830; INFRASTRUCTURE 4; UNREGISTERED 31; UNKNOWN 376; GEO_BLOCKED, PARKED, DEAD — 0 подтверждённых. Это исторический набор: 29 ранее подтверждённых имён уже исключены отдельно из актуального main. У 393 адресных имён есть наблюдения двух RU ASN и США; 210 проверены по DNS; для 45 ранее NXDOMAIN дополнительно опрошены авторитетные серверы. Доступность IPv6, корректность ALPN во всех попытках и функциональность приложений не подтверждены. Серверный ответ не доказывает доступность содержимого в РФ; различие с США само по себе не доказывает геоблокировку. PR остаётся Draft.
+
