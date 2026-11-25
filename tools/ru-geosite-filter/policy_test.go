@@ -412,7 +412,7 @@ func TestSuppressionIsLabelBoundedAndRUOnly(t *testing.T) {
 
 
 func TestUnregisteredRUExclusionsAreScopedAndCannotBeReimported(t *testing.T) {
-	if len(ruunregistered.Names()) != 29 {
+	if len(ruunregistered.Names()) != 31 {
 		t.Fatalf("unexpected reviewed exclusion count: %d", len(ruunregistered.Names()))
 	}
 	for _, domain := range ruunregistered.Names() {
