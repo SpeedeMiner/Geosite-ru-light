@@ -8,34 +8,69 @@ permissions:
   contents: read
   actions: read
 jobs:
-  authority:
+  repair:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
+    env:
+      AUDIT: .vpn-pilot/research/docs/research/2026-11-14-wide-post-v11-18/get-audit
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c84fc559733525194da3f899cc5b10bc8a1bdebf
+          path: .vpn-pilot/research
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: SpeedeMiner/Geoip-ru-server
+          ref: 30e797f05ddb8e38ccc2c44938b64846b4fce2fb
+          path: .vpn-pilot/upstream
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install 'dnspython==2.7.0'
+      - run: python -m pip install 'aiohttp==3.11.18' 'dnspython==2.7.0' 'publicsuffix2==2.20191221'
       - uses: actions/download-artifact@v4
         with:
           name: plan603
           run-id: 45464155753
           github-token: ${{ github.token }}
           path: plan603
-      - run: python tools/audit_603_authority.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared603
+          run-id: 45464155753
+          github-token: ${{ github.token }}
+          path: prepared
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends openvpn iptables
+      - name: Check only incomplete hosts via one distinct RU ASN
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          chmod +x prepared/audit-603
+          upstream="$PWD/.vpn-pilot/upstream/.github/reachability"
+          py="$(command -v python)"
+          sudo env GITHUB_SHA="$GITHUB_SHA" GITHUB_RUN_ID="$GITHUB_RUN_ID" GITHUB_RUN_ATTEMPT="$GITHUB_RUN_ATTEMPT" AUDIT_UTLS_BIN="$PWD/prepared/audit-603" PYTHONDONTWRITEBYTECODE=1 \
+            bash "$upstream/vpn_netns_exec.sh" -- timeout --signal=TERM --kill-after=6s 8m \
+              "$py" -B tools/vpn_603_wrapper.py "$AUDIT/vpnobratno_get.py" plan603/batch-009.tsv prepared/inventory.tsv \
+              "$upstream" .vpn-pilot/reports/main --exits 1 --exclude-asn 12389 --attempts 6 --connect-timeout 16
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: authority603
-          path: authority603/
-          retention-days: 90
+          name: ru603-repair-9
+          path: |
+            .vpn-pilot/reports/**/geosite-vpnobratno-summary.json
+            .vpn-pilot/reports/**/vpnobratno-observations.jsonl
+            .vpn-pilot/reports/**/vpn_gate_summary.json
+            .vpn-pilot/reports/**/vpn_gate_providers.tsv
+          include-hidden-files: true
           if-no-files-found: warn
+          retention-days: 90
   collect:
     if: always()
-    needs: [authority]
+    needs: [repair]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -80,9 +115,15 @@ jobs:
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with:
+          name: ru603-repair-9
+          path: ru603/ru603-9/repair
+      - uses: actions/download-artifact@v4
+        with:
           name: authority603
+          run-id: 45554819888
+          github-token: ${{ github.token }}
           path: authority603
-      - name: Reconcile saved observations without repeating network checks
+      - name: Reconcile original and repair evidence
         run: python3 tools/audit_603_collect.py
       - uses: actions/upload-artifact@v4
         if: always()
