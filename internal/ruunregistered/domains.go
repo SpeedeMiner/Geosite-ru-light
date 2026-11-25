@@ -1,5 +1,6 @@
 // Package ruunregistered records the time-sensitive, reviewed RU exclusions.
-// Registration was last checked on 2026-11-24; revisit when a legitimate
+// Original registration review: 2026-11-24; two additions reviewed 2026-11-25.
+// Revisit these exclusions when a legitimate
 // service is restored. These names are not added to the BLOCK category.
 package ruunregistered
 
@@ -33,6 +34,8 @@ var domains = [...]string{
 	"vk.cloud",
 	"vkcache.com",
 	"vkusvill.net",
+	"vtbkep.site",
+	"xn--90aifd0aza.site",
 }
 
 // Names returns a copy so callers cannot mutate the routing policy.
