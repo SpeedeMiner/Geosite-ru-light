@@ -1,0 +1,22 @@
+name: Independent CT fallback
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-344-ct.yml]
+permissions:
+  contents: read
+jobs:
+  ct:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 tools/audit_344_certspotter.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit344-certspotter
+          path: certspotter344.json
+          retention-days: 90
