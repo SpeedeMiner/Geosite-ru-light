@@ -38,7 +38,7 @@ for h,item in sorted(base.items()):
   if len({str(r.get("vpn_asn")) for r in verified})<2:missing.append(h)
   ru_good=[r for r in verified if r.get("state")=="available"]
   us_attempts=(foreign_item or {}).get("attempts") or []
-  ru_attempts=[a for r in verified for a in ((r.get("evidence") or {}).get("variants") or {}).get("attempts",[])]
+  ru_attempts=[a for r in verified for a in (((r.get("evidence") or {}).get("variants") or {}).get("attempts") or [])]
   all_attempts=ru_attempts+us_attempts
   parked_ru=any(a.get("signal")=="parking" for a in ru_attempts)
   parked_ext=any(a.get("signal")=="parking" for a in us_attempts)
