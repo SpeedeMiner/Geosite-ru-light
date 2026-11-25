@@ -1,4 +1,4 @@
-name: Targeted functional checks for remaining names
+name: Targeted functional follow-up
 on:
   push:
     branches: [audit/ru-domain-liveness]
@@ -7,9 +7,9 @@ permissions:
   contents: read
   actions: read
 jobs:
-  functional:
+  feed-and-registry:
     runs-on: ubuntu-24.04
-    timeout-minutes: 18
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,16 +20,22 @@ jobs:
           run-id: 45555011119
           github-token: ${{ github.token }}
           path: previous
-      - run: python3 tools/audit_376_functional.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: audit376-functional
+          run-id: 45556323219
+          github-token: ${{ github.token }}
+          path: original
+      - run: python3 tools/audit_376_followup.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: audit376-functional
-          path: functional376/
+          name: audit376-followup
+          path: followup376/
           retention-days: 90
-  ipv6:
+  ipv6-control:
     runs-on: macos-latest
-    timeout-minutes: 10
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,6 +50,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: audit376-ipv6
+          name: audit376-ipv6-corrected
           path: ipv6.json
           retention-days: 90
