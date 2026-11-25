@@ -1,0 +1,22 @@
+name: Resolve remaining DNS error cases
+on:
+  push:
+    branches: [audit/ru-domain-liveness]
+    paths: [.github/workflows/ru-audit-344-dns.yml]
+permissions:
+  contents: read
+jobs:
+  dns:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 tools/audit_344_other_dns.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit344-other-dns
+          path: dns344-other.json
+          retention-days: 90
